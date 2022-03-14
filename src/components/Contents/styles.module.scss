@@ -1,0 +1,31 @@
+.Contents {
+	padding-top: 24px;
+	padding-bottom: 48px;
+
+	.Contents-container {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 48px;
+		margin: 0 36px;
+		padding: 48px 24px;
+		box-shadow: rgba(0, 0, 0, 0.15) 0 5px 25px 0;
+
+		.Contents-box {
+			overflow: hidden;
+
+			.box-title {
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 20px;
+			}
+			.box-hr {
+				margin: 16px 0;
+			}
+			.box-contents {
+				display: flex;
+				flex-flow: row wrap;
+				gap: 24px;
+			}
+		}
+	}
+}
