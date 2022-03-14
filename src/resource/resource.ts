@@ -244,7 +244,7 @@ export const CBGun:IItem[] = [
 	},
 	{ title:"283mm SKC/28 3연장포", division:"Mainstream", nickname:["또치포"], tier:"SR", category:"Main Gun",
 		comment:"이거 전함포 버전도 존재하는데, 그건 SKC29다. 제대로 벤치마킹은 안해봤는데, 해역에서 둘러보니 또치급은 이거 끼면 대충 금딱 중순포 끼던 애들이랑 근소우위로 딜 넣던걸 봤다.",
-		link:"https://azurlane.netojuu.com/w/images/4/4d/85520.png"
+		link:"https://azurlane.netojuu.com/w/images/9/99/43100.png"
 	},
 ];
 
@@ -444,7 +444,7 @@ export const Fighter:IItem[] = [
 	},
 	{ title:"시덴改二", division:"Mainstream", nickname:["시덴게이"], tier:"SSR", category:"Fighter",
 		comment:"3대장급 성능. 기총사각 좁고, 비행속도가 너무 높아서 적 함재기 무시하고 지나치는 경우 발생. 제작 재료가 존나 싸니까 뉴비는 서너개 정도 만들어 써도 된다.",
-		link:"https://azurlane.netojuu.com/w/images/1/1f/27320.png"
+		link:"https://azurlane.netojuu.com/w/images/5/52/37400.png"
 	},
 	{ title:"제로센52형", division:"Lowend", nickname:[], tier:"SSR", category:"Fighter",
 		comment:"갈아",
@@ -686,7 +686,7 @@ export const Auxiliary_FL:IItem[] = [
 		comment:"어뢰 덜 아프게 맞음",
 		link:"https://azurlane.netojuu.com/w/images/b/b6/1300.png"
 	},
-	{ title:"소화장치", division:"Lowend", nickname:["소화기"], tier:"SR", category:"Auxiliary",
+	{ title:"소화장치", division:"Lowend", nickname:["소화기"], tier:"R", category:"Auxiliary",
 		comment:"그냥 소화기",
 		link:"https://azurlane.netojuu.com/w/images/e/ee/2500.png"
 	}
@@ -700,7 +700,7 @@ export const Auxiliary_RR:IItem[] = [
 	},
 	{ title:"93식 산소어뢰", division:"EndSpec", nickname:[], tier:"UR", category:"Auxiliary",
 		comment:"뇌장+118, 장전+13. 코어샵 1500",
-		link:"https://azurlane.netojuu.com/w/images/c/c0/35580.png"
+		link:"https://azurlane.netojuu.com/w/images/5/59/2600.png"
 	},
 	{ title:"작전 보고:AF", division:"Lowend", nickname:[], tier:"SR", category:"Auxiliary",
 		comment:"중앵함선 6% 더 아프게 팸. 내구+580",
