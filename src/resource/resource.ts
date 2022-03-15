@@ -302,11 +302,11 @@ export const Torpedo:IItem[] = [
 
 export const SubTorpedo:IItem[] = [
 	// 잠수어뢰
-	{ title:"잠수함용 Mark 20 S어뢰-페터", division:"Mainstream", nickname:[], tier:"SSR", category:"Torpedo",
+	{ title:"잠수함용 Mark 20 S어뢰-페터", division:"EndSpec", nickname:[], tier:"SSR", category:"Torpedo",
 		comment:"잠수어뢰는 그냥 적당히 쓰다가 빨간대가리 어뢰로 종결지으면 된다.",
 		link:"https://azurlane.netojuu.com/w/images/a/ab/25300.png"
 	},
-	{ title:"잠수함용 95식 산소 어뢰改", division:"EndSpec", nickname:[], tier:"UR", category:"Torpedo",
+	{ title:"잠수함용 95식 산소 어뢰改", division:"Mainstream", nickname:[], tier:"UR", category:"Torpedo",
 		comment:"잠수어뢰는 그냥 적당히 쓰다가 빨간대가리 어뢰로 종결지으면 된다.",
 		link:"https://azurlane.netojuu.com/w/images/c/c0/35580.png"
 	},
@@ -386,7 +386,7 @@ export const AAGun:IItem[] = [
 		comment:"균형잡힌 템",
 		link:"https://azurlane.netojuu.com/w/images/c/c1/16400.png"
 	},
-	{ title:"134mm 연장 고각포", division:"Lowend", nickname:[], tier:"SSR", category:"Anti Air",
+	{ title:"134mm 연장 고각포", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
 		comment:"대공 효율은 잘 모르겠고, 나는 화력이 부족하다 게이야. -> 그럼 이거쓰면 된다 게이야",
 		link:"https://azurlane.netojuu.com/w/images/b/bf/21500.png"
 	},
@@ -470,7 +470,7 @@ export const Bomber:IItem[] = [
 		comment:"폭격기 종결 헬다이버",
 		link:"https://azurlane.netojuu.com/w/images/5/56/19100.png"
 	},
-	{ title:"BTD-1 디스트로이어", division:"Lowend", nickname:[], tier:"SSR", category:"Bomber",
+	{ title:"BTD-1 디스트로이어", division:"Mainstream", nickname:[], tier:"SSR", category:"Bomber",
 		comment:"보딱 헬다에게 밀려 실직함",
 		link:"https://azurlane.netojuu.com/w/images/4/45/19200.png"
 	},
@@ -482,11 +482,11 @@ export const Bomber:IItem[] = [
 		comment:"안씀. 0.5헬다",
 		link:"https://azurlane.netojuu.com/w/images/2/21/39100.png"
 	},
-	{ title:"스이세이 12형 A", division:"Mainstream", nickname:[], tier:"SSR", category:"Bomber",
+	{ title:"스이세이 12형 A", division:"Lowend", nickname:[], tier:"SSR", category:"Bomber",
 		comment:"2번째로 쿨 빠른 폭격기. 폭장량 양호. 0.5헬다",
 		link:"https://azurlane.netojuu.com/w/images/a/a3/39160.png"
 	},
-	{ title:"스이세이 21형", division:"Mainstream", nickname:[], tier:"SSR", category:"Bomber",
+	{ title:"스이세이 21형", division:"Lowend", nickname:[], tier:"SSR", category:"Bomber",
 		comment:"항공전함만 장착가능",
 		link:"https://azurlane.netojuu.com/w/images/d/d0/39320.png"
 	},
@@ -498,15 +498,15 @@ export const Bomber:IItem[] = [
 		comment:"젠하이 최종템",
 		link:"https://azurlane.netojuu.com/w/images/4/4e/39300.png"
 	},
-	{ title:"Ju-87C 급강하폭격기", division:"Lowend", nickname:[], tier:"SR", category:"Bomber",
+	{ title:"Ju-87C 급강하폭격기", division:"Mainstream", nickname:[], tier:"SR", category:"Bomber",
 		comment:"그라프 체펠린 용",
 		link:"https://azurlane.netojuu.com/w/images/5/53/49000.png"
 	},
-	{ title:"바라쿠다(831중대)", division:"Lowend", nickname:["폭라쿠다"], tier:"SSR", category:"Bomber",
+	{ title:"바라쿠다(831중대)", division:"Mainstream", nickname:["폭라쿠다"], tier:"SSR", category:"Bomber",
 		comment:"0.5헬다. 스이세이12A보다 조금 느리다.",
 		link:"https://azurlane.netojuu.com/w/images/4/47/29300.png"
 	},
-	{ title:"SBD 돈틀리스(맥클러스키대)", division:"Lowend", nickname:[], tier:"SSR", category:"Bomber",
+	{ title:"SBD 돈틀리스(맥클러스키대)", division:"Mainstream", nickname:[], tier:"SSR", category:"Bomber",
 		comment:"보딱 헬다보다 조금 빠르다.",
 		link:"https://azurlane.netojuu.com/w/images/1/18/19060.png"
 	},
@@ -546,7 +546,7 @@ export const Attacker:IItem[] = [
 		comment:"바라쿠다랑 비슷함. 맞추면 8초간 적 이속 60% 감소시킴. 코어샵에서 구매 가능.",
 		link:"https://azurlane.netojuu.com/w/images/7/73/28060.png"
 	},
-	{ title:"류세이", division:"Mainstream", nickname:[], tier:"SSR", category:"Attacker",
+	{ title:"류세이", division:"EndSpec", nickname:[], tier:"SSR", category:"Attacker",
 		comment:"보스용 뇌격기 중에서 제일 느리고 제일 셈. 타점 260*3, 어뢰속도 3, 함재기 속도 52. 1,2,3기 연구, 중앵 개발에서 만들 수 있음.",
 		link:"https://azurlane.netojuu.com/w/images/3/33/38200.png"
 	},
@@ -558,7 +558,7 @@ export const Attacker:IItem[] = [
 		comment:"사속 미세조절용. 타점 254*3, 어뢰속도 3, 함재기 속도 51. 철혈 개발에서 만드는 건데, 재료는 상자깡으로 얻어야 함.",
 		link:"https://azurlane.netojuu.com/w/images/2/22/48040.png"
 	},
-	{ title:"시제형 사이운", division:"EndSpec", nickname:[], tier:"SSR", category:"Attacker",
+	{ title:"시제형 사이운", division:"Mainstream", nickname:[], tier:"SSR", category:"Attacker",
 		comment:"사속 크게조절용. 타점 362*2, 어뢰속도 3, 함재기 속도 66. 류세이보다 대충 0.6초 빠르고 함재기 속도도 확실히 빠름. 4기 연구에서 먹을 수 있음.",
 		link:"https://azurlane.netojuu.com/w/images/f/f1/38300.png"
 	},
@@ -698,11 +698,11 @@ export const Auxiliary_RR:IItem[] = [
 		comment:"첫 어뢰에 자성어뢰 효과를 부여하고 대미지 +5%. 뇌장+85, 명중+18. 환광 D1 드랍.",
 		link:"https://azurlane.netojuu.com/w/images/6/67/2700.png"
 	},
-	{ title:"93식 산소어뢰", division:"EndSpec", nickname:[], tier:"UR", category:"Auxiliary",
+	{ title:"93식 산소어뢰", division:"Mainstream", nickname:[], tier:"UR", category:"Auxiliary",
 		comment:"뇌장+118, 장전+13. 코어샵 1500",
 		link:"https://azurlane.netojuu.com/w/images/5/59/2600.png"
 	},
-	{ title:"작전 보고:AF", division:"Lowend", nickname:[], tier:"SR", category:"Auxiliary",
+	{ title:"작전 보고:AF", division:"Mainstream", nickname:[], tier:"SR", category:"Auxiliary",
 		comment:"중앵함선 6% 더 아프게 팸. 내구+580",
 		link:"https://azurlane.netojuu.com/w/images/8/81/940.png"
 	},
