@@ -670,7 +670,7 @@ export const Auxiliary_FL:IItem[] = [
 		comment:"느그함대 전열 이동속도 20% 올라감. 낀 애는 내구+90, 회피+44. 찰스 오스본, 무트, 스펜스, 대처, 얼릭 풀돌 보상.",
 		link:"https://azurlane.netojuu.com/w/images/b/be/500.png"
 	},
-	{ title:"정예 데미지컨트롤 만쥬", division:"Lowend", nickname:["다메콘"], tier:"SSR", category:"Auxiliary",
+	{ title:"엘리트 응급 수리(유니온)", division:"Lowend", nickname:["다메콘"], tier:"SSR", category:"Auxiliary",
 		comment:"이글 유니온 함순이가 터지면, 8초 동안 안터지고 무적 됨. 요크타운, 엔터프라이즈, 호넷 풀돌 보상.",
 		link:"https://azurlane.netojuu.com/w/images/1/15/840.png"
 	},
