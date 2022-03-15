@@ -10,13 +10,13 @@ import AuxiliaryPage from "pages/AuxiliaryPage";
 export default function RootRouter() {
 	return (
 		<Routes>
-			<Route path="/" element={<HomeContents />} />
-			<Route path="/alit" element={<HomeContents />} />
+			{/*<Route path="/alit" element={<HomeContents />} />*/}
 			<Route path="/main_gun/*" element={<MainGunPage />} />
 			<Route path="/torpedo/*" element={<TorpedoPage />} />
 			<Route path="/aa_gun/*" element={<Contents items={ AAGun } />} />
 			<Route path="/airplane/*" element={<AirplanePage />} />
 			<Route path="/auxiliary/*" element={<AuxiliaryPage />} />
+			<Route path="/" element={<HomeContents />} />
 		</Routes>
 	)
 }

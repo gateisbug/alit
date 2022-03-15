@@ -722,7 +722,7 @@ export const Auxiliary_RR:IItem[] = [
 
 export const Auxiliary_AS:IItem[] = [
 	// 대잠 장비
-	{ title:"소드피쉬 Mark.II-ASV", division:"Mainstream", nickname:[], tier:"SR", category:"Auxiliary",
+	{ title:"소드피쉬 Mark.II-ASV", division:"Lowend", nickname:[], tier:"SR", category:"Auxiliary",
 		comment:"경항모, 워슾改 한테만 장착 ㄱㄴ. 대잠 어벤져보다 딜 세고 공속 느림. 코어샵에서 구매 ㄱㄴ. 근데 얘는 걍 신경쓰지마.",
 		link:"https://azurlane.netojuu.com/w/images/4/4e/4200.png"
 	},
