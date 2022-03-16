@@ -422,7 +422,7 @@ export const Fighter:IItem[] = [
 		comment:"폭장량을 버리고 적 함재기 갈아버리는 것만 집중한 전투기. 12해역에서 가져가면 제공권은 든든하나, 딜로스로 인해 진작 끝날 게임을 굳이 질질 끌어버리는 경우도 있음.",
 		link:"https://azurlane.netojuu.com/w/images/f/f9/47100.png"
 	},
-	{ title:"F8F 베어캣", division:"Mainstream", nickname:[], tier:"SSR", category:"Fighter",
+	{ title:"F8F 베어캣", division:"Lowend", nickname:[], tier:"SSR", category:"Fighter",
 		comment:"유니온 전투기 특 싸고 존나 셈. 속도는 빠른데 0.5 헬캣 정도",
 		link:"https://azurlane.netojuu.com/w/images/e/e7/17380.png"
 	},
