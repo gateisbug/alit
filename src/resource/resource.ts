@@ -42,6 +42,10 @@ export const DDGun:IItem[] = [
 		comment:"98식과 단점을 공유함. 짧은 사거리로 인해 자동사냥 중 사소한 딜손해가 있지만, 크게 신경쓸 정돈 아님. 성능 자체는 구축포 탑티어지만, 이거 하나 보고 3기 연구 돌리는건 존나 개그다. 상파뉴포 만드는 김에 돌리기엔, 그건 원형상점에서 바꿔먹도록하고, 이건 그냥 있으면 쓰는 정도로 그치자.",
 		link:"https://azurlane.netojuu.com/w/images/5/5d/21600.png"
 	},
+	{ title:"135mm 연장포 Model1938", division:"Mainstream", nickname:["마뇨포"], tier:"SSR", category:"Main Gun",
+		comment:"색적거리가 100mm, 114mm와 같이 짧은 편이지만, 쓰는 데엔 지장없고 딜도 준수해서 그냥저냥 쓰면 됨.",
+		link:"https://azurlane.netojuu.com/w/images/8/89/55920.png"
+	},
 ];
 
 export const CLGun:IItem[] = [
