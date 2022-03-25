@@ -9,11 +9,11 @@ export default function Header() {
 	return (
 		<header className={cx("header")}>
 			<div className={cx("title")}>
-				<NavLink to={"/"} children={"AzurLane"} />
+				<NavLink to={"/"} children={"Azur Lane"} />
 			</div>
 			<nav>
 				<Menu link={"https://arca.live/b/azurlane"}>ArcaLive</Menu>
-				<Menu link={"https://gall.dcinside.com/mgallery/board/lists?id=hamumang"}>DCInside</Menu>
+				<Menu link={"https://arca.live/b/manjuugame"}>Manjuu</Menu>
 			</nav>
 		</header>
 	)
