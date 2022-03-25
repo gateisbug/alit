@@ -4,7 +4,7 @@
 
 gitPages : https://gateisbug.github.io/alit/  
 정보 소스 : https://arca.live/b/azurlane/45593816  
-이미지 소스 : https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki
+이미지 소스 : https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki  
 아카라이브 : https://arca.live/b/azurlane/46275864
 
 Latest Version
