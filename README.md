@@ -7,5 +7,5 @@ gitPages : https://gateisbug.github.io/alit/
 이미지 소스 : https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki  
 아카라이브 : https://arca.live/b/azurlane/46275864
 
-Latest Version
+## Latest Version
 - 22-03-25 : 원본 글에 마뇨포가 추가되어 반영
