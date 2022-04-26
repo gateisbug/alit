@@ -10,7 +10,7 @@ export default function HomeHero() {
 			<div className={cx("title")}>Azur Lane Item Lists</div>
 			<div className={cx("subtitle")}>
 				<Blank link="https://arca.live/b/azurlane/45593816">
-					22-03-07 장비 설명회
+					22-03-25 장비 설명회
 				</Blank>
 			</div>
 		</div>
