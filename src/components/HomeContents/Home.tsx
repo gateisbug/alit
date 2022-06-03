@@ -15,7 +15,7 @@ export default function HomeContents() {
 				<p>장비 이미지는 <Blank link="https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki">여기서</Blank> 가져옴</p>
 				<p>모바일은 최대한 대응해봤는데 잘 됐는지 몰?루</p>
 				<p>GitHub 원본 소스는 <Blank link="https://github.com/gateisbug/alit">여기로</Blank></p>
-				<p>latest update : 22-04-26</p>
+				<p>latest update : 22-06-03</p>
 			</div>
 		</div>
 	)
