@@ -118,7 +118,7 @@ export const CAGun:IItem[] = [
 		comment:"3연장포인데 동시에 발사하는게 아니라, 한 발씩 끊어서 쏜다. 탄속이 은근 느려서, 존나게 무빙쳐재끼는 대상한테 빗나가는 경우가 있다. 생루이 스킬용으로만 쓰자.",
 		link:"https://azurlane.netojuu.com/w/images/9/94/7300.png"
 	},
-	{ title:"2연장 203mm 주포 Mle1931", division:"Lowend", nickname:["알제리포"], tier:"SSR", category:"Main Gun",
+	{ title:"2연장 203mm 주포 Mle1931", division:"Mainstream", nickname:["알제리포"], tier:"SSR", category:"Main Gun",
 		comment:"전탄까지 고려해서 단순 화력으론 생루이포 보단 약하지만, 연장포, 장사정, 고탄속이라는 특징 때문에 탄이 샐 일이 적다는게 이점.",
 		link:"https://azurlane.netojuu.com/w/images/1/10/50860.png"
 	},
@@ -126,7 +126,7 @@ export const CAGun:IItem[] = [
 		comment:"생루이포 대용으로 쓰면 된다.",
 		link:"https://azurlane.netojuu.com/w/images/0/01/33060.png"
 	},
-	{ title:"시제형 3연장 203mm 주포 Mark IX", division:"Mainstream", nickname:["몰라포"], tier:"SSR", category:"Main Gun",
+	{ title:"시제형 3연장 203mm 주포 Mark IX", division:"Lowend", nickname:[], tier:"SSR", category:"Main Gun",
 		comment:"딜 자체는 중순고폭 최강인데, 궁합이 좋은 조합이 아직 없는걸로 안다.",
 		link:"https://azurlane.netojuu.com/w/images/9/92/23200.png"
 	},
@@ -474,21 +474,29 @@ export const Bomber:IItem[] = [
 		comment:"폭격기 종결 헬다이버",
 		link:"https://azurlane.netojuu.com/w/images/5/56/19100.png"
 	},
-	{ title:"BTD-1 디스트로이어", division:"Mainstream", nickname:[], tier:"SSR", category:"Bomber",
-		comment:"보딱 헬다에게 밀려 실직함",
-		link:"https://azurlane.netojuu.com/w/images/4/45/19200.png"
-	},
 	{ title:"실험형XSB3C-1 ", division:"EndSpec", nickname:[], tier:"SSR", category:"Bomber",
 		comment:"금딱 헬다이버. 무턱대고 만드는게 아니고, 보스전 딜딸치고 싶을 때 마지막에 맞추는 템",
 		link:"https://azurlane.netojuu.com/w/images/d/da/19160.png"
 	},
+	{ title:"스이세이 12형 A", division:"Mainstream", nickname:[], tier:"SSR", category:"Bomber",
+		comment:"2번째로 쿨 빠른 폭격기. 폭장량 양호. 0.5헬다",
+		link:"https://azurlane.netojuu.com/w/images/a/a3/39160.png"
+	},
+	{ title:"바라쿠다(831중대)", division:"Mainstream", nickname:["폭라쿠다"], tier:"SSR", category:"Bomber",
+		comment:"0.5헬다. 스이세이12A보다 조금 느리다.",
+		link:"https://azurlane.netojuu.com/w/images/4/47/29300.png"
+	},
+	{ title:"SBD 돈틀리스(맥클러스키대)", division:"Mainstream", nickname:["돈틀리스"], tier:"SSR", category:"Bomber",
+		comment:"보딱 헬다보다 조금 빠르다.",
+		link:"https://azurlane.netojuu.com/w/images/1/18/19060.png"
+	},
+	{ title:"BTD-1 디스트로이어", division:"Lowend", nickname:[], tier:"SSR", category:"Bomber",
+		comment:"보딱 헬다에게 밀려 실직함",
+		link:"https://azurlane.netojuu.com/w/images/4/45/19200.png"
+	},
 	{ title:"스이세이", division:"Lowend", nickname:[], tier:"SSR", category:"Bomber",
 		comment:"안씀. 0.5헬다",
 		link:"https://azurlane.netojuu.com/w/images/2/21/39100.png"
-	},
-	{ title:"스이세이 12형 A", division:"Lowend", nickname:[], tier:"SSR", category:"Bomber",
-		comment:"2번째로 쿨 빠른 폭격기. 폭장량 양호. 0.5헬다",
-		link:"https://azurlane.netojuu.com/w/images/a/a3/39160.png"
 	},
 	{ title:"스이세이 21형", division:"Lowend", nickname:[], tier:"SSR", category:"Bomber",
 		comment:"항공전함만 장착가능",
@@ -502,17 +510,9 @@ export const Bomber:IItem[] = [
 		comment:"젠하이 최종템",
 		link:"https://azurlane.netojuu.com/w/images/4/4e/39300.png"
 	},
-	{ title:"Ju-87C 급강하폭격기", division:"Mainstream", nickname:[], tier:"SR", category:"Bomber",
+	{ title:"Ju-87C 급강하폭격기", division:"Lowend", nickname:[], tier:"SR", category:"Bomber",
 		comment:"그라프 체펠린 용",
 		link:"https://azurlane.netojuu.com/w/images/5/53/49000.png"
-	},
-	{ title:"바라쿠다(831중대)", division:"Mainstream", nickname:["폭라쿠다"], tier:"SSR", category:"Bomber",
-		comment:"0.5헬다. 스이세이12A보다 조금 느리다.",
-		link:"https://azurlane.netojuu.com/w/images/4/47/29300.png"
-	},
-	{ title:"SBD 돈틀리스(맥클러스키대)", division:"Mainstream", nickname:[], tier:"SSR", category:"Bomber",
-		comment:"보딱 헬다보다 조금 빠르다.",
-		link:"https://azurlane.netojuu.com/w/images/1/18/19060.png"
 	},
 ];
 
@@ -526,9 +526,13 @@ export const Attacker:IItem[] = [
 		comment:"해역용 뇌격기 2위. 와이번 같은 기믹은 없음. 항공스텟, 타점을 열화한 와이번 정도로 이해하면 된다. 이글 유니온 개발에서 만듬.",
 		link:"https://azurlane.netojuu.com/w/images/3/38/18220.png"
 	},
-	{ title:"TBD 데바스테이터(VT-8중대)", division:"Lowend", nickname:[], tier:"SSR", category:"Attacker",
-		comment:"항공스텟은 와이번보다 낮지만, 2차 공습부터 와이번과 비슷한 타점을 가짐. 유용성 면에서 내가 저평가하는 이유는 해역용이면 1차 공습도 존나 중요한데, 그걸 날로먹고 2차 공습을 바라보는 건 존나 개그라고 생각한다. 어뢰 살포 형태도 스카이파이렛보단 스마트하지 못함.",
-		link:"https://azurlane.netojuu.com/w/images/0/02/18060.png"
+	{ title:"류세이", division:"EndSpec", nickname:[], tier:"SSR", category:"Attacker",
+		comment:"보스용 뇌격기 중에서 제일 느리고 제일 셈. 타점 260*3, 어뢰속도 3, 함재기 속도 52. 1,2,3기 연구, 중앵 개발에서 만들 수 있음.",
+		link:"https://azurlane.netojuu.com/w/images/3/33/38200.png"
+	},
+	{ title:"Ju-87 D-4", division:"EndSpec", nickname:["슈튜카", "독세이"], tier:"SSR", category:"Attacker",
+		comment:"사속 미세조절용. 타점 254*3, 어뢰속도 3, 함재기 속도 51. 철혈 개발에서 만드는 건데, 재료는 상자깡으로 얻어야 함.",
+		link:"https://azurlane.netojuu.com/w/images/2/22/48040.png"
 	},
 	{ title:"TBM 어벤저(VT-18중대)", division:"Mainstream", nickname:[], tier:"SSR", category:"Attacker",
 		comment:"바라쿠다보다 느리지만 더욱 공격적인 버전. 인디펜던스 스킬이랑 궁합이 좋음. 바라쿠다보다 1.3초 가량 느리지만, 크게 의미있는 차이는 아님.",
@@ -537,6 +541,18 @@ export const Attacker:IItem[] = [
 	{ title:"바라쿠다", division:"Mainstream", nickname:[], tier:"SSR", category:"Attacker",
 		comment:"사속 빠른 해역용 뇌격기. 대미지도 양호하긴 한데, 어뢰 살포 형태가 좀 멍청해서 가끔 빗나감. 로얄 개발에서 만들거나 상자깡으로 먹음. 근데 만들지는 마.",
 		link:"https://azurlane.netojuu.com/w/images/0/06/28100.png"
+	},
+	{ title:"텐잔改", division:"Mainstream", nickname:[], tier:"SR", category:"Attacker",
+		comment:"류세이 하위호환이고, 전자부품이 부족한 뉴비때 쓰기 좋은 텐잔 개.",
+		link:"https://azurlane.netojuu.com/w/images/d/de/38160.png"
+	},
+	{ title:"시제형 사이운", division:"Mainstream", nickname:[], tier:"SSR", category:"Attacker",
+		comment:"사속 크게조절용. 타점 362*2, 어뢰속도 3, 함재기 속도 66. 류세이보다 대충 0.6초 빠르고 함재기 속도도 확실히 빠름. 4기 연구에서 먹을 수 있음.",
+		link:"https://azurlane.netojuu.com/w/images/f/f1/38300.png"
+	},
+	{ title:"TBD 데바스테이터(VT-8중대)", division:"Lowend", nickname:[], tier:"SSR", category:"Attacker",
+		comment:"항공스텟은 와이번보다 낮지만, 2차 공습부터 와이번과 비슷한 타점을 가짐. 유용성 면에서 내가 저평가하는 이유는 해역용이면 1차 공습도 존나 중요한데, 그걸 날로먹고 2차 공습을 바라보는 건 존나 개그라고 생각한다. 어뢰 살포 형태도 스카이파이렛보단 스마트하지 못함.",
+		link:"https://azurlane.netojuu.com/w/images/0/02/18060.png"
 	},
 	{ title:"파이어브랜드", division:"Lowend", nickname:[], tier:"SSR", category:"Attacker",
 		comment:"스펙 카탈로그 상 바라쿠다 하위호환. 어차피 이건 와이번 만들라고 거쳐가는 용도다.",
@@ -549,22 +565,6 @@ export const Attacker:IItem[] = [
 	{ title:"소드피쉬(818중대)", division:"Lowend", nickname:[], tier:"SSR", category:"Attacker",
 		comment:"바라쿠다랑 비슷함. 맞추면 8초간 적 이속 60% 감소시킴. 코어샵에서 구매 가능.",
 		link:"https://azurlane.netojuu.com/w/images/7/73/28060.png"
-	},
-	{ title:"류세이", division:"EndSpec", nickname:[], tier:"SSR", category:"Attacker",
-		comment:"보스용 뇌격기 중에서 제일 느리고 제일 셈. 타점 260*3, 어뢰속도 3, 함재기 속도 52. 1,2,3기 연구, 중앵 개발에서 만들 수 있음.",
-		link:"https://azurlane.netojuu.com/w/images/3/33/38200.png"
-	},
-	{ title:"텐잔改", division:"Mainstream", nickname:[], tier:"SR", category:"Attacker",
-		comment:"류세이 하위호환이고, 전자부품이 부족한 뉴비때 쓰기 좋은 텐잔 개.",
-		link:"https://azurlane.netojuu.com/w/images/d/de/38160.png"
-	},
-	{ title:"Ju-87 D-4", division:"Mainstream", nickname:["슈튜카", "독세이"], tier:"SSR", category:"Attacker",
-		comment:"사속 미세조절용. 타점 254*3, 어뢰속도 3, 함재기 속도 51. 철혈 개발에서 만드는 건데, 재료는 상자깡으로 얻어야 함.",
-		link:"https://azurlane.netojuu.com/w/images/2/22/48040.png"
-	},
-	{ title:"시제형 사이운", division:"Mainstream", nickname:[], tier:"SSR", category:"Attacker",
-		comment:"사속 크게조절용. 타점 362*2, 어뢰속도 3, 함재기 속도 66. 류세이보다 대충 0.6초 빠르고 함재기 속도도 확실히 빠름. 4기 연구에서 먹을 수 있음.",
-		link:"https://azurlane.netojuu.com/w/images/f/f1/38300.png"
 	},
 	{ title:"페어리 알바코어", division:"Lowend", nickname:[], tier:"SR", category:"Attacker",
 		comment:"포미더블 전용",
