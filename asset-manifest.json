@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/alit/static/css/main.10c0656e.css",
-    "main.js": "/alit/static/js/main.b96156c3.js",
+    "main.js": "/alit/static/js/main.ba07bf78.js",
     "index.html": "/alit/index.html",
     "main.10c0656e.css.map": "/alit/static/css/main.10c0656e.css.map",
-    "main.b96156c3.js.map": "/alit/static/js/main.b96156c3.js.map"
+    "main.ba07bf78.js.map": "/alit/static/js/main.ba07bf78.js.map"
   },
   "entrypoints": [
     "static/css/main.10c0656e.css",
-    "static/js/main.b96156c3.js"
+    "static/js/main.ba07bf78.js"
   ]
 }
