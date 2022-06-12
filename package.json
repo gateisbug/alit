@@ -1,15 +1,11 @@
 {
   "homepage": "https://gateisbug.github.io/alit/",
   "name": "azurlane",
-  "version": "1.22-Jun03",
+  "version": "1.22-Jun12",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.3",
-    "@testing-library/user-event": "^13.5.0",
     "@types/classnames": "^2.3.1",
-    "@types/jest": "^27.4.1",
     "@types/node": "^16.11.26",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.13",
@@ -20,8 +16,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
-    "typescript": "^4.6.2",
-    "web-vitals": "^2.1.4"
+    "typescript": "^4.6.2"
   },
   "scripts": {
     "start": "react-scripts start",

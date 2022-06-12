@@ -10,8 +10,5 @@ ReactDOM.render(
 	<HashRouter basename={process.env.PUBLIC}>
 		<App />
 	</HashRouter>
-	// <BrowserRouter basename="/alit">
-	// 	<App />
-	// </BrowserRouter>,
 	, document.getElementById('root')
 );
