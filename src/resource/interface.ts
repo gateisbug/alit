@@ -1,4 +1,4 @@
-export type category = "Main Gun" | "Torpedo" | "Anti Air" | "Fighter" | "Bomber" | "Attacker" | "Auxiliary";
+export type category = "Main Gun" | "Torpedo" | "Anti Air" | "Fighter" | "Bomber" | "Attacker" | "Auxiliary" | "Augmentation";
 export type tier = "UR" | "SSR" | "SR" | "R" | "N";
 export type division = "EndSpec" | "Mainstream" | "Lowend";
 

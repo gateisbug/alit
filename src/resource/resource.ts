@@ -571,14 +571,20 @@ export const Attacker:IItem[] = [
 		comment:"포미더블 전용",
 		link:"https://azurlane.netojuu.com/images/a/a6/28300.png"
 	},
-	{ title:"TBF 어벤져", division:"Lowend", nickname:[], tier:"SR", category:"Bomber",
+	{ title:"TBF 어벤져", division:"Lowend", nickname:[], tier:"SR", category:"Attacker",
 		comment:"스카이파이렛 재료",
 		link:"https://azurlane.netojuu.com/images/f/f6/18100.png"
 	},
-	{ title:"소드피쉬", division:"Lowend", nickname:[], tier:"SR", category:"Bomber",
+	{ title:"소드피쉬", division:"Lowend", nickname:[], tier:"SR", category:"Attacker",
 		comment:"알바코어 및 바라쿠다 재료",
 		link:"https://azurlane.netojuu.com/images/5/57/28000.png"
 	},
+	{
+		title:"브레게 BR.818", division:"Mainstream", nickname:[], tier:"SSR", category:"Attacker",
+		comment:"알바코어 및 바라쿠다 재료",
+		link:"https://azurlane.netojuu.com/images/6/6a/51240.png"
+	}
+
 ];
 
 export const Auxiliary_BB:IItem[] = [
@@ -694,7 +700,7 @@ export const Auxiliary_FL:IItem[] = [
 	{ title:"소화장치", division:"Lowend", nickname:["소화기"], tier:"R", category:"Auxiliary",
 		comment:"그냥 소화기",
 		link:"https://azurlane.netojuu.com/images/e/ee/2500.png"
-	}
+	},
 ];
 
 export const Auxiliary_RR:IItem[] = [
@@ -723,6 +729,11 @@ export const Auxiliary_RR:IItem[] = [
 		comment:"세이렌한테 6% 덜 아프게 맞음. 내구+180, 뇌장+20",
 		link:"https://azurlane.netojuu.com/images/e/e8/980.png"
 	},
+	{
+		title:"아이리스 천사의 날개", division:"Mainstream", nickname:[], tier:"SSR", category:"Auxiliary",
+		comment:"금유압 하위호환. 항모 내구 3%랑 회피12는 항모 생존성에 획기적인 영향은 없을 것으로 생각됨.",
+		link:"https://azurlane.netojuu.com/images/5/5f/51260.png"
+	}
 ];
 
 export const Auxiliary_AS:IItem[] = [
@@ -804,3 +815,72 @@ export const Auxiliary_SP:IItem[] = [
 		link:"https://azurlane.netojuu.com/images/7/77/56000.png"
 	},
 ];
+
+export const Augmentation:IItem[] = [
+	// 구축용
+	{
+		title:"만쥬 해머", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"어뢰구축이 끼면 됨 , 특수 참격으로 탄막 지워줌.",
+		link:"https://azurlane.netojuu.com/images/7/75/1010200.png"
+	},
+	{
+		title:"만쥬 더블소드", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"어뢰구축을 제외한 구축들 주면 됨, 특수 참격으로 탄막 지워줌",
+		link:"https://azurlane.netojuu.com/images/9/9c/1010100.png"
+	},
+	// 경순용
+	{
+		title:"만쥬 소드", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"유틸형 경순 주면 됨 (헬레나, 스위프트 슈어, 시리우스). 장전, 명중 올려주고, 특수참격으로 적 탄막 지워줌.",
+		link:"https://azurlane.netojuu.com/images/7/7f/1020100.png"
+	},
+	{
+		title:"만쥬 크로스보우", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"포격 또는 대공특화 경순 주면 됨 (마인츠, 메레나, 시애틀, 샌디에이고). 적 함재기로부터 받는 댐지 5%경감, 중첩안됨. 공작함도 장착 가능함.",
+		link:"https://azurlane.netojuu.com/images/8/80/1030100.png"
+	},
+	// 중대순용
+	{
+		title:"만쥬 버스터소드", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"화력, 뇌장 올려줌, 특수참격으로 탄막 지워줌. 딜중순 주면 됨.",
+		link:"https://azurlane.netojuu.com/images/e/e3/1040100.png"
+	},
+	{
+		title:"만쥬 랜스", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"대공, 명중 올려줌. 끼고 있는 놈 체력이 50%가 되면 20초간 화력 20오름. 딱히 필요성을 못 느끼겠다.",
+		link:"https://azurlane.netojuu.com/images/d/d6/1050100.png"
+	},
+	// 전함용
+	{
+		title:"만쥬 보우건", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"화력, 대공 올려줌. 경장갑 대미지 -5%p. 중장갑 대미지 +5%p. 2번 3번 포수 주면 됨.",
+		link:"https://azurlane.netojuu.com/images/9/90/1060200.png"
+	},
+	{
+		title:"만쥬 지휘검", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"회피,명중 올려줌. 포격을 실행하면 10초간 아군후열 포격스텟이 20 올라감 중첩안됨. 1번 포수 주면 됨 (듀욬 or 뱅가드).",
+		link:"https://azurlane.netojuu.com/images/7/77/1060100.png"
+	},
+	// 항모용
+	{
+		title:"만쥬 셉터", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"항공(30), 회피 올려줌. 위에 만쥬 지휘검의 항모버전임.",
+		link:"https://azurlane.netojuu.com/images/3/31/1070200.png"
+	},
+	{
+		title:"만쥬 헌터보우", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"항공(30), 대공 올려줌. 장착한 항모가 적 함재기를 5체 격파할 경우, 항공치가 20 증가함.",
+		link:"https://azurlane.netojuu.com/images/9/90/1070100.png"
+	},
+	// 잠수함용
+	{
+		title:"만쥬 대거", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"회피,명중 올려줌. 어뢰 크리확률 +10%p.",
+		link:"https://azurlane.netojuu.com/images/9/91/1080200.png"
+	},
+	{
+		title:"만쥬 쿠나이", division:"Mainstream", nickname:[], tier:"R", category:"Augmentation",
+		comment:"뇌장(40), 명중 올려줌. 어뢰를 맞은 적은 8%의 확률로, 10초간 대미지 -5%p 중첩불가.",
+		link:"https://azurlane.netojuu.com/images/3/39/1080100.png"
+	},
+]

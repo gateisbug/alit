@@ -1,7 +1,7 @@
 {
   "homepage": "https://gateisbug.github.io/alit/",
   "name": "azurlane",
-  "version": "1.22-Jul11",
+  "version": "1.22-Jul17",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",

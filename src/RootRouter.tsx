@@ -6,6 +6,7 @@ import TorpedoPage from "pages/TorpedoPage";
 import Contents from "components/Contents";
 import AirplanePage from "pages/AirplanePage";
 import AuxiliaryPage from "pages/AuxiliaryPage";
+import AugmentationPage from "./pages/AugmentationPage";
 
 export default function RootRouter() {
 	return (
@@ -16,6 +17,7 @@ export default function RootRouter() {
 			<Route path="/aa_gun/*" element={<Contents items={ AAGun } />} />
 			<Route path="/airplane/*" element={<AirplanePage />} />
 			<Route path="/auxiliary/*" element={<AuxiliaryPage />} />
+			<Route path="/augmentation/*" element={<AugmentationPage />} />
 			<Route path="/" element={<HomeContents />} />
 		</Routes>
 	)
