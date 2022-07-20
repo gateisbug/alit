@@ -652,6 +652,11 @@ export const Auxiliary_CV:IItem[] = [
 		comment:"함재기 날아가는 속도 올려줌. 함재기 체력 140 올려줌. 연료탱크 상위호환. 코어샵에서 구매 ㄱㄴ",
 		link:"https://azurlane.netojuu.com/images/d/d4/660.png"
 	},
+	{
+		title:"아이리스 천사의 날개", division:"Mainstream", nickname:[], tier:"SSR", category:"Auxiliary",
+		comment:"금유압 하위호환. 항모 내구 3%랑 회피12는 항모 생존성에 획기적인 영향은 없을 것으로 생각됨.",
+		link:"https://azurlane.netojuu.com/images/5/5f/51260.png"
+	}
 ];
 
 export const Auxiliary_FL:IItem[] = [
@@ -727,11 +732,6 @@ export const Auxiliary_RR:IItem[] = [
 	{ title:"기밀 문서·일지 찬본", division:"Lowend", nickname:[], tier:"SR", category:"Auxiliary",
 		comment:"세이렌한테 6% 덜 아프게 맞음. 내구+180, 뇌장+20",
 		link:"https://azurlane.netojuu.com/images/e/e8/980.png"
-	},
-	{
-		title:"아이리스 천사의 날개", division:"Mainstream", nickname:[], tier:"SSR", category:"Auxiliary",
-		comment:"금유압 하위호환. 항모 내구 3%랑 회피12는 항모 생존성에 획기적인 영향은 없을 것으로 생각됨.",
-		link:"https://azurlane.netojuu.com/images/5/5f/51260.png"
 	}
 ];
 
