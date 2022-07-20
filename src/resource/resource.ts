@@ -206,8 +206,7 @@ export const BBGun:IItem[] = [
 		comment:"이즈모포보다 살짝 강한 주제에, 들어가는 재료는 비싸고 상파뉴포의 자리를 대신하지도 못함.",
 		link:"https://azurlane.netojuu.com/images/3/31/14360.png"
 	},
-	{ title:"시제형 3연장 406mm 주포 Model 1940", division:"Lowend", nickname:["폴로포"], tier:"SSR", category:"Main Gun",
-		// comment:"미디움 배율 150%라서 상파뉴포보다 좋은 척 하는데, 파갑효과가 없고 집탄율은 ㅈ박았으며 상성빨도 많이 탐. 라이트 그럭저럭 패고 헤비한테 반토막 나는데, 어차피 라이트아머는 잘 나오지도 않을 뿐더러, 차라리 고폭탄을 씀. 즉, 완전히 미디움 하나만 바라보고 쓰는거라 ㅈㄴ 별로다. 탄 색은 이쁨.",
+	{ title:"시제형 3연장 406mm 주포 Model 1940", division:"Mainstream", nickname:["폴로포"], tier:"SSR", category:"Main Gun",
 		comment:"폴로포와 상성이 좋지않은 중장갑은 주로 전함/장갑항모/컴파일러/아비터-허밋 정도를 꼽을 수 있다. 폴로포와 상성이 좋은 중형장갑은 게임 중반을 넘기면 자주 등장한다. 주로 중순/항모/순전을 꼽을 수 있음. 중형장갑 배율이 전함포 최고(150%) 수치이며, 화재딜도 소소하게 이득이다. 가장 수가 많은 구축/경순에게도 1.1배 상성을 먹고가기에 소소한 효과를 볼 수 있다. 1개 정도는 13강 만드는걸 권장하지만 2개 이상은 아직 권장을 못하겠다.",
 		link:"https://azurlane.netojuu.com/images/1/15/55900.png"
 	},
@@ -332,71 +331,71 @@ export const SubTorpedo:IItem[] = [
 export const AAGun:IItem[] = [
 	// 대공포
 	{ title:"113mm 연장 고사포", division:"Mainstream", nickname:["로봇청소기"], tier:"SSR", category:"Anti Air",
-		comment:"무지성 둘둘이",
+		comment:"무지성 대공포 B",
 		link:"https://azurlane.netojuu.com/images/3/3f/26500.png"
 	},
 	{ title:"105mm SKC 연장 고사포", division:"Mainstream", nickname:["다리미"], tier:"SSR", category:"Anti Air",
-		comment:"무지성 둘둘이",
+		comment:"무지성 대공포 A",
 		link:"https://azurlane.netojuu.com/images/e/e6/46300.png"
 	},
 	{ title:"100mm 연장 고사포", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
 		comment:"무지성 둘둘이",
 		link:"https://azurlane.netojuu.com/images/2/20/36560.png"
 	},
-	{ title:"연장 보포스 40mm 기관포 STAAG", division:"Mainstream", nickname:["STAAG", "스태그"], tier:"SSR", category:"Anti Air",
-		comment:"전함 최종 대공포. 대공스텟 낮은 애 줘도 된다.",
+	{ title:"연장 보포스 40mm 기관포 STAAG", division:"EndSpec", nickname:["STAAG", "스태그"], tier:"SSR", category:"Anti Air",
+		comment:"전함 최종 대공포. 사거리도 좋고 사속도 빨라서, 전열이 다소 좁고 느린 대공포를 써도, 얘가 어느정도 보정을 해준다. 양산되면 전열 대공수치 낮은 애 줘도 된다.",
 		link:"https://azurlane.netojuu.com/images/1/18/26600.png"
 	},
 	{ title:"40mm 연장 보포스 해즐미어", division:"Mainstream", nickname:["해즐미어"], tier:"SSR", category:"Anti Air",
-		comment:"무지성 둘둘이",
+		comment:"스태그 하위호환이고, 스태그 업글도 가능.",
 		link:"https://azurlane.netojuu.com/images/2/2f/26620.png"
 	},
 	{ title:"40mm 8연장 폼폼 포", division:"Lowend", nickname:["폼폼포"], tier:"SSR", category:"Anti Air",
-		comment:"짧고 굵은 사나이템",
+		comment:"사거리가 너무 짧음. 스태그 등등 사거리 긴거랑 섞으면 문제는 안됨. 대공 없는 사람은 없는대로 전열에 주기 좋음.",
 		link:"https://azurlane.netojuu.com/images/2/2c/26200.png"
 	},
 	{ title:"127mm 연장 고각포改", division:"Lowend", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"나는 존나 힙스터다",
+		comment:"로봇청소기 하위 호환.",
 		link:"https://azurlane.netojuu.com/images/0/06/36660.png"
 	},
-	{ title:"연장 105mmSKC 고사포 개조형", division:"Lowend", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"나는 존나 힙스터다",
+	{ title:"연장 105mmSKC 고사포 개조형", division:"Lowend", nickname:["슈퍼다리미"], tier:"SSR", category:"Anti Air",
+		comment:"다리미 업글판이다. 사속이 쬐금만 더 빨랐으면 난 이거 썼을거다.",
 		link:"https://azurlane.netojuu.com/images/3/3d/46360.png"
 	},
 	{ title:"6연장 40mm 보포스 대공포", division:"EndSpec", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"전열 최종 대공포",
+		comment:"전열 대공포 최종템. 8연장 폼폼 상위호환.",
 		link:"https://azurlane.netojuu.com/images/4/4d/26660.png"
 	},
-	{ title:"연장포 76mm RF 화포 Mk27", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"대공스텟 낮은 애들한테",
+	{ title:"연장포 76mm RF 화포 Mk27", division:"Lowend", nickname:[], tier:"SSR", category:"Anti Air",
+		comment:"사속조절용 원탑임. 근데 스태그 개발이 가능해져서, 굳이 만들 필요가 없음. 게다가 재료값도 비쌈.",
 		link:"https://azurlane.netojuu.com/images/6/60/16080.png"
 	},
-	{ title:"96식 25mm 3연장 폭풍피격기포", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"대공스텟 낮은 애들한테",
+	{ title:"96식 25mm 3연장 폭풍피격기포", division:"Lowend", nickname:["폭풍피격기"], tier:"SSR", category:"Anti Air",
+		comment:"사속 조절용으로 쓰는건데, 타점이 너~무 낮음. 존나 남용하면 한두번에 갈아버릴 함재기를 못갈아버리는 상황도 생김.",
 		link:"https://azurlane.netojuu.com/images/6/63/36360.png"
 	},
-	{ title:"시제형 5식 40mm 고사기관포", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"대공스텟 낮은 애들한테",
+	{ title:"시제형 5식 40mm 고사기관포", division:"Lowend", nickname:["재떨이"], tier:"SSR", category:"Anti Air",
+		comment:"타점 그럭저럭이고, 사속 높아서 중앵함선 등 대공스텟 낮은 애들 주면 된다",
 		link:"https://azurlane.netojuu.com/images/0/06/36700.png"
 	},
 	{ title:"시제형 연장 90mm 고각포 Model 1939", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"균형잡힌 템",
+		comment:"보포스의 상위호환이다.",
 		link:"https://azurlane.netojuu.com/images/6/65/55160.png"
 	},
-	{ title:"90mm 단장 고각포 Model1939", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"균형잡힌 템",
+	{ title:"90mm 단장 고각포 Model1939", division:"Lowend", nickname:[], tier:"SSR", category:"Anti Air",
+		comment:"디트코에서 파밍 가능한데, 딱히 좋다고는 말 못하겠다. 그냥 저냥 써먹을 수는 있는 정도.",
 		link:"https://azurlane.netojuu.com/images/f/fd/55100.png"
 	},
-	{ title:"40mm 4인칭 보포스 기관포", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"균형잡힌 템",
+	{ title:"40mm 4연장 보포스 기관포", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
+		comment:"균형잡힌 템. 기술된 대공포는 얘를 기준으로 함",
 		link:"https://azurlane.netojuu.com/images/c/c1/16400.png"
 	},
 	{ title:"134mm 연장 고각포", division:"Mainstream", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"대공 효율은 잘 모르겠고, 나는 화력이 부족하다 게이야. -> 그럼 이거쓰면 된다 게이야",
+		comment:"걍 쓰기엔 너무 느림. 대공 전투가 중요하지 않은 곳에서 쓰자.",
 		link:"https://azurlane.netojuu.com/images/b/bf/21500.png"
 	},
-	{ title:"2연장 37mm 고사포 Mle1936", division:"Lowend", nickname:[], tier:"SSR", category:"Anti Air",
-		comment:"균형잡힌 똥",
+	{ title:"2연장 37mm 고사포 Mle1936", division:"Lowend", nickname:["쓰레기통"], tier:"SSR", category:"Anti Air",
+		comment:"사속 조절용으로 쓸 수는 있는데, 타점이 너무 낮음.",
 		link:"https://azurlane.netojuu.com/images/a/a8/50600.png"
 	},
 ];
@@ -581,7 +580,7 @@ export const Attacker:IItem[] = [
 	},
 	{
 		title:"브레게 BR.818", division:"Mainstream", nickname:[], tier:"SSR", category:"Attacker",
-		comment:"알바코어 및 바라쿠다 재료",
+		comment:"뇌장스펙만 평가할 경우 바라쿠다랑 비슷한데, 어뢰살포 방식이 똑똑해서 완전히 상위에 대응함. 와이번처럼 대응발진 기능 있음.",
 		link:"https://azurlane.netojuu.com/images/6/6a/51240.png"
 	}
 
@@ -613,7 +612,7 @@ export const Auxiliary_BB:IItem[] = [
 		comment:"화력+59, 명중+26. 전투 개시 6초간 전열이 받는 뎀 24%를 대신 받음.",
 		link:"https://azurlane.netojuu.com/images/7/76/880.png"
 	},
-	{ title:"FuMO 25", division:"Lowend", nickname:["푸모"], tier:"SSR", category:"Auxiliary",
+	{ title:"FuMO 25", division:"Mainstream", nickname:["푸모"], tier:"SSR", category:"Auxiliary",
 		comment:"화력+32, 명중+35. 고해역에서 명중률은 필요한데, 고사통 없을 때 이걸로 어느정도 대체 ㄱㄴ",
 		link:"https://azurlane.netojuu.com/images/0/0f/960.png"
 	},
@@ -673,7 +672,7 @@ export const Auxiliary_FL:IItem[] = [
 		comment:"연구돌리다 보면 쌓임. 12지부터 쓰는 템.",
 		link:"https://azurlane.netojuu.com/images/5/5c/1160.png"
 	},
-	{ title:"진주의 눈물", division:"Lowend", nickname:[], tier:"SSR", category:"Auxiliary",
+	{ title:"진주의 눈물", division:"Mainstream", nickname:[], tier:"SSR", category:"Auxiliary",
 		comment:"이거 낀 애가 터지면 느그함대 전원 체력 10% 회복함. 애리조나, 오클라호마, 캐신, 다운스 풀돌 보상.",
 		link:"https://azurlane.netojuu.com/images/7/78/520.png"
 	},
@@ -681,7 +680,7 @@ export const Auxiliary_FL:IItem[] = [
 		comment:"느그함대 전열 이동속도 20% 올라감. 낀 애는 내구+90, 회피+44. 찰스 오스본, 무트, 스펜스, 대처, 얼릭 풀돌 보상.",
 		link:"https://azurlane.netojuu.com/images/b/be/500.png"
 	},
-	{ title:"엘리트 응급 수리(유니온)", division:"Lowend", nickname:["다메콘"], tier:"SSR", category:"Auxiliary",
+	{ title:"엘리트 응급 수리(유니온)", division:"Mainstream", nickname:["다메콘"], tier:"SSR", category:"Auxiliary",
 		comment:"이글 유니온 함순이가 터지면, 8초 동안 안터지고 무적 됨. 요크타운, 엔터프라이즈, 호넷 풀돌 보상.",
 		link:"https://azurlane.netojuu.com/images/1/15/840.png"
 	},
@@ -705,7 +704,7 @@ export const Auxiliary_FL:IItem[] = [
 
 export const Auxiliary_RR:IItem[] = [
 	// 범용 장비
-	{ title:"533mm 자기 어뢰", division:"Mainstream", nickname:[], tier:"SSR", category:"Auxiliary",
+	{ title:"533mm 자기 어뢰", division:"Lowend", nickname:[], tier:"SSR", category:"Auxiliary",
 		comment:"첫 어뢰에 자성어뢰 효과를 부여하고 대미지 +5%. 뇌장+85, 명중+18. 환광 D1 드랍.",
 		link:"https://azurlane.netojuu.com/images/6/67/2700.png"
 	},
@@ -713,7 +712,7 @@ export const Auxiliary_RR:IItem[] = [
 		comment:"뇌장+118, 장전+13. 코어샵 1500",
 		link:"https://azurlane.netojuu.com/images/5/59/2600.png"
 	},
-	{ title:"작전 보고:AF", division:"Mainstream", nickname:[], tier:"SR", category:"Auxiliary",
+	{ title:"작전 보고:AF", division:"Lowend", nickname:[], tier:"SR", category:"Auxiliary",
 		comment:"중앵함선 6% 더 아프게 팸. 내구+580",
 		link:"https://azurlane.netojuu.com/images/8/81/940.png"
 	},
@@ -782,7 +781,7 @@ export const Auxiliary_SP:IItem[] = [
 		comment:"잠수함 작전시간 늘려줌. 잠수함 기본템 B",
 		link:"https://azurlane.netojuu.com/images/c/cf/800.png"
 	},
-	{ title:"약속의 증명", division:"Mainstream", nickname:[], tier:"SSR", category:"Auxiliary",
+	{ title:"약속의 증명", division:"Lowend", nickname:[], tier:"SSR", category:"Auxiliary",
 		comment:"U-556 장착시, 수면전투시간 4초 연장, 지원범위+1 // 비스마르크 장착시, 주력 함대의 탄약 부족 상태에 의한 대미지 감소 효과를 줄임. 이벤트 배포템.",
 		link:"https://azurlane.netojuu.com/images/8/8c/720.png"
 	},
