@@ -46,6 +46,10 @@ export const DDGun:IItem[] = [
 		comment:"색적거리가 100mm, 114mm와 같이 짧은 편이지만, 쓰는 데엔 지장없고 딜도 준수해서 그냥저냥 쓰면 됨.",
 		link:"https://azurlane.netojuu.com/images/8/89/55920.png"
 	},
+	{ title:"시제형 2연장 130mm 주포 Model 1936", division:"Mainstream", nickname:["하얼빈포"], tier:"SSR", category:"Main Gun",
+		comment:"사거리가 길어서 순양전함 부포로도 쓸만함. 땃쥐포 파쿠리 장비인데, 경장갑 대상으로 표면 dps 차이가 은근히 벌어짐",
+		link:"https://azurlane.netojuu.com/images/1/14/56100.png"
+	},
 ];
 
 export const CLGun:IItem[] = [
@@ -93,6 +97,10 @@ export const CLGun:IItem[] = [
 	{ title:"3연장 152mm 주포 Mk16", division:"Mainstream", nickname:[], tier:"SSR", category:"Main Gun",
 		comment:"간편하게 쓰는 전함부포의 업글판.",
 		link:"https://azurlane.netojuu.com/images/9/91/12160.png"
+	},
+	{ title:"시제형 4연장 152mm 주포", division:"EndSpec", nickname:["플리머스포"], tier:"UR", category:"Main Gun",
+		comment:"대충 전열에게는 시애틀포보다 좋고, 후열에게는 딜증 2% 정도 기대해볼만하다는 듯",
+		link:"https://azurlane.netojuu.com/images/3/37/22280.png"
 	},
 ];
 
@@ -250,6 +258,10 @@ export const CBGun:IItem[] = [
 		comment:"이거 전함포 버전도 존재하는데, 그건 SKC29다. 제대로 벤치마킹은 안해봤는데, 해역에서 둘러보니 또치급은 이거 끼면 대충 금딱 중순포 끼던 애들이랑 근소우위로 딜 넣던걸 봤다.",
 		link:"https://azurlane.netojuu.com/images/9/99/43100.png"
 	},
+	{ title:"시제형 4연장 330mm 주포 Mle11931", division:"Lowend", nickname:["브레스트포"], tier:"SSR", category:"Main Gun",
+		comment:"토끼포 없으면 브레스트는 이거 써야함. 쿨도 너무 길고, 4발씩 쏘는데, 이게 다 맞을까 싶다.",
+		link:"https://azurlane.netojuu.com/images/4/4a/50360.png"
+	},
 ];
 
 export const Torpedo:IItem[] = [
@@ -397,6 +409,10 @@ export const AAGun:IItem[] = [
 	{ title:"2연장 37mm 고사포 Mle1936", division:"Lowend", nickname:["쓰레기통"], tier:"SSR", category:"Anti Air",
 		comment:"사속 조절용으로 쓸 수는 있는데, 타점이 너무 낮음.",
 		link:"https://azurlane.netojuu.com/images/a/a8/50600.png"
+	},
+	{ title:"시제형 4연장 30mm 기관포", division:"Lowend", nickname:["다트판"], tier:"SSR", category:"Anti Air",
+		comment:"스탯들이 너무 애매함. 일단 지금은 쓰레기통 친구로 취급되는 중이고, 추후 평가가 바뀌면 수정함.",
+		link:"https://azurlane.netojuu.com/images/8/8d/46400.png"
 	},
 ];
 
@@ -627,6 +643,10 @@ export const Auxiliary_BB:IItem[] = [
 	{ title:"SG 레이더", division:"Lowend", nickname:["SG"], tier:"SSR", category:"Auxiliary",
 		comment:"회피+18, 명중+44. 매복함대 만날확률 12% 감소. 매복으로부터 도망치기 12% 상승. 푸모조차 없을 때 고해역에서 가끔 쓰는 정도.",
 		link:"https://azurlane.netojuu.com/images/9/9f/1500.png"
+	},
+	{ title:"해군성 사격 통제 장비", division:"EndSpec", nickname:["무딱 고사통"], tier:"UR", category:"Auxiliary",
+		comment:"화력+46, 명중+65. 장착한 함선의 주포 분산도를 -2씩 보정해준다",
+		link:"https://azurlane.netojuu.com/images/c/c4/3580.png"
 	}
 ];
 
