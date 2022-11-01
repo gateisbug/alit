@@ -1,5 +1,6 @@
 {
   "homepage": "https://gateisbug.github.io/alit/",
+  "main": "src",
   "name": "azurlane",
   "version": "1.4.1",
   "private": true,
