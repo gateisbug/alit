@@ -99,7 +99,7 @@ export const CLGun:IItem[] = [
 		link:"https://azurlane.netojuu.com/images/9/91/12160.png"
 	},
 	{ title:"시제형 4연장 152mm 주포", division:"EndSpec", nickname:["플리머스포"], tier:"UR", category:"Main Gun",
-		comment:"대충 전열에게는 시애틀포보다 좋고, 후열에게는 딜증 2% 정도 기대해볼만하다는 듯",
+		comment:"경순포 찐막템. 이거 있고 없고에 따라 플리머스 딜차이 상당히 남. 시애틀포 대비 3만딜 가랑 더 넣음(10강 기준)",
 		link:"https://azurlane.netojuu.com/images/3/37/22280.png"
 	},
 ];
@@ -237,6 +237,10 @@ export const BBGun:IItem[] = [
 	{ title:"3연장 305mm 주포 Model1907", division:"Lowend", nickname:[], tier:"R", category:"Main Gun",
 		comment:"강구트 고증포. 갈면 강구트 약해짐.",
 		link:"https://azurlane.netojuu.com/images/2/29/85420.png"
+	},
+	{ title:"460mm 3연장포", division:"EndSpec", nickname:["야마토포", "무사시포"], tier:"UR", category:"Main Gun",
+		comment:"조건부로 2회까진 헬레나와 연계가 가능. 깡딜은 존나 높은데, 장전쿨이 따로 노는 편임. 무사시는 이것도 쓰고, 이즈모포도 쓰고 다써야함. 플리머스 실사용이 가능하며, 금도면이 충분하다면 선 야마토포 13강 템셋을 추천하고. 플리머스를 못쓰며, 도면이 부족하면 선이즈모포 13강 템셋을 추천함. 즉, 뭘 먼저 13강 하느냐 차이지 결국은 상황에 따라 둘 다 써야한다고 봄.",
+		link:"https://azurlane.netojuu.com/images/9/97/34200.png"
 	},
 ];
 
