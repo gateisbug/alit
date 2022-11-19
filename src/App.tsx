@@ -1,21 +1,25 @@
-import classNames from "classnames/bind";
-import styles from "style/app.module.scss";
-import Header from "components/Header";
-import HomeHero from "components/HomeHero";
-import Nav from "components/Nav";
-import RootRouter from "./RootRouter";
-
-const cx = classNames.bind(styles);
+import { useState } from 'react'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div className={cx("App")}>
-        <Header />
-        <HomeHero />
-        <Nav />
-        <RootRouter />
+    <div className="App">
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </div>
   )
 }
 
-export default App;
+export default App
