@@ -1,1 +1,2 @@
-/// <reference types="vite/client" />
+/// <reference defs="vite/client" />
+declare module '*.scss'

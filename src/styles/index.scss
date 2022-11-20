@@ -1,0 +1,12 @@
+@import "src/styles/color";
+
+body {
+	background-color: $white2;
+	font-size: 16px;
+	line-height: 1rem;
+	margin: 0;
+}
+
+#root {
+	height: 100%;
+}
