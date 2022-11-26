@@ -1,0 +1,26 @@
+@import "src/styles/color";
+
+.Button {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	width: fit-content;
+	height: fit-content;
+}
+
+.Select {
+	border: 1px solid transparent;
+	border-radius: 2px;
+	cursor: pointer;
+
+	&.Orange {
+		&:hover {
+			border-color: $orange1;
+		}
+	}
+	&.Blue {
+		&:hover {
+			border-color: $blue1;
+		}
+	}
+}
