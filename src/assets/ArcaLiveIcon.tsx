@@ -1,7 +1,6 @@
 import { IconType } from "@src/defs/components";
-import { BLUE1 } from "@src/defs/color";
 
-function ArcaLiveIcon({ size=undefined, color=BLUE1, fill="none" }:IconType) {
+function ArcaLiveIcon({ size=undefined, color="currentColor", fill="none" }:IconType) {
 	return (
 		<svg width={size||36} height={size||36} viewBox="0 0 36 36" fill={fill} xmlns="http://www.w3.org/2000/svg">
 			<g clipPath="url(#clip0_210_121)">

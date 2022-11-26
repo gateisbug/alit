@@ -1,1 +1,1 @@
-export { default as ExternLinks } from "./ExternLinks";
+export default ""
