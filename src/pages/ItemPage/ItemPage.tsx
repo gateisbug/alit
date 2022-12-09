@@ -1,11 +1,12 @@
-import { useParams } from "react-router-dom";
+import classNames from "classnames/bind";
+import styles from "./ItemPage.module.scss";
+
+const cx = classNames.bind(styles);
 
 function ItemPage() {
-	const { category } = useParams();
-
 	return (
-		<section className="ItemPage">
-			Item Page { category }
+		<section className={ cx("ItemPage") }>
+			ItemPage
 		</section>
 	)
 }

@@ -1,1 +1,1 @@
-export { default as ExternLink } from "./ExternLink";
+export default "molecules";

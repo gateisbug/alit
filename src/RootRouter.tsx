@@ -1,13 +1,13 @@
-import { Route, Routes } from "react-router-dom";
-import { ItemPage, MainPage, NotFoundPage } from "./pages";
+import { Routes, Route } from "react-router-dom";
+import { MainPage, ItemPage, NFPage } from "@src/pages";
 
 function RootRouter() {
 	return (
 		<Routes>
 			<Route path="/item" element={<ItemPage />} />
-			<Route path="/item/:category" element={<ItemPage />} />
+			<Route path="/item:category" element={<ItemPage />} />
 			<Route path="/" element={<MainPage />} />
-			<Route path="/*" element={<NotFoundPage />} />
+			<Route path="/*" element={<NFPage />} />
 		</Routes>
 	)
 }
