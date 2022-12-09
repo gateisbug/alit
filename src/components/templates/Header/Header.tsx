@@ -1,16 +1,21 @@
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 import { Logo } from "@src/components/atoms";
-import { Links, SearchItem } from "@src/components/molecules";
+import { Links } from "@src/components/molecules";
+import { ReactNode } from "react";
 
 const cx = classNames.bind(styles);
 
-function Header() {
+type Props = {
+	search: ReactNode;
+}
+
+function Header({ search }:Props) {
 	return (
 		<header className={ cx("Header") }>
 			<Logo />
 			<div className={ cx("search-area") }>
-				<SearchItem />
+				{ search }
 			</div>
 			<Links />
 		</header>

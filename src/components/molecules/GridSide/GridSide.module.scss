@@ -1,0 +1,36 @@
+@import "src/styles/color";
+
+.GridSide {
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 240px;
+	width: 240px;
+	min-width: 240px;
+	height: 100%;
+}
+
+.ItemSide {
+	padding-top: 8px;
+	border-right: 1px solid $border;
+}
+
+.SideItem {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 16px;
+	width: 100%;
+	height: 48px;
+	padding: 0 24px;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		background-color: $borlight;
+	}
+
+	.SideIcon {
+		width: 32px;
+		height: 32px;
+	}
+}
