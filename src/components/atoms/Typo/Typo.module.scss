@@ -1,0 +1,58 @@
+@import "src/styles/color";
+
+.Typo {
+	display: inline-flex;
+	flex-flow: row nowrap;
+	align-items: center;
+
+	.h1 {
+		font-size: 28px;
+		letter-spacing: 0.02em;
+		font-weight: 700;
+		color: $font;
+	}
+	.h2 {
+		font-size: 24px;
+		letter-spacing: 0.02em;
+		font-weight: 700;
+		color: $font;
+	}
+	.h3 {
+		font-size: 20px;
+		letter-spacing: 0.02em;
+		font-weight: 500;
+		color: $font;
+	}
+	.p1 {
+		font-size: 16px;
+		letter-spacing: 0.02em;
+		font-weight: 500;
+		color: $font;
+	}
+	.p2 {
+		font-size: 14px;
+		letter-spacing: 0.02em;
+		font-weight: 400;
+		color: $font;
+	}
+	.p3 {
+		font-size: 14px;
+		letter-spacing: -0.015em;
+		font-weight: 400;
+		color: $fontweak;
+	}
+}
+
+.single {
+	line-height: 1.25em;
+}
+
+.multi {
+	line-height: 1.75em;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

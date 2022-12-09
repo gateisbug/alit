@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import '@src/styles/reset.scss';
+import '@src/styles/font.scss';
 import '@src/styles/index.scss';
 import { HashRouter } from "react-router-dom";
 
