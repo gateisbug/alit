@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./GridSide.module.scss";
 import gunIcon from "@src/resoures/Icon/Gun.png";
@@ -8,14 +8,17 @@ import airplaneIcon from "@src/resoures/Icon/Airplane.png";
 import acceIcon from "@src/resoures/Icon/Accessory.png";
 import specIcon from "@src/resoures/Icon/Special.png";
 import { Sypo } from "@src/components/atoms";
+import * as Icon from "@src/assets";
 import usePathfinder from "@src/hooks/usePathfinder";
 import { ITEM_PAGE_CATEGORY_URL } from "@src/defs/routes";
 
 const cx = classNames.bind(styles);
+const { GunIcon } = Icon;
 
 function ItemSide() {
 	const navigate = useNavigate();
 	const { convertUrl } = usePathfinder();
+	const { pathname } = useLocation();
 
 	const sideList = [
 		{ text:"함포", link:"navalgun", icon: gunIcon },
@@ -36,11 +39,11 @@ function ItemSide() {
 			{
 				sideList.map((v, i) => (
 					<div key={i}
-					     className={ cx("SideItem") }
+					     className={ cx("SideItem", pathname.includes(v.link) && 'active' ) }
 					     onClick={() => {onClickSideItem(v.link)}} >
 						<img src={v.icon} alt={v.text}
 						     className={ cx("SideIcon") }/>
-						<Sypo type='p2'>{v.text}</Sypo>
+						<Sypo type='p1'>{v.text}</Sypo>
 					</div>
 				))
 			}

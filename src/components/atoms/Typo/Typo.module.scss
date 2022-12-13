@@ -5,37 +5,37 @@
 	flex-flow: row nowrap;
 	align-items: center;
 
-	.h1 {
+	&.h1 {
 		font-size: 28px;
 		letter-spacing: 0.02em;
 		font-weight: 700;
 		color: $font;
 	}
-	.h2 {
+	&.h2 {
 		font-size: 24px;
 		letter-spacing: 0.02em;
 		font-weight: 700;
 		color: $font;
 	}
-	.h3 {
+	&.h3 {
 		font-size: 20px;
 		letter-spacing: 0.02em;
 		font-weight: 500;
 		color: $font;
 	}
-	.p1 {
+	&.p1 {
 		font-size: 16px;
 		letter-spacing: 0.02em;
 		font-weight: 500;
 		color: $font;
 	}
-	.p2 {
+	&.p2 {
 		font-size: 14px;
 		letter-spacing: 0.02em;
 		font-weight: 400;
 		color: $font;
 	}
-	.p3 {
+	&.p3 {
 		font-size: 14px;
 		letter-spacing: -0.015em;
 		font-weight: 400;
