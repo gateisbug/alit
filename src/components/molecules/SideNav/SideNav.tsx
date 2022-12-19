@@ -17,7 +17,8 @@ function SideNav({ navList }:Props) {
 					<NavItem key={v.url}
 					         Icon={v.Icon}
 					         url={v.url}
-					         title={v.title} />
+					         title={v.title}
+					/>
 				))
 			}
 		</div>

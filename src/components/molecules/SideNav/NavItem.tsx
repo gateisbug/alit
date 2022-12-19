@@ -1,9 +1,9 @@
 import classNames from "classnames/bind";
 import styles from "./SideNav.module.scss";
 import { useLocation, useNavigate } from "react-router-dom";
-import usePathfinder from "@src/hooks/usePathfinder";
-import { ITEM_PAGE_CATEGORY_URL } from "@src/defs/routes";
 import { Sypo } from "@src/components/atoms";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { postfixAtom, prefixAtom } from "@src/stores/GridStore";
 
 const cx = classNames.bind(styles);
 
@@ -14,13 +14,15 @@ type Props = {
 }
 
 function NavItem({ Icon=undefined, url, title }:Props) {
+	const prefix = useRecoilValue(prefixAtom);
+	const setPostfix = useSetRecoilState(postfixAtom);
 	const navigate = useNavigate();
-	const { convertUrl } = usePathfinder();
 	const { pathname } = useLocation();
 
 	const onClick = () => {
-		const _url = convertUrl(ITEM_PAGE_CATEGORY_URL, url);
-		navigate(_url)
+		const _url = `/${prefix}/${url}`;
+		navigate(_url);
+		setPostfix(url);
 	}
 
 	return (

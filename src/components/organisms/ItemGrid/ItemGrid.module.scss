@@ -1,0 +1,11 @@
+.ItemGrid {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.nav-area {
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 8px;
+	user-select: none;
+}

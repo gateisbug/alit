@@ -1,13 +1,17 @@
 import classNames from "classnames/bind";
 import styles from "./Nav.module.scss";
-import { ItemSide } from "@src/components/organisms";
+import { ReactNode } from "react";
 
 const cx = classNames.bind(styles);
 
-function Nav() {
+type Props = {
+	children: ReactNode;
+}
+
+function Nav({ children }:Props) {
 	return (
 		<nav className={ cx("Nav") }>
-			<ItemSide />
+			{ children }
 		</nav>
 	)
 }

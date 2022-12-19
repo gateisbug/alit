@@ -1,8 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./MainPage.module.scss";
 import { SearchItem } from "@src/components/molecules";
-import { Header, Nav } from "@src/components/templates";
-import GunIcon from "@src/assets/GunIcon";
+import { Header } from "@src/components/templates";
 
 const cx = classNames.bind(styles);
 
@@ -11,7 +10,7 @@ function MainPage() {
 		<section className={ cx("MainPage") }>
 			<Header search={<SearchItem />} />
 			<section className={ cx("main") }>
-				<Nav />
+				Nav
 			</section>
 		</section>
 	)

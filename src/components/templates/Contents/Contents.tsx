@@ -1,12 +1,17 @@
 import classNames from "classnames/bind";
 import styles from "./Contents.module.scss";
+import { ReactNode } from "react";
 
 const cx = classNames.bind(styles);
 
-function Contents() {
+type Props = {
+	children: ReactNode;
+}
+
+function Contents({ children }:Props) {
 	return (
-		<main className="Contents">
-			Contents
+		<main className={ cx("Contents") }>
+			{ children }
 		</main>
 	)
 }

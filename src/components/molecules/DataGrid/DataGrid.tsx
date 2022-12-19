@@ -11,7 +11,7 @@ type Props = {
 function DataGrid({ children }:Props) {
 	return (
 		<div className={ cx("DataGrid") }>
-			{ children };
+			{ children }
 		</div>
 	)
 }
