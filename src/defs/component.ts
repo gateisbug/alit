@@ -8,3 +8,9 @@ export type IconType = {
 	fill?: string;
 	padding?: number;
 }
+
+export type NavList = {
+	title: string;
+	url: string;
+	Icon?: JSX.Element;
+}

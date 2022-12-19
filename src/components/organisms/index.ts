@@ -1,1 +1,1 @@
-export default "organisms";
+export { default as ItemSide } from "./ItemSide";

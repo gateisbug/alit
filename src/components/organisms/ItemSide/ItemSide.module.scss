@@ -1,0 +1,10 @@
+@import "src/styles/color";
+
+.ItemSide {
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 200px;
+	width: 200px;
+	min-width: 200px;
+	height: 100%;
+}

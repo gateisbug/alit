@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./Nav.module.scss";
-import { ItemSide } from "@src/components/molecules";
+import { ItemSide } from "@src/components/organisms";
 
 const cx = classNames.bind(styles);
 

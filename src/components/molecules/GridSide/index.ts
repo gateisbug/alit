@@ -1,1 +1,0 @@
-export { default as ItemSide } from "./ItemSide";
