@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
 import styles from "./ItemGrid.module.scss";
 import { TopNav } from "@src/components/atoms";
-import { DataGrid, GridHead, GridRow } from "@src/components/molecules";
-import useTopnav from "@src/components/organisms/ItemGrid/useTopnav";
+import useTopnav from "./useTopnav";
+import { ItemTable } from "@src/components/molecules";
 
 const cx = classNames.bind(styles);
 
@@ -17,12 +17,7 @@ function ItemGrid() {
 					<TopNav navList={topnav} />
 				</div>
 			}
-			<div className={ cx("contents-area") }>
-				<DataGrid>
-					<GridHead data={[ 'A', 'B', 'C' ]} />
-					<GridRow data={[ 'a', 'b', 'c' ]} />
-				</DataGrid>
-			</div>
+			<ItemTable />
 		</div>
 	)
 }

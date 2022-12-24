@@ -14,3 +14,10 @@ export type NavList = {
 	url: string;
 	Icon?: JSX.Element;
 }
+
+export type CellSize = {
+	tip: string;
+	flexBasis: string;
+	flexGrow?: number;
+	align?: string;
+}

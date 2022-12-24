@@ -7,14 +7,14 @@ const cx = classNames.bind(styles);
 
 type Props = {
 	children:ReactNode;
-	type: TypoType,
-	line: TypoLine,
+	type?: TypoType,
+	line?: TypoLine,
 	weight?: TypoWeight,
 	color?: string,
 	ellipsis?: boolean;
 }
 
-function Typo({ children, type, line, weight, color=undefined, ellipsis=false }:Props) {
+function Typo({ children, type='p1', line='single', weight, color=undefined, ellipsis=false }:Props) {
 	const styles = (() => {
 		const output:CSSProperties = {
 			color: 'inherit'
@@ -51,12 +51,12 @@ function Typo({ children, type, line, weight, color=undefined, ellipsis=false }:
 
 type Trops = {
 	children: ReactNode;
-	type: TypoType;
+	type?: TypoType;
 	weight?: TypoWeight;
 	color?: string;
 	ellipsis?: boolean;
 }
-function Sypo({ children, type, weight, color, ellipsis=false }:Trops) {
+function Sypo({ children, type='p1', weight, color, ellipsis=false }:Trops) {
 	return (
 		<Typo type={type}
 		      line={'single'}
@@ -68,7 +68,7 @@ function Sypo({ children, type, weight, color, ellipsis=false }:Trops) {
 	)
 }
 
-function Mypo({ children, type, weight, color, ellipsis=false }:Trops) {
+function Mypo({ children, type='p1', weight, color, ellipsis=false }:Trops) {
 	return (
 		<Typo type={type}
 		      line={'multi'}

@@ -1,0 +1,48 @@
+@import "src/styles/color";
+
+.Table {
+	display: flex;
+	flex-flow: column nowrap;
+	border: 1px solid $border;
+	border-radius: 4px;
+}
+
+.Thead {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 8px;
+	border-bottom: 1px solid $bordark;
+
+	.Cell {
+		justify-content: center;
+		border-right: 2px solid $bordark;
+
+		&:last-of-type {
+			border-right: none;
+		}
+	}
+}
+
+.Tbody {
+	display: flex;
+	flex-flow: row nowrap;
+	border-bottom: 1px solid $border;
+	padding: 8px;
+
+	.Cell {
+		height: 64px;
+		padding: 0 8px;
+	}
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+}
+
+.Cell {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	margin: 4px 0;
+}

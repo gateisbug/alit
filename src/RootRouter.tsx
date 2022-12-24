@@ -7,7 +7,7 @@ function RootRouter() {
 		<Routes>
 			<Route path={ ITEM_PAGE_INDEX_URL } element={<ItemPage />} />
 			<Route path={ ITEM_PAGE_CATEGORY_URL } element={<ItemPage />} />
-			<Route path={ MAIN_PAGE_URL } element={<MainPage />} />
+			<Route path={ MAIN_PAGE_URL } element={<ItemPage />} />
 			<Route path={ ERROR_BOUNDARY } element={<NFPage />} />
 		</Routes>
 	)

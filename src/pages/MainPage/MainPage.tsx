@@ -10,7 +10,7 @@ function MainPage() {
 		<section className={ cx("MainPage") }>
 			<Header search={<SearchItem />} />
 			<section className={ cx("main") }>
-				Nav
+				main
 			</section>
 		</section>
 	)

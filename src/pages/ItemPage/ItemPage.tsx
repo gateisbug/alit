@@ -14,7 +14,7 @@ function ItemPage() {
 				<Nav>
 					<ItemSide />
 				</Nav>
-				<Contents>
+				<Contents scroll>
 					<ItemGrid />
 				</Contents>
 			</div>
