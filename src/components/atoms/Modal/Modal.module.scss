@@ -22,8 +22,10 @@
 	display: flex;
 	flex-flow: column nowrap;
 	padding: 12px;
-	min-width: 480px;
-	min-height: 560px;
+	width: 560px;
+	height: 640px;
+	min-width: 560px;
+	min-height: 640px;
 	background-color: #fff;
 	border-radius: 8px;
 }
@@ -37,8 +39,6 @@
 	.button {
 		display: flex;
 		flex-flow: row nowrap;
-		width: 36px;
-		height: 36px;
 		align-items: center;
 		justify-content: center;
 		user-select: none;
@@ -49,4 +49,8 @@
 .container {
 	display: flex;
 	flex-flow: column nowrap;
+	margin-top: 16px;
+	flex-grow: 1;
+	height: 100%;
+	overflow-y: auto;
 }

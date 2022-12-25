@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, MouseEvent, ReactNode } from "react";
 import classNames from "classnames/bind";
 import styles from "./Table.module.scss";
 
@@ -11,9 +11,20 @@ type Props = {
 	flexBasis?: string;
 	flexShrink?: string;
 	align?: string;
+	onClick?: (e:MouseEvent) => void;
 }
 
-function Cell({ children, width='auto', flexGrow=0, flexBasis='auto', flexShrink='1', align='center' }:Props) {
+function Cell(props:Props) {
+	const {
+		children,
+		width='auto',
+		flexGrow=0,
+		flexBasis='auto',
+		flexShrink='1',
+		align='center',
+		onClick=undefined
+	} = props;
+
 	const style:CSSProperties = (() => {
 		return {
 			width,
@@ -26,7 +37,9 @@ function Cell({ children, width='auto', flexGrow=0, flexBasis='auto', flexShrink
 	})();
 
 	return (
-		<div className={ cx("Cell") } style={style}>
+		<div className={ cx("Cell", (!!onClick) && 'onClick') }
+		     style={style}
+		     onClick={onClick}>
 			{ children }
 		</div>
 	)

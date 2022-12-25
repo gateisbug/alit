@@ -45,4 +45,12 @@
 	flex-flow: row wrap;
 	align-items: center;
 	margin: 4px 0;
+
+	&.onClick {
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

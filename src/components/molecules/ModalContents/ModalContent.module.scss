@@ -1,0 +1,18 @@
+.ItemModal {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 12px;
+}
+
+.header {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	height: 40px;
+}
+
+.status {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 12px;
+}

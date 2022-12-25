@@ -3,6 +3,7 @@ import classNames from "classnames/bind";
 import styles from "./Modal.module.scss";
 import { useRecoilState } from "recoil";
 import { modalAtom } from "@src/stores/ModalStore";
+import { CloseIcon } from "@src/assets";
 
 const cx = classNames.bind(styles);
 
@@ -36,7 +37,9 @@ function Modal() {
 		<div className={ cx("shadow", show) } onClick={onClickShadow}>
 			<div className={ cx("Modal") }>
 				<header className={ cx("exit") }>
-					<div className={ cx("button") } onClick={onClickClose}>X</div>
+					<div className={ cx("button") } onClick={onClickClose}>
+						<CloseIcon size={24} />
+					</div>
 				</header>
 				<section className={ cx("container") }>
 					{ modal.contents }
