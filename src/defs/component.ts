@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type TypoType = "h1"|'h2'|'h3'|'p1'|'p2'|'p3';
 export type TypoLine = 'single'|'multi';
 export type TypoWeight = 'bold'|'medium'|'regular'|700|500|400|'b'|'m'|'r';
@@ -20,4 +22,14 @@ export type CellSize = {
 	flexBasis: string;
 	flexGrow?: number;
 	align?: string;
+}
+
+export type Evental = {
+	type: string;
+	stream: Array<string>;
+}
+
+export type ModalControll = {
+	show: boolean;
+	contents: ReactNode;
 }

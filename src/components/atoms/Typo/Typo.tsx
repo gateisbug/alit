@@ -12,11 +12,13 @@ type Props = {
 	weight?: TypoWeight,
 	color?: string,
 	ellipsis?: boolean;
+	style?: CSSProperties;
 }
 
-function Typo({ children, type='p1', line='single', weight, color=undefined, ellipsis=false }:Props) {
+function Typo({ children, type='p1', line='single', weight, color=undefined, ellipsis=false, style }:Props) {
 	const styles = (() => {
 		const output:CSSProperties = {
+			...style,
 			color: 'inherit'
 		};
 
@@ -55,26 +57,29 @@ type Trops = {
 	weight?: TypoWeight;
 	color?: string;
 	ellipsis?: boolean;
+	style?: CSSProperties;
 }
-function Sypo({ children, type='p1', weight, color, ellipsis=false }:Trops) {
+function Sypo({ children, type='p1', weight, color, ellipsis=false, style }:Trops) {
 	return (
 		<Typo type={type}
 		      line={'single'}
 		      weight={weight}
 		      color={color}
-		      ellipsis={ellipsis}>
+		      ellipsis={ellipsis}
+		      style={style}>
 			{ children }
 		</Typo>
 	)
 }
 
-function Mypo({ children, type='p1', weight, color, ellipsis=false }:Trops) {
+function Mypo({ children, type='p1', weight, color, ellipsis=false, style }:Trops) {
 	return (
 		<Typo type={type}
 		      line={'multi'}
 		      weight={weight}
 		      color={color}
-		      ellipsis={ellipsis}>
+		      ellipsis={ellipsis}
+		      style={style}>
 			{ children }
 		</Typo>
 	)
