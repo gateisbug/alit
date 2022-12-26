@@ -1,0 +1,10 @@
+.Logo {
+	display: flex;
+	flex-flow: row nowrap;
+	cursor: pointer;
+	user-select: none;
+
+	img {
+		width: 120px;
+	}
+}

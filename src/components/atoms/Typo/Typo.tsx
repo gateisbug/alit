@@ -1,7 +1,7 @@
 import { CSSProperties, ReactNode } from "react";
+import { TypoLine, TypoTypes, TypoWeight } from "@src/defs/types";
 import classNames from "classnames/bind";
 import styles from "./Typo.module.scss";
-import { TypoLine, TypoTypes, TypoWeight } from "@src/defs/types";
 
 const cx = classNames.bind(styles);
 
@@ -47,8 +47,52 @@ function Typo({
 	})();
 
 	return (
-		<span className={ cx("Typo", line, type) }>
-			{}
+		<span className={ cx("Typo", line, type) } title={title} style={style}>
+			{ children }
 		</span>
 	)
 }
+
+function Sypo(props:Props) {
+	const {
+		children,
+		type = 'p1',
+		weight = undefined,
+		color = 'inherit',
+		ellipsis = false,
+		userSelect = false,
+		title = undefined
+	} = props
+
+	return <Typo children={children}
+	             type={type}
+	             weight={weight}
+	             line={'S'}
+	             color={color}
+	             ellipsis={ellipsis}
+	             userSelect={userSelect}
+	             title={title} />
+}
+
+function Mypo(props:Props) {
+	const {
+		children,
+		type = 'p1',
+		weight = undefined,
+		color = 'inherit',
+		ellipsis = false,
+		userSelect = false,
+		title = undefined
+	} = props
+
+	return <Typo children={children}
+	             type={type}
+	             weight={weight}
+	             line={'M'}
+	             color={color}
+	             ellipsis={ellipsis}
+	             userSelect={userSelect}
+	             title={title} />
+}
+
+export { Typo, Sypo, Mypo };
