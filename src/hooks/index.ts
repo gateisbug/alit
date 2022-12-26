@@ -1,1 +1,1 @@
-export default "hooks";
+export default 'hooks';

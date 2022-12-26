@@ -1,3 +1,2 @@
-export { default as MainPage } from "./MainPage";
+export { default as ErrorPage } from "./ErrorPage";
 export { default as ItemPage } from "./ItemPage";
-export { default as NFPage } from "./NFPage";

@@ -1,58 +1,15 @@
-@import "src/styles/color";
-
-.Typo {
-	display: inline-flex;
-	flex-flow: row nowrap;
-	align-items: center;
-
-	&.h1 {
-		font-size: 28px;
-		letter-spacing: 0.02em;
-		font-weight: 700;
-		color: $font;
-	}
-	&.h2 {
-		font-size: 24px;
-		letter-spacing: 0.02em;
-		font-weight: 700;
-		color: $font;
-	}
-	&.h3 {
-		font-size: 20px;
-		letter-spacing: 0.02em;
-		font-weight: 500;
-		color: $font;
-	}
-	&.p1 {
-		font-size: 16px;
-		letter-spacing: 0.02em;
-		font-weight: 500;
-		color: $font;
-	}
-	&.p2 {
-		font-size: 14px;
-		letter-spacing: 0.02em;
-		font-weight: 400;
-		color: $font;
-	}
-	&.p3 {
-		font-size: 14px;
-		letter-spacing: -0.015em;
-		font-weight: 400;
-		color: $fontweak;
-	}
+.h1 {
+	font-size: 24px;
 }
-
-.single {
-	line-height: 1.25em;
+.h2 {
+	font-size: 18px;
 }
-
-.multi {
-	line-height: 1.75em;
+.p1 {
+	font-size: 16px;
 }
-
-.ellipsis {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+.p2 {
+	font-size: 14px;
+}
+.p3 {
+	font-size: 12px;
 }

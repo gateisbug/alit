@@ -1,1 +1,1 @@
-export default "stores";
+export default 'stores';

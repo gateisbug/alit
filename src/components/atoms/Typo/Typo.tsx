@@ -1,90 +1,54 @@
 import { CSSProperties, ReactNode } from "react";
 import classNames from "classnames/bind";
 import styles from "./Typo.module.scss";
-import { TypoLine, TypoType, TypoWeight } from "@src/defs/component";
+import { TypoLine, TypoTypes, TypoWeight } from "@src/defs/types";
 
 const cx = classNames.bind(styles);
 
 type Props = {
 	children:ReactNode;
-	type?: TypoType,
-	line?: TypoLine,
-	weight?: TypoWeight,
-	color?: string,
+	type?: TypoTypes;
+	weight?: TypoWeight;
+	line?: TypoLine;
+	color?: string;
 	ellipsis?: boolean;
-	style?: CSSProperties;
+	userSelect?: boolean;
+	title?: string;
 }
 
-function Typo({ children, type='p1', line='single', weight, color=undefined, ellipsis=false, style }:Props) {
-	const styles = (() => {
+function Typo({
+	children,
+	type = 'p1',
+	weight = undefined,
+	line = 'S',
+	color = 'inherit',
+	ellipsis = false,
+	userSelect = false,
+	title = undefined
+}:Props) {
+	const style = (() => {
 		const output:CSSProperties = {
-			...style,
-			color: 'inherit'
+			color,
+			userSelect: userSelect ? 'auto':'none',
+			fontWeight: 400,
 		};
 
-		switch (weight) {
-			case "b": case "bold": case 700:
-				output.fontWeight = 700;
-				break;
-			case 'm': case 'medium': case 500:
-				output.fontWeight = 500;
-				break;
-			case 'r': case 'regular': case 400:
-				output.fontWeight = 400;
-				break;
-			default:
-				output.fontWeight = undefined;
+		if(ellipsis) {
+			output.overflow = 'hidden';
+			output.whiteSpace = 'nowrap';
+			output.textOverflow = 'ellipsis';
 		}
 
-		if(color !== undefined) {
-			output.color = color;
+		if(weight !== undefined) {
+			output.fontWeight = weight;
 		}
 
 		return output;
 	})();
 
 	return (
-		<span className={ cx("Typo", type, line, ellipsis && 'ellipsis') }
-		      style={styles}>
-			{ children }
+		<span className={ cx("Typo", line, type) }>
+			{}
 		</span>
 	)
-}
-
-type Trops = {
-	children: ReactNode;
-	type?: TypoType;
-	weight?: TypoWeight;
-	color?: string;
-	ellipsis?: boolean;
-	style?: CSSProperties;
-}
-function Sypo({ children, type='p1', weight, color, ellipsis=false, style }:Trops) {
-	return (
-		<Typo type={type}
-		      line={'single'}
-		      weight={weight}
-		      color={color}
-		      ellipsis={ellipsis}
-		      style={style}>
-			{ children }
-		</Typo>
-	)
-}
-
-function Mypo({ children, type='p1', weight, color, ellipsis=false, style }:Trops) {
-	return (
-		<Typo type={type}
-		      line={'multi'}
-		      weight={weight}
-		      color={color}
-		      ellipsis={ellipsis}
-		      style={style}>
-			{ children }
-		</Typo>
-	)
-}
-
-export {
-	Typo, Sypo, Mypo
 }
