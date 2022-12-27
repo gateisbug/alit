@@ -1,1 +1,1 @@
-export default "molecules";
+export { default as Links } from "./Links";
