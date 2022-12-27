@@ -72,7 +72,7 @@ function SearchBar({ onSearch, defaultValue, colorSet='dark' }:Props) {
 			       onBlur={onBlur} />
 			<div className={ cx("Icon") }
 			     onClick={onClickSearch}>
-				O=
+				<img src="/assets/SearchIcon.svg" alt="search" className={ cx("searchIcon") }/>
 			</div>
 		</div>
 	)

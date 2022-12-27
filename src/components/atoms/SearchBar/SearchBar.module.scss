@@ -34,5 +34,11 @@
 .Icon {
 	display: flex;
 	flex-flow: row nowrap;
+	align-items: center;
 	cursor: pointer;
+
+	.searchIcon {
+		width: 20px;
+		height: 20px;
+	}
 }
