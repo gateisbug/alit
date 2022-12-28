@@ -14,8 +14,8 @@ function ItemHeader() {
 		<Horizontal>
 			<Logo />
 			<Breadcrum />
-			<SearchBar onSearch={onSearchKeyword} />
 			<div className={ cx("flex-end") }>
+				<SearchBar onSearch={onSearchKeyword} />
 				<Links />
 			</div>
 		</Horizontal>

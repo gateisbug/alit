@@ -8,9 +8,10 @@ const cx = classNames.bind(styles);
 
 type Props = {
 	link: LinkType;
+	disable?: boolean;
 }
 
-function Link({ link }:Props) {
+function Link({ link, disable=false }:Props) {
 	const { pathname } = useLocation();
 	const navigate = useNavigate();
 
@@ -26,7 +27,7 @@ function Link({ link }:Props) {
 	}
 
 	return (
-		<div className={ cx("Link", (isCurrent) && 'current') } onClick={onClick}>
+		<div className={ cx("Link", (isCurrent) && 'current', (!disable) && 'disable') } onClick={onClick}>
 			<Sypo type='p1'>
 				{ link.text }
 			</Sypo>

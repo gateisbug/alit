@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { LinkType } from "@src/defs/types";
 import {
-	ROUTE_MAIN_PAGE,
+	ROUTE_MAIN_PAGE, URL_INDEX,
 	URL_ITEM_ACCESSORY, URL_ITEM_ACCESSORY_BL, URL_ITEM_ACCESSORY_COM, URL_ITEM_ACCESSORY_FL, URL_ITEM_ACCESSORY_PRI,
 	URL_ITEM_AIRPLANE, URL_ITEM_AIRPLANE_ATK, URL_ITEM_AIRPLANE_BOM, URL_ITEM_AIRPLANE_FIT,
 	URL_ITEM_ANTIAIR, URL_ITEM_ANTIAIR_FUS, URL_ITEM_ANTIAIR_NOR,
@@ -95,8 +95,8 @@ function usePathfinder() {
 	const links = ((_path:Array<string>) => {
 		if(_path.length === 0) {
 			return [{
-				url: URL_ITEM_INDEX,
-				text: 'Item'
+				url: URL_INDEX,
+				text: '장비'
 			}]
 		}
 

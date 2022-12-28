@@ -5,7 +5,7 @@
 	flex-flow: row nowrap;
 	align-items: center;
 	gap: 8px;
-	min-width: 300px;
+	flex-grow: 1;
 
 	.container {
 		display: flex;
@@ -35,4 +35,6 @@
 		color: $mono1;
 		cursor: default;
 	}
+
+	&.disable {}
 }

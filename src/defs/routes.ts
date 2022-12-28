@@ -3,6 +3,7 @@ export const ROUTE_MAIN_PAGE = "/";
 export const ROUTE_ITEM_PAGE = "/item";
 export const ROUTE_ITEM_CATEGORY = "/item/*";
 
+export const URL_INDEX = '/';
 export const URL_ITEM_INDEX = '/item';
 export const URL_ITEM_NAVALGUN = '/item/navalgun';
 export const URL_ITEM_NAVALGUN_DD = '/item/navalgun/dd-gun';

@@ -13,17 +13,31 @@ type Props = {
 function Breadcrum({ seperator='>' }:Props) {
 	const { links } = usePathfinder();
 
+	const allCasing = (index:number, length:number) => {
+		console.log(index, length)
+
+		switch (true) {
+			case length === 0: case index >= 2:
+				return null;
+			case (index === length-1):
+				return (
+					<>
+						<Seperator seperator={seperator} />
+						All
+					</>
+				);
+			default:
+				return <Seperator seperator={seperator} />
+		}
+	}
+
 	return (
 		<div className={ cx("Breadcrum") }>
 			{
 				links.map((v, i) => (
 					<div key={i} className={ cx("container") }>
 						<Link link={v} />
-						{
-							i !== (links.length - 1)
-								? <Seperator seperator={seperator} />
-								: null
-						}
+						{ allCasing(i, links.length) }
 					</div>
 				))
 			}
