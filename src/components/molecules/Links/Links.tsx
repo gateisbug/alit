@@ -1,14 +1,15 @@
 import classNames from "classnames/bind";
 import styles from "./Links.module.scss";
+import { Deco } from "@src/assets";
 import { Select } from "@src/components/atoms";
 
 const cx = classNames.bind(styles);
 
 function Links() {
 	const links = [
-		{ link: "https://arca.live/b/azurlane/45593816", icon: 'ResourceIcon' },
-		{ link: "https://arca.live/b/azurlane", icon: 'ArcaLiveIcon' },
-		{ link: "https://github.com/gateisbug/alit", icon: 'GithubIcon' },
+		{ link: "https://arca.live/b/azurlane/45593816", icon: <Deco.Resource /> },
+		{ link: "https://arca.live/b/azurlane", icon: <Deco.ArcaLive /> },
+		{ link: "https://github.com/gateisbug/alit", icon: <Deco.Github /> },
 	];
 
 	const onClickButton = (link:string) => {
@@ -22,7 +23,9 @@ function Links() {
 					<Select key={i}
 					        onClick={_ => onClickButton(v.link)}
 					        colorSet='dark' padding={5}>
-						<img src={`/assets/${v.icon}.svg`} alt="icon" className={ cx("icon") }/>
+						<div className={ cx("icon-box") }>
+							{ v.icon }
+						</div>
 					</Select>
 				))
 			}

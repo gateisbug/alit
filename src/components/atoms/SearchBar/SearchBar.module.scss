@@ -1,3 +1,5 @@
+@import "src/styles/color";
+
 .SearchBar {
 	display: flex;
 	flex-flow: row nowrap;
@@ -6,24 +8,11 @@
 	border-radius: 8px;
 	overflow: hidden;
 	width: fit-content;
-	//transition: width .2s ease-out;
 
 	&.dark {
 		color: #fff;
 		border: 1px solid #132f4c;
 	}
-
-	//&.extend {
-	//	.search-input {
-	//		animation: extend .2s ease-out forwards;
-	//	}
-	//}
-	//
-	//&:not(.extend) {
-	//	.search-input {
-	//		animation: fold .2s ease-out forwards;
-	//	}
-	//}
 }
 
 .search-input {
@@ -54,37 +43,10 @@
 	min-width: 24px;
 	width: 24px;
 	height: 24px;
+	color: $secondary;
 
 	.searchIcon {
 		width: 20px;
 		height: 20px;
 	}
 }
-
-//@keyframes extend {
-//	0% {
-//		visibility: hidden;
-//		width: 1px;
-//		margin-right: 0;
-//	}
-//	100% {
-//		visibility: visible;
-//		width: 240px;
-//		margin-right: 16px;
-//	}
-//}
-//
-//@keyframes fold {
-//	0% {
-//		width: 240px;
-//		margin-right: 16px;
-//	}
-//	99% {
-//		width: 0;
-//	}
-//	100% {
-//		visibility: hidden;
-//		width: 0;
-//		margin-right: 0;
-//	}
-//}

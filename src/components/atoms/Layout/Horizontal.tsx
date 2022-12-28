@@ -10,9 +10,9 @@ type Props = {
 
 function Horizontal({ children }:Props) {
 	return (
-		<header className={ cx("Horizontal") }>
+		<section className={ cx("Horizontal") }>
 			{ children }
-		</header>
+		</section>
 	)
 }
 

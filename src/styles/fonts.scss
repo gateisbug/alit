@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'Noto Sans';
 	src: local("NotoSansKR-Bold"),
-	url("./fonts/NotoSansKR-Bold.otf") format("opentype");
+	url("../static/fonts/NotoSansKR-Bold.otf") format("opentype");
 	font-weight: 700;
 	font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
 	font-family: 'Noto Sans';
 	src: local("NotoSansKR-Medium"),
-	url("./fonts/NotoSansKR-Medium.otf") format("opentype");
+	url("../static/fonts/NotoSansKR-Medium.otf") format("opentype");
 	font-weight: 500;
 	font-style: normal;
 }
@@ -17,7 +17,7 @@
 @font-face {
 	font-family: 'Noto Sans';
 	src: local("NotoSansKR-Regular"),
-	url("./fonts/NotoSansKR-Regular.otf") format("opentype");
+	url("../static/fonts/NotoSansKR-Regular.otf") format("opentype");
 	font-weight: 400;
 	font-style: normal;
 }

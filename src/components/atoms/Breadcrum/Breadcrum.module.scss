@@ -20,21 +20,3 @@
 	display: flex;
 	flex-flow: row nowrap;
 }
-
-.Link {
-	display: flex;
-	flex-flow: row nowrap;
-	color: $mono2;
-	cursor: pointer;
-
-	&:hover:not(.current) {
-		text-decoration: underline;
-	}
-
-	&.current {
-		color: $mono1;
-		cursor: default;
-	}
-
-	&.disable {}
-}

@@ -1,0 +1,47 @@
+@import "src/styles/color";
+
+.ItemMenu {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 8px;
+
+	.item-class, .item-division {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 16px;
+	}
+
+	.item-class {
+		.item-class-box {
+			padding: 4px 12px;
+			cursor: pointer;
+			border-radius: 4px;
+
+			&.active {
+				color: $mono1;
+				background-color: $primary;
+			}
+
+			&:hover {
+				color: $secondary;
+			}
+		}
+	}
+
+	.item-division {
+		.item-division-box {
+			cursor: pointer;
+		}
+	}
+}
+
+
+
+.line {
+	display: flex;
+	flex-flow: row nowrap;
+	height: 1px;
+	min-height: 1px;
+	background-color: $border2;
+	margin: 0 8px;
+}

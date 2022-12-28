@@ -1,4 +1,5 @@
 import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { Deco } from "@src/assets";
 import classNames from "classnames/bind";
 import styles from "./SearchBar.module.scss";
 
@@ -58,7 +59,7 @@ function SearchBar({ onSearch, defaultValue, colorSet='dark' }:Props) {
 		return () => {
 			document.removeEventListener('keyup', handler);
 		}
-	}, []);
+	}, [onClickSearch]);
 
 	return (
 		<div className={ cx("SearchBar", colorSet) }>
@@ -72,7 +73,9 @@ function SearchBar({ onSearch, defaultValue, colorSet='dark' }:Props) {
 			       onBlur={onBlur} />
 			<div className={ cx("Icon") }
 			     onClick={onClickSearch}>
-				<img src="/assets/SearchIcon.svg" alt="search" className={ cx("searchIcon") }/>
+				<div className={ cx("searchIcon") }>
+					<Deco.Search />
+				</div>
 			</div>
 		</div>
 	)

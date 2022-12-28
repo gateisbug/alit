@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { LinkType } from "@src/defs/types";
 import { Sypo } from "@src/components/atoms";
 import classNames from "classnames/bind";
-import styles from "./Breadcrum.module.scss";
+import styles from "./Subway.module.scss";
 
 const cx = classNames.bind(styles);
 
