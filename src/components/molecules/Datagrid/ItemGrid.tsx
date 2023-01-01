@@ -1,6 +1,6 @@
 import { useResource } from "@src/hooks";
 import { JsonChain, Resource } from "@src/defs/types";
-import { Portrait, Sypo, Table } from "@src/components/atoms";
+import Gordias, { Longinus, Portrait, Sypo, Table } from "@src/components/atoms";
 import classNames from "classnames/bind";
 import styles from "./Datagrid.module.scss";
 
@@ -16,7 +16,7 @@ function ItemGrid() {
 		{ index: 'class', text: '대분류', size: 'sx' },
 		{ index: 'division', text: '소분류', size: 'sx' },
 		{ index: 'category', text: '속성', size: 'sx' },
-		{ index: 'gain', text: '획득처', size: 'mx' },
+		{ index: 'gain', text: '획득처', size: 'lx' },
 		{ index: 'nickname', text: '별칭', size: 'mx' },
 		// { index: 'status', text: '스탯', size: 'sx' },
 		{ index: 'usage', text: '사용성', size: 'xx' },
@@ -44,7 +44,6 @@ function ItemGrid() {
 					<Table.Cell key={`${value.name}_${body.index}`}
 					            size={body.size}
 					            style={{ textAlign: 'center', justifyContent: 'center' }}>
-						{/*<Sypo type='p2' weight={400}>{ value.index }</Sypo>*/}
 						<Portrait resource={value} />
 					</Table.Cell>
 				)
@@ -83,9 +82,8 @@ function ItemGrid() {
 			case 'gain':
 				return (
 					<Table.Cell key={`${value.name}_${body.index}`}
-					            size={body.size}
-					            style={{ textAlign: 'center', justifyContent: 'center' }}>
-						<Sypo type='p2' weight={500}>{ value.gain }</Sypo>
+					            size={body.size}>
+						<Gordias strings={ value.gain } />
 					</Table.Cell>
 				)
 			case 'nickname':
@@ -102,6 +100,7 @@ function ItemGrid() {
 					            size={body.size}
 					            style={{ alignItems: 'center' }}>
 						<Sypo type='p2' weight={400}>{ value.usage }</Sypo>
+						{/*<Longinus long={ value.usage } />*/}
 					</Table.Cell>
 				)
 			case 'explain':
@@ -110,6 +109,7 @@ function ItemGrid() {
 					            size={body.size}
 					            style={{ alignItems: 'center' }}>
 						<Sypo type='p2' weight={400}>{ value.explain }</Sypo>
+						{/*<Longinus long={ value.explain } />*/}
 					</Table.Cell>
 				)
 		}
@@ -129,8 +129,8 @@ function ItemGrid() {
 			{
 				(searchData.length !== 0)
 				? (
-						searchData.map((value) => (
-							<Table.Body key={value.name}>
+						searchData.map((value, i) => (
+							<Table.Body key={`${i}_${value.name}`}>
 								{ headers.map(body => ( renderBody(value, body) )) }
 							</Table.Body>
 						))

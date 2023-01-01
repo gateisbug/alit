@@ -26,9 +26,9 @@ function ItemHeader() {
 	return (
 		<Horizontal>
 			<Logo />
-			<Bakery.Item />
+			{/*<Bakery.Item />*/}
+			<SearchBar onSearch={onSearchKeyword} />
 			<div className={ cx("flex-end") }>
-				<SearchBar onSearch={onSearchKeyword} />
 				<Links />
 			</div>
 		</Horizontal>

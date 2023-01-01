@@ -1,7 +1,9 @@
 export { default as Breadcrum } from "./Breadcrum";
 export { Select } from "./Button";
+export { default } from "./Gordias";
 export { Horizontal } from "./Layout";
 export { default as Logo } from "./Logo";
+export { default as Longinus } from "./Longinus";
 export { default as Portrait } from "./Portrait";
 export { default as SearchBar } from "./SearchBar";
 export { default as Subway } from "./Subway";

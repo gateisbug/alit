@@ -1,8 +1,10 @@
+@import "src/styles/common";
+
 .Logo {
 	display: flex;
 	flex-flow: row nowrap;
 	cursor: pointer;
-	user-select: none;
+	@include user-select;
 
 	img {
 		//width: 108px;

@@ -59,6 +59,7 @@ function useResource() {
 				case 'fighter': return Airplane.filter(v => v.division === '전투기');
 				case 'bomber': return Airplane.filter(v => v.division === '폭격기');
 				case 'attacker': return Airplane.filter(v => v.division === '뇌격기');
+				case 'seaplane': return Airplane.filter(v => v.division === '수상기');
 				default: return [];
 			}
 		}
@@ -72,7 +73,7 @@ function useResource() {
 			switch (path[2]) {
 				case 'frontline': return Accessory.filter(v => v.division === '전열');
 				case 'backline': return Accessory.filter(v => v.division === '후열');
-				case 'common': return Accessory.filter(v => v.division === '공용');
+				// case 'common': return Accessory.filter(v => v.division === '공용');
 				case 'private': return Accessory.filter(v => v.division === '전용');
 				default: return [];
 			}

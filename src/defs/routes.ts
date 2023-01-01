@@ -21,6 +21,7 @@ export const URL_ITEM_AIRPLANE = '/item/airplane';
 export const URL_ITEM_AIRPLANE_FIT = '/item/airplane/fighter';
 export const URL_ITEM_AIRPLANE_BOM = '/item/airplane/bomber';
 export const URL_ITEM_AIRPLANE_ATK = '/item/airplane/attacker';
+export const URL_ITEM_AIRPLANE_SPL = '/item/airplane/seaplane';
 export const URL_ITEM_ACCESSORY = '/item/accessory';
 export const URL_ITEM_ACCESSORY_FL = '/item/accessory/frontline';
 export const URL_ITEM_ACCESSORY_BL = '/item/accessory/backline';

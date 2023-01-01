@@ -10,8 +10,6 @@ type Props = {
 }
 
 function Portrait({ resource, size='sx' }:Props) {
-	console.log(resource);
-
 	const src:string = (() => {
 		let output = '/resources';
 

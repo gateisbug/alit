@@ -14,6 +14,7 @@ type Props = {
 	ellipsis?: boolean;
 	userSelect?: boolean;
 	title?: string;
+	classNames?: string;
 }
 
 function Typo({
@@ -24,7 +25,8 @@ function Typo({
 	color = 'inherit',
 	ellipsis = false,
 	userSelect = false,
-	title = undefined
+	title = undefined,
+	classNames = ''
 }:Props) {
 	const style = (() => {
 		const output:CSSProperties = {
@@ -47,7 +49,7 @@ function Typo({
 	})();
 
 	return (
-		<span className={ cx("Typo", line, type) } title={title} style={style}>
+		<span className={ `${cx("Typo", line, type)} ${classNames}` } title={title} style={style}>
 			{ children }
 		</span>
 	)

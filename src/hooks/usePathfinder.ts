@@ -3,7 +3,7 @@ import { LinkType } from "@src/defs/types";
 import {
 	ROUTE_MAIN_PAGE, URL_INDEX,
 	URL_ITEM_ACCESSORY, URL_ITEM_ACCESSORY_BL, URL_ITEM_ACCESSORY_COM, URL_ITEM_ACCESSORY_FL, URL_ITEM_ACCESSORY_PRI,
-	URL_ITEM_AIRPLANE, URL_ITEM_AIRPLANE_ATK, URL_ITEM_AIRPLANE_BOM, URL_ITEM_AIRPLANE_FIT,
+	URL_ITEM_AIRPLANE, URL_ITEM_AIRPLANE_ATK, URL_ITEM_AIRPLANE_BOM, URL_ITEM_AIRPLANE_FIT, URL_ITEM_AIRPLANE_SPL,
 	URL_ITEM_ANTIAIR, URL_ITEM_ANTIAIR_FUS, URL_ITEM_ANTIAIR_NOR,
 	URL_ITEM_INDEX,
 	URL_ITEM_NAVALGUN, URL_ITEM_NAVALGUN_BB,
@@ -78,11 +78,12 @@ function usePathfinder() {
 			case 'fighter': return { url: URL_ITEM_AIRPLANE_FIT, text: '전투기' };
 			case 'bomber': return { url: URL_ITEM_AIRPLANE_BOM, text: '폭격기' };
 			case 'attacker': return { url: URL_ITEM_AIRPLANE_ATK, text: '뇌격기' };
+			case 'seaplane': return { url: URL_ITEM_AIRPLANE_SPL, text: '수상기' };
 
 			case 'accessory': return { url: URL_ITEM_ACCESSORY, text: '보조장비' };
-			case 'frontline': return { url: URL_ITEM_ACCESSORY_FL, text: '전열' };
 			case 'backline': return { url: URL_ITEM_ACCESSORY_BL, text: '후열' };
-			case 'common': return { url: URL_ITEM_ACCESSORY_COM, text: '공용' };
+			case 'frontline': return { url: URL_ITEM_ACCESSORY_FL, text: '전열' };
+			// case 'common': return { url: URL_ITEM_ACCESSORY_COM, text: '공용' };
 			case 'private': return { url: URL_ITEM_ACCESSORY_PRI, text: '전용' };
 
 			case 'special': return { url: URL_ITEM_SPECIAL, text: '특수장비' };
@@ -127,12 +128,13 @@ function usePathfinder() {
 			case 'airplane': return [
 				{ url: URL_ITEM_AIRPLANE_FIT, text: '전투기' },
 				{ url: URL_ITEM_AIRPLANE_BOM, text: '폭격기' },
-				{ url: URL_ITEM_AIRPLANE_ATK, text: '뇌격기' }
+				{ url: URL_ITEM_AIRPLANE_ATK, text: '뇌격기' },
+				{ url: URL_ITEM_AIRPLANE_SPL, text: '수상기' }
 			];
 			case 'accessory': return [
-				{ url: URL_ITEM_ACCESSORY_FL, text: '전열' },
 				{ url: URL_ITEM_ACCESSORY_BL, text: '후열' },
-				{ url: URL_ITEM_ACCESSORY_COM, text: '공용' },
+				{ url: URL_ITEM_ACCESSORY_FL, text: '전열' },
+				// { url: URL_ITEM_ACCESSORY_COM, text: '공용' },
 				{ url: URL_ITEM_ACCESSORY_PRI, text: '전용' }
 			];
 			default: return [];
