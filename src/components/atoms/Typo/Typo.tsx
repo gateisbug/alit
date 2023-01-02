@@ -15,6 +15,7 @@ type Props = {
 	userSelect?: boolean;
 	title?: string;
 	classNames?: string;
+	style?: CSSProperties;
 }
 
 function Typo({
@@ -26,10 +27,12 @@ function Typo({
 	ellipsis = false,
 	userSelect = false,
 	title = undefined,
-	classNames = ''
+	classNames = '',
+	style=undefined,
 }:Props) {
-	const style = (() => {
+	const _style = (() => {
 		const output:CSSProperties = {
+			...style,
 			color,
 			userSelect: userSelect ? 'auto':'none',
 			fontWeight: 400,
@@ -49,7 +52,7 @@ function Typo({
 	})();
 
 	return (
-		<span className={ `${cx("Typo", line, type)} ${classNames}` } title={title} style={style}>
+		<span className={ `${cx("Typo", line, type)} ${classNames}` } title={title} style={_style}>
 			{ children }
 		</span>
 	)
@@ -63,7 +66,8 @@ function Sypo(props:Props) {
 		color = 'inherit',
 		ellipsis = false,
 		userSelect = false,
-		title = undefined
+		title = undefined,
+		style = undefined,
 	} = props
 
 	return <Typo children={children}
@@ -73,7 +77,8 @@ function Sypo(props:Props) {
 	             color={color}
 	             ellipsis={ellipsis}
 	             userSelect={userSelect}
-	             title={title} />
+	             title={title}
+	             style={style} />
 }
 
 function Mypo(props:Props) {
@@ -84,7 +89,8 @@ function Mypo(props:Props) {
 		color = 'inherit',
 		ellipsis = false,
 		userSelect = false,
-		title = undefined
+		title = undefined,
+		style = undefined,
 	} = props
 
 	return <Typo children={children}
@@ -94,7 +100,8 @@ function Mypo(props:Props) {
 	             color={color}
 	             ellipsis={ellipsis}
 	             userSelect={userSelect}
-	             title={title} />
+	             title={title}
+	             style={style} />
 }
 
 export { Typo, Sypo, Mypo };

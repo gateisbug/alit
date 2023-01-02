@@ -35,9 +35,9 @@ function Portrait({ resource, size='sx' }:Props) {
 		}
 		else {
 			switch (resource.category) {
-				case '통상탄': case '통상': return 'gold';
-				case '고폭탄': return 'red';
-				case '철갑탄': case '음향 유도': return 'blue';
+				case '통상탄': case '통상': case '범용': return 'gold';
+				case '고폭탄': case '전폭기': return 'red';
+				case '철갑탄': case '음향 유도': case '보스용': case '방공용': return 'blue';
 				default: return 'grey';
 			}
 		}

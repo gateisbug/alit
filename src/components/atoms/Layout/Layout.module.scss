@@ -12,4 +12,12 @@
 	height: 64px;
 	min-height: 64px;
 	padding: 0 24px;
+
+	@media (max-width: 600px) {
+		padding: 0 8px;
+	}
+
+	@media (max-width: 370px) {
+		gap: 16px;
+	}
 }

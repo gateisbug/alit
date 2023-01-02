@@ -1,10 +1,9 @@
-import classNames from "classnames/bind";
-import styles from "./Menu.module.scss";
-import { usePathfinder } from "@src/hooks";
-import { SearchBar, Sypo } from "@src/components/atoms";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import useResponsive from "@src/hooks/useResponsive";
+import classNames from "classnames/bind";
+import styles from "./Menu.module.scss";
+import { usePathfinder, useResponsive } from "@src/hooks";
+import { SearchBar, Sypo } from "@src/components/atoms";
 
 const cx = classNames.bind(styles);
 

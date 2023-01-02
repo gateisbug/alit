@@ -29,7 +29,7 @@ function useResponsive() {
 
 	return {
 		isDesktop, isLaptop, isTablet, isMobile, sizeIs,
-		isSmall
+		isSmall, useMediaQuery
 	}
 }
 

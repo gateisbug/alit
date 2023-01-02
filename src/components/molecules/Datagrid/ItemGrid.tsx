@@ -1,11 +1,11 @@
-import { useResource } from "@src/hooks";
-import { JsonChain, Resource } from "@src/defs/types";
-import Gordias, { Longinus, Portrait, Sypo, Table } from "@src/components/atoms";
+import { useSetRecoilState } from "recoil";
 import classNames from "classnames/bind";
 import styles from "./Datagrid.module.scss";
-import useResponsive from "@src/hooks/useResponsive";
-import { useSetRecoilState } from "recoil";
+import { JsonChain, Resource } from "@src/defs/types";
+import { useResource, useResponsive } from "@src/hooks";
+import Gordias, { Longinus, Portrait, Sypo, Table } from "@src/components/atoms";
 import { modalAtom } from "@src/stores/componentStore";
+import ItemModal from "@src/components/molecules/Modals/ItemModal";
 
 const cx = classNames.bind(styles);
 
@@ -14,20 +14,6 @@ function ItemGrid() {
 	const { sizeIs } = useResponsive();
 
 	const setModal = useSetRecoilState(modalAtom);
-
-	// const headers:Array<JsonChain> = [
-	// 	{ index: 'index', text: '아이콘', size: 'sx' },
-	// 	{ index: 'name', text: '장비명', size: 'lx' },
-	// 	// { index: 'tier', text: '등급', size: 'sx' },
-	// 	{ index: 'class', text: '대분류', size: 'sx' },
-	// 	{ index: 'division', text: '소분류', size: 'sx' },
-	// 	{ index: 'category', text: '속성', size: 'sx' },
-	// 	{ index: 'gain', text: '획득처', size: 'lx' },
-	// 	{ index: 'nickname', text: '별칭', size: 'mx' },
-	// 	// { index: 'status', text: '스탯', size: 'sx' },
-	// 	{ index: 'usage', text: '사용성', size: 'xx' },
-	// 	{ index: 'explain', text: '설명', size: 'xx' },
-	// ];
 
 	const headers:Array<JsonChain> = (() => {
 		switch (sizeIs) {
@@ -90,10 +76,10 @@ function ItemGrid() {
 		}
 	})();
 
-	const onClickItem = () => {
+	const onClickItem = (res:Resource) => {
 		setModal({
 			show: true,
-			contents: 'hello'
+			contents: <ItemModal res={res} />
 		})
 	}
 
@@ -204,7 +190,7 @@ function ItemGrid() {
 				(searchData.length !== 0)
 				? (
 						searchData.map((value, i) => (
-							<Table.Body key={`${i}_${value.name}`} onClick={onClickItem}>
+							<Table.Body key={`${i}_${value.name}`} onClick={_ => onClickItem(value)}>
 								{ headers.map(body => ( renderBody(value, body) )) }
 							</Table.Body>
 						))

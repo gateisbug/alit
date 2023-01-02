@@ -7,7 +7,7 @@
     "gain": ["메인\t13-3", "상자깡\t이글"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "통상",
     "nickname": "",
     "tier": "SSR",
     "status": [
@@ -29,7 +29,7 @@
     "gain": ["상자깡\t로열"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "통상",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -51,7 +51,7 @@
     "gain": ["장비개발\t중앵"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "통상",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -73,7 +73,7 @@
     "gain": ["코어샵"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "통상",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -95,7 +95,7 @@
     "gain": ["장비개발\t로열"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "통상",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -117,7 +117,7 @@
     "gain": ["장비개발\t중앵"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "통상",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -139,7 +139,7 @@
     "gain": ["장비개발\t로열"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "전폭기",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -161,7 +161,7 @@
     "gain": ["장비개발\t이글"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "전폭기",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -183,7 +183,7 @@
     "gain": ["장비개발\t이글"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "전폭기",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -205,7 +205,7 @@
     "gain": ["군부연구실\t4기"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "전폭기",
     "nickname": "백구",
     "tier": "SSR",
     "status":  [
@@ -227,7 +227,7 @@
     "gain": ["메인\t3-4"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "통상",
     "nickname": "",
     "tier": "SR",
     "status":  [
@@ -249,7 +249,7 @@
     "gain": ["장비개발\t이글"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "통상",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -271,7 +271,7 @@
     "gain": ["코어샵"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "방공용",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -293,7 +293,7 @@
     "gain": ["장비개발\t철혈"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "방공용",
     "nickname": "",
     "tier": "SSR",
     "status":  [
@@ -315,7 +315,7 @@
     "gain": ["장비개발\t철혈"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "방공용",
     "nickname": "",
     "tier": "SR",
     "status":  [
@@ -337,7 +337,7 @@
     "gain": ["부흥의 찬송가\tC-3"],
     "class": "함재기",
     "division": "전투기",
-    "category": "",
+    "category": "방공용",
     "nickname": "",
     "tier": "SR",
     "status":  [
@@ -351,6 +351,30 @@
       }
     ]
   },
+  {
+    "index": "17440",
+    "name": "F6F 헬캣(HVAR 탑재형)",
+    "usage": "경장갑 저격용 백구",
+    "explain": "경장갑 상대로 최강. 중형장갑에 호환가능. 중장갑에 역상성. 중형장갑 상대론 흐발<백구. 경장갑 상대론 10강흐발>10강백구. 현재까지 고난도 보스는 중형장갑이 많아서 13강 우선순위는 밀리지만 가능하면 많이 캐놔라",
+    "gain": ["거듭되는 평행세계\tD-3"],
+    "class": "함재기",
+    "division": "전투기",
+    "category": "전폭기",
+    "nickname": "흐발캣",
+    "tier": "SSR",
+    "status":  [
+      {
+        "state": "사속",
+        "value": "10.65초"
+      },
+      {
+        "state": "항공",
+        "value": "45"
+      }
+    ]
+  },
+
+
 
   {
     "index": "39340",
@@ -572,6 +596,30 @@
       }
     ]
   },
+  {
+    "index": "19300",
+    "name": "AD-1 스카이레이더",
+    "usage": "연구중",
+    "explain": "",
+    "gain": ["거듭되는 평행세계\t포인트"],
+    "class": "함재기",
+    "division": "폭격기",
+    "category": "",
+    "nickname": "",
+    "tier": "UR",
+    "status":  [
+      {
+        "state": "사속",
+        "value": "13.2초"
+      },
+      {
+        "state": "항공",
+        "value": "65"
+      }
+    ]
+  },
+
+
 
   {
     "index": "39320",
@@ -705,6 +753,8 @@
       }
     ]
   },
+
+
 
   {
     "index": "28140",
@@ -970,6 +1020,8 @@
       }
     ]
   },
+
+
 
   {
     "index": "38140",

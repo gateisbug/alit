@@ -104,18 +104,22 @@ function useResource() {
 	const searchData:Array<Resource> = (() => {
 		const _search = decodeURI(search).replace('?search=', '');
 
-		const filtering = (v:Resource) => {
-			return (v.index === _search)
-				|| (v.name.includes(_search))
-				|| (v.nickname.includes(_search))
-				|| (v.class === _search)
-				|| (v.division === _search)
-				|| (v.category === _search)
-				|| (v.tier === _search.toUpperCase())
-				|| (v.gain.includes(_search));
-		}
+		const indexing = data.filter(v => v.index === _search);
+		const naming = data.filter(v => v.name.includes(_search));
+		const nicknaming = data.filter(v => v.nickname.includes(_search));
+		const classing = data.filter(v => v.class === _search);
+		const divisioning = data.filter(v => v.division.includes(_search));
+		const categoring = data.filter(v => v.category.includes(_search));
+		const tiering = data.filter(v => v.tier === _search.toUpperCase());
+		const gaining = data.filter(v => ( v.gain.findIndex(v => v.includes(_search)) !== -1 ));
+		const usaging = data.filter(v => v.usage.includes(_search));
+		const explaing = data.filter(v => v.explain.includes(_search));
 
-		return data.filter(filtering);
+		const search_data = indexing.concat(naming, nicknaming, classing, divisioning, categoring, tiering, gaining, usaging, explaing);
+
+		return search_data.filter((el, id) => {
+			return search_data.indexOf(el) === id;
+		});
 	})();
 
 	return { data, searchData };

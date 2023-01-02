@@ -2,7 +2,7 @@ import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { Deco } from "@src/assets";
 import classNames from "classnames/bind";
 import styles from "./SearchBar.module.scss";
-import useResponsive from "@src/hooks/useResponsive";
+import { useResponsive } from "@src/hooks";
 
 const inputId = `_ailt_input_text`;
 const cx = classNames.bind(styles);
