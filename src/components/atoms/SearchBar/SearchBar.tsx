@@ -2,6 +2,7 @@ import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { Deco } from "@src/assets";
 import classNames from "classnames/bind";
 import styles from "./SearchBar.module.scss";
+import useResponsive from "@src/hooks/useResponsive";
 
 const inputId = `_ailt_input_text`;
 const cx = classNames.bind(styles);
@@ -13,6 +14,8 @@ type Props = {
 }
 
 function SearchBar({ onSearch, defaultValue, colorSet='dark' }:Props) {
+	const { sizeIs } = useResponsive();
+
 	const inputRef = useRef<HTMLInputElement>(null);
 	const [value, setValue] = useState('');
 
@@ -36,6 +39,13 @@ function SearchBar({ onSearch, defaultValue, colorSet='dark' }:Props) {
 		if(!inputRef || !inputRef.current) return;
 		inputRef.current.classList.remove('focus');
 	}
+
+	const placeholder = (() => {
+		switch (sizeIs) {
+			case "desktop": case "laptop": return 'Please search keyword here';
+			case "tablet": case "mobile": return 'Search';
+		}
+	})();
 
 	useEffect(() => {
 		if(!defaultValue) return;
@@ -67,7 +77,7 @@ function SearchBar({ onSearch, defaultValue, colorSet='dark' }:Props) {
 			       ref={inputRef}
 			       id={inputId}
 			       className={ cx("search-input") }
-			       placeholder={'Please search keyword here'}
+			       placeholder={placeholder}
 			       onChange={onChangeInput}
 			       onFocus={onFocus}
 			       onBlur={onBlur} />

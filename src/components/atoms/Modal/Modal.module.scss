@@ -1,0 +1,80 @@
+@import "src/styles/color";
+
+.Modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	height: 100%;
+
+	&.show {
+		animation: show-modal .2s forwards;
+	}
+	&.hide {
+		animation: hide-modal .2s forwards;
+	}
+}
+
+.shadow {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: $shadow1;
+}
+
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	min-width: 320px;
+	min-height: 480px;
+	max-height: calc(100% - 48px);
+	overflow: hidden;
+	background-color: $background1;
+	border-radius: 8px;
+}
+
+.header {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: end;
+
+	.icon {
+		padding: 6px;
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		color: $primary;
+	}
+}
+
+.contents {
+	padding: 16px;
+}
+
+@keyframes show-modal {
+	0% {
+		visibility: visible;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes hide-modal {
+	0% {
+		opacity: 1;
+	}
+	99% {
+		opacity: 0;
+	}
+	100% {
+		visibility: hidden;
+	}
+}

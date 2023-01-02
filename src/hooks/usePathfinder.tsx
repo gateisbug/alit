@@ -14,6 +14,7 @@ import {
 	URL_ITEM_SPECIAL,
 	URL_ITEM_TORPEDO, URL_ITEM_TORPEDO_SUB, URL_ITEM_TORPEDO_SUR
 } from "@src/defs/routes";
+import { Icon } from "@src/assets";
 
 function usePathfinder() {
 	const navigate = useNavigate();
@@ -97,19 +98,34 @@ function usePathfinder() {
 		return path[idx];
 	})();
 
-	const category = (division:string):Array<LinkType> => {
+	const category = (division:string, responsive=false):Array<LinkType> => {
 		// const idx = (path.length - 1 >= 0) ? (path.length - 1):0;
 		// const division:string = path[idx];
 
+		if(division === 'item') {
+			if(!responsive) {
+				return [
+					{ url: URL_ITEM_NAVALGUN, text: '함포' },
+					{ url: URL_ITEM_TORPEDO, text: '어뢰' },
+					{ url: URL_ITEM_ANTIAIR, text: '대공포' },
+					{ url: URL_ITEM_AIRPLANE, text: '함재기' },
+					{ url: URL_ITEM_ACCESSORY, text: '보조장비' },
+					{ url: URL_ITEM_SPECIAL, text: '특수장비' }
+				];
+			}
+			else {
+				return [
+					{ url: URL_ITEM_NAVALGUN, text: <Icon.Gun /> },
+					{ url: URL_ITEM_TORPEDO, text: <Icon.Torpedo /> },
+					{ url: URL_ITEM_ANTIAIR, text: <Icon.Antiair /> },
+					{ url: URL_ITEM_AIRPLANE, text: <Icon.Airplane /> },
+					{ url: URL_ITEM_ACCESSORY, text: <Icon.Accessory /> },
+					{ url: URL_ITEM_SPECIAL, text: <Icon.Special /> }
+				];
+			}
+		}
+
 		switch (division) {
-			case 'item': return [
-				{ url: URL_ITEM_NAVALGUN, text: '함포' },
-				{ url: URL_ITEM_TORPEDO, text: '어뢰' },
-				{ url: URL_ITEM_ANTIAIR, text: '대공포' },
-				{ url: URL_ITEM_AIRPLANE, text: '함재기' },
-				{ url: URL_ITEM_ACCESSORY, text: '보조장비' },
-				{ url: URL_ITEM_SPECIAL, text: '특수장비' }
-			];
 			case 'navalgun': return [
 				{ url: URL_ITEM_NAVALGUN_DD, text: '구축' },
 				{ url: URL_ITEM_NAVALGUN_CL, text: '경순' },

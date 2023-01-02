@@ -3,6 +3,7 @@ import classNames from "classnames/bind";
 import styles from './styles/App.module.scss';
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Modal from "./components/atoms/Modal";
 
 const cx = classNames.bind(styles);
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className={ cx("App") }>
       <RootRouter />
+        <Modal />
     </div>
   )
 }

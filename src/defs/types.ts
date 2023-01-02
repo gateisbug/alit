@@ -6,7 +6,7 @@ export type TypoLine = 'S'|'M';
 
 export type LinkType = {
 	url: string;
-	text: string;
+	text: ReactNode;
 }
 
 export type Resource = {
@@ -35,3 +35,11 @@ export type JsonChain = {
 }
 
 export type Size = 'sx'|'mx'|'lx'|'xx';
+
+export type ScreenSize = 'desktop'|'laptop'|'tablet'|'mobile';
+
+export type ModalProps = {
+	show: boolean;
+	id?: string;
+	contents?: ReactNode;
+}

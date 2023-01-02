@@ -15,8 +15,8 @@ function ItemPage() {
 
 	return (
 		<section className={ cx("ItemPage") } id='_azurlane-item-page'>
+			<Item.Header />
 			<div className={ cx("sticky") }>
-				<Item.Header />
 				<Item.Nav />
 			</div>
 			<Item.Contents />
