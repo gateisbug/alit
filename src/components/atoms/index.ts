@@ -5,6 +5,7 @@ export { Horizontal } from "./Layout";
 export { default as Logo } from "./Logo";
 export { default as Longinus } from "./Longinus";
 export { default as Modal } from "./Modal";
+export { default as Plaque } from "./Plaque";
 export { default as Portrait } from "./Portrait";
 export { default as SearchBar } from "./SearchBar";
 export { default as Subway } from "./Subway";

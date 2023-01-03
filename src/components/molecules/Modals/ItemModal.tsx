@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Modals.module.scss";
 import { Resource } from "@src/defs/types";
-import { Mypo, Portrait, Sypo } from "@src/components/atoms";
+import { Mypo, Portrait, Sypo, Plaque } from "@src/components/atoms";
 import { useResponsive } from "@src/hooks";
 
 const cx = classNames.bind(styles);
@@ -16,50 +16,96 @@ function ItemModal({ res }:Props) {
 
 	return (
 		<div className={ cx("ItemModal") }>
-			<header className={ cx("item-name") }>
-				<Sypo type={'h2'}
-				      weight={700}
-				      style={{ textAlign:'center' }}>{ res.name }</Sypo>
-				<Sypo type={'p1'}
-				      weight={400} color='#888'>{ res.nickname }</Sypo>
+			<header className={ cx("item-name-index") }>
+				<article className={ cx("item-index") }>
+					<Portrait resource={res} size={ 'mx' } />
+				</article>
+				<article className={ cx("item-name") }>
+					<Sypo type={'h2'}
+					      weight={700}
+					      style={{ textAlign:'center' }}>{ res.name }</Sypo>
+					<Sypo type={'p1'}
+					      weight={400} color='#888'>{ res.nickname }</Sypo>
+				</article>
 			</header>
-			<section className={ cx("item-index-gain-category") }>
-				<Sypo type='p1' weight={500}>개요</Sypo>
-				<div className={ cx("box-index-gain-category") }>
-					<article className={ cx("item-index") }>
-						<Portrait resource={res} size={ (!isSmall) ? 'mx':'sx' } />
-					</article>
-					<article className={ cx("item-gain") }>
-						<Sypo type='p2' weight={400}>{ res.gain.toString() }</Sypo>
-					</article>
-					<article className={ cx("item-category") }>
-						<Sypo type='p2' weight={400}>{ res.class }</Sypo>
-						<Sypo type='p2' weight={400}>{ res.division }</Sypo>
-						<Sypo type='p2' weight={400}>{ res.category }</Sypo>
-					</article>
-				</div>
-			</section>
-			<section className={ cx("item-usage") }>
-				<Sypo type='p1' weight={500}>사용성</Sypo>
-				<Mypo type='p2' weight={400}>{ res.usage }</Mypo>
-			</section>
-			<section className={ cx("item-status") }>
-				<Sypo type='p1' weight={500}>스탯</Sypo>
-				<div className={ cx("box-status") }>
+			<section className={ cx("item-gain-category") }>
+				<Sypo type='p1' weight={700}>개요</Sypo>
+				<div className={ cx("box-gain-category") }>
 					{
-						res.status.map((v, i) => (
-							<div key={i} className={ cx("block-status") }>
-								<Sypo type='p3' weight={700}>{ v.state }</Sypo>
-								<Sypo type='p3' weight={400} color='#888'>{ v.value }</Sypo>
-							</div>
-						))
+						(res.gain.length > 0) &&
+						<article className={ cx("item-gain") }>
+							<Plaque color="transparent">
+								<Sypo type='p2' weight={400}>{ res.gain.toString() }</Sypo>
+							</Plaque>
+						</article>
 					}
+					<article className={ cx("item-category") }>
+						{
+							(res.class.length > 0) &&
+							<Plaque>
+								<div className={ cx("block-status") }>
+									<Sypo type='p2' weight={700}>대분류</Sypo>
+									<Sypo type='p2' weight={400}>{ res.class }</Sypo>
+								</div>
+							</Plaque>
+						}
+						{
+							(res.division.length > 0) &&
+							<Plaque>
+								<div className={ cx("block-status") }>
+									<Sypo type='p2' weight={700}>소분류</Sypo>
+									<Sypo type='p2' weight={400}>{ res.division }</Sypo>
+								</div>
+							</Plaque>
+						}
+						{
+							(res.category.length > 0) &&
+							<Plaque>
+								<div className={ cx("block-status") }>
+									<Sypo type='p2' weight={700}>속성</Sypo>
+									<Sypo type='p2' weight={400}>{ res.category }</Sypo>
+								</div>
+							</Plaque>
+						}
+					</article>
 				</div>
 			</section>
-			<section className={ cx("item-explain") }>
-				<Sypo type='p1' weight={500}>상세설명</Sypo>
-				<Mypo type='p2' weight={400} color='#888'>{ res.explain }</Mypo>
-			</section>
+			{
+				(res.usage.length > 0) &&
+				<section className={ cx("item-usage") }>
+					<Sypo type='p1' weight={700}>사용성</Sypo>
+					<Plaque color="grey" size="mx">
+						<Mypo type='p2' weight={400}>{ res.usage }</Mypo>
+					</Plaque>
+				</section>
+			}
+			{
+				(res.status.length > 0) &&
+				<section className={ cx("item-status") }>
+					<Sypo type='p1' weight={700}>스탯</Sypo>
+					<div className={ cx("box-status") }>
+						{
+							res.status.map((v, i) => (
+								<Plaque>
+									<div key={i} className={ cx("block-status") }>
+										<Sypo type='p2' weight={700}>{ v.state }</Sypo>
+										<Sypo type='p2' weight={400} color='#888'>{ v.value }</Sypo>
+									</div>
+								</Plaque>
+							))
+						}
+					</div>
+				</section>
+			}
+			{
+				(res.explain.length > 0) &&
+				<section className={ cx("item-explain") }>
+					<Sypo type='p1' weight={700}>상세설명</Sypo>
+					<Plaque color="grey" size="mx">
+						<Mypo type='p2' weight={400} color='#888'>{ res.explain }</Mypo>
+					</Plaque>
+				</section>
+			}
 		</div>
 	)
 }

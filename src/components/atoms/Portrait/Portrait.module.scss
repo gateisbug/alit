@@ -6,8 +6,8 @@
 	align-items: center;
 	justify-content: center;
 	border: 3px solid black;
-	border-radius: 4px;
 	padding: 4px;
+	border-radius: 4px;
 	@include user-select;
 
 	&.sx {
@@ -15,6 +15,10 @@
 		height: 60px;
 	}
 	&.mx {
+		width: 84px;
+		height: 84px;
+	}
+	&.lx {
 		width: 120px;
 		height: 120px;
 		border-width: 5px;
