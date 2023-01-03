@@ -1,4 +1,4 @@
-import { CSSProperties, MouseEvent } from "react";
+import { CSSProperties, MouseEvent, useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { modalAtom } from "@src/stores/componentStore";
 import { Deco } from "@src/assets";
@@ -13,8 +13,18 @@ function Modal() {
 	const [modal, setModal] = useRecoilState(modalAtom);
 
 	const style:CSSProperties = (() => {
-		if(modal.contents !== undefined) return { display: 'flex' };
-		else return { display: 'none' }
+		const output:CSSProperties = {
+			top: window.scrollY
+		};
+
+		if(modal.contents !== undefined) {
+			output.display = 'flex';
+		}
+		else {
+			output.display = 'none';
+		}
+
+		return output;
 	})();
 
 	const onClose = async () => {

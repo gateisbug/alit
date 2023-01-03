@@ -19,10 +19,12 @@ function App() {
 
     useEffect(() => {
         if(modal.show) {
-            document.body.style.position = 'fixed'
+            // document.body.style.position = 'fixed'
+            document.body.style.overflow = 'hidden'
         }
         else {
-            document.body.style.position = 'static'
+            // document.body.style.position = 'static'
+            document.body.style.overflow = 'auto'
         }
     }, [modal])
 
