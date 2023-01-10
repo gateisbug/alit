@@ -16,10 +16,14 @@ function Obtain({ strings, seperator='\t' }:Props) {
 		const split = string.split(seperator);
 
 		if(split.length === 0) {
-			return "-"
+			return {
+				head: "-"
+			}
 		}
 		else if(split.length === 1) {
-			return split[0];
+			return {
+				head: split[0]
+			};
 		}
 		else {
 			let head = split[0];
@@ -33,7 +37,9 @@ function Obtain({ strings, seperator='\t' }:Props) {
 				}
 			}
 
-			return `${head}, ${body}`;
+			return {
+				head, body
+			};
 		}
 	}
 

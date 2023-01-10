@@ -1,4 +1,10 @@
+@import "src/styles/color";
+
 .Obtain {
 	display: flex;
 	flex-flow: row nowrap;
+
+	& > * {
+		background-color: $mono1;
+	}
 }
