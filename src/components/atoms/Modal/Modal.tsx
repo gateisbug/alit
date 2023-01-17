@@ -1,4 +1,4 @@
-import { CSSProperties, MouseEvent, useEffect } from "react";
+import { CSSProperties, MouseEvent } from "react";
 import { useRecoilState } from "recoil";
 import { modalAtom } from "@src/stores/componentStore";
 import { Deco } from "@src/assets";
@@ -14,15 +14,9 @@ function Modal() {
 
 	const style:CSSProperties = (() => {
 		const output:CSSProperties = {
-			top: window.scrollY
+			top: /*window.scrollY*/Math.round(window.scrollY),
+			marginTop: '-10px'
 		};
-
-		if(modal.contents !== undefined) {
-			output.display = 'flex';
-		}
-		else {
-			output.display = 'none';
-		}
 
 		return output;
 	})();

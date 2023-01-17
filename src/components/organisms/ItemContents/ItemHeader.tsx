@@ -1,5 +1,5 @@
-import { Horizontal, Logo, SearchBar } from "@src/components/atoms";
-import { Bakery, Links } from "@src/components/molecules";
+import { Horizontal, Logo } from "@src/components/atoms";
+import { Links } from "@src/components/molecules";
 import classNames from "classnames/bind";
 import styles from "./Item.module.scss";
 
@@ -9,7 +9,6 @@ function ItemHeader() {
 	return (
 		<Horizontal>
 			<Logo />
-			{/*<Bakery.Item />*/}
 			<div className={ cx("flex-end") }>
 				<Links />
 			</div>

@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
 import styles from "./Modals.module.scss";
 import { Resource } from "@src/defs/types";
-import { Mypo, Portrait, Sypo, Plaque } from "@src/components/atoms";
-import { useResponsive } from "@src/hooks";
+import { Mypo, Portrait, Sypo, Plaque, Obtain } from "@src/components/atoms";
+// import { useResponsive } from "@src/hooks";
 
 const cx = classNames.bind(styles);
 
@@ -11,8 +11,8 @@ type Props = {
 }
 
 function ItemModal({ res }:Props) {
-	const { useMediaQuery } = useResponsive();
-	const isSmall = useMediaQuery({ maxWidth: 500 });
+	// const { useMediaQuery } = useResponsive();
+	// const isSmall = useMediaQuery({ maxWidth: 500 });
 
 	return (
 		<div className={ cx("ItemModal") }>
@@ -35,7 +35,8 @@ function ItemModal({ res }:Props) {
 						(res.gain.length > 0) &&
 						<article className={ cx("item-gain") }>
 							<Plaque color="transparent">
-								<Sypo type='p2' weight={400}>{ res.gain.toString() }</Sypo>
+								<Obtain strings={res.gain} />
+								{/*<Sypo type='p2' weight={400}>{ res.gain.toString() }</Sypo>*/}
 							</Plaque>
 						</article>
 					}
@@ -86,8 +87,8 @@ function ItemModal({ res }:Props) {
 					<div className={ cx("box-status") }>
 						{
 							res.status.map((v, i) => (
-								<Plaque>
-									<div key={i} className={ cx("block-status") }>
+								<Plaque key={i}>
+									<div className={ cx("block-status") }>
 										<Sypo type='p2' weight={700}>{ v.state }</Sypo>
 										<Sypo type='p2' weight={400} color='#888'>{ v.value }</Sypo>
 									</div>
