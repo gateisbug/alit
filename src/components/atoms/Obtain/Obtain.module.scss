@@ -3,8 +3,50 @@
 .Obtain {
 	display: flex;
 	flex-flow: row nowrap;
+	gap: 8px;
+	overflow: hidden;
+	height: 120px;
+	width: 100%;
+}
 
-	& > * {
-		background-color: $mono1;
+.Images {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	flex-grow: 1;
+	width: 100%;
+}
+
+.Text {
+	display: flex;
+	flex-flow: column nowrap;
+	flex-grow: 1;
+	justify-content: center;
+	background-color: #f3f6f9;
+	border-radius: 4px;
+	padding: 4px;
+	gap: 8px;
+	width: 100%;
+}
+
+.obtain-text {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	font-size: 14px;
+
+	& > p {
+		display: block;
+		min-width: 120px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
+}
+
+p.gain {
+	font-weight: 500;
+}
+p.detail {
+	font-weight: 400;
 }

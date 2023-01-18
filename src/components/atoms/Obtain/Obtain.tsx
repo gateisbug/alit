@@ -11,14 +11,27 @@ type Props = {
 function Obtain({ strings }:Props) {
 	const { getObtain, getImage } = useObtain();
 
+	const obtains = getObtain(strings);
+
 	return (
 		<div className={ cx("Obtain") }>
-			{ getObtain(strings).map((v, i) => (
-				<div key={`Obtain_${i}`}>
-					<img src={getImage(v.gain)} />
-					{ /*v.gain + v.detail*/ }
-				</div>
-			)) }
+			<div className={ cx("Images") }>
+				{
+					obtains.map((v, i) => (
+						<img key={i} src={getImage(v.gain)} alt={v.gain} className={cx("Image")} />
+					))
+				}
+			</div>
+			<div className={ cx("Text") }>
+				{
+					obtains.map((v, i) => (
+						<div key={i} className={ cx("obtain-text") }>
+							<p className={ cx("gain") }>{v.gain}</p>
+							<p className={ cx("detail") }>{v.detail}</p>
+						</div>
+					))
+				}
+			</div>
 		</div>
 	)
 }

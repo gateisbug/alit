@@ -64,6 +64,10 @@
 				flex-flow: row nowrap;
 				align-items: center;
 				flex-grow: 1;
+
+				& > div {
+					width: 100%;
+				}
 			}
 
 			.item-category {
