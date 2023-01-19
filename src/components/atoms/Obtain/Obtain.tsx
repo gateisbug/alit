@@ -30,30 +30,6 @@ function Obtain({ strings }:Props) {
 					))
 				}
 			</div>
-			{/*<div className={ cx("Images")}>*/}
-			{/*	{*/}
-			{/*		obtains.map((v, i, array) => (*/}
-			{/*			<div className={ cx("obtain") }>*/}
-			{/*				<img key={i}*/}
-			{/*				     src={getImage(v.gain)}*/}
-			{/*				     alt={v.gain}*/}
-			{/*				     className={cx("Image", (array.length > 1) && 'multi-image')} />*/}
-			{/*				<p className={ cx("gain") }>{v.gain}</p>*/}
-			{/*				<p className={ cx("detail") }>{v.detail}</p>*/}
-			{/*			</div>*/}
-			{/*		))*/}
-			{/*	}*/}
-			{/*</div>*/}
-			{/*<div className={ cx("Text") }>*/}
-			{/*	{*/}
-			{/*		obtains.map((v, i) => (*/}
-			{/*			<div key={i} className={ cx("obtain-text") }>*/}
-			{/*				<p className={ cx("gain") }>{v.gain}</p>*/}
-			{/*				<p className={ cx("detail") }>{v.detail}</p>*/}
-			{/*			</div>*/}
-			{/*		))*/}
-			{/*	}*/}
-			{/*</div>*/}
 		</div>
 	)
 }
