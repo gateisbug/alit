@@ -15,23 +15,45 @@ function Obtain({ strings }:Props) {
 
 	return (
 		<div className={ cx("Obtain") }>
-			<div className={ cx("Images") }>
+			<div className={ cx("obtains-container") }>
 				{
-					obtains.map((v, i) => (
-						<img key={i} src={getImage(v.gain)} alt={v.gain} className={cx("Image")} />
-					))
-				}
-			</div>
-			<div className={ cx("Text") }>
-				{
-					obtains.map((v, i) => (
-						<div key={i} className={ cx("obtain-text") }>
+					obtains.map((v, i, array) => (
+						<div key={i} className={ cx("obtains", (array.length > 1) && 'multi-image') }>
+							<img src={getImage(v.gain)}
+							     alt={v.gain}
+							     className={cx("image")} />
 							<p className={ cx("gain") }>{v.gain}</p>
-							<p className={ cx("detail") }>{v.detail}</p>
+							{
+								(v.detail.length > 0) && <p className={ cx("detail") }>{v.detail}</p>
+							}
 						</div>
 					))
 				}
 			</div>
+			{/*<div className={ cx("Images")}>*/}
+			{/*	{*/}
+			{/*		obtains.map((v, i, array) => (*/}
+			{/*			<div className={ cx("obtain") }>*/}
+			{/*				<img key={i}*/}
+			{/*				     src={getImage(v.gain)}*/}
+			{/*				     alt={v.gain}*/}
+			{/*				     className={cx("Image", (array.length > 1) && 'multi-image')} />*/}
+			{/*				<p className={ cx("gain") }>{v.gain}</p>*/}
+			{/*				<p className={ cx("detail") }>{v.detail}</p>*/}
+			{/*			</div>*/}
+			{/*		))*/}
+			{/*	}*/}
+			{/*</div>*/}
+			{/*<div className={ cx("Text") }>*/}
+			{/*	{*/}
+			{/*		obtains.map((v, i) => (*/}
+			{/*			<div key={i} className={ cx("obtain-text") }>*/}
+			{/*				<p className={ cx("gain") }>{v.gain}</p>*/}
+			{/*				<p className={ cx("detail") }>{v.detail}</p>*/}
+			{/*			</div>*/}
+			{/*		))*/}
+			{/*	}*/}
+			{/*</div>*/}
 		</div>
 	)
 }

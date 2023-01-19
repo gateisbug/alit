@@ -42,8 +42,10 @@ function SearchBar({ onSearch, defaultValue, colorSet='dark' }:Props) {
 
 	const placeholder = (() => {
 		switch (sizeIs) {
-			case "desktop": case "laptop": return 'Please search keyword here';
-			case "tablet": case "mobile": return 'Search';
+			case "desktop": case "laptop":
+				return 'Please search keyword here';
+			case "tablet": case "mobile": case "nano":
+				return 'Search';
 		}
 	})();
 

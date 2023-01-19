@@ -36,7 +36,7 @@ export type JsonChain = {
 
 export type Size = 'sx'|'mx'|'lx'|'xx';
 
-export type ScreenSize = 'desktop'|'laptop'|'tablet'|'mobile';
+export type ScreenSize = 'desktop'|'laptop'|'tablet'|'mobile'|'nano';
 
 export type ModalProps = {
 	show: boolean;

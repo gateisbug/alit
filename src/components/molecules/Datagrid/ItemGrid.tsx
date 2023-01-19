@@ -21,13 +21,11 @@ function ItemGrid() {
 				return [
 					{ index: 'index', text: '아이콘', size: 'sx' },
 					{ index: 'name', text: '장비명', size: 'lx' },
-					// { index: 'tier', text: '등급', size: 'sx' },
 					{ index: 'class', text: '대분류', size: 'sx' },
 					{ index: 'division', text: '소분류', size: 'sx' },
 					{ index: 'category', text: '속성', size: 'sx' },
 					{ index: 'gain', text: '획득처', size: 'lx' },
 					{ index: 'nickname', text: '별칭', size: 'mx' },
-					// { index: 'status', text: '스탯', size: 'sx' },
 					{ index: 'usage', text: '사용성', size: 'xx' },
 					{ index: 'explain', text: '설명', size: 'xx' },
 				];
@@ -35,43 +33,34 @@ function ItemGrid() {
 				return [
 					{ index: 'index', text: '아이콘', size: 'sx' },
 					{ index: 'name', text: '장비명', size: 'lx' },
-					// { index: 'tier', text: '등급', size: 'sx' },
 					{ index: 'class', text: '대분류', size: 'sx' },
 					{ index: 'division', text: '소분류', size: 'sx' },
 					{ index: 'category', text: '속성', size: 'sx' },
 					{ index: 'gain', text: '획득처', size: 'lx' },
 					{ index: 'nickname', text: '별칭', size: 'mx' },
-					// { index: 'status', text: '스탯', size: 'sx' },
 					{ index: 'usage', text: '사용성', size: 'xx' },
-					// { index: 'explain', text: '설명', size: 'xx' },
 				];
 			case "tablet":
 				return [
 					{ index: 'index', text: '아이콘', size: 'sx' },
 					{ index: 'name', text: '장비명', size: 'xx' },
-					// { index: 'tier', text: '등급', size: 'sx' },
-					// { index: 'class', text: '대분류', size: 'xx' },
 					{ index: 'division', text: '소분류', size: 'xx' },
 					{ index: 'category', text: '속성', size: 'xx' },
 					{ index: 'gain', text: '획득처', size: 'xx' },
 					{ index: 'nickname', text: '별칭', size: 'xx' },
-					// { index: 'status', text: '스탯', size: 'sx' },
-					// { index: 'usage', text: '사용성', size: 'xx' },
-					// { index: 'explain', text: '설명', size: 'xx' },
 				];
 			case "mobile":
 				return [
 					{ index: 'index', text: '아이콘', size: 'sx' },
 					{ index: 'name', text: '장비명', size: 'xx' },
-					// { index: 'tier', text: '등급', size: 'sx' },
-					// { index: 'class', text: '대분류', size: 'xx' },
 					{ index: 'division', text: '소분류', size: 'xx' },
-					// { index: 'category', text: '속성', size: 'xx' },
-					// { index: 'gain', text: '획득처', size: 'xx' },
-					{ index: 'nickname', text: '별칭', size: 'xx' },
-					// { index: 'status', text: '스탯', size: 'sx' },
-					// { index: 'usage', text: '사용성', size: 'xx' },
-					// { index: 'explain', text: '설명', size: 'xx' },
+					{ index: 'nickname', text: '별칭', size: 'xx' }
+				];
+			case "nano":
+				return [
+					{ index: 'index', text: '아이콘', size: 'sx' },
+					{ index: 'name', text: '장비명', size: 'xx' },
+					{ index: 'division', text: '소분류', size: 'xx' }
 				];
 		}
 	})();

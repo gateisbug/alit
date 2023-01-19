@@ -12,7 +12,10 @@ function useResponsive() {
 		minWidth: 800, maxWidth: 1100
 	})
 	const isMobile = useMediaQuery({
-		maxWidth: 800
+		minWidth: 320, maxWidth: 800
+	})
+	const isNano = useMediaQuery({
+		maxWidth: 320
 	})
 	const isSmall = useMediaQuery({
 		maxWidth: 640
@@ -23,12 +26,13 @@ function useResponsive() {
 			case isDesktop: return 'desktop';
 			case isLaptop: return 'laptop';
 			case isTablet: return 'tablet';
-			default: return 'mobile'
+			case isMobile: return 'mobile';
+			default: return 'nano'
 		}
 	})();
 
 	return {
-		isDesktop, isLaptop, isTablet, isMobile, sizeIs,
+		isDesktop, isLaptop, isTablet, isMobile, sizeIs, isNano,
 		isSmall, useMediaQuery
 	}
 }

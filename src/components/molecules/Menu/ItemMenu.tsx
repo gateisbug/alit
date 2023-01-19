@@ -8,12 +8,12 @@ import { SearchBar, Sypo } from "@src/components/atoms";
 const cx = classNames.bind(styles);
 
 function ItemMenu() {
-	const { isMobile, isSmall } = useResponsive();
+	const { isMobile, isNano, isSmall } = useResponsive();
 
 	const [searchParams, setSearchParams] = useSearchParams();
 	const { category, path, navigate, pathname } = usePathfinder();
 
-	const nav = category('item', isMobile);
+	const nav = category('item', (isMobile || isNano));
 	const division = category(path[1] || '');
 
 	const onSearchKeyword = (value:string) => {
@@ -40,7 +40,7 @@ function ItemMenu() {
 							     className={ cx("item-class-box", (pathname.includes(v.url)) && 'active') }
 							     onClick={() => navigate(v.url)} >
 								{
-									!isMobile
+									(!(isMobile || isNano))
 									? (<Sypo type='p1' weight={500}>{ v.text }</Sypo>)
 									: (<div className={ cx("Icon") }>{v.text}</div>)
 								}
