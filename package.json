@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "start": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && git add dist -f && git commit -m'hosting' && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "react": "^18.2.0",
