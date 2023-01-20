@@ -16,7 +16,7 @@ echo > .nojekyll
 # echo 'www.example.com' > CNAME
 
 git init
-git checkout -B 2.0
+git checkout -B main
 git add -A
 git commit -m 'deploy'
 
@@ -24,6 +24,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # https://<USERNAME>.github.io/<REPO> 에 배포
-git push -f git@github.com:gateisbug/alit.git 2.0:gh-pages
+git push -f git@github.com:gateisbug/alit.git main:gh-pages
 
 cd -
