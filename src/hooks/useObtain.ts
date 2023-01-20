@@ -47,10 +47,10 @@ function useObtain(seperator="\t") {
 			return '#';
 		}
 		else if(index < 8) {
-			return `/resources/obtain/normal/${event[index]}.png`;
+			return `resources/obtain/normal/${event[index]}.png`;
 		}
 		else {
-			return `/resources/obtain/events/${event[index]}.png`;
+			return `resources/obtain/events/${event[index]}.png`;
 		}
 	}
 

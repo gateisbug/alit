@@ -15,7 +15,7 @@ function Logo() {
 	return (
 		<h1 className={ cx("Logo") }
 		    onClick={onClickLogo}>
-			<img src="/assets/logo.png" alt="Logo"/>
+			<img src="assets/logo.png" alt="Logo"/>
 		</h1>
 	)
 }

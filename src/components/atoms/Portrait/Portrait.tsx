@@ -11,7 +11,7 @@ type Props = {
 
 function Portrait({ resource, size='sx' }:Props) {
 	const src:string = (() => {
-		let output = '/resources';
+		let output = 'resources';
 
 		switch (resource.class) {
 			case '함포': output += '/gun'; break;
