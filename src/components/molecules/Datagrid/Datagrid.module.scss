@@ -1,0 +1,26 @@
+@import "src/styles/color";
+@import "src/styles/common";
+
+.Grid {
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 4px 0;
+	border: 1px solid $border3;
+	border-radius: 4px;
+
+	.empty {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		min-height: 400px;
+		color: $font2;
+
+		.emoticon {
+			font-size: 160px;
+			line-height: 1.5em;
+			font-weight: 700;
+			@include user-select;
+		}
+	}
+}

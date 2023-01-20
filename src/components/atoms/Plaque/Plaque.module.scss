@@ -1,0 +1,34 @@
+@import "src/styles/color";
+
+.Plaque {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 4px;
+	border: 1px solid #e0e3e7;
+	border-radius: 4px;
+
+	&.grey {
+		background-color: #f3f6f9;
+	}
+
+	&.white {
+		background-color: #fff;
+	}
+
+	&.transparent {
+		background-color: transparent;
+	}
+
+	&.sx {
+		padding: 4px;
+	}
+
+	&.mx {
+		padding: 8px;
+	}
+
+	&.lx {
+		padding: 16px;
+	}
+}

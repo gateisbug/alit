@@ -1,0 +1,693 @@
+[
+  {
+    "index": "16400",
+    "name": "40mm 4연장 보포스 기관포",
+    "usage": "균형 잡힌 템. 기술된 대공포는 얘를 기준으로 함",
+    "explain": "편의상 임의로 기준을 정할 것이고, 본 대공포를 가장 기본적인 제원으로 취급할 것.",
+    "gain": ["메인\t5-4\t11-3"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "120"
+      },
+      {
+        "state": "사속",
+        "value": "1.04초"
+      },
+      {
+        "state": "거리",
+        "value": "28"
+      },
+      {
+        "state": "참고DPS",
+        "value": "91.95"
+      }
+    ]
+  },
+  {
+    "index": "26200",
+    "name": "40mm 8연장 폼폼 포",
+    "usage": "편대당 전열에게 1개 정도는 섞어서 사용. 화력 120이상 대공포가 추가로 생긴다면 이것부터 탈락시킴.",
+    "explain": "한방 딜은 상위권인데, 사거리가 너무 짧아서 남용은 금지",
+    "gain": ["메인\t7-1\t14-2"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "128"
+      },
+      {
+        "state": "사속",
+        "value": "1.17초"
+      },
+      {
+        "state": "거리",
+        "value": "25"
+      },
+      {
+        "state": "참고DPS",
+        "value": "90.44"
+      }
+    ]
+  },
+  {
+    "index": "26660",
+    "name": "6연장 40mm 보포스 대공포",
+    "usage": "편대 내에서 대공스텟이 가장 높은 녀석에게 우선",
+    "explain": "금딱 대공포 최강. 한 방이 묵직하게 들어감",
+    "gain": ["군부연구실\t2기"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "육포스",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "150"
+      },
+      {
+        "state": "사속",
+        "value": "1.18초"
+      },
+      {
+        "state": "거리",
+        "value": "28"
+      },
+      {
+        "state": "참고DPS",
+        "value": "105.36"
+      }
+    ]
+  },
+  {
+    "index": "55160",
+    "name": "시제형 연장 90mm 고각포 Model 1939",
+    "usage": "90mm 단장 고각포에 주의",
+    "explain": "4연장 보포스 상위호환",
+    "gain": ["군부연구실\t4기"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "120"
+      },
+      {
+        "state": "사속",
+        "value": "1.03초"
+      },
+      {
+        "state": "거리",
+        "value": "31"
+      },
+      {
+        "state": "참고DPS",
+        "value": "92.55"
+      }
+    ]
+  },
+  {
+    "index": "55100",
+    "name": "90mm 단장 고각포 Model1939",
+    "usage": "사속에 비해 화력이 너무 낮다고 판단됨",
+    "explain": "유사품에 주의하자. 이건 좀 구림.",
+    "gain": ["디바인 트레지 코미디\t드랍"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "98"
+      },
+      {
+        "state": "사속",
+        "value": "0.9초"
+      },
+      {
+        "state": "거리",
+        "value": "31"
+      },
+      {
+        "state": "참고DPS",
+        "value": "82.6"
+      }
+    ]
+  },
+  {
+    "index": "50620",
+    "name": "57mm/L60 연장 보포스 대공기관포 Mle1951",
+    "usage": "전열에서 대공스텟 낮은 놈 이거 2개주고, 높은 놈은 육포스 줬음",
+    "explain": "존나 셈",
+    "gain": ["장비개발\t엘랑"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "무포스",
+    "tier": "UR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "132"
+      },
+      {
+        "state": "사속",
+        "value": "0.785초"
+      },
+      {
+        "state": "거리",
+        "value": "30"
+      },
+      {
+        "state": "참고DPS",
+        "value": "121.21"
+      }
+    ]
+  },
+  {
+    "index": "26500",
+    "name": "113mm 연장 고사포",
+    "usage": "청소기 계통으로 도배할 거면 8연장 폼폼 1~2개 정도는 섞어도 좋다",
+    "explain": "청소기 계통의 기준. 보포스보다 사거리가 길고 느리며 한 방이 묵직하다.",
+    "gain": ["메인\t7-2\t11-4"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "로봇청소기",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "130"
+      },
+      {
+        "state": "사속",
+        "value": "1.36초"
+      },
+      {
+        "state": "거리",
+        "value": "35"
+      },
+      {
+        "state": "참고DPS",
+        "value": "82.47"
+      }
+    ]
+  },
+  {
+    "index": "46300",
+    "name": "105mm SKC 연장 고사포",
+    "usage": "무지성 도배템 2",
+    "explain": "청소기보다 조금 빨라지고 조금 덜 아파짐",
+    "gain": ["메인\t9-1\t10-1"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "다리미",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "122"
+      },
+      {
+        "state": "사속",
+        "value": "1.24초"
+      },
+      {
+        "state": "거리",
+        "value": "32"
+      },
+      {
+        "state": "참고DPS",
+        "value": "82.74"
+      }
+    ]
+  },
+  {
+    "index": "46360",
+    "name": "연장 105mm SKC 고사포 개조형",
+    "usage": "",
+    "explain": "다리미의 장비개발 버전이다. 더 좋아지긴 했는데 솔직히 재료가 아깝다.",
+    "gain": ["장비개발\t철혈"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "슈퍼다리미",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "128"
+      },
+      {
+        "state": "사속",
+        "value": "1.2초"
+      },
+      {
+        "state": "거리",
+        "value": "32"
+      },
+      {
+        "state": "참고DPS",
+        "value": "88.85"
+      }
+    ]
+  },
+  {
+    "index": "36560",
+    "name": "100mm 연장 고사포",
+    "usage": "좀 느린 다리미 친구 정도. 무지성 도배템",
+    "explain": "후술할 스태그와 헷갈리지 말자",
+    "gain": ["군부연구실\t1기"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "126"
+      },
+      {
+        "state": "사속",
+        "value": "1.28초"
+      },
+      {
+        "state": "거리",
+        "value": "32"
+      },
+      {
+        "state": "참고DPS",
+        "value": "83.53"
+      }
+    ]
+  },
+  {
+    "index": "36660",
+    "name": "127mm 연장 고각포改",
+    "usage": "비권장",
+    "explain": "사속이 너무 느려서 권장 안함",
+    "gain": ["장비개발\t중앵"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "124"
+      },
+      {
+        "state": "사속",
+        "value": "1.5초"
+      },
+      {
+        "state": "거리",
+        "value": "35"
+      },
+      {
+        "state": "참고DPS",
+        "value": "73.16"
+      }
+    ]
+  },
+  {
+    "index": "36360",
+    "name": "96식 25mm 3연장 폭풍피격기포",
+    "usage": "이거 남용하면 딜로스 ㅈ된다고 잘 안썼음. 요즘은 무포스 있어서 더 안씀.",
+    "explain": "사속 뒷바라지용 템. 대공스텟이 160이하에서 놀고 장전스텟도 편대 내에서 하위면 이거 끼우고 사속셔틀 시켰음.",
+    "gain": ["장비개발\t중앵"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "72"
+      },
+      {
+        "state": "사속",
+        "value": "0.56초"
+      },
+      {
+        "state": "거리",
+        "value": "28"
+      },
+      {
+        "state": "참고DPS",
+        "value": "80.15"
+      }
+    ]
+  },
+  {
+    "index": "16080",
+    "name": "연장포 76mm RF 화포 Mk27",
+    "usage": "사속 뒷바라지 템",
+    "explain": "사속 뒷바라지 템치곤 화력 높은 편이라 몇 개 만들어서 굴렸는데, 스태그 제작 가능해지면서 아무도 관심 없어짐.",
+    "gain": ["장비개발\t이글"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "94"
+      },
+      {
+        "state": "사속",
+        "value": "0.72초"
+      },
+      {
+        "state": "거리",
+        "value": "30"
+      },
+      {
+        "state": "참고DPS",
+        "value": "90.92"
+      }
+    ]
+  },
+  {
+    "index": "36700",
+    "name": "시제형 5식 40mm 고사기관포",
+    "usage": "재떨이",
+    "explain": "다",
+    "gain": ["군부연구실 2기"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "재떨이",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "87"
+      },
+      {
+        "state": "사속",
+        "value": "0.71초"
+      },
+      {
+        "state": "거리",
+        "value": "29"
+      },
+      {
+        "state": "참고DPS",
+        "value": "84.84"
+      }
+    ]
+  },
+  {
+    "index": "46400",
+    "name": "시제형 4연장 30mm 기관포",
+    "usage": "굳이 안씀",
+    "explain": "90단장 고각포랑 비슷한 스펙인데 굳이 안 씀",
+    "gain": ["군부연구실\t5기"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "다트",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "92"
+      },
+      {
+        "state": "사속",
+        "value": "0.9초"
+      },
+      {
+        "state": "거리",
+        "value": "30"
+      },
+      {
+        "state": "참고DPS",
+        "value": "77.54"
+      }
+    ]
+  },
+  {
+    "index": "50600",
+    "name": "2연장 37mm 고사포 Mle1936",
+    "usage": "무딱 보포스 재료",
+    "explain": "무딱 보포스가 등장하면서 갑자기 신분상승 해버림. 개똥도 약에 쓰려면 없다고.",
+    "gain": ["군부연구실\t2기"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "쓰레기통",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": ""
+      },
+      {
+        "state": "사속",
+        "value": ""
+      },
+      {
+        "state": "거리",
+        "value": ""
+      },
+      {
+        "state": "참고DPS",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "index": "26600",
+    "name": "연장 보포스 40mm 기관포 STAAG",
+    "usage": "대공 외에 다른 스텟을 추가로 올려주는 기준템",
+    "explain": "사속 셔틀로도 쓰기 좋음. 명중 스텟은 크리티컬에 관련되기 때문에, 명중 스탯이 200을 넘기지 않는 한 전함은 무조건 이거 끼고 있으면 된다. 대형순양함도 마찬가지.",
+    "gain": ["장비개발\t로열", "군부연구실\t4기"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "스태그",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": "96"
+      },
+      {
+        "state": "사속",
+        "value": "0.8초"
+      },
+      {
+        "state": "거리",
+        "value": "30"
+      },
+      {
+        "state": "참고DPS",
+        "value": "87.14"
+      }
+    ]
+  },
+  {
+    "index": "26620",
+    "name": "40mm 연장 보포스 해즐미어",
+    "usage": "스태그 하위호환",
+    "explain": "사속 셔틀로도 쓰기 좋음. 명중 스텟은 크리티컬에 관련되기 때문에, 명중 스탯이 200을 넘기지 않는 한 전함은 무조건 이거 끼고 있으면 된다. 대형순양함도 마찬가지.",
+    "gain": ["장비개발\t로열", "군부연구실\t4기"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "헤즐미어",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": ""
+      },
+      {
+        "state": "사속",
+        "value": ""
+      },
+      {
+        "state": "거리",
+        "value": ""
+      },
+      {
+        "state": "참고DPS",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "index": "21500",
+    "name": "134mm 연장 고각포",
+    "usage": "포격스탯+10. 사속이 너무 느려서 방공망 형성에는 그리 좋은 역할을 기대하긴 어렵다.",
+    "explain": "기본회피가 낮은 META보스들 상대론 이걸 끼도록 하자. 추후 고회피 META보스가 등장하면 그때 스태그를 끼자.",
+    "gain": ["장비개발\t로열"],
+    "class": "대공포",
+    "division": "일반",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": ""
+      },
+      {
+        "state": "사속",
+        "value": ""
+      },
+      {
+        "state": "거리",
+        "value": ""
+      },
+      {
+        "state": "참고DPS",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "index": "11200",
+    "name": "127mm 고각연장포(시한 신관)",
+    "usage": "포격+10",
+    "explain": "포격 스탯 10을 올려준다",
+    "gain": ["장비개발\t이글"],
+    "class": "대공포",
+    "division": "시한신관",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": ""
+      },
+      {
+        "state": "사속",
+        "value": ""
+      },
+      {
+        "state": "거리",
+        "value": ""
+      },
+      {
+        "state": "참고DPS",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "index": "36660",
+    "name": "127mm 연장 고각포改(시한 신관)",
+    "usage": "연구 중",
+    "explain": "시한신관들 전부 전함, 순전, 대순만 장착 가능하고. 아직 연구진행중으로 보임. 중간선 침범한 적 항모가 함재기를 날리면 요격 못한다는 이슈가 보임. 사거리는 ㅈㄴ길고 한 방 댐은 높은데, 얘가 캐리를 하는진 ㅁ?ㄹ",
+    "gain": ["장비개발\t중앵"],
+    "class": "대공포",
+    "division": "시한신관",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": ""
+      },
+      {
+        "state": "사속",
+        "value": ""
+      },
+      {
+        "state": "거리",
+        "value": ""
+      },
+      {
+        "state": "참고DPS",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "index": "46360",
+    "name": "105mm SKC 연장 고각포 개수(시한 신관)",
+    "usage": "연구 중",
+    "explain": "시한신관들 전부 전함, 순전, 대순만 장착 가능하고. 아직 연구진행중으로 보임. 중간선 침범한 적 항모가 함재기를 날리면 요격 못한다는 이슈가 보임. 사거리는 ㅈㄴ길고 한 방 댐은 높은데, 얘가 캐리를 하는진 ㅁ?ㄹ",
+    "gain": ["장비개발\t철혈"],
+    "class": "대공포",
+    "division": "시한신관",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": ""
+      },
+      {
+        "state": "사속",
+        "value": ""
+      },
+      {
+        "state": "거리",
+        "value": ""
+      },
+      {
+        "state": "참고DPS",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "index": "21500",
+    "name": "134mm 고각연장포(시한 신관)",
+    "usage": "연구 중",
+    "explain": "시한신관들 전부 전함, 순전, 대순만 장착 가능하고. 아직 연구진행중으로 보임. 중간선 침범한 적 항모가 함재기를 날리면 요격 못한다는 이슈가 보임. 사거리는 ㅈㄴ길고 한 방 댐은 높은데, 얘가 캐리를 하는진 ㅁ?ㄹ",
+    "gain": ["장비개발\t로열"],
+    "class": "대공포",
+    "division": "시한신관",
+    "category": "",
+    "nickname": "",
+    "tier": "SSR",
+    "status": [
+      {
+        "state": "화력",
+        "value": ""
+      },
+      {
+        "state": "사속",
+        "value": ""
+      },
+      {
+        "state": "거리",
+        "value": ""
+      },
+      {
+        "state": "참고DPS",
+        "value": ""
+      }
+    ]
+  }
+]

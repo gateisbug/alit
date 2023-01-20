@@ -1,0 +1,63 @@
+@import "src/styles/color";
+
+.SearchBar {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 5px;
+	border-radius: 8px;
+	overflow: hidden;
+	//width: fit-content;
+	//min-width: 480px;
+
+	@media (max-width: 960px) {
+		flex-grow: 1;
+	}
+
+	&.dark {
+		color: $font1;
+		border: 1px solid #132f4c;
+	}
+}
+
+.search-input {
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: transparent;
+	outline: none;
+	font-size: 14px;
+	font-family: 'Noto Sans', sans-serif;
+	letter-spacing: 0.05em;
+	overflow: hidden;
+
+	margin-left: 11px;
+	margin-right: 16px;
+	@media (min-width: 961px) {
+		width: 247px;
+	}
+	@media (max-width: 960px) {
+		width: auto;
+		flex-grow: 1;
+	}
+
+	&::placeholder {
+		color: #b2bac2;
+	}
+}
+
+.Icon {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	min-width: 24px;
+	width: 24px;
+	height: 24px;
+	color: $secondary;
+
+	.searchIcon {
+		width: 20px;
+		height: 20px;
+	}
+}

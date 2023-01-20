@@ -1,0 +1,17 @@
+@import "src/styles/common";
+
+.Logo {
+	display: flex;
+	flex-flow: row nowrap;
+	cursor: pointer;
+	@include user-select;
+
+	img {
+		//width: 108px;
+		height: 32px;
+
+		@media (max-width: 400px) {
+			height: 24px;
+		}
+	}
+}

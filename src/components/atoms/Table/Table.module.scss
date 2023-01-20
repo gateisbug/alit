@@ -1,0 +1,58 @@
+@import "src/styles/color";
+
+.Head {
+	display: flex;
+	flex-flow: row nowrap;
+	border-bottom: 1px solid $border4;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+
+	.Cell {
+		align-items: center;
+		justify-content: center;
+		border-right: 1px solid $border2;
+
+		&:last-of-type {
+			border-right: none;
+		}
+	}
+}
+
+.Body {
+	display: flex;
+	flex-flow: row nowrap;
+	border-bottom: 1px solid $border4;
+
+	&:hover {
+		background-color: $background2;
+	}
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+}
+
+.Cell {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 0 4px;
+	margin: 6px 0;
+
+	&.sx {
+		width: 80px;
+		min-width: 80px;
+	}
+	&.mx {
+		width: 156px;
+		min-width: 156px;
+	}
+	&.lx {
+		width: 192px;
+		min-width: 192px;
+	}
+	&.xx {
+		width: 100%;
+		flex-grow: 1;
+	}
+}

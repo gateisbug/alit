@@ -1,0 +1,14 @@
+@import "src/styles/color";
+
+body {
+  background-color: $background1;
+  color: $font1;
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#root {
+  width: 100%;
+}

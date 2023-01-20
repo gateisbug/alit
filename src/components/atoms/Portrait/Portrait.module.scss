@@ -1,0 +1,57 @@
+@import "src/styles/common";
+
+.Portrait {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid black;
+	padding: 4px;
+	border-radius: 4px;
+	@include user-select;
+
+	&.sx {
+		width: 60px;
+		height: 60px;
+	}
+	&.mx {
+		width: 84px;
+		height: 84px;
+	}
+	&.lx {
+		width: 120px;
+		height: 120px;
+		border-width: 5px;
+	}
+}
+
+.UR {
+	background: linear-gradient(120deg, #fbffca, #baffbf, #a7efff, #ffabff);
+}
+.SSR {
+	background-color: #ee9;
+}
+.SR {
+	background-color: #c4adff;
+}
+.R {
+	background-color: #9fe8ff;
+}
+
+.gold {
+	border-color: #F9CB0F;
+}
+.red {
+	border-color: #FF2620;
+}
+.blue {
+	border-color: #4470EA;
+}
+.grey {
+	border-color: #666;
+}
+
+.icon {
+	width: 100%;
+	height: 100%;
+}

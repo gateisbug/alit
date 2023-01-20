@@ -1,0 +1,88 @@
+@import "src/styles/color";
+
+.ItemMenu {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 8px;
+
+	.nav {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		gap: 48px;
+	}
+
+	.item-class, .item-division {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 16px;
+	}
+
+	.item-class {
+		.item-class-box {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			padding: 4px 12px;
+			cursor: pointer;
+			border-radius: 4px;
+			width: fit-content;
+
+			&.active {
+				color: $mono1;
+				background-color: $primary;
+			}
+
+			&:hover {
+				color: $secondary;
+			}
+
+			.Icon {
+				display: flex;
+				flex-flow: row nowrap;
+				width: 36px;
+				height: 36px;
+
+				@media (max-width: 320px) {
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			@media (max-width: 799px) {
+				padding: 4px 6px;
+			}
+			@media (max-width: 640px) {
+				flex-grow: 1;
+				justify-content: center;
+			}
+		}
+
+		@media (min-width: 800px) {
+			min-width: 498px;
+		}
+		@media (max-width: 640px) {
+			flex-grow: 1;
+		}
+		@media (max-width: 400px) {
+			gap: 0;
+		}
+	}
+
+	.item-division {
+		.item-division-box {
+			cursor: pointer;
+		}
+	}
+}
+
+
+
+.line {
+	display: flex;
+	flex-flow: row nowrap;
+	height: 1px;
+	min-height: 1px;
+	background-color: $border2;
+	margin: 0 8px;
+}

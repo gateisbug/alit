@@ -1,0 +1,10 @@
+.ScrollView {
+	display: flex;
+	flex-flow: column nowrap;
+	overflow-y: scroll;
+	height: 100%;
+
+	.container {
+		height: fit-content;
+	}
+}
