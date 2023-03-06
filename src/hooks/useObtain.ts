@@ -2,19 +2,19 @@ const event_kor = [
 	"상자깡", "메인", "장비개발", "군부연구실", "코어샵", "건조", "서브미션", "해역구조", "통상파괴",
 	"빛과 그림자의 아이리스", "허상의 탑", "동절의 북해", "부흥의 찬송가", "결상점작전", "하늘 아래의 찬송가", "디바인 트레지 코미디",
 	"비추는 나선의 경해", "짙은 자줏빛의 안개", "깊게 울리는 메아리", "맑고 푸른 바다", "거듭되는 평행세계", "아이리스의 천사",
-	"빛나는 정원의 맹세", "영원한 밤의 환광", "작은 약속", "거울에 비친 이색", "접해몽화"
+	"빛나는 정원의 맹세", "영원한 밤의 환광", "작은 약속", "거울에 비친 이색", "접해몽화", "잿빛 폐허"
 ]
 
 const event = [
 	"Boxes", "Main", "Gear Lab", "Research", "Core Shop", "Build", "Mission", "Threat", "Daily",
 	"Iris of Light and Dark", "Virtual Tower", "Nothern Overture", "Daedalian Hymn", "Operation Convergence", "Sky Bound Oratorio", "Empyreal Tregicomedy",
 	"Mirror Involution", "Violet Tempest Blooming Lycoris", "Abyssal Refrain", "Upon the Shimmering Blue", "Parallel Superimposition", "Angel of the Iris",
-	"Pledge of the Radiant Court", "Aurora Noctis", "One Small Promise", "Divergent Chessboard", "Dreamwalkers Butterfly"
+	"Pledge of the Radiant Court", "Aurora Noctis", "One Small Promise", "Divergent Chessboard", "Dreamwalkers Butterfly", "Revelations of Dust"
 ]
 
 function useObtain(seperator="\t") {
 	const getObtain = (obtains:Array<string>) => {
-		return obtains.map((v, i) => {
+		return obtains.map((v) => {
 			const split = v.split(seperator);
 
 			if(split.length === 0) {
