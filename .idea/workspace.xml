@@ -1,11 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="clear" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/view/public/assets/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/Item/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/Main/Main.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/Main/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/Ships/Ships.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/Ships/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/Tree/Tree.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/Tree/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/views/ErrorBoundary.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/views/RootProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/views/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/alit-dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alit-dev.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/views/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/views/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -31,16 +74,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev-workspace",
-    "last_opened_file_path": "C:/Dawson",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/Parker/alit-dev/view/src/pages",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.eslint": "C:\\Parker\\alit-dev\\node_modules\\eslint",
     "node.js.selected.package.standard": "",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "settings.nodejs"
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Parker\\alit-dev\\node_modules\\typescript\\lib"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Parker\alit-dev\view\src\pages" />
+      <recent name="C:\Parker\alit-dev\view\public\assets" />
+      <recent name="C:\Parker\alit-dev\view\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Parker\alit-dev" />
     </key>
@@ -53,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705989282721</updated>
-      <workItem from="1705989283851" duration="269000" />
+      <workItem from="1705989283851" duration="5148000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -63,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705989336731</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <option name="closed" value="true" />
+      <created>1705989789141</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705989789141</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -71,6 +130,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clear" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>

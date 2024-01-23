@@ -1,33 +1,36 @@
-import { useState } from 'react';
-import '@styles/App.css';
+import { Routes, Route } from 'react-router-dom';
+import RootProvider from './RootProvider';
+import { routes } from '@views/routes';
+import { Suspense } from 'react';
+import ErrorBoundary from '@views/ErrorBoundary';
+
+function Loading() {
+  return <div>Loading...</div>;
+}
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-          <img src='/assets/vite.svg' className='logo' alt='Vite logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button
-          onClick={() => {
-            setCount((count) => count + 1);
-          }}
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <RootProvider>
+      <Routes>
+        <Route path='/'>
+          {routes.map(({ path, Component, props = {}, Fallback = Loading }) => {
+            return (
+              <Route
+                path={path}
+                key={path}
+                element={
+                  <Suspense fallback={<Fallback />}>
+                    <ErrorBoundary>
+                      <Component {...props} />
+                    </ErrorBoundary>
+                  </Suspense>
+                }
+              ></Route>
+            );
+          })}
+        </Route>
+      </Routes>
+    </RootProvider>
   );
 }
 
