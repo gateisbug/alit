@@ -8,10 +8,15 @@ const TreePage = lazy(async () => await import('../pages/Tree'));
 
 const ShipsPage = lazy(async () => await import('../pages/Ships'));
 
+const NAPage = lazy(async () => await import('../pages/NA'));
+
 type RouteType = Array<{
   path: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Component: React.ComponentType<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Fallback?: React.ComponentType<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props?: React.ComponentProps<any>;
 }>;
 
@@ -34,5 +39,12 @@ export const routes: RouteType = [
   {
     path: '/Ships',
     Component: ShipsPage,
+  },
+  {
+    path: '*',
+    Component: NAPage,
+    props: {
+      to: '/',
+    },
   },
 ];

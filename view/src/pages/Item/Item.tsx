@@ -1,5 +1,11 @@
+import { Button } from '@workspace/ui';
+
 const ItemPage = () => {
-  return <div>Item Page</div>;
+  return (
+    <div>
+      Item Page<Button>hello</Button>
+    </div>
+  );
 };
 
 export default ItemPage;

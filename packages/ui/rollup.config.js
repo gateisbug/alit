@@ -42,7 +42,7 @@ export default [
             decorators: true
           },
           target: "es2015",
-          minify: false,
+          minify: true,
         },
         tsconfig: './tsconfig.json'
       })),

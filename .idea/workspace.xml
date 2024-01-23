@@ -5,35 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/view/public/assets/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/fonts/Pretendard-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/pages/Item/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/pages/Main/Main.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/pages/Main/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/pages/Ships/Ships.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/pages/Ships/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/pages/Tree/Tree.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/pages/Tree/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/views/ErrorBoundary.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/views/RootProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/views/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/alit-dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alit-dev.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Loading/Loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Loading/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Logo/Logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Logo/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/NA/NotAvailable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/pages/NA/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/rollup.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/pages/Ships/Ships.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Ships/Ships.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/pages/Tree/Tree.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Tree/Tree.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/views/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/views/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/views/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/routes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705989282721</updated>
-      <workItem from="1705989283851" duration="5148000" />
+      <workItem from="1705989283851" duration="7459000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -122,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705989789141</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="init">
+      <option name="closed" value="true" />
+      <created>1705994657058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705994657058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

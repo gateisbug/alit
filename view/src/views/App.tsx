@@ -3,10 +3,7 @@ import RootProvider from './RootProvider';
 import { routes } from '@views/routes';
 import { Suspense } from 'react';
 import ErrorBoundary from '@views/ErrorBoundary';
-
-function Loading() {
-  return <div>Loading...</div>;
-}
+import { Loading } from '@components';
 
 function App() {
   return (
