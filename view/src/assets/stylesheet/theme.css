@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --main: #001e3c;
+    --surface: #fafafa;
+    --font-strong: #18181f;
+    --font: #1c2025;
+    /*--hover-surface: 0, 0, 0, 0.03;*/
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main: #0f1924;
+    --surface: #101418;
+    --font-strong: #f3f6f9;
+    --font: #b0b8c4;
+    /*--hover-surface: 255, 255, 255, 0.05;*/
+  }
+}

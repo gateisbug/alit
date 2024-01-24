@@ -5,17 +5,17 @@ const LogoBox = styled.h1`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  padding: 0.375rem;
+  padding: 0.75rem;
 `;
 
 const LogoImage = styled.img`
-  height: 2.625rem;
+  height: 2rem;
 `;
 
 const Logo = () => {
   return (
     <LogoBox>
-      <LogoImage />
+      <LogoImage src='/assets/logo.webp' alt='' />
     </LogoBox>
   );
 };
