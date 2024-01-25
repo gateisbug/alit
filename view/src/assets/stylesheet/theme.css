@@ -1,3 +1,9 @@
+:root {
+  --accent: #ffb74d;
+  --on-accent: #1c2025;
+  --primary-hover: #b28035;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --main: #001e3c;

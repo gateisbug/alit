@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/view/public/assets/logo.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/common/Header/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/common/Wrap/Wrap.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/common/Wrap/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/common/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/GoogleIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Icon/Icon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Icon/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Link/Link.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Link/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/public/assets/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/Logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Logo/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/Logo/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Logo/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/views/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -46,9 +42,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2bLLCFUaBHBYL75w1OjQAkoIEbm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -60,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev-workspace",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Parker/alit-dev/view/src/components/Logo",
+    "last_opened_file_path": "C:/Parker/alit-dev/view/src/domain/common/Header",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -73,6 +69,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Parker\alit-dev\view\src\domain\common\Header" />
       <recent name="C:\Parker\alit-dev\view\src\components\Logo" />
       <recent name="C:\Parker\alit-dev\view\src\pages" />
       <recent name="C:\Parker\alit-dev\view\public\assets" />
@@ -92,7 +89,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705989282721</updated>
-      <workItem from="1705989283851" duration="12955000" />
+      <workItem from="1705989283851" duration="13012000" />
+      <workItem from="1706165232725" duration="2231000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -126,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705996803074</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init">
+      <option name="closed" value="true" />
+      <created>1706058096645</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706058096645</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
