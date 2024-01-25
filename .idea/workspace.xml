@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/GoogleIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/Icon/Icon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/Icon/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/Link/Link.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/Link/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +51,7 @@
     "node.js.selected.package.eslint": "C:\\Parker\\alit-dev\\node_modules\\eslint",
     "node.js.selected.package.standard": "",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable",
     "ts.external.directory.path": "C:\\Parker\\alit-dev\\node_modules\\typescript\\lib"
   }
 }]]></component>
@@ -90,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705989282721</updated>
       <workItem from="1705989283851" duration="13012000" />
-      <workItem from="1706165232725" duration="2231000" />
+      <workItem from="1706165232725" duration="2534000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -132,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706058096645</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <option name="closed" value="true" />
+      <created>1706167544956</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706167544956</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
