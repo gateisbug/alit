@@ -103,7 +103,7 @@ function ItemModal({ res }:Props) {
 				<section className={ cx("item-explain") }>
 					<Sypo type='p1' weight={700}>상세설명</Sypo>
 					<Plaque color="grey" size="mx">
-						<Mypo type='p2' weight={400} color='#888'>{ res.explain }</Mypo>
+						<Mypo type='p2' weight={400} color='#888' style={{ whiteSpace: 'pre-wrap' }}>{ res.explain }</Mypo>
 					</Plaque>
 				</section>
 			}
