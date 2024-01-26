@@ -3630,5 +3630,47 @@
         "value": "130%"
       }
     ]
+  },
+  {
+    "index": "14000",
+    "name": "305mm 3연장포 Mk8",
+    "usage": "",
+    "explain": "",
+    "gain": ["빛을 쫓는 별의 바다\t포인트"],
+    "class": "함포",
+    "division": "대순함포",
+    "category": "철갑탄",
+    "nickname": "괌포",
+    "tier": "UR",
+    "status": [
+      {
+        "state": "발사패턴",
+        "value": "3발씩 1회"
+      },
+      {
+        "state": "발사시간",
+        "value": "0초"
+      },
+      {
+        "state": "추가스텟",
+        "value": "포격+65"
+      },
+      {
+        "state": "발당DMG",
+        "value": "110"
+      },
+      {
+        "state": "장전쿨",
+        "value": "8.5초"
+      },
+      {
+        "state": "사거리",
+        "value": "65"
+      },
+      {
+        "state": "장비배율",
+        "value": "136%"
+      }
+    ]
   }
 ]
