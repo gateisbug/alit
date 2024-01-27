@@ -11,5 +11,6 @@
 src/resource/resource.ts(이하 리소스) 에 작성된 모든 내용은 별도의 저작권자가 있으며, 각각 저작권자가 명시한 라이선스를 적용받습니다. 위의 리소스를 제외한 모든 리액트 소스코드는 MIT License에 따라 이용하실 수 있습니다.
 
 ## Latest Version
+- 24-01-27 : ver 2.1.6, 설비 파트 추가된 내용 반영
 - 24-01-27 : ver 2.1.5, 강화 내압각 티어 수정
 - 24-01-26 : [ver 2.1.4](https://github.com/gateisbug/alit/releases/tag/2.1.4)
