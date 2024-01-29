@@ -43,7 +43,7 @@ const Select = React.forwardRef<HTMLDivElement, SelectProps>(
       setOpen(!open);
     }, [open]);
 
-    const formRef = useClickAway(forwardRef, setOpen);
+    const formRef = useClickAway(setOpen, forwardRef);
     const { inputValue, onClickItem } = useSelectValue(
       defaultValue ?? '',
       multiple ?? false,

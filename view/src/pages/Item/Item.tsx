@@ -1,13 +1,15 @@
+import React from 'react';
 import { Button } from '@workspace/ui';
-import Header from '@domain/common/Header';
-import ExternalLink from '@components/Link';
+import { Header } from '@domain/common';
 
 const ItemPage = () => {
+  const [value, setValue] = React.useState('');
+
   return (
     <div>
       <Header />
       Item Page<Button>hello</Button>
-      <ExternalLink to='https://www.google.com/'>google</ExternalLink>
+      {/* <Search setValue={setValue} /> */}
     </div>
   );
 };

@@ -2,8 +2,8 @@ import React from 'react';
 import { SelectItemType } from './preamble';
 
 export function useClickAway(
-  forwardRef: React.ForwardedRef<HTMLDivElement>,
   setOpen: React.Dispatch<React.SetStateAction<boolean>>,
+  forwardRef?: React.ForwardedRef<HTMLDivElement>,
 ) {
   const formRef = React.useRef<HTMLDivElement>(null);
   React.useImperativeHandle(forwardRef, () => formRef.current!);
