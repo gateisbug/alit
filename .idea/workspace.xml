@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/ArcaLiveIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/CloseIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/GithubIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/ImageIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/SearchIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/Search/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/alit-dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alit-dev.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/src/components/Select/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/components/Select/Select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/src/components/Select/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/components/Select/hooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/GoogleIcon.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev-workspace",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Parker/alit-dev/view/src/assets/icon",
+    "last_opened_file_path": "C:/Parker/alit-dev",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -98,7 +81,8 @@
       <updated>1705989282721</updated>
       <workItem from="1705989283851" duration="13012000" />
       <workItem from="1706165232725" duration="2600000" />
-      <workItem from="1706485377138" duration="11856000" />
+      <workItem from="1706485377138" duration="13250000" />
+      <workItem from="1706503709774" duration="2231000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -156,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706167809157</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="search">
+      <option name="closed" value="true" />
+      <created>1706501290480</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706501290480</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clear" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="search" />
+    <option name="LAST_COMMIT_MESSAGE" value="search" />
   </component>
 </project>
