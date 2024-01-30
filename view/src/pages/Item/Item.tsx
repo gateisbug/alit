@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@workspace/ui';
 import { Header } from '@domain/common';
+import { Search } from '@components';
 
 const ItemPage = () => {
   const [value, setValue] = React.useState('');
@@ -9,7 +10,7 @@ const ItemPage = () => {
     <div>
       <Header />
       Item Page<Button>hello</Button>
-      {/* <Search setValue={setValue} /> */}
+      <Search setValue={setValue} />
     </div>
   );
 };
