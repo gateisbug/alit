@@ -8,8 +8,9 @@
   :root {
     --main: #001e3c;
     --surface: #fafafa;
-    --font-strong: #18181f;
+    --font-strong: #101418;
     --font: #1c2025;
+    --font-weak: #999999;
     /*--hover-surface: 0, 0, 0, 0.03;*/
   }
 }
@@ -19,6 +20,7 @@
     --surface: #101418;
     --font-strong: #f3f6f9;
     --font: #b0b8c4;
+    --font-weak: #b8b9ba;
     /*--hover-surface: 255, 255, 255, 0.05;*/
   }
 }
