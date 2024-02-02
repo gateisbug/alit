@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="theme color change">
-      <change afterPath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/Tabs/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="add tabs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/rollup.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/Logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Logo/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Tabs/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Tabs/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev-workspace",
+    "ignore.virus.scanning.warn.message": "true",
     "js.linters.configure.manually.selectedeslint": "true",
     "last_opened_file_path": "C:/Parker/alit-dev",
     "list.type.of.created.stylesheet": "CSS",
@@ -92,7 +90,8 @@
       <workItem from="1706508308009" duration="757000" />
       <workItem from="1706577749876" duration="4799000" />
       <workItem from="1706745299827" duration="4140000" />
-      <workItem from="1706832560460" duration="5912000" />
+      <workItem from="1706832560460" duration="6173000" />
+      <workItem from="1706851936841" duration="769000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -182,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706836620300</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add tabs">
+      <option name="closed" value="true" />
+      <created>1706845485353</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706845485353</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +200,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="search" />
     <MESSAGE value="theme color change" />
-    <option name="LAST_COMMIT_MESSAGE" value="theme color change" />
+    <MESSAGE value="add tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tabs" />
   </component>
 </project>
