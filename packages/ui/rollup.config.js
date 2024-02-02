@@ -7,10 +7,10 @@ import commonjs from '@rollup/plugin-commonjs';
 import { swc, defineRollupSwcOption } from 'rollup-plugin-swc3';
 import babel from '@rollup/plugin-babel';
 
-import postcss from 'rollup-plugin-postcss';
-import autoprefixer from 'autoprefixer';
-import postcssPresetEnv from 'postcss-preset-env';
-import cssnano from 'cssnano';
+// import postcss from 'rollup-plugin-postcss';
+// import autoprefixer from 'autoprefixer';
+// import postcssPresetEnv from 'postcss-preset-env';
+// import cssnano from 'cssnano';
 
 export default [
   {
@@ -20,20 +20,20 @@ export default [
       format: 'esm',
     },
     plugins: [
-      postcss({
-        extensions: ['.css', '.module.css', '.scss'],
-        plugins: [
-          autoprefixer,
-          postcssPresetEnv({
-            stage: 1,
-            minimumVendorImplementations: 2,
-          }),
-          cssnano({
-            preset: 'default'
-          })
-        ],
-        extract: false
-      }),
+      // postcss({
+      //   extensions: ['.css', '.module.css', '.scss'],
+      //   plugins: [
+      //     autoprefixer,
+      //     postcssPresetEnv({
+      //       stage: 1,
+      //       minimumVendorImplementations: 2,
+      //     }),
+      //     cssnano({
+      //       preset: 'default'
+      //     })
+      //   ],
+      //   extract: false
+      // }),
       swc(defineRollupSwcOption({
         jsc: {
           parser: {

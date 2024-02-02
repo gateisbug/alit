@@ -10,6 +10,7 @@ const LogoBox = styled.h1`
 
 const LogoImage = styled.img`
   height: 2rem;
+  width: 6.75rem;
 `;
 
 const Logo = () => {

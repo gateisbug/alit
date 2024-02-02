@@ -26,7 +26,7 @@ const ExternalLink = ({ to, children }: ExternalLinkProps) => {
 const GroupContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  gap: 1rem;
+  gap: 1.5rem;
 `;
 
 const ExternalLinkGroup = () => {
