@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="add tabs">
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemFilter/ItemFilter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemFilter/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemSearch/ItemSearch.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemSearch/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/ArcaLiveIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/ArcaLiveIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/CloseIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/CloseIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/GithubIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/GithubIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/ImageIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/ImageIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/SearchIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/SearchIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/FilterIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Icon/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/IconBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Link/Link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Link/Link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/Tabs/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Tabs/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +69,7 @@
     "git-widget-placeholder": "dev-workspace",
     "ignore.virus.scanning.warn.message": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Parker/alit-dev",
+    "last_opened_file_path": "C:/Dawson/jonathan-ui",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -91,7 +110,8 @@
       <workItem from="1706577749876" duration="4799000" />
       <workItem from="1706745299827" duration="4140000" />
       <workItem from="1706832560460" duration="6173000" />
-      <workItem from="1706851936841" duration="769000" />
+      <workItem from="1706851936841" duration="1588000" />
+      <workItem from="1707088016727" duration="14023000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -189,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706845485353</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add tabs">
+      <option name="closed" value="true" />
+      <created>1706853526588</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706853526588</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,13 +1,9 @@
 import React from 'react';
+import { IconBox, IconBoxProps } from './IconBox';
 
-interface Props {
-  width?: string;
-  height?: string;
-}
-
-const ImageIcon = ({ width = '1.5rem', height = '1.5rem' }: Props) => {
+const ImageIcon = ({ width = '1.5rem', height = '1.5rem' }: IconBoxProps) => {
   return (
-    <div style={{ width, height }}>
+    <IconBox width={width} height={height}>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width='100%'
@@ -19,7 +15,7 @@ const ImageIcon = ({ width = '1.5rem', height = '1.5rem' }: Props) => {
           fill='currentColor'
         />
       </svg>
-    </div>
+    </IconBox>
   );
 };
 

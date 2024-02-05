@@ -1,13 +1,12 @@
 import React from 'react';
+import { IconBox, IconBoxProps } from './IconBox';
 
-interface Props {
-  width?: string;
-  height?: string;
-}
-
-const ArcaLiveIcon = ({ width = '1.5rem', height = '1.5rem' }: Props) => {
+const ArcaLiveIcon = ({
+  width = '1.5rem',
+  height = '1.5rem',
+}: IconBoxProps) => {
   return (
-    <div style={{ width, height }}>
+    <IconBox width={width} height={height}>
       <svg
         version='1.0'
         xmlns='http://www.w3.org/2000/svg'
@@ -29,7 +28,7 @@ const ArcaLiveIcon = ({ width = '1.5rem', height = '1.5rem' }: Props) => {
           />
         </g>
       </svg>
-    </div>
+    </IconBox>
   );
 };
 
