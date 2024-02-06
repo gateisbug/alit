@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button } from '@workspace/ui';
 import { Header } from '@domain/common';
 import { ItemController, ItemTabs } from '@domain/Item';
 import styled from 'styled-components';
 
-const Pageer = styled.div`
-  padding: 0 48px;
+const Pager = styled.div`
+  padding: 3rem 2rem 0;
 `;
 
 const TableController = styled.div`
@@ -16,24 +15,19 @@ const TableController = styled.div`
 `;
 
 const ItemPage = () => {
-  const [, setTest] = React.useState(0);
-  console.log('render');
+  React.useEffect(() => {
+    console.log('render');
+  });
 
   return (
     <div>
       <Header />
-      Item Page
-      <Button
-        onClick={() => {
-          setTest((prev) => prev + 1);
-        }}
-      >
-        hello
-      </Button>
-      <TableController>
-        <ItemTabs />
-        <ItemController />
-      </TableController>
+      <Pager className='wrap'>
+        <TableController>
+          <ItemTabs />
+          <ItemController />
+        </TableController>
+      </Pager>
     </div>
   );
 };

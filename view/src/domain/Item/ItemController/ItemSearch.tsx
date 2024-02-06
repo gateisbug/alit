@@ -12,7 +12,7 @@ const StyledButton = styled(Button)`
   gap: 0.5rem;
   padding: 0;
   border: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
   font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
@@ -21,14 +21,17 @@ const StyledButton = styled(Button)`
 const ItemSearch = () => {
   const [mode, setMode] = React.useState(false);
   const [value, setValue] = React.useState('');
-  const [items] = React.useState([{ render: 'Hello' }]);
 
-  React.useEffect(() => {
-    console.log(value);
-  }, [value]);
+  const onClickButton = React.useCallback(() => {
+    setMode(false);
+  }, []);
 
   return mode ? (
-    <Search setValue={setValue} items={items} />
+    <Search
+      setValue={setValue}
+      autoFocus={true}
+      onClickButton={onClickButton}
+    />
   ) : (
     <StyledButton
       variant='text'
@@ -37,7 +40,7 @@ const ItemSearch = () => {
       }}
     >
       <SearchIcon />
-      Search
+      검색
     </StyledButton>
   );
 };

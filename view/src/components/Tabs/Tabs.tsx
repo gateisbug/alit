@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const TabContainer = styled.div`
@@ -33,7 +33,7 @@ const TabBox = styled.div`
 
 const Tab = styled.div`
   display: inline-block;
-  padding: 0.5rem 0.75rem;
+  //padding: 0.5rem 0.75rem;
   font-weight: 400;
   font-size: 1rem;
   cursor: pointer;
@@ -58,25 +58,30 @@ type TabItemType = {
 
 interface TabsProps {
   item: TabItemType[];
+  defaultValue?: string;
 }
 
-const Tabs = ({ item }: TabsProps) => {
+const Tabs = ({ item, defaultValue }: TabsProps) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const barRef = React.useRef<HTMLDivElement>(null);
-  const [current, setCurrent] = React.useState<string>(item[0].label);
+  const [current, setCurrent] = React.useState<string>(
+    defaultValue ?? item[0].label,
+  );
 
   const onClickTab = React.useCallback((v: string) => {
     setCurrent(v);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const active = containerRef?.current?.querySelector(
       'div[data-active="true"]',
     );
-    if (!active || !barRef.current) return;
+    if (!containerRef.current || !active || !barRef.current) return;
 
+    const contRect = containerRef.current.getBoundingClientRect();
     const rect = active.getBoundingClientRect();
-    barRef.current.style.left = rect.left + 'px';
+
+    barRef.current.style.left = rect.left - contRect.left + 'px';
     barRef.current.style.width = rect.width + 'px';
   }, [current]);
 

@@ -8,6 +8,7 @@ export const CheckBox = styled.label.attrs({
 })`
   display: inline-flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: 0.25rem;
   cursor: pointer;
 

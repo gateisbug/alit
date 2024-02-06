@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Input, Select, useClickAway } from '@workspace/ui';
+import { Button, Input, Select /*, useClickAway */ } from '@workspace/ui';
 import { SearchIcon } from '@icon';
 
 const Form = styled(Select.Form)`
   max-width: 12.5rem;
-`
+`;
 
 const Field = styled(Select.Field)`
   display: flex;
   flex-flow: row nowrap;
   gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.375rem 0.5rem;
   color: var(--primary);
 `;
 
@@ -20,48 +20,65 @@ const Root = styled(Input.Root)`
   color: var(--font);
 `;
 
-type SearchItemType = {
-  onClick?: React.MouseEventHandler;
-  render: React.ReactNode;
-};
+const InsideButton = styled(Button.Root)`
+  padding: 0;
+  border: none;
+`;
+
+// type SearchItemType = {
+//   onClick?: React.MouseEventHandler;
+//   render: React.ReactNode;
+// };
 
 interface SearchProps {
   setValue: React.Dispatch<React.SetStateAction<string>>;
-  items: SearchItemType[];
+  // items: SearchItemType[];
   defaultValue?: string;
+  autoFocus?: boolean;
+  onClickButton?: () => void;
 }
 
-const Search = ({ setValue, defaultValue, items }: SearchProps) => {
+const Search = ({
+  setValue,
+  defaultValue,
+  // items,
+  autoFocus = false,
+  onClickButton,
+}: SearchProps) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
-  const formRef = React.useRef<HTMLDivElement>(null);
+  // const formRef = React.useRef<HTMLDivElement>(null);
 
-  const [open, setOpen] = React.useState<boolean>(false);
+  // const [open, setOpen] = React.useState<boolean>(false);
 
-  const _formRef = useClickAway(setOpen, formRef);
+  // const _formRef = useClickAway(setOpen, formRef);
 
   const onChangeInput = React.useCallback(() => {
-    setOpen((inputRef.current?.value.length ?? 0) > 0);
+    // setOpen((inputRef.current?.value.length ?? 0) > 0);
     setValue && setValue(inputRef.current?.value ?? '');
   }, [setValue, inputRef.current]);
 
   return (
-    <Form ref={_formRef}>
+    <Form /* ref={_formRef} */>
       <Field>
-        <SearchIcon width='1.25rem' height='1.25rem' />
+        <InsideButton $variant='text' onClick={onClickButton}>
+          <SearchIcon width='1.25rem' height='1.25rem' />
+        </InsideButton>
         <Root
           ref={inputRef}
           onChange={onChangeInput}
           defaultValue={defaultValue}
-          placeholder='Filter By Keyword'
+          placeholder='Search By Keyword'
+          autoFocus={autoFocus}
         />
       </Field>
-      <Select.Box $open={open}>
-        {items.map((v, i) => (
-          <Select.Item key={`select_${i}`} onClick={v.onClick}>
-            {v.render}
-          </Select.Item>
-        ))}
-      </Select.Box>
+
+      {/* <Select.Box $open={open}> */}
+      {/*  {items.map((v, i) => ( */}
+      {/*    <Select.Item key={`select_${i}`} onClick={v.onClick}> */}
+      {/*      {v.render} */}
+      {/*    </Select.Item> */}
+      {/*  ))} */}
+      {/* </Select.Box> */}
     </Form>
   );
 };

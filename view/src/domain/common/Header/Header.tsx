@@ -3,22 +3,26 @@ import { Logo } from '@components';
 import ExternalLinkGroup from './ExternalLink';
 
 const StyledHeader = styled.header`
+  background-color: var(--main);
+  height: fit-content;
+`;
+
+const HeaderWrap = styled.div`
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--main);
-  height: fit-content;
   padding: 0 2rem;
-  box-sizing: border-box;
 `;
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
+      <HeaderWrap className='max-wrap'>
+        <Logo />
 
-      <ExternalLinkGroup />
+        <ExternalLinkGroup />
+      </HeaderWrap>
     </StyledHeader>
   );
 };

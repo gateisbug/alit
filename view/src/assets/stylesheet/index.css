@@ -29,3 +29,12 @@ html, body, #root {
   color: var(--font);
   background-color: var(--surface);
 }
+
+.wrap {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.max-wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+}
