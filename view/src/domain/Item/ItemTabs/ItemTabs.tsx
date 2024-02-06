@@ -2,6 +2,7 @@ import React from 'react';
 import { Tabs } from '@components';
 import styled from 'styled-components';
 import { NavLink, useLocation } from 'react-router-dom';
+import { INDEX, PATH, TEXT, VALUE } from '@domain/Item/const';
 
 const Anchor = styled(NavLink)`
   display: block;
@@ -10,23 +11,16 @@ const Anchor = styled(NavLink)`
   text-decoration: none;
 `;
 
-const ITEMS = [
-  { l: 'all', t: '/item', r: '전체' },
-  { l: 'gun', t: '/item/gun', r: '함포' },
-  { l: 'torpedo', t: '/item/torpedo', r: '어뢰' },
-  { l: 'antiair', t: '/item/antiair', r: '대공' },
-  {
-    l: 'aircraft',
-    t: '/item/aircraft',
-    r: '함재기',
-  },
-  {
-    l: 'accessory',
-    t: '/item/accessory',
-    r: '설비',
-  },
-  { l: 'special', t: '/item/special', r: '특수' },
-];
+type ItemsType = {
+  l: string;
+  t: string;
+  r: string;
+};
+const ITEMS: ItemsType[] = INDEX.map((v) => ({
+  l: VALUE[v],
+  t: PATH[v],
+  r: TEXT[v],
+}));
 
 const ItemTabs = () => {
   const { pathname } = useLocation();

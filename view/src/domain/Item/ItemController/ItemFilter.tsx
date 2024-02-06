@@ -1,10 +1,11 @@
 import React from 'react';
 import { debounce } from 'lodash';
 import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Button, Check } from '@workspace/ui';
 import { FilterIcon } from '@icon';
 import { Dropdown } from '@components';
+import { CATEGORIES, VALUE } from '@domain/Item/const';
 
 const StyledButton = styled(Button)`
   display: inline-flex;
@@ -55,60 +56,48 @@ const ItemFilter = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const boxRef = React.useRef<HTMLDivElement>(null);
 
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
+  const category = useParams<{ category?: string }>().category ?? 'all';
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
     setOpen(false);
-  }, [pathname]);
+  }, [category]);
 
   const pathCategory = React.useCallback(
     debounce((): ItemType[] => {
-      if (pathname === '/item/gun') {
-        return [
-          { value: 'dd', label: '구축함포' },
-          { value: 'cl', label: '경순함포' },
-          { value: 'ca', label: '중순함포' },
-          { value: 'bb', label: '전함포' },
-          { value: 'cb', label: '대순함포' },
-        ];
-      } else if (pathname === '/item/torpedo') {
-        return [
-          { value: 'surface', label: '수면어뢰' },
-          { value: 'submarine', label: '잠수어뢰' },
-        ];
-      } else if (pathname === '/item/antiair') {
-        return [
-          { value: 'normal', label: '일반' },
-          { value: 'fuse', label: '시한신관' },
-        ];
-      } else if (pathname === '/item/aircraft') {
-        return [
-          { value: 'fighter', label: '전투기' },
-          { value: 'bomber', label: '폭격기' },
-          { value: 'seaplane', label: '수상기' },
-          { value: 'torpedo-bomber', label: '뇌격기' },
-        ];
-      } else if (pathname === '/item/accessory') {
-        return [
-          { value: 'backline', label: '후열' },
-          { value: 'frontline', label: '전열' },
-          { value: 'signiture', label: '전용' },
-        ];
-      } else if (pathname === '/item/special') {
-        return [
-          { value: 'normal', label: '공용' },
-          { value: 'signiture', label: '전용' },
-        ];
-      } else {
-        return [];
+      switch (true) {
+        case category === VALUE.GUN:
+          return CATEGORIES.GUN;
+        case category === VALUE.TORPEDO:
+          return CATEGORIES.TORPEDO;
+        case category === VALUE.ANTIAIR:
+          return CATEGORIES.ANTIAIR;
+        case category === VALUE.AIRCRAFT:
+          return CATEGORIES.AIRCRAFT;
+        case category === VALUE.ACCESSORY:
+          return CATEGORIES.ACCESSORY;
+        case category === VALUE.SPECIAL:
+          return CATEGORIES.SPECIAL;
+        default:
+          return CATEGORIES.ALL;
       }
     }, 200),
-    [pathname],
+    [category],
   );
 
+  const onChangeCheck = React.useCallback(() => {
+    const result = document.querySelectorAll(
+      'input[type="checkbox"][name="category"]',
+    );
+    for (let i = 0; i < result.length; i++) {
+      const now = result[i] as HTMLInputElement;
+      console.log(now.value, now.checked);
+    }
+  }, []);
+
   const renderContents = React.useCallback((): React.ReactNode => {
-    if (pathname === '/item') {
+    if (category === VALUE.ALL) {
       return null;
     } else {
       return (
@@ -120,6 +109,7 @@ const ItemFilter = () => {
                 name='category'
                 value={v.value}
                 defaultChecked
+                onChange={onChangeCheck}
               >
                 {v.label}
               </Check>
@@ -128,7 +118,7 @@ const ItemFilter = () => {
         </FilterBox>
       );
     }
-  }, [pathname]);
+  }, [category]);
 
   return (
     <Dropdown show={open} contents={renderContents()}>
@@ -138,7 +128,7 @@ const ItemFilter = () => {
         onClick={() => {
           setOpen(!open);
         }}
-        disabled={pathname === '/item'}
+        disabled={category === VALUE.ALL}
       >
         <FilterIcon />
         필터

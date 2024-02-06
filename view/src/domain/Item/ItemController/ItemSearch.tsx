@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Search } from '@components';
 import { Button } from '@workspace/ui';
 import { SearchIcon } from '@icon';
+import {useSetRecoilState} from 'recoil';
+import {searchStore} from '@domain/Item/store';
 
 const StyledButton = styled(Button)`
   display: inline-flex;
@@ -20,7 +22,8 @@ const StyledButton = styled(Button)`
 
 const ItemSearch = () => {
   const [mode, setMode] = React.useState(false);
-  const [value, setValue] = React.useState('');
+  // const [value, setValue] = React.useState('');
+  const setValue = useSetRecoilState(searchStore);
 
   const onClickButton = React.useCallback(() => {
     setMode(false);
