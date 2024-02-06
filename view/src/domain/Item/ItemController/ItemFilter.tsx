@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { Button, Check } from '@workspace/ui';
 import { FilterIcon } from '@icon';
 import { Dropdown } from '@components';
-import { CATEGORIES, VALUE } from '@domain/Item/const';
+import { CATEGORIES, VALUE } from '../const';
 
 const StyledButton = styled(Button)`
   display: inline-flex;
