@@ -104,3 +104,14 @@ export const CATEGORIES: ICategories = {
     { value: 'signiture', label: '전용' },
   ],
 };
+
+export const TABLEROWINDEX = [
+  'Icon',
+  'Name',
+  'Nickname',
+  'Obtain',
+  'Nation',
+  'Class',
+  'Type',
+  'Explain',
+];

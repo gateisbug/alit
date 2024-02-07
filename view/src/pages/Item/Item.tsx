@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '@domain/common';
-import { ItemController, ItemTabs } from '@domain/Item';
+import { ItemController, ItemTable, ItemTabs } from '@domain/Item';
 import styled from 'styled-components';
 
 const Pager = styled.div`
@@ -27,6 +27,7 @@ const ItemPage = () => {
           <ItemTabs />
           <ItemController />
         </TableController>
+        <ItemTable />
       </Pager>
     </div>
   );

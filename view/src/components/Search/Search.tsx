@@ -1,85 +1,100 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Input, Select /*, useClickAway */ } from '@workspace/ui';
+import { Button, Input } from '@workspace/ui';
 import { SearchIcon } from '@icon';
 
-const Form = styled(Select.Form)`
-  max-width: 12.5rem;
-`;
-
-const Field = styled(Select.Field)`
+type ContainerProps = {
+  $maxWidth?: string;
+};
+const Container = styled.div<ContainerProps>`
+  width: fit-content;
   display: flex;
   flex-flow: row nowrap;
-  gap: 0.5rem;
+  justify-content: flex-end;
   padding: 0.375rem 0.5rem;
-  color: var(--primary);
+  border-radius: 0.25rem;
+  overflow-anchor: none;
+  border: 0.0625rem solid transparent;
+  transition:
+    border 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  max-width: ${(props) => props.$maxWidth};
+  &:has(input[data-minify='true']) {
+    @media (prefers-color-scheme: light) {
+      border-color: #0000003a;
+    }
+    @media (prefers-color-scheme: dark) {
+      border-color: #ffffff3a;
+    }
+  }
 `;
+Container.defaultProps = {
+  $maxWidth: '12.5rem',
+};
 
 const Root = styled(Input.Root)`
+  display: block;
   line-height: 1.25rem;
   color: var(--font);
+  transition:
+    padding-left 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &[data-minify='true'] {
+    padding-left: 0.5rem;
+    width: 100%;
+  }
+  &[data-minify='false'] {
+    padding-left: 0;
+    width: 0;
+  }
 `;
 
-const InsideButton = styled(Button.Root)`
+const SearchButon = styled(Button.Root)`
   padding: 0;
   border: none;
 `;
 
-// type SearchItemType = {
-//   onClick?: React.MouseEventHandler;
-//   render: React.ReactNode;
-// };
-
 interface SearchProps {
-  setValue: React.Dispatch<React.SetStateAction<string>>;
-  // items: SearchItemType[];
+  setValue?: React.Dispatch<React.SetStateAction<string>>;
+  maxWidth?: string;
   defaultValue?: string;
-  autoFocus?: boolean;
-  onClickButton?: () => void;
 }
 
-const Search = ({
-  setValue,
-  defaultValue,
-  // items,
-  autoFocus = false,
-  onClickButton,
-}: SearchProps) => {
+const Search = ({ setValue, maxWidth, defaultValue }: SearchProps) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
-  // const formRef = React.useRef<HTMLDivElement>(null);
-
-  // const [open, setOpen] = React.useState<boolean>(false);
-
-  // const _formRef = useClickAway(setOpen, formRef);
+  const [minify, setMinify] = React.useState(false);
 
   const onChangeInput = React.useCallback(() => {
-    // setOpen((inputRef.current?.value.length ?? 0) > 0);
     setValue && setValue(inputRef.current?.value ?? '');
   }, [setValue, inputRef.current]);
 
-  return (
-    <Form /* ref={_formRef} */>
-      <Field>
-        <InsideButton $variant='text' onClick={onClickButton}>
-          <SearchIcon width='1.25rem' height='1.25rem' />
-        </InsideButton>
-        <Root
-          ref={inputRef}
-          onChange={onChangeInput}
-          defaultValue={defaultValue}
-          placeholder='Search By Keyword'
-          autoFocus={autoFocus}
-        />
-      </Field>
+  const onClickButton = React.useCallback(() => {
+    setMinify(!minify);
+  }, [minify]);
 
-      {/* <Select.Box $open={open}> */}
-      {/*  {items.map((v, i) => ( */}
-      {/*    <Select.Item key={`select_${i}`} onClick={v.onClick}> */}
-      {/*      {v.render} */}
-      {/*    </Select.Item> */}
-      {/*  ))} */}
-      {/* </Select.Box> */}
-    </Form>
+  React.useEffect(() => {
+    if (minify) {
+      inputRef.current?.focus();
+    } else {
+      inputRef.current?.blur();
+    }
+  }, [minify]);
+
+  return (
+    <Container $maxWidth={maxWidth}>
+      <SearchButon $variant='text' onClick={onClickButton}>
+        <SearchIcon width='1.25rem' height='1.25rem' />
+      </SearchButon>
+      <Root
+        ref={inputRef}
+        onChange={onChangeInput}
+        defaultValue={defaultValue}
+        placeholder='Search By Keyword'
+        data-minify={minify}
+      />
+    </Container>
   );
 };
 

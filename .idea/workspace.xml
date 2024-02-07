@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="ItemFilter, ItemTabs 액션 추가">
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="import 수정">
+      <change afterPath="$PROJECT_DIR$/view/src/components/Table/Table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Table/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemSearch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -93,7 +102,7 @@
       <workItem from="1706832560460" duration="6173000" />
       <workItem from="1706851936841" duration="1588000" />
       <workItem from="1707088016727" duration="14122000" />
-      <workItem from="1707176226063" duration="23383000" />
+      <workItem from="1707176226063" duration="34938000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -223,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707260536720</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="import 수정">
+      <option name="closed" value="true" />
+      <created>1707260589777</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707260589777</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +255,7 @@
     <MESSAGE value="add tabs, filter, controller" />
     <MESSAGE value="ItemFilter, ItemTabs 추가" />
     <MESSAGE value="ItemFilter, ItemTabs 액션 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="ItemFilter, ItemTabs 액션 추가" />
+    <MESSAGE value="import 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="import 수정" />
   </component>
 </project>

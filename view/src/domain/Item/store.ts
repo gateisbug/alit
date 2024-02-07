@@ -9,5 +9,5 @@ export const filterStore = atom<string[]>({
 
 export const searchStore = atom<string>({
   key: prefix + 'searchStore',
-  default: [],
+  default: '',
 });
