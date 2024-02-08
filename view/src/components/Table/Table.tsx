@@ -5,6 +5,7 @@ const TableContainer = styled.section`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  gap: 0.5rem;
 `;
 
 // const TableHeader = styled.header`

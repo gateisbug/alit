@@ -51,13 +51,11 @@ const Tab = styled.div`
   }
 `;
 
-type TabItemType = {
-  label: string;
-  render?: React.ReactNode;
-};
-
 interface TabsProps {
-  item: TabItemType[];
+  item: Array<{
+    label: string;
+    render?: React.ReactNode;
+  }>;
   defaultValue?: string;
 }
 

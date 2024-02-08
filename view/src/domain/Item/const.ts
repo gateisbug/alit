@@ -58,10 +58,7 @@ export const TEXT: Index = {
   SPECIAL: '특수',
 };
 
-type ItemType = {
-  value: string;
-  label: string;
-};
+type ItemType = OptionType<string, string>;
 interface ICategories {
   ALL: ItemType[];
   GUN: ItemType[];

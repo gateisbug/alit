@@ -47,10 +47,7 @@ const FilterList = styled.form`
   padding: 0.5rem 0;
 `;
 
-type ItemType = {
-  value: string;
-  label: string;
-};
+type ItemType = OptionType<string, string>;
 
 const ItemFilter = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
