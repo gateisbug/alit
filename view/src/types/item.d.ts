@@ -15,7 +15,7 @@ type ItemInterfaceIndex =
 interface ItemInterface {
   index?: number | string;
   name?: string;
-  tier?: Tier;
+  tier?: TierType;
   nickname?: string;
   link?: string;
   nation?: string;

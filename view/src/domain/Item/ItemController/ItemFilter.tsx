@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { Button, Check } from '@workspace/ui';
 import { FilterIcon } from '@icon';
 import { Dropdown } from '@components';
-import { CATEGORIES, VALUE } from '../const';
+import { CLASSES, VALUE } from '../const';
 
 const StyledButton = styled(Button)`
   display: inline-flex;
@@ -65,19 +65,19 @@ const ItemFilter = () => {
     debounce((): ItemType[] => {
       switch (true) {
         case category === VALUE.GUN:
-          return CATEGORIES.GUN;
+          return CLASSES.GUN;
         case category === VALUE.TORPEDO:
-          return CATEGORIES.TORPEDO;
+          return CLASSES.TORPEDO;
         case category === VALUE.ANTIAIR:
-          return CATEGORIES.ANTIAIR;
+          return CLASSES.ANTIAIR;
         case category === VALUE.AIRCRAFT:
-          return CATEGORIES.AIRCRAFT;
+          return CLASSES.AIRCRAFT;
         case category === VALUE.ACCESSORY:
-          return CATEGORIES.ACCESSORY;
+          return CLASSES.ACCESSORY;
         case category === VALUE.SPECIAL:
-          return CATEGORIES.SPECIAL;
+          return CLASSES.SPECIAL;
         default:
-          return CATEGORIES.ALL;
+          return CLASSES.ALL;
       }
     }, 200),
     [category],

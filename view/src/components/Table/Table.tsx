@@ -34,7 +34,8 @@ const TableCell = styled.div`
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  background-color: var(--surface);
+  //background-color: var(--surface);
+  background-color: transparent;
 `;
 
 const Table = {

@@ -59,7 +59,7 @@ export const TEXT: Index = {
 };
 
 type ItemType = OptionType<string, string>;
-interface ICategories {
+interface IClass {
   ALL: ItemType[];
   GUN: ItemType[];
   TORPEDO: ItemType[];
@@ -68,7 +68,7 @@ interface ICategories {
   ACCESSORY: ItemType[];
   SPECIAL: ItemType[];
 }
-export const CATEGORIES: ICategories = {
+export const CLASSES: IClass = {
   ALL: [],
   GUN: [
     { value: 'dd', label: '구축함포' },
@@ -112,3 +112,19 @@ export const TABLEROWINDEX = [
   'Type',
   'Explain',
 ];
+
+export const StrokeMaker = (className?: string): StrokeType => {
+  switch (className) {
+    case '철갑탄':
+      return 'blue';
+    case '고폭탄':
+      return 'red';
+    case '통상탄':
+    case '삼식탄':
+      return 'yellow';
+    case 'SAP':
+      return 'violet';
+    default:
+      return 'default';
+  }
+};

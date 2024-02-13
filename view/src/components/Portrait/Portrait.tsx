@@ -2,15 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LazyImage = styled.img`
-  width: 3rem;
-  height: 3rem;
+  //width: 3rem;
+  //height: 3rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
 `;
 
 const Frame = styled.div`
+  width: 4rem;
+  height: 4rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
   padding: 0.375rem;
-  border: 0.125rem solid #7e5475;
+  border: 0.1875rem solid #7e5475;
 
   &[data-stroke='default'] {
     border-color: #7e5475; // #666666
@@ -49,7 +55,7 @@ interface PortraitProps {
   src?: string;
   placeholder?: string;
   stroke?: 'default' | 'red' | 'yellow' | 'blue' | 'violet';
-  tier?: Tier;
+  tier?: TierType;
 }
 
 const Portrait = ({

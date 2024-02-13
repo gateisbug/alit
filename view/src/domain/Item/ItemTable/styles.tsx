@@ -5,6 +5,20 @@ export const TBox = styled.div`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  gap: 0.25rem;
+
+  & > .table-row {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  & > .table-row:hover {
+    @media (prefers-color-scheme: light) {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba(255, 255, 255, 0.04);
+    }
+  }
 `;
 
 export const Th = styled(Table.Cell)`

@@ -1,44 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Table } from '@components';
+import { Portrait, Table } from '@components';
 import { Box, Ellipsis, TBox, Td, Th } from './styles';
-
-type ColumnType = {
-  basis: string;
-  minWidth: string;
-  render?: (v: ItemInterface) => React.ReactNode;
-} & OptionType<ItemInterfaceIndex, string>;
-
-const COLUMNS: ColumnType[] = [
-  {
-    value: 'link',
-    label: '아이콘',
-    basis: '90px',
-    minWidth: '64px',
-    render: (v) => <img src={v.link} width='64px' height='64px' alt={v.name} />,
-  },
-  { value: 'name', label: '장비명', basis: '240px', minWidth: '180px' },
-  { value: 'nickname', label: '별명', basis: '150px', minWidth: '100px' },
-  {
-    value: 'obtain',
-    label: '획득처',
-    basis: '240px',
-    minWidth: '160px',
-    render: (v) => (
-      <Box>{v.obtain?.split('|').map((u) => <span key={u}>{u}</span>)}</Box>
-    ),
-  },
-  { value: 'nation', label: '국가', basis: '100px', minWidth: '60px' },
-  { value: 'class', label: '구분', basis: '100px', minWidth: '60px' },
-  { value: 'type', label: '종류', basis: '100px', minWidth: '60px' },
-  {
-    value: 'explain',
-    label: '설명',
-    basis: '468px',
-    minWidth: '200px',
-    render: (v) => <Ellipsis>{v.explain?.replace(/\|/g, '. ')}</Ellipsis>,
-  },
-];
+import { StrokeMaker } from '@domain/Item/const';
 
 const EXAMPLE: ItemInterface[] = [
   {
@@ -107,11 +71,57 @@ const EXAMPLE: ItemInterface[] = [
   },
 ];
 
-interface HeaderProps {
+type ColumnType = {
+  basis: string;
+  minWidth: string;
+  render?: (v: ItemInterface) => React.ReactNode;
+} & OptionType<ItemInterfaceIndex, string>;
+
+interface TableProps {
   columns?: ColumnType[];
+  items?: ItemInterface[];
 }
 
-const Header = ({ columns = [] }: HeaderProps) => {
+const COLUMNS: ColumnType[] = [
+  {
+    value: 'link',
+    label: '아이콘',
+    basis: '90px',
+    minWidth: '64px',
+    // render: (v) => <img src={v.link} width='64px' height='64px' alt={v.name} />,
+    render: (v) => (
+      <Portrait
+        src={`images/items/${v.index}.png`}
+        placeholder={`images/items/${v.index}_lqip.png`}
+        stroke={StrokeMaker(v.type)}
+        tier={v.tier}
+      />
+    ),
+  },
+  { value: 'name', label: '장비명', basis: '240px', minWidth: '180px' },
+  { value: 'nickname', label: '별명', basis: '150px', minWidth: '100px' },
+  {
+    value: 'obtain',
+    label: '획득처',
+    basis: '240px',
+    minWidth: '160px',
+    render: (v) => (
+      <Box>{v.obtain?.split('|').map((u) => <span key={u}>{u}</span>)}</Box>
+    ),
+  },
+  { value: 'nation', label: '국가', basis: '100px', minWidth: '60px' },
+  { value: 'class', label: '구분', basis: '100px', minWidth: '60px' },
+  { value: 'type', label: '종류', basis: '100px', minWidth: '60px' },
+  {
+    value: 'explain',
+    label: '설명',
+    basis: '468px',
+    minWidth: '200px',
+    render: (v) => <Ellipsis>{v.explain?.replace(/\|/g, '. ')}</Ellipsis>,
+  },
+];
+
+const Header = ({ columns = [] }: Pick<TableProps, 'columns'>) => {
   return (
     <TBox>
       <Table.Row>
@@ -128,16 +138,11 @@ const Header = ({ columns = [] }: HeaderProps) => {
   );
 };
 
-interface BodyProps {
-  columns?: ColumnType[];
-  items?: ItemInterface[];
-}
-
-const Body = ({ columns = [], items = [] }: BodyProps) => {
+const Body = ({ columns = [], items = [] }: TableProps) => {
   return (
     <TBox>
       {items.map((v, i) => (
-        <Table.Row key={`${v.name}_${i}`}>
+        <Table.Row key={`${v.name}_${i}`} className='table-row'>
           {columns.map((u) => (
             <Td
               key={`${v.name}_${i}_${u.value}`}
