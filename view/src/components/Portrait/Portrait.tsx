@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { LazyImage } from '@src/components';
 
-const LazyImage = styled.img`
-  //width: 3rem;
-  //height: 3rem;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-`;
+// const LazyImage = styled.img`
+//   //width: 3rem;
+//   //height: 3rem;
+//   width: 100%;
+//   height: 100%;
+//   border: none;
+//   outline: none;
+// `;
 
 const Frame = styled.div`
   width: 4rem;
@@ -66,7 +67,7 @@ const Portrait = ({
 }: PortraitProps) => {
   return (
     <Frame data-tier={tier} data-stroke={stroke}>
-      <LazyImage src={placeholder} data-src={src} loading='lazy' />
+      <LazyImage src={src} placeholder={placeholder} />
     </Frame>
   );
 };
