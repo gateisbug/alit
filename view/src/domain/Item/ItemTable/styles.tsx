@@ -3,6 +3,14 @@ import { Table } from '@components';
 
 export const Container = styled(Table.Container)`
   margin-top: 2rem;
+  border-bottom: 2px solid transparent;
+  
+  @media (prefers-color-scheme: light) {
+    border-color: rgba(0, 0, 0, 0.16);
+  }
+  @media (prefers-color-scheme: dark) {
+    border-color: rgba(255, 255, 255, 0.16);
+  }
 `;
 
 export const TBox = styled.div`
@@ -17,11 +25,14 @@ export const TBox = styled.div`
     cursor: pointer;
 
     @media (prefers-color-scheme: light) {
-      border-color: rgba(0, 0, 0, 0.14);
+      border-color: rgba(0, 0, 0, 0.08);
     }
     @media (prefers-color-scheme: dark) {
-      border-color: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.08);
     }
+  }
+  & > .table-row:last-of-type {
+    border-bottom: none;
   }
 `;
 

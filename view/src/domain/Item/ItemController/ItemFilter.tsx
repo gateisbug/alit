@@ -29,6 +29,7 @@ const FilterBox = styled.div`
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 14%);
+  background-color: var(--surface);
   gap: 0.75rem;
 
   @media (prefers-color-scheme: light) {

@@ -2,6 +2,12 @@ import React from 'react';
 import { Portrait } from '@components';
 import { Box, Ellipsis } from '@domain/Item/ItemTable/styles';
 
+export type ColumnType = {
+  basis: string;
+  minWidth: string;
+  render?: (v: ItemInterface) => React.ReactNode;
+} & OptionType<ItemInterfaceIndex, string>;
+
 const stroker = (className?: string): StrokeType => {
   switch (className) {
     case 'ap':
@@ -169,19 +175,12 @@ const typeDelimiter = (domain?: string, type?: string) => {
   return '';
 };
 
-export type ColumnType = {
-  basis: string;
-  minWidth: string;
-  render?: (v: ItemInterface) => React.ReactNode;
-} & OptionType<ItemInterfaceIndex, string>;
-
 export const COLUMNS: ColumnType[] = [
   {
     value: 'link',
     label: '아이콘',
     basis: '90px',
     minWidth: '64px',
-    // render: (v) => <img src={v.link} width='64px' height='64px' alt={v.name} />,
     render: (v) => (
       <Portrait
         src={`images/items/${v.index}.png`}

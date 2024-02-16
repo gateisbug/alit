@@ -1,4 +1,13 @@
-type IndexArr = [
+type ItemIndexType =
+  | 'ALL'
+  | 'GUN'
+  | 'TORPEDO'
+  | 'ANTIAIR'
+  | 'AIRCRAFT'
+  | 'ACCESSORY'
+  | 'SPECIAL';
+
+export const INDEX: ItemIndexType[] = [
   'ALL',
   'GUN',
   'TORPEDO',
@@ -8,27 +17,7 @@ type IndexArr = [
   'SPECIAL',
 ];
 
-export const INDEX: IndexArr = [
-  'ALL',
-  'GUN',
-  'TORPEDO',
-  'ANTIAIR',
-  'AIRCRAFT',
-  'ACCESSORY',
-  'SPECIAL',
-];
-
-interface Index {
-  ALL: string;
-  GUN: string;
-  TORPEDO: string;
-  ANTIAIR: string;
-  AIRCRAFT: string;
-  ACCESSORY: string;
-  SPECIAL: string;
-}
-
-export const PATH: Index = {
+export const PATH: Record<ItemIndexType, string> = {
   ALL: '/item',
   GUN: '/item/gun',
   TORPEDO: '/item/torpedo',
@@ -38,7 +27,7 @@ export const PATH: Index = {
   SPECIAL: '/item/special',
 };
 
-export const VALUE: Index = {
+export const VALUE: Record<ItemIndexType, string> = {
   ALL: 'all',
   GUN: 'gun',
   TORPEDO: 'torpedo',
@@ -48,10 +37,10 @@ export const VALUE: Index = {
   SPECIAL: 'special',
 };
 
-export const TEXT: Index = {
+export const TEXT: Record<ItemIndexType, string> = {
   ALL: '전체',
   GUN: '함포',
-  TORPEDO: '어뢰+',
+  TORPEDO: '어뢰',
   ANTIAIR: '대공',
   AIRCRAFT: '함재기',
   ACCESSORY: '설비',
@@ -59,16 +48,7 @@ export const TEXT: Index = {
 };
 
 type ItemType = OptionType<string, string>;
-interface IClass {
-  ALL: ItemType[];
-  GUN: ItemType[];
-  TORPEDO: ItemType[];
-  ANTIAIR: ItemType[];
-  AIRCRAFT: ItemType[];
-  ACCESSORY: ItemType[];
-  SPECIAL: ItemType[];
-}
-export const CLASSES: IClass = {
+export const CLASSES: Record<ItemIndexType, ItemType[]> = {
   ALL: [],
   GUN: [
     { value: 'dd', label: '구축함포' },
@@ -102,14 +82,3 @@ export const CLASSES: IClass = {
     { value: 'signiture', label: '전용' },
   ],
 };
-
-export const TABLEROWINDEX = [
-  'Icon',
-  'Name',
-  'Nickname',
-  'Obtain',
-  'Nation',
-  'Class',
-  'Type',
-  'Explain',
-];

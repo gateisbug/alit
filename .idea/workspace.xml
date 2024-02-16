@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="lazy image 추가">
-      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="table render 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/const.ts" afterDir="false" />
     </list>
@@ -101,7 +101,7 @@
       <workItem from="1707782089193" duration="8133000" />
       <workItem from="1707810912654" duration="132000" />
       <workItem from="1707866820576" duration="351000" />
-      <workItem from="1708039009437" duration="6404000" />
+      <workItem from="1708039009437" duration="9103000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -279,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707810991683</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="table render 수정">
+      <option name="closed" value="true" />
+      <created>1708046013259</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708046013260</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +307,7 @@
     <MESSAGE value="portrait 컴포넌트 추가" />
     <MESSAGE value="lazy view를 위한 이미지 추가" />
     <MESSAGE value="lazy image 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="lazy image 추가" />
+    <MESSAGE value="table render 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="table render 수정" />
   </component>
 </project>
