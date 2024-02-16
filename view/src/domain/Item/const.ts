@@ -51,7 +51,7 @@ export const VALUE: Index = {
 export const TEXT: Index = {
   ALL: '전체',
   GUN: '함포',
-  TORPEDO: '어뢰',
+  TORPEDO: '어뢰+',
   ANTIAIR: '대공',
   AIRCRAFT: '함재기',
   ACCESSORY: '설비',
@@ -80,6 +80,7 @@ export const CLASSES: IClass = {
   TORPEDO: [
     { value: 'surface', label: '수면어뢰' },
     { value: 'submarine', label: '잠수어뢰' },
+    { value: 'missile', label: '미사일' },
   ],
   ANTIAIR: [
     { value: 'normal', label: '일반' },
@@ -112,19 +113,3 @@ export const TABLEROWINDEX = [
   'Type',
   'Explain',
 ];
-
-export const StrokeMaker = (className?: string): StrokeType => {
-  switch (className) {
-    case '철갑탄':
-      return 'blue';
-    case '고폭탄':
-      return 'red';
-    case '통상탄':
-    case '삼식탄':
-      return 'yellow';
-    case 'SAP':
-      return 'violet';
-    default:
-      return 'default';
-  }
-};

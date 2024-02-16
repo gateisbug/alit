@@ -1,43 +1,58 @@
 import styled from 'styled-components';
 import { Table } from '@components';
 
+export const Container = styled(Table.Container)`
+  margin-top: 2rem;
+`;
+
 export const TBox = styled.div`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  gap: 0.25rem;
+  //gap: 0.25rem;
 
   & > .table-row {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+
+    @media (prefers-color-scheme: light) {
+      border-color: rgba(0, 0, 0, 0.14);
+    }
+    @media (prefers-color-scheme: dark) {
+      border-color: rgba(255, 255, 255, 0.14);
+    }
   }
-  & > .table-row:hover {
+`;
+
+export const Row = styled(Table.Row)`
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
     @media (prefers-color-scheme: light) {
       background-color: rgba(0, 0, 0, 0.04);
     }
-
     @media (prefers-color-scheme: dark) {
       background-color: rgba(255, 255, 255, 0.04);
     }
   }
 `;
 
-export const Th = styled(Table.Cell)`
+export const Cell = styled(Table.Cell)`
   font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
-  font-weight: 700;
   font-size: 1rem;
   line-height: 2rem;
-  color: var(--font-strong);
-`;
 
-export const Td = styled(Table.Cell)`
-  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 2rem;
-  color: var(--font);
-  word-break: keep-all;
+  &[data-type='th'] {
+    font-weight: 700;
+    color: var(--font-strong);
+  }
+  &[data-type='td'] {
+    font-weight: 400;
+    color: var(--font);
+    word-break: keep-all;
+  }
 `;
 
 export const Box = styled.div`
