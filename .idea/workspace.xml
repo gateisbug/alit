@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="table render 수정">
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="table style 수정 및 json 연동">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/public/json/gun.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/gun.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/const.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/types/item.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/types/item.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +50,7 @@
     "git-widget-placeholder": "dev-workspace",
     "ignore.virus.scanning.warn.message": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Parker/alit-dev/view/public/json",
+    "last_opened_file_path": "C:/Dawson/superset-3.1.0rc3",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -104,7 +101,7 @@
       <workItem from="1707810912654" duration="132000" />
       <workItem from="1707866820576" duration="351000" />
       <workItem from="1708039009437" duration="11621000" />
-      <workItem from="1708300615215" duration="6750000" />
+      <workItem from="1708300615215" duration="13114000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -298,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708052619329</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="table style 수정 및 json 연동">
+      <option name="closed" value="true" />
+      <created>1708307656773</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708307656773</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +324,7 @@
     <MESSAGE value="lazy view를 위한 이미지 추가" />
     <MESSAGE value="lazy image 추가" />
     <MESSAGE value="table render 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="table render 수정" />
+    <MESSAGE value="table style 수정 및 json 연동" />
+    <option name="LAST_COMMIT_MESSAGE" value="table style 수정 및 json 연동" />
   </component>
 </project>

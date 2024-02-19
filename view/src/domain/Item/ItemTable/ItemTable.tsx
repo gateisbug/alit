@@ -29,7 +29,7 @@ const Body = ({ columns = [], items = [] }: TableProps) => {
   return (
     <TBox>
       {items.map((v, i) => (
-        <Row key={`${v.name}_${i}`} className='table-row'>
+        <Row key={`${v.name}_${i}`} data-type='row'>
           {columns.map((u) => (
             <Cell
               key={`${v.name}_${i}_${u.value}`}

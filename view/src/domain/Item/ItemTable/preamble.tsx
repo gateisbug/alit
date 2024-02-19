@@ -1,6 +1,6 @@
 import React from 'react';
 import { Portrait } from '@components';
-import { Box, Ellipsis } from '@domain/Item/ItemTable/styles';
+import { CellBox, Ellipsis } from '@domain/Item/ItemTable/styles';
 
 export type ColumnType = {
   basis: string;
@@ -204,7 +204,7 @@ export const COLUMNS: ColumnType[] = [
     label: '획득처',
     basis: '240px',
     minWidth: '160px',
-    render: (v) => <Box>{v.obtain?.map((u) => <span key={u}>{u}</span>)}</Box>,
+    render: (v) => <CellBox>{v.obtain?.map((u) => <span key={u}>{u}</span>)}</CellBox>,
   },
   { value: 'nation', label: '국가', basis: '100px', minWidth: '60px' },
   {

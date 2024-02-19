@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { Table } from '@components';
 
-export const Container = styled(Table.Container)`
+export const Container = styled(Table.Container).attrs({
+  className: 'table-container',
+})`
   margin-top: 2rem;
   border-bottom: 2px solid transparent;
 
@@ -17,9 +19,12 @@ export const TBox = styled.div`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  //gap: 0.25rem;
+`;
 
-  & > .table-row {
+export const Row = styled(Table.Row)`
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  ${TBox} > &[data-type='row'] {
     padding: 0.75rem 0;
     border-bottom: 1px solid transparent;
     cursor: pointer;
@@ -30,14 +35,11 @@ export const TBox = styled.div`
     @media (prefers-color-scheme: dark) {
       border-color: rgba(255, 255, 255, 0.08);
     }
-  }
-  & > .table-row:last-of-type {
-    border-bottom: none;
-  }
-`;
 
-export const Row = styled(Table.Row)`
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
 
   &:hover {
     @media (prefers-color-scheme: light) {
@@ -72,7 +74,7 @@ export const Cell = styled(Table.Cell)`
   }
 `;
 
-export const Box = styled.div`
+export const CellBox = styled.div`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
