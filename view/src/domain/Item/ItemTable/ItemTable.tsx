@@ -1,5 +1,6 @@
 import { TBox, Row, Container, Cell } from './styles';
-import { EXAMPLE, ColumnType, COLUMNS } from './preamble';
+import { ColumnType, COLUMNS, getJson } from './preamble';
+import { useEffect, useState } from 'react';
 
 export interface TableProps {
   columns?: ColumnType[];
@@ -34,6 +35,7 @@ const Body = ({ columns = [], items = [] }: TableProps) => {
               key={`${v.name}_${i}_${u.value}`}
               style={{ flexBasis: u.basis, minWidth: u.minWidth }}
               data-type='td'
+              data-key={u.value}
             >
               {u.render ? u.render(v) : v[u.value]}
             </Cell>
@@ -45,10 +47,22 @@ const Body = ({ columns = [], items = [] }: TableProps) => {
 };
 
 const ItemTable = () => {
+  const [data, setData] = useState<ItemInterface[]>([]);
+
+  useEffect(() => {
+    getJson('gun')
+      .then((res) => {
+        setData(res);
+      })
+      .catch((reject) => {
+        console.error(reject);
+      });
+  }, []);
+
   return (
     <Container>
       <Header columns={COLUMNS} />
-      <Body columns={COLUMNS} items={EXAMPLE} />
+      <Body columns={COLUMNS} items={data} />
     </Container>
   );
 };

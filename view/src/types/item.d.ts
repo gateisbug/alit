@@ -12,6 +12,15 @@ type ItemInterfaceIndex =
   | 'type'
   | 'status';
 
+type ItemURL =
+  | 'all'
+  | 'gun'
+  | 'torpedo'
+  | 'antiair'
+  | 'aircraft'
+  | 'accessory'
+  | 'special';
+
 interface ItemInterface {
   index?: number | string;
   name?: string;
@@ -19,10 +28,10 @@ interface ItemInterface {
   nickname?: string;
   link?: string;
   nation?: string;
-  explain?: string;
-  obtain?: string;
+  explain?: string[];
+  obtain?: string[];
   domain?: string;
   class?: string;
   type?: string;
-  status?: string;
+  status?: string[];
 }

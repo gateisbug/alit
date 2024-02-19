@@ -4,7 +4,7 @@ import { Table } from '@components';
 export const Container = styled(Table.Container)`
   margin-top: 2rem;
   border-bottom: 2px solid transparent;
-  
+
   @media (prefers-color-scheme: light) {
     border-color: rgba(0, 0, 0, 0.16);
   }
@@ -54,6 +54,7 @@ export const Cell = styled(Table.Cell)`
     sans-serif;
   font-size: 1rem;
   line-height: 2rem;
+  text-align: center;
 
   &[data-type='th'] {
     font-weight: 700;
@@ -63,6 +64,11 @@ export const Cell = styled(Table.Cell)`
     font-weight: 400;
     color: var(--font);
     word-break: keep-all;
+  }
+  &[data-key='explain'],
+  &[data-key='obtain'] {
+    justify-content: flex-start;
+    text-align: start;
   }
 `;
 

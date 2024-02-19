@@ -27,7 +27,7 @@ export const PATH: Record<ItemIndexType, string> = {
   SPECIAL: '/item/special',
 };
 
-export const VALUE: Record<ItemIndexType, string> = {
+export const VALUE: Record<ItemIndexType, ItemURL> = {
   ALL: 'all',
   GUN: 'gun',
   TORPEDO: 'torpedo',
