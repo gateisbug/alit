@@ -12,6 +12,10 @@ import { LazyImage } from '@src/components';
 // `;
 
 const Frame = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
   width: 4rem;
   height: 4rem;
   border-radius: 0.25rem;

@@ -18,6 +18,8 @@
       "@domain": ["src/domain/index.ts"],
       "@pages/*": ["src/pages/*"],
       "@pages": ["src/pages/index.ts"],
+      "@util/*": ["src/util/*"],
+      "@util": ["src/util/index.ts"],
       "@types/*": ["src/types/*"],
       "@views/*": ["src/views/*"]
     }

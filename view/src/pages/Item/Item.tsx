@@ -8,10 +8,16 @@ const Pager = styled.div`
 `;
 
 const TableController = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem 0;
+  background-color: var(--surface);
 `;
 
 const ItemPage = () => {

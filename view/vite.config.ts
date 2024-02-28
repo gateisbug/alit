@@ -17,6 +17,7 @@ export default defineConfig({
       { find: '@domain', replacement: p('./src/domain') },
       { find: '@pages', replacement: p('./src/pages') },
       { find: '@types', replacement: p('./src/types') },
+      { find: '@util', replacement: p('./src/util') },
       { find: '@views', replacement: p('./src/views') },
     ],
   },

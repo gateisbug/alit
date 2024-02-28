@@ -5,20 +5,24 @@ export const Container = styled(Table.Container).attrs({
   className: 'table-container',
 })`
   margin-top: 2rem;
-  border-bottom: 2px solid transparent;
-
-  @media (prefers-color-scheme: light) {
-    border-color: rgba(0, 0, 0, 0.16);
-  }
-  @media (prefers-color-scheme: dark) {
-    border-color: rgba(255, 255, 255, 0.16);
-  }
+  padding-bottom: 3rem;
 `;
 
 export const TBox = styled.div`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+
+  &.table-body {
+    border-bottom: 2px solid transparent;
+
+    @media (prefers-color-scheme: light) {
+      border-color: rgba(0, 0, 0, 0.16);
+    }
+    @media (prefers-color-scheme: dark) {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+  }
 `;
 
 export const Row = styled(Table.Row)`

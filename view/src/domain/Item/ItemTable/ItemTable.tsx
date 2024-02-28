@@ -1,6 +1,7 @@
 import { TBox, Row, Container, Cell } from './styles';
 import { ColumnType, COLUMNS, getJson } from './preamble';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 export interface TableProps {
   columns?: ColumnType[];
@@ -27,7 +28,7 @@ const Header = ({ columns = [] }: Pick<TableProps, 'columns'>) => {
 
 const Body = ({ columns = [], items = [] }: TableProps) => {
   return (
-    <TBox>
+    <TBox className='table-body'>
       {items.map((v, i) => (
         <Row key={`${v.name}_${i}`} data-type='row'>
           {columns.map((u) => (
@@ -47,17 +48,19 @@ const Body = ({ columns = [], items = [] }: TableProps) => {
 };
 
 const ItemTable = () => {
+  const params = useParams();
   const [data, setData] = useState<ItemInterface[]>([]);
 
   useEffect(() => {
-    getJson('gun')
+    const path: ItemURL = (params?.category as ItemURL | undefined) ?? 'all';
+    getJson(path)
       .then((res) => {
         setData(res);
       })
       .catch((reject) => {
         console.error(reject);
       });
-  }, []);
+  }, [params]);
 
   return (
     <Container>

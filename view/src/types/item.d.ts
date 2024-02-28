@@ -26,6 +26,7 @@ interface ItemInterface {
   name?: string;
   tier?: TierType;
   nickname?: string;
+  image?: string;
   link?: string;
   nation?: string;
   explain?: string[];

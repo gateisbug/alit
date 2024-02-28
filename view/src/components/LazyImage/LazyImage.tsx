@@ -36,7 +36,17 @@ const LazyImage = ({ placeholder, src }: LazyImgProps) => {
     };
   }, [src]);
 
-  return <Root ref={imgRef} src={link} loading='lazy' alt='Lazy loaded' />;
+  return (
+    <Root
+      ref={imgRef}
+      src={link}
+      loading='lazy'
+      onError={(e) => {
+        (e.target as HTMLImageElement).src = '/assets/noImage.svg';
+      }}
+      alt='wait'
+    />
+  );
 };
 
 export default React.memo(LazyImage);

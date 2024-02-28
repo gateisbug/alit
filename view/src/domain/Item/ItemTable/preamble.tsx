@@ -1,6 +1,7 @@
 import React from 'react';
 import { Portrait } from '@components';
 import { CellBox, Ellipsis } from '@domain/Item/ItemTable/styles';
+import { get } from '@util/fetching';
 
 export type ColumnType = {
   basis: string;
@@ -8,7 +9,9 @@ export type ColumnType = {
   render?: (v: ItemInterface) => React.ReactNode;
 } & OptionType<ItemInterfaceIndex, string>;
 
-const stroker = (className?: string): StrokeType => {
+const stroker = (className?: string, domain?: string): StrokeType => {
+  if(domain !== 'gun') return 'default';
+
   switch (className) {
     case 'ap':
       return 'blue';
@@ -24,23 +27,25 @@ const stroker = (className?: string): StrokeType => {
   }
 };
 
-const classDelimiter = (domain?: string, classes?: string) => {
-  if (domain && classes) {
-    if (domain === 'gun') {
-      switch (classes) {
+const classDelimiter = (value: ItemInterface) => {
+  if (value.domain && value.class) {
+    if (value.domain === 'gun') {
+      switch (value.class) {
         case 'dd':
-          return '구축함포';
+          return '구축포';
+        // return value.nation !== 'MOT' ? '구축포' : '범선소형포';
         case 'cl':
-          return '경순함포';
+          return '경순포';
         case 'ca':
-          return '중순함포';
+          return '중순포';
         case 'bb':
           return '전함포';
+        // return value.nation !== 'MOT' ? '전함포' : '범선대형포';
         case 'cb':
-          return '대순함포';
+          return '대순포';
       }
-    } else if (domain === 'torpedo') {
-      switch (classes) {
+    } else if (value.domain === 'torpedo') {
+      switch (value.class) {
         case 'surface':
           return '수면어뢰';
         case 'submarine':
@@ -48,15 +53,15 @@ const classDelimiter = (domain?: string, classes?: string) => {
         case 'missile':
           return '미사일';
       }
-    } else if (domain === 'antiair') {
-      switch (classes) {
+    } else if (value.domain === 'antiair') {
+      switch (value.class) {
         case 'normal':
           return '일반';
         case 'fuse':
           return '시한신관';
       }
-    } else if (domain === 'aircraft') {
-      switch (classes) {
+    } else if (value.domain === 'aircraft') {
+      switch (value.class) {
         case 'fighter':
           return '전투기';
         case 'bomber':
@@ -66,17 +71,17 @@ const classDelimiter = (domain?: string, classes?: string) => {
         case 'torpedo-bomber':
           return '뇌격기';
       }
-    } else if (domain === 'accessory') {
-      switch (classes) {
+    } else if (value.domain === 'accessory') {
+      switch (value.class) {
         case 'backline':
-          return '후열';
+          return '주력(후열)';
         case 'frontline':
-          return '전열';
+          return '선봉(전열)';
         case 'signiture':
-          return '전용';
+          return '특수';
       }
-    } else if (domain === 'special') {
-      switch (classes) {
+    } else if (value.domain === 'special') {
+      switch (value.class) {
         case 'dd':
           return '구축';
         case 'cl':
@@ -98,10 +103,10 @@ const classDelimiter = (domain?: string, classes?: string) => {
   return '';
 };
 
-const typeDelimiter = (domain?: string, type?: string) => {
-  if (domain && type) {
-    if (domain === 'gun') {
-      switch (type) {
+const typeDelimiter = (value: ItemInterface) => {
+  if (value.domain && value.type) {
+    if (value.domain === 'gun') {
+      switch (value.type) {
         case 'normal':
           return '통상탄';
         case 'he':
@@ -113,8 +118,8 @@ const typeDelimiter = (domain?: string, type?: string) => {
         case 'type3':
           return '삼식탄';
       }
-    } else if (domain === 'torpedo') {
-      switch (type) {
+    } else if (value.domain === 'torpedo') {
+      switch (value.type) {
         case 'passive':
           return '수동';
         case 'active':
@@ -123,29 +128,47 @@ const typeDelimiter = (domain?: string, type?: string) => {
         //   return '미사일';
       }
     }
-    // else if (domain === 'antiair') {
-    //   switch (type) {
+    // else if (value.domain === 'antiair') {
+    //   switch (value.type) {
     //     case 'normal':
     //       return '일반';
     //     case 'fuse':
     //       return '시한신관';
     //   }
     // }
-    else if (domain === 'aircraft') {
-      switch (type) {
+    else if (value.domain === 'aircraft') {
+      switch (value.type) {
+        case 'old':
+          return '구3대장';
+        case 'old low':
+          return '구3대장↓';
+        case 'old over':
+          return '구3대장↑';
+        case 'new':
+          return '3대장';
+        case 'dogfight':
+          return '도그파이트';
+        case 'hornet material':
+          return '시호넷 재료';
+        case 'deprecated':
+          return '안씀';
+        case 'rocket':
+          return '로켓장착';
+        case 'god':
+          return '신';
+        case 'cooldown':
+          return '사속조절';
         case 'normal':
           return '일반';
-        case 'fa':
-          return '다목적';
-        case 'as':
-          return '제공권';
+        case 'shit':
+          return '쓰레기';
         case 'straight':
-          return '쫄용';
+          return '직선';
         case 'focus':
-          return '보스용';
+          return '핀포인트';
       }
-    } else if (domain === 'accessory') {
-      switch (type) {
+    } else if (value.domain === 'accessory') {
+      switch (value.type) {
         case 'bb':
           return '전함';
         case 'ac':
@@ -162,8 +185,8 @@ const typeDelimiter = (domain?: string, type?: string) => {
           return '공작';
       }
     }
-    // else if (domain === 'special') {
-    //   switch (type) {
+    // else if (value.domain === 'special') {
+    //   switch (value.type) {
     //     case 'normal':
     //       return '공용';
     //     case 'signiture':
@@ -183,9 +206,9 @@ export const COLUMNS: ColumnType[] = [
     minWidth: '64px',
     render: (v) => (
       <Portrait
-        src={`images/items/${v.index}.png`}
-        placeholder={`images/items/${v.index}_lqip.png`}
-        stroke={stroker(v.type)}
+        src={`images/items/${v.image}.png`}
+        placeholder={`images/items/${v.image}_lqip.png`}
+        stroke={stroker(v.type, v.domain)}
         tier={v.tier}
       />
     ),
@@ -204,7 +227,9 @@ export const COLUMNS: ColumnType[] = [
     label: '획득처',
     basis: '240px',
     minWidth: '160px',
-    render: (v) => <CellBox>{v.obtain?.map((u) => <span key={u}>{u}</span>)}</CellBox>,
+    render: (v) => (
+      <CellBox>{v.obtain?.map((u) => <span key={u}>{u}</span>)}</CellBox>
+    ),
   },
   { value: 'nation', label: '국가', basis: '100px', minWidth: '60px' },
   {
@@ -212,14 +237,14 @@ export const COLUMNS: ColumnType[] = [
     label: '구분',
     basis: '100px',
     minWidth: '60px',
-    render: (v) => classDelimiter(v.domain, v.class),
+    render: (v) => classDelimiter(v),
   },
   {
     value: 'type',
     label: '종류',
     basis: '100px',
     minWidth: '60px',
-    render: (v) => typeDelimiter(v.domain, v.type),
+    render: (v) => typeDelimiter(v),
   },
   {
     value: 'explain',
@@ -230,14 +255,12 @@ export const COLUMNS: ColumnType[] = [
   },
 ];
 
-const get = async (url: string) => {
-  const response = await fetch(url);
-  return await response.json();
-};
-
 export const getJson = async (target: ItemURL): Promise<ItemInterface[]> => {
+  const g = async (url: string) =>
+    (await get<ItemInterface[]>(`/json/${url}.json`)) ?? [];
+
   if (target !== 'all') {
-    return (await get(`/json/${target}.json`)) ?? [];
+    return await g(target);
   } else {
     const url: ItemURL[] = [
       'gun',
@@ -245,12 +268,13 @@ export const getJson = async (target: ItemURL): Promise<ItemInterface[]> => {
       'antiair',
       'aircraft',
       'accessory',
-      'special',
+      // 'special',
     ];
-    const result: ItemInterface[] = [];
+    let result: ItemInterface[] = [];
     for (let i = 0; i < url.length; i++) {
-      const res: ItemInterface[] = (await get(`/json/${target}.json`)) ?? [];
-      result.concat(res);
+      // const res = (await get<ItemInterface[]>(`/json/${url[i]}.json`)) ?? [];
+      const res = await g(url[i]);
+      result = result.concat(res);
     }
 
     return result;
