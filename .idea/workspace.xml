@@ -4,407 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="table style 수정 및 json 연동">
-      <change afterPath="$PROJECT_DIR$/view/public/assets/noImage.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1060_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/11000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/11000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1160_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1260.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1260_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/14300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/14300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/14400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/14400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/150040.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/150040_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1500_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/150100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/150100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/15240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/15240_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/15300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/15300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1600_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/16080.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/16080_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/16400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/16400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/16460.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/16460_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17060_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17260.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17260_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17360_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17380.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17380_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17420.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17420_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17440.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/17440_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1760.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/1760_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/18060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/18060_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/18100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/18100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/18180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/18180_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/18220.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/18220_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19060_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19160_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/19300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/21300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/21300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/21500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/21500_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/23000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/23000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/24300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/24300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2500_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/25040.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/25040_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/25300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/25300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/25800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/25800_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2600_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26500_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26600_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26620.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26620_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26660.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26660_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26680.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/26680_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2700.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/2700_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27060_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27320.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/27320_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28060_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28220.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28220_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28420.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/28420_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/29200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/29200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/29220.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/29220_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/29300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/29300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/31200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/31200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3120_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3140.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3140_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/32100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/32100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/32300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/32300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/33000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/33000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/34200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/34200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3500_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3520.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/35200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/35200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3520_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/35260.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/35260_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/35300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/35300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3540.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3540_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/35580.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/35580_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3580.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3580_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36360_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36560.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36560_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36600_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36660.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36660_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36700.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36700_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36720.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/36720_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3680.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3680_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37420.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37420_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37440.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37440_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37460.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/37460_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/38100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/38100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/38160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/38160_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/38200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/38200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/38300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/38300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39160_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39320.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39320_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39340.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/39340_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3940.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/3940_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/4100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/4100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/4200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/42000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/42000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/4200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/4300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/4300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/43100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/43100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/44000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/44000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/44500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/44500_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/45000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/45000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/45100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/45100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/45200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/45200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46360_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46380.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46380_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46400_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46420.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/46420_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/47080.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/47080_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/47100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/47100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/47160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/47160_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/47180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/47180_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/48040.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/48040_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/49060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/49060_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/500_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50360_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50600_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50620.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50620_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50860.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/50860_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/5100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/51000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/51000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/5100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/51160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/51160_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/51240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/51240_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/51260.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/51260_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/520.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/5200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/5200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/520_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/5300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/5300_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/540.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/540_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55160_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55200_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55600_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55800_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55900.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55900_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55920.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/55920_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/56000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/56000_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/56020.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/56020_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/56100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/56100_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/5640.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/5640_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/580.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/580_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/600_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/620.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/620_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/660.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/660_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/680.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/680_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/700.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/700_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/720.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/720_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/7340.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/7340_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/740.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/740_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/760.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/760_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/780.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/780_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/800_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/820.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/820_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/840.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/840_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/85540.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/85540_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/85560.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/85560_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/860.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/860_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/880.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/880_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/940.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/940_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/960.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/960_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/980.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/items/980_lqip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/json/accessory.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/json/aircraft.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/json/antiair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/json/torpedo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/util/IndexedDB.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/util/fetching.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/util/index.ts" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="item 렌더링 변경">
+      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/ArrowUpIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/FloatButton/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/public/json/gun.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/gun.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/LazyImage/LazyImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/LazyImage/LazyImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/Portrait/Portrait.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Portrait/Portrait.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/torpedo.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/torpedo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Dropdown/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/const.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/types/item.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/types/item.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -446,7 +58,7 @@
     "git-widget-placeholder": "dev-workspace",
     "ignore.virus.scanning.warn.message": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Parker/alit-dev/view/public/images/items",
+    "last_opened_file_path": "C:/Parker/alit-dev/view/src/assets/icon",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -459,9 +71,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Parker\alit-dev\view\src\assets\icon" />
       <recent name="C:\Parker\alit-dev\view\public\images\items" />
       <recent name="C:\Parker\alit-dev\view\public\json" />
-      <recent name="C:\Parker\alit-dev\view\src\assets\icon" />
       <recent name="C:\Parker\alit-dev\view\src\domain\common\Header" />
       <recent name="C:\Parker\alit-dev\view\src\components\Logo" />
     </key>
@@ -503,7 +115,7 @@
       <workItem from="1708559207077" duration="2319000" />
       <workItem from="1708566316049" duration="2142000" />
       <workItem from="1709006637348" duration="3440000" />
-      <workItem from="1709075803710" duration="20968000" />
+      <workItem from="1709075803710" duration="36975000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -713,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708319466914</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="item 렌더링 변경">
+      <option name="closed" value="true" />
+      <created>1709107368517</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1709107368517</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,6 +355,7 @@
     <MESSAGE value="lazy image 추가" />
     <MESSAGE value="table render 수정" />
     <MESSAGE value="table style 수정 및 json 연동" />
-    <option name="LAST_COMMIT_MESSAGE" value="table style 수정 및 json 연동" />
+    <MESSAGE value="item 렌더링 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="item 렌더링 변경" />
   </component>
 </project>

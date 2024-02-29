@@ -51,11 +51,11 @@ type ItemType = OptionType<string, string>;
 export const CLASSES: Record<ItemIndexType, ItemType[]> = {
   ALL: [],
   GUN: [
-    { value: 'dd', label: '구축함포' },
-    { value: 'cl', label: '경순함포' },
-    { value: 'ca', label: '중순함포' },
+    { value: 'dd', label: '구축포' },
+    { value: 'cl', label: '경순포' },
+    { value: 'ca', label: '중순포' },
     { value: 'bb', label: '전함포' },
-    { value: 'cb', label: '대순함포' },
+    { value: 'cb', label: '대순포' },
   ],
   TORPEDO: [
     { value: 'surface', label: '수면어뢰' },
@@ -73,9 +73,9 @@ export const CLASSES: Record<ItemIndexType, ItemType[]> = {
     { value: 'torpedo-bomber', label: '뇌격기' },
   ],
   ACCESSORY: [
-    { value: 'backline', label: '후열' },
-    { value: 'frontline', label: '전열' },
-    { value: 'signiture', label: '전용' },
+    { value: 'backline', label: '주력(후열)' },
+    { value: 'frontline', label: '선봉(전열)' },
+    { value: 'signiture', label: '특수' },
   ],
   SPECIAL: [
     { value: 'normal', label: '공용' },

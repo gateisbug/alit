@@ -46,10 +46,13 @@ const Dropdown = ({ children, contents, show }: Props) => {
     const { width: bWidth } = boxRef.current.getBoundingClientRect();
 
     const x = (() => {
-      const x = cLeft + cWidth / 2 - bWidth / 2;
+      const x = cLeft + cWidth / 2 - bWidth / 2; // container left + container width / 2 - box width / 2;
       const ww = window.innerWidth;
 
-      return x + bWidth < ww - 16 ? x : ww - 16 - bWidth;
+      // anchor의 x 좌표 + box의 width가 window의 innerWidth에서 padding만큼 뺀 크기 안에 있다면
+      // true : x좌표를 그대로 return
+      // false : window.innerWidth - padding - box의 width - borderWidth
+      return x + bWidth < ww - 16 ? x : ww - 16 - bWidth - 1;
     })();
     const y = cBottom;
 

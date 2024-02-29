@@ -16,7 +16,7 @@ const Container = styled.div<ContainerProps>`
   overflow-anchor: none;
   border: 0.0625rem solid transparent;
   transition:
-    border 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 500ms cubic-bezier(0.4, 0, 0.2, 1), 
     width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   max-width: ${(props) => props.$maxWidth};
@@ -76,9 +76,13 @@ const Search = ({ setValue, maxWidth, defaultValue }: SearchProps) => {
 
   React.useEffect(() => {
     if (minify) {
+      inputRef.current?.removeAttribute('readOnly');
       inputRef.current?.focus();
+      inputRef.current?.setAttribute('style', 'width: 180px;');
     } else {
+      inputRef.current?.setAttribute('readOnly', 'true');
       inputRef.current?.blur();
+      inputRef.current?.setAttribute('style', 'width: 0px;');
     }
   }, [minify]);
 
