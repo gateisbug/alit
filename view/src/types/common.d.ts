@@ -6,3 +6,5 @@ type OptionType<V = string | undefined, L = string | undefined> = {
 };
 
 type StrokeType = 'default' | 'red' | 'yellow' | 'blue' | 'violet';
+
+type StateType<T> = T | ((value: T) => T);

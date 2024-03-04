@@ -8,7 +8,7 @@ const ItemSearch = () => {
   const setSearchValue = useSetRecoilState(searchStore);
 
   const debouncedSetValue = React.useCallback(
-    debounce((str: string | ((str: string) => string)) => {
+    debounce((str: StateType<string>) => {
       setSearchValue(str);
       return str;
     }, 500),
