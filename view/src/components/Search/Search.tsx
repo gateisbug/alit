@@ -16,7 +16,7 @@ const Container = styled.div<ContainerProps>`
   overflow-anchor: none;
   border: 0.0625rem solid transparent;
   transition:
-    border 500ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 500ms cubic-bezier(0.4, 0, 0.2, 1),
     width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   max-width: ${(props) => props.$maxWidth};

@@ -11,3 +11,8 @@ export const searchStore = atom<string>({
   key: prefix + 'searchStore',
   default: '',
 });
+
+export const itemStore = atom<ItemInterface[]>({
+  key: prefix + 'itemStore',
+  default: [],
+});

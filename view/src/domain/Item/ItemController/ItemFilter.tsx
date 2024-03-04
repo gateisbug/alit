@@ -6,6 +6,8 @@ import { Button, Check } from '@workspace/ui';
 import { FilterIcon } from '@icon';
 import { Dropdown } from '@components';
 import { CLASSES, VALUE } from '../const';
+import { useSetRecoilState } from 'recoil';
+import { filterStore } from '@domain/Item/store';
 
 const StyledButton = styled(Button)`
   display: inline-flex;
@@ -53,6 +55,7 @@ type ItemType = OptionType<string, string>;
 const ItemFilter = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const boxRef = React.useRef<HTMLDivElement>(null);
+  const setItemTableData = useSetRecoilState(filterStore);
 
   // const { pathname } = useLocation();
   const category = useParams<{ category?: string }>().category ?? 'all';
@@ -84,15 +87,20 @@ const ItemFilter = () => {
     [category],
   );
 
-  const onChangeCheck = React.useCallback(() => {
-    const result = document.querySelectorAll(
-      'input[type="checkbox"][name="category"]',
-    );
-    for (let i = 0; i < result.length; i++) {
-      const now = result[i] as HTMLInputElement;
-      console.log(now.value, now.checked);
-    }
-  }, []);
+  const onChangeCheck = React.useCallback(
+    debounce(() => {
+      const result = document.querySelectorAll(
+        'input[type="checkbox"][name="category"]',
+      );
+      const res: string[] = [];
+      for (let i = 0; i < result.length; i++) {
+        const now = result[i] as HTMLInputElement;
+        if (now.checked) res.push(now.value);
+      }
+      setItemTableData(res);
+    }, 200),
+    [],
+  );
 
   const renderContents = React.useCallback((): React.ReactNode => {
     if (category === VALUE.ALL) {

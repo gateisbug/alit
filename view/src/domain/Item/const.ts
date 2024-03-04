@@ -47,38 +47,63 @@ export const TEXT: Record<ItemIndexType, string> = {
   SPECIAL: '특수',
 };
 
+export const CONSTANCE: Record<ItemIndexType, Record<string, ItemType>> = {
+  ALL: {},
+  GUN: {
+    DD: { value: 'dd', label: '구축포' },
+    CL: { value: 'cl', label: '경순포' },
+    CA: { value: 'ca', label: '중순포' },
+    BB: { value: 'bb', label: '전함포' },
+    CB: { value: 'cb', label: '대순포' },
+  },
+  TORPEDO: {
+    SR: { value: 'surface', label: '수면어뢰' },
+    SB: { value: 'submarine', label: '잠수어뢰' },
+    MS: { value: 'missile', label: '미사일' },
+  },
+  ANTIAIR: {
+    NOR: { value: 'normal', label: '일반' },
+    FUS: { value: 'fuse', label: '시한신관' },
+  },
+  AIRCRAFT: {
+    FA: { value: 'fighter', label: '전투기' },
+    BA: { value: 'bomber', label: '폭격기' },
+    SA: { value: 'seaplane', label: '수상기' },
+    TA: { value: 'torpedo-bomber', label: '뇌격기' },
+  },
+  ACCESSORY: {
+    BL: { value: 'backline', label: '주력(후열)' },
+    FL: { value: 'frontline', label: '선봉(전열)' },
+    SIG: { value: 'signiture', label: '특수' },
+  },
+  SPECIAL: {
+    NOR: { value: 'normal', label: '공용' },
+    SIG: { value: 'signiture', label: '전용' },
+  },
+};
+
 type ItemType = OptionType<string, string>;
 export const CLASSES: Record<ItemIndexType, ItemType[]> = {
   ALL: [],
   GUN: [
-    { value: 'dd', label: '구축포' },
-    { value: 'cl', label: '경순포' },
-    { value: 'ca', label: '중순포' },
-    { value: 'bb', label: '전함포' },
-    { value: 'cb', label: '대순포' },
+    CONSTANCE.GUN.DD,
+    CONSTANCE.GUN.CL,
+    CONSTANCE.GUN.CA,
+    CONSTANCE.GUN.BB,
+    CONSTANCE.GUN.CB,
   ],
-  TORPEDO: [
-    { value: 'surface', label: '수면어뢰' },
-    { value: 'submarine', label: '잠수어뢰' },
-    { value: 'missile', label: '미사일' },
-  ],
-  ANTIAIR: [
-    { value: 'normal', label: '일반' },
-    { value: 'fuse', label: '시한신관' },
-  ],
+  TORPEDO: [CONSTANCE.TORPEDO.SR, CONSTANCE.TORPEDO.SB, CONSTANCE.TORPEDO.MS],
+  ANTIAIR: [CONSTANCE.ANTIAIR.NOR, CONSTANCE.ANTIAIR.FUS],
   AIRCRAFT: [
-    { value: 'fighter', label: '전투기' },
-    { value: 'bomber', label: '폭격기' },
-    { value: 'seaplane', label: '수상기' },
-    { value: 'torpedo-bomber', label: '뇌격기' },
+    CONSTANCE.AIRCRAFT.FA,
+    CONSTANCE.AIRCRAFT.BA,
+    CONSTANCE.AIRCRAFT.SA,
+    CONSTANCE.AIRCRAFT.TA,
   ],
   ACCESSORY: [
-    { value: 'backline', label: '주력(후열)' },
-    { value: 'frontline', label: '선봉(전열)' },
-    { value: 'signiture', label: '특수' },
+    CONSTANCE.ACCESSORY.BL,
+    CONSTANCE.ACCESSORY.FL,
+    CONSTANCE.ACCESSORY.SIG,
   ],
-  SPECIAL: [
-    { value: 'normal', label: '공용' },
-    { value: 'signiture', label: '전용' },
-  ],
+  SPECIAL: [CONSTANCE.SPECIAL.NOR, CONSTANCE.SPECIAL.SIG],
 };

@@ -59,7 +59,7 @@ const FloatButton = ({ children }: Props) => {
     if (show) {
       setTimeout(() => {
         anchorRef.current?.setAttribute('style', 'transform: none;');
-      }, 25)
+      }, 25);
     } else {
       anchorRef.current?.setAttribute('style', 'transform: scale(0);');
       setTimeout(() => {
@@ -76,7 +76,7 @@ const FloatButton = ({ children }: Props) => {
       const scrolled = window.scrollY > 200;
       setShow(scrolled);
 
-      if(scrolled) {
+      if (scrolled) {
         const hasScrollbar =
           document.body.scrollHeight > document.body.offsetHeight;
         setHasScroll(hasScrollbar);

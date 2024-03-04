@@ -1,7 +1,8 @@
 import { TBox, Row, Container, Cell } from './styles';
-import { ColumnType, COLUMNS, getJson } from './preamble';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { ColumnType, COLUMNS } from './preamble';
+import { useRecoilValue } from 'recoil';
+import { filterStore, itemStore, searchStore } from '@domain/Item/store';
+import { useMemo } from 'react';
 
 export interface TableProps {
   columns?: ColumnType[];
@@ -48,24 +49,44 @@ const Body = ({ columns = [], items = [] }: TableProps) => {
 };
 
 const ItemTable = () => {
-  const params = useParams();
-  const [data, setData] = useState<ItemInterface[]>([]);
+  const itemTableData = useRecoilValue(itemStore);
+  const filterList = useRecoilValue(filterStore);
+  const searchValue = useRecoilValue(searchStore);
 
-  useEffect(() => {
-    const path: ItemURL = (params?.category as ItemURL | undefined) ?? 'all';
-    getJson(path)
-      .then((res) => {
-        setData(res);
-      })
-      .catch((reject) => {
-        console.error(reject);
-      });
-  }, [params]);
+  const refinedList = useMemo<ItemInterface[]>(() => {
+    let itemData: ItemInterface[] = itemTableData;
+
+    if (itemData.length === 0) return [];
+
+    if (filterList.length > 0)
+      itemData =
+        filterList.length === 0
+          ? itemData
+          : itemData.filter((v) => filterList.includes(v.class ?? ''));
+
+    if (searchValue.length > 0)
+      itemData = itemData.filter(
+        (v) =>
+          v.name?.includes(searchValue) ||
+          v.nickname?.includes(searchValue) ||
+          v.nation?.includes(searchValue),
+      );
+
+    return itemData;
+  }, [itemTableData, filterList, searchValue]);
 
   return (
     <Container>
       <Header columns={COLUMNS} />
-      <Body columns={COLUMNS} items={data} />
+      <Body
+        columns={COLUMNS}
+        // items={
+        //   filterList.length === 0
+        //     ? itemTableData
+        //     : itemTableData.filter((v) => filterList.includes(v.class ?? ''))
+        // }
+        items={refinedList}
+      />
     </Container>
   );
 };

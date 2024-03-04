@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="item 렌더링 변경">
-      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/ArrowUpIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/FloatButton/index.ts" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="recoil 연결 및 search, filtering 동작">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/public/json/gun.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/gun.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/public/json/torpedo.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/torpedo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Dropdown/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/ArrowUpIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/ArrowUpIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/FloatButton/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/FloatButton/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemSearch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +58,7 @@
     "git-widget-placeholder": "dev-workspace",
     "ignore.virus.scanning.warn.message": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Parker/alit-dev/view/src/assets/icon",
+    "last_opened_file_path": "C:/Dawson/pcom-front",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -115,7 +115,8 @@
       <workItem from="1708559207077" duration="2319000" />
       <workItem from="1708566316049" duration="2142000" />
       <workItem from="1709006637348" duration="3440000" />
-      <workItem from="1709075803710" duration="36975000" />
+      <workItem from="1709075803710" duration="37486000" />
+      <workItem from="1709187423160" duration="14530000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -333,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709107368517</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="floatbutton 추가 및 filter 버그 수정">
+      <option name="closed" value="true" />
+      <created>1709185161320</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1709185161320</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +365,8 @@
     <MESSAGE value="table render 수정" />
     <MESSAGE value="table style 수정 및 json 연동" />
     <MESSAGE value="item 렌더링 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="item 렌더링 변경" />
+    <MESSAGE value="floatbutton 추가 및 filter 버그 수정" />
+    <MESSAGE value="recoil 연결 및 search, filtering 동작" />
+    <option name="LAST_COMMIT_MESSAGE" value="recoil 연결 및 search, filtering 동작" />
   </component>
 </project>

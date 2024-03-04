@@ -2,6 +2,7 @@ import React from 'react';
 import { Portrait } from '@components';
 import { CellBox, Ellipsis } from '@domain/Item/ItemTable/styles';
 import { get } from '@util/fetching';
+import { CONSTANCE, VALUE } from '@domain/Item/const';
 
 export type ColumnType = {
   basis: string;
@@ -9,10 +10,10 @@ export type ColumnType = {
   render?: (v: ItemInterface) => React.ReactNode;
 } & OptionType<ItemInterfaceIndex, string>;
 
-const stroker = (className?: string, domain?: string): StrokeType => {
-  if(domain !== 'gun') return 'default';
+const stroker = (types?: string, domain?: string): StrokeType => {
+  if (domain !== 'gun') return 'default';
 
-  switch (className) {
+  switch (types) {
     case 'ap':
       return 'blue';
     case 'he':
@@ -29,73 +30,79 @@ const stroker = (className?: string, domain?: string): StrokeType => {
 
 const classDelimiter = (value: ItemInterface) => {
   if (value.domain && value.class) {
-    if (value.domain === 'gun') {
+    if (value.domain === VALUE.GUN) {
       switch (value.class) {
-        case 'dd':
-          return '구축포';
+        case CONSTANCE.GUN.DD.value:
+          return CONSTANCE.GUN.DD.label;
         // return value.nation !== 'MOT' ? '구축포' : '범선소형포';
-        case 'cl':
-          return '경순포';
-        case 'ca':
-          return '중순포';
-        case 'bb':
-          return '전함포';
+        case CONSTANCE.GUN.CL.value:
+          return CONSTANCE.GUN.CL.label;
+        case CONSTANCE.GUN.CA.value:
+          return CONSTANCE.GUN.CA.label;
+        case CONSTANCE.GUN.BB.value:
+          return CONSTANCE.GUN.BB.label;
         // return value.nation !== 'MOT' ? '전함포' : '범선대형포';
-        case 'cb':
-          return '대순포';
+        case CONSTANCE.GUN.CB.value:
+          return CONSTANCE.GUN.CB.label;
       }
-    } else if (value.domain === 'torpedo') {
+    } else if (value.domain === VALUE.TORPEDO) {
       switch (value.class) {
-        case 'surface':
-          return '수면어뢰';
-        case 'submarine':
-          return '잠수어뢰';
-        case 'missile':
-          return '미사일';
+        case CONSTANCE.TORPEDO.SR.value:
+          return CONSTANCE.TORPEDO.SR.label;
+        case CONSTANCE.TORPEDO.SB.value:
+          return CONSTANCE.TORPEDO.SB.label;
+        case CONSTANCE.TORPEDO.MS.value:
+          return CONSTANCE.TORPEDO.MS.label;
       }
-    } else if (value.domain === 'antiair') {
+    } else if (value.domain === VALUE.ANTIAIR) {
       switch (value.class) {
-        case 'normal':
-          return '일반';
-        case 'fuse':
-          return '시한신관';
+        case CONSTANCE.ANTIAIR.NOR.value:
+          return CONSTANCE.ANTIAIR.NOR.label;
+        case CONSTANCE.ANTIAIR.FUS.value:
+          return CONSTANCE.ANTIAIR.FUS.label;
       }
-    } else if (value.domain === 'aircraft') {
+    } else if (value.domain === VALUE.AIRCRAFT) {
       switch (value.class) {
-        case 'fighter':
-          return '전투기';
-        case 'bomber':
-          return '폭격기';
-        case 'seaplane':
-          return '수상기';
-        case 'torpedo-bomber':
-          return '뇌격기';
+        case CONSTANCE.AIRCRAFT.FA.value:
+          return CONSTANCE.AIRCRAFT.FA.label;
+        case CONSTANCE.AIRCRAFT.BA.value:
+          return CONSTANCE.AIRCRAFT.BA.label;
+        case CONSTANCE.AIRCRAFT.SA.value:
+          return CONSTANCE.AIRCRAFT.SA.label;
+        case CONSTANCE.AIRCRAFT.TA.value:
+          return CONSTANCE.AIRCRAFT.TA.label;
       }
-    } else if (value.domain === 'accessory') {
+    } else if (value.domain === VALUE.ACCESSORY) {
       switch (value.class) {
-        case 'backline':
-          return '주력(후열)';
-        case 'frontline':
-          return '선봉(전열)';
-        case 'signiture':
-          return '특수';
+        case CONSTANCE.ACCESSORY.BL.value:
+          return CONSTANCE.ACCESSORY.BL.label;
+        case CONSTANCE.ACCESSORY.FL.value:
+          return CONSTANCE.ACCESSORY.FL.label;
+        case CONSTANCE.ACCESSORY.SIG.value:
+          return CONSTANCE.ACCESSORY.SIG.label;
       }
-    } else if (value.domain === 'special') {
+    } else if (value.domain === VALUE.SPECIAL) {
+      // switch (value.class) {
+      //   case 'dd':
+      //     return '구축';
+      //   case 'cl':
+      //     return '경순';
+      //   case 'ca&cb':
+      //     return '중순&대순';
+      //   case 'bb':
+      //     return '전함';
+      //   case 'ac':
+      //     return '항모';
+      //   case 'ss':
+      //     return '잠수';
+      //   case 'signiture':
+      //     return '전용';
+      // }
       switch (value.class) {
-        case 'dd':
-          return '구축';
-        case 'cl':
-          return '경순';
-        case 'ca&cb':
-          return '중순&대순';
-        case 'bb':
-          return '전함';
-        case 'ac':
-          return '항모';
-        case 'ss':
-          return '잠수';
-        case 'signiture':
-          return '전용';
+        case CONSTANCE.SPECIAL.NOR.value:
+          return CONSTANCE.SPECIAL.NOR.label;
+        case CONSTANCE.SPECIAL.SIG.value:
+          return CONSTANCE.SPECIAL.SIG.label;
       }
     }
   }
@@ -263,12 +270,12 @@ export const getJson = async (target: ItemURL): Promise<ItemInterface[]> => {
     return await g(target);
   } else {
     const url: ItemURL[] = [
-      'gun',
-      'torpedo',
-      'antiair',
-      'aircraft',
-      'accessory',
-      // 'special',
+      VALUE.GUN,
+      VALUE.TORPEDO,
+      VALUE.ANTIAIR,
+      VALUE.AIRCRAFT,
+      VALUE.ACCESSORY,
+      // VALUE.SPECIAL,
     ];
     let result: ItemInterface[] = [];
     for (let i = 0; i < url.length; i++) {
