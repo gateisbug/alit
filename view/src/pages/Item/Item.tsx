@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Header } from '@domain/common';
-import { ItemController, ItemTable, ItemTabs } from '@domain/Item';
+import { ItemController, ItemModal, ItemTable, ItemTabs } from '@domain/Item';
 import styled from 'styled-components';
 import { FloatButton } from '@components';
 import { ArrowUpIcon } from '@icon';
@@ -59,6 +59,7 @@ const ItemPage = () => {
       <FloatButton>
         <ArrowUpIcon width='1.5rem' height='1.5rem' />
       </FloatButton>
+      <ItemModal />
     </div>
   );
 };

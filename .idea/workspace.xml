@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="recoil 연결 및 search, filtering 동작">
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="StateType 추가">
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemSearch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/types/common.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/types/common.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +56,7 @@
     "git-widget-placeholder": "dev-workspace",
     "ignore.virus.scanning.warn.message": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Dawson/pcom-front",
+    "last_opened_file_path": "C:/Parker/alit-dev",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -107,7 +114,9 @@
       <workItem from="1708566316049" duration="2142000" />
       <workItem from="1709006637348" duration="3440000" />
       <workItem from="1709075803710" duration="37486000" />
-      <workItem from="1709187423160" duration="14854000" />
+      <workItem from="1709187423160" duration="17266000" />
+      <workItem from="1709525572437" duration="622000" />
+      <workItem from="1709530537460" duration="1957000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -341,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709516940747</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="StateType 추가">
+      <option name="closed" value="true" />
+      <created>1709517260988</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709517260988</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +383,7 @@
     <MESSAGE value="item 렌더링 변경" />
     <MESSAGE value="floatbutton 추가 및 filter 버그 수정" />
     <MESSAGE value="recoil 연결 및 search, filtering 동작" />
-    <option name="LAST_COMMIT_MESSAGE" value="recoil 연결 및 search, filtering 동작" />
+    <MESSAGE value="StateType 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="StateType 추가" />
   </component>
 </project>

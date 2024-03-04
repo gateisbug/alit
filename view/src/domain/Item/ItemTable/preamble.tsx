@@ -1,6 +1,6 @@
 import React from 'react';
 import { Portrait } from '@components';
-import { CellBox, Ellipsis } from '@domain/Item/ItemTable/styles';
+import { CellBox, Ellipsis } from '@domain/Item/ItemTable/styled';
 import { get } from '@util/fetching';
 import { CONSTANCE, VALUE } from '@domain/Item/const';
 

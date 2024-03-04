@@ -16,3 +16,13 @@ export const itemStore = atom<ItemInterface[]>({
   key: prefix + 'itemStore',
   default: [],
 });
+
+export const modalItemStore = atom<ItemInterface | undefined>({
+  key: prefix + 'modalItemStore',
+  default: undefined,
+});
+
+export const modalShowStore = atom<boolean>({
+  key: prefix + 'modalShowStore',
+  default: false,
+});

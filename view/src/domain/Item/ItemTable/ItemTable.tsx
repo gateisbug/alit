@@ -1,8 +1,14 @@
-import { TBox, Row, Container, Cell } from './styles';
+import { TBox, Row, Container, Cell } from './styled';
 import { ColumnType, COLUMNS } from './preamble';
-import { useRecoilValue } from 'recoil';
-import { filterStore, itemStore, searchStore } from '@domain/Item/store';
-import { useMemo } from 'react';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import {
+  filterStore,
+  itemStore,
+  modalItemStore,
+  modalShowStore,
+  searchStore,
+} from '@domain/Item/store';
+import { useCallback, useMemo } from 'react';
 
 export interface TableProps {
   columns?: ColumnType[];
@@ -28,10 +34,25 @@ const Header = ({ columns = [] }: Pick<TableProps, 'columns'>) => {
 };
 
 const Body = ({ columns = [], items = [] }: TableProps) => {
+  const setModalShow = useSetRecoilState(modalShowStore);
+  const setModalItem = useSetRecoilState(modalItemStore);
+
+  const onClickItem = useCallback((v?: ItemInterface) => {
+    console.log(v?.name);
+    setModalShow(true);
+    setModalItem(v);
+  }, []);
+
   return (
     <TBox className='table-body'>
       {items.map((v, i) => (
-        <Row key={`${v.name}_${i}`} data-type='row'>
+        <Row
+          key={`${v.name}_${i}`}
+          data-type='row'
+          onClick={() => {
+            onClickItem(v);
+          }}
+        >
           {columns.map((u) => (
             <Cell
               key={`${v.name}_${i}_${u.value}`}
@@ -67,8 +88,8 @@ const ItemTable = () => {
     if (searchValue.length > 0)
       itemData = itemData.filter(
         (v) =>
-          v.name?.includes(searchValue) ||
-          v.nickname?.includes(searchValue) ||
+          v.name?.includes(searchValue) ??
+          v.nickname?.includes(searchValue) ??
           v.nation?.includes(searchValue),
       );
 
