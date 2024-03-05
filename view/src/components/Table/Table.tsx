@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const TableContainer = styled.section`
+const TableContainer = styled.section.attrs({
+  className: 'ui-table-container',
+})`
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -22,13 +24,17 @@ const TableContainer = styled.section`
 //   width: 100%;
 // `;
 
-const TableRow = styled.div`
+const TableRow = styled.div.attrs({
+  className: 'ui-table-row',
+})`
   display: flex;
   flex-flow: row nowrap;
   gap: 16px;
 `;
 
-const TableCell = styled.div`
+const TableCell = styled.div.attrs({
+  className: 'ui-table-cell',
+})`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;

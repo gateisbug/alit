@@ -38,3 +38,13 @@ html, body, #root {
   max-width: 1920px;
   margin: 0 auto;
 }
+
+.fcw {
+  color: var(--font-weak);
+}
+.fc {
+  color: var(--font);
+}
+.fcs {
+  color: var(--font-strong);
+}

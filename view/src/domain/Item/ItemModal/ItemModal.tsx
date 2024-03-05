@@ -1,11 +1,15 @@
 import { Modal } from '@workspace/ui';
 import { useRecoilState } from 'recoil';
 import { modalItemStore, modalShowStore } from '@domain/Item/store';
-import { ModalContainer } from '@domain/Item/ItemModal/styled';
+import { ModalContainer, ModalHeader } from './styled';
+import { Breadcrumbs, Portrait } from '@components';
+import { useItemGunModal } from './hooks';
 
 const ItemModal = () => {
   const [selectedItem, setSelectedItem] = useRecoilState(modalItemStore);
   const [modalShow, setModalShow] = useRecoilState(modalShowStore);
+
+  const { portrait, breadcrums } = useItemGunModal();
 
   return (
     <Modal
@@ -14,11 +18,17 @@ const ItemModal = () => {
         setModalShow(false);
         setSelectedItem(undefined);
       }}
-      // theme={{ surface: '#242424' }}
-      // style={{ maxWidth: 960 }}
     >
       <ModalContainer>
-        <h1>{selectedItem?.name}</h1>
+        <ModalHeader>
+          <Portrait {...portrait()} />
+          <div className='section'>
+            <h2 className='title fcs'>{selectedItem?.name}</h2>
+            <p className='subtitle fcw'>{selectedItem?.nickname}</p>
+            <Breadcrumbs texts={breadcrums()} />
+          </div>
+        </ModalHeader>
+
         <div className='card'>
           <p>{selectedItem?.obtain?.join('\n')}</p>
         </div>

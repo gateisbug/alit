@@ -2,13 +2,15 @@ import styled from 'styled-components';
 import { Table } from '@components';
 
 export const Container = styled(Table.Container).attrs({
-  className: 'table-container',
+  className: 'ui-itemtable-container',
 })`
   margin-top: 2rem;
   padding-bottom: 3rem;
 `;
 
-export const TBox = styled.div`
+export const TBox = styled.div.attrs({
+  className: 'ui-itemtable-box',
+})`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
@@ -25,7 +27,9 @@ export const TBox = styled.div`
   }
 `;
 
-export const Row = styled(Table.Row)`
+export const Row = styled(Table.Row).attrs({
+  className: 'ui-itemtable-row',
+})`
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   ${TBox} > &[data-type='row'] {
@@ -55,7 +59,9 @@ export const Row = styled(Table.Row)`
   }
 `;
 
-export const Cell = styled(Table.Cell)`
+export const Cell = styled(Table.Cell).attrs({
+  className: 'ui-itemtable-cell',
+})`
   font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
   font-size: 1rem;
@@ -78,13 +84,17 @@ export const Cell = styled(Table.Cell)`
   }
 `;
 
-export const CellBox = styled.div`
+export const CellBox = styled.div.attrs({
+  className: 'ui-itemtable-cellbox',
+})`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
 `;
 
-export const Ellipsis = styled.div`
+export const Ellipsis = styled.div.attrs({
+  className: 'ui-itemtable-ellipsis',
+})`
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;

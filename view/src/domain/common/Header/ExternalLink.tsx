@@ -4,7 +4,9 @@ import { Button } from '@workspace/ui';
 import { Link } from '@components';
 import { ArcaLiveIcon, GithubIcon, ImageIcon } from '@icon';
 
-const IconButton = styled(Button)`
+const IconButton = styled(Button).attrs({
+  className: 'ui-exlink-iconbtn',
+})`
   padding: 0.25rem;
   width: 2rem;
   height: 2rem;
@@ -23,7 +25,9 @@ const ExternalLink = ({ to, children }: ExternalLinkProps) => {
   );
 };
 
-const GroupContainer = styled.div`
+const GroupContainer = styled.div.attrs({
+  className: 'ui-exlink-groupcontainer',
+})`
   display: flex;
   flex-flow: row nowrap;
   gap: 1.5rem;

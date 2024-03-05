@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-const Link = styled(NavLink)`
+const Link = styled(NavLink).attrs({
+  className: 'ui-link-root',
+})`
   color: var(--primary);
   text-decoration: none;
   transition:

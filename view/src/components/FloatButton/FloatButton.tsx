@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { createPortal } from 'react-dom';
 import { Button } from '@workspace/ui';
 
-const Anchor = styled.div`
+const Anchor = styled.div.attrs({
+  className: 'ui-floatbtn-anchor',
+})`
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
@@ -13,7 +15,9 @@ const Anchor = styled.div`
   visibility: visible;
 `;
 
-const Dial = styled(Button)`
+const Dial = styled(Button).attrs({
+  className: 'ui-floatbtn-anchor',
+})`
   position: relative;
   box-sizing: border-box;
   user-select: none;

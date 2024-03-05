@@ -3,18 +3,24 @@ import styled from 'styled-components';
 import { createPortal } from 'react-dom';
 import useDropdown from './useDropdown';
 
-const Container = styled.div`
+const Container = styled.div.attrs({
+  className: 'ui-dropd-container',
+})`
   position: relative;
 `;
 
-const Anchor = styled.div`
+const Anchor = styled.div.attrs({
+  className: 'ui-dropd-anchor',
+})`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
 `;
 
-const Box = styled.div`
+const Box = styled.div.attrs({
+  className: 'ui-dropd-box',
+})`
   position: absolute;
   top: 0;
   left: 0;

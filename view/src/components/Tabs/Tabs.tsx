@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TabContainer = styled.div`
+const TabContainer = styled.div.attrs({
+  className: 'ui-tabs-container',
+})`
   display: block;
   position: relative;
 `;
 
-const TabBar = styled.div`
+const TabBar = styled.div.attrs({
+  className: 'ui-tabs-bar',
+})`
   position: absolute;
   width: 0;
   height: 0.125rem;
@@ -23,7 +27,9 @@ TabBar.defaultProps = {
   },
 };
 
-const TabBox = styled.div`
+const TabBox = styled.div.attrs({
+  className: 'ui-tabs-box',
+})`
   display: flex;
   flex-flow: row nowrap;
   overflow-x: auto;
@@ -31,7 +37,9 @@ const TabBox = styled.div`
   padding: 0.125rem;
 `;
 
-const Tab = styled.div`
+const Tab = styled.div.attrs({
+  className: 'ui-tabs-tab',
+})`
   display: inline-block;
   //padding: 0.5rem 0.75rem;
   font-weight: 400;

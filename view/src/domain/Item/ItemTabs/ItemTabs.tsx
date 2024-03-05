@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import { NavLink, useLocation } from 'react-router-dom';
 import { INDEX, PATH, TEXT, VALUE } from '../const';
 
-const Anchor = styled(NavLink)`
+const Anchor = styled(NavLink).attrs({
+  className: 'ui-itemtabs-anchor',
+})`
   display: block;
   padding: 0.5rem 0.75rem;
   color: inherit;

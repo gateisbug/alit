@@ -6,7 +6,9 @@ import { SearchIcon } from '@icon';
 type ContainerProps = {
   $maxWidth?: string;
 };
-const Container = styled.div<ContainerProps>`
+const Container = styled.div.attrs({
+  className: 'ui-search-container',
+})<ContainerProps>`
   width: fit-content;
   display: flex;
   flex-flow: row nowrap;
@@ -33,10 +35,11 @@ Container.defaultProps = {
   $maxWidth: '12.5rem',
 };
 
-const Root = styled(Input.Root)`
+const Root = styled(Input.Root).attrs({
+  className: 'ui-search-root',
+})`
   display: block;
   line-height: 1.25rem;
-  color: var(--font);
   transition:
     padding-left 250ms cubic-bezier(0.4, 0, 0.2, 1),
     width 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -51,7 +54,9 @@ const Root = styled(Input.Root)`
   }
 `;
 
-const SearchButon = styled(Button.Root)`
+const SearchButton = styled(Button.Root).attrs({
+  className: 'ui-search-button',
+})`
   padding: 0;
   border: none;
 `;
@@ -88,15 +93,16 @@ const Search = ({ setValue, maxWidth, defaultValue }: SearchProps) => {
 
   return (
     <Container $maxWidth={maxWidth}>
-      <SearchButon $variant='text' onClick={onClickButton}>
+      <SearchButton $variant='text' onClick={onClickButton}>
         <SearchIcon width='1.25rem' height='1.25rem' />
-      </SearchButon>
+      </SearchButton>
       <Root
         ref={inputRef}
         onChange={onChangeInput}
         defaultValue={defaultValue}
         placeholder='Search By Keyword'
         data-minify={minify}
+        className='fc'
       />
     </Container>
   );

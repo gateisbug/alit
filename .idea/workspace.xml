@@ -4,17 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="StateType 추가">
-      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal 추가">
+      <change afterPath="$PROJECT_DIR$/view/src/assets/icon/ArrowRightIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Breadcrumbs/Breadcrumbs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/Breadcrumbs/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/hooks.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/funcs.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/accessory.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/accessory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/aircraft.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/aircraft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/torpedo.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/torpedo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Dropdown/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/LazyImage/LazyImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/LazyImage/LazyImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Link/Link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Link/Link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Loading/Loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Loading/Loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Logo/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Portrait/Portrait.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Portrait/Portrait.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Table/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Wrap/Wrap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Wrap/Wrap.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -49,24 +71,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev-workspace",
-    "ignore.virus.scanning.warn.message": "true",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Parker/alit-dev",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "C:\\Parker\\alit-dev\\node_modules\\eslint",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "C:\\Parker\\alit-dev\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev-workspace&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dawson/superset-test-master&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Parker\\alit-dev\\node_modules\\eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Parker\\alit-dev\\node_modules\\typescript\\lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Parker\alit-dev\view\src\assets\icon" />
@@ -116,7 +138,8 @@
       <workItem from="1709075803710" duration="37486000" />
       <workItem from="1709187423160" duration="17266000" />
       <workItem from="1709525572437" duration="622000" />
-      <workItem from="1709530537460" duration="1957000" />
+      <workItem from="1709530537460" duration="3334000" />
+      <workItem from="1709596574822" duration="19283000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -358,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709517260988</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="modal 추가">
+      <option name="closed" value="true" />
+      <created>1709533065016</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1709533065016</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,6 +415,7 @@
     <MESSAGE value="floatbutton 추가 및 filter 버그 수정" />
     <MESSAGE value="recoil 연결 및 search, filtering 동작" />
     <MESSAGE value="StateType 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="StateType 추가" />
+    <MESSAGE value="modal 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal 추가" />
   </component>
 </project>

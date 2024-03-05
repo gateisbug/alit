@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import ItemSearch from './ItemSearch';
 import ItemFilter from './ItemFilter';
 
-const Container = styled.div`
+const Container = styled.div.attrs({
+  className: 'ui-itemcontroller-container',
+})`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;

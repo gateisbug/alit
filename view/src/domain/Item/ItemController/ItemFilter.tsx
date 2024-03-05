@@ -9,7 +9,9 @@ import { CLASSES, VALUE } from '../const';
 import { useSetRecoilState } from 'recoil';
 import { filterStore } from '@domain/Item/store';
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(Button).attrs({
+  className: 'ui-itemfilter-button',
+})`
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -23,7 +25,9 @@ const StyledButton = styled(Button)`
     sans-serif;
 `;
 
-const FilterBox = styled.div`
+const FilterBox = styled.div.attrs({
+  className: 'ui-itemfilter-box',
+})`
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
@@ -43,7 +47,9 @@ const FilterBox = styled.div`
   }
 `;
 
-const FilterList = styled.form`
+const FilterList = styled.form.attrs({
+  className: 'ui-itemfilter-list',
+})`
   display: flex;
   flex-flow: column nowrap;
   gap: 0.5rem;

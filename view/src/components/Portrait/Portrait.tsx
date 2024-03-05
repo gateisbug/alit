@@ -11,7 +11,9 @@ import { LazyImage } from '@src/components';
 //   outline: none;
 // `;
 
-const Frame = styled.div`
+const Frame = styled.div.attrs({
+  className: 'ui-portrait-frame',
+})`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -56,11 +58,12 @@ const Frame = styled.div`
   }
 `;
 
-interface PortraitProps {
+export interface PortraitProps {
   src?: string;
   placeholder?: string;
   stroke?: 'default' | 'red' | 'yellow' | 'blue' | 'violet';
   tier?: TierType;
+  className?: string;
 }
 
 const Portrait = ({
@@ -68,9 +71,10 @@ const Portrait = ({
   src,
   tier = 'R',
   stroke = 'default',
+  className,
 }: PortraitProps) => {
   return (
-    <Frame data-tier={tier} data-stroke={stroke}>
+    <Frame data-tier={tier} data-stroke={stroke} className={className}>
       <LazyImage src={src} placeholder={placeholder} />
     </Frame>
   );

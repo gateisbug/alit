@@ -1,3 +1,4 @@
+export { default as Breadcrumbs } from './Breadcrumbs';
 export { default as Dropdown } from './Dropdown';
 export { default as FloatButton } from './FloatButton';
 export { default as LazyImage } from './LazyImage';

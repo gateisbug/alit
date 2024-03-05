@@ -2,12 +2,16 @@ import styled from 'styled-components';
 import { Logo } from '@components';
 import ExternalLinkGroup from './ExternalLink';
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.header.attrs({
+  className: 'ui-header-root',
+})`
   background-color: var(--main);
   height: fit-content;
 `;
 
-const HeaderWrap = styled.div`
+const HeaderWrap = styled.div.attrs({
+  className: 'ui-header-wrap',
+})`
   display: flex;
   flex-flow: row;
   align-items: center;
