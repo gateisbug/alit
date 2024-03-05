@@ -6,6 +6,7 @@ export const Container = styled(Table.Container).attrs({
 })`
   margin-top: 2rem;
   padding-bottom: 3rem;
+  //overflow-x: auto;
 `;
 
 export const TBox = styled.div.attrs({

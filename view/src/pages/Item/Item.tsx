@@ -11,6 +11,7 @@ import { useParams } from 'react-router-dom';
 
 const Pager = styled.div`
   padding: 3rem 2rem 0;
+  //padding-bottom: 3rem;
 `;
 
 const TableController = styled.div`

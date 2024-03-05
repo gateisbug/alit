@@ -24,8 +24,8 @@ body {
 }
 
 html, body, #root {
-  height: 100%;
-  width: 100%;
+  /*height: 100%;*/
+  /*width: 100%;*/
   color: var(--font);
   background-color: var(--surface);
 }
@@ -37,6 +37,11 @@ html, body, #root {
 .max-wrap {
   max-width: 1920px;
   margin: 0 auto;
+}
+.window {
+  width: calc(100vw - 17px);
+  position: sticky;
+  left: 0;
 }
 
 .fcw {

@@ -21,7 +21,7 @@ const HeaderWrap = styled.div.attrs({
 
 const Header = () => {
   return (
-    <StyledHeader>
+    <StyledHeader className='window'>
       <HeaderWrap className='max-wrap'>
         <Logo />
 
