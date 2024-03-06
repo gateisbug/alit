@@ -25,11 +25,7 @@ const Dial = styled(Button).attrs({
   vertical-align: middle;
   text-decoration: none;
   text-transform: inherit;
-  font-weight: 700;
   letter-spacing: 0;
-  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-size: 0.875rem;
   line-height: 1.75;
   scroll-margin-block: 6rem;
   border-radius: 50%;
@@ -96,7 +92,7 @@ const FloatButton = ({ children }: Props) => {
   return hasScroll
     ? createPortal(
         <Anchor ref={anchorRef}>
-          <Dial onClick={onClick}>{children}</Dial>
+          <Dial onClick={onClick} className='ff fzb fwb'>{children}</Dial>
         </Anchor>,
         document.body,
       )

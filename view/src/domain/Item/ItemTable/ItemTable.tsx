@@ -24,6 +24,7 @@ const Header = ({ columns = [] }: Pick<TableProps, 'columns'>) => {
             key={v.value}
             style={{ flexBasis: v.basis, minWidth: v.minWidth }}
             data-type='th'
+            className='ff fzp fwb fcs'
           >
             {v.label}
           </Cell>
@@ -59,6 +60,7 @@ const Body = ({ columns = [], items = [] }: TableProps) => {
               style={{ flexBasis: u.basis, minWidth: u.minWidth }}
               data-type='td'
               data-key={u.value}
+              className='ff fzp fwr fc'
             >
               {u.render ? u.render(v) : v[u.value]}
             </Cell>

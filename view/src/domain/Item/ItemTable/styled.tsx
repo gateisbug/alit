@@ -63,19 +63,10 @@ export const Row = styled(Table.Row).attrs({
 export const Cell = styled(Table.Cell).attrs({
   className: 'ui-itemtable-cell',
 })`
-  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-size: 1rem;
-  line-height: 2rem;
+  line-height: 2em;
   text-align: center;
 
-  &[data-type='th'] {
-    font-weight: 700;
-    color: var(--font-strong);
-  }
   &[data-type='td'] {
-    font-weight: 400;
-    color: var(--font);
     word-break: keep-all;
   }
   &[data-key='explain'],

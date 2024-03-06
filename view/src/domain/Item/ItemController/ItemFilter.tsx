@@ -19,10 +19,6 @@ const StyledButton = styled(Button).attrs({
   gap: 0.5rem;
   padding: 0;
   border: none;
-  font-weight: 400;
-  font-size: 1rem;
-  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
 `;
 
 const FilterBox = styled.div.attrs({
@@ -141,6 +137,7 @@ const ItemFilter = () => {
           setOpen(!open);
         }}
         disabled={category === VALUE.ALL}
+        className='ff fzp fwr'
       >
         <FilterIcon />
         필터

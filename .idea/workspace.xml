@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal 추가">
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="header sticky">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +116,8 @@
       <workItem from="1709187423160" duration="17266000" />
       <workItem from="1709525572437" duration="622000" />
       <workItem from="1709530537460" duration="3334000" />
-      <workItem from="1709596574822" duration="22675000" />
+      <workItem from="1709596574822" duration="22835000" />
+      <workItem from="1709683694882" duration="6824000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -370,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709622677518</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="header sticky">
+      <option name="closed" value="true" />
+      <created>1709625560411</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1709625560411</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +410,7 @@
     <MESSAGE value="recoil 연결 및 search, filtering 동작" />
     <MESSAGE value="StateType 추가" />
     <MESSAGE value="modal 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal 추가" />
+    <MESSAGE value="header sticky" />
+    <option name="LAST_COMMIT_MESSAGE" value="header sticky" />
   </component>
 </project>

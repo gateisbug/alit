@@ -1,15 +1,29 @@
 import styled from 'styled-components';
+import { Button } from '@workspace/ui';
 
 export const ModalContainer = styled.div.attrs({
   className: 'ui-modal-container',
 })`
   display: flex;
   flex-flow: column nowrap;
-  position: relative;
   padding: 1.5rem;
   box-sizing: border-box;
   width: 60rem;
   min-height: 37.5rem;
+  position: relative;
+`;
+
+export const CloseButton = styled(Button.Root)`
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: var(--font-strong);
+  &:not(:disabled):hover {
+    color: var(--font);
+  }
 `;
 
 export const ModalHeader = styled.div.attrs({
@@ -31,12 +45,8 @@ export const ModalHeader = styled.div.attrs({
     gap: 1rem;
     justify-content: center;
   }
-  .title {
-    font-size: 1.25rem;
-    line-height: 1em;
-  }
+  .title,
   .subtitle {
-    font-size: 1rem;
     line-height: 1em;
   }
 `;

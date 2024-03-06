@@ -42,8 +42,6 @@ const Tab = styled.div.attrs({
 })`
   display: inline-block;
   //padding: 0.5rem 0.75rem;
-  font-weight: 400;
-  font-size: 1rem;
   cursor: pointer;
   border-radius: 1rem;
   transition:
@@ -101,6 +99,7 @@ const Tabs = ({ item, defaultValue }: TabsProps) => {
             onClick={() => {
               onClickTab(v.label);
             }}
+            className='fwr fzp'
           >
             {v.render ?? v.label}
           </Tab>
