@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal 추가">
+      <change afterPath="$PROJECT_DIR$/view/src/components/KeyValue/KeyValue.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/KeyValue/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/KeyValue/styled.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -49,7 +51,7 @@
     &quot;git-widget-placeholder&quot;: &quot;dev-workspace&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Dawson/superset-test-master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Parker/alit-dev&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -112,7 +114,9 @@
       <workItem from="1709530537460" duration="3334000" />
       <workItem from="1709596574822" duration="22835000" />
       <workItem from="1709683694882" duration="6929000" />
-      <workItem from="1709768570182" duration="1429000" />
+      <workItem from="1709768570182" duration="1826000" />
+      <workItem from="1709772356387" duration="1020000" />
+      <workItem from="1709790765451" duration="4520000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -386,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709696946321</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="modal 추가">
+      <option name="closed" value="true" />
+      <created>1709770373665</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1709770373665</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
