@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal 추가">
-      <change afterPath="$PROJECT_DIR$/view/src/components/KeyValue/KeyValue.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/KeyValue/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/src/components/KeyValue/styled.tsx" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="key value 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Breadcrumbs/Breadcrumbs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Breadcrumbs/Breadcrumbs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/KeyValue/KeyValue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/KeyValue/KeyValue.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/KeyValue/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/KeyValue/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/KeyValue/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/KeyValue/styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +118,7 @@
       <workItem from="1709768570182" duration="1826000" />
       <workItem from="1709772356387" duration="1020000" />
       <workItem from="1709790765451" duration="4520000" />
+      <workItem from="1709798945731" duration="5096000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -398,7 +400,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709770373665</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="key value 추가">
+      <option name="closed" value="true" />
+      <created>1709798961521</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1709798961521</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,6 +436,7 @@
     <MESSAGE value="StateType 추가" />
     <MESSAGE value="header sticky" />
     <MESSAGE value="modal 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal 추가" />
+    <MESSAGE value="key value 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="key value 추가" />
   </component>
 </project>

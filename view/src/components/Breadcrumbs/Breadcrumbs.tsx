@@ -49,4 +49,16 @@ const Breadcrumbs = ({ texts }: Props) => {
   );
 };
 
+interface BreadcrumbsComponent
+  extends React.MemoExoticComponent<typeof Breadcrumbs> {
+  Container: typeof Container;
+  Seperator: typeof Seperator;
+  Span: typeof Span;
+}
+
+const MemoizedBreadcrums = React.memo(Breadcrumbs) as BreadcrumbsComponent;
+MemoizedBreadcrums.Container = Container;
+MemoizedBreadcrums.Seperator = Seperator;
+MemoizedBreadcrums.Span = Span;
+
 export default React.memo(Breadcrumbs);

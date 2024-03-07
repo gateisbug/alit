@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const KeyValueContainer = styled.div.attrs({
+export const Container = styled.div.attrs({
   className: 'ui-keyvalue-container',
 })`
   display: flex;
@@ -8,7 +8,7 @@ export const KeyValueContainer = styled.div.attrs({
   gap: 1rem;
 `;
 
-export const KeyValueBox = styled.div.attrs({
+export const Box = styled.div.attrs({
   className: 'ui-keyvalue-box',
 })`
   display: flex;
@@ -16,14 +16,14 @@ export const KeyValueBox = styled.div.attrs({
   gap: 0.25rem;
 `;
 
-export const KeyValueIconBox = styled.div.attrs({
+export const IconBox = styled.div.attrs({
   className: 'ui-keyvalue-iconbox',
 })`
   width: 1.5rem;
   height: 1.5rem;
 `;
 
-export const KeyValueSpan = styled.div.attrs({
+export const Span = styled.div.attrs({
   className: 'ui-keyvalue-span',
 })`
   &[data-type='key'] {

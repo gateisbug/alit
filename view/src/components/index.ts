@@ -1,6 +1,7 @@
 export { default as Breadcrumbs } from './Breadcrumbs';
 export { default as Dropdown } from './Dropdown';
 export { default as FloatButton } from './FloatButton';
+export { default as KeyValue } from './KeyValue';
 export { default as LazyImage } from './LazyImage';
 export { default as Link } from './Link';
 export { default as Loading } from './Loading';
