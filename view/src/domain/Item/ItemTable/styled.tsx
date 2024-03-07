@@ -48,14 +48,14 @@ export const Row = styled(Table.Row).attrs({
     &:last-of-type {
       border-bottom: none;
     }
-  }
 
-  &:hover {
-    @media (prefers-color-scheme: light) {
-      background-color: rgba(0, 0, 0, 0.04);
-    }
-    @media (prefers-color-scheme: dark) {
-      background-color: rgba(255, 255, 255, 0.04);
+    &:hover {
+      @media (prefers-color-scheme: light) {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+      @media (prefers-color-scheme: dark) {
+        background-color: rgba(255, 255, 255, 0.04);
+      }
     }
   }
 `;
