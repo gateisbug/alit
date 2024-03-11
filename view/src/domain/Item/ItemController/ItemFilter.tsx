@@ -22,6 +22,13 @@ const StyledButton = styled(Button).attrs({
   gap: 0.5rem;
   padding: 0;
   border: none;
+
+  @media (max-width: 768px) {
+    padding: 6px 8px;
+    & .item-span {
+      display: none;
+    }
+  }
 `;
 
 const FilterBox = styled.div.attrs({
@@ -143,7 +150,7 @@ const ItemFilter = () => {
         className='ff fzp fwr'
       >
         <FilterIcon />
-        필터
+        <span className='item-span'>필터</span>
       </StyledButton>
     </Dropdown>
   );

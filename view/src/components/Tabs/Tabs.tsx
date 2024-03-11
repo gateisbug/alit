@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { debounce } from 'lodash';
+
 const TabContainer = styled.div.attrs({
   className: 'ui-tabs-container',
 })`
@@ -76,7 +78,7 @@ const Tabs = ({ item, defaultValue }: TabsProps) => {
     setCurrent(v);
   }, []);
 
-  React.useEffect(() => {
+  const calculateBarWidth = React.useCallback(() => {
     const active = containerRef?.current?.querySelector(
       'div[data-active="true"]',
     );
@@ -87,7 +89,19 @@ const Tabs = ({ item, defaultValue }: TabsProps) => {
 
     barRef.current.style.left = rect.left - contRect.left + 'px';
     barRef.current.style.width = rect.width + 'px';
+  }, []);
+
+  React.useEffect(() => {
+    calculateBarWidth();
   }, [current]);
+
+  React.useEffect(() => {
+    const debouncedHandler = debounce(calculateBarWidth, 200);
+    window.addEventListener('resize', debouncedHandler);
+    return () => {
+      window.removeEventListener('resize', debouncedHandler);
+    };
+  }, []);
 
   return (
     <TabContainer ref={containerRef}>

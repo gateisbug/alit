@@ -1,6 +1,9 @@
 import { useCallback, useMemo } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 
+import { useDeviceSize } from '@hooks';
+import { ScrollView } from '@workspace/ui';
+
 import {
   filterStore,
   itemStore,
@@ -19,7 +22,7 @@ export interface TableProps {
 
 const Header = ({ columns = [] }: Pick<TableProps, 'columns'>) => {
   return (
-    <TBox>
+    <TBox className='table-header'>
       <Row>
         {columns.map((v) => (
           <Cell
@@ -78,6 +81,23 @@ const ItemTable = () => {
   const filterList = useRecoilValue(filterStore);
   const searchValue = useRecoilValue(searchStore);
 
+  const { isDesktop, isTablet, isMobile } = useDeviceSize();
+
+  const refinedColumn = useMemo<ColumnType[]>(() => {
+    if (isMobile) {
+      return COLUMNS.filter((v) =>
+        ['link', 'name', 'class', 'explain'].includes(v.value),
+      );
+    } else if (isTablet) {
+      return COLUMNS.filter((v) =>
+        ['link', 'name', 'obtain', 'class', 'type', 'explain'].includes(
+          v.value,
+        ),
+      );
+    }
+    return COLUMNS;
+  }, [isDesktop, isTablet, isMobile]);
+
   const refinedList = useMemo<ItemInterface[]>(() => {
     let itemData: ItemInterface[] = itemTableData;
 
@@ -101,18 +121,20 @@ const ItemTable = () => {
   }, [itemTableData, filterList, searchValue]);
 
   return (
-    <Container>
-      <Header columns={COLUMNS} />
-      <Body
-        columns={COLUMNS}
-        // items={
-        //   filterList.length === 0
-        //     ? itemTableData
-        //     : itemTableData.filter((v) => filterList.includes(v.class ?? ''))
-        // }
-        items={refinedList}
-      />
-    </Container>
+    <ScrollView>
+      <Container>
+        <Header columns={refinedColumn} />
+        <Body
+          columns={refinedColumn}
+          // items={
+          //   filterList.length === 0
+          //     ? itemTableData
+          //     : itemTableData.filter((v) => filterList.includes(v.class ?? ''))
+          // }
+          items={refinedList}
+        />
+      </Container>
+    </ScrollView>
   );
 };
 

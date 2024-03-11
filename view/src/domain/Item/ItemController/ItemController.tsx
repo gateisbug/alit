@@ -11,6 +11,10 @@ const Container = styled.div.attrs({
   align-items: center;
   min-height: 2.25rem;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    gap: 0.25rem;
+  }
 `;
 
 const ItemController = () => {

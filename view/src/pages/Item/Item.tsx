@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useResetRecoilState, useSetRecoilState } from 'recoil';
 import styled from 'styled-components';
 
 import { FloatButton } from '@components';
-import { useMediaQuery } from '@hooks';
 import { ArrowUpIcon } from '@icon';
 
 import { Header } from '@domain/common';
@@ -17,13 +16,17 @@ const Pager = styled.div`
   //padding-bottom: 3rem;
 `;
 
-const TableController = styled.div`
+const TableController = styled.div.attrs({
+  className: 'ui-table-controller',
+})`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 0;
+  gap: 2rem;
   background-color: var(--surface);
+  overflow-x: auto;
 `;
 
 const ItemPage = () => {
@@ -32,9 +35,7 @@ const ItemPage = () => {
   const resetFilterList = useResetRecoilState(filterStore);
   const resetSearchValue = useResetRecoilState(searchStore);
 
-  useMediaQuery();
-
-  useEffect(() => {
+  React.useEffect(() => {
     resetFilterList();
     resetSearchValue();
     const path: ItemURL = (params?.category as ItemURL | undefined) ?? 'all';

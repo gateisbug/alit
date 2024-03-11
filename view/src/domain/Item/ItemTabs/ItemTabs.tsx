@@ -6,6 +6,19 @@ import { Tabs } from '@components';
 
 import { INDEX, PATH, TEXT, VALUE } from '../const';
 
+const FitBox = styled.div.attrs({
+  className: 'item-fitbox',
+})`
+  width: fit-content;
+  min-width: 23.75rem; // 380px
+
+  @media (max-width: 768px) {
+    & .ui-tabs-box {
+      gap: 0;
+    }
+  }
+`;
+
 const Anchor = styled(NavLink).attrs({
   className: 'ui-itemtabs-anchor',
 })`
@@ -37,10 +50,12 @@ const ItemTabs = () => {
   );
 
   return (
-    <Tabs
-      item={tabItems.current}
-      defaultValue={ITEMS.find((v) => pathname === v.t)?.l ?? undefined}
-    />
+    <FitBox>
+      <Tabs
+        item={tabItems.current}
+        defaultValue={ITEMS.find((v) => pathname === v.t)?.l ?? undefined}
+      />
+    </FitBox>
   );
 };
 

@@ -15,7 +15,8 @@ export const TBox = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  width: fit-content;
+  //width: fit-content;
+  width: 100%;
 
   &.table-body {
     border-bottom: 2px solid transparent;
@@ -67,6 +68,10 @@ export const Cell = styled(Table.Cell).attrs({
   line-height: 1.5em;
   text-align: center;
 
+  &[data-type='th'] {
+    display: inline-block;
+    width: 100%;
+  }
   &[data-type='td'] {
     word-break: keep-all;
   }
