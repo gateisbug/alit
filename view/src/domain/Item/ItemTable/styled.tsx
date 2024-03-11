@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+
 import { Table } from '@components';
 
 export const Container = styled(Table.Container).attrs({
   className: 'ui-itemtable-container',
 })`
   margin-top: 2rem;
-  padding-bottom: 3rem;
-  //overflow-x: auto;
+  //padding-bottom: 3rem;
+  overflow-x: auto;
 `;
 
 export const TBox = styled.div.attrs({
@@ -14,7 +15,7 @@ export const TBox = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  width: 100%;
+  width: fit-content;
 
   &.table-body {
     border-bottom: 2px solid transparent;
@@ -63,7 +64,7 @@ export const Row = styled(Table.Row).attrs({
 export const Cell = styled(Table.Cell).attrs({
   className: 'ui-itemtable-cell',
 })`
-  line-height: 2em;
+  line-height: 1.5em;
   text-align: center;
 
   &[data-type='td'] {

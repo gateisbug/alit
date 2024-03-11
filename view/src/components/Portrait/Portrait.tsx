@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { LazyImage } from '@src/components';
 
 // const LazyImage = styled.img`
@@ -29,7 +30,7 @@ const Frame = styled.div.attrs({
     border-color: #7e5475; // #666666
   }
   &[data-stroke='red'] {
-    border-color: #e4002b; // #d61314
+    border-color: #e4002b; // #d61314; #e4002b; #ff2a1b;
   }
   &[data-stroke='yellow'] {
     border-color: #f3e500; // #f3f521

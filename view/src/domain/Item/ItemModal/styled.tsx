@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { Button } from '@workspace/ui';
 
 export const ModalContainer = styled.div.attrs({
@@ -6,6 +7,7 @@ export const ModalContainer = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
+  gap: 1.5rem;
   padding: 1.5rem;
   box-sizing: border-box;
   width: 60rem;
@@ -49,4 +51,18 @@ export const ModalHeader = styled.div.attrs({
   .subtitle {
     line-height: 1em;
   }
+`;
+
+export const ModalSection = styled.div.attrs({
+  className: 'ui-modal-section',
+})`
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0.5rem;
+`;
+
+export const Border = styled.div`
+  height: 1px;
+  margin: 12px 0;
+  background-color: white;
 `;

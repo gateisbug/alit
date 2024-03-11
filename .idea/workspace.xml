@@ -5,12 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="key value 추가">
+      <change afterPath="$PROJECT_DIR$/view/src/hooks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/hooks/useMediaQuery.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/ArcaLiveIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/ArcaLiveIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/ArrowRightIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/ArrowRightIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/ArrowUpIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/ArrowUpIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/CloseIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/CloseIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/FilterIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/FilterIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/GithubIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/GithubIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/ImageIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/ImageIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/icon/SearchIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/icon/SearchIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/components/Breadcrumbs/Breadcrumbs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Breadcrumbs/Breadcrumbs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Dropdown/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Dropdown/useDropdown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Dropdown/useDropdown.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/FloatButton/FloatButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/components/KeyValue/KeyValue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/KeyValue/KeyValue.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/KeyValue/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/KeyValue/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/KeyValue/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/KeyValue/styled.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Link/Link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Link/Link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Portrait/Portrait.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Portrait/Portrait.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemSearch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/hooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/hooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/preamble.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/views/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/views/RootProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/RootProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/views/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +54,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -45,24 +78,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev-workspace&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Parker/alit-dev&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Parker\\alit-dev\\node_modules\\eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Parker\\alit-dev\\node_modules\\typescript\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev-workspace",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/Parker/alit-dev",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "C:\\Parker\\alit-dev\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Parker\\alit-dev\\node_modules\\typescript\\lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Parker\alit-dev\view\src\assets\icon" />
@@ -118,7 +151,9 @@
       <workItem from="1709768570182" duration="1826000" />
       <workItem from="1709772356387" duration="1020000" />
       <workItem from="1709790765451" duration="4520000" />
-      <workItem from="1709798945731" duration="5096000" />
+      <workItem from="1709798945731" duration="7390000" />
+      <workItem from="1709861523502" duration="2401000" />
+      <workItem from="1710113905836" duration="9605000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -408,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709798961521</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="key value 추가">
+      <option name="closed" value="true" />
+      <created>1709852822195</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1709852822195</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

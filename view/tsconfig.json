@@ -16,11 +16,13 @@
       "@components": ["src/components/index.ts"],
       "@domain/*": ["src/domain/*"],
       "@domain": ["src/domain/index.ts"],
+      "@hooks/*": ["src/hooks/*"],
+      "@hooks": ["src/hooks/index.ts"],
       "@pages/*": ["src/pages/*"],
       "@pages": ["src/pages/index.ts"],
+      "@types/*": ["src/types/*"],
       "@util/*": ["src/util/*"],
       "@util": ["src/util/index.ts"],
-      "@types/*": ["src/types/*"],
       "@views/*": ["src/views/*"]
     }
   },

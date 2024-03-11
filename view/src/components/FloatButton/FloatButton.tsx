@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { createPortal } from 'react-dom';
+import styled from 'styled-components';
+
 import { Button } from '@workspace/ui';
 
 const Anchor = styled.div.attrs({
@@ -48,51 +49,39 @@ interface Props {
 
 const FloatButton = ({ children }: Props) => {
   const anchorRef = React.useRef<HTMLDivElement>(null);
-  const [show, setShow] = React.useState<boolean>(false);
-  const [hasScroll, setHasScroll] = React.useState<boolean>(false);
+  const [hasScroll, setHasScroll] = React.useState(false);
 
   const onClick = React.useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [show]);
+  }, []);
 
-  React.useEffect(() => {
-    if (show) {
-      setTimeout(() => {
-        anchorRef.current?.setAttribute('style', 'transform: none;');
-      }, 25);
+  const handleScroll = React.useCallback(() => {
+    const scrolled = window.scrollY > 200;
+
+    if (scrolled) {
+      anchorRef.current?.setAttribute('style', 'transform: none;');
     } else {
       anchorRef.current?.setAttribute('style', 'transform: scale(0);');
-      setTimeout(() => {
-        anchorRef.current?.setAttribute(
-          'style',
-          'visibility: hidden; transform: scale(0);',
-        );
-      }, 225);
     }
-  }, [show]);
+  }, []);
 
   React.useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY > 200;
-      setShow(scrolled);
-
-      if (scrolled) {
-        const hasScrollbar =
-          document.body.scrollHeight > document.body.offsetHeight;
-        setHasScroll(hasScrollbar);
-      }
-    };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+  }, [handleScroll]);
+
+  React.useEffect(() => {
+    setHasScroll(document.body.scrollHeight > 200);
   }, []);
 
   return hasScroll
     ? createPortal(
         <Anchor ref={anchorRef}>
-          <Dial onClick={onClick} className='ff fzb fwb'>{children}</Dial>
+          <Dial onClick={onClick} className='ff fzb fwb'>
+            {children}
+          </Dial>
         </Anchor>,
         document.body,
       )

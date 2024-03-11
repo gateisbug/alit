@@ -1,8 +1,10 @@
-import { Routes, Route } from 'react-router-dom';
-import RootProvider from './RootProvider';
-import { routes } from '@views/routes';
 import { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import { Loading } from '@components';
+import { routes } from '@views/routes';
+
+import RootProvider from './RootProvider';
 
 const ErrorBoundary = lazy(async () => await import('./ErrorBoundary'));
 

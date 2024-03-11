@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import React from 'react';
+import styled from 'styled-components';
+
 import ArrowRightIcon from '@icon/ArrowRightIcon';
 
 const Container = styled.div.attrs({

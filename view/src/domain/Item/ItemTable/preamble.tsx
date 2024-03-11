@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { Portrait } from '@components';
-import { CellBox, Ellipsis } from '@domain/Item/ItemTable/styled';
 import { get } from '@util/fetching';
+
 import { VALUE } from '@domain/Item/const';
 import {
   classSorter,
@@ -9,6 +10,7 @@ import {
   strokeSorter,
   typeSorter,
 } from '@domain/Item/funcs';
+import { CellBox, Ellipsis } from '@domain/Item/ItemTable/styled';
 
 export type ColumnType = {
   basis: string;

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Input } from '@workspace/ui';
+
 import { SearchIcon } from '@icon';
+import { Button, Input } from '@workspace/ui';
 
 type ContainerProps = {
   $maxWidth?: string;

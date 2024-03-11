@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { IconBox, IconBoxProps } from './IconBox';
 
 const FilterIcon = ({ width = '1.5rem', height = '1.5rem' }: IconBoxProps) => {

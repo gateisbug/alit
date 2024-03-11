@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { throttle } from 'lodash';
 
 export default function useDropdown() {

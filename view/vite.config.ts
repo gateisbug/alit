@@ -15,6 +15,7 @@ export default defineConfig({
       { find: '@styles', replacement: p('./src/assets/stylesheet') },
       { find: '@components', replacement: p('./src/components') },
       { find: '@domain', replacement: p('./src/domain') },
+      { find: '@hooks', replacement: p('./src/hooks') },
       { find: '@pages', replacement: p('./src/pages') },
       { find: '@types', replacement: p('./src/types') },
       { find: '@util', replacement: p('./src/util') },

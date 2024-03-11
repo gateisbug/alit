@@ -1,12 +1,13 @@
-import { useRecoilState } from 'recoil';
-import { modalItemStore } from '@domain/Item/store';
 import { useCallback } from 'react';
+import { useRecoilState } from 'recoil';
+
 import {
   classSorter,
   domainSorter,
   strokeSorter,
   typeSorter,
 } from '@domain/Item/funcs';
+import { modalItemStore } from '@domain/Item/store';
 
 export function useItemGunModal() {
   const [selectedItem] = useRecoilState(modalItemStore);
@@ -24,7 +25,13 @@ export function useItemGunModal() {
     const domain = domainSorter(selectedItem?.domain);
     const classes = classSorter(selectedItem);
     const types = typeSorter(selectedItem);
-    return [domain, classes, types];
+
+    const result = [];
+    if (domain.length > 0) result.push(domain);
+    if (classes.length > 0) result.push(classes);
+    if (types.length > 0) result.push(types);
+
+    return result;
   }, [selectedItem]);
 
   return { portrait: portraitOption, breadcrums: breadcrumsOption };

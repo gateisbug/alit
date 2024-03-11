@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import ItemSearch from './ItemSearch';
+
 import ItemFilter from './ItemFilter';
+import ItemSearch from './ItemSearch';
 
 const Container = styled.div.attrs({
   className: 'ui-itemcontroller-container',

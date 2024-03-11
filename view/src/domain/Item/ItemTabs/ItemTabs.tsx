@@ -1,7 +1,9 @@
 import React from 'react';
-import { Tabs } from '@components';
-import styled from 'styled-components';
 import { NavLink, useLocation } from 'react-router-dom';
+import styled from 'styled-components';
+
+import { Tabs } from '@components';
+
 import { INDEX, PATH, TEXT, VALUE } from '../const';
 
 const Anchor = styled(NavLink).attrs({
