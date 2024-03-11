@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="eslint 수정">
-      <change afterPath="$PROJECT_DIR$/view/src/hooks/useDeviceSize.ts" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="table, table-controller에 반응형 추가">
+      <change afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/ui.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Tabs/Tabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/styled.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/hooks/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/hooks/useMediaQuery.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/hooks/useMediaQuery.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/pages/Item/Item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/views/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -126,7 +122,7 @@
       <workItem from="1709798945731" duration="7390000" />
       <workItem from="1709861523502" duration="2401000" />
       <workItem from="1710113905836" duration="12980000" />
-      <workItem from="1710132980221" duration="6309000" />
+      <workItem from="1710132980221" duration="9191000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -432,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710128789015</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="table, table-controller에 반응형 추가">
+      <option name="closed" value="true" />
+      <created>1710140528671</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1710140528672</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,6 +466,7 @@
     <MESSAGE value="modal 추가" />
     <MESSAGE value="key value 추가" />
     <MESSAGE value="eslint 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="eslint 수정" />
+    <MESSAGE value="table, table-controller에 반응형 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="table, table-controller에 반응형 추가" />
   </component>
 </project>

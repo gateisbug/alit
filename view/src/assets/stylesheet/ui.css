@@ -1,0 +1,12 @@
+body .Practx-ModalRoot {
+  min-width: 0;
+  width: 100%;
+  max-width: 60rem;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+
+  @media (max-width: 1024px) {
+    min-width: 0;
+    max-width: calc(100vw - 4rem);
+  }
+}

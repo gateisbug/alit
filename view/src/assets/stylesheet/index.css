@@ -29,6 +29,7 @@ html, body, #root {
   min-width: 100%;
   color: var(--font);
   background-color: var(--surface);
+  box-sizing: border-box;
 }
 
 .wrap {

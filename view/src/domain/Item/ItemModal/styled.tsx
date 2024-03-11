@@ -10,9 +10,14 @@ export const ModalContainer = styled.div.attrs({
   gap: 1.5rem;
   padding: 1.5rem;
   box-sizing: border-box;
-  width: 60rem;
-  min-height: 37.5rem;
   position: relative;
+  //min-height: fit-content;
+  min-height: 37.5rem;
+  width: 100%;
+
+  //@media (max-width: 1024px) {
+  //  max-width: calc(100% - 3rem);
+  //}
 `;
 
 export const CloseButton = styled(Button.Root)`
@@ -20,8 +25,8 @@ export const CloseButton = styled(Button.Root)`
   height: fit-content;
   padding: 0;
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 0.75rem;
+  right: 0.75rem;
   color: var(--font-strong);
   &:not(:disabled):hover {
     color: var(--font);
@@ -35,6 +40,7 @@ export const ModalHeader = styled.div.attrs({
   grid-template-columns: 6rem auto;
   grid-template-rows: auto;
   gap: 0 3rem;
+  align-items: center;
 
   .portrait {
     width: 6rem;
@@ -50,6 +56,19 @@ export const ModalHeader = styled.div.attrs({
   .title,
   .subtitle {
     line-height: 1em;
+  }
+
+  @media (max-width: 500px) {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 1.5rem 0;
+    justify-items: center;
+
+    .section {
+      align-items: center;
+      gap: 0.75rem;
+    }
   }
 `;
 
