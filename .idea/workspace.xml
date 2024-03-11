@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="table, table-controller에 반응형 추가">
-      <change afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/ui.css" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal container 반응형 대응 진행">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/views/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/views/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +48,7 @@
     &quot;git-widget-placeholder&quot;: &quot;dev-workspace&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Parker/alit-dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dawson/superset-test-master&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -122,7 +117,8 @@
       <workItem from="1709798945731" duration="7390000" />
       <workItem from="1709861523502" duration="2401000" />
       <workItem from="1710113905836" duration="12980000" />
-      <workItem from="1710132980221" duration="9191000" />
+      <workItem from="1710132980221" duration="10779000" />
+      <workItem from="1710151850155" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -436,7 +432,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710140528672</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="modal container 반응형 대응 진행">
+      <option name="closed" value="true" />
+      <created>1710147335484</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1710147335484</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,6 +471,7 @@
     <MESSAGE value="key value 추가" />
     <MESSAGE value="eslint 수정" />
     <MESSAGE value="table, table-controller에 반응형 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="table, table-controller에 반응형 추가" />
+    <MESSAGE value="modal container 반응형 대응 진행" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal container 반응형 대응 진행" />
   </component>
 </project>
