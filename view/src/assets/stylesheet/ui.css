@@ -5,6 +5,7 @@ body .Practx-ModalRoot {
   max-height: calc(100vh - 8rem);
   overflow-y: auto;
 
+  /* @device: Laptop */
   @media (max-width: 1024px) {
     min-width: 0;
     max-width: calc(100vw - 4rem);

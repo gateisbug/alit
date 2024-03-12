@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
-import { useRecoilState } from 'recoil';
+
+import { Breadcrumbs, Portrait } from '@components';
 
 import {
   classSorter,
@@ -7,11 +8,14 @@ import {
   strokeSorter,
   typeSorter,
 } from '@domain/Item/funcs';
-import { modalItemStore } from '@domain/Item/store';
 
-export function useItemGunModal() {
-  const [selectedItem] = useRecoilState(modalItemStore);
+import { ModalHeader as Container } from './styled';
 
+interface Props {
+  selectedItem?: ItemInterface;
+}
+
+const ModalHeader = ({ selectedItem }: Props) => {
   const portraitOption = useCallback(() => {
     return {
       src: `images/items/${selectedItem?.image}.png`,
@@ -34,5 +38,17 @@ export function useItemGunModal() {
     return result;
   }, [selectedItem]);
 
-  return { portrait: portraitOption, breadcrums: breadcrumsOption };
-}
+  return (
+    <Container>
+      <Portrait {...portraitOption()} />
+
+      <div className='section'>
+        <h2 className='title fcs fzl'>{selectedItem?.name}</h2>
+        <p className='subtitle fcw fzp'>{selectedItem?.nickname}</p>
+        <Breadcrumbs texts={breadcrumsOption()} />
+      </div>
+    </Container>
+  );
+};
+
+export default ModalHeader;

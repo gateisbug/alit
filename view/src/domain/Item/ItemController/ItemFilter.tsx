@@ -12,6 +12,21 @@ import { filterStore } from '@domain/Item/store';
 
 import { CLASSES, VALUE } from '../const';
 
+const Container = styled.div.attrs({
+  className: 'item-filter-container',
+})`
+  .ui-dropd-container {
+    min-width: 3.75rem;
+  }
+
+  /* @device: Tablet */
+  @media (max-width: 768px) {
+    .ui-dropd-container {
+      min-width: 2.5rem;
+    }
+  }
+`;
+
 const StyledButton = styled(Button).attrs({
   className: 'ui-itemfilter-button',
 })`
@@ -23,6 +38,7 @@ const StyledButton = styled(Button).attrs({
   padding: 0;
   border: none;
 
+  /* @device: Tablet */
   @media (max-width: 768px) {
     padding: 6px 8px;
     & .item-span {
@@ -139,20 +155,22 @@ const ItemFilter = () => {
   }, [category]);
 
   return (
-    <Dropdown show={open} contents={renderContents()}>
-      <StyledButton
-        ref={containerRef}
-        variant='text'
-        onClick={() => {
-          setOpen(!open);
-        }}
-        disabled={category === VALUE.ALL}
-        className='ff fzp fwr'
-      >
-        <FilterIcon />
-        <span className='item-span'>필터</span>
-      </StyledButton>
-    </Dropdown>
+    <Container>
+      <Dropdown show={open} contents={renderContents()}>
+        <StyledButton
+          ref={containerRef}
+          variant='text'
+          onClick={() => {
+            setOpen(!open);
+          }}
+          disabled={category === VALUE.ALL}
+          className='ff fzp fwr'
+        >
+          <FilterIcon />
+          <span className='item-span'>필터</span>
+        </StyledButton>
+      </Dropdown>
+    </Container>
   );
 };
 

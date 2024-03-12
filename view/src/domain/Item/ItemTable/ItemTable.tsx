@@ -109,13 +109,20 @@ const ItemTable = () => {
           ? itemData
           : itemData.filter((v) => filterList.includes(v.class ?? ''));
 
-    if (searchValue.length > 0)
+    if (searchValue.length > 0) {
       itemData = itemData.filter(
         (v) =>
-          v.name?.includes(searchValue) ??
-          v.nickname?.includes(searchValue) ??
-          v.nation?.includes(searchValue),
+          // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+          v.name?.includes(searchValue) ||
+          // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+          v.nickname?.includes(searchValue) ||
+          // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+          v.obtain?.join('|').includes(searchValue) ||
+          // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+          v.nation?.includes(searchValue) ||
+          v.explain?.join('|').includes(searchValue),
       );
+    }
 
     return itemData;
   }, [itemTableData, filterList, searchValue]);

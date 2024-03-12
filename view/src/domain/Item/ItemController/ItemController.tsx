@@ -12,6 +12,7 @@ const Container = styled.div.attrs({
   min-height: 2.25rem;
   gap: 1rem;
 
+  /* @device: Tablet */
   @media (max-width: 768px) {
     gap: 0.25rem;
   }

@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal container 반응형 대응 진행">
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="gitignore 수정">
+      <change afterPath="$PROJECT_DIR$/view/src/components/ImageCard/ImageCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/ImageCard/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/components/ImageCard/styled.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ModalExplains.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ModalHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ModalObtain.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemController.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemController/ItemFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ItemModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/hooks.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTable/ItemTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemTabs/ItemTabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/ExternalLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/common/Header/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -118,7 +135,8 @@
       <workItem from="1709861523502" duration="2401000" />
       <workItem from="1710113905836" duration="12980000" />
       <workItem from="1710132980221" duration="10779000" />
-      <workItem from="1710151850155" duration="45000" />
+      <workItem from="1710151850155" duration="9646000" />
+      <workItem from="1710225437875" duration="1306000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -440,14 +458,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710147335484</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="gitignore 수정">
+      <option name="closed" value="true" />
+      <created>1710151912735</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1710151912735</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="clear" />
     <MESSAGE value="init" />
     <MESSAGE value="search" />
     <MESSAGE value="theme color change" />
@@ -472,6 +497,7 @@
     <MESSAGE value="eslint 수정" />
     <MESSAGE value="table, table-controller에 반응형 추가" />
     <MESSAGE value="modal container 반응형 대응 진행" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal container 반응형 대응 진행" />
+    <MESSAGE value="gitignore 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore 수정" />
   </component>
 </project>

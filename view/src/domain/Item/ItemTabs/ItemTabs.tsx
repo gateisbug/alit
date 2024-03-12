@@ -10,9 +10,11 @@ const FitBox = styled.div.attrs({
   className: 'item-fitbox',
 })`
   width: fit-content;
-  min-width: 23.75rem; // 380px
+  min-width: 28.75rem; // 460px
 
+  /* @device: Tablet */
   @media (max-width: 768px) {
+    min-width: 23.75rem; // 380px
     & .ui-tabs-box {
       gap: 0;
     }

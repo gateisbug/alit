@@ -15,6 +15,7 @@ export const ModalContainer = styled.div.attrs({
   min-height: 37.5rem;
   width: 100%;
 
+  // /* @device: Laptop */
   //@media (max-width: 1024px) {
   //  max-width: calc(100% - 3rem);
   //}
@@ -39,6 +40,7 @@ export const ModalHeader = styled.div.attrs({
   display: grid;
   grid-template-columns: 6rem auto;
   grid-template-rows: auto;
+  //justify-content: center;
   gap: 0 3rem;
   align-items: center;
 
@@ -58,7 +60,8 @@ export const ModalHeader = styled.div.attrs({
     line-height: 1em;
   }
 
-  @media (max-width: 500px) {
+  /* @device: Tablet */
+  @media (max-width: 768px) {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;

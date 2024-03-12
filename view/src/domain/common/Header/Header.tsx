@@ -21,7 +21,8 @@ const HeaderWrap = styled.div.attrs({
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  
+
+  /* @device: MobileL */
   @media (max-width: 425px) {
     padding: 0 1.5rem;
   }

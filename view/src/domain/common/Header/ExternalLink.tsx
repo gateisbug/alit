@@ -33,6 +33,7 @@ const GroupContainer = styled.div.attrs({
   flex-flow: row nowrap;
   gap: 1.5rem;
 
+  /* @device: MobileL */
   @media (max-width: 425px) {
     gap: 0.5rem;
   }
