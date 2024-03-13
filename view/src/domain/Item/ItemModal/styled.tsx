@@ -7,7 +7,7 @@ export const ModalContainer = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 1.5rem;
   box-sizing: border-box;
   position: relative;
@@ -80,7 +80,33 @@ export const ModalSection = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  padding: 0.5rem;
+  //padding: 0.5rem;
+
+  &.obtain-nation {
+    display: grid;
+    min-height: 6rem;
+    grid-template-columns: 1fr 8rem;
+    gap: 1rem;
+
+    .nation {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      & .ui-imgcard-container {
+        border-radius: 0.25rem;
+        width: 8rem;
+        height: 8rem;
+        overflow: hidden;
+      }
+      & .ui-imgcard-textbox {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(var(--hover-surface));
+      }
+    }
+  }
 `;
 
 export const Border = styled.div`
