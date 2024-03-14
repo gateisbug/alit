@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal 분화">
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/ffnf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/hms.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/ijn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/kms.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/mnf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/mot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/rn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/roc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/sn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/univ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/nation/uss.png" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal 수정 / 국가, 획득처 관련 image 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/ImageCard/ImageCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/ImageCard/ImageCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ModalObtain.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ModalObtain.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,24 +41,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev-workspace&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Dawson/pcom-front&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Parker\\alit-dev\\node_modules\\eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Parker\\alit-dev\\node_modules\\typescript\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev-workspace",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/Parker/alit-dev",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "C:\\Parker\\alit-dev\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Parker\\alit-dev\\node_modules\\typescript\\lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Parker\alit-dev\view\public\images\nation" />
@@ -136,7 +122,8 @@
       <workItem from="1710225437875" duration="1416000" />
       <workItem from="1710287331759" duration="5817000" />
       <workItem from="1710313698967" duration="4032000" />
-      <workItem from="1710320553955" duration="85000" />
+      <workItem from="1710320553955" duration="3599000" />
+      <workItem from="1710395009277" duration="161000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -474,14 +461,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710226822326</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="modal 수정 / 국가, 획득처 관련 image 추가">
+      <option name="closed" value="true" />
+      <created>1710324081902</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1710324081902</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="search" />
     <MESSAGE value="theme color change" />
     <MESSAGE value="add tabs" />
     <MESSAGE value="add tabs, filter, controller" />
@@ -506,6 +500,7 @@
     <MESSAGE value="modal container 반응형 대응 진행" />
     <MESSAGE value="gitignore 수정" />
     <MESSAGE value="modal 분화" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal 분화" />
+    <MESSAGE value="modal 수정 / 국가, 획득처 관련 image 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal 수정 / 국가, 획득처 관련 image 추가" />
   </component>
 </project>
