@@ -17,7 +17,7 @@ export const ModalSection = styled.div.attrs({
     grid-template-columns: auto;
     grid-template-rows: auto;
   }
-  
+
   .obtain {
     display: flex;
     flex-flow: row nowrap;
