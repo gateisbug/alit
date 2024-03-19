@@ -4,43 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal-section obtain 수정">
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Abyssal_Refrain.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Angel_of_the_Iris.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Aurora_Noctis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Daedalian_Hymn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Darkness_Within_Dawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Dreamwakers_Butterfly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Empyreal_Tragicomedy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Frostfall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Halloween_Hijinks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Happy_Lunar_New_Year_2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Khorovod_of_Dawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Light-Chasing_Sea_of_Stars.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Mirror_Involution.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Northern_Overture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Operation_Convergence.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Parallel_Superimposition.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Pledge_of_the_Radiant_Court.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Revelations_of_Dust.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Snowrealm_Peregrination.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Spring_Festive_Fiasco.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Tempesta's_Secret_Shipyard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Tempesta_and_the_Fountain_of_Youth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/The_Fool's_Scales.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Upon_the_Shimmering_Blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Violet_Tempest,_Blooming_Lycoris.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/event/Virtual_Tower.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/obtain/building.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/obtain/campaign.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/obtain/collection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/obtain/coredata.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/obtain/gearlab.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/obtain/research.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/obtain/supply_line_disruption.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/public/images/obtain/techbox.png" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal-section obtain 완성">
+      <change afterPath="$PROJECT_DIR$/view/public/images/event/Effulgence_Before_Eclipse.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/accessory.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/accessory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/aircraft.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/aircraft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/antiair.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/antiair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/gun.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/gun.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/public/json/torpedo.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/torpedo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/assets/stylesheet/ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/assets/stylesheet/ui.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ModalObtain.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/ModalObtain.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/ItemModal/styled.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/domain/Item/funcs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/domain/Item/funcs.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +57,7 @@
     "git-widget-placeholder": "dev-workspace",
     "ignore.virus.scanning.warn.message": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Parker/alit-dev/view/public/images/events",
+    "last_opened_file_path": "C:/Parker/alit-dev/view/public/images/event",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -96,11 +70,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Parker\alit-dev\view\public\images\event" />
       <recent name="C:\Parker\alit-dev\view\public\images\events" />
       <recent name="C:\Parker\alit-dev\view\public\images\obtain" />
       <recent name="C:\Parker\alit-dev\view\public\images\nation" />
       <recent name="C:\Parker\alit-dev\view\src\assets\icon" />
-      <recent name="C:\Parker\alit-dev\view\public\images\items" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Parker\alit-dev\view\public\images\items" />
@@ -161,7 +135,8 @@
       <workItem from="1710395009277" duration="664000" />
       <workItem from="1710461273409" duration="466000" />
       <workItem from="1710717532923" duration="5488000" />
-      <workItem from="1710745210307" duration="3417000" />
+      <workItem from="1710745210307" duration="3497000" />
+      <workItem from="1710803305801" duration="4064000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -515,15 +490,32 @@
       <option name="project" value="LOCAL" />
       <updated>1710395615652</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="modal-section obtain 내용 추가">
+      <option name="closed" value="true" />
+      <created>1710748836500</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1710748836500</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add tabs" />
-    <MESSAGE value="add tabs, filter, controller" />
     <MESSAGE value="ItemFilter, ItemTabs 추가" />
     <MESSAGE value="ItemFilter, ItemTabs 액션 추가" />
     <MESSAGE value="import 수정" />
@@ -547,6 +539,8 @@
     <MESSAGE value="modal 분화" />
     <MESSAGE value="modal 수정 / 국가, 획득처 관련 image 추가" />
     <MESSAGE value="modal-section obtain 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal-section obtain 수정" />
+    <MESSAGE value="modal-section obtain 내용 추가" />
+    <MESSAGE value="modal-section obtain 완성" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal-section obtain 완성" />
   </component>
 </project>

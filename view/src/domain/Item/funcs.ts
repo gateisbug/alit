@@ -308,18 +308,51 @@ export function obtainDelimiter(value?: ItemInterface): ObtainType[] {
   if (!obtain) return [];
 
   return obtain.map((v) => {
-    if (v.includes('이벤트')) {
-      const e = v.split(':');
+    const e = v.split(':');
+    if (e[0] === '이벤트') {
       return {
         img: `images/event/${eventDelimiter(v)}.png`,
         obtain: e[0],
         label: e[1],
       };
     } else {
+      let img = '';
+      let obtain = e[0];
+      let label = e[1];
+      switch (e[0]) {
+        case '메인':
+          img = 'campaign';
+          label = e[1].split(',').join(', ');
+          break;
+        case '상자깡':
+          img = 'techbox';
+          obtain += `(${nationSplit(value?.nation, 'box')})`;
+          break;
+        case '장비개발':
+          img = 'gearlab';
+          label = nationSplit(value?.nation, 'nation') ?? '';
+          break;
+        case '군부연구실':
+          img = 'research';
+          break;
+        case '코어샵':
+          img = 'coredata';
+          break;
+        case '수집미션':
+          img = 'collection';
+          break;
+        case '서브미션':
+          img = e[1].includes('통상파괴') ? 'supply_line_disruption' : '';
+          break;
+        case '건조':
+          img = 'building';
+          label = e[1].split(',').join(', ');
+          break;
+      }
       return {
-        img: '',
-        obtain: '',
-        label: '',
+        img: `images/obtain/${img}.png`,
+        obtain,
+        label,
       };
     }
   });
@@ -379,6 +412,10 @@ function eventDelimiter(events: string) {
       return 'Light-Chasing_Sea_of_Stars';
     case '설경미종':
       return 'Snowrealm_Peregrination';
+    case '결상점작전':
+      return 'Operation_Convergence';
+    case '만월이 밝아오기 전에':
+      return 'Effulgence_Before_Eclipse';
     default:
       return '';
   }

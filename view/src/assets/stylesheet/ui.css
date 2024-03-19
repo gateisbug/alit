@@ -10,4 +10,9 @@ body .Practx-ModalRoot {
     min-width: 0;
     max-width: calc(100vw - 4rem);
   }
+  /* @device: MobileL */
+  @media (max-width: 425px) {
+    min-width: 0;
+    max-width: calc(100vw - 2rem);
+  }
 }

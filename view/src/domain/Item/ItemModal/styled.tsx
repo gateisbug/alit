@@ -15,10 +15,10 @@ export const ModalContainer = styled.div.attrs({
   min-height: 37.5rem;
   width: 100%;
 
-  // /* @device: Laptop */
-  //@media (max-width: 1024px) {
-  //  max-width: calc(100% - 3rem);
-  //}
+  /* @device: MobileL */
+  @media (max-width: 425px) {
+    padding: 1.5rem 1rem;
+  }
 `;
 
 export const CloseButton = styled(Button.Root)`
@@ -34,6 +34,7 @@ export const CloseButton = styled(Button.Root)`
   }
 `;
 
+// noinspection CssUnusedSymbol
 export const ModalHeader = styled.div.attrs({
   className: 'ui-modal-header',
 })`
@@ -75,6 +76,7 @@ export const ModalHeader = styled.div.attrs({
   }
 `;
 
+// noinspection CssUnusedSymbol
 export const ModalSection = styled.div.attrs({
   className: 'ui-modal-section',
 })`
@@ -107,10 +109,4 @@ export const ModalSection = styled.div.attrs({
       }
     }
   }
-`;
-
-export const Border = styled.div`
-  height: 1px;
-  margin: 12px 0;
-  background-color: white;
 `;

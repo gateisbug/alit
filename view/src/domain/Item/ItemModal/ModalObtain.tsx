@@ -4,12 +4,13 @@ import { ImageCard } from '@components';
 
 import { nationSplit, obtainDelimiter } from '@domain/Item/funcs';
 
+// noinspection CssUnusedSymbol
 export const ModalSection = styled.div.attrs({
   className: 'ui-modal-section',
 })`
   display: grid;
   min-height: 8rem;
-  grid-template-columns: 1fr 8rem;
+  grid-template-columns: 1fr 10rem;
   gap: 1rem;
 
   /* @device: Tablet */
@@ -23,6 +24,12 @@ export const ModalSection = styled.div.attrs({
     flex-flow: row nowrap;
     justify-content: center;
     gap: 1rem;
+
+    /* @device: Tablet */
+    @media (max-width: 700px) {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
 
     & .ui-imgcard-container {
       border-radius: 0.25rem;
@@ -44,13 +51,13 @@ export const ModalSection = styled.div.attrs({
       cursor: default;
       padding: 0.75rem;
       box-sizing: border-box;
-      color: #101418;
+      color: #1c2025;
       transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
       opacity: 0;
     }
 
     & .ui-imgcard-image {
-      max-height: 128px;
+      max-height: 10rem;
     }
   }
 
@@ -61,8 +68,8 @@ export const ModalSection = styled.div.attrs({
 
     & .ui-imgcard-container {
       border-radius: 0.25rem;
-      width: 8rem;
-      height: 8rem;
+      width: 10rem;
+      height: 10rem;
       overflow: hidden;
       padding: 0.75rem;
       box-sizing: border-box;
@@ -97,8 +104,8 @@ const ModalObtain = ({ selectedItem }: Props) => {
             key={`${selectedItem?.index}_${v.obtain}_${i}`}
             src={v.img}
           >
-            <div className='obtain-value fzs fwm'>{v.obtain}</div>
-            <div className='obtain-label fzs fwm'>{v.label}</div>
+            <div className='obtain-value fzs fwb'>{v.obtain}</div>
+            <div className='obtain-label fzs fws'>{v.label}</div>
           </ImageCard>
         ))}
       </div>
