@@ -59,14 +59,7 @@ const FilterBox = styled.div.attrs({
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 14%);
   background-color: var(--surface);
   gap: 0.75rem;
-
-  @media (prefers-color-scheme: light) {
-    border: 1px solid rgba(0, 0, 0, 22.75%);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    border: 1px solid rgba(255, 255, 255, 22.75%);
-  }
+  border: 1px solid var(--border);
 `;
 
 const FilterList = styled.form.attrs({

@@ -24,12 +24,7 @@ const Container = styled.div.attrs({
 
   max-width: ${(props) => props.$maxWidth};
   &:has(input[data-minify='true']) {
-    @media (prefers-color-scheme: light) {
-      border-color: #0000003a;
-    }
-    @media (prefers-color-scheme: dark) {
-      border-color: #ffffff3a;
-    }
+    border-color: var(--border);
   }
 `;
 Container.defaultProps = {

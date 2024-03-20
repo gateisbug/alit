@@ -12,6 +12,8 @@
     --font: #1c2025;
     --font-weak: #999999;
     --hover-surface: 0, 0, 0, 0.03;
+    --border-weak: #00000014;
+    --border: #0000003A;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -22,5 +24,7 @@
     --font: #b0b8c4;
     --font-weak: #777777;
     --hover-surface: 255, 255, 255, 0.05;
+    --border-weak: #FFFFFF14;
+    --border: #FFFFFF3A;
   }
 }

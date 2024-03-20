@@ -4,16 +4,16 @@ import { Container, Box, IconBox, Span } from './styled';
 
 interface Props {
   icon?: React.ReactElement;
-  key?: string;
+  label?: string;
   value?: string;
 }
 
-const KeyValue = ({ key, value, icon }: Props) => {
+const KeyValue = ({ label, value, icon }: Props) => {
   return (
     <Container>
       {icon && <IconBox>{icon}</IconBox>}
       <Box>
-        <Span data-type='key'>{key}</Span>
+        <Span data-type='key'>{label}</Span>
         <Span data-type='value'>{value}</Span>
       </Box>
     </Container>

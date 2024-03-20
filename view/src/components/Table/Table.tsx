@@ -29,7 +29,7 @@ const TableRow = styled.div.attrs({
 })`
   display: flex;
   flex-flow: row nowrap;
-  gap: 16px;
+  gap: 1rem;
 `;
 
 const TableCell = styled.div.attrs({

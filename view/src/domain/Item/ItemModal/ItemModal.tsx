@@ -5,6 +5,7 @@ import { CloseIcon } from '@icon';
 import { Modal } from '@workspace/ui';
 
 import ModalExplain from '@domain/Item/ItemModal/ModalExplains';
+import ModalStat from '@domain/Item/ItemModal/ModalStat';
 import { modalItemStore, modalShowStore } from '@domain/Item/store';
 
 import ModalHeader from './ModalHeader';
@@ -26,6 +27,8 @@ const ItemModal = () => {
         <ModalHeader selectedItem={selectedItem} />
 
         <ModalObtain selectedItem={selectedItem} />
+
+        <ModalStat selectedItem={selectedItem} />
 
         <ModalExplain selectedItem={selectedItem} />
 

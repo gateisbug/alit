@@ -4,10 +4,10 @@ import { ImageCard } from '@components';
 
 import { nationSplit, obtainDelimiter } from '@domain/Item/funcs';
 
+import { ModalSection } from './styled';
+
 // noinspection CssUnusedSymbol
-export const ModalSection = styled.div.attrs({
-  className: 'ui-modal-section',
-})`
+const ObtainSection = styled(ModalSection)`
   display: grid;
   min-height: 8rem;
   grid-template-columns: 1fr 10rem;
@@ -97,7 +97,7 @@ interface Props {
 
 const ModalObtain = ({ selectedItem }: Props) => {
   return (
-    <ModalSection className='obtain-nation'>
+    <ObtainSection className='obtain-nation'>
       <div className='obtain'>
         {obtainDelimiter(selectedItem).map((v, i) => (
           <ImageCard
@@ -119,7 +119,7 @@ const ModalObtain = ({ selectedItem }: Props) => {
           </span>
         </ImageCard>
       </div>
-    </ModalSection>
+    </ObtainSection>
   );
 };
 

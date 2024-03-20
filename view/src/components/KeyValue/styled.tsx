@@ -13,7 +13,9 @@ export const Box = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.25rem;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 0.0625rem solid ;
 `;
 
 export const IconBox = styled.div.attrs({
