@@ -7,12 +7,9 @@ interface Props {
 const ModalExplain = ({ selectedItem }: Props) => {
   return (
     <ModalSection className='status-explains'>
-      <div className='status'>
-        {selectedItem?.status?.map((v, i) => (
-          <span key={`${selectedItem?.index}_${v}_${i}`}>{v}</span>
-        ))}
+      <div className='explains'>
+        {selectedItem?.explain?.map((v, i) => <p key={i}>{v}</p>)}
       </div>
-      <div className='explains'>{selectedItem?.explain?.join('\n')}</div>
     </ModalSection>
   );
 };

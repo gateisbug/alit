@@ -7,7 +7,7 @@ export const ModalContainer = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  gap: 2rem;
+  gap: 3rem;
   padding: 1.5rem;
   box-sizing: border-box;
   position: relative;

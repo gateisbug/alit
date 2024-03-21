@@ -6,11 +6,12 @@ interface Props {
   icon?: React.ReactElement;
   label?: string;
   value?: string;
+  className?: string;
 }
 
-const KeyValue = ({ label, value, icon }: Props) => {
+const KeyValue = ({ label, value, icon, className }: Props) => {
   return (
-    <Container>
+    <Container className={className}>
       {icon && <IconBox>{icon}</IconBox>}
       <Box>
         <Span data-type='key'>{label}</Span>
