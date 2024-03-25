@@ -44,7 +44,6 @@ const Body = ({ columns = [], items = [] }: TableProps) => {
   const setModalItem = useSetRecoilState(modalItemStore);
 
   const onClickItem = useCallback((v?: ItemInterface) => {
-    console.log(v?.name);
     setModalShow(true);
     setModalItem(v);
   }, []);

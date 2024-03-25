@@ -11,3 +11,4 @@ export { default as Portrait } from './Portrait';
 export { default as Search } from './Search';
 export { default as Tabs } from './Tabs';
 export { default as Table } from './Table';
+export { default as Tooltip } from './Tooltip';

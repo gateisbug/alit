@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { KeyValue } from '@components';
+import { KeyValue, Tooltip } from '@components';
 
 import { ModalSection } from './styled';
 
@@ -60,21 +60,26 @@ const ModalStat = ({ selectedItem }: Props) => {
 
 export default ModalStat;
 
-// const AP = styled.div`
-//   span:nth-child(1) {
-//     color: #e4002b;
-//   }
-//   span:nth-child(3) {
-//     color: #f3e500;
-//   }
-//   span:nth-child(5) {
-//     color: #0047bb;
-//   }
-//   span:nth-child(2),
-//   span:nth-child(4) {
-//     margin: 0.25rem;
-//   }
-// `;
+function aircraftRender(value: string) {
+  const [string, damage, ap] = value.split('\\t');
+  const [weapon, count] = string.split('*');
+
+  const title = ap ? (
+    <>
+      <div>{damage}</div>
+      <div>{ap}</div>
+    </>
+  ) : (
+    <div>{ap}</div>
+  );
+
+  return (
+    <>
+      <Tooltip title={title}>{weapon}</Tooltip>
+      <> × {count}</>
+    </>
+  );
+}
 
 function statDelimiter(value: string[]) {
   switch (value[0]) {
@@ -83,11 +88,12 @@ function statDelimiter(value: string[]) {
       return value[1].replace(/,/g, ', ');
     case '대미지':
     case '발사패턴':
+      return value[1].replace(/\*/g, ' × ');
     case '기총':
     case '폭장':
     case '어뢰':
     case '로켓':
-      return value[1].replace(/\*/g, ' × ');
+      return aircraftRender(value[1]);
     case '사속':
     case '발사간격':
       return value[1].replace(/초/g, ' 초');
