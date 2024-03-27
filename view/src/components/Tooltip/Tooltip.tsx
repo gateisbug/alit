@@ -25,7 +25,7 @@ const Tooltip = ({ children, title }: Props) => {
     const { width } = boxRef.current.getBoundingClientRect();
 
     const translateX = left - width / 2 + w / 2;
-    const translateY = top + height;
+    const translateY = top + height + window.scrollY;
 
     boxRef.current.setAttribute(
       'style',

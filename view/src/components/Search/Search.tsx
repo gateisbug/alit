@@ -79,11 +79,12 @@ const Search = ({ setValue, maxWidth, defaultValue }: SearchProps) => {
     if (minify) {
       inputRef.current?.removeAttribute('readOnly');
       inputRef.current?.focus();
-      inputRef.current?.setAttribute('style', 'width: 180px;');
+      // inputRef.current?.setAttribute('style', 'width: 11.25rem; /* 180px */');
+      inputRef.current?.setAttribute('style', 'width: 11.25rem;');
     } else {
       inputRef.current?.setAttribute('readOnly', 'true');
       inputRef.current?.blur();
-      inputRef.current?.setAttribute('style', 'width: 0px;');
+      inputRef.current?.setAttribute('style', 'width: 0;');
     }
   }, [minify]);
 

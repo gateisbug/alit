@@ -24,19 +24,17 @@ export const Text = styled.div.attrs({
   position: relative;
 
   background-color: rgba(97, 97, 97, 0.92);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #fff;
   font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
-  padding: 4px 8px;
   font-size: 0.875rem;
-  max-width: 300px;
-  margin: 2px;
+  max-width: 18.75rem;
+  margin: 0.125rem;
   overflow-wrap: break-word;
-  font-weight: 500;
 
   &[data-placement='bottom'] {
-    margin-top: 0.875rem;
+    margin-top: 0.75rem;
     transform-origin: center top;
   }
 
@@ -51,7 +49,7 @@ export const Text = styled.div.attrs({
     width: fit-content;
     height: fit-content;
     font-size: 0.875rem;
-    border-radius: 2px;
+    border-radius: 0.125rem;
     translate: -50% -50%;
     overflow: hidden;
   }

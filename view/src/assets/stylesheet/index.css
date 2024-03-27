@@ -37,16 +37,10 @@ html, body, #root {
   margin: 0 auto;
 }
 .max-wrap {
-  /*max-width: 1920px;*/
+  /* max-width: 120rem; // 1920px */
   max-width: 1856px;
   margin: 0 auto;
 }
-/*.window {*/
-/*  width: calc(100vw - 17px);*/
-/*  position: sticky;*/
-/*  left: 0;*/
-/*  right: 0;*/
-/*}*/
 
 .ff {
   font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,

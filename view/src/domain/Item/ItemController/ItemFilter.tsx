@@ -12,6 +12,7 @@ import { filterStore } from '@domain/Item/store';
 
 import { CLASSES, VALUE } from '../const';
 
+// noinspection CssUnusedSymbol
 const Container = styled.div.attrs({
   className: 'item-filter-container',
 })`
@@ -27,6 +28,7 @@ const Container = styled.div.attrs({
   }
 `;
 
+// noinspection CssUnusedSymbol
 const StyledButton = styled(Button).attrs({
   className: 'ui-itemfilter-button',
 })`
@@ -40,7 +42,7 @@ const StyledButton = styled(Button).attrs({
 
   /* @device: Tablet */
   @media (max-width: 768px) {
-    padding: 6px 8px;
+    padding: 0.375rem 0.5rem;
     & .item-span {
       display: none;
     }

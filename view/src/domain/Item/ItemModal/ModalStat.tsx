@@ -15,23 +15,53 @@ const StatSection = styled(ModalSection)`
   grid-template-rows: auto;
 
   .ui-keyvalue-container {
-    flex-basis: fit-content;
-    flex-grow: 1;
-    //max-width: 138px;
-
-    //&.skill {
-    //  flex-basis: fit-content;
-    //  flex-grow: 0;
-    //  width: fit-content;
-    //  .ui-keyvalue-box {
-    //    width: 100%;
-    //  }
-    //  max-width: none;
-    //}
+    flex: 1 1 20%;
+    max-width: 14rem;
   }
   .ui-keyvalue-box {
     width: 100%;
     align-items: center;
+  }
+  &[data-domain='antiair'] .ui-keyvalue-container {
+    flex: 1 1 16%;
+  }
+  &[data-domain='aircraft'],
+  &[data-domain='accessory'] {
+    .ui-keyvalue-container {
+      flex: 1 1 30%;
+    }
+  }
+  &[data-domain='accessory'] .ui-keyvalue-container {
+    max-width: 20rem;
+  }
+
+  /* @device: Tablet */
+  @media (max-width: 768px) {
+    &,
+    &[data-domain='antiair'],
+    &[data-domain='aircraft'] {
+      .ui-keyvalue-container {
+        flex: 1 1 25%;
+        max-width: 14rem;
+      }
+    }
+    &[data-domain='accessory'] .ui-keyvalue-container {
+      flex: 1 1 33%;
+      max-width: 100%;
+    }
+  }
+
+  /* @device: MobileL */
+  @media (max-width: 425px) {
+    &,
+    &[data-domain='antiair'],
+    &[data-domain='aircraft'],
+    &[data-domain='accessory'] {
+      .ui-keyvalue-container {
+        flex: 1 1 33%;
+        max-width: 100%;
+      }
+    }
   }
 `;
 
@@ -41,7 +71,7 @@ interface Props {
 
 const ModalStat = ({ selectedItem }: Props) => {
   return (
-    <StatSection className='stat'>
+    <StatSection className='stat' data-domain={selectedItem?.domain}>
       {selectedItem?.status?.map((v, i) => {
         const item = v.split(':');
         const value = statDelimiter(item);
@@ -60,23 +90,39 @@ const ModalStat = ({ selectedItem }: Props) => {
 
 export default ModalStat;
 
+const Aircraft = styled.span`
+  text-decoration: underline;
+`;
+const State = styled.div`
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(97, 97, 97, 0.92);
+  border-radius: 0.25rem;
+  z-index: 1;
+`;
+
 function aircraftRender(value: string) {
   const [string, damage, ap] = value.split('\\t');
   const [weapon, count] = string.split('*');
 
   const title = ap ? (
-    <>
-      <div>{damage}</div>
-      <div>{ap}</div>
-    </>
+    <State>
+      <div>대미지: {damage}</div>
+      <div>관통: {ap.replace(/\//g, ' / ')}</div>
+    </State>
   ) : (
-    <div>{ap}</div>
+    <State>대미지: {damage}</State>
   );
 
   return (
     <>
-      <Tooltip title={title}>{weapon}</Tooltip>
-      <> × {count}</>
+      <Tooltip title={title}>
+        <Aircraft>{weapon}</Aircraft>
+      </Tooltip>
+      <>&nbsp;× {count}</>
     </>
   );
 }
@@ -97,17 +143,8 @@ function statDelimiter(value: string[]) {
     case '사속':
     case '발사간격':
       return value[1].replace(/초/g, ' 초');
-    // case '대갑비례':
-    //   return (
-    //     <AP>
-    //       {value[1].split(' / ').map((v, i) => (
-    //         <Fragment key={v}>
-    //           <span>{v}</span>
-    //           {i < 2 && <span>/</span>}
-    //         </Fragment>
-    //       ))}
-    //     </AP>
-    //   );
+    case '대갑비례':
+      return value[1].replace(/\//g, ' / ');
     default:
       return value[1];
   }

@@ -5,7 +5,7 @@ import { Container, Box, IconBox, Span } from './styled';
 interface Props {
   icon?: React.ReactElement;
   label?: string;
-  value?: string;
+  value?: React.ReactNode;
   className?: string;
 }
 

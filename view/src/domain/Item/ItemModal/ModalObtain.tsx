@@ -169,7 +169,7 @@ function obtainDelimiter(value?: ItemInterface): ObtainType[] {
           img = 'collection';
           break;
         case '서브미션':
-          img = e[1].includes('통상파괴') ? 'supply_line_disruption' : '';
+          img = e[1].includes('통상파괴') ? 'supply_line_disruption' : 'akashi';
           break;
         case '건조':
           img = 'building';
