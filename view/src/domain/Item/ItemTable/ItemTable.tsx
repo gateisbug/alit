@@ -13,7 +13,7 @@ import {
 } from '@domain/Item/store';
 
 import { ColumnType, COLUMNS } from './preamble';
-import { TBox, Row, Container, Cell } from './styled';
+import { TBox, Row, Container, Cell, NoSearchData } from './styled';
 
 export interface TableProps {
   columns?: ColumnType[];
@@ -42,6 +42,7 @@ const Header = ({ columns = [] }: Pick<TableProps, 'columns'>) => {
 const Body = ({ columns = [], items = [] }: TableProps) => {
   const setModalShow = useSetRecoilState(modalShowStore);
   const setModalItem = useSetRecoilState(modalItemStore);
+  const searchValue = useRecoilValue(searchStore);
 
   const onClickItem = useCallback((v?: ItemInterface) => {
     setModalShow(true);
@@ -71,6 +72,12 @@ const Body = ({ columns = [], items = [] }: TableProps) => {
           ))}
         </Row>
       ))}
+      {searchValue.length > 0 && (items?.length ?? 0) === 0 ? (
+        <NoSearchData>
+          <p>\(o_o)/</p>
+          <p>No Search Data</p>
+        </NoSearchData>
+      ) : null}
     </TBox>
   );
 };

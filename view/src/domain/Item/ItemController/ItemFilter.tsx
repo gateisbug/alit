@@ -58,10 +58,10 @@ const FilterBox = styled.div.attrs({
   justify-content: center;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 14%);
+  box-shadow: 0 0.25rem 0.3125rem 0 rgba(0, 0, 0, 14%);
   background-color: var(--surface);
   gap: 0.75rem;
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
 `;
 
 const FilterList = styled.form.attrs({

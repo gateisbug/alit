@@ -200,15 +200,22 @@ export function typeSorter(value?: ItemInterface) {
         case 'repair':
           return '공작';
       }
+    } else if (value?.domain === 'special') {
+      switch (value.type) {
+        case 'dd':
+          return '구축';
+        case 'cl':
+          return '경순';
+        case 'ca&cb':
+          return '중·대순';
+        case 'bb':
+          return '전함';
+        case 'ac':
+          return '항모';
+        case 'ss':
+          return '잠수';
+      }
     }
-    // else if (value?.domain === 'special') {
-    //   switch (value.type) {
-    //     case 'normal':
-    //       return '공용';
-    //     case 'signiture':
-    //       return '전용';
-    //   }
-    // }
   }
 
   return '';

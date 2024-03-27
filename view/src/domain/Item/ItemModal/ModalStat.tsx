@@ -63,6 +63,19 @@ const StatSection = styled(ModalSection)`
       }
     }
   }
+
+  /* @device: MobileM */
+  @media (max-width: 375px) {
+    &,
+    &[data-domain='antiair'],
+    &[data-domain='aircraft'],
+    &[data-domain='accessory'] {
+      .ui-keyvalue-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  }
 `;
 
 interface Props {

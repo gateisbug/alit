@@ -19,7 +19,7 @@ export const TBox = styled.div.attrs({
   width: 100%;
 
   &.table-body {
-    border-bottom: 2px solid transparent;
+    border-bottom: 0.125rem solid transparent;
 
     @media (prefers-color-scheme: light) {
       border-color: rgba(0, 0, 0, 0.16);
@@ -37,7 +37,7 @@ export const Row = styled(Table.Row).attrs({
 
   ${TBox} > &[data-type='row'] {
     padding: 0.75rem 0;
-    border-bottom: 1px solid transparent;
+    border-bottom: 0.0625rem solid transparent;
     cursor: pointer;
 
     @media (prefers-color-scheme: light) {
@@ -98,4 +98,24 @@ export const Ellipsis = styled.div.attrs({
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+export const NoSearchData = styled.div.attrs({
+  className: 'ui-itemtable-nodata',
+})`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem 0;
+  color: var(--font-strong);
+
+  p:first-child {
+    font-size: 12.5rem;
+    line-height: 1.25em;
+  }
+  p:last-child {
+    font-size: 1.5rem;
+  }
 `;

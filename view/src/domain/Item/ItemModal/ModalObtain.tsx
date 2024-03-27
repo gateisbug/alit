@@ -175,6 +175,9 @@ function obtainDelimiter(value?: ItemInterface): ObtainType[] {
           img = 'building';
           label = e[1].split(',').join(', ');
           break;
+        case '설계도':
+          img = 'augmentation';
+          break;
       }
       return {
         img: `images/obtain/${img}.png`,
