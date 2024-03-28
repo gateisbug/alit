@@ -16,10 +16,11 @@ export const TBox = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  width: fit-content;
-  //width: 100%;
+  //width: fit-content;
+  width: 100%;
 
   &.table-body {
+    width: fit-content;
     border-bottom: 0.125rem solid transparent;
 
     @media (prefers-color-scheme: light) {
