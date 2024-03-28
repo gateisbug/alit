@@ -20,7 +20,7 @@ const LogoImage = styled.img.attrs({
 const Logo = () => {
   return (
     <LogoBox>
-      <LogoImage src='/assets/logo.webp' alt='' />
+      <LogoImage src='/alit/assets/logo.webp' alt='' />
     </LogoBox>
   );
 };

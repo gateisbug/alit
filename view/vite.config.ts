@@ -6,6 +6,7 @@ const p = (src: string) => resolve(__dirname, src);
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/alit/',
   plugins: [react()],
   resolve: {
     alias: [

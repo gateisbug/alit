@@ -82,7 +82,7 @@ export const COLUMNS: ColumnType[] = [
 
 export const getJson = async (target: ItemURL): Promise<ItemInterface[]> => {
   const g = async (url: string) =>
-    (await get<ItemInterface[]>(`/json/${url}.json`)) ?? [];
+    (await get<ItemInterface[]>(`/alit/json/${url}.json`)) ?? [];
 
   if (target !== 'all') {
     return await g(target);

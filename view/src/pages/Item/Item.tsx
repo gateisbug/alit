@@ -49,10 +49,6 @@ const ItemPage = () => {
       });
   }, [params]);
 
-  React.useEffect(() => {
-    console.log('render');
-  });
-
   return (
     <div>
       <Header />
