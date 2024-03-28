@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+!packages/ui/dist
 build
 dist-ssr
 deploy.js
