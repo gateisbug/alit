@@ -1,0 +1,31 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "typeRoots": ["*.d.ts"],
+    "types": ["vite/client"],
+
+    /* Path */
+    "paths": {
+      "@src/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@icon/*": ["src/assets/icon/*"],
+      "@icon": ["src/assets/icon/index.ts"],
+      "@styles/*": ["src/assets/stylesheet/*"],
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components/index.ts"],
+      "@domain/*": ["src/domain/*"],
+      "@domain": ["src/domain/index.ts"],
+      "@hooks/*": ["src/hooks/*"],
+      "@hooks": ["src/hooks/index.ts"],
+      "@pages/*": ["src/pages/*"],
+      "@pages": ["src/pages/index.ts"],
+      "@types/*": ["src/types/*"],
+      "@util/*": ["src/util/*"],
+      "@util": ["src/util/index.ts"],
+      "@views/*": ["src/views/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

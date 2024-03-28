@@ -1,0 +1,96 @@
+:root {
+  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /*font-size: 12pt;*/
+  font-size: 16px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: color 0.15s ease-in-out,
+  background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+html, body, #root {
+  min-height: 100%;
+  min-width: 100%;
+  color: var(--font);
+  background-color: var(--surface);
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 1856px;
+  margin: 0 auto;
+}
+.max-wrap {
+  /* max-width: 120rem; // 1920px */
+  max-width: 1856px;
+  margin: 0 auto;
+}
+
+.ff {
+  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
+  sans-serif;
+}
+
+.fcw {
+  color: var(--font-weak);
+}
+.fc {
+  color: var(--font);
+}
+.fcs {
+  color: var(--font-strong);
+}
+
+.fzm { /* font-size: megazine */
+  font-size: 2rem;
+}
+.fzn { /* font-size: news */
+  font-size: 1.75rem;
+}
+.fzh { /* font-size: headline */
+  font-size: 1.5rem;
+}
+.fzl { /* font-size: header */
+  font-size: 1.25rem;
+}
+.fzs { /* font-size: subtitle */
+  font-size: 1.125rem;
+}
+.fzp { /* font-size: paragraph */
+  font-size: 1rem;
+}
+.fzb { /* font-size: body */
+  font-size: 0.875rem;
+}
+.fza { /* font-size: annotation */
+  font-size: 0.75rem;
+}
+.fzc { /* font-size: caption */
+  font-size: 0.625rem;
+}
+
+.fwb {
+  font-weight: 700;
+}
+.fwm {
+  font-weight: 500;
+}
+.fwr {
+  font-weight: 400;
+}
