@@ -2,7 +2,7 @@
   "homepage": "https://gateisbug.github.io/alit/",
   "name": "alit-workspace",
   "private": true,
-  "version": "2.2.0",
+  "version": "2.2.1",
   "workspaces": [
     "view",
     "packages/*"
