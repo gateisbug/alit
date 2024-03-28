@@ -85,6 +85,7 @@ const ObtainSection = styled(ModalSection)`
       justify-content: center;
       background-color: rgba(255, 255, 255, 0.8);
       cursor: default;
+      color: #1c2025;
       transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
       opacity: 0;
     }
@@ -114,7 +115,7 @@ const ModalObtain = ({ selectedItem }: Props) => {
         <ImageCard
           src={`images/nation/${selectedItem?.nation?.toLowerCase()}.png`}
         >
-          <span className='fcs fzs fwb'>
+          <span className='nation-value fzs fwb'>
             {nationSplit(selectedItem?.nation, 'nation')}
           </span>
         </ImageCard>
