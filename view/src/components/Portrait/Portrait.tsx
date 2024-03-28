@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { LazyImage } from '@src/components';
+import LazyImage from '@src/components/LazyImage';
 
 // const LazyImage = styled.img`
 //   //width: 3rem;

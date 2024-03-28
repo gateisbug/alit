@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "rm -rf ./build && tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "fully supports es6-module",
