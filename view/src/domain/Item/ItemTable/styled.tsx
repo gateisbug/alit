@@ -10,13 +10,14 @@ export const Container = styled(Table.Container).attrs({
   overflow-x: auto;
 `;
 
+// noinspection CssUnusedSymbol
 export const TBox = styled.div.attrs({
   className: 'ui-itemtable-box',
 })`
   display: flex;
   flex-flow: column nowrap;
-  //width: fit-content;
-  width: 100%;
+  width: fit-content;
+  //width: 100%;
 
   &.table-body {
     border-bottom: 0.125rem solid transparent;
