@@ -11,7 +11,9 @@
     "view": "yarn workspace @workspace/view",
     "ui": "yarn workspace @workspace/ui",
     "util": "yarn workspace @workspace/util",
-    "dev": "yarn view dev"
+    "dev": "yarn view dev",
+    "build": "yarn view build",
+    "deploy": "yarn view deploy"
   },
   "license": "MIT",
   "dependencies": {
