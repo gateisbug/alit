@@ -16,11 +16,9 @@ export const TBox = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  //width: fit-content;
   width: 100%;
 
   &.table-body {
-    width: fit-content;
     border-bottom: 0.125rem solid transparent;
 
     @media (prefers-color-scheme: light) {
@@ -41,6 +39,8 @@ export const Row = styled(Table.Row).attrs({
     padding: 0.75rem 0;
     border-bottom: 0.0625rem solid transparent;
     cursor: pointer;
+    min-width: fit-content;
+    width: 100%;
 
     @media (prefers-color-scheme: light) {
       border-color: rgba(0, 0, 0, 0.08);
