@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="modal-section stat 작업">
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="240407 변경사항 반영">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/public/json/aircraft.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/public/json/aircraft.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +51,7 @@
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Parker\\alit-dev\\node_modules\\eslint&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Parker\\alit\\node_modules\\eslint&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -149,6 +147,20 @@
       <workItem from="1712549050883" duration="6000" />
       <workItem from="1712549063855" duration="424000" />
       <workItem from="1712552099825" duration="925000" />
+      <workItem from="1712556572603" duration="3981000" />
+      <workItem from="1712645999739" duration="1169000" />
+      <workItem from="1712818021249" duration="9000" />
+      <workItem from="1712818613981" duration="24065000" />
+      <workItem from="1713144045228" duration="30000" />
+      <workItem from="1713144080703" duration="8000" />
+      <workItem from="1713144094633" duration="4967000" />
+      <workItem from="1713162046556" duration="742000" />
+      <workItem from="1713238316764" duration="2708000" />
+      <workItem from="1713404165032" duration="13000" />
+      <workItem from="1713404182463" duration="6000" />
+      <workItem from="1713421324764" duration="2109000" />
+      <workItem from="1713484002427" duration="787000" />
+      <workItem from="1713485648798" duration="814000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <option name="closed" value="true" />
@@ -552,7 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="import 수정" />
     <MESSAGE value="table 컴포넌트 추가" />
     <MESSAGE value="portrait 컴포넌트 추가" />
     <MESSAGE value="lazy view를 위한 이미지 추가" />
@@ -577,6 +588,7 @@
     <MESSAGE value="modal-section obtain 완성" />
     <MESSAGE value="modal-section stat 작업 시작 / border 변수화" />
     <MESSAGE value="modal-section stat 작업" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal-section stat 작업" />
+    <MESSAGE value="240407 변경사항 반영" />
+    <option name="LAST_COMMIT_MESSAGE" value="240407 변경사항 반영" />
   </component>
 </project>
