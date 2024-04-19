@@ -8,6 +8,8 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/ui/src/notes" />
       <excludeFolder url="file://$MODULE_DIR$/.yarn" />
+      <excludePattern pattern="*.lock" />
+      <excludePattern pattern=".pnp.*" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

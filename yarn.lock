@@ -3180,12 +3180,12 @@ __metadata:
 
 "@workspace/ui@file:../packages/ui::locator=%40workspace%2Fview%40workspace%3Aview":
   version: 1.0.0
-  resolution: "@workspace/ui@file:../packages/ui#../packages/ui::hash=9a837e&locator=%40workspace%2Fview%40workspace%3Aview"
+  resolution: "@workspace/ui@file:../packages/ui#../packages/ui::hash=8c62a5&locator=%40workspace%2Fview%40workspace%3Aview"
   dependencies:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-components: "npm:^6.1.8"
-  checksum: 10c0/53dae070d6f7ba7006237373437d2d3457d556d195d2f891ee7fa0bad23e3dff2b93ea9e73daf80bb3f683db863ca8dcded02c65e414322125a4ccef731d3eee
+  checksum: 10c0/da36d610725670b960e29752825dacfcd7558b45be7089325710b22fc4fce9eedd9f8477081c63e10a1e3a5fee5e51e8a038638c0cbddd06bd4a91f34824c6a5
   languageName: node
   linkType: hard
 
