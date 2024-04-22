@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import { px, SkeletonVarientType, THEME } from './preamble';
 
 interface SkeletonRootTransientProps {

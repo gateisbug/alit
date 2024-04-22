@@ -1,9 +1,11 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
+
 import { CommonProps } from '../common';
+
+import { useScrollBlock } from './hooks';
 import { ModalTheme } from './preamble';
 import { ModalBackdrop, ModalRoot } from './styled';
-import { useScrollBlock } from './hooks';
 
 export interface ModalProps extends CommonProps {
   open: boolean;

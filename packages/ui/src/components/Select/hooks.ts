@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { SelectItemType } from './preamble';
 
 export function useClickAway(

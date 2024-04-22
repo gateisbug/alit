@@ -1,5 +1,5 @@
-import { prefix } from '../utils';
 import { PreferScheme } from '../common';
+import { prefix } from '../utils';
 
 export interface CheckboxTheme {
   primary?: string;

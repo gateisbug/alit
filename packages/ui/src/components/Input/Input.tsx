@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { CommonProps } from '../common';
+
 import { InputTheme, InputTypes } from './preamble';
 import { InputBox, InputRoot } from './styled';
 

@@ -16,7 +16,7 @@ const Anchor = styled.div.attrs({
   visibility: visible;
 `;
 
-const Dial = styled(Button).attrs({
+const Dial = styled(Button.Root).attrs({
   className: 'ui-floatbtn-anchor',
 })`
   position: relative;

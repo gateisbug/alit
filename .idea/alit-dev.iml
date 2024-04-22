@@ -8,6 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/ui/src/notes" />
       <excludeFolder url="file://$MODULE_DIR$/.yarn" />
+      <excludeFolder url="file://$MODULE_DIR$/view/build" />
       <excludePattern pattern="*.lock" />
       <excludePattern pattern=".pnp.*" />
     </content>

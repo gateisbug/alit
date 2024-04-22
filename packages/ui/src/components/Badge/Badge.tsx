@@ -1,12 +1,14 @@
 import React from 'react';
+
 import { CommonProps } from '../common';
-import { BadgeBox, BadgeRoot } from './styled';
+
 import {
   BadgeTheme,
   HorizontalType,
   VariantType,
   VerticalType,
 } from './preamble';
+import { BadgeBox, BadgeRoot } from './styled';
 
 export interface BadgeProps extends CommonProps {
   content?: number | string;

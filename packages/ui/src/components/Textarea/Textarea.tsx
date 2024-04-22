@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { CommonProps } from '../common';
+
+import { useTextareaAutoResize } from './hooks';
 import { TextareaTheme } from './preamble';
 import { TextareaBox, TextareaRoot } from './styled';
-import { useTextareaAutoResize } from './hooks';
 
 export interface TextareaProps
   extends Pick<

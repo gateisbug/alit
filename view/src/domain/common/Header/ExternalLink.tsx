@@ -5,7 +5,7 @@ import { Link } from '@components';
 import { ArcaLiveIcon, GithubIcon, ImageIcon } from '@icon';
 import { Button } from '@workspace/ui';
 
-const IconButton = styled(Button).attrs({
+const IconButton = styled(Button.Root).attrs({
   className: 'ui-exlink-iconbtn',
 })`
   padding: 0.25rem;
@@ -21,7 +21,7 @@ interface ExternalLinkProps {
 const ExternalLink = ({ to, children }: ExternalLinkProps) => {
   return (
     <Link to={to}>
-      <IconButton variant='line'>{children}</IconButton>
+      <IconButton $variant='line'>{children}</IconButton>
     </Link>
   );
 };

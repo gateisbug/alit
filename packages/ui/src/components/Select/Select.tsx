@@ -1,5 +1,8 @@
 import React from 'react';
+
 import { CommonProps } from '../common';
+
+import { useClickAway, useSelectValue } from './hooks';
 import { SelectItemType, SelectTheme } from './preamble';
 import {
   SelectBox,
@@ -9,7 +12,6 @@ import {
   SelectItem,
   SelectPlaceholder,
 } from './styled';
-import { useClickAway, useSelectValue } from './hooks';
 
 export interface SelectProps extends CommonProps {
   // open?: boolean;

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { CommonProps } from '../common';
+
 import { SkeletonTheme, SkeletonVarientType } from './preamble';
 import { SkeletonRoot } from './styled';
 

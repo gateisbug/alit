@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { THEME, px } from './preamble';
 
 export const InputBox = styled.label.attrs({

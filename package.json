@@ -6,15 +6,18 @@
   "workspaces": [
     "view",
     "packages/ui",
-    "packages/util"
+    "packages/util",
+    "imager"
   ],
   "scripts": {
     "view": "yarn workspace @workspace/view",
     "ui": "yarn workspace @workspace/ui",
     "util": "yarn workspace @workspace/util",
+    "img": "yarn workspace @workspace/imager",
     "dev": "yarn view dev",
     "build": "yarn view build",
-    "deploy": "yarn view deploy"
+    "deploy": "yarn view deploy",
+    "download": "yarn img start"
   },
   "license": "MIT",
   "dependencies": {

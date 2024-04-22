@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { px, THEME } from './preamble';
 
 export const ModalBackdrop = styled.div.attrs({
