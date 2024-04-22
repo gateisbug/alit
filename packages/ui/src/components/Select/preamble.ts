@@ -1,6 +1,7 @@
 import React from 'react';
-import { prefix } from '../utils';
+
 import { PreferScheme } from '../common';
+import { prefix } from '../utils';
 
 export interface SelectTheme {
   placeholder?: string;

@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { CommonProps } from '../common';
-import { ChipRoot } from './styled';
+
 import { ChipTheme, VariantType } from './preamble';
+import { ChipRoot } from './styled';
 
 export interface ChipProps extends CommonProps {
   variant?: VariantType;

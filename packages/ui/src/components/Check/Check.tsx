@@ -1,9 +1,11 @@
 // noinspection CssUnknownProperty
 
 import React from 'react';
+
+import { CommonProps } from '../common';
+
 import { CheckboxTheme } from './preamble';
 import { CheckBox, CheckMark, CheckRoot } from './styled';
-import { CommonProps } from '../common';
 
 export interface CheckProps
   extends Pick<

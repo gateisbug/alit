@@ -1,6 +1,9 @@
 import React from 'react';
-import { CommonProps } from '../common';
+
 import { combineClass } from '@src/components/utils';
+
+import { CommonProps } from '../common';
+
 import { ColumnsType, px, RowType, TableTheme } from './preamble';
 import { TableCell, TableContainer, TableRow } from './styled';
 

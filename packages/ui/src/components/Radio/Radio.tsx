@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { CommonProps } from '../common';
-import { RadioBox, RadioMark, RadioRoot } from './styled';
+
 import { RadioTheme } from './preamble';
+import { RadioBox, RadioMark, RadioRoot } from './styled';
 
 export interface RadioProps
   extends Pick<

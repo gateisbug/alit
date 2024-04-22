@@ -1,5 +1,6 @@
-import { prefix } from '../utils';
 import type { ReactNode } from 'react';
+
+import { prefix } from '../utils';
 
 export type RowType = Record<string, string | number | null>;
 

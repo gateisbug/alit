@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { CommonProps } from '../common';
+
 import { ButtonTheme, VariantType } from './preamble';
 import { ButtonRoot } from './styled';
 
