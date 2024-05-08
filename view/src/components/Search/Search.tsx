@@ -53,7 +53,7 @@ const Root = styled(Input.Root).attrs({
 const SearchButton = styled(Button.Root).attrs({
   className: 'ui-search-button',
 })`
-  padding: 0;
+  padding: 0 !important;
   border: none;
 `;
 
