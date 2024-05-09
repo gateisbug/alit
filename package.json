@@ -1,47 +1,40 @@
 {
-  "homepage": "https://gateisbug.github.io/alit/",
-  "name": "alit-workspace",
+  "name": "alit",
+  "version": "0.1.0",
   "private": true,
-  "version": "2.2.1",
-  "workspaces": [
-    "view",
-    "packages/ui",
-    "packages/util",
-    "imager"
-  ],
   "scripts": {
-    "view": "yarn workspace @workspace/view",
-    "ui": "yarn workspace @workspace/ui",
-    "util": "yarn workspace @workspace/util",
-    "img": "yarn workspace @workspace/imager",
-    "dev": "yarn view dev",
-    "build": "yarn view build",
-    "deploy": "yarn view deploy",
-    "download": "yarn img start"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignote-path .gitignore ."
   },
-  "license": "MIT",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "lodash": "^4.17.21",
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.3",
+    "styled-components": "^6.1.9"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.2",
-    "@types/node": "^20.11.5",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.19.1",
-    "eslint": "^8.0.1",
+    "@types/lodash": "^4.17.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/styled-components": "^5.1.34",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^8",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-config-standard-with-typescript": "^43.0.1",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.33.2",
-    "prettier": "^3.2.4",
-    "typescript": "^5.3.3"
-  },
-  "packageManager": "yarn@4.1.1"
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5"
+  }
 }

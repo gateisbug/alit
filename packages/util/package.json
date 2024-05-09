@@ -1,7 +1,0 @@
-{
-  "name": "@workspace/util",
-  "version": "1.0.0",
-  "main": "index.js",
-  "packageManager": "yarn@4.1.1",
-  "license": "MIT"
-}

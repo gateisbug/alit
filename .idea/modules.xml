@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/alit-dev.iml" filepath="$PROJECT_DIR$/.idea/alit-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/alit.iml" filepath="$PROJECT_DIR$/.idea/alit.iml" />
     </modules>
   </component>
 </project>
