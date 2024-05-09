@@ -5,69 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/public/assets/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/logo-m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/noImage.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/og-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(router)/appbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/typography.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Badge/Badge.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Badge/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Badge/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Button/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Button/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Button/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Check/Check.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Check/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Check/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Chip/Chip.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Chip/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Chip/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Input/Input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Input/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Input/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Modal/Modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Modal/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Progress/Progress.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Progress/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Progress/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Radio/Radio.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Radio/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Radio/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/ScrollView/ScrollView.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/ScrollView/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/ScrollView/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Select/Select.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Select/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Select/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Skeleton/Skeleton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Skeleton/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Skeleton/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tabs/Tabs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tabs/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tabs/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Textarea/Textarea.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Textarea/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Textarea/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/common.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/registry.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(router)/links.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(router)/search.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/item/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/item/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(router)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(router)/appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(router)/appbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(router)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(router)/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -144,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715212400450</updated>
       <workItem from="1715212401833" duration="7348000" />
-      <workItem from="1715225033723" duration="10052000" />
+      <workItem from="1715225033723" duration="11808000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -154,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715215244243</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1715236662664</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715236662664</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
