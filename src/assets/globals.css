@@ -1,0 +1,32 @@
+:root {
+  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /*font-size: 18px;*/
+  font-size: 16px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: color 0.15s ease-in-out,
+  background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out;
+}
+
+html, body {
+  color: var(--font);
+  background-color: var(--surface);
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 1856px;
+  margin: 0 auto;
+}

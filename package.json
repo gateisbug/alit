@@ -1,6 +1,7 @@
 {
+  "homepage": "https://gateisbug.github.io/alit/",
   "name": "alit",
-  "version": "0.1.0",
+  "version": "2.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

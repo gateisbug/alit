@@ -20,6 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
       "@assets/*": ["./src/assets/*"],
       "@ui/*": ["./src/ui/*"],
       "@ui": ["./src/ui/index.ts"],
