@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="code spliting / 404 error boundary">
-      <change afterPath="$PROJECT_DIR$/src/app/(main)/search-sc.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(main)/search.tsx" afterDir="false" />
+    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="modal ui 수정 / search button 클릭 시 modal이 표시되도록 추가">
+      <change afterPath="$PROJECT_DIR$/public/assets/close.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyze/nodejs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/links.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/links.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Modal/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search-sc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search-sc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +91,7 @@
       <workItem from="1715225033723" duration="11808000" />
       <workItem from="1715247917770" duration="5851000" />
       <workItem from="1715305384141" duration="6046000" />
-      <workItem from="1715317197575" duration="8588000" />
+      <workItem from="1715317197575" duration="9752000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -147,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715324042767</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="modal ui 수정 / search button 클릭 시 modal이 표시되도록 추가">
+      <option name="closed" value="true" />
+      <created>1715326215891</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715326215891</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +160,7 @@
     <MESSAGE value="add image, json assets" />
     <MESSAGE value="build optimize" />
     <MESSAGE value="code spliting / 404 error boundary" />
-    <option name="LAST_COMMIT_MESSAGE" value="code spliting / 404 error boundary" />
+    <MESSAGE value="modal ui 수정 / search button 클릭 시 modal이 표시되도록 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal ui 수정 / search button 클릭 시 modal이 표시되도록 추가" />
   </component>
 </project>
