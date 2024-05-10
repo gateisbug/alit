@@ -1,16 +1,25 @@
 "use client";
 
 import dynamic from 'next/dynamic';
+import { useState } from 'react';
 
+import AppBar from '@/app/(main)/appbar-sc';
 import { ArcaLiveLink, GithubLink, SearchButton } from '@app/(main)/links';
 
 const Image = dynamic(() => import('next/image'));
 const Logo = dynamic(() => import('@/app/(main)/logo-sc'));
-const AppBar = dynamic(() => import('@/app/(main)/appbar-sc'));
+const SearchModal = dynamic(() => import('@app/(main)/search'));
+
 
 export default function AppBarComponent() {
+  const [open, setOpen] = useState(false);
+
   const searchButtonClickHandler = () => {
-    console.log('open modal');
+    setOpen(true);
+  }
+
+  const closeModalHandler = () => {
+    setOpen(false);
   }
 
   return (
@@ -24,6 +33,8 @@ export default function AppBarComponent() {
         <ArcaLiveLink />
         <GithubLink />
       </div>
+
+      <SearchModal open={open} closeHandler={closeModalHandler} />
     </AppBar>
   )
 }

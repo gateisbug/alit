@@ -3,7 +3,7 @@
 import { createPortal } from 'react-dom';
 import styled from 'styled-components';
 
-import { ModalProps, px, THEME, useModal, useScrollBlock } from './preamble';
+import { ModalProps, px, THEME, useModal } from './preamble';
 
 const ModalBackdrop = styled.div.attrs({
   className: px('Backdrop'),
@@ -14,7 +14,7 @@ const ModalBackdrop = styled.div.attrs({
   bottom: 0;
   right: 0;
   background-color: ${({ theme }) => theme.backdrop};
-  z-index: 1000;
+  z-index: 1100;
 
   display: flex;
   flex-flow: row nowrap;
@@ -28,11 +28,26 @@ ModalBackdrop.defaultProps = {
 const ModalRoot = styled.div.attrs({
   className: px('Root'),
 })`
+  min-width: 0;
   width: 100%;
+  max-width: 60rem;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+
+  /* @device: Laptop */
+  @media (max-width: 1024px) {
+    min-width: 0;
+    max-width: calc(100vw - 4rem);
+  }
+  /* @device: MobileL */
+  @media (max-width: 425px) {
+    min-width: 0;
+    max-width: calc(100vw - 2rem);
+  }
+  
   background-color: ${({ theme }) => theme.surface};
   border-radius: 0.5rem; // 8px
   box-shadow: 0 0.25rem 1rem 0 ${({ theme }) => theme.shadow}; // 0 4px 16px 0
-  overflow-y: auto;
 `;
 ModalRoot.defaultProps = {
   theme: THEME,
@@ -58,7 +73,7 @@ const Modal = Object.assign(ModalComponent, {
   Backdrop: ModalBackdrop,
   Root: ModalRoot,
   hook: useModal,
-  scrollBlock: useScrollBlock,
+  // scrollBlock: useScrollBlock,
 });
 
 export default Modal;
