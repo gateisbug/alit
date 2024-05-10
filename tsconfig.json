@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["src/**/*.d.ts"],
+    "typeRoots": ["src/ui"],
+    "types": ["common.d.ts"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,

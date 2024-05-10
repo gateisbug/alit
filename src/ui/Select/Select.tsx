@@ -143,7 +143,7 @@ function SelectComponent({
         <SelectContoller readOnly value={inputValue} />
       </SelectField>
       <SelectBox theme={theme} $top={top} $open={open}>
-        {items?.map((v, i) => (
+        {items?.map((v) => (
           <SelectItem
             key={`select-item-${v.value}`}
             onClick={() => {

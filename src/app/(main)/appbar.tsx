@@ -34,11 +34,12 @@ const AppBar = styled.header`
 const Logo = styled.h1`
   height: fit-content;
   line-height: 0;
+  user-select: none;
 `;
 
 export default function AppBarComponent() {
   const searchButtonClickHandler = () => {
-    console.log('hello');
+    console.log('open modal');
   }
 
   return (

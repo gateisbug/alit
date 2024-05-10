@@ -1,8 +1,6 @@
+import dynamic from 'next/dynamic';
 import { Noto_Sans_KR } from "next/font/google";
 import { ReactNode } from 'react';
-
-import AppBarComponent from '@app/(main)/appbar';
-import { StyledComponentsRegistry } from '@util'
 
 import type { Metadata } from "next";
 
@@ -11,9 +9,13 @@ import "@assets/theme.css";
 import "@assets/globals.css";
 import "@assets/typography.css";
 
+const AppBar = dynamic(() => import('@/app/(main)/appbar'));
+const StyledComponentsRegistry = dynamic(() => import('@/util/registry'));
+
 const notoSansKR = Noto_Sans_KR({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
+  style: "normal",
   fallback: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"],
   display: 'swap'
 });
@@ -37,7 +39,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={notoSansKR.className}>
         <StyledComponentsRegistry>
-          <AppBarComponent />
+          <AppBar />
           {children}
         </StyledComponentsRegistry>
       </body>

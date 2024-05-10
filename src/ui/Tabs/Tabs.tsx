@@ -1,6 +1,6 @@
 'use client';
 
-import debounce from 'lodash/debounce';
+import debounce from 'lodash-es/debounce';
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import styled from 'styled-components';
 
@@ -99,7 +99,7 @@ function TabsComponent({ item, defaultValue }: TabsProps) {
   return (
     <TabContainer ref={containerRef}>
       <TabBox>
-        {item.map((v, i) => (
+        {item.map((v) => (
           <Tab
             key={`tab-root-${v.label}`}
             data-active={current === v.label}
