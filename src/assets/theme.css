@@ -14,6 +14,7 @@
     --hover-surface: 0, 0, 0, 0.03;
     --border-weak: #00000014;
     --border: #0000003A;
+    --hover-back: #0000007A;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -26,5 +27,6 @@
     --hover-surface: 255, 255, 255, 0.05;
     --border-weak: #FFFFFF14;
     --border: #FFFFFF3A;
+    --hover-back: #FFFFFF7A;
   }
 }

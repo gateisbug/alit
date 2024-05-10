@@ -1,7 +1,7 @@
 import { Noto_Sans_KR } from "next/font/google";
 import { ReactNode } from 'react';
 
-import AppBarComponent from '@app/(router)/appbar';
+import AppBarComponent from '@app/(main)/appbar';
 import { StyledComponentsRegistry } from '@util'
 
 import type { Metadata } from "next";
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   applicationName: "장비설명회 Web",
   keywords: ["azurlane", "벽람항로", "장비설명회"],
   icons: {
-    icon: 'assets/favicon.png',
+    icon: '/assets/favicon.png',
   }
 };
 

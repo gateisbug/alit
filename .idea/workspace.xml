@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/app/(router)/links.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(router)/search.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/item/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/item/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(router)/appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(router)/appbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(router)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(router)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(router)/appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(router)/links.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/links.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(router)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(router)/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/typography.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,23 +44,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "next",
-    "last_opened_file_path": "C:/peter/alit/public/assets",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "C:\\peter\\alit\\node_modules\\prettier",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "C:\\peter\\alit\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;next&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/peter/alit/public/assets&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\peter\\alit\\node_modules\\prettier&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\peter\\alit\\node_modules\\typescript\\lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\peter\alit\public\assets" />
@@ -91,6 +92,8 @@
       <updated>1715212400450</updated>
       <workItem from="1715212401833" duration="7348000" />
       <workItem from="1715225033723" duration="11808000" />
+      <workItem from="1715247917770" duration="5851000" />
+      <workItem from="1715305384141" duration="3202000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -108,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715236662664</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1715247957036</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715247957036</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
