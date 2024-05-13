@@ -29,21 +29,21 @@ const ModalRoot = styled.div.attrs({
   className: px('Root'),
 })`
   min-width: 0;
-  width: 100%;
-  max-width: 60rem;
-  max-height: calc(100vh - 8rem);
+  width: fit-content;
+  //max-width: 60rem;
+  //max-height: calc(100vh - 8rem);
   overflow-y: auto;
 
-  /* @device: Laptop */
-  @media (max-width: 1024px) {
-    min-width: 0;
-    max-width: calc(100vw - 4rem);
-  }
-  /* @device: MobileL */
-  @media (max-width: 425px) {
-    min-width: 0;
-    max-width: calc(100vw - 2rem);
-  }
+  ///* @device: Laptop */
+  //@media (max-width: 1024px) {
+  //  min-width: 0;
+  //  max-width: calc(100vw - 4rem);
+  //}
+  ///* @device: MobileL */
+  //@media (max-width: 425px) {
+  //  min-width: 0;
+  //  max-width: calc(100vw - 2rem);
+  //}
   
   background-color: ${({ theme }) => theme.surface};
   border-radius: 0.5rem; // 8px

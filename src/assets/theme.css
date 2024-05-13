@@ -11,10 +11,12 @@
     --font-strong: #101418;
     --font: #1c2025;
     --font-weak: #999999;
+    --font-tip: #576375;
     --hover-surface: 0, 0, 0, 0.03;
     --border-weak: #00000014;
     --border: #0000003A;
     --hover-back: #0000007A;
+    --link: #006bd6;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -24,9 +26,11 @@
     --font-strong: #f3f6f9;
     --font: #b0b8c4;
     --font-weak: #777777;
+    --font-tip: #98a4b3;
     --hover-surface: 255, 255, 255, 0.05;
     --border-weak: #FFFFFF14;
     --border: #FFFFFF3A;
     --hover-back: #FFFFFF7A;
+    --link: #66b3ff;
   }
 }
