@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { Button } from '@ui';
-
 // noinspection CssUnusedSymbol
 export const ModalBody = styled.div`
   display: flex;
@@ -25,19 +23,19 @@ export const ModalBody = styled.div`
   }
 `;
 
-export const CloseButton = styled(Button.Root)`
-  width: fit-content;
-  height: fit-content;
-  padding: 0.25rem;
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  border-radius: 0.75rem;
-  
-  &:not(:disabled):hover {
-    background-color: var(--border-weak);
-  }
-`;
+// export const CloseButton = styled(Button.Root)`
+//   width: fit-content;
+//   height: fit-content;
+//   padding: 0.25rem;
+//   position: absolute;
+//   top: 0.75rem;
+//   right: 0.75rem;
+//   border-radius: 0.75rem;
+//
+//   &:not(:disabled):hover {
+//     background-color: var(--border-weak);
+//   }
+// `;
 
 // noinspection CssUnusedSymbol
 export const SearchScreen = styled.div`

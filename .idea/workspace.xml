@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="search-close-button 추가">
-      <change afterPath="$PROJECT_DIR$/src/app/item/[category]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
+    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="ssr에서 use client를 사용하지 않고 pathname과 params에 접근할 수 있도록 수정">
+      <change afterPath="$PROJECT_DIR$/src/components/(main)/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/(main)/search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/search-sc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search-sc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/appbar-sc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/appbar-sc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/link-sc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/links.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/logo-sc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search-sc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/search-sc.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(main)/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Modal/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/links/button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/links/link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,37 +48,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;next&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/peter/alit/public&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\peter\\alit\\node_modules\\prettier&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\peter\\alit\\node_modules\\typescript\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "next",
+    "last_opened_file_path": "C:/peter/alit/src/components/(main)",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "C:\\peter\\alit\\node_modules\\prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "ts.external.directory.path": "C:\\peter\\alit\\node_modules\\typescript\\lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\peter\alit\src\components\(main)" />
       <recent name="C:\peter\alit\public" />
       <recent name="C:\peter\alit\public\assets" />
       <recent name="C:\peter\alit\src\assets" />
       <recent name="C:\peter\alit\src\ui" />
-      <recent name="C:\peter\alit\src\util" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\peter\alit\src\components\(main)" />
       <recent name="C:\peter\alit\src" />
       <recent name="C:\peter\alit\src\app" />
       <recent name="C:\peter\alit\src\assets" />
       <recent name="C:\peter\alit\src\assets\styles" />
-      <recent name="C:\peter\alit\src\app\test" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -94,7 +100,7 @@
       <workItem from="1715225033723" duration="11808000" />
       <workItem from="1715247917770" duration="5851000" />
       <workItem from="1715305384141" duration="6046000" />
-      <workItem from="1715317197575" duration="28286000" />
+      <workItem from="1715317197575" duration="30392000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -160,7 +166,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715327514482</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="search 디자인 수정">
+      <option name="closed" value="true" />
+      <created>1715582716205</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715582716205</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ssr에서 use client를 사용하지 않고 pathname과 params에 접근할 수 있도록 수정">
+      <option name="closed" value="true" />
+      <created>1715582848407</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715582848407</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +195,8 @@
     <MESSAGE value="code spliting / 404 error boundary" />
     <MESSAGE value="modal ui 수정 / search button 클릭 시 modal이 표시되도록 추가" />
     <MESSAGE value="search-close-button 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="search-close-button 추가" />
+    <MESSAGE value="search 디자인 수정" />
+    <MESSAGE value="ssr에서 use client를 사용하지 않고 pathname과 params에 접근할 수 있도록 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="ssr에서 use client를 사용하지 않고 pathname과 params에 접근할 수 있도록 수정" />
   </component>
 </project>

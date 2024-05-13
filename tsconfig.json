@@ -22,6 +22,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
+      "@components/*": ["./src/components/*"],
       "@assets/*": ["./src/assets/*"],
       "@ui/*": ["./src/ui/*"],
       "@ui": ["./src/ui/index.ts"],

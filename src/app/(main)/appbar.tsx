@@ -1,14 +1,9 @@
 "use client";
 
-import dynamic from 'next/dynamic';
+import { AppBar, ArcaLiveLink, GithubLink, SearchButton, Logo } from '@components/(main)';
 import { useState } from 'react';
 
-import AppBar from '@/app/(main)/appbar-sc';
-import { ArcaLiveLink, GithubLink, SearchButton } from '@app/(main)/links';
-
-const Image = dynamic(() => import('next/image'));
-const Logo = dynamic(() => import('@/app/(main)/logo-sc'));
-const SearchModal = dynamic(() => import('@app/(main)/search'));
+import SearchModal from '@app/(main)/search';
 
 
 export default function AppBarComponent() {
@@ -24,9 +19,7 @@ export default function AppBarComponent() {
 
   return (
     <AppBar>
-      <Logo>
-         <Image src='/assets/logo-m.png' alt="logo" width='32' height='32' priority />
-      </Logo>
+      <Logo />
 
       <div className='contents-box'>
         <SearchButton onClick={searchButtonClickHandler} />
