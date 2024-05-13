@@ -1,12 +1,15 @@
 "use client";
 
-import { AppBar, ArcaLiveLink, GithubLink, SearchButton, Logo } from '@components/(main)';
-import { useState } from 'react';
+import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-import SearchModal from '@app/(main)/search';
+import { AppBar, ArcaLiveLink, GithubLink, SearchButton, Logo } from '@/components/(main)';
+
+import SearchModal from './search';
 
 
 export default function AppBarComponent() {
+  const params = useParams();
   const [open, setOpen] = useState(false);
 
   const searchButtonClickHandler = () => {
@@ -16,6 +19,10 @@ export default function AppBarComponent() {
   const closeModalHandler = () => {
     setOpen(false);
   }
+
+  useEffect(() => {
+    setOpen(false);
+  }, [params])
 
   return (
     <AppBar>
