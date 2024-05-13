@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="폴더구조 변경">
-      <change afterPath="$PROJECT_DIR$/CHANGE.md" afterDir="false" />
+    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="CHANGE.md와 README.md 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(main)/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(main)/search-sc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/search-sc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(main)/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/search.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -91,7 +93,7 @@
       <workItem from="1715225033723" duration="11808000" />
       <workItem from="1715247917770" duration="5851000" />
       <workItem from="1715305384141" duration="6046000" />
-      <workItem from="1715317197575" duration="30919000" />
+      <workItem from="1715317197575" duration="32841000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -181,7 +183,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715584692442</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="폴더구조 변경">
+      <option name="closed" value="true" />
+      <created>1715585190561</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715585190561</updated>
+    </task>
+    <task id="LOCAL-00013" summary="CHANGE.md와 README.md 추가">
+      <option name="closed" value="true" />
+      <created>1715585207539</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715585207539</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +215,7 @@
     <MESSAGE value="search 디자인 수정" />
     <MESSAGE value="ssr에서 use client를 사용하지 않고 pathname과 params에 접근할 수 있도록 수정" />
     <MESSAGE value="폴더구조 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="폴더구조 변경" />
+    <MESSAGE value="CHANGE.md와 README.md 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHANGE.md와 README.md 추가" />
   </component>
 </project>

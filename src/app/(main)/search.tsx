@@ -1,4 +1,4 @@
-import { ModalBody, SearchLinks } from '@/components/(main)';
+import { ModalBody, SearchLinks, SearchInput } from '@/components/(main)';
 import { Modal as ModalUI } from '@ui';
 
 interface Props {
@@ -10,7 +10,7 @@ export default function Search({ open = false, closeHandler }:Props) {
   return (
     <ModalUI open={open} onClickAway={closeHandler}>
       <ModalBody>
-        <div>input field</div>
+        <SearchInput />
         <div>search result</div>
 
         <SearchLinks />

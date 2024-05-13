@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { ScrollView } from '@ui';
 
-import { SearchScreen } from './search-sc';
+import { SearchBar, SearchScreen } from './search-sc';
 
 const categories = [
   {
@@ -80,5 +81,29 @@ export function SearchLinks() {
         ))}
       </SearchScreen>
     </ScrollView>
+  )
+}
+
+export function SearchInput() {
+  return (
+    <SearchBar>
+      <div className='search-form'>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+        <label htmlFor='search-input'>
+          <Image width={24} height={24} src='/assets/search.svg' alt='검색' />
+        </label>
+        <input id='search-input'
+               autoComplete='off'
+               autoCorrect='off'
+               autoCapitalize='off'
+               enterKeyHint='search'
+               spellCheck='false'
+               placeholder='What are you looking for?'
+               type='search'
+               maxLength={64}
+        />
+      </div>
+      <button className='search-cancel' type="reset">Cancel</button>
+    </SearchBar>
   )
 }

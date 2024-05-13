@@ -1,6 +1,7 @@
+// noinspection CssUnusedSymbol
+
 import styled from 'styled-components';
 
-// noinspection CssUnusedSymbol
 export const ModalBody = styled.div`
   display: flex;
   flex-flow: column nowrap;
@@ -37,7 +38,6 @@ export const ModalBody = styled.div`
 //   }
 // `;
 
-// noinspection CssUnusedSymbol
 export const SearchScreen = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -74,9 +74,9 @@ export const SearchScreen = styled.div`
     cursor: pointer;
     //width: 100%;
     flex-grow: 1;
-    height: 2.625rem;
-    max-height: 2.625rem;
-    font-size: 0.875rem;
+    height: 2.625rem; // 42px;
+    max-height: 2.625rem; // 42px;
+    font-size: 0.875rem; // 14px;
     font-weight: 500;
     padding: 2px 0 2px 16px;
     border-radius: 12px;
@@ -103,3 +103,76 @@ export const SearchScreen = styled.div`
     }
   }
 `;
+
+export const SearchBar = styled.header`
+  display: flex;
+  border-bottom: 1px solid #dfe2e7;
+  padding: 4px 8px;
+  
+  & .search-form {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 12px;
+    position: relative;
+    width: 100%;
+    
+    & > label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    & > input {
+      padding-left: 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      
+      appearance: none;
+      background-color: transparent;
+      border: 0;
+      color: var(--font-strong);
+      flex: 1;
+      height: 100%;
+      outline: none;
+      width: 80%;
+      
+      &[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+  
+  & .search-cancel {
+    display: block;
+    align-self: center;
+    cursor: pointer;
+    height: 1.5rem;
+    margin-right: 8px;
+    padding: 2px 6px 4px;
+    font-size: 0;
+    border-radius: 6px;
+
+    &::before {
+      content: "esc";
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    
+    @media (prefers-color-scheme: light) {
+      background-color: #F6F7F8;
+      border: 1px solid #DFE2E7;
+      &::before {
+        color: #303741;
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      background-color: #14171A;
+      border: 1px solid #303840;
+      &::before {
+        color: #b6bec9;
+      }
+    }        
+  }
+`
