@@ -1,2 +1,2 @@
-export { default as Chip } from './Chip';
-export { type ChipProps } from './preamble';
+export { default as Chip } from './Chip'
+export { type ChipProps } from './preamble'

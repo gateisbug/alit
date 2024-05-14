@@ -1,31 +1,31 @@
-'use client';
+'use client'
 
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef } from 'react'
 
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
-import type { MouseEvent } from 'react';
+import type { MouseEvent } from 'react'
 
 export interface ModalTheme {
-  surface?: string;
-  backdrop?: string;
-  shadow?: string;
+  surface?: string
+  backdrop?: string
+  shadow?: string
 }
 
 export const THEME: ModalTheme = {
   backdrop: 'var(--backdrop, #0000007F)',
   surface: 'var(--surface, #fff)',
   shadow: 'var(--shadow, #00000099)',
-};
+}
 
 export interface ModalProps {
-  open: boolean;
-  onClickAway?: () => void;
-  theme?: ModalTheme;
+  open: boolean
+  onClickAway?: () => void
+  theme?: ModalTheme
   children?: NodeType
 }
 
-export const px = prefix('Modal');
+export const px = prefix('Modal')
 
 // export const useScrollBlock = (trigger: boolean, style?: string) => {
 //   useEffect(() => {
@@ -58,19 +58,19 @@ export const useModal = ({ onClickAway }: ModalProps) => {
   // const { open, onClickAway } = props;
   // useScrollBlock(open);
 
-  const backdropRef = useRef<HTMLDivElement>(null);
+  const backdropRef = useRef<HTMLDivElement>(null)
 
   const modelOnClickAway = useCallback(
     (e: MouseEvent<HTMLDivElement>) => {
       if (e.target === backdropRef.current && onClickAway !== undefined) {
-        onClickAway();
+        onClickAway()
       }
     },
     [onClickAway],
-  );
+  )
 
   return {
     backdropRef,
     onClickAway: modelOnClickAway,
-  };
-};
+  }
+}

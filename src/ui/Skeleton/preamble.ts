@@ -1,13 +1,13 @@
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
-export type SkeletonVarientType = 'text' | 'circle' | 'paragraph';
+export type SkeletonVarientType = 'text' | 'circle' | 'paragraph'
 
 export interface SkeletonTheme {
-  surface?: PreferScheme;
+  surface?: PreferScheme
 }
 
 export interface SkeletonRootTransientProps {
-  $varient?: SkeletonVarientType;
+  $varient?: SkeletonVarientType
 }
 
 export const THEME: SkeletonTheme = {
@@ -15,11 +15,11 @@ export const THEME: SkeletonTheme = {
     light: 'var(--surface, rgba(0, 0, 0, 0.11))',
     dark: 'var(--surface, rgba(255, 255, 255, 0.13))',
   },
-};
-
-export interface SkeletonProps {
-  varient?: SkeletonVarientType;
-  theme?: SkeletonTheme;
 }
 
-export const px = prefix('skeleton');
+export interface SkeletonProps {
+  varient?: SkeletonVarientType
+  theme?: SkeletonTheme
+}
+
+export const px = prefix('skeleton')

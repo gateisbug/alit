@@ -1,2 +1,2 @@
-export { default as Input } from './Input';
-export type { InputProps } from './preamble';
+export { default as Input } from './Input'
+export type { InputProps } from './preamble'

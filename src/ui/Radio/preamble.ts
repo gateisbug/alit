@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import { ChangeEvent } from 'react';
+import { ChangeEvent } from 'react'
 
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
 export interface RadioTheme {
-  primary?: string;
-  default?: PreferScheme;
-  disabled?: PreferScheme;
+  primary?: string
+  default?: PreferScheme
+  disabled?: PreferScheme
 }
 
 export const THEME: RadioTheme = {
@@ -20,19 +20,19 @@ export const THEME: RadioTheme = {
     light: 'var(--disabled, #00000042)',
     dark: 'var(--disabled, #ffffff4c)',
   },
-};
-
-export interface RadioProps {
-  checked?: boolean;
-  disabled?: boolean;
-  defaultChecked?: boolean;
-  name?: string;
-  onChange?: (e: ChangeEvent) => void;
-  require?: boolean;
-  readOnly?: boolean;
-  value?: string | readonly string[] | number;
-  theme?: RadioTheme;
-  children?: NodeType;
 }
 
-export const px = prefix('radio');
+export interface RadioProps {
+  checked?: boolean
+  disabled?: boolean
+  defaultChecked?: boolean
+  name?: string
+  onChange?: (e: ChangeEvent) => void
+  require?: boolean
+  readOnly?: boolean
+  value?: string | readonly string[] | number
+  theme?: RadioTheme
+  children?: NodeType
+}
+
+export const px = prefix('radio')

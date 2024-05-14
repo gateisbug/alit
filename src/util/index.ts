@@ -1,1 +1,1 @@
-export { default as StyledComponentsRegistry } from './registry';
+export { default as StyledComponentsRegistry } from './registry'

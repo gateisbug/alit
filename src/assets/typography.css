@@ -8,31 +8,40 @@
   color: var(--font-strong);
 }
 
-.fzm { /* font-size: megazine */
+.fzm {
+  /* font-size: megazine */
   font-size: 2rem;
 }
-.fzn { /* font-size: news */
+.fzn {
+  /* font-size: news */
   font-size: 1.75rem;
 }
-.fzh { /* font-size: headline */
+.fzh {
+  /* font-size: headline */
   font-size: 1.5rem;
 }
-.fzl { /* font-size: header */
+.fzl {
+  /* font-size: header */
   font-size: 1.25rem;
 }
-.fzs { /* font-size: subtitle */
+.fzs {
+  /* font-size: subtitle */
   font-size: 1.125rem;
 }
-.fzp { /* font-size: paragraph */
+.fzp {
+  /* font-size: paragraph */
   font-size: 1rem;
 }
-.fzb { /* font-size: body */
+.fzb {
+  /* font-size: body */
   font-size: 0.875rem;
 }
-.fza { /* font-size: annotation */
+.fza {
+  /* font-size: annotation */
   font-size: 0.75rem;
 }
-.fzc { /* font-size: caption */
+.fzc {
+  /* font-size: caption */
   font-size: 0.625rem;
 }
 

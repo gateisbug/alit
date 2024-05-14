@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 import {
   px,
   THEME,
   SkeletonRootTransientProps,
   SkeletonProps,
-} from './preamble';
+} from './preamble'
 
 const SkeletonRoot = styled.span.attrs({
   className: px('root'),
@@ -24,29 +24,27 @@ const SkeletonRoot = styled.span.attrs({
           border-radius: 0.25rem; // 4px
           transform-origin: 0 55%;
           transform: scale(1, 0.6);
-        `;
+        `
       case 'circle':
         return css`
           border-radius: 50%;
-        `;
+        `
       case 'paragraph':
       default:
         return css`
           border-radius: 0.25rem; // 4px
-        `;
+        `
     }
   }}
 
   & {
     @media (prefers-color-scheme: light) {
-      background-color: ${({ theme }) =>
-        theme.surface?.light};
+      background-color: ${({ theme }) => theme.surface?.light};
     }
 
     /*noinspection CssUnresolvedCustomProperty*/
     @media (prefers-color-scheme: dark) {
-      background-color: ${({ theme }) =>
-        theme.surface?.dark};
+      background-color: ${({ theme }) => theme.surface?.dark};
     }
   }
 
@@ -67,11 +65,11 @@ const SkeletonRoot = styled.span.attrs({
       opacity: 1;
     }
   }
-`;
+`
 
 SkeletonRoot.defaultProps = {
   theme: THEME,
-};
+}
 
 function SkeletonComponent({ varient, theme }: SkeletonProps) {
   return <SkeletonRoot $varient={varient} theme={theme} />
@@ -79,6 +77,6 @@ function SkeletonComponent({ varient, theme }: SkeletonProps) {
 
 const Skeleton = Object.assign(SkeletonComponent, {
   Root: SkeletonRoot,
-});
+})
 
-export default Skeleton;
+export default Skeleton

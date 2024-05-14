@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { CheckProps, DEFAULT_PROPS, px, THEME } from './preamble';
+import { CheckProps, DEFAULT_PROPS, px, THEME } from './preamble'
 
 // noinspection JSUnresolvedReference
 const CheckBox = styled.label.attrs({
@@ -17,17 +17,17 @@ const CheckBox = styled.label.attrs({
   &:has(input:disabled) {
     cursor: default;
   }
-`;
+`
 
 // noinspection JSUnresolvedReference
 const CheckRoot = styled.input.attrs({
   className: px('root'),
 })`
   display: none;
-`;
+`
 CheckRoot.defaultProps = {
   type: DEFAULT_PROPS.type,
-};
+}
 
 // noinspection JSUnresolvedReference,CssUnknownProperty
 const CheckMark = styled.div.attrs({
@@ -75,10 +75,10 @@ const CheckMark = styled.div.attrs({
       'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z'
     );
   }
-`;
+`
 CheckMark.defaultProps = {
   theme: THEME,
-};
+}
 
 function CheckComponent({
   children,
@@ -94,31 +94,34 @@ function CheckComponent({
   theme,
   ...rootProps
 }: CheckProps) {
-  return <CheckBox>
-    <CheckRoot type='checkbox'
-               checked={rootProps?.checked}
-               disabled={rootProps?.disabled}
-               defaultChecked={rootProps?.defaultChecked}
-               multiple={rootProps?.multiple}
-               name={rootProps?.name}
-               value={rootProps?.value}
-               onChange={rootProps?.onChange}
-               required={rootProps?.required}
-               readOnly={rootProps?.readOnly}
-    />
-    <CheckMark theme={theme}>
-      <svg focusable='false' aria-hidden='true' viewBox='0 0 24 24'>
-        <path fill='currentColor' />
-      </svg>
-    </CheckMark>
-    {children}
-  </CheckBox>
+  return (
+    <CheckBox>
+      <CheckRoot
+        type='checkbox'
+        checked={rootProps?.checked}
+        disabled={rootProps?.disabled}
+        defaultChecked={rootProps?.defaultChecked}
+        multiple={rootProps?.multiple}
+        name={rootProps?.name}
+        value={rootProps?.value}
+        onChange={rootProps?.onChange}
+        required={rootProps?.required}
+        readOnly={rootProps?.readOnly}
+      />
+      <CheckMark theme={theme}>
+        <svg focusable='false' aria-hidden='true' viewBox='0 0 24 24'>
+          <path fill='currentColor' />
+        </svg>
+      </CheckMark>
+      {children}
+    </CheckBox>
+  )
 }
 
 const Check = Object.assign(CheckComponent, {
   Box: CheckBox,
   Root: CheckRoot,
   Mark: CheckMark,
-});
+})
 
-export default Check;
+export default Check

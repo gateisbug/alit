@@ -1,9 +1,9 @@
-import { headers } from 'next/headers';
+import { headers } from 'next/headers'
 
 export default function page() {
-  const headersList = headers();
-  const headerPathname = headersList.get('x-pathname') || "";
-  const headerParams = headersList.get('x-params') || "";
+  const headersList = headers()
+  const headerPathname = headersList.get('x-pathname') || ''
+  const headerParams = headersList.get('x-params') || ''
 
   return (
     <div>

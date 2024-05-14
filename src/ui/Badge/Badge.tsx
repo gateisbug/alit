@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 import {
   type BadgeRootTransientProps,
@@ -9,7 +9,7 @@ import {
   DEFAULT_PROPS,
   type BadgeProps,
   useBadge,
-} from './preamble';
+} from './preamble'
 
 // noinspection JSUnresolvedReference
 const BadgeBox = styled.span.attrs({
@@ -19,7 +19,7 @@ const BadgeBox = styled.span.attrs({
   display: inline-block;
   width: fit-content;
   height: fit-content;
-`;
+`
 
 // noinspection JSUnresolvedReference
 const BadgeRoot = styled.span.attrs({
@@ -52,12 +52,12 @@ const BadgeRoot = styled.span.attrs({
         font-size: 0.75rem; // 12px
         padding: 0.25rem 0.5rem; // 4px 8px
         border-radius: 0.75rem; // 12px
-      `;
+      `
     return css`
-        width: 0.5rem; // 8px
-        height: 0.5rem; // 8px
-        border-radius: 0.25rem; // 4px
-      `;
+      width: 0.5rem; // 8px
+      height: 0.5rem; // 8px
+      border-radius: 0.25rem; // 4px
+    `
   }}
 
   // vertical | horizontal
@@ -65,16 +65,16 @@ const BadgeRoot = styled.span.attrs({
     if ($vertical === 'top')
       return $horizontal === 'right'
         ? 'translate(50%, -50%)'
-        : 'translate(-50%, -50%)';
+        : 'translate(-50%, -50%)'
     return $horizontal === 'right'
-        ? 'translate(50%, 50%)'
-        : 'translate(-50%, 50%)';
+      ? 'translate(50%, 50%)'
+      : 'translate(-50%, 50%)'
   }};
   top: ${({ $vertical }) => ($vertical === 'top' ? '0' : 'auto')};
   bottom: ${({ $vertical }) => ($vertical === 'bottom' ? '0' : 'auto')};
   right: ${({ $horizontal }) => ($horizontal === 'right' ? '0' : 'auto')};
   left: ${({ $horizontal }) => ($horizontal === 'left' ? '0' : 'auto')};
-`;
+`
 
 BadgeRoot.defaultProps = {
   $show: DEFAULT_PROPS.show,
@@ -82,7 +82,7 @@ BadgeRoot.defaultProps = {
   $vertical: DEFAULT_PROPS.vertical,
   $horizontal: DEFAULT_PROPS.horizontal,
   theme: THEME,
-};
+}
 
 function BadgeComponent({
   show = DEFAULT_PROPS.show,
@@ -98,7 +98,7 @@ function BadgeComponent({
     variant,
     content,
     max,
-  });
+  })
 
   return (
     <BadgeBox>
@@ -113,13 +113,13 @@ function BadgeComponent({
         {contents}
       </BadgeRoot>
     </BadgeBox>
-  );
+  )
 }
 
 const Badge = Object.assign(BadgeComponent, {
   Box: BadgeBox,
   Root: BadgeRoot,
   hook: useBadge,
-});
+})
 
-export default Badge;
+export default Badge

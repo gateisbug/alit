@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 // noinspection CssUnusedSymbol
 const AppBar = styled.header`
@@ -24,6 +24,6 @@ const AppBar = styled.header`
     flex-flow: row nowrap;
     gap: 0.5rem;
   }
-`;
+`
 
-export default AppBar;
+export default AppBar

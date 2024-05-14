@@ -1,19 +1,19 @@
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
 export interface TabsTheme {
-  primary?: string;
+  primary?: string
 }
 
 export const THEME: TabsTheme = {
   primary: 'var(--primary, #ffb74d)',
-};
+}
 
 export interface TabsProps {
   item: Array<{
-    label: string;
-    render?: NodeType;
-  }>;
-  defaultValue?: string;
+    label: string
+    render?: NodeType
+  }>
+  defaultValue?: string
 }
 
-export const px = prefix('tabs');
+export const px = prefix('tabs')

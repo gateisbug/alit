@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import {
   CircularProgressBlockTransientProps,
   CircularProgressProps,
   px,
   THEME,
-} from './preamble';
+} from './preamble'
 
 const CircularProgressBox = styled.div.attrs({
   className: px('box'),
 })`
   display: flex;
-`;
+`
 
 const CircularProgressBlock = styled.div.attrs({
   className: px('block'),
@@ -24,12 +24,12 @@ const CircularProgressBlock = styled.div.attrs({
   animation: 1.4s linear 0s infinite normal none running rotate;
 
   ${({ $width, $height }) => {
-    const w = typeof $width === 'number' ? `${$width  }px` : $width;
-    const h = typeof $height === 'number' ? `${$height  }px` : $height;
+    const w = typeof $width === 'number' ? `${$width}px` : $width
+    const h = typeof $height === 'number' ? `${$height}px` : $height
     return `
       width: ${w};
       height: ${h};
-    `;
+    `
   }};
 
   @keyframes rotate {
@@ -40,18 +40,18 @@ const CircularProgressBlock = styled.div.attrs({
       transform: rotate(360deg);
     }
   }
-`;
+`
 CircularProgressBlock.defaultProps = {
   $width: 40,
   $height: 40,
   theme: THEME,
-};
+}
 
 const CircularProgressRoot = styled.svg.attrs({
   className: px('root'),
 })`
   display: block;
-`;
+`
 
 const CircularProgressSpinner = styled.circle.attrs({
   className: px('spinner'),
@@ -75,7 +75,7 @@ const CircularProgressSpinner = styled.circle.attrs({
       stroke-dashoffset: -7.8125rem; /* -125px */
     }
   }
-`;
+`
 
 function CircularProgressComponent({
   width = 40,
@@ -96,7 +96,7 @@ function CircularProgressComponent({
         </CircularProgressRoot>
       </CircularProgressBlock>
     </CircularProgressBox>
-  );
+  )
 }
 
 export const CircularProgress = Object.assign(CircularProgressComponent, {
@@ -104,4 +104,4 @@ export const CircularProgress = Object.assign(CircularProgressComponent, {
   Block: CircularProgressBlock,
   Root: CircularProgressRoot,
   Circle: CircularProgressSpinner,
-});
+})

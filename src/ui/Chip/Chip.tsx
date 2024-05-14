@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 import {
   px,
@@ -8,7 +8,7 @@ import {
   ChipRootTransientProps,
   DEFAULT_PROPS,
   ChipProps,
-} from './preamble';
+} from './preamble'
 
 const ChipRoot = styled.span.attrs({
   className: px('root'),
@@ -35,40 +35,42 @@ const ChipRoot = styled.span.attrs({
           border-color: ${({ theme }) => theme.primary};
           background-color: ${({ theme }) => theme.primary};
           color: ${({ theme }) => theme.onPrimary};
-        `;
+        `
       case 'line':
         return css`
           border-color: ${({ theme }) => theme.primary};
           background-color: transparent;
           color: ${({ theme }) => theme.primary};
-        `;
+        `
       case 'text':
       default:
         return css`
           color: ${({ theme }) => theme.primary};
           border-color: transparent;
           background-color: transparent;
-        `;
+        `
     }
   }}
-`;
+`
 ChipRoot.defaultProps = {
   $variant: DEFAULT_PROPS.variant,
   theme: THEME,
-};
+}
 
 function ChipComponent({
   variant = DEFAULT_PROPS.variant,
   children,
   theme,
 }: ChipProps) {
-  return <ChipRoot $variant={variant} theme={theme}>
-    {children}
-  </ChipRoot>
+  return (
+    <ChipRoot $variant={variant} theme={theme}>
+      {children}
+    </ChipRoot>
+  )
 }
 
 const Chip = Object.assign(ChipComponent, {
   Root: ChipRoot,
-});
+})
 
-export default Chip;
+export default Chip

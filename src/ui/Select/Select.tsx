@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 import {
   px,
@@ -8,7 +8,8 @@ import {
   SelectProps,
   SelectBoxTransientProps,
   useSelect,
-  useClickAway, SelectFieldTransientProps,
+  useClickAway,
+  SelectFieldTransientProps,
 } from './preamble'
 
 const SelectForm = styled.div.attrs({
@@ -17,7 +18,7 @@ const SelectForm = styled.div.attrs({
   display: flex;
   flex-flow: column nowrap;
   position: relative;
-`;
+`
 
 const SelectField = styled.div.attrs({
   className: px('field'),
@@ -25,48 +26,49 @@ const SelectField = styled.div.attrs({
   padding: 0.75rem 1rem; // 12px 16px
   border-radius: 0.25rem; // 4px
   border: 0.0625rem solid transparent; // 1px
-  
+
   ${({ $minWidth }) => {
-    if(typeof $minWidth === 'number') {
-      return css`min-width: ${$minWidth}px;`
+    if (typeof $minWidth === 'number') {
+      return css`
+        min-width: ${$minWidth}px;
+      `
     }
-    if(typeof $minWidth === 'string' && $minWidth.length > 0) {
-      return css`min-width: ${$minWidth};`
+    if (typeof $minWidth === 'string' && $minWidth.length > 0) {
+      return css`
+        min-width: ${$minWidth};
+      `
     }
-    
-      return undefined;
-    
+
+    return undefined
   }}
-  
+
   & {
     @media (prefers-color-scheme: light) {
-      background-color: ${({ theme }) =>
-        theme.surface.light};
+      background-color: ${({ theme }) => theme.surface.light};
       border-color: ${({ theme }) => theme.border.light};
     }
     @media (prefers-color-scheme: dark) {
-      background-color: ${({ theme }) =>
-        theme.surface.dark};
+      background-color: ${({ theme }) => theme.surface.dark};
       border-color: ${({ theme }) => theme.border.dark};
     }
   }
-`;
+`
 SelectField.defaultProps = {
   theme: THEME,
-};
+}
 
 const SelectPlaceholder = styled.span.attrs({
   className: px('placeholder'),
 })`
   color: ${({ theme }) => theme.placeholder};
-`;
+`
 SelectPlaceholder.defaultProps = {
   theme: THEME,
-};
+}
 
 const SelectContoller = styled.input`
   display: none;
-`;
+`
 
 const SelectBox = styled.ul.attrs({
   className: px('Box'),
@@ -85,26 +87,24 @@ const SelectBox = styled.ul.attrs({
 
   & {
     @media (prefers-color-scheme: light) {
-      background-color: ${({ theme }) =>
-        theme.surface.light};
+      background-color: ${({ theme }) => theme.surface.light};
       border-color: ${({ theme }) => theme.border.light};
     }
     @media (prefers-color-scheme: dark) {
-      background-color: ${({ theme }) =>
-        theme.surface.dark};
+      background-color: ${({ theme }) => theme.surface.dark};
       border-color: ${({ theme }) => theme.border.dark};
     }
   }
-`;
+`
 SelectBox.defaultProps = {
   theme: THEME,
-};
+}
 
 const SelectItem = styled.li.attrs({
   className: px('Item'),
 })`
   list-style: none;
-`;
+`
 
 function SelectComponent({
   // open,
@@ -128,7 +128,7 @@ function SelectComponent({
     children,
     onChange,
     defaultValue,
-  });
+  })
 
   return (
     <SelectForm ref={formRef}>
@@ -147,7 +147,7 @@ function SelectComponent({
           <SelectItem
             key={`select-item-${v.value}`}
             onClick={() => {
-              onClickItem(v);
+              onClickItem(v)
             }}
           >
             {v.label ?? v.value}
@@ -155,7 +155,7 @@ function SelectComponent({
         ))}
       </SelectBox>
     </SelectForm>
-  );
+  )
 }
 
 const Select = Object.assign(SelectComponent, {
@@ -166,6 +166,6 @@ const Select = Object.assign(SelectComponent, {
   Item: SelectItem,
   clickAway: useClickAway,
   hook: useSelect,
-});
+})
 
-export default Select;
+export default Select

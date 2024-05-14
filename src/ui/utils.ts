@@ -1,5 +1,5 @@
 export function prefix(name: string) {
-  return (str: string) => `kit-${name}-${str}`;
+  return (str: string) => `kit-${name}-${str}`
 }
 
 // type PossibleClassNameType =

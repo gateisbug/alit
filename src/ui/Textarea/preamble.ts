@@ -1,17 +1,17 @@
-'use client';
+'use client'
 
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef } from 'react'
 
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
-import type { ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react'
 
 export interface TextareaTheme {
-  primary?: string;
-  border?: PreferScheme;
-  invalid?: PreferScheme;
-  placeholder?: string;
-  disabled?: PreferScheme;
+  primary?: string
+  border?: PreferScheme
+  invalid?: PreferScheme
+  placeholder?: string
+  disabled?: PreferScheme
 }
 
 export const THEME: TextareaTheme = {
@@ -29,61 +29,65 @@ export const THEME: TextareaTheme = {
     light: 'var(--disabled, #00000042)',
     dark: 'var(--disabled, #FFFFFF4C)',
   },
-};
-
-export interface TextareaProps {
-  autoFocus?: boolean;
-  autoResize?: boolean;
-  defaultValue?: string | number | readonly string[];
-  disabled?: boolean;
-  maxHeight?: number;
-  onChange?: (e: ChangeEvent) => void;
-  placeholder?: string;
-  readOnly?: boolean;
-  required?: boolean;
-  value?: string | number | readonly string[];
-  rows?: number;
-  theme?: TextareaTheme;
 }
 
-export const px = prefix('textarea');
+export interface TextareaProps {
+  autoFocus?: boolean
+  autoResize?: boolean
+  defaultValue?: string | number | readonly string[]
+  disabled?: boolean
+  maxHeight?: number
+  onChange?: (e: ChangeEvent) => void
+  placeholder?: string
+  readOnly?: boolean
+  required?: boolean
+  value?: string | number | readonly string[]
+  rows?: number
+  theme?: TextareaTheme
+}
+
+export const px = prefix('textarea')
 
 export const DEFAULT_PROPS = {
   rows: 1,
   autoResize: true,
-};
+}
 
-export const useTextarea = ({ autoResize, maxHeight, onChange }: TextareaProps) => {
-  const internalRef = useRef<HTMLTextAreaElement>(null);
+export const useTextarea = ({
+  autoResize,
+  maxHeight,
+  onChange,
+}: TextareaProps) => {
+  const internalRef = useRef<HTMLTextAreaElement>(null)
 
   const resizeInChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement>) => {
-      const textarea = internalRef.current;
+      const textarea = internalRef.current
       if (autoResize && textarea) {
-        textarea.style.height = 'auto';
+        textarea.style.height = 'auto'
         const newHeight = maxHeight
           ? Math.min(textarea.scrollHeight, maxHeight)
-          : textarea.scrollHeight;
-        textarea.style.height = `${newHeight  }px`;
+          : textarea.scrollHeight
+        textarea.style.height = `${newHeight}px`
 
-        if (maxHeight === undefined) textarea.style.overflowY = 'hidden';
+        if (maxHeight === undefined) textarea.style.overflowY = 'hidden'
         else {
           textarea.style.overflowY =
             e.target.value.length > 0 && textarea.scrollHeight > maxHeight
               ? 'auto'
-              : 'hidden';
+              : 'hidden'
         }
       }
 
-      if(onChange) {
+      if (onChange) {
         onChange(e)
       }
     },
     [autoResize, maxHeight, onChange],
-  );
+  )
 
   return {
     internalRef,
     resizeInChange,
-  };
-};
+  }
+}

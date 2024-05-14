@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import {
   useRef,
@@ -6,21 +6,21 @@ import {
   useEffect,
   useState,
   useCallback,
-} from 'react';
+} from 'react'
 
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
-import type { Dispatch, SetStateAction, ForwardedRef } from 'react';
+import type { Dispatch, SetStateAction, ForwardedRef } from 'react'
 
 export interface SelectTheme {
-  placeholder?: string;
-  surface?: PreferScheme;
-  border?: PreferScheme;
+  placeholder?: string
+  surface?: PreferScheme
+  border?: PreferScheme
 }
 
 export interface SelectBoxTransientProps {
-  $open?: boolean;
-  $top?: string;
+  $open?: boolean
+  $top?: string
 }
 
 export const THEME: SelectTheme = {
@@ -33,38 +33,38 @@ export const THEME: SelectTheme = {
     light: 'var(--border, #0000003A)',
     dark: 'var(--border, #FFFFFF3A)',
   },
-};
+}
 
 export interface SelectProps {
   // open?: boolean;
-  items?: SelectItemType[];
-  multiple?: boolean;
-  top?: string;
-  placeholder?: string;
-  theme?: SelectTheme;
-  onChange?: (value: string) => void;
-  defaultValue?: string;
-  children?: NodeType;
-  minWidth?: string | number;
+  items?: SelectItemType[]
+  multiple?: boolean
+  top?: string
+  placeholder?: string
+  theme?: SelectTheme
+  onChange?: (value: string) => void
+  defaultValue?: string
+  children?: NodeType
+  minWidth?: string | number
 }
 
 export interface SelectFieldTransientProps {
-  $minWidth?: string | number;
+  $minWidth?: string | number
 }
 
 export type SelectItemType = {
-  label?: NodeType;
-  value: string | number | boolean | null;
-};
+  label?: NodeType
+  value: string | number | boolean | null
+}
 
-export const px = prefix('select');
+export const px = prefix('select')
 
 export const useClickAway = (
   setOpen: Dispatch<SetStateAction<boolean>>,
   forwardRef?: ForwardedRef<HTMLDivElement>,
 ) => {
-  const formRef = useRef<HTMLDivElement>(null);
-  useImperativeHandle(forwardRef, () => formRef.current!);
+  const formRef = useRef<HTMLDivElement>(null)
+  useImperativeHandle(forwardRef, () => formRef.current!)
   useEffect(() => {
     const clickAway = (event: MouseEvent) => {
       if (!formRef?.current?.contains(event.target as HTMLElement)) {
@@ -76,48 +76,52 @@ export const useClickAway = (
     return () => {
       document.removeEventListener('click', clickAway)
     }
-  }, [setOpen]);
+  }, [setOpen])
 
-  return formRef;
-};
+  return formRef
+}
 
-export const useSelect = ({ defaultValue, multiple, onChange }: SelectProps) => {
-  const [open, setOpen] = useState<boolean>(false);
+export const useSelect = ({
+  defaultValue,
+  multiple,
+  onChange,
+}: SelectProps) => {
+  const [open, setOpen] = useState<boolean>(false)
   const onFieldClick = useCallback(() => {
-    setOpen(!open);
-  }, [open]);
+    setOpen(!open)
+  }, [open])
 
-  const formRef = useClickAway(setOpen);
-  const [inputValue, setInputValue] = useState(defaultValue ?? '');
+  const formRef = useClickAway(setOpen)
+  const [inputValue, setInputValue] = useState(defaultValue ?? '')
   const onClickItem = useCallback(
     (item: SelectItemType) => {
       if (!multiple) {
-        setInputValue((item.value ?? '').toString());
-        setOpen(false);
+        setInputValue((item.value ?? '').toString())
+        setOpen(false)
       } else {
         setInputValue((prev) => {
-          const values = prev.length > 0 ? prev.split(',,') : [];
-          const inputs = (item.value ?? '').toString();
+          const values = prev.length > 0 ? prev.split(',,') : []
+          const inputs = (item.value ?? '').toString()
 
-          const fIndex = values.findIndex((v) => v === inputs);
+          const fIndex = values.findIndex((v) => v === inputs)
           if (fIndex > -1) {
-            values.splice(fIndex, 1);
+            values.splice(fIndex, 1)
           } else {
-            values.push((item.value ?? '').toString());
+            values.push((item.value ?? '').toString())
           }
 
-          return values.join(',,');
-        });
+          return values.join(',,')
+        })
       }
     },
     [multiple],
-  );
+  )
 
   useEffect(() => {
-    if(onChange) {
+    if (onChange) {
       onChange(inputValue)
     }
-  }, [inputValue, onChange]);
+  }, [inputValue, onChange])
 
   return {
     formRef,
@@ -125,5 +129,5 @@ export const useSelect = ({ defaultValue, multiple, onChange }: SelectProps) => 
     inputValue,
     onClickItem,
     onFieldClick,
-  };
-};
+  }
+}

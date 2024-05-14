@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import {
   TextareaProps,
@@ -8,7 +8,7 @@ import {
   THEME,
   DEFAULT_PROPS,
   useTextarea,
-} from './preamble';
+} from './preamble'
 
 export const TextareaBox = styled.label.attrs({
   className: px('box'),
@@ -47,10 +47,10 @@ export const TextareaBox = styled.label.attrs({
       }
     }
   }
-`;
+`
 TextareaBox.defaultProps = {
   theme: THEME,
-};
+}
 
 export const TextareaRoot = styled.textarea.attrs({
   className: px('root'),
@@ -83,12 +83,12 @@ export const TextareaRoot = styled.textarea.attrs({
     border: none;
     outline: none;
   }
-`;
+`
 
 TextareaRoot.defaultProps = {
   rows: DEFAULT_PROPS.rows,
   theme: THEME,
-};
+}
 
 function TextareaComponent({
   rows = DEFAULT_PROPS.rows,
@@ -102,7 +102,7 @@ function TextareaComponent({
     onChange,
     autoResize,
     maxHeight,
-  });
+  })
 
   return (
     <TextareaBox theme={theme}>
@@ -120,13 +120,13 @@ function TextareaComponent({
         value={rootProps?.value}
       />
     </TextareaBox>
-  );
+  )
 }
 
 const Textarea = Object.assign(TextareaComponent, {
   Box: TextareaBox,
   Root: TextareaRoot,
   hook: useTextarea,
-});
+})
 
-export default Textarea;
+export default Textarea

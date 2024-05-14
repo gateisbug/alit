@@ -1,14 +1,13 @@
-'use client';
+'use client'
 
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
-import type { ChangeEvent } from 'react';
-
+import type { ChangeEvent } from 'react'
 
 export interface CheckboxTheme {
-  primary?: string;
-  default?: PreferScheme;
-  disabled?: PreferScheme;
+  primary?: string
+  default?: PreferScheme
+  disabled?: PreferScheme
 }
 
 export const THEME: CheckboxTheme = {
@@ -21,23 +20,23 @@ export const THEME: CheckboxTheme = {
     light: 'var(--disabled, #00000042)',
     dark: 'var(--disabled, #FFFFFF4C)',
   },
-};
-
-export interface CheckProps {
-  checked?: boolean;
-  disabled?: boolean;
-  defaultChecked?: boolean;
-  multiple?: boolean;
-  name?: string;
-  value?: string | readonly string[] | number;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-  required?: boolean;
-  readOnly?: boolean;
-  children?: NodeType;
-  theme?: CheckboxTheme;
 }
 
-export const px = prefix('check');
+export interface CheckProps {
+  checked?: boolean
+  disabled?: boolean
+  defaultChecked?: boolean
+  multiple?: boolean
+  name?: string
+  value?: string | readonly string[] | number
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+  required?: boolean
+  readOnly?: boolean
+  children?: NodeType
+  theme?: CheckboxTheme
+}
+
+export const px = prefix('check')
 
 export const DEFAULT_PROPS = {
   type: 'checkbox',
@@ -45,4 +44,4 @@ export const DEFAULT_PROPS = {
   vertical: 'top' as VerticalType,
   horizontal: 'right' as HorizontalType,
   max: 99,
-};
+}

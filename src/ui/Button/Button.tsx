@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 import {
   px,
@@ -8,7 +8,7 @@ import {
   ButtonRootTransientProps,
   ButtonProps,
   DEFAULT_PROPS,
-} from './preamble';
+} from './preamble'
 
 // noinspection JSUnresolvedReference
 const ButtonRoot = styled.button.attrs({
@@ -51,12 +51,10 @@ const ButtonRoot = styled.button.attrs({
           color: ${({ theme }) => theme.onPrimary};
           &:not(:disabled):hover,
           &:not(:disabled):focus {
-            border-color: ${({ theme }) =>
-              theme.primaryHover};
-            background-color: ${({ theme }) =>
-              theme.primaryHover};
+            border-color: ${({ theme }) => theme.primaryHover};
+            background-color: ${({ theme }) => theme.primaryHover};
           }
-        `;
+        `
       case 'line':
         return css`
           border-color: ${({ theme }) => theme.primary};
@@ -64,11 +62,10 @@ const ButtonRoot = styled.button.attrs({
           color: ${({ theme }) => theme.primary};
           &:not(:disabled):hover,
           &:not(:disabled):focus {
-            border-color: ${({ theme }) =>
-              theme.primaryHover};
+            border-color: ${({ theme }) => theme.primaryHover};
             color: ${({ theme }) => theme.primaryHover};
           }
-        `;
+        `
       case 'text':
       default:
         return css`
@@ -81,7 +78,7 @@ const ButtonRoot = styled.button.attrs({
             color: ${({ theme }) => theme.primary};
             background-color: transparent;
           }
-        `;
+        `
     }
   }}
 
@@ -96,8 +93,7 @@ const ButtonRoot = styled.button.attrs({
           border-color: transparent;
           background-color: ${theme.disabled.light};
         `}
-      color: ${({ theme }) =>
-        theme.onDisabled.light};
+      color: ${({ theme }) => theme.onDisabled.light};
     }
 
     @media (prefers-color-scheme: dark) {
@@ -110,14 +106,14 @@ const ButtonRoot = styled.button.attrs({
       color: ${({ theme }) => theme.onDisabled.dark};
     }
   }
-`;
+`
 
 ButtonRoot.defaultProps = {
   $variant: DEFAULT_PROPS.variant,
   $fullWidth: DEFAULT_PROPS.fullWidth,
   disabled: DEFAULT_PROPS.disabled,
   theme: THEME,
-};
+}
 
 function ButtonComponent({
   children,
@@ -127,19 +123,21 @@ function ButtonComponent({
   theme = THEME,
   onClick,
 }: ButtonProps) {
-  return <ButtonRoot
-    $variant={variant}
-    $fullWidth={fullWidth}
-    disabled={disabled}
-    theme={theme}
-    onClick={onClick}
-  >
-    {children}
-  </ButtonRoot>
+  return (
+    <ButtonRoot
+      $variant={variant}
+      $fullWidth={fullWidth}
+      disabled={disabled}
+      theme={theme}
+      onClick={onClick}
+    >
+      {children}
+    </ButtonRoot>
+  )
 }
 
 const Button = Object.assign(ButtonComponent, {
   Root: ButtonRoot,
-});
+})
 
-export default Button;
+export default Button

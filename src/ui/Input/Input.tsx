@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { THEME, px, InputProps, DEFAULT_PROPS } from './preamble';
+import { THEME, px, InputProps, DEFAULT_PROPS } from './preamble'
 
 const InputBox = styled.label.attrs({
   className: px('box'),
@@ -31,22 +31,20 @@ const InputBox = styled.label.attrs({
     @media (prefers-color-scheme: light) {
       border-color: ${({ theme }) => theme.border.light};
       &:has(:invalid) {
-        border-color: ${({ theme }) =>
-          theme.invalid.light};
+        border-color: ${({ theme }) => theme.invalid.light};
       }
     }
     @media (prefers-color-scheme: dark) {
       border-color: ${({ theme }) => theme.border.dark};
       &:has(:invalid) {
-        border-color: ${({ theme }) =>
-          theme.invalid.dark};
+        border-color: ${({ theme }) => theme.invalid.dark};
       }
     }
   }
-`;
+`
 InputBox.defaultProps = {
   theme: THEME,
-};
+}
 
 const InputRoot = styled.input.attrs({
   className: px('root'),
@@ -90,26 +88,27 @@ const InputRoot = styled.input.attrs({
   &[type='number'] {
     -moz-appearance: textfield;
   }
-`;
+`
 InputRoot.defaultProps = {
   type: DEFAULT_PROPS.type,
   theme: THEME,
-};
+}
 
 function InputComponent({ type = 'text', theme, ...rootProps }: InputProps) {
   return (
     <InputBox theme={theme}>
-      <InputRoot type={type}
-                 theme={theme}
-                 autoFocus={rootProps?.autoFocus}
-                 defaultValue={rootProps?.defaultValue}
-                 disabled={rootProps?.disabled}
-                 onChange={rootProps?.onChange}
-                 pattern={rootProps?.pattern}
-                 placeholder={rootProps?.placeholder}
-                 readOnly={rootProps?.readOnly}
-                 required={rootProps?.required}
-                 value={rootProps?.value}
+      <InputRoot
+        type={type}
+        theme={theme}
+        autoFocus={rootProps?.autoFocus}
+        defaultValue={rootProps?.defaultValue}
+        disabled={rootProps?.disabled}
+        onChange={rootProps?.onChange}
+        pattern={rootProps?.pattern}
+        placeholder={rootProps?.placeholder}
+        readOnly={rootProps?.readOnly}
+        required={rootProps?.required}
+        value={rootProps?.value}
       />
     </InputBox>
   )
@@ -118,6 +117,6 @@ function InputComponent({ type = 'text', theme, ...rootProps }: InputProps) {
 const Input = Object.assign(InputComponent, {
   Box: InputBox,
   Root: InputRoot,
-});
+})
 
-export default Input;
+export default Input

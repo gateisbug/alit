@@ -1,6 +1,6 @@
 // noinspection CssUnusedSymbol
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ModalBody = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ export const ModalBody = styled.div`
     scrollbar-width: thin;
     scrollbar-color: #6c7c93 transparent;
   }
-`;
+`
 
 // export const CloseButton = styled(Button.Root)`
 //   width: fit-content;
@@ -45,16 +45,16 @@ export const SearchScreen = styled.div`
   width: 100%;
   padding-bottom: 1rem;
   box-sizing: border-box;
-  
+
   & .category {
     display: flex;
     flex-flow: column;
-    
+
     &:first-of-type {
       grid-column: 1 / 3;
     }
   }
-  
+
   & .category-title {
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ export const SearchScreen = styled.div`
     color: var(--font-tip);
     box-sizing: border-box;
   }
-  
+
   & .search-item {
     color: var(--link);
     display: flex;
@@ -82,7 +82,7 @@ export const SearchScreen = styled.div`
     border-radius: 12px;
     margin-bottom: 0.5rem;
     box-sizing: border-box;
-    
+
     @media (prefers-color-scheme: light) {
       border: 1px solid #e8eaee80;
       background-color: #f6f7f866;
@@ -102,13 +102,18 @@ export const SearchScreen = styled.div`
       }
     }
   }
-`;
+`
 
 export const SearchBar = styled.header`
   display: flex;
-  border-bottom: 1px solid #dfe2e7;
   padding: 4px 8px;
-  
+  @media (prefers-color-scheme: light) {
+    border-bottom: 1px solid #dfe2e7;
+  }
+  @media (prefers-color-scheme: dark) {
+    border-bottom: 1px solid #1d2126;
+  }
+
   & .search-form {
     display: flex;
     align-items: center;
@@ -116,18 +121,18 @@ export const SearchBar = styled.header`
     padding: 0 12px;
     position: relative;
     width: 100%;
-    
+
     & > label {
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    
+
     & > input {
       padding-left: 1rem;
       font-size: 1rem;
       font-weight: 500;
-      
+
       appearance: none;
       background-color: transparent;
       border: 0;
@@ -136,14 +141,14 @@ export const SearchBar = styled.header`
       height: 100%;
       outline: none;
       width: 80%;
-      
-      &[type="search"]::-webkit-search-cancel-button {
+
+      &[type='search']::-webkit-search-cancel-button {
         -webkit-appearance: none;
         appearance: none;
       }
     }
   }
-  
+
   & .search-cancel {
     display: block;
     align-self: center;
@@ -155,24 +160,26 @@ export const SearchBar = styled.header`
     border-radius: 6px;
 
     &::before {
-      content: "esc";
+      content: 'esc';
       font-size: 0.75rem;
       font-weight: 700;
     }
-    
+
     @media (prefers-color-scheme: light) {
-      background-color: #F6F7F8;
-      border: 1px solid #DFE2E7;
+      background-color: #f6f7f8;
+      border: 1px solid #dfe2e7;
       &::before {
         color: #303741;
       }
     }
     @media (prefers-color-scheme: dark) {
-      background-color: #14171A;
+      background-color: #14171a;
       border: 1px solid #303840;
       &::before {
         color: #b6bec9;
       }
-    }        
+    }
   }
 `
+
+export const SearchResult = styled.div``

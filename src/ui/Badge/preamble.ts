@@ -1,34 +1,34 @@
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
 export interface BadgeTheme {
-  primary?: string;
-  onPrimary?: string;
+  primary?: string
+  onPrimary?: string
 }
 
 export const THEME: BadgeTheme = {
   primary: 'var(--primary, #ffb74d)',
   onPrimary: 'var(--on-primary, #1c2025)',
-};
+}
 
 export interface BadgeRootTransientProps {
-  $horizontal?: HorizontalType;
-  $show?: boolean;
-  $variant?: VariantType;
-  $vertical?: VerticalType;
+  $horizontal?: HorizontalType
+  $show?: boolean
+  $variant?: VariantType
+  $vertical?: VerticalType
 }
 
 export interface BadgeProps {
-  content?: number | string;
-  horizontal?: HorizontalType;
-  max?: number;
-  show?: boolean;
-  theme?: BadgeTheme;
-  variant?: VariantType;
-  vertical?: VerticalType;
-  children?: NodeType;
+  content?: number | string
+  horizontal?: HorizontalType
+  max?: number
+  show?: boolean
+  theme?: BadgeTheme
+  variant?: VariantType
+  vertical?: VerticalType
+  children?: NodeType
 }
 
-export const px = prefix('badge');
+export const px = prefix('badge')
 
 export const DEFAULT_PROPS = {
   show: true,
@@ -36,24 +36,24 @@ export const DEFAULT_PROPS = {
   vertical: 'top' as VerticalType,
   horizontal: 'right' as HorizontalType,
   max: 99,
-};
+}
 
 export const useBadge = (props: BadgeProps) => {
   const contents = (() => {
-    if (props.variant !== 'standard') return null;
+    if (props.variant !== 'standard') return null
 
     if (typeof props.content === 'number' && props.content > props.max!) {
-      return `${props.max}+`;
+      return `${props.max}+`
     }
-    
+
     return props.content ?? ''
-    
+
     // props.variant === 'standard'
     //   ? typeof props.content === 'number' && props.content > props.max!
     //     ? `${props.max}+`
     //     : props.content ?? ''
     //   : null;
-  })();
+  })()
 
-  return { contents };
-};
+  return { contents }
+}

@@ -1,10 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components';
+import Image from 'next/image'
+import Link from 'next/link'
+import styled from 'styled-components'
 
 // noinspection CssUnusedSymbol
 const ContentsBox = styled.div`
-  & > a, & > button {
+  & > a,
+  & > button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +21,9 @@ const ContentsBox = styled.div`
     flex: 0 0 auto;
     font-size: 1.5rem;
     overflow: visible;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition:
+      background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     padding: 0.375rem;
     border: 1px solid var(--border-weak);
     border-radius: 0.75rem;
@@ -42,7 +45,7 @@ const ContentsBox = styled.div`
       margin-right: 4px;
     }
   }
-`;
+`
 
 export function ArcaLiveLink() {
   return (
@@ -52,7 +55,12 @@ export function ArcaLiveLink() {
         target='_blank'
         rel='noopener noreferrer'
       >
-        <Image width={20} height={20} src='/assets/arcalive.svg' alt='아카라이브 원본 리소스 게시글' />
+        <Image
+          width={20}
+          height={20}
+          src='/assets/arcalive.svg'
+          alt='아카라이브 원본 리소스 게시글'
+        />
       </Link>
     </ContentsBox>
   )
@@ -66,22 +74,23 @@ export function GithubLink() {
         target='_blank'
         rel='noopener noreferrer'
       >
-        <Image width={20} height={20} src='/assets/github.svg' alt='깃허브 링크' />
+        <Image
+          width={20}
+          height={20}
+          src='/assets/github.svg'
+          alt='깃허브 링크'
+        />
       </Link>
     </ContentsBox>
   )
 }
 
-export function SearchButton({ onClick }:{
-  onClick?: () => void;
-}) {
+export function SearchButton({ onClick }: { onClick?: () => void }) {
   return (
     <ContentsBox>
       <button type='button' onClick={onClick}>
         <Image width={20} height={20} src='/assets/search.svg' alt='검색' />
-        <span className='search-text fza lh'>
-          Search...
-        </span>
+        <span className='search-text fza lh'>Search...</span>
       </button>
     </ContentsBox>
   )

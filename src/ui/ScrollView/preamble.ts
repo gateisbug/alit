@@ -1,7 +1,7 @@
-import { prefix } from '@ui/utils';
+import { prefix } from '@ui/utils'
 
 export interface ScrollviewProps {
-  children?: NodeType;
+  children?: NodeType
 }
 
-export const px = prefix('scrollview');
+export const px = prefix('scrollview')

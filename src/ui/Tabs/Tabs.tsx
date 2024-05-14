@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import debounce from 'lodash-es/debounce';
+import debounce from 'lodash-es/debounce'
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import { px, TabsProps, THEME } from './preamble'
 
@@ -11,7 +11,7 @@ const TabContainer = styled.div.attrs({
 })`
   display: block;
   position: relative;
-`;
+`
 
 const TabBar = styled.div.attrs({
   className: px('bar'),
@@ -28,7 +28,7 @@ const TabBar = styled.div.attrs({
 `
 TabBar.defaultProps = {
   theme: THEME,
-};
+}
 
 const TabBox = styled.div.attrs({
   className: px('box'),
@@ -38,7 +38,7 @@ const TabBox = styled.div.attrs({
   overflow-x: auto;
   gap: 0.75rem;
   padding: 0.125rem;
-`;
+`
 
 const Tab = styled.div.attrs({
   className: px('tab'),
@@ -58,43 +58,41 @@ const Tab = styled.div.attrs({
   &[data-active='false']:hover {
     color: var(--primary);
   }
-`;
+`
 
 function TabsComponent({ item, defaultValue }: TabsProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const barRef = useRef<HTMLDivElement>(null);
-  const [current, setCurrent] = useState<string>(
-    defaultValue ?? item[0].label,
-  );
+  const containerRef = useRef<HTMLDivElement>(null)
+  const barRef = useRef<HTMLDivElement>(null)
+  const [current, setCurrent] = useState<string>(defaultValue ?? item[0].label)
 
   const onClickTab = useCallback((v: string) => {
-    setCurrent(v);
-  }, []);
+    setCurrent(v)
+  }, [])
 
   const calculateBarWidth = useCallback(() => {
     const active = containerRef?.current?.querySelector(
       'div[data-active="true"]',
-    );
-    if (!containerRef.current || !active || !barRef.current) return;
+    )
+    if (!containerRef.current || !active || !barRef.current) return
 
-    const contRect = containerRef.current.getBoundingClientRect();
-    const rect = active.getBoundingClientRect();
+    const contRect = containerRef.current.getBoundingClientRect()
+    const rect = active.getBoundingClientRect()
 
-    barRef.current.style.left = `${rect.left - contRect.left  }px`;
-    barRef.current.style.width = `${rect.width  }px`;
-  }, []);
-
-  useLayoutEffect(() => {
-    calculateBarWidth();
-  }, [calculateBarWidth]);
+    barRef.current.style.left = `${rect.left - contRect.left}px`
+    barRef.current.style.width = `${rect.width}px`
+  }, [])
 
   useLayoutEffect(() => {
-    const debouncedHandler = debounce(calculateBarWidth, 200);
-    window.addEventListener('resize', debouncedHandler);
+    calculateBarWidth()
+  }, [calculateBarWidth])
+
+  useLayoutEffect(() => {
+    const debouncedHandler = debounce(calculateBarWidth, 200)
+    window.addEventListener('resize', debouncedHandler)
     return () => {
-      window.removeEventListener('resize', debouncedHandler);
-    };
-  }, [calculateBarWidth]);
+      window.removeEventListener('resize', debouncedHandler)
+    }
+  }, [calculateBarWidth])
 
   return (
     <TabContainer ref={containerRef}>
@@ -104,7 +102,7 @@ function TabsComponent({ item, defaultValue }: TabsProps) {
             key={`tab-root-${v.label}`}
             data-active={current === v.label}
             onClick={() => {
-              onClickTab(v.label);
+              onClickTab(v.label)
             }}
             className='fwr fzp'
           >
@@ -114,7 +112,7 @@ function TabsComponent({ item, defaultValue }: TabsProps) {
       </TabBox>
       <TabBar ref={barRef} />
     </TabContainer>
-  );
+  )
 }
 
 const Tabs = Object.assign(TabsComponent, {
@@ -124,4 +122,4 @@ const Tabs = Object.assign(TabsComponent, {
   Root: Tab,
 })
 
-export default Tabs;
+export default Tabs

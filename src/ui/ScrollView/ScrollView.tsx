@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { px, ScrollviewProps } from './preamble';
+import { px, ScrollviewProps } from './preamble'
 
 const ScrollviewRoot = styled.div.attrs({
   className: px('root'),
@@ -12,7 +12,7 @@ const ScrollviewRoot = styled.div.attrs({
   overflow-x: auto;
   overflow-y: auto;
   box-sizing: border-box;
-`;
+`
 
 function ScrollviewComponent({ children }: ScrollviewProps) {
   return <ScrollviewRoot>{children}</ScrollviewRoot>
@@ -20,6 +20,6 @@ function ScrollviewComponent({ children }: ScrollviewProps) {
 
 const Scrollview = Object.assign(ScrollviewComponent, {
   Root: ScrollviewRoot,
-});
+})
 
-export default Scrollview;
+export default Scrollview

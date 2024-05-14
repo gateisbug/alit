@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="CHANGE.md와 README.md 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/(main)/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/[category]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/[category]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/(main)/search-sc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/search-sc.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/(main)/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(main)/search.tsx" afterDir="false" />
     </list>
@@ -54,7 +58,7 @@
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "C:\\peter\\alit\\node_modules\\prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "C:\\peter\\alit\\node_modules\\typescript\\lib"
   }
 }]]></component>
@@ -93,7 +97,8 @@
       <workItem from="1715225033723" duration="11808000" />
       <workItem from="1715247917770" duration="5851000" />
       <workItem from="1715305384141" duration="6046000" />
-      <workItem from="1715317197575" duration="32841000" />
+      <workItem from="1715317197575" duration="33957000" />
+      <workItem from="1715641927870" duration="10527000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -199,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715585207539</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="CHANGE.md와 README.md 추가">
+      <option name="closed" value="true" />
+      <created>1715587233665</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715587233665</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

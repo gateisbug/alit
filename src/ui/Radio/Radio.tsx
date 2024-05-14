@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { px, THEME, RadioProps } from './preamble';
+import { px, THEME, RadioProps } from './preamble'
 
 const RadioBox = styled.label.attrs({
   className: px('box'),
@@ -16,16 +16,16 @@ const RadioBox = styled.label.attrs({
   &:has(input:disabled) {
     cursor: default;
   }
-`;
+`
 
 const RadioRoot = styled.input.attrs({
   className: px('root'),
 })`
   display: none;
-`;
+`
 RadioRoot.defaultProps = {
   type: 'radio',
-};
+}
 
 const RadioMark = styled.div.attrs({
   className: px('mark'),
@@ -76,23 +76,24 @@ const RadioMark = styled.div.attrs({
   input:not(:disabled):checked + & > svg:last-of-type {
     transform: scale(1);
   }
-`;
+`
 RadioMark.defaultProps = {
   theme: THEME,
-};
+}
 
 function RadioComponent({ children, theme, ...rootProps }: RadioProps) {
   return (
     <RadioBox>
-      <RadioRoot type='radio'
-                 checked={rootProps?.checked}
-                 disabled={rootProps?.disabled}
-                 defaultChecked={rootProps?.defaultChecked}
-                 name={rootProps?.name}
-                 onChange={rootProps?.onChange}
-                 required={rootProps?.require}
-                 readOnly={rootProps?.readOnly}
-                 value={rootProps?.value}
+      <RadioRoot
+        type='radio'
+        checked={rootProps?.checked}
+        disabled={rootProps?.disabled}
+        defaultChecked={rootProps?.defaultChecked}
+        name={rootProps?.name}
+        onChange={rootProps?.onChange}
+        required={rootProps?.require}
+        readOnly={rootProps?.readOnly}
+        value={rootProps?.value}
       />
       <RadioMark theme={theme}>
         <svg focusable='false' aria-hidden='true' viewBox='0 0 24 24'>
@@ -117,6 +118,6 @@ const Radio = Object.assign(RadioComponent, {
   Box: RadioBox,
   Root: RadioRoot,
   Mark: RadioMark,
-});
+})
 
-export default Radio;
+export default Radio
