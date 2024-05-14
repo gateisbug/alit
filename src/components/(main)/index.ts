@@ -1,5 +1,12 @@
-export { default as AppBar } from './appbar-sc'
-export { ArcaLiveLink, GithubLink, SearchButton } from './link'
-export { default as Logo } from './logo'
-export { SearchLinks, SearchInput } from './search'
-export { ModalBody, SearchScreen } from './search-sc'
+export { default as AppBar } from './appbar.sc'
+export { default as LinkBox } from './links.sc'
+export { default as LogoBox } from './logo.sc'
+export {
+  CategoryTitle,
+  SearchModalBody,
+  SearchBar,
+  SearchItem,
+  SearchResult,
+  SearchScreen,
+  ClickableKeybutton,
+} from './search.sc'

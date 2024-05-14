@@ -1,8 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
-import { SearchBar, SearchScreen } from './search-sc'
-
 const categories = [
   {
     title: 'ALL',
@@ -61,54 +56,4 @@ const categories = [
   },
 ]
 
-export function SearchLinks() {
-  return (
-    <SearchScreen>
-      {categories.map((category) => (
-        <div className='category' key={category.title}>
-          <div className='category-title'>{category.title}</div>
-          {category.items.map((item) => (
-            <Link key={item.name} href={item.path} className='search-item'>
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      ))}
-    </SearchScreen>
-  )
-}
-
-interface InputProps {
-  onChange: (value: string) => void
-  onClickClose: () => void
-}
-
-export function SearchInput({ onChange, onClickClose }: InputProps) {
-  return (
-    <SearchBar>
-      <div className='search-form'>
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label htmlFor='search-input'>
-          <Image width={24} height={24} src='/assets/search.svg' alt='검색' />
-        </label>
-        <input
-          id='search-input'
-          autoComplete='off'
-          autoCorrect='off'
-          autoCapitalize='off'
-          enterKeyHint='search'
-          spellCheck='false'
-          placeholder='What are you looking for?'
-          type='search'
-          maxLength={64}
-          onChange={(e) => {
-            onChange(e.target.value)
-          }}
-        />
-      </div>
-      <button className='search-cancel' type='button' onClick={onClickClose}>
-        Cancel
-      </button>
-    </SearchBar>
-  )
-}
+export default categories
