@@ -8,6 +8,7 @@ import '@assets/reset.css'
 import '@assets/theme.css'
 import '@assets/globals.css'
 import '@assets/typography.css'
+import ErrorBoundary from '@app/ErrorBoundary'
 
 const AppBar = dynamic(() => import('@/app/(main)/appbar'))
 const StyledComponentsRegistry = dynamic(() => import('@/util/registry'))
@@ -47,7 +48,7 @@ export default function RootLayout({
       <body className={notoSansKR.className}>
         <StyledComponentsRegistry>
           <AppBar />
-          {children}
+          <ErrorBoundary>{children}</ErrorBoundary>
         </StyledComponentsRegistry>
       </body>
     </html>

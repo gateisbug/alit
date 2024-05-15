@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="폴더구조 변경">
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/search/search-res.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search/search-res.tsx" afterDir="false" />
+    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="TODO 작성">
+      <change afterPath="$PROJECT_DIR$/src/app/ErrorBoundary.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/item/all-data.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datum/(main)/search.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datum/item/all.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datum/item/data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Datum/(main)/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/json/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +52,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "next",
-    "last_opened_file_path": "C:/peter/alit/src/app/(main)/search",
+    "last_opened_file_path": "C:/peter/alit/src/datum/item",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -55,11 +67,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\peter\alit\src\datum\item" />
       <recent name="C:\peter\alit\src\app\(main)\search" />
       <recent name="C:\peter\alit\src\app\(main)" />
       <recent name="C:\peter\alit\src\components\(main)" />
       <recent name="C:\peter\alit\public" />
-      <recent name="C:\peter\alit\public\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\peter\alit\src\components\(main)" />
@@ -89,7 +101,8 @@
       <workItem from="1715247917770" duration="5851000" />
       <workItem from="1715305384141" duration="6046000" />
       <workItem from="1715317197575" duration="33957000" />
-      <workItem from="1715641927870" duration="15208000" />
+      <workItem from="1715641927870" duration="19486000" />
+      <workItem from="1715671534228" duration="1799000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -219,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715667047513</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="TODO 작성">
+      <option name="closed" value="true" />
+      <created>1715667103373</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715667103373</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +258,7 @@
     <MESSAGE value="CHANGE.md와 README.md 추가" />
     <MESSAGE value="컴포넌트 최적화 및 prettier 설정" />
     <MESSAGE value="폴더구조 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="폴더구조 변경" />
+    <MESSAGE value="TODO 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO 작성" />
   </component>
 </project>

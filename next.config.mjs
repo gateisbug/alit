@@ -16,11 +16,20 @@ const nextConfig = {
     }
   },
   compress: true,
-  async rewrites() {
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/item',
+  //     }
+  //   ]
+  // },
+  async redirects() {
     return [
       {
         source: '/',
         destination: '/item',
+        permanent: true,
       }
     ]
   }
