@@ -18,36 +18,36 @@ const categories = [
     title: 'Aircrafts',
     items: [
       { name: 'All', path: '/item/aircraft' },
-      { name: 'Fighter', path: '/item/aircraft?filter=ff' },
-      { name: 'Dive Bomber', path: '/item/aircraft?filter=db' },
-      { name: 'Torpedo Bomber', path: '/item/aircraft?filter=tb' },
-      { name: 'Seaplane', path: '/item/aircraft?filter=sp' },
+      { name: 'Fighter', path: '/item/aircraft?filter=fighter' },
+      { name: 'Dive Bomber', path: '/item/aircraft?filter=bomber' },
+      { name: 'Torpedo Bomber', path: '/item/aircraft?filter=torpedo-bomber' },
+      { name: 'Seaplane', path: '/item/aircraft?filter=seaplane' },
     ],
   },
   {
     title: 'Torpedoes',
     items: [
       { name: 'All', path: '/item/torpedo' },
-      { name: 'Surface Torpedo', path: '/item/torpedo?filter=sf' },
-      { name: 'Submarine`s Torpedo', path: '/item/torpedo?filter=ss' },
-      { name: 'Missiles', path: '/item/torpedo?filter=gg' },
+      { name: 'Surface Torpedo', path: '/item/torpedo?filter=surface' },
+      { name: 'Submarine`s Torpedo', path: '/item/torpedo?filter=submarine' },
+      { name: 'Missiles', path: '/item/torpedo?filter=missile' },
     ],
   },
   {
     title: 'Anti-air Guns',
     items: [
       { name: 'All', path: '/item/antiair' },
-      { name: 'Normal', path: '/item/antiair?filter=no' },
-      { name: 'Fuse', path: '/item/antiair?filter=fu' },
+      { name: 'Normal', path: '/item/antiair?filter=normal' },
+      { name: 'Fuse', path: '/item/antiair?filter=fuse' },
     ],
   },
   {
     title: 'Accessories',
     items: [
       { name: 'All', path: '/item/accessory' },
-      { name: 'Frontline Accessory', path: '/item/accessory?filter=front' },
-      { name: 'Backline Accessory', path: '/item/accessory?filter=back' },
-      { name: 'Special Accessory', path: '/item/accessory?filter=speical' }, // Note: Corrected the typo in 'special'
+      { name: 'Frontline Accessory', path: '/item/accessory?filter=frontline' },
+      { name: 'Backline Accessory', path: '/item/accessory?filter=backline' },
+      { name: 'Special Accessory', path: '/item/accessory?filter=signiture' }, // Note: Corrected the typo in 'special'
     ],
   },
   {
