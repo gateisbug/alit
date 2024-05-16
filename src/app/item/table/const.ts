@@ -377,6 +377,7 @@ export function obtainSplit(value?: ItemInterface) {
   return map?.map(spliter)
 }
 
+type StrokeType = 'default' | 'red' | 'yellow' | 'blue' | 'violet'
 export function strokeSorter(types?: string, domain?: string): StrokeType {
   if (domain !== 'gun') return 'default'
 
