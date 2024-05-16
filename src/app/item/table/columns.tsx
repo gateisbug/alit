@@ -37,8 +37,8 @@ export const COLUMNS: ColumnType[] = [
     label: '획득처',
     render: (v) => (
       <Wall>
-        {obtainSplit(v)?.map((u, i, a) =>
-          a.length > 2 && u.includes('메인') ? null : <span key={i}>{u}</span>,
+        {obtainSplit(v)?.map((u, _, a) =>
+          a.length > 2 && u.includes('메인') ? null : <span key={u}>{u}</span>,
         )}
       </Wall>
     ),
