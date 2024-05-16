@@ -217,6 +217,8 @@ export function typeSorter(value?: ItemInterface) {
           return 'SAP탄'
         case 'type3':
           return '삼식탄'
+        default:
+          return ''
       }
     } else if (value?.domain === 'torpedo') {
       switch (value.type) {
@@ -226,6 +228,8 @@ export function typeSorter(value?: ItemInterface) {
           return '유도'
         // case 'missile':
         //   return '미사일';
+        default:
+          return ''
       }
     }
     // else if (value?.domain === 'antiair') {
@@ -266,6 +270,8 @@ export function typeSorter(value?: ItemInterface) {
           return '직선'
         case 'focus':
           return '핀포인트'
+        default:
+          return ''
       }
     } else if (value?.domain === 'accessory') {
       switch (value.type) {
@@ -283,6 +289,8 @@ export function typeSorter(value?: ItemInterface) {
           return '운송'
         case 'repair':
           return '공작'
+        default:
+          return ''
       }
     } else if (value?.domain === 'special') {
       switch (value.type) {
@@ -298,6 +306,8 @@ export function typeSorter(value?: ItemInterface) {
           return '항모'
         case 'ss':
           return '잠수'
+        default:
+          return ''
       }
     }
   }
