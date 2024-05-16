@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
+import ItemTable from '@app/item/table/table'
 import { CircularProgress } from '@ui'
 
 const ItemData = dynamic(() => import('@/datum/item/all-data'))
@@ -16,15 +17,11 @@ const keys: ItemURL[] = [
 export default async function ItemPage() {
   const renderProps = (items: ItemJson) => {
     const result: ItemInterface[] = []
-    for (let i = 0; i < keys.length; i++) result.push(...items[keys[i]])
+    for (let i = 0; i < keys.length; i++) {
+      result.push(...items[keys[i]])
+    }
 
-    return (
-      <div>
-        {result.map((value) => (
-          <span key={value.index}>{value.name}</span>
-        ))}
-      </div>
-    )
+    return <ItemTable data={result} />
   }
 
   return (

@@ -15,6 +15,7 @@ type ItemInterfaceIndex =
   | 'status'
 
 type ItemURL =
+  | 'all'
   | 'gun'
   | 'torpedo'
   | 'antiair'
@@ -39,3 +40,8 @@ interface ItemInterface {
 }
 
 type ItemJson = Record<ItemURL, ItemInterface[]>
+
+type OptionType<V = string | undefined, L = string | undefined> = {
+  value: V
+  label: L
+}

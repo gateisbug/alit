@@ -6,7 +6,6 @@ async function fetchAllItem() {
       (import('@/datum/item/all.json') as unknown as ItemJson) ?? []
     return JSON
   } catch (error) {
-    // console.error('Error:', error)
     throw new Error('Failed to fetch item')
   }
 }
@@ -18,5 +17,5 @@ interface Props {
 export default async function AllData({ children }: Props) {
   const JSON = await fetchAllItem()
 
-  return <div className='dynamic-item-datum'>{children(JSON)}</div>
+  return <>{children(JSON)}</>
 }

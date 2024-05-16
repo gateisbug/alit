@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="TODO 작성">
-      <change afterPath="$PROJECT_DIR$/src/datum/item/all-data.tsx" afterDir="false" />
+    <list default="true" id="27aaba56-7320-4a2c-9822-949c830bee45" name="Changes" comment="json을 render props로 읽어오도록 수정">
+      <change afterPath="$PROJECT_DIR$/src/app/item/table/columns.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/item/table/portrait.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/item/table/table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/item/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/item/portrait.sc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/item/table.sc.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/json/accessory.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/json/aircraft.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/json/antiair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/json/gun.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/json/special.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/json/torpedo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/search/category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/search/category.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/item/[category]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/[category]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/item/all-data.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/item/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/table/const.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datum/item/data.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datum/item/all-data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/datum/item/all-data.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,11 +74,11 @@
       <recent name="C:\peter\alit\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\peter\alit\src\app\item\table" />
       <recent name="C:\peter\alit\src\datum\item" />
       <recent name="C:\peter\alit\src\app\item" />
       <recent name="C:\peter\alit\src\components\(main)" />
       <recent name="C:\peter\alit\src" />
-      <recent name="C:\peter\alit\src\app" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -103,7 +102,7 @@
       <workItem from="1715305384141" duration="6046000" />
       <workItem from="1715317197575" duration="33957000" />
       <workItem from="1715641927870" duration="19486000" />
-      <workItem from="1715671534228" duration="13092000" />
+      <workItem from="1715671534228" duration="20642000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -249,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715814107554</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="json을 render props로 읽어오도록 수정">
+      <option name="closed" value="true" />
+      <created>1715837446720</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715837446720</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +275,7 @@
     <MESSAGE value="컴포넌트 최적화 및 prettier 설정" />
     <MESSAGE value="폴더구조 변경" />
     <MESSAGE value="TODO 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="TODO 작성" />
+    <MESSAGE value="json을 render props로 읽어오도록 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="json을 render props로 읽어오도록 수정" />
   </component>
 </project>

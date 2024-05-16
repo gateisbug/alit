@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic'
 import { headers } from 'next/headers'
 
+import ItemTable from '@app/item/table/table'
+
 const ItemData = dynamic(() => import('@/datum/item/all-data'))
 
 export default function page() {
@@ -14,23 +16,10 @@ export default function page() {
 
   const renderProps = (items: ItemJson) => {
     if (category in items) {
-      if (!filter) {
-        return (
-          <div>
-            {items[category].map((value) => (
-              <span>{value.name}</span>
-            ))}
-          </div>
-        )
-      }
-      return (
-        <div>
-          {items[category]
-            .filter((v) => v.class === filter)
-            .map((value) => (
-              <span>{value.name}</span>
-            ))}
-        </div>
+      return !filter ? (
+        <ItemTable data={items[category]} />
+      ) : (
+        <ItemTable data={items[category].filter((v) => v.class === filter)} />
       )
     }
     return null
