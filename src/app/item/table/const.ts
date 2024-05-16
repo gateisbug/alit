@@ -125,6 +125,8 @@ export function classSorter(value?: ItemInterface) {
         // return value.nation !== 'MOT' ? '전함포' : '범선대형포';
         case CONSTANCE.GUN.CB.value:
           return CONSTANCE.GUN.CB.label
+        default:
+          return ''
       }
     } else if (value?.domain === VALUE.TORPEDO) {
       switch (value?.class) {
@@ -134,6 +136,8 @@ export function classSorter(value?: ItemInterface) {
           return CONSTANCE.TORPEDO.SB.label
         case CONSTANCE.TORPEDO.MS.value:
           return CONSTANCE.TORPEDO.MS.label
+        default:
+          return ''
       }
     } else if (value?.domain === VALUE.ANTIAIR) {
       switch (value?.class) {
@@ -141,6 +145,8 @@ export function classSorter(value?: ItemInterface) {
           return CONSTANCE.ANTIAIR.NOR.label
         case CONSTANCE.ANTIAIR.FUS.value:
           return CONSTANCE.ANTIAIR.FUS.label
+        default:
+          return ''
       }
     } else if (value?.domain === VALUE.AIRCRAFT) {
       switch (value?.class) {
@@ -152,6 +158,8 @@ export function classSorter(value?: ItemInterface) {
           return CONSTANCE.AIRCRAFT.SA.label
         case CONSTANCE.AIRCRAFT.TA.value:
           return CONSTANCE.AIRCRAFT.TA.label
+        default:
+          return ''
       }
     } else if (value?.domain === VALUE.ACCESSORY) {
       switch (value?.class) {
@@ -161,6 +169,8 @@ export function classSorter(value?: ItemInterface) {
           return CONSTANCE.ACCESSORY.FL.label
         case CONSTANCE.ACCESSORY.SIG.value:
           return CONSTANCE.ACCESSORY.SIG.label
+        default:
+          return ''
       }
     } else if (value?.domain === VALUE.SPECIAL) {
       // switch (value?.class) {
@@ -184,6 +194,8 @@ export function classSorter(value?: ItemInterface) {
           return CONSTANCE.SPECIAL.NOR.label
         case CONSTANCE.SPECIAL.SIG.value:
           return CONSTANCE.SPECIAL.SIG.label
+        default:
+          return ''
       }
     }
   }

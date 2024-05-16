@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { ReactNode } from 'react'
 
 import Portrait from '@app/item/table/portrait'
@@ -15,14 +14,6 @@ export const COLUMNS: ColumnType[] = [
     value: 'link',
     label: '아이콘',
     render: (v) => (
-      // <Image
-      //   src={`/images/items/${v.image}.png`}
-      //   alt='images'
-      //   width='48'
-      //   height='48'
-      //   placeholder='blur'
-      //   blurDataURL={`/images/items/${v.image}_lqip.png`}
-      // />
       <Portrait
         src={`/images/items/${v.image}.png`}
         placeholder={`/images/items/${v.image}_lqip.png`}

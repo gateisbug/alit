@@ -2,13 +2,14 @@ import dynamic from 'next/dynamic'
 import { Noto_Sans_KR } from 'next/font/google'
 import { ReactNode } from 'react'
 
+import ErrorBoundary from '@/app/ErrorBoundary'
+
 import type { Metadata } from 'next'
 
 import '@assets/reset.css'
 import '@assets/theme.css'
 import '@assets/globals.css'
 import '@assets/typography.css'
-import ErrorBoundary from '@app/ErrorBoundary'
 
 const AppBar = dynamic(() => import('@/app/(main)/appbar'))
 const StyledComponentsRegistry = dynamic(() => import('@/util/registry'))

@@ -17,7 +17,7 @@ const keys: ItemURL[] = [
 export default async function ItemPage() {
   const renderProps = (items: ItemJson) => {
     const result: ItemInterface[] = []
-    for (let i = 0; i < keys.length; i++) {
+    for (let i = 0; i < keys.length; i += 1) {
       result.push(...items[keys[i]])
     }
 
