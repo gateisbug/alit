@@ -13,7 +13,13 @@ export default function SearchInput({ onChange, onClickClose }: InputProps) {
       <div className='search-form'>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label htmlFor='search-input'>
-          <Image width={24} height={24} src='/assets/search.svg' alt='검색' />
+          <Image
+            width={24}
+            height={24}
+            sizes='24px'
+            src='/assets/search.svg'
+            alt='검색'
+          />
         </label>
         <input
           id='search-input'

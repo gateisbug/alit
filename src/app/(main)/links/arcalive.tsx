@@ -14,6 +14,7 @@ function ArcaLiveLink() {
         <Image
           width={20}
           height={20}
+          sizes='20px'
           src='/assets/arcalive.svg'
           alt='아카라이브 원본 리소스 게시글'
         />

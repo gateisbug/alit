@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic'
 import { ReactNode } from 'react'
 
-import Portrait from '@app/item/table/portrait'
-import { Ellipsis, Wall } from '@datum/item'
+import { Ellipsis, Wall } from '@/components/item'
 
 import { classSorter, obtainSplit, strokeSorter, typeSorter } from './const'
+
+const Portrait = dynamic(() => import('@/app/item/table/portrait'))
 
 type ColumnType = {
   render?: (v: ItemInterface) => ReactNode

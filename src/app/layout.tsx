@@ -2,8 +2,6 @@ import dynamic from 'next/dynamic'
 import { Noto_Sans_KR } from 'next/font/google'
 import { ReactNode } from 'react'
 
-import ErrorBoundary from '@/app/ErrorBoundary'
-
 import type { Metadata } from 'next'
 
 import '@assets/reset.css'
@@ -14,7 +12,7 @@ import '@assets/typography.css'
 const AppBar = dynamic(() => import('@/app/(main)/appbar'))
 const StyledComponentsRegistry = dynamic(() => import('@/util/registry'))
 
-const notoSansKR = Noto_Sans_KR({
+const nextFont = Noto_Sans_KR({
   weight: ['400', '500', '700'],
   subsets: ['latin'],
   style: 'normal',
@@ -27,6 +25,7 @@ const notoSansKR = Noto_Sans_KR({
     'sans-serif',
   ],
   display: 'swap',
+  preload: false,
 })
 
 export const metadata: Metadata = {
@@ -46,10 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ko'>
-      <body className={notoSansKR.className}>
+      <body className={nextFont.className}>
         <StyledComponentsRegistry>
           <AppBar />
-          <ErrorBoundary>{children}</ErrorBoundary>
+          {children}
         </StyledComponentsRegistry>
       </body>
     </html>

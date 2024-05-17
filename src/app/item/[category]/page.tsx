@@ -1,9 +1,11 @@
 import dynamic from 'next/dynamic'
 import { headers } from 'next/headers'
+import { Suspense } from 'react'
 
-import ItemTable from '@app/item/table/table'
+import { CircularProgress } from '@ui'
 
 const ItemData = dynamic(() => import('@/datum/item/all-data'))
+const ItemTable = dynamic(() => import('@/app/item/table/table'))
 
 export default function page() {
   const headersList = headers()
@@ -27,7 +29,9 @@ export default function page() {
 
   return (
     <div className='page item index'>
-      <ItemData>{renderProps}</ItemData>
+      <Suspense fallback={<CircularProgress />}>
+        <ItemData>{renderProps}</ItemData>
+      </Suspense>
     </div>
   )
 }

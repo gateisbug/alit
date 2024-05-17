@@ -8,8 +8,9 @@ export default function Logo() {
       <Image
         src='/assets/logo-m.png'
         alt='logo'
-        width='32'
-        height='32'
+        width={32}
+        height={32}
+        sizes='32px'
         priority
       />
     </LogoBox>

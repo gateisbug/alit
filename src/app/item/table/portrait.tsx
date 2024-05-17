@@ -26,7 +26,9 @@ export default function Portrait({
         alt='images'
         width='48'
         height='48'
+        sizes='48px'
         placeholder='blur'
+        loading='lazy'
         blurDataURL={placeholder}
       />
     </PortraitFrame>

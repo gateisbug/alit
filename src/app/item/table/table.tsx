@@ -24,7 +24,7 @@ export default function ItemTable({ data }: Props) {
       </Box>
 
       <Box className='table-body'>
-        {data.map((item) => (
+        {data.slice(0, 10).map((item) => (
           <Row
             key={`${item.name}_${item.index}`}
             data-type='row'

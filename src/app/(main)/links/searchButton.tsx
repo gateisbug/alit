@@ -6,7 +6,13 @@ export default function SearchButton({ onClick }: { onClick?: () => void }) {
   return (
     <LinkBox>
       <button type='button' onClick={onClick}>
-        <Image width={20} height={20} src='/assets/search.svg' alt='검색' />
+        <Image
+          width={20}
+          height={20}
+          sizes='20px'
+          src='/assets/search.svg'
+          alt='검색'
+        />
         <span className='search-text fza lh'>Search...</span>
       </button>
     </LinkBox>
