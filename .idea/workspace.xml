@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="reinstallation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pnp.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@workspace-ui-file-2b820a98c6-24c6d23f2a.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imager/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/imager/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imager/request.json" beforeDir="false" afterPath="$PROJECT_DIR$/imager/request.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +71,11 @@
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;C:\\peter\\alit-main\\.yarn\\releases\\yarn-4.1.1.cjs&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;yarn:view\\package.json:typescript&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -183,6 +188,13 @@
       <workItem from="1715061238982" duration="923000" />
       <workItem from="1715068303564" duration="1257000" />
       <workItem from="1715211822339" duration="83000" />
+      <workItem from="1715224687627" duration="41000" />
+      <workItem from="1715224733108" duration="260000" />
+      <workItem from="1715225029638" duration="5422000" />
+      <workItem from="1715300300589" duration="646000" />
+      <workItem from="1715305392805" duration="1000" />
+      <workItem from="1715305406495" duration="1925000" />
+      <workItem from="1715324508052" duration="14586000" />
     </task>
     <task id="LOCAL-00006" summary="init">
       <option name="closed" value="true" />

@@ -18,16 +18,17 @@ async function readImageRequests() {
 async function downloadAndResizeImage(id, url) {
   const imageCase = async (response) => {
     // 원본 이미지 저장
-    const originalImage = `result/${id}.png`;
+    const originalImage = `./result/${id}.png`;
     fs.writeFileSync(originalImage, response.data);
 
     // 이미지 크기 조정 후 저장
-    const resizedImage = `result/${id}_lqip.png`;
+    const resizedImage = `./result/${id}_lqip.png`;
     const image = sharp(response.data);
     const metadata = await image.metadata();
 
     await image
-      .resize({ width: Math.round(metadata.width / 10) })
+      // .resize({ width: Math.round(metadata.width / 10) })
+      .resize({ width: 8 })
       .toFile(resizedImage);
 
     console.log('done:', id);

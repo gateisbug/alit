@@ -3373,12 +3373,12 @@ __metadata:
 
 "@workspace/ui@file:../packages/ui::locator=%40workspace%2Fview%40workspace%3Aview":
   version: 1.0.0
-  resolution: "@workspace/ui@file:../packages/ui#../packages/ui::hash=41775f&locator=%40workspace%2Fview%40workspace%3Aview"
+  resolution: "@workspace/ui@file:../packages/ui#../packages/ui::hash=1cc1e2&locator=%40workspace%2Fview%40workspace%3Aview"
   dependencies:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-components: "npm:^6.1.8"
-  checksum: 10c0/24c6d23f2abee3c206f3c4e73d6a1170bc76190c90f00e6c431f80faa9582697c556b404cf018eb3782740d0f9833627f922c20c9a0682bf097d268ba825c61b
+  checksum: 10c0/9490ad5a852008446b42029190a1bd7e382dedf0a036559ffed3ee2279f16af59b342875a5e7fb6a7c4c7c288de057cbbc4ad6f2493f8da71226b17d116a3e05
   languageName: node
   linkType: hard
 
