@@ -28,10 +28,6 @@ export default function AppBarComponent() {
     setInputValue(value)
   }, 200)
 
-  const clickEscapeHandler = () => {
-    setOpen(false)
-  }
-
   useEffect(() => {
     setOpen(false)
   }, [params])
@@ -56,7 +52,7 @@ export default function AppBarComponent() {
         <SearchModalBody>
           <SearchInput
             onChange={inputValueHandler}
-            onClickClose={clickEscapeHandler}
+            onClickClose={closeModalHandler}
           />
 
           <ScrollView>

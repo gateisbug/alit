@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { COLUMNS } from '@app/item/table/columns'
 import { Box, Cell, Container, Row } from '@datum/item'
 import { CircularProgress } from '@ui'
+import useInfiniteScroll from '@util/useInfiniteScroll'
 
 interface Props {
   data: ItemInterface[]
@@ -15,33 +16,11 @@ const LOADER = 10
 export default function ItemTable({ data }: Props) {
   const [items, setItems] = useState<ItemInterface[]>([])
   const [visibleCount, setVisibleCount] = useState(LOADER)
-  const loader = useRef<HTMLDivElement | null>(null)
 
   const loadMoreItems = () => {
     setVisibleCount((prev) => prev + LOADER)
   }
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          loadMoreItems()
-        }
-      },
-      { threshold: 1 },
-    )
-
-    if (loader.current) {
-      observer.observe(loader.current)
-    }
-
-    return () => {
-      if (loader.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(loader.current)
-      }
-    }
-  }, [])
+  const loader = useInfiniteScroll(loadMoreItems)
 
   useEffect(() => {
     setItems(data.slice(0, visibleCount))
