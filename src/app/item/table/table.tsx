@@ -86,7 +86,7 @@ export default function ItemTable({ data }: Props) {
           </Row>
         ))}
 
-        {data.length > visibleCount && (
+        {data.length >= visibleCount && (
           <div
             style={{
               padding: '2rem',
