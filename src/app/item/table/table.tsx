@@ -1,11 +1,52 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+
 import { COLUMNS } from '@app/item/table/columns'
 import { Box, Cell, Container, Row } from '@datum/item'
+import { CircularProgress } from '@ui'
 
 interface Props {
   data: ItemInterface[]
 }
 
+const LOADER = 10
+
 export default function ItemTable({ data }: Props) {
+  const [items, setItems] = useState<ItemInterface[]>([])
+  const [visibleCount, setVisibleCount] = useState(LOADER)
+  const loader = useRef<HTMLDivElement | null>(null)
+
+  const loadMoreItems = () => {
+    setVisibleCount((prev) => prev + LOADER)
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMoreItems()
+        }
+      },
+      { threshold: 1 },
+    )
+
+    if (loader.current) {
+      observer.observe(loader.current)
+    }
+
+    return () => {
+      if (loader.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(loader.current)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    setItems(data.slice(0, visibleCount))
+  }, [visibleCount, data])
+
   return (
     <Container>
       <Box className='table-header'>
@@ -24,7 +65,7 @@ export default function ItemTable({ data }: Props) {
       </Box>
 
       <Box className='table-body'>
-        {data.slice(0, 10).map((item) => (
+        {items.map((item) => (
           <Row
             key={`${item.name}_${item.index}`}
             data-type='row'
@@ -44,6 +85,19 @@ export default function ItemTable({ data }: Props) {
             ))}
           </Row>
         ))}
+
+        {data.length > visibleCount && (
+          <div
+            style={{
+              padding: '2rem',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+            ref={loader}
+          >
+            <CircularProgress />
+          </div>
+        )}
       </Box>
     </Container>
   )
