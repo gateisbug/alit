@@ -1,7 +1,4 @@
-'use client'
-
 import Image from 'next/image'
-import { useEffect } from 'react'
 
 import { SearchBar, ClickableKeybutton } from '@components/(main)'
 
@@ -12,19 +9,6 @@ interface InputProps {
 
 export default function SearchInput(props: InputProps) {
   const { onChange, onClickClose } = props
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        console.log('esc')
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown)
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [])
 
   return (
     <SearchBar>

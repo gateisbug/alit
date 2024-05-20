@@ -26,6 +26,11 @@ export default function ItemTable({ data }: Props) {
     setItems(data.slice(0, visibleCount))
   }, [visibleCount, data])
 
+  const rowClickHandler = (item: ItemInterface) => {
+    // TODO: Recoil에서 상태관리 시 클릭하면 모달을 띄우도록 수정
+    console.log(item)
+  }
+
   return (
     <Container>
       <Box className='table-header'>
@@ -48,9 +53,9 @@ export default function ItemTable({ data }: Props) {
           <Row
             key={`${item.name}_${item.index}`}
             data-type='row'
-            // onClick={() => {
-            //   console.log(item)
-            // }}
+            onClick={() => {
+              rowClickHandler(item)
+            }}
           >
             {COLUMNS.map((v) => (
               <Cell
