@@ -1,3 +1,5 @@
+// noinspection CssUnusedSymbol
+
 'use client'
 
 import styled from 'styled-components'
@@ -44,7 +46,8 @@ export const Row = styled.div`
     min-width: fit-content;
     width: 100%;
     box-sizing: border-box;
-    min-height: 73px;
+    //min-height: 73px;
+    height: 89px;
 
     @media (prefers-color-scheme: light) {
       border-color: rgba(0, 0, 0, 0.08);
