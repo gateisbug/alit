@@ -16,23 +16,27 @@ const nextConfig = {
     }
   },
   compress: true,
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '/item',
-  //     }
-  //   ]
-  // },
-  async redirects() {
+  async rewrites() {
     return [
       {
         source: '/',
         destination: '/item',
-        permanent: true,
+      },
+      {
+        source: '/item/:category',
+        destination: '/item',
       }
     ]
-  }
+  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/item',
+  //       permanent: true,
+  //     }
+  //   ]
+  // }
 };
 
 export default nextConfig;

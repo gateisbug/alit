@@ -1,8 +1,7 @@
 import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
+import { headers } from 'next/headers'
 
 import ItemTable from '@app/item/table/table'
-import { CircularProgress } from '@ui'
 
 const ItemData = dynamic(() => import('@/datum/item/all-data'))
 const keys: ItemURL[] = [
@@ -15,20 +14,32 @@ const keys: ItemURL[] = [
 ]
 
 export default async function ItemPage() {
+  const headersList = headers()
+  const headerPathname = headersList.get('x-pathname') || ''
+  const headerParams = headersList.get('x-params') || ''
+
+  const category: keyof ItemJson =
+    (headerPathname.split('/').at(2) as keyof ItemJson) ?? 'gun'
+  const filter = new URLSearchParams(headerParams).get('filter')
+
   const renderProps = (items: ItemJson) => {
-    const result: ItemInterface[] = []
-    for (let i = 0; i < keys.length; i += 1) {
-      result.push(...items[keys[i]])
+    let result: ItemInterface[] = []
+    if (category.length === 0) {
+      for (let i = 0; i < keys.length; i += 1) {
+        result.push(...items[keys[i]])
+      }
+    }
+
+    if (category in items) {
+      if (filter === null || filter === '') {
+        result = items[category]
+      } else {
+        result = items[category].filter((v) => v.class === filter)
+      }
     }
 
     return <ItemTable data={result} />
   }
 
-  return (
-    <div className='page item index'>
-      <Suspense fallback={<CircularProgress />}>
-        <ItemData>{renderProps}</ItemData>
-      </Suspense>
-    </div>
-  )
+  return <ItemData>{renderProps}</ItemData>
 }
