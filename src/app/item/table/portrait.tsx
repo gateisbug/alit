@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { PortraitFrame } from '@datum/item'
+import { PortraitFrame } from '@components/item'
 
 interface PortraitProps {
   src: string

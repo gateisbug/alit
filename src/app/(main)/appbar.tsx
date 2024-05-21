@@ -4,7 +4,7 @@ import debounce from 'lodash-es/debounce'
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-import { AppBar, SearchModalBody } from '@/components/(main)'
+import { AppBar, SearchModalBody } from '@components/(main)'
 import { Modal, ScrollView } from '@ui'
 
 import { ArcaLiveLink, GithubLink, SearchButton } from './links'

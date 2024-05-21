@@ -3,25 +3,15 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-export const SearchModalBody = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  //padding: 1.5rem;
-  box-sizing: border-box;
-  position: relative;
+import { ModalBody } from '@components/common'
+
+export const SearchModalBody = styled(ModalBody)`
   min-width: 40rem;
   min-height: 37.5rem;
   max-height: 37.5rem;
 
-  /* @device: MobileL */
-  @media (max-width: 425px) {
-    padding: 1.5rem 1rem;
-  }
-
   & .kit-scrollview-root {
     padding: 1rem;
-    scrollbar-width: thin;
-    scrollbar-color: #6c7c93 transparent;
   }
 `
 

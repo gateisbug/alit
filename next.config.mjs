@@ -28,15 +28,6 @@ const nextConfig = {
       }
     ]
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '/item',
-  //       permanent: true,
-  //     }
-  //   ]
-  // }
 };
 
 export default nextConfig;

@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import { ReactNode } from 'react'
 
-import { Ellipsis, Wall } from '@/components/item'
+import { Ellipsis, Wall } from '@components/item'
 
 import { classSorter, obtainSplit, strokeSorter, typeSorter } from './const'
 

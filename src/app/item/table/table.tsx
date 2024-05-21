@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react'
 
+import ItemModal from '@app/item/modal/modal'
 import { COLUMNS } from '@app/item/table/columns'
-import { Box, Cell, Container, Row } from '@datum/item'
+import { Box, Cell, Container, Row } from '@components/item'
 import { CircularProgress } from '@ui'
 import useInfiniteScroll from '@util/useInfiniteScroll'
 
@@ -16,6 +17,7 @@ const LOADER = 10
 export default function ItemTable({ data }: Props) {
   const [items, setItems] = useState<ItemInterface[]>([])
   const [visibleCount, setVisibleCount] = useState(LOADER)
+  const [selectItem, setSelectItem] = useState<ItemInterface | undefined>()
 
   const loadMoreItems = () => {
     setVisibleCount((prev) => prev + LOADER)
@@ -27,8 +29,11 @@ export default function ItemTable({ data }: Props) {
   }, [visibleCount, data])
 
   const rowClickHandler = (item: ItemInterface) => {
-    // TODO: Recoil에서 상태관리 시 클릭하면 모달을 띄우도록 수정
-    console.log(item)
+    setSelectItem(item)
+  }
+
+  const clickAwayModal = () => {
+    setSelectItem(undefined)
   }
 
   return (
@@ -83,6 +88,8 @@ export default function ItemTable({ data }: Props) {
           </div>
         )}
       </Box>
+
+      <ItemModal selectData={selectItem} clickAway={clickAwayModal} />
     </Container>
   )
 }
