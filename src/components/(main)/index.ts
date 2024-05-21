@@ -1,5 +1,5 @@
 export { default as AppBar } from './appbar.sc'
-export { default as LinkBox } from './links.sc'
+export { LinkBox, LinkShortcut } from './links.sc'
 export { default as LogoBox } from './logo.sc'
 export {
   CategoryTitle,

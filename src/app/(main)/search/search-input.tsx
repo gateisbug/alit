@@ -38,7 +38,9 @@ export default function SearchInput(props: InputProps) {
           }}
         />
       </div>
-      <ClickableKeybutton onClick={onClickClose}>Cancel</ClickableKeybutton>
+      <ClickableKeybutton onClick={onClickClose} content='esc'>
+        Cancel
+      </ClickableKeybutton>
     </SearchBar>
   )
 }
