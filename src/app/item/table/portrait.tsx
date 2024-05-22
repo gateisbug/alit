@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { CSSProperties } from 'react'
 
 import { PortraitFrame } from '@components/item'
 
@@ -10,6 +11,8 @@ interface PortraitProps {
   stroke?: 'default' | 'red' | 'yellow' | 'blue' | 'violet'
   tier?: TierType
   className?: string
+  size?: number
+  style?: CSSProperties
 }
 
 export default function Portrait({
@@ -18,15 +21,22 @@ export default function Portrait({
   tier = 'R',
   stroke = 'default',
   className,
+  size = 48,
+  style,
 }: PortraitProps) {
   return (
-    <PortraitFrame data-tier={tier} data-stroke={stroke} className={className}>
+    <PortraitFrame
+      data-tier={tier}
+      data-stroke={stroke}
+      className={className}
+      style={style}
+    >
       <Image
         src={src}
         alt='images'
-        width='48'
-        height='48'
-        sizes='48px'
+        width={`${size}`}
+        height={`${size}`}
+        sizes={`${size}px`}
         placeholder='blur'
         loading='lazy'
         blurDataURL={placeholder}

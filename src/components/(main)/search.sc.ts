@@ -7,8 +7,7 @@ import { ModalBody } from '@components/common'
 
 export const SearchModalBody = styled(ModalBody)`
   min-width: 40rem;
-  min-height: 37.5rem;
-  max-height: 37.5rem;
+  max-width: 40rem;
 
   & .kit-scrollview-root {
     padding: 1rem;

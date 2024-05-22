@@ -1,7 +1,9 @@
 'use client'
 
-import { ModalBody } from '@components/common'
+import { ItemModalBody } from '@components/item'
 import { Modal, ScrollView } from '@ui'
+
+import ModalHeader from './modal-header'
 
 interface Props {
   selectData?: ItemInterface
@@ -13,9 +15,11 @@ export default function ItemModal(props: Props) {
 
   return (
     <Modal open={selectData !== undefined} onClickAway={clickAway}>
-      <ModalBody>
-        <ScrollView>hello</ScrollView>
-      </ModalBody>
+      <ItemModalBody>
+        <ScrollView>
+          <ModalHeader item={selectData} />
+        </ScrollView>
+      </ItemModalBody>
     </Modal>
   )
 }

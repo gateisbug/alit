@@ -21,6 +21,8 @@ export const COLUMNS: ColumnType[] = [
         placeholder={`/images/items/${v.image}_lqip.png`}
         stroke={strokeSorter(v.type, v.domain)}
         tier={v.tier}
+        size={48}
+        style={{ width: '4rem', height: '4rem' }}
       />
     ),
   },

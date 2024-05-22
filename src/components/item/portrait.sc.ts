@@ -5,8 +5,8 @@ export const PortraitFrame = styled.div`
   flex-flow: row nowrap;
   align-items: center;
 
-  width: 4rem;
-  height: 4rem;
+  //width: 4rem;
+  //height: 4rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
   padding: 0.375rem;

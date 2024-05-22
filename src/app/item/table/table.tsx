@@ -36,6 +36,15 @@ export default function ItemTable({ data }: Props) {
     setSelectItem(undefined)
   }
 
+  useEffect(
+    () => () => {
+      setVisibleCount(10)
+      // setItems([])
+      setSelectItem(undefined)
+    },
+    [data],
+  )
+
   return (
     <Container>
       <Box className='table-header'>
