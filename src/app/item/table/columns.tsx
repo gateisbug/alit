@@ -1,11 +1,10 @@
 import dynamic from 'next/dynamic'
 import { ReactNode } from 'react'
 
+import { classSorter, obtainSplit, typeSorter } from '@/datum/item/const'
 import { Ellipsis, Wall } from '@components/item'
 
-import { classSorter, obtainSplit, strokeSorter, typeSorter } from './const'
-
-const Portrait = dynamic(() => import('@/app/item/table/portrait'))
+const Portrait = dynamic(() => import('@app/item/common/portrait'))
 
 type ColumnType = {
   render?: (v: ItemInterface) => ReactNode
@@ -16,14 +15,7 @@ export const COLUMNS: ColumnType[] = [
     value: 'link',
     label: '아이콘',
     render: (v) => (
-      <Portrait
-        src={`/images/items/${v.image}.png`}
-        placeholder={`/images/items/${v.image}_lqip.png`}
-        stroke={strokeSorter(v.type, v.domain)}
-        tier={v.tier}
-        size={48}
-        style={{ width: '4rem', height: '4rem' }}
-      />
+      <Portrait item={v} size={48} style={{ width: '4rem', height: '4rem' }} />
     ),
   },
   {

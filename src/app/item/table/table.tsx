@@ -1,12 +1,14 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 
-import ItemModal from '@app/item/modal/modal'
 import { COLUMNS } from '@app/item/table/columns'
 import { Box, Cell, Container, Row } from '@components/item'
 import { CircularProgress } from '@ui'
 import useInfiniteScroll from '@util/useInfiniteScroll'
+
+const ItemModal = dynamic(() => import('@app/item/modal/modal'))
 
 interface Props {
   data: ItemInterface[]
@@ -38,9 +40,9 @@ export default function ItemTable({ data }: Props) {
 
   useEffect(
     () => () => {
-      setVisibleCount(10)
-      // setItems([])
+      setItems([])
       setSelectItem(undefined)
+      setVisibleCount(10)
     },
     [data],
   )
@@ -98,7 +100,7 @@ export default function ItemTable({ data }: Props) {
         )}
       </Box>
 
-      <ItemModal selectData={selectItem} clickAway={clickAwayModal} />
+      <ItemModal item={selectItem} clickAway={clickAwayModal} />
     </Container>
   )
 }

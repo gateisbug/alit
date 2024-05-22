@@ -37,15 +37,15 @@ export const VALUE: Record<ItemIndexType, ItemURL> = {
   SPECIAL: 'special',
 }
 
-// export const TEXT: Record<ItemIndexType, string> = {
-//   ALL: '전체',
-//   GUN: '함포',
-//   TORPEDO: '어뢰',
-//   ANTIAIR: '대공',
-//   AIRCRAFT: '함재기',
-//   ACCESSORY: '설비',
-//   SPECIAL: '특수',
-// }
+export const TEXT: Record<ItemIndexType, string> = {
+  ALL: '전체',
+  GUN: '함포',
+  TORPEDO: '어뢰',
+  ANTIAIR: '대공',
+  AIRCRAFT: '함재기',
+  ACCESSORY: '설비',
+  SPECIAL: '특수',
+}
 
 export const CONSTANCE: Record<ItemIndexType, Record<string, ItemType>> = {
   ALL: {},
@@ -399,21 +399,21 @@ export function obtainSplit(value?: ItemInterface) {
   return map?.map(spliter)
 }
 
-type StrokeType = 'default' | 'red' | 'yellow' | 'blue' | 'violet'
-export function strokeSorter(types?: string, domain?: string): StrokeType {
-  if (domain !== 'gun') return 'default'
-
-  switch (types) {
-    case 'ap':
-      return 'blue'
-    case 'he':
-      return 'red'
-    case 'normal':
-    case 'type3':
-      return 'yellow'
-    case 'sap':
-      return 'violet'
+export function domainSorter(domain?: string) {
+  switch (domain) {
+    case VALUE.GUN:
+      return TEXT.GUN
+    case VALUE.TORPEDO:
+      return TEXT.TORPEDO
+    case VALUE.ANTIAIR:
+      return TEXT.ANTIAIR
+    case VALUE.AIRCRAFT:
+      return TEXT.AIRCRAFT
+    case VALUE.ACCESSORY:
+      return TEXT.ACCESSORY
+    case VALUE.SPECIAL:
+      return TEXT.SPECIAL
     default:
-      return 'default'
+      return ''
   }
 }

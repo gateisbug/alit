@@ -50,22 +50,6 @@ export const ModalHeader = styled.div.attrs({
   gap: 0 3rem;
   align-items: center;
 
-  .portrait {
-    width: 6rem;
-    height: 6rem;
-    border-width: 0.25rem;
-  }
-  .section {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  .title,
-  .subtitle {
-    line-height: 1em;
-  }
-
   /* @device: Tablet */
   @media (max-width: 768px) {
     display: grid;
@@ -73,7 +57,18 @@ export const ModalHeader = styled.div.attrs({
     grid-template-rows: auto;
     gap: 1.5rem 0;
     justify-items: center;
+  }
 
+  .section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    justify-content: center;
+    line-height: inherit;
+  }
+
+  /* @device: Tablet */
+  @media (max-width: 768px) {
     .section {
       align-items: center;
       gap: 0.75rem;
