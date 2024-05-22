@@ -1,62 +1,104 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
+'use client'
 
-import { Container, Box, Text } from './styled';
+import { createPortal } from 'react-dom'
+import styled from 'styled-components'
 
-interface Props {
-  show?: boolean;
-  children?: React.ReactNode;
-  title?: React.ReactNode;
+import { px, THEME, TooltipProps, useTooltip } from '@ui/Tooltip/preamble'
+
+export const TooltipContainer = styled.span.attrs({
+  className: px('container'),
+})`
+  position: relative;
+  display: inline-block;
+`
+
+export const TooltipBox = styled.div.attrs({
+  className: px('box'),
+})`
+  z-index: 1500;
+  pointer-events: auto;
+
+  position: absolute;
+  inset: 0 auto auto 0;
+  margin: 0;
+`
+
+export const TooltipText = styled.div.attrs({
+  className: px('text'),
+})`
+  position: relative;
+
+  background-color: ${({ theme }) => theme.surface};
+  border-radius: 0.25rem;
+  color: #fff;
+  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  font-size: 0.875rem;
+  max-width: 18.75rem;
+  margin: 0.125rem;
+  overflow-wrap: break-word;
+
+  &[data-placement='bottom'] {
+    margin-top: 0.75rem;
+    transform-origin: center top;
+  }
+
+  &::before {
+    content: '■';
+    color: ${({ theme }) => theme.surface};
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    rotate: 45deg;
+    width: fit-content;
+    height: fit-content;
+    font-size: 0.875rem;
+    border-radius: 0.125rem;
+    translate: -50% -50%;
+    overflow: hidden;
+  }
+`
+TooltipText.defaultProps = {
+  theme: THEME,
 }
 
-const Tooltip = ({ children, title }: Props) => {
-  const containerRef = useRef<HTMLSpanElement>(null);
-  const boxRef = useRef<HTMLDivElement>(null);
-  const [show, setShow] = useState(false);
-
-  useLayoutEffect(() => {
-    if (!show || !containerRef?.current || !boxRef?.current) return;
-    const {
-      top,
-      left,
-      height,
-      width: w,
-    } = containerRef.current.getBoundingClientRect();
-    const { width } = boxRef.current.getBoundingClientRect();
-
-    const translateX = left - width / 2 + w / 2;
-    const translateY = top + height + window.scrollY;
-
-    boxRef.current.setAttribute(
-      'style',
-      `transform: translate(${translateX}px, ${translateY}px)`,
-    );
-  }, [show]);
+function TooltipComponent({ children, title, theme = THEME }: TooltipProps) {
+  const { boxRef, containerRef, show, setShow } = useTooltip()
 
   return (
-    <Container
+    <TooltipContainer
       ref={containerRef}
       onMouseOver={() => {
-        setShow(true);
+        setShow(true)
       }}
       onMouseLeave={() => {
-        setShow(false);
+        setShow(false)
       }}
       onClick={() => {
-        setShow(!show);
+        setShow(!show)
       }}
     >
       {children}
       {show
         ? createPortal(
-            <Box ref={boxRef}>
-              <Text data-placement={'bottom'}>{title}</Text>
-            </Box>,
+            <TooltipBox ref={boxRef}>
+              <TooltipText data-placement='bottom' theme={theme}>
+                {title}
+              </TooltipText>
+            </TooltipBox>,
             document.body,
           )
         : null}
-    </Container>
-  );
-};
+    </TooltipContainer>
+  )
+}
 
-export default Tooltip;
+const Tooltip = Object.assign(TooltipComponent, {
+  Container: TooltipContainer,
+  Box: TooltipBox,
+  Text: TooltipText,
+  Hooks: useTooltip,
+})
+
+export default Tooltip
