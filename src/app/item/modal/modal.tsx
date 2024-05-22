@@ -1,5 +1,3 @@
-import dynamic from 'next/dynamic'
-
 import { nationSplit, obtainDelimiter } from '@/datum/item/const'
 import {
   ItemModalBody,
@@ -9,15 +7,39 @@ import {
 } from '@components/item'
 import { Modal, ScrollView } from '@ui'
 
-const Portrait = dynamic(() => import('@app/item/common/portrait'))
-const Aircraft = dynamic(() => import('@app/item/modal/aircraft'))
-const Breadcrumbs = dynamic(() => import('@app/item/modal/breadcrumbs'))
-const ImageCard = dynamic(() => import('@app/item/modal/ImageCard'))
-const KeyValue = dynamic(() => import('@app/item/modal/KeyValue'))
+import Portrait from '../common/portrait'
+
+import Aircraft from './aircraft'
+import Breadcrumbs from './breadcrumbs'
+import ImageCard from './ImageCard'
+import KeyValue from './KeyValue'
 
 interface Props {
   item?: ItemInterface
   clickAway?: () => void
+}
+
+const statDelimiter = (value: string[]) => {
+  switch (value[0]) {
+    case '스탯':
+    case '스킬':
+      return value[1].replace(/,/g, ', ')
+    case '대미지':
+    case '발사패턴':
+      return value[1].replace(/\*/g, ' × ')
+    case '기총':
+    case '폭장':
+    case '어뢰':
+    case '로켓':
+      return <Aircraft value={value[1]} />
+    case '사속':
+    case '발사간격':
+      return value[1].replace(/초/g, ' 초')
+    case '대갑비례':
+      return value[1].replace(/\//g, ' / ')
+    default:
+      return value[1]
+  }
 }
 
 export default function ItemModal(props: Props) {
@@ -43,9 +65,9 @@ export default function ItemModal(props: Props) {
 
           <ObtainSection>
             <div className='obtain'>
-              {obtainDelimiter(item).map((v, i) => (
+              {obtainDelimiter(item).map((v) => (
                 <ImageCard
-                  key={`${item?.index}_${v.obtain}_${i}`}
+                  key={`${item?.index}_${v.obtain}`}
                   src={v.img}
                   alt={v.img}
                 >
@@ -68,13 +90,13 @@ export default function ItemModal(props: Props) {
           </ObtainSection>
 
           <StatSection>
-            {item?.status?.map((v, i) => {
-              const item = v.split(':')
+            {item?.status?.map((v) => {
+              const stat = v.split(':')
               return (
                 <KeyValue
-                  key={`stat_${v}_${i}`}
-                  label={item[0]}
-                  value={statDelimiter(item)}
+                  key={`stat_${item?.index}_${stat[0]}`}
+                  label={stat[0]}
+                  value={statDelimiter(stat)}
                 />
               )
             })}
@@ -83,27 +105,4 @@ export default function ItemModal(props: Props) {
       </ScrollView>
     </Modal>
   )
-}
-
-function statDelimiter(value: string[]) {
-  switch (value[0]) {
-    case '스탯':
-    case '스킬':
-      return value[1].replace(/,/g, ', ')
-    case '대미지':
-    case '발사패턴':
-      return value[1].replace(/\*/g, ' × ')
-    case '기총':
-    case '폭장':
-    case '어뢰':
-    case '로켓':
-      return <Aircraft value={value[1]} />
-    case '사속':
-    case '발사간격':
-      return value[1].replace(/초/g, ' 초')
-    case '대갑비례':
-      return value[1].replace(/\//g, ' / ')
-    default:
-      return value[1]
-  }
 }

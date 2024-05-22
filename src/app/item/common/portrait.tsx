@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { CSSProperties } from 'react'
 import styled from 'styled-components'
 
-export const PortraitFrame = styled.div`
+const PortraitFrame = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
