@@ -9,7 +9,7 @@ import '@assets/theme.css'
 import '@assets/globals.css'
 import '@assets/typography.css'
 
-const AppBar = dynamic(() => import('@/app/(main)/appbar'))
+const AppBar = dynamic(() => import('@app/(main)/appbar'))
 const StyledComponentsRegistry = dynamic(() => import('@/util/registry'))
 
 const nextFont = Noto_Sans_KR({

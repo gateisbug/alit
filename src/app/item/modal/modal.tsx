@@ -1,7 +1,6 @@
-import styled from 'styled-components'
+import dynamic from 'next/dynamic'
 
 import { nationSplit, obtainDelimiter } from '@/datum/item/const'
-import KeyValue from '@app/item/modal/KeyValue'
 import {
   ItemModalBody,
   ModalHeader,
@@ -10,10 +9,11 @@ import {
 } from '@components/item'
 import { Modal, ScrollView } from '@ui'
 
-import Portrait from '../common/portrait'
-
-import Breadcrumbs from './breadcrumbs'
-import ImageCard from './ImageCard'
+const Portrait = dynamic(() => import('@app/item/common/portrait'))
+const Aircraft = dynamic(() => import('@app/item/modal/aircraft'))
+const Breadcrumbs = dynamic(() => import('@app/item/modal/breadcrumbs'))
+const ImageCard = dynamic(() => import('@app/item/modal/ImageCard'))
+const KeyValue = dynamic(() => import('@app/item/modal/KeyValue'))
 
 interface Props {
   item?: ItemInterface
@@ -85,43 +85,6 @@ export default function ItemModal(props: Props) {
   )
 }
 
-const Aircraft = styled.span`
-  text-decoration: underline;
-`
-const State = styled.div`
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  background-color: rgba(97, 97, 97, 0.92);
-  border-radius: 0.25rem;
-  z-index: 1;
-`
-
-function aircraftRender(value: string) {
-  const [string, damage, ap] = value.split('\\t')
-  const [weapon, count] = string.split('*')
-
-  const title = ap ? (
-    <State>
-      <div>대미지: {damage}</div>
-      <div>관통: {ap.replace(/\//g, ' / ')}</div>
-    </State>
-  ) : (
-    <State>대미지: {damage}</State>
-  )
-
-  return (
-    <>
-      {/* <Tooltip title={title}> */}
-      <Aircraft>{weapon}</Aircraft>
-      {/* </Tooltip> */}
-      <>&nbsp;× {count}</>
-    </>
-  )
-}
-
 function statDelimiter(value: string[]) {
   switch (value[0]) {
     case '스탯':
@@ -134,7 +97,7 @@ function statDelimiter(value: string[]) {
     case '폭장':
     case '어뢰':
     case '로켓':
-      return aircraftRender(value[1])
+      return <Aircraft value={value[1]} />
     case '사속':
     case '발사간격':
       return value[1].replace(/초/g, ' 초')

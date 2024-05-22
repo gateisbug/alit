@@ -31,8 +31,6 @@ export const TooltipText = styled.div.attrs({
   background-color: ${({ theme }) => theme.surface};
   border-radius: 0.25rem;
   color: #fff;
-  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
   font-size: 0.875rem;
   max-width: 18.75rem;
   margin: 0.125rem;
