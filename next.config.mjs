@@ -5,7 +5,7 @@ const repository = "alit";
 
 const nextConfig = {
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/avif', 'image/webp']
   },
   reactStrictMode: true,
   // assetPrefix: !debug ? `/${repository}/` : "",

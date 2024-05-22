@@ -40,9 +40,7 @@ export const CloseButton = styled(Button.Root)`
   }
 `
 
-export const ModalHeader = styled.div.attrs({
-  className: 'ui-modal-header',
-})`
+export const ModalHeader = styled.div`
   display: grid;
   grid-template-columns: 6rem auto;
   grid-template-rows: auto;
@@ -76,6 +74,123 @@ export const ModalHeader = styled.div.attrs({
   }
 `
 
-export const ModalSection = styled.div.attrs({
-  className: 'ui-modal-section',
-})``
+export const ObtainSection = styled.div`
+  display: grid;
+  min-height: 8rem;
+  grid-template-columns: 1fr 10rem;
+  gap: 1rem;
+
+  /* @device: Tablet */
+  @media (max-width: 768px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .obtain {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1rem;
+
+    /* @device: Tablet */
+    @media (max-width: 700px) {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+
+    & .imgcard-container {
+      width: fit-content;
+      & > img {
+        max-height: 10rem;
+      }
+    }
+    & .imgcard-textbox {
+      padding: 0.75rem;
+    }
+  }
+
+  .nation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    & .imgcard-container {
+      width: 10rem;
+      height: 10rem;
+      padding: 0.75rem;
+    }
+  }
+`
+
+export const StatSection = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+  grid-template-rows: auto;
+
+  .keyvalue-container {
+    flex: 1 1 20%;
+    max-width: 14rem;
+  }
+  .keyvalue-box {
+    width: 100%;
+    align-items: center;
+  }
+  &[data-domain='antiair'] .keyvalue-container {
+    flex: 1 1 16%;
+  }
+  &[data-domain='aircraft'],
+  &[data-domain='accessory'] {
+    .keyvalue-container {
+      flex: 1 1 30%;
+    }
+  }
+  &[data-domain='accessory'] .keyvalue-container {
+    max-width: 20rem;
+  }
+
+  /* @device: Tablet */
+  @media (max-width: 768px) {
+    &,
+    &[data-domain='antiair'],
+    &[data-domain='aircraft'] {
+      .keyvalue-container {
+        flex: 1 1 25%;
+        max-width: 14rem;
+      }
+    }
+    &[data-domain='accessory'] .keyvalue-container {
+      flex: 1 1 33%;
+      max-width: 100%;
+    }
+  }
+
+  /* @device: MobileL */
+  @media (max-width: 425px) {
+    &,
+    &[data-domain='antiair'],
+    &[data-domain='aircraft'],
+    &[data-domain='accessory'] {
+      .keyvalue-container {
+        flex: 1 1 33%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  /* @device: MobileM */
+  @media (max-width: 375px) {
+    &,
+    &[data-domain='antiair'],
+    &[data-domain='aircraft'],
+    &[data-domain='accessory'] {
+      .keyvalue-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  }
+`
+
+export const ModalSection = styled.div``
