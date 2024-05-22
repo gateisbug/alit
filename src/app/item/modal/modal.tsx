@@ -5,6 +5,7 @@ import {
   ObtainSection,
   StatSection,
 } from '@components/item'
+import { ExplainSection } from '@components/item/modal.sc'
 import { Modal, ScrollView } from '@ui'
 
 import Portrait from '../common/portrait'
@@ -47,62 +48,68 @@ export default function ItemModal(props: Props) {
 
   return (
     <Modal open={item !== undefined} onClickAway={clickAway}>
-      <ScrollView>
-        <ItemModalBody>
-          <ModalHeader>
-            <Portrait
-              item={item}
-              size={72}
-              style={{ width: '6rem', height: '6rem' }}
-            />
+      <ItemModalBody>
+        <ScrollView>
+          <div className='modal-container'>
+            <ModalHeader>
+              <Portrait
+                item={item}
+                size={72}
+                style={{ width: '6rem', height: '6rem' }}
+              />
 
-            <div className='section'>
-              <h2 className='fcs fzl'>{item?.name}</h2>
-              <p className='fcw fzp'>{item?.nickname}</p>
-              <Breadcrumbs item={item} />
-            </div>
-          </ModalHeader>
+              <div className='section'>
+                <h2 className='fcs fzl'>{item?.name}</h2>
+                <p className='fcw fzp'>{item?.nickname}</p>
+                <Breadcrumbs item={item} />
+              </div>
+            </ModalHeader>
 
-          <ObtainSection>
-            <div className='obtain'>
-              {obtainDelimiter(item).map((v) => (
+            <ObtainSection>
+              <div className='obtain'>
+                {obtainDelimiter(item).map((v) => (
+                  <ImageCard
+                    key={`${item?.index}_${v.obtain}`}
+                    src={v.img}
+                    alt={v.img}
+                  >
+                    <div className='fzs fwb'>{v.obtain}</div>
+                    <div className='fzs fws'>{v.label}</div>
+                  </ImageCard>
+                ))}
+              </div>
+
+              <div className='nation'>
                 <ImageCard
-                  key={`${item?.index}_${v.obtain}`}
-                  src={v.img}
-                  alt={v.img}
+                  src={`/images/nation/${item?.nation?.toLowerCase()}.png`}
+                  alt={item?.nation ?? 'unknown nation'}
                 >
-                  <div className='fzs fwb'>{v.obtain}</div>
-                  <div className='fzs fws'>{v.label}</div>
+                  <span className='nation-value fzs fwb'>
+                    {nationSplit(item?.nation, 'nation')}
+                  </span>
                 </ImageCard>
-              ))}
-            </div>
+              </div>
+            </ObtainSection>
 
-            <div className='nation'>
-              <ImageCard
-                src={`/images/nation/${item?.nation?.toLowerCase()}.png`}
-                alt={item?.nation ?? 'unknown nation'}
-              >
-                <span className='nation-value fzs fwb'>
-                  {nationSplit(item?.nation, 'nation')}
-                </span>
-              </ImageCard>
-            </div>
-          </ObtainSection>
+            <StatSection>
+              {item?.status?.map((v) => {
+                const stat = v.split(':')
+                return (
+                  <KeyValue
+                    key={`stat_${item?.index}_${stat[0]}`}
+                    label={stat[0]}
+                    value={statDelimiter(stat)}
+                  />
+                )
+              })}
+            </StatSection>
 
-          <StatSection>
-            {item?.status?.map((v) => {
-              const stat = v.split(':')
-              return (
-                <KeyValue
-                  key={`stat_${item?.index}_${stat[0]}`}
-                  label={stat[0]}
-                  value={statDelimiter(stat)}
-                />
-              )
-            })}
-          </StatSection>
-        </ItemModalBody>
-      </ScrollView>
+            <ExplainSection>
+              {item?.explain?.map((v) => <p key={v}>{v}</p>)}
+            </ExplainSection>
+          </div>
+        </ScrollView>
+      </ItemModalBody>
     </Modal>
   )
 }

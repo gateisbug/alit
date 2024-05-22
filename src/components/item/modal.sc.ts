@@ -8,9 +8,15 @@ import { Button } from '@ui'
 export const ItemModalBody = styled(ModalBody)`
   min-width: 60rem;
   max-width: 60rem;
+  min-height: 37.5rem;
 
-  gap: 3rem;
-  padding: 1.5rem;
+  & .modal-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+    padding: 1.5rem;
+    height: fit-content;
+  }
 
   /* @device: MobileL */
   @media (max-width: 425px) {
@@ -193,4 +199,12 @@ export const StatSection = styled.div`
   }
 `
 
-export const ModalSection = styled.div``
+export const ExplainSection = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid var(--border);
+  padding: 1rem;
+  line-height: 1.125rem;
+`
