@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Fragment } from 'react'
 import styled from 'styled-components'
 
-import { classSorter, domainSorter, typeSorter } from '@/datum/item/const'
+import { classSorter, domainSorter, typeSorter } from '@util/item/const'
 
 const BreadcrumbsContainer = styled.div`
   display: flex;

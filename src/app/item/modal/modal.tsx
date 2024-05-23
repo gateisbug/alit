@@ -1,4 +1,3 @@
-import { nationSplit, obtainDelimiter } from '@/datum/item/const'
 import {
   ItemModalBody,
   ModalHeader,
@@ -7,6 +6,7 @@ import {
 } from '@components/item'
 import { ExplainSection } from '@components/item/modal.sc'
 import { Modal, ScrollView } from '@ui'
+import { nationSplit, obtainDelimiter } from '@util/item/const'
 
 import Portrait from '../common/portrait'
 

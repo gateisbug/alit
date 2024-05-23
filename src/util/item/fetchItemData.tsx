@@ -3,7 +3,7 @@ import { headers } from 'next/headers'
 async function fetchAllItem() {
   try {
     const JSON: ItemJson =
-      (import('@/datum/item/all.json') as unknown as ItemJson) ?? []
+      (import('@util/item/all.json') as unknown as ItemJson) ?? []
     return JSON
   } catch (error) {
     throw new Error('Failed to fetch item')

@@ -1,6 +1,6 @@
 'use server'
 
-import fetchItemData from '@/datum/item/fetchItemData'
+import fetchItemData from '@util/item/fetchItemData'
 
 import ItemTable from './controller'
 

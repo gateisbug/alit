@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic'
 import { ReactNode } from 'react'
 
-import { classSorter, obtainSplit, typeSorter } from '@/datum/item/const'
 import { Ellipsis, Wall } from '@components/item'
+import { classSorter, obtainSplit, typeSorter } from '@util/item/const'
 
 const Portrait = dynamic(() => import('@app/item/common/portrait'))
 

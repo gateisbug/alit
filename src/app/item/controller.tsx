@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 
 import { CircularProgress } from '@ui'
-import useInfiniteScroll from '@util/useInfiniteScroll'
+import useInfiniteScroll from '@util/item/useInfiniteScroll'
 
 const ItemTable = dynamic(() => import('@app/item/table/table'))
 const ItemModal = dynamic(() => import('@app/item/modal/modal'))

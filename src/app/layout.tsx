@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import { Noto_Sans_KR } from 'next/font/google'
 import { ReactNode } from 'react'
 
-import RecoilWrapper from '@util/recoilWrapper'
+import RecoilWrapper from '@util/(root)/recoilWrapper'
 
 import type { Metadata } from 'next'
 
@@ -12,7 +12,7 @@ import '@assets/globals.css'
 import '@assets/typography.css'
 
 const AppBar = dynamic(() => import('@app/(main)/appbar'))
-const StyledComponentsRegistry = dynamic(() => import('@/util/registry'))
+const StyledComponentsRegistry = dynamic(() => import('@util/(root)/registry'))
 
 const nextFont = Noto_Sans_KR({
   weight: ['400', '500', '700'],
