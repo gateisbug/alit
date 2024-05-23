@@ -48,19 +48,14 @@ const PortraitFrame = styled.div`
   }
 `
 
-interface PortraitProps {
+export default function Portrait(props: {
   item?: ItemInterface
   className?: string
   size?: number
   style?: CSSProperties
-}
+}) {
+  const { item, className, size = 48, style } = props
 
-export default function Portrait({
-  item,
-  className,
-  size = 48,
-  style,
-}: PortraitProps) {
   const strokeSorter = (types?: string, domain?: string) => {
     if (domain !== 'gun') return 'default'
     switch (types) {

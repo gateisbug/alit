@@ -15,11 +15,6 @@ import Breadcrumbs from './breadcrumbs'
 import ImageCard from './ImageCard'
 import KeyValue from './KeyValue'
 
-interface Props {
-  item?: ItemInterface
-  clickAway?: () => void
-}
-
 const statDelimiter = (value: string[]) => {
   switch (value[0]) {
     case '스탯':
@@ -43,7 +38,10 @@ const statDelimiter = (value: string[]) => {
   }
 }
 
-export default function ItemModal(props: Props) {
+export default function ItemModal(props: {
+  item?: ItemInterface
+  clickAway?: () => void
+}) {
   const { item, clickAway } = props
 
   return (

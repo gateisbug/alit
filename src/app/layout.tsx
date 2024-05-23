@@ -8,6 +8,7 @@ import '@assets/reset.css'
 import '@assets/theme.css'
 import '@assets/globals.css'
 import '@assets/typography.css'
+import RecoilWrapper from '@util/recoilWrapper'
 
 const AppBar = dynamic(() => import('@app/(main)/appbar'))
 const StyledComponentsRegistry = dynamic(() => import('@/util/registry'))
@@ -47,8 +48,10 @@ export default function RootLayout({
     <html lang='ko'>
       <body className={nextFont.className}>
         <StyledComponentsRegistry>
-          <AppBar />
-          {children}
+          <RecoilWrapper>
+            <AppBar />
+            {children}
+          </RecoilWrapper>
         </StyledComponentsRegistry>
       </body>
     </html>

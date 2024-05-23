@@ -16,22 +16,13 @@ export default function ItemController({ data }: { data: ItemInterface[] }) {
   const [visibleCount, setVisibleCount] = useState(LOADER)
   const [selectItem, setSelectItem] = useState<ItemInterface | undefined>()
 
-  const loadMoreItems = () => {
+  const loader = useInfiniteScroll(() => {
     setVisibleCount((prev) => prev + LOADER)
-  }
-  const loader = useInfiniteScroll(loadMoreItems)
+  })
 
   useEffect(() => {
     setItems(data.slice(0, visibleCount))
   }, [visibleCount, data])
-
-  const rowClickHandler = (item: ItemInterface) => {
-    setSelectItem(item)
-  }
-
-  const clickAwayModal = () => {
-    setSelectItem(undefined)
-  }
 
   useEffect(
     () => () => {
@@ -44,7 +35,12 @@ export default function ItemController({ data }: { data: ItemInterface[] }) {
 
   return (
     <>
-      <ItemTable items={items} rowClickHandler={rowClickHandler} />
+      <ItemTable
+        items={items}
+        rowClickHandler={(item: ItemInterface) => {
+          setSelectItem(item)
+        }}
+      />
 
       {data.length >= visibleCount && (
         <div className='loader' ref={items.length >= 10 ? loader : undefined}>
@@ -52,7 +48,12 @@ export default function ItemController({ data }: { data: ItemInterface[] }) {
         </div>
       )}
 
-      <ItemModal item={selectItem} clickAway={clickAwayModal} />
+      <ItemModal
+        item={selectItem}
+        clickAway={() => {
+          setSelectItem(undefined)
+        }}
+      />
     </>
   )
 }

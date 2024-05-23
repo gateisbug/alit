@@ -2,13 +2,12 @@ import Image from 'next/image'
 
 import { SearchBar, ClickableKeybutton } from '@components/(main)'
 
-export default function SearchInput({
-  onChange,
-  onClickClose,
-}: {
+export default function SearchInput(props: {
   onChange: (value: string) => void
   onClickClose: () => void
 }) {
+  const { onChange, onClickClose } = props
+
   return (
     <SearchBar>
       <div className='search-form'>
