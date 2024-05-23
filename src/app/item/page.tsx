@@ -1,7 +1,8 @@
 'use server'
 
 import fetchItemData from '@/datum/item/fetchItemData'
-import ItemTable from '@app/item/table/table'
+
+import ItemTable from './controller'
 
 export default async function ItemPage() {
   const data = await fetchItemData()
