@@ -1,5 +1,4 @@
 import { headers } from 'next/headers'
-import { ReactNode } from 'react'
 
 async function fetchAllItem() {
   try {
@@ -11,10 +10,6 @@ async function fetchAllItem() {
   }
 }
 
-interface Props {
-  children: (items: ItemInterface[]) => ReactNode
-}
-
 const keys: ItemURL[] = [
   'gun',
   'torpedo',
@@ -24,7 +19,7 @@ const keys: ItemURL[] = [
   'special',
 ]
 
-export default async function AllData({ children }: Props) {
+export default async function fetchItemData() {
   const JSON = await fetchAllItem()
 
   const headersList = headers()
@@ -37,7 +32,7 @@ export default async function AllData({ children }: Props) {
   // const search = new URLSearchParams(headerParams).get('search')
   // const select = new URLSearchParams(headerParams).get('select')
 
-  const items = (() => {
+  return (() => {
     let result: ItemInterface[] = []
     if (category.length === 0) {
       for (let i = 0; i < keys.length; i += 1) {
@@ -55,6 +50,4 @@ export default async function AllData({ children }: Props) {
 
     return result
   })()
-
-  return <>{children(items)}</>
 }

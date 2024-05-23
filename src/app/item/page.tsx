@@ -1,8 +1,9 @@
 'use server'
 
-import ItemData from '@/datum/item/all-data'
+import fetchItemData from '@/datum/item/fetchItemData'
 import ItemTable from '@app/item/table/table'
 
 export default async function ItemPage() {
-  return <ItemData>{(data) => <ItemTable data={data} />}</ItemData>
+  const data = await fetchItemData()
+  return <ItemTable data={data} />
 }
