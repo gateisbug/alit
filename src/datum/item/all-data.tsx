@@ -1,8 +1,6 @@
 import { headers } from 'next/headers'
 import { ReactNode } from 'react'
 
-import ItemTable from '@app/item/table/table'
-
 async function fetchAllItem() {
   try {
     const JSON: ItemJson =
