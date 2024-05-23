@@ -10,7 +10,6 @@ export default function Logo() {
         alt='logo'
         width={32}
         height={32}
-        sizes='32px'
         priority
       />
     </LogoBox>

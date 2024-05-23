@@ -14,7 +14,6 @@ export default function GithubLink() {
         <Image
           width={20}
           height={20}
-          sizes='20px'
           src='/assets/github.svg'
           alt='깃허브 링크'
         />

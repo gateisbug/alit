@@ -36,7 +36,6 @@ export default function Breadcrumbs({ item }: { item?: ItemInterface }) {
               alt='seperator'
               width='14'
               height='14'
-              sizes='14px'
             />
           )}
         </Fragment>

@@ -90,7 +90,6 @@ export default function Portrait({
         alt='images'
         width={`${size}`}
         height={`${size}`}
-        sizes={`${size}px`}
         placeholder='blur'
         loading='lazy'
         blurDataURL={`/images/items/${item?.image}_lqip.png`}
