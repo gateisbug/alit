@@ -48,52 +48,54 @@ export default function ItemTable({ data }: Props) {
   )
 
   return (
-    <Container>
-      <Box className='table-header'>
-        <Row>
-          {COLUMNS.map((v) => (
-            <Cell
-              key={v.value}
-              data-type='th'
-              data-key={v.value}
-              className='fzp fwb fcs'
-            >
-              {v.label}
-            </Cell>
-          ))}
-        </Row>
-      </Box>
-
-      <Box className='table-body'>
-        {items.map((item) => (
-          <Row
-            key={`${item.name}_${item.index}`}
-            data-type='row'
-            onClick={() => {
-              rowClickHandler(item)
-            }}
-          >
+    <>
+      <Container>
+        <Box className='table-header'>
+          <Row>
             {COLUMNS.map((v) => (
               <Cell
-                key={`${v.label}_${item.index}_${v.value}`}
-                data-type='td'
+                key={v.value}
+                data-type='th'
                 data-key={v.value}
-                className='fzp fwr fc'
+                className='fzp fwb fcs'
               >
-                {v.render ? v.render(item) : item[v.value]}
+                {v.label}
               </Cell>
             ))}
           </Row>
-        ))}
+        </Box>
 
-        {data.length >= visibleCount && (
-          <div className='loader' ref={items.length >= 10 ? loader : undefined}>
-            <CircularProgress />
-          </div>
-        )}
-      </Box>
+        <Box className='table-body'>
+          {items.map((item) => (
+            <Row
+              key={`${item.name}_${item.index}`}
+              data-type='row'
+              onClick={() => {
+                rowClickHandler(item)
+              }}
+            >
+              {COLUMNS.map((v) => (
+                <Cell
+                  key={`${v.label}_${item.index}_${v.value}`}
+                  data-type='td'
+                  data-key={v.value}
+                  className='fzp fwr fc'
+                >
+                  {v.render ? v.render(item) : item[v.value]}
+                </Cell>
+              ))}
+            </Row>
+          ))}
+        </Box>
+      </Container>
+
+      {data.length >= visibleCount && (
+        <div className='loader' ref={items.length >= 10 ? loader : undefined}>
+          <CircularProgress />
+        </div>
+      )}
 
       <ItemModal item={selectItem} clickAway={clickAwayModal} />
-    </Container>
+    </>
   )
 }
