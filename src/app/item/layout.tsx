@@ -6,7 +6,15 @@ export default function ItemLayout({ children }: { children: ReactNode }) {
   return (
     <main className='header-adder'>
       <div className='page item index'>
-        <Suspense fallback={<CircularProgress />}>{children}</Suspense>
+        <Suspense
+          fallback={
+            <div className='loader'>
+              <CircularProgress />
+            </div>
+          }
+        >
+          {children}
+        </Suspense>
       </div>
     </main>
   )

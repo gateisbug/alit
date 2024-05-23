@@ -1,3 +1,5 @@
+'use server'
+
 import ItemData from '@/datum/item/all-data'
 import ItemTable from '@app/item/table/table'
 
