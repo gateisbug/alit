@@ -40,3 +40,9 @@ body {
 .header-adder {
   padding-top: 51px;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}

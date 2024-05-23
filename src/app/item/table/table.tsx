@@ -42,7 +42,7 @@ export default function ItemTable({ data }: Props) {
     () => () => {
       setItems([])
       setSelectItem(undefined)
-      setVisibleCount(10)
+      setVisibleCount(LOADER)
     },
     [data],
   )
@@ -87,14 +87,7 @@ export default function ItemTable({ data }: Props) {
         ))}
 
         {data.length >= visibleCount && (
-          <div
-            style={{
-              padding: '2rem',
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-            ref={loader}
-          >
+          <div className='loader' ref={items.length >= 10 ? loader : undefined}>
             <CircularProgress />
           </div>
         )}

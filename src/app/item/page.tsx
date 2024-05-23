@@ -1,9 +1,12 @@
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import { headers } from 'next/headers'
 
+import ItemData from '@/datum/item/all-data'
 import ItemTable from '@app/item/table/table'
 
-const ItemData = dynamic(() => import('@/datum/item/all-data'))
+// const ItemData = dynamic(() => import('@/datum/item/all-data'))
+// const ItemTable = dynamic(() => import('@app/item/table/table'))
+
 const keys: ItemURL[] = [
   'gun',
   'torpedo',
@@ -21,6 +24,7 @@ export default async function ItemPage() {
   const category: keyof ItemJson =
     (headerPathname.split('/').at(2) as keyof ItemJson) ?? 'gun'
   const filter = new URLSearchParams(headerParams).get('filter')
+  const search = new URLSearchParams(headerParams).get('search')
 
   const renderProps = (items: ItemJson) => {
     let result: ItemInterface[] = []
@@ -38,7 +42,12 @@ export default async function ItemPage() {
       }
     }
 
-    return <ItemTable data={result} />
+    return (
+      <>
+        <span>{search}</span>
+        <ItemTable data={result} />
+      </>
+    )
   }
 
   return <ItemData>{renderProps}</ItemData>

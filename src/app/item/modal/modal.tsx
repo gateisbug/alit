@@ -94,11 +94,12 @@ export default function ItemModal(props: Props) {
             <StatSection>
               {item?.status?.map((v) => {
                 const stat = v.split(':')
+                const value = statDelimiter(stat)
                 return (
                   <KeyValue
-                    key={`stat_${item?.index}_${stat[0]}`}
+                    key={`stat_${item?.index}_${stat[0]}_${stat[1]}`}
                     label={stat[0]}
-                    value={statDelimiter(stat)}
+                    value={value}
                   />
                 )
               })}
