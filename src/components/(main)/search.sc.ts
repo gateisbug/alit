@@ -103,7 +103,7 @@ export const ClickableKeybutton = styled.button.attrs({
 `
 
 export const SearchScreen = styled.div`
-  grid-template-columns: repeat(2, 44%);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
   padding-bottom: 1rem;
