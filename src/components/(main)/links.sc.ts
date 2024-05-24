@@ -1,5 +1,29 @@
 import styled from 'styled-components'
 
+export const LinkShortcut = styled.div.attrs({
+  role: 'button',
+})`
+  display: block;
+  align-self: center;
+  margin-left: 4px;
+  padding: 0 4px;
+  border-radius: 6px;
+  line-height: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  @media (prefers-color-scheme: light) {
+    background-color: #f6f7f8;
+    border: 1px solid #dfe2e7;
+    color: #303741;
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: #14171a;
+    border: 1px solid #303840;
+    color: #b6bec9;
+  }
+`
+
 // noinspection CssUnusedSymbol
 export const LinkBox = styled.div`
   & > a,
@@ -46,29 +70,12 @@ export const LinkBox = styled.div`
 
   & > button {
     padding: 0.3125rem 0.375rem;
-  }
-`
 
-export const LinkShortcut = styled.div.attrs({
-  role: 'button',
-})`
-  display: block;
-  align-self: center;
-  margin-left: 4px;
-  padding: 0 4px;
-  border-radius: 6px;
-  line-height: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
-
-  @media (prefers-color-scheme: light) {
-    background-color: #f6f7f8;
-    border: 1px solid #dfe2e7;
-    color: #303741;
-  }
-  @media (prefers-color-scheme: dark) {
-    background-color: #14171a;
-    border: 1px solid #303840;
-    color: #b6bec9;
+    /* @device: Tablet */
+    @media (max-width: 768px) {
+      ${LinkShortcut}, .search-text {
+        display: none;
+      }
+    }
   }
 `
