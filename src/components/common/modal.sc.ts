@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { THEME } from '@ui/Modal/preamble'
-
 export const ModalBody = styled.div`
   display: flex;
   flex-flow: column nowrap;
@@ -17,10 +15,10 @@ export const ModalBody = styled.div`
   height: calc(100vh - 8rem);
   max-height: calc(100vh - 8rem);
 
-  @media (min-height: 768px) {
-    height: 40rem;
-    max-height: 40rem;
-  }
+  //@media (min-height: 768px) {
+  //  height: 40rem;
+  //  max-height: 40rem;
+  //}
 
   & > div {
     scrollbar-width: thin;
