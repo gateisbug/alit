@@ -1,11 +1,13 @@
 'use client'
 
 import debounce from 'lodash-es/debounce'
-import { useCallback, useDeferredValue, useEffect, useState } from 'react'
+import { useDeferredValue, useEffect, useMemo, useState } from 'react'
+import { useRecoilState, useSetRecoilState } from 'recoil'
 
 import Portrait from '@app/item/common/portrait'
 import { CategoryTitle, ResultItem, SearchResult } from '@components/(main)'
 import fetchItemJson from '@util/item/fetchItemJson'
+import { selectItemStore } from '@util/item/itemStore'
 
 const keys: ItemURL[] = [
   'gun',
@@ -16,11 +18,19 @@ const keys: ItemURL[] = [
   'special',
 ]
 
+interface Props {
+  value: string
+  onClickClose: () => void
+}
+
 // TODO: Recoil에서 데이터를 포함하기 시작하면 이곳에서 탐색할 수 있도록 변경할 것
-export default function SearchRes({ value }: { value: string }) {
+export default function SearchRes(props: Props) {
+  const { value, onClickClose } = props
+
   const [items, setItems] = useState<ItemInterface[]>([])
   const [results, setResults] = useState<ItemInterface[]>([])
   const defferedResult = useDeferredValue(results)
+  const setSelectItem = useSetRecoilState(selectItemStore)
 
   useEffect(() => {
     fetchItemJson()
@@ -32,48 +42,60 @@ export default function SearchRes({ value }: { value: string }) {
         setItems(result)
       })
       .catch((err) => {
-        console.error(err)
+        throw new Error(err)
       })
   }, [])
 
-  const searchRender = useCallback(
-    debounce((data: ItemInterface[], search: string) => {
-      const name = data.filter((v) => v.name?.includes(search))
-      const nickname = data.filter((v) => v.nickname?.includes(search))
-      const explain = data.filter((v) =>
-        v.explain?.join('. ')?.includes(search),
-      )
+  const debouncedSearch = useMemo(
+    () =>
+      debounce((data: ItemInterface[], search: string) => {
+        const name = data.filter((v) => v.name?.includes(search))
+        const nickname = data.filter((v) => v.nickname?.includes(search))
+        const explain = data.filter((v) =>
+          v.explain?.join('. ')?.includes(search),
+        )
 
-      const seenIndexes = new Set()
-      const res = name.concat(nickname, explain).filter((item) => {
-        if (seenIndexes.has(item.index)) {
-          return false
-        }
-        seenIndexes.add(item.index)
-        return true
-      })
+        const seenIndexes = new Set()
+        const res = name.concat(nickname, explain).filter((item) => {
+          if (seenIndexes.has(item.index)) {
+            return false
+          }
+          seenIndexes.add(item.index)
+          return true
+        })
 
-      setResults(res)
-    }, 300),
+        setResults(res)
+      }, 300),
     [],
   )
 
   useEffect(() => {
     if (items.length === 0 || value.length === 0) return
 
-    searchRender(items, value)
-  }, [items, value])
+    debouncedSearch(items, value)
+  }, [items, debouncedSearch, value])
+
+  const resultClickHandler = (item: ItemInterface) => {
+    setSelectItem(item)
+    onClickClose()
+  }
 
   return (
     <SearchResult>
       <CategoryTitle>Result</CategoryTitle>
       <div>
         {defferedResult.map((v) => (
-          <ResultItem key={`${v.index}_${v.name}_${v.tier}`}>
+          <ResultItem
+            key={`${v.index}_${v.name}_${v.tier}`}
+            onClick={() => {
+              resultClickHandler(v)
+            }}
+          >
             <Portrait
               item={v}
               size={36}
               style={{ width: '3rem', height: '3rem', borderWidth: '3px' }}
+              placeholder={false}
             />
             <span>{v.name}</span>
           </ResultItem>

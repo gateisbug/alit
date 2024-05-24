@@ -53,8 +53,9 @@ export default function Portrait(props: {
   className?: string
   size?: number
   style?: CSSProperties
+  placeholder?: boolean
 }) {
-  const { item, className, size = 48, style } = props
+  const { item, className, size = 48, placeholder = true, style } = props
 
   const strokeSorter = (types?: string, domain?: string) => {
     if (domain !== 'gun') return 'default'
@@ -85,7 +86,7 @@ export default function Portrait(props: {
         alt='images'
         width={`${size}`}
         height={`${size}`}
-        placeholder='blur'
+        placeholder={placeholder ? 'blur' : undefined}
         loading='lazy'
         blurDataURL={`/images/items/${item?.image}_lqip.png`}
       />

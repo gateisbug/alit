@@ -73,7 +73,7 @@ export default function AppBarComponent() {
 
           <ScrollView>
             <div data-search={inputValue.length > 0}>
-              <SearchRes value={inputValue} />
+              <SearchRes value={inputValue} onClickClose={closeModalHandler} />
               <SearchLinks />
             </div>
           </ScrollView>
