@@ -12,8 +12,8 @@ export const ModalBody = styled.div`
 
   min-width: 0;
   width: 100%;
-  height: calc(100vh - 8rem);
   max-height: calc(100vh - 8rem);
+  height: fit-content;
 
   //@media (min-height: 768px) {
   //  height: 40rem;

@@ -8,9 +8,21 @@ import { Button } from '@ui'
 export const ItemModalBody = styled(ModalBody)`
   min-width: 60rem;
   max-width: 60rem;
-  min-height: 37.5rem;
+  width: 100%;
+
+  @media (max-width: 980px) {
+    min-width: unset;
+    max-width: unset;
+  }
 
   & .modal-container {
+    //& > div {
+    //  margin-bottom: 3rem;
+    //}
+    //& > div:last-child {
+    //  margin-bottom: 0;
+    //}
+
     display: flex;
     flex-flow: column nowrap;
     gap: 3rem;
@@ -18,10 +30,6 @@ export const ItemModalBody = styled(ModalBody)`
     height: fit-content;
   }
 
-  /* @device: MobileL */
-  @media (max-width: 425px) {
-    padding: 1.5rem 1rem;
-  }
   ///* @device: Laptop */
   //@media (max-width: 1024px) {
   //  min-width: 0;

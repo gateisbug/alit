@@ -14,8 +14,8 @@ export interface ModalTheme {
 
 export const THEME: ModalTheme = {
   backdrop: 'var(--backdrop, #0000007F)',
-  surface: 'var(--surface, #fff)',
-  shadow: 'var(--shadow, #00000099)',
+  // surface: 'var(--surface, #fff)',
+  // shadow: 'var(--shadow, #00000099)',
 }
 
 export interface ModalProps {
