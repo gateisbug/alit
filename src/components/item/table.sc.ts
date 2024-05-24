@@ -110,7 +110,7 @@ export const Cell = styled.div`
   }
   &[data-key='obtain'] {
     flex-basis: 240px;
-    min-width: 160px;
+    min-width: 168px;
   }
   &[data-key='nation'],
   &[data-key='type'],
@@ -121,6 +121,34 @@ export const Cell = styled.div`
   &[data-key='explain'] {
     flex-basis: 468px;
     min-width: 200px;
+  }
+
+  @media (max-width: 1080px) {
+    &[data-key='nation'],
+    &[data-key='type'],
+    &[data-key='class'] {
+      display: none;
+    }
+  }
+  @media (max-width: 860px) {
+    &[data-key='obtain'] {
+      display: none;
+    }
+  }
+  @media (max-width: 660px) {
+    &[data-key='explain'] {
+      display: none;
+    }
+  }
+  @media (max-width: 460px) {
+    &[data-key='nickname'] {
+      display: none;
+    }
+  }
+  @media (max-width: 340px) {
+    &[data-key='name'] {
+      min-width: 100px;
+    }
   }
 `
 

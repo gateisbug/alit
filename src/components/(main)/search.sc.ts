@@ -9,6 +9,8 @@ export const SearchModalBody = styled(ModalBody)`
   min-width: 40rem;
   max-width: 40rem;
 
+  min-height: 40rem;
+
   @media (max-width: 658px) {
     min-width: unset;
     max-width: unset;
