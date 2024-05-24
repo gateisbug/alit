@@ -2,8 +2,10 @@
 
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
+import { useRecoilState, useResetRecoilState } from 'recoil'
 
 import { CircularProgress } from '@ui'
+import { selectItemStore } from '@util/item/itemStore'
 import useInfiniteScroll from '@util/item/useInfiniteScroll'
 
 const ItemTable = dynamic(() => import('@app/item/table/table'))
@@ -14,7 +16,8 @@ const LOADER = 10
 export default function ItemController({ data }: { data: ItemInterface[] }) {
   const [items, setItems] = useState<ItemInterface[]>([])
   const [visibleCount, setVisibleCount] = useState(LOADER)
-  const [selectItem, setSelectItem] = useState<ItemInterface | undefined>()
+  const [selectItem, setSelectItem] = useRecoilState(selectItemStore)
+  const resetSelectItem = useResetRecoilState(selectItemStore)
 
   const loader = useInfiniteScroll(() => {
     setVisibleCount((prev) => prev + LOADER)
@@ -27,7 +30,7 @@ export default function ItemController({ data }: { data: ItemInterface[] }) {
   useEffect(
     () => () => {
       setItems([])
-      setSelectItem(undefined)
+      resetSelectItem()
       setVisibleCount(LOADER)
     },
     [data],
