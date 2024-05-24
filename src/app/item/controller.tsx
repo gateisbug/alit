@@ -33,6 +33,7 @@ export default function ItemController({ data }: { data: ItemInterface[] }) {
       resetSelectItem()
       setVisibleCount(LOADER)
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [data],
   )
 

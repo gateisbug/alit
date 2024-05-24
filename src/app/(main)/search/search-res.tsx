@@ -2,7 +2,7 @@
 
 import debounce from 'lodash-es/debounce'
 import { useDeferredValue, useEffect, useMemo, useState } from 'react'
-import { useRecoilState, useSetRecoilState } from 'recoil'
+import { useSetRecoilState } from 'recoil'
 
 import Portrait from '@app/item/common/portrait'
 import { CategoryTitle, ResultItem, SearchResult } from '@components/(main)'
