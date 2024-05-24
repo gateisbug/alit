@@ -100,6 +100,10 @@ export default function SearchRes(props: Props) {
             <span>{v.name}</span>
           </ResultItem>
         ))}
+        <div className='nodata'>
+          <p>\(o_o)/</p>
+          <p>No Search Data</p>
+        </div>
       </div>
     </SearchResult>
   )

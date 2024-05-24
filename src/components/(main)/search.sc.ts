@@ -183,6 +183,24 @@ export const SearchResult = styled.div`
   div[data-search='true'] > & {
     display: flex;
   }
+
+  .nodata {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 0;
+    color: var(--font-strong);
+
+    p:first-child {
+      font-size: 4rem;
+      line-height: 1.25em;
+    }
+    p:last-child {
+      font-size: 1.25rem;
+    }
+  }
 `
 export const ResultItem = styled.div`
   color: var(--link);
