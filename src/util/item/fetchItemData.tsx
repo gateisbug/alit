@@ -1,14 +1,6 @@
 import { headers } from 'next/headers'
 
-async function fetchAllItem() {
-  try {
-    const JSON: ItemJson =
-      (import('@util/item/all.json') as unknown as ItemJson) ?? []
-    return JSON
-  } catch (error) {
-    throw new Error('Failed to fetch item')
-  }
-}
+import fetchItemJson from './fetchItemJson'
 
 const keys: ItemURL[] = [
   'gun',
@@ -20,7 +12,7 @@ const keys: ItemURL[] = [
 ]
 
 export default async function fetchItemData() {
-  const JSON = await fetchAllItem()
+  const JSON = await fetchItemJson()
 
   const headersList = headers()
   const headerPathname = headersList.get('x-pathname') || ''

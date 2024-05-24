@@ -1,58 +1,58 @@
 const categories = [
   {
-    title: 'ALL',
-    items: [{ name: 'All Items', path: '/item' }],
+    title: '전체',
+    items: [{ name: '전체 아이템', path: '/item' }],
   },
   {
-    title: 'Naval Guns',
+    title: '함포',
     items: [
-      { name: 'All', path: '/item/gun' },
-      { name: 'Destroyer', path: '/item/gun?filter=dd' },
-      { name: 'Light Cruiser', path: '/item/gun?filter=cl' },
-      { name: 'Heavy Cruiser', path: '/item/gun?filter=ca' },
-      { name: 'Battle Ship', path: '/item/gun?filter=bb' },
-      { name: 'Large Cruiser', path: '/item/gun?filter=cb' },
+      { name: '전체', path: '/item/gun' },
+      { name: '구축함포', path: '/item/gun?filter=dd' },
+      { name: '경순함포', path: '/item/gun?filter=cl' },
+      { name: '중순함포', path: '/item/gun?filter=ca' },
+      { name: '전함포', path: '/item/gun?filter=bb' },
+      { name: '대순함포', path: '/item/gun?filter=cb' },
     ],
   },
   {
-    title: 'Aircrafts',
+    title: '항공기',
     items: [
-      { name: 'All', path: '/item/aircraft' },
-      { name: 'Fighter', path: '/item/aircraft?filter=fighter' },
-      { name: 'Dive Bomber', path: '/item/aircraft?filter=bomber' },
-      { name: 'Torpedo Bomber', path: '/item/aircraft?filter=torpedo-bomber' },
-      { name: 'Seaplane', path: '/item/aircraft?filter=seaplane' },
+      { name: '전체', path: '/item/aircraft' },
+      { name: '전투기', path: '/item/aircraft?filter=fighter' },
+      { name: '폭격기', path: '/item/aircraft?filter=bomber' },
+      { name: '뇌격기', path: '/item/aircraft?filter=torpedo-bomber' },
+      { name: '수상기', path: '/item/aircraft?filter=seaplane' },
     ],
   },
   {
-    title: 'Torpedoes',
+    title: '어뢰',
     items: [
-      { name: 'All', path: '/item/torpedo' },
-      { name: 'Surface Torpedo', path: '/item/torpedo?filter=surface' },
-      { name: 'Submarine`s Torpedo', path: '/item/torpedo?filter=submarine' },
-      { name: 'Missiles', path: '/item/torpedo?filter=missile' },
+      { name: '전체', path: '/item/torpedo' },
+      { name: '수면', path: '/item/torpedo?filter=surface' },
+      { name: '잠수', path: '/item/torpedo?filter=submarine' },
+      { name: '미사일', path: '/item/torpedo?filter=missile' },
     ],
   },
   {
-    title: 'Anti-air Guns',
+    title: '대공포',
     items: [
-      { name: 'All', path: '/item/antiair' },
-      { name: 'Normal', path: '/item/antiair?filter=normal' },
-      { name: 'Fuse', path: '/item/antiair?filter=fuse' },
+      { name: '전체', path: '/item/antiair' },
+      { name: '일반', path: '/item/antiair?filter=normal' },
+      { name: '신관', path: '/item/antiair?filter=fuse' },
     ],
   },
   {
-    title: 'Accessories',
+    title: '설비',
     items: [
-      { name: 'All', path: '/item/accessory' },
-      { name: 'Frontline Accessory', path: '/item/accessory?filter=frontline' },
-      { name: 'Backline Accessory', path: '/item/accessory?filter=backline' },
-      { name: 'Special Accessory', path: '/item/accessory?filter=signiture' }, // Note: Corrected the typo in 'special'
+      { name: '전체', path: '/item/accessory' },
+      { name: '전열', path: '/item/accessory?filter=frontline' },
+      { name: '후열', path: '/item/accessory?filter=backline' },
+      { name: '특수', path: '/item/accessory?filter=signiture' }, // Note: Corrected the typo in 'special'
     ],
   },
   {
-    title: 'Specials',
-    items: [{ name: 'All', path: '/item/special' }],
+    title: '특수',
+    items: [{ name: '공용', path: '/item/special' }],
   },
 ]
 

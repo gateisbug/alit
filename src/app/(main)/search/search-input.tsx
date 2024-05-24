@@ -22,7 +22,7 @@ export default function SearchInput(props: {
           autoCapitalize='off'
           enterKeyHint='search'
           spellCheck='false'
-          placeholder='What are you looking for?'
+          placeholder='검색: 장비명, 별명, 설명'
           type='search'
           maxLength={64}
           onChange={(e) => {

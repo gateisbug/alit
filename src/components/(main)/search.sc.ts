@@ -8,8 +8,12 @@ import { ModalBody } from '@components/common'
 export const SearchModalBody = styled(ModalBody)`
   min-width: 40rem;
   max-width: 40rem;
-  //min-width: 60rem;
-  //max-width: 60rem;
+
+  @media (max-width: 658px) {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+  }
 
   & .kit-scrollview-root {
     padding: 1rem;
@@ -20,8 +24,8 @@ export const CategoryTitle = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem 0.75rem 1rem;
-  font-size: 0.6875rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: var(--font-tip);
@@ -99,7 +103,7 @@ export const ClickableKeybutton = styled.button.attrs({
 `
 
 export const SearchScreen = styled.div`
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 44%);
   gap: 1rem;
   width: 100%;
   padding-bottom: 1rem;
@@ -170,10 +174,52 @@ export const SearchBar = styled.header`
 `
 
 export const SearchResult = styled.div`
+  flex-flow: column nowrap;
   div[data-search='false'] > & {
     display: none;
   }
   div[data-search='true'] > & {
     display: flex;
+  }
+`
+export const ResultItem = styled.div`
+  color: var(--link);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+  height: 64px; // 42px;
+  font-size: 0.875rem; // 14px;
+  font-weight: 500;
+  padding: 2px 16px;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+
+  & > span {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  @media (prefers-color-scheme: light) {
+    border: 1px solid #e8eaee80;
+    background-color: #f6f7f866;
+
+    &:hover {
+      border-color: #ebf5ff;
+      background-color: #66b3ff;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid #1d2126cc;
+    background-color: #14171a80;
+
+    &:hover {
+      border-color: #0061c299;
+      background-color: #003b7566;
+    }
   }
 `

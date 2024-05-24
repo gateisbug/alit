@@ -9,4 +9,5 @@ export {
   SearchResult,
   SearchScreen,
   ClickableKeybutton,
+  ResultItem,
 } from './search.sc'

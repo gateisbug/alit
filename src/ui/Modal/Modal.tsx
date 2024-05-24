@@ -28,6 +28,9 @@ ModalBackdrop.defaultProps = {
 const ModalRoot = styled.div.attrs({
   className: px('Root'),
 })`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   min-width: 0;
   width: fit-content;
   //max-width: 60rem;
@@ -35,19 +38,14 @@ const ModalRoot = styled.div.attrs({
   overflow-y: auto;
 
   ///* @device: Laptop */
-  //@media (max-width: 1024px) {
-  //  min-width: 0;
-  //  max-width: calc(100vw - 4rem);
-  //}
-  ///* @device: MobileL */
-  //@media (max-width: 425px) {
-  //  min-width: 0;
-  //  max-width: calc(100vw - 2rem);
-  //}
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
-  background-color: ${({ theme }) => theme.surface};
-  border-radius: 0.5rem; // 8px
-  box-shadow: 0 0.25rem 1rem 0 ${({ theme }) => theme.shadow}; // 0 4px 16px 0
+  // background-color: ${({ theme }) => theme.surface};
+  // border-radius: 0.5rem; // 8px
+  // box-shadow: 0 0.25rem 1rem 0 ${({ theme }) =>
+    theme.shadow}; // 0 4px 16px 0
 `
 ModalRoot.defaultProps = {
   theme: THEME,
