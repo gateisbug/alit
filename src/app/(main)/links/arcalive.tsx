@@ -1,4 +1,5 @@
 import { LinkBox } from '@components/(main)'
+import Image from '@components/common/Image'
 import { Link } from 'react-router-dom'
 
 function ArcaLiveLink() {
@@ -10,7 +11,7 @@ function ArcaLiveLink() {
         target='_blank'
         rel='noopener noreferrer'
       >
-        <img
+        <Image
           width={20}
           height={20}
           src='assets/arcalive.svg'

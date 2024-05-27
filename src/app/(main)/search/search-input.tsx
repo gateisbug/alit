@@ -1,4 +1,5 @@
 import { SearchBar, ClickableKeybutton } from '@components/(main)'
+import Image from '@components/common/Image'
 
 export default function SearchInput(props: {
   onChange: (value: string) => void
@@ -12,7 +13,7 @@ export default function SearchInput(props: {
       <div className='search-form'>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label htmlFor='search-input'>
-          <img width={24} height={24} src='assets/search.svg' alt='검색' />
+          <Image width={24} height={24} src='assets/search.svg' alt='검색' />
         </label>
         <input
           id='search-input'
