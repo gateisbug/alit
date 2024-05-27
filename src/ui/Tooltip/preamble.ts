@@ -1,8 +1,7 @@
 'use client'
 
-import { useLayoutEffect, useRef, useState } from 'react'
-
 import { prefix } from '@ui/utils'
+import { useLayoutEffect, useRef, useState } from 'react'
 
 export interface TooltipTheme {
   surface?: string

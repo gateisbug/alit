@@ -1,5 +1,6 @@
 'use client'
 
+import { prefix } from '@ui/utils'
 import {
   useRef,
   useImperativeHandle,
@@ -7,8 +8,6 @@ import {
   useState,
   useCallback,
 } from 'react'
-
-import { prefix } from '@ui/utils'
 
 import type { Dispatch, SetStateAction, ForwardedRef } from 'react'
 

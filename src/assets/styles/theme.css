@@ -1,0 +1,36 @@
+:root {
+  --primary: #ffb74d;
+  --on-primary: #1c2025;
+  --primary-hover: #b28035;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main: #001e3ccc;
+    --surface: #fafafa;
+    --font-strong: #101418;
+    --font: #1c2025;
+    --font-weak: #999999;
+    --font-tip: #576375;
+    /*--hover-surface: 0, 0, 0, 0.03;*/
+    --border-weak: #00000014;
+    --border: #0000003a;
+    --hover-back: #0000007a;
+    --link: #006bd6;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main: #0f1924cc;
+    --surface: #101418;
+    --font-strong: #f3f6f9;
+    --font: #b0b8c4;
+    --font-weak: #777777;
+    --font-tip: #98a4b3;
+    /*--hover-surface: 255, 255, 255, 0.05;*/
+    --border-weak: #ffffff14;
+    --border: #ffffff3a;
+    --hover-back: #ffffff7a;
+    --link: #66b3ff;
+  }
+}

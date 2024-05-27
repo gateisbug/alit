@@ -1,8 +1,7 @@
 'use client'
 
-import { ChangeEvent } from 'react'
-
 import { prefix } from '@ui/utils'
+import { ChangeEvent } from 'react'
 
 export interface RadioTheme {
   primary?: string

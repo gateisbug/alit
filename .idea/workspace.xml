@@ -5,61 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="re-create">
-      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Badge/Badge.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Badge/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Badge/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Button/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Button/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Button/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Check/Check.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Check/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Check/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Chip/Chip.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Chip/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Chip/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Input/Input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Input/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Input/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Modal/Modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Modal/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Progress/Progress.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Progress/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Progress/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Radio/Radio.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Radio/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Radio/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/ScrollView/ScrollView.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/ScrollView/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/ScrollView/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Select/Select.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Select/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Select/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Skeleton/Skeleton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Skeleton/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Skeleton/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tabs/Tabs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tabs/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tabs/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Textarea/Textarea.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Textarea/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Textarea/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tooltip/Tooltip.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tooltip/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Tooltip/preamble.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/common.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/typography.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/item/all.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/item/const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/item/fetchItemData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/item/fetchItemJson.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/item/itemStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/item/useInfiniteScroll.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/routes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Input/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Input/preamble.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Radio/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Radio/preamble.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Select/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Select/preamble.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Textarea/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Textarea/preamble.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Tooltip/Tooltip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Tooltip/Tooltip.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Tooltip/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Tooltip/preamble.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +46,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="tsconfig.json" />
         <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -114,7 +91,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/peter/alit/src/ui",
+    "last_opened_file_path": "C:/peter/alit/src/views",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -122,25 +99,26 @@
     "node.js.selected.package.standard": "",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "C:\\peter\\alit\\node_modules\\prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external"
+    "ts.external.directory.path": "C:\\peter\\alit\\node_modules\\typescript\\lib"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\peter\alit\src\ui" />
-      <recent name="C:\peter\alit\imager" />
-      <recent name="C:\Parker\alit-dev\view\public\images\event" />
-      <recent name="C:\Parker\alit-dev\view\public\images\events" />
-      <recent name="C:\Parker\alit-dev\view\public\images\obtain" />
+      <recent name="C:\peter\alit\src\views" />
+      <recent name="C:\peter\alit\src" />
+      <recent name="C:\peter\alit" />
+      <recent name="C:\peter\alit\src\assets\styles" />
+      <recent name="C:\peter\alit\src\util" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\peter\alit\src\app" />
       <recent name="C:\peter\alit\src\view" />
       <recent name="C:\peter\alit\src\assets\styles" />
       <recent name="C:\Parker\alit-dev\view\public\images\items" />
       <recent name="C:\Parker\alit-dev\view\public\assets" />
-      <recent name="C:\Parker\alit-dev\view\public\json" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -244,15 +222,7 @@
       <workItem from="1715305392805" duration="1000" />
       <workItem from="1715305406495" duration="1925000" />
       <workItem from="1715324508052" duration="14586000" />
-      <workItem from="1716769494538" duration="3009000" />
-    </task>
-    <task id="LOCAL-00007" summary="init">
-      <option name="closed" value="true" />
-      <created>1706167809157</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1706167809157</updated>
+      <workItem from="1716769494538" duration="11909000" />
     </task>
     <task id="LOCAL-00008" summary="search">
       <option name="closed" value="true" />
@@ -638,7 +608,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716770037536</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="re-create">
+      <option name="closed" value="true" />
+      <created>1716772645563</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1716772645563</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

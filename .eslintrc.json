@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "sort-imports": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0,
+    "react/no-array-index-key": 1,
+    "react/jsx-no-useless-fragment": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "@typescript-eslint/no-floating-promises": 1,
+    "@typescript-eslint/class-literal-property-style": 1,
+    "@typescript-eslint/no-unused-expressions": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "no-nested-ternary": 1
+  }
+}
