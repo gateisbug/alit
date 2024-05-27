@@ -4,39 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="re-create">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/typography.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/item/all.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/item/const.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/item/fetchItemData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/item/fetchItemJson.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/item/itemStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/item/useInfiniteScroll.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/routes.tsx" afterDir="false" />
+    <list default="true" id="641f5739-683b-4824-9205-ab8589552b33" name="Changes" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/arcalive.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/logo-m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/noImage.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/og-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/links/arcalive.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/links/github.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/links/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/links/searchButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/search/category.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/search/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/search/search-input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/search/search-links.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(main)/search/search-res.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/(main)/appbar.sc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/(main)/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/(main)/links.sc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/(main)/logo.sc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/(main)/search.sc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/modal.sc.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Input/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Input/preamble.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Radio/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Radio/preamble.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Select/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Select/preamble.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Textarea/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Textarea/preamble.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Tooltip/Tooltip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Tooltip/Tooltip.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Tooltip/preamble.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Tooltip/preamble.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Badge/Badge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Badge/Badge.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Check/Check.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Check/Check.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Chip/Chip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Chip/Chip.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Progress/Progress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Progress/Progress.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Radio/Radio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Radio/Radio.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Tabs/Tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Tabs/Tabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Textarea/Textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +91,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2bLLCFUaBHBYL75w1OjQAkoIEbm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -91,7 +104,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/peter/alit/src/views",
+    "last_opened_file_path": "C:/peter/alit",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -107,11 +120,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\peter\alit\src\views" />
-      <recent name="C:\peter\alit\src" />
       <recent name="C:\peter\alit" />
-      <recent name="C:\peter\alit\src\assets\styles" />
-      <recent name="C:\peter\alit\src\util" />
+      <recent name="C:\peter\alit\src\components" />
+      <recent name="C:\peter\alit\public" />
+      <recent name="C:\peter\alit\src\app\(main)" />
+      <recent name="C:\peter\alit\src\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\peter\alit\src\app" />
@@ -222,15 +235,7 @@
       <workItem from="1715305392805" duration="1000" />
       <workItem from="1715305406495" duration="1925000" />
       <workItem from="1715324508052" duration="14586000" />
-      <workItem from="1716769494538" duration="11909000" />
-    </task>
-    <task id="LOCAL-00008" summary="search">
-      <option name="closed" value="true" />
-      <created>1706501290480</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1706501290480</updated>
+      <workItem from="1716769494538" duration="14727000" />
     </task>
     <task id="LOCAL-00009" summary="search">
       <option name="closed" value="true" />
@@ -616,7 +621,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716772645563</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1716789400162</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1716789400162</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="table style 수정 및 json 연동" />
     <MESSAGE value="item 렌더링 변경" />
     <MESSAGE value="floatbutton 추가 및 filter 버그 수정" />
     <MESSAGE value="recoil 연결 및 search, filtering 동작" />
@@ -659,6 +671,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="reinstallation" />
     <MESSAGE value="re-create" />
-    <option name="LAST_COMMIT_MESSAGE" value="re-create" />
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
   </component>
 </project>

@@ -17,6 +17,10 @@
     --border: #0000003a;
     --hover-back: #0000007a;
     --link: #006bd6;
+
+    --shortcut-surface: #f6f7f8;
+    --shortcut-line: #dfe2e7;
+    --shortcut-color: #303741;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -32,5 +36,9 @@
     --border: #ffffff3a;
     --hover-back: #ffffff7a;
     --link: #66b3ff;
+
+    --shortcut-surface: #14171a;
+    --shortcut-line: #303840;
+    --shortcut-color: #b6bec9;
   }
 }

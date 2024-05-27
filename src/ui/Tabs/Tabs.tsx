@@ -48,8 +48,8 @@ const Tab = styled.div.attrs({
   cursor: pointer;
   border-radius: 1rem;
   transition:
-    color 250ms ease-in-out,
-    outline-color 250ms ease-in-out;
+    color 150ms ease-in-out,
+    outline-color 150ms ease-in-out;
 
   &[data-active='true'] {
     color: var(--primary);

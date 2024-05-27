@@ -21,9 +21,9 @@ const ChipRoot = styled.span.attrs({
   width: fit-content;
   border: 0.0625rem solid transparent; // 1px
   transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   padding: 0.5rem 1rem; // 8px 16px
   border-radius: 3rem; // 48px

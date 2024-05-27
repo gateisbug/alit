@@ -23,9 +23,9 @@ const ButtonRoot = styled.button.attrs({
   user-select: none;
   cursor: pointer;
   transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   border: 0.0625rem solid transparent; // 1px
   padding: 0.5rem 1rem; // 8px 16px

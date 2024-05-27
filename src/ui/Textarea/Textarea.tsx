@@ -19,7 +19,7 @@ export const TextareaBox = styled.label.attrs({
   gap: 0.5rem; // 8px
   background-color: transparent;
   box-sizing: border-box;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: text;
 
   border: 0.0625rem solid transparent; // 1px

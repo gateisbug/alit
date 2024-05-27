@@ -35,9 +35,9 @@ const BadgeRoot = styled.span.attrs({
   font-weight: 500;
 
   transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.onPrimary};

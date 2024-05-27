@@ -20,7 +20,7 @@ const CircularProgressBlock = styled.div.attrs({
 })<CircularProgressBlockTransientProps>`
   display: inline-block;
   color: ${({ theme }) => theme.primary};
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
   animation: 1.4s linear 0s infinite normal none running rotate;
 
   ${({ $width, $height }) => {

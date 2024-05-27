@@ -35,7 +35,7 @@ const RadioMark = styled.div.attrs({
   user-select: none;
   width: 1.5rem;
   height: 1.5rem;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   input:not(:disabled):checked + & {
     color: ${({ theme }) => theme.primary};
