@@ -1,4 +1,4 @@
-type TierType = 'N' | 'R' | 'SR' | 'SSR' | 'UR';
+type TierType = 'N' | 'R' | 'SR' | 'SSR' | 'UR'
 
 type ItemInterfaceIndex =
   | 'index'
@@ -12,7 +12,7 @@ type ItemInterfaceIndex =
   | 'domain'
   | 'class'
   | 'type'
-  | 'status';
+  | 'status'
 
 type ItemURL =
   | 'all'
@@ -21,27 +21,27 @@ type ItemURL =
   | 'antiair'
   | 'aircraft'
   | 'accessory'
-  | 'special';
+  | 'special'
 
 interface ItemInterface {
-  index?: number | string;
-  name?: string;
-  tier?: TierType;
-  nickname?: string;
-  image?: string;
-  link?: string;
-  nation?: string;
-  explain?: string[];
-  obtain?: string[];
-  domain?: string;
-  class?: string;
-  type?: string;
-  status?: string[];
+  index?: number | string
+  name?: string
+  tier?: TierType
+  nickname?: string
+  image?: string
+  link?: string
+  nation?: string
+  explain?: string[]
+  obtain?: string[]
+  domain?: string
+  class?: string
+  type?: string
+  status?: string[]
 }
 
-type ItemJson = Record<ItemURL, ItemInterface[]>;
+type ItemJson = Record<ItemURL, ItemInterface[]>
 
 type OptionType<V = string | undefined, L = string | undefined> = {
-  value: V;
-  label: L;
-};
+  value: V
+  label: L
+}

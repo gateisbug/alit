@@ -1,12 +1,13 @@
-import AppBar from '@app/(main)/appbar';
+import AppBar from '@app/(main)/appbar'
 import { Outlet } from 'react-router-dom'
 
 export default function RootLayout() {
   return (
     <>
-      {/* <header>header area</header> */}
       <AppBar />
-      <Outlet />
+      <div className='header-adder'>
+        <Outlet />
+      </div>
     </>
   )
 }

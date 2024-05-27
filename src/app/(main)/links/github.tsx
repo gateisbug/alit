@@ -10,12 +10,7 @@ export default function GithubLink() {
         target='_blank'
         rel='noopener noreferrer'
       >
-        <img
-          width={20}
-          height={20}
-          src='assets/github.svg'
-          alt='깃허브 링크'
-        />
+        <img width={20} height={20} src='assets/github.svg' alt='깃허브 링크' />
       </Link>
     </LinkBox>
   )
