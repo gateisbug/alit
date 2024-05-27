@@ -1,24 +1,51 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "baseUrl": ".",
+    "rootDir": ".",
+
+    "target": "ES2015",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2015", "DOM", "DOM.Iterable", "ScriptHost"],
     "module": "ESNext",
-    "skipLibCheck": true,
+    "skipLibCheck": false,
+    "allowJs": true,
+
+    "typeRoots": ["*.d.ts"],
+    "types": ["vite/client"],
 
     /* Bundler mode */
+    "esModuleInterop": true,
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "outDir": "build",
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path */
+    "paths": {
+      "@src/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/assets/styles/*"],
+      "@icon/*": ["src/assets/icon/*"],
+      "@icon": ["src/assets/icon/index.ts"],
+
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components/index.ts"],
+      "@ui/*": ["src/ui/*"],
+      "@ui": ["src/ui/index.ts"],
+      "@util/*": ["src/util/*"],
+      "@util": ["src/util/index.ts"],
+
+      "@views/*": ["src/views/*"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
