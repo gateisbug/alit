@@ -1,17 +1,30 @@
-# AzurLane Item List
+# React + TypeScript + Vite
 
-벽람항로 갈아야할 아이템 아닌 아이템 구분해놓은 곳
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- git-pages : [깃페이지](https://gateisbug.github.io/alit/)
-- 정보 리소스 : [아카라이브](https://arca.live/b/azurlane/45593816)
-- 정보 리소스(구글 시트) : [구글 스프레드시트](https://docs.google.com/spreadsheets/d/1ILevJQ08yszIX2bgh-II0A_EzfhAIufeuqxCKdQ7-UQ/edit#gid=0)
-- 이미지 리소스 : [벽람위키](https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki)
-- 아카라이브 게시글 : [아카라이브](https://arca.live/b/azurlane/67964503)
-- 개발자용 리소스 : [개발자용 구글시트](https://docs.google.com/spreadsheets/d/1TdoZXjpm8QYNmvKM73QSFn9lAPDnWC-AtPzSR07KkGk/edit?usp=sharing)
+Currently, two official plugins are available:
 
-## License
-이 프로젝트에서 사용하는 모든 내용과 이미지(이하 리소스)는 별도의 저작권자가 있으며, 각각 저작권자가 명시한 라이센스를 적용받습니다. 리소스를 제외한 모든 소스코드는 MIT License에 따라 이용하실 수 있습니다.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Latest Version
-- [2.2.1](./UPDATE.md#221)
-- [2.2.0](./UPDATE.md#220)
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
