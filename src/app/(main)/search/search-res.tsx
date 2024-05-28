@@ -73,6 +73,16 @@ export default function SearchRes(props: Props) {
     debouncedSearch(items, value)
   }, [items, debouncedSearch, value])
 
+  useEffect(() => {
+    if(value.length === 0 ) {
+      setResults([]);
+    }
+  }, [value])
+  
+  useEffect(() => () => {
+      setResults([]);
+    }, [])
+
   const resultClickHandler = (item: ItemInterface) => {
     setSelectItem(item)
     onClickClose()
