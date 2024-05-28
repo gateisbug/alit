@@ -2,13 +2,13 @@ export function prefix(name: string) {
   return (str: string) => `kit-${name}-${str}`
 }
 
-type PossibleClassNameType =
-  | string
-  | number
-  | boolean
-  | Record<string, boolean | undefined>
-  | undefined
-  | null
+// type PossibleClassNameType =
+//   | string
+//   | number
+//   | boolean
+//   | Record<string, boolean | undefined>
+//   | undefined
+//   | null
 
 // export function combineClass(...args: PossibleClassNameType[]): string {
 //   const output: string[] = []
