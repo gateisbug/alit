@@ -33,7 +33,7 @@ function Image(props: ImageProps) {
           observer.disconnect()
         }
       },
-      { threshold: 1 },
+      { threshold: 0.25 },
     )
 
     if (imgRef.current) {
