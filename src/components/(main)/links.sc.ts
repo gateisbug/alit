@@ -51,11 +51,6 @@ export const LinkBox = styled.div`
       background-color: var(--border-weak);
     }
 
-    & > img {
-      width: 20px;
-      height: 20px;
-    }
-
     & > .search-text {
       margin-left: 8px;
       margin-right: 4px;

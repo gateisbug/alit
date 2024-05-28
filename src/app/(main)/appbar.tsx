@@ -1,6 +1,6 @@
 import { AppBar, SearchModalBody } from '@components/(main)'
 import debounce from 'lodash-es/debounce'
-import { lazy, useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { ArcaLiveLink, GithubLink, SearchButton } from './links'
@@ -8,7 +8,6 @@ import Logo from './logo'
 
 const Modal = lazy(() => import('../../ui/Modal/Modal'))
 const ScrollView = lazy(() => import('../../ui/ScrollView/ScrollView'))
-
 const SearchInput = lazy(() => import('./search/search-input'))
 const SearchLinks = lazy(() => import('./search/search-links'))
 const SearchRes = lazy(() => import('./search/search-res'))
@@ -68,21 +67,26 @@ function AppBarComponent() {
         </div>
       </AppBar>
 
-      <Modal open={open} onClickAway={closeModalHandler}>
-        <SearchModalBody>
-          <SearchInput
-            onChange={inputValueHandler}
-            onClickClose={closeModalHandler}
-          />
+      <Suspense>
+        <Modal open={open} onClickAway={closeModalHandler}>
+          <SearchModalBody>
+            <SearchInput
+              onChange={inputValueHandler}
+              onClickClose={closeModalHandler}
+            />
 
-          <ScrollView>
-            <div data-search={inputValue.length > 0}>
-              <SearchRes value={inputValue} onClickClose={closeModalHandler} />
-              <SearchLinks />
-            </div>
-          </ScrollView>
-        </SearchModalBody>
-      </Modal>
+            <ScrollView>
+              <div data-search={inputValue.length > 0}>
+                <SearchRes
+                  value={inputValue}
+                  onClickClose={closeModalHandler}
+                />
+                <SearchLinks />
+              </div>
+            </ScrollView>
+          </SearchModalBody>
+        </Modal>
+      </Suspense>
     </>
   )
 }

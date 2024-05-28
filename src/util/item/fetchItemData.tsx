@@ -1,5 +1,3 @@
-import { headers } from 'next/headers'
-
 import fetchItemJson from './fetchItemJson'
 
 const keys: ItemURL[] = [
@@ -11,16 +9,20 @@ const keys: ItemURL[] = [
   'special',
 ]
 
-export default async function fetchItemData() {
+export default async function fetchItemData(request: Request) {
+  window.scrollTo(0, 0);
+
   const JSON = await fetchItemJson()
 
-  const headersList = headers()
-  const headerPathname = headersList.get('x-pathname') || ''
-  const headerParams = new URLSearchParams(headersList.get('x-params') || '')
+  const { pathname, searchParams } = new URL(request.url)
 
-  const category: keyof ItemJson =
-    (headerPathname.split('/').at(2) as keyof ItemJson) ?? 'gun'
-  const filter = headerParams.get('filter')
+  // const headersList = headers()
+  // const headerPathname = headersList.get('x-pathname') || ''
+  // const headerParams = new URLSearchParams(headersList.get('x-params') || '')
+
+  const category: keyof ItemJson | '' =
+    (pathname.split('/').at(2) as keyof ItemJson) ?? ''
+  const filter = searchParams.get('filter')
   // const search = new URLSearchParams(headerParams).get('search')
   // const select = new URLSearchParams(headerParams).get('select')
 

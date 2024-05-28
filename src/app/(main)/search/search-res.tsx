@@ -1,5 +1,3 @@
-'use client'
-
 import { CategoryTitle, ResultItem, SearchResult } from '@components/(main)'
 import fetchItemJson from '@util/item/fetchItemJson'
 import { selectItemStore } from '@util/item/itemStore'

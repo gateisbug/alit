@@ -494,7 +494,7 @@ export function obtainDelimiter(value?: ItemInterface): ObtainType[] {
     const e = v.split(':')
     if (e[0] === '이벤트') {
       return {
-        img: `/images/event/${eventDelimiter(v)}.png`,
+        img: `images/event/${eventDelimiter(v)}.png`,
         obtain: e[0],
         label: e[1],
       }
@@ -538,7 +538,7 @@ export function obtainDelimiter(value?: ItemInterface): ObtainType[] {
         tmpLabel = 'unknown'
     }
     return {
-      img: `/images/obtain/${tmpImg}.png`,
+      img: `images/obtain/${tmpImg}.png`,
       obtain: tmpObtain,
       label: tmpLabel,
     }

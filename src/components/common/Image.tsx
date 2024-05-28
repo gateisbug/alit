@@ -40,6 +40,7 @@ function Image(props: ImageProps) {
       observer.observe(imgRef.current)
     }
 
+    // eslint-disable-next-line consistent-return
     return () => {
       if (imgRef.current) {
         observer.unobserve(imgRef.current)
@@ -54,6 +55,8 @@ function Image(props: ImageProps) {
       loading={!priority ? 'lazy' : 'eager'}
       onError={(e) => {
         ;(e.target as HTMLImageElement).src = 'assets/noImage.svg'
+        ;(e.target as HTMLImageElement).width = 32
+        ;(e.target as HTMLImageElement).height = 32
       }}
       alt={alt}
       width={width}
