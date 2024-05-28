@@ -10,7 +10,7 @@ export default function useInfiniteScroll(callback: () => void) {
           callback()
         }
       },
-      { threshold: 1 },
+      { threshold: 0.5 },
     )
 
     if (loaderRef.current) {
