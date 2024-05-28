@@ -10,9 +10,12 @@
     "skipLibCheck": false,
     "allowJs": true,
 
+    "typeRoots": ["*.d.ts"],
+    "types": ["vite/client"],
+
     /* Bundler mode */
     "esModuleInterop": true,
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -24,11 +27,26 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+
+    /* Path */
+    "paths": {
+      "@src/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/assets/styles/*"],
+      "@icon/*": ["src/assets/icon/*"],
+      "@icon": ["src/assets/icon/index.ts"],
+
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components/index.ts"],
+      "@ui/*": ["src/ui/*"],
+      "@ui": ["src/ui/index.ts"],
+      "@util/*": ["src/util/*"],
+      "@util": ["src/util/index.ts"],
+
+      "@views/*": ["src/views/*"]
+    }
   },
-  "include": ["view/**/*", "packages/ui", "packages/util"],
-  "references": [
-    { "path": "./view" },
-    { "path": "./packages/ui" },
-    { "path": "./packages/util" }
-  ]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

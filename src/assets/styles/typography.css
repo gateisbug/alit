@@ -1,0 +1,72 @@
+.fcw {
+  color: var(--font-weak);
+}
+.fc {
+  color: var(--font);
+}
+.fcs {
+  color: var(--font-strong);
+}
+
+.fzm {
+  /* font-size: megazine */
+  font-size: 2rem;
+}
+.fzn {
+  /* font-size: news */
+  font-size: 1.75rem;
+}
+.fzh {
+  /* font-size: headline */
+  font-size: 1.5rem;
+}
+.fzl {
+  /* font-size: header */
+  font-size: 1.25rem;
+}
+.fzs {
+  /* font-size: subtitle */
+  font-size: 1.125rem;
+}
+.fzp {
+  /* font-size: paragraph */
+  font-size: 1rem;
+}
+.fzb {
+  /* font-size: body */
+  font-size: 0.875rem;
+}
+.fza {
+  /* font-size: annotation */
+  font-size: 0.75rem;
+}
+.fzc {
+  /* font-size: caption */
+  font-size: 0.625rem;
+}
+
+.fwb {
+  font-family: 'Noto Sans KR', Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.fwm {
+  font-family: 'Noto Sans KR', Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.fwr {
+  font-family: 'Noto Sans KR', Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lh {
+  line-height: 1em;
+}
