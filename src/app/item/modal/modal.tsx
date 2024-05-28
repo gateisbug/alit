@@ -67,7 +67,7 @@ export default function ItemModal(props: {
               <div className='obtain'>
                 {obtainDelimiter(item).map((v) => (
                   <ImageCard
-                    key={`${item?.index}_${v.obtain}`}
+                    key={`${item?.index}_${v.obtain}_${v.label}`}
                     src={v.img}
                     alt={v.img}
                   >
@@ -79,7 +79,7 @@ export default function ItemModal(props: {
 
               <div className='nation'>
                 <ImageCard
-                  src={`images/nation/${item?.nation?.toLowerCase()}.png`}
+                  src={`images/nation/${item?.nation?.toLowerCase()}.webp`}
                   alt={item?.nation ?? 'unknown nation'}
                 >
                   <span className='nation-value fzs fwb'>

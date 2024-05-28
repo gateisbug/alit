@@ -81,11 +81,11 @@ export default function Portrait(props: {
       style={style}
     >
       <Image
-        src={`images/items/${item?.image}.png`}
+        src={`images/items/${item?.image}.webp`}
         alt='images'
         width={size}
         height={size}
-        placeholder={`images/items/${item?.image}_lqip.png`}
+        placeholder={`images/items/${item?.image}_lqip.webp`}
       />
     </PortraitFrame>
   )
