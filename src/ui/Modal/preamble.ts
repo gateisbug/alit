@@ -1,5 +1,3 @@
-'use client'
-
 import { prefix } from '@ui/utils'
 import { useCallback, useRef } from 'react'
 

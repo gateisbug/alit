@@ -1,5 +1,3 @@
-'use client'
-
 import { prefix } from '@ui/utils'
 
 import type { MouseEvent } from 'react'

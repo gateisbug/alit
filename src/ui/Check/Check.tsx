@@ -1,5 +1,3 @@
-'use client'
-
 import styled from 'styled-components'
 
 import { CheckProps, DEFAULT_PROPS, px, THEME } from './preamble'

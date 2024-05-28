@@ -1,5 +1,3 @@
-'use client'
-
 import debounce from 'lodash-es/debounce'
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import styled from 'styled-components'

@@ -1,5 +1,3 @@
-'use client'
-
 import { prefix } from '@ui/utils'
 import { ChangeEvent } from 'react'
 

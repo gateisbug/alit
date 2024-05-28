@@ -1,5 +1,3 @@
-'use client'
-
 import { px, THEME, TooltipProps, useTooltip } from '@ui/Tooltip/preamble'
 import { createPortal } from 'react-dom'
 import styled from 'styled-components'
