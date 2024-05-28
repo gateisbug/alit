@@ -97,7 +97,7 @@ export default function SearchRes(props: Props) {
             <span>{v.name}</span>
           </ResultItem>
         ))}
-        {defferedResult.length === 0 && (
+        {results.length === 0 && (
           <div className='nodata'>
             <p>\(o_o)/</p>
             <p>No Search Data</p>
