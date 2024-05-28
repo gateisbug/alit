@@ -1,11 +1,19 @@
 import { SearchBar, ClickableKeybutton } from '@components/(main)'
 import Image from '@components/common/Image'
+import { useEffect } from 'react'
 
 export default function SearchInput(props: {
   onChange: (value: string) => void
   onClickClose: () => void
 }) {
   const { onChange, onClickClose } = props
+
+  useEffect(() => {
+    const inputRef = document.getElementById('search-input')
+    if (inputRef) {
+      inputRef.focus()
+    }
+  }, [])
 
   // noinspection HtmlUnknownTarget
   return (
@@ -28,6 +36,7 @@ export default function SearchInput(props: {
           onChange={(e) => {
             onChange(e.target.value)
           }}
+          tabIndex={0}
         />
       </div>
       <ClickableKeybutton onClick={onClickClose} content='esc'>

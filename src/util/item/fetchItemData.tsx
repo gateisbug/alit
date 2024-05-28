@@ -10,7 +10,7 @@ const keys: ItemURL[] = [
 ]
 
 export default async function fetchItemData(request: Request) {
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 0)
 
   const JSON = await fetchItemJson()
 
