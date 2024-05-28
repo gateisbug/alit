@@ -1,25 +1,25 @@
 import styled, { css } from 'styled-components'
 
 import {
-  px,
+  cx,
   THEME,
   SkeletonRootTransientProps,
   SkeletonProps,
 } from './preamble'
 
 const SkeletonRoot = styled.span.attrs({
-  className: px('root'),
+  className: cx('root'),
 })<SkeletonRootTransientProps>`
   display: block;
-  min-width: 1rem; // 16px
-  min-height: 1rem; // 16px
+  min-width: 1rem; /* 16 */
+  min-height: 1rem; /* 16 */
   animation: animation-skeleton 2s ease-in-out 0.5s infinite;
 
   ${({ $varient }) => {
     switch ($varient) {
       case 'text':
         return css`
-          border-radius: 0.25rem; // 4px
+          border-radius: 0.25rem; /* 4 */
           transform-origin: 0 55%;
           transform: scale(1, 0.6);
         `
@@ -30,7 +30,7 @@ const SkeletonRoot = styled.span.attrs({
       case 'paragraph':
       default:
         return css`
-          border-radius: 0.25rem; // 4px
+          border-radius: 0.25rem; /* 4 */
         `
     }
   }}
@@ -49,7 +49,7 @@ const SkeletonRoot = styled.span.attrs({
   &:empty::before {
     display: inline-block;
     content: ' ';
-    min-height: 1rem; // 16px
+    min-height: 1rem; /* 16 */
   }
 
   @keyframes animation-skeleton {

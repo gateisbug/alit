@@ -47,7 +47,7 @@ const categories = [
       { name: '전체', path: '/item/accessory' },
       { name: '전열', path: '/item/accessory?filter=frontline' },
       { name: '후열', path: '/item/accessory?filter=backline' },
-      { name: '특수', path: '/item/accessory?filter=signiture' }, // Note: Corrected the typo in 'special'
+      { name: '특수', path: '/item/accessory?filter=signiture' },
     ],
   },
   {

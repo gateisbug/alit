@@ -1,16 +1,16 @@
-import { px, THEME, TooltipProps, useTooltip } from '@ui/Tooltip/preamble'
+import { cx, THEME, TooltipProps, useTooltip } from '@ui/Tooltip/preamble'
 import { createPortal } from 'react-dom'
 import styled from 'styled-components'
 
 export const TooltipContainer = styled.span.attrs({
-  className: px('container'),
+  className: cx('container'),
 })`
   position: relative;
   display: inline-block;
 `
 
 export const TooltipBox = styled.div.attrs({
-  className: px('box'),
+  className: cx('box'),
 })`
   z-index: 1500;
   pointer-events: auto;
@@ -21,7 +21,7 @@ export const TooltipBox = styled.div.attrs({
 `
 
 export const TooltipText = styled.div.attrs({
-  className: px('text'),
+  className: cx('text'),
 })`
   position: relative;
 

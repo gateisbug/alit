@@ -3,18 +3,18 @@ import styled from 'styled-components'
 import {
   CircularProgressBlockTransientProps,
   CircularProgressProps,
-  px,
+  cx,
   THEME,
 } from './preamble'
 
 const CircularProgressBox = styled.div.attrs({
-  className: px('box'),
+  className: cx('box'),
 })`
   display: flex;
 `
 
 const CircularProgressBlock = styled.div.attrs({
-  className: px('block'),
+  className: cx('block'),
 })<CircularProgressBlockTransientProps>`
   display: inline-block;
   color: ${({ theme }) => theme.primary};
@@ -46,31 +46,31 @@ CircularProgressBlock.defaultProps = {
 }
 
 const CircularProgressRoot = styled.svg.attrs({
-  className: px('root'),
+  className: cx('root'),
 })`
   display: block;
 `
 
 const CircularProgressSpinner = styled.circle.attrs({
-  className: px('spinner'),
+  className: cx('spinner'),
 })`
   stroke: currentColor;
-  stroke-dasharray: 5rem, 12.5rem; /* 80px, 200px; */
+  stroke-dasharray: 5rem, 12.5rem; /* 80, 200; */
   stroke-dashoffset: 0;
   animation: 1.4s ease-in-out 0s infinite normal none running spinning;
 
   @keyframes spinning {
     0% {
-      stroke-dasharray: 0.0625rem, 12.5rem; /* 1px, 200px */
+      stroke-dasharray: 0.0625rem, 12.5rem; /* 1, 200 */
       stroke-dashoffset: 0;
     }
     50% {
-      stroke-dasharray: 6.25rem, 12.5rem; /* 100px, 200px */
-      stroke-dashoffset: -0.9375rem; /* -15px */
+      stroke-dasharray: 6.25rem, 12.5rem; /* 100, 200 */
+      stroke-dashoffset: -0.9375rem; /* -15 */
     }
     100% {
-      stroke-dasharray: 6.25rem, 12.5rem; /* 100px, 200px */
-      stroke-dashoffset: -7.8125rem; /* -125px */
+      stroke-dasharray: 6.25rem, 12.5rem; /* 100, 200 */
+      stroke-dashoffset: -7.8125rem; /* -125 */
     }
   }
 `

@@ -16,19 +16,19 @@ const PortraitFrame = styled.div`
   border: 0.1875rem solid #7e5475;
 
   &[data-stroke='default'] {
-    border-color: #7e5475; // #666666
+    border-color: #7e5475;
   }
   &[data-stroke='red'] {
-    border-color: #e4002b; // #d61314; #e4002b; #ff2a1b;
+    border-color: #e4002b;
   }
   &[data-stroke='yellow'] {
-    border-color: #f3e500; // #f3f521
+    border-color: #f3e500;
   }
   &[data-stroke='blue'] {
-    border-color: #0047bb; // #0801d9
+    border-color: #0047bb;
   }
   &[data-stroke='violet'] {
-    border-color: #ea27c2; // #db16db
+    border-color: #ea27c2;
   }
 
   &[data-tier='N'] {

@@ -1,12 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-// import styled from 'styled-components'
-
-// const Root = styled.img`
-//   width: 100%; /* 이미지가 컨테이너의 전체 너비를 차지하도록 설정 */
-//   height: auto; /* 이미지 비율을 유지 */
-//   display: block; /* 이미지를 블록 요소로 만듬 (새 줄에서 시작) */
-//   margin: 0 auto; /* 이미지를 가운데 정렬 */
-// `
 
 interface ImageProps {
   src: string

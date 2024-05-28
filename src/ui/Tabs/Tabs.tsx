@@ -2,17 +2,17 @@ import debounce from 'lodash-es/debounce'
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
-import { px, TabsProps, THEME } from './preamble'
+import { cx, TabsProps, THEME } from './preamble'
 
 const TabContainer = styled.div.attrs({
-  className: px('container'),
+  className: cx('container'),
 })`
   display: block;
   position: relative;
 `
 
 const TabBar = styled.div.attrs({
-  className: px('bar'),
+  className: cx('bar'),
 })`
   position: absolute;
   width: 0;
@@ -29,7 +29,7 @@ TabBar.defaultProps = {
 }
 
 const TabBox = styled.div.attrs({
-  className: px('box'),
+  className: cx('box'),
 })`
   display: flex;
   flex-flow: row nowrap;
@@ -39,7 +39,7 @@ const TabBox = styled.div.attrs({
 `
 
 const Tab = styled.div.attrs({
-  className: px('tab'),
+  className: cx('tab'),
 })`
   display: inline-block;
   //padding: 0.5rem 0.75rem;

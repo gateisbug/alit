@@ -48,7 +48,7 @@ export type InputTypes =
   | 'date'
   | 'number'
 
-export const px = prefix('input')
+export const cx = prefix('input')
 
 export const DEFAULT_PROPS = {
   type: 'text' as InputTypes,

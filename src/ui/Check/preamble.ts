@@ -34,7 +34,7 @@ export interface CheckProps {
   theme?: CheckboxTheme
 }
 
-export const px = prefix('check')
+export const cx = prefix('check')
 
 export const DEFAULT_PROPS = {
   type: 'checkbox',

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import {
-  px,
+  cx,
   THEME,
   ButtonRootTransientProps,
   ButtonProps,
@@ -10,7 +10,7 @@ import {
 
 // noinspection JSUnresolvedReference
 const ButtonRoot = styled.button.attrs({
-  className: px('root'),
+  className: cx('root'),
 })<ButtonRootTransientProps>`
   display: inline-flex;
   flex-flow: row nowrap;
@@ -25,9 +25,9 @@ const ButtonRoot = styled.button.attrs({
     background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  border: 0.0625rem solid transparent; // 1px
-  padding: 0.5rem 1rem; // 8px 16px
-  border-radius: 0.25rem; // 4px
+  border: 0.0625rem solid transparent; /* 1 */
+  padding: 0.5rem 1rem; /* 8 16 */
+  border-radius: 0.25rem; /* 4 */
 
   &:hover {
     border-color: transparent;
@@ -36,10 +36,8 @@ const ButtonRoot = styled.button.attrs({
     outline: none;
   }
 
-  // fullWidth
   width: ${({ $fullWidth }) => ($fullWidth === true ? '100%' : 'auto')};
 
-  // variant
   ${({ $variant }) => {
     switch ($variant) {
       case 'fill':
@@ -80,7 +78,6 @@ const ButtonRoot = styled.button.attrs({
     }
   }}
 
-  // disabled
   &:disabled {
     cursor: default;
 

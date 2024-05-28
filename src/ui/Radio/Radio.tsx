@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
-import { px, THEME, RadioProps } from './preamble'
+import { cx, THEME, RadioProps } from './preamble'
 
 const RadioBox = styled.label.attrs({
-  className: px('box'),
+  className: cx('box'),
 })`
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 0.25rem; // 4px
+  gap: 0.25rem; /* 4 */
   cursor: pointer;
 
   &:has(input:disabled) {
@@ -17,7 +17,7 @@ const RadioBox = styled.label.attrs({
 `
 
 const RadioRoot = styled.input.attrs({
-  className: px('root'),
+  className: cx('root'),
 })`
   display: none;
 `
@@ -26,7 +26,7 @@ RadioRoot.defaultProps = {
 }
 
 const RadioMark = styled.div.attrs({
-  className: px('mark'),
+  className: cx('mark'),
 })`
   position: relative;
   display: inline-flex;

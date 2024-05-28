@@ -32,4 +32,4 @@ export interface RadioProps {
   children?: NodeType
 }
 
-export const px = prefix('radio')
+export const cx = prefix('radio')

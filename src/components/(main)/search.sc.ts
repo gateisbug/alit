@@ -40,20 +40,20 @@ export const SearchItem = styled(Link)`
   cursor: pointer;
   //width: 100%;
   flex-grow: 1;
-  height: 2.625rem; // 42px;
-  max-height: 2.625rem; // 42px;
-  font-size: 0.875rem; // 14px;
+  height: 2.625rem; /* 42 */
+  max-height: 2.625rem; /* 42 */
+  font-size: 0.875rem; /* 14 */
   font-weight: 500;
-  padding: 2px 0 2px 16px;
-  border-radius: 12px;
-  margin-bottom: 0.5rem;
+  padding: 0.125rem 0 0.125rem 1rem; /* 2 0 2 16 */
+  border-radius: 0.75rem; /* 12 */
+  margin-bottom: 0.5rem; /* 8 */
   box-sizing: border-box;
   transition:
     border 150ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (prefers-color-scheme: light) {
-    border: 1px solid #e8eaee80;
+    border: 0.0625rem solid #e8eaee80; /* 1 */
     background-color: #f6f7f866;
 
     &:hover {
@@ -62,7 +62,7 @@ export const SearchItem = styled(Link)`
     }
   }
   @media (prefers-color-scheme: dark) {
-    border: 1px solid #1d2126cc;
+    border: 0.0625rem solid #1d2126cc; /* 1 */
     background-color: #14171a80;
 
     &:hover {
@@ -78,14 +78,14 @@ export const ClickableKeybutton = styled.button.attrs({
   display: block;
   align-self: center;
   cursor: pointer;
-  height: 1.5rem;
-  margin-right: 8px;
-  padding: 2px 6px 4px;
+  height: 1.5rem; /* 24 */
+  margin-right: 0.5rem; /* 8 */
+  padding: 0.125rem 0.375rem 0.25rem; /* 2 6 4 */
   font-size: 0;
-  border-radius: 6px;
+  border-radius: 0.375rem; /* 6 */
 
   background-color: var(--shortcut-surface);
-  border: 1px solid var(--shortcut-line);
+  border: 0.0625rem solid var(--shortcut-line); /* 1 */
 
   &::before {
     color: var(--shortcut-color);
@@ -93,7 +93,7 @@ export const ClickableKeybutton = styled.button.attrs({
 
   &::before {
     content: 'esc';
-    font-size: 0.75rem;
+    font-size: 0.75rem; /* 12 */
     font-weight: 700;
   }
 `
@@ -124,20 +124,20 @@ export const SearchScreen = styled.div`
 
 export const SearchBar = styled.header`
   display: flex;
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem; /* 4 8 */
 
   @media (prefers-color-scheme: light) {
-    border-bottom: 1px solid #dfe2e7;
+    border-bottom:  0.0625rem solid #dfe2e7; /* 1 */
   }
   @media (prefers-color-scheme: dark) {
-    border-bottom: 1px solid #1d2126;
+    border-bottom:  0.0625rem solid #1d2126; /* 1 */
   }
 
   & .search-form {
     display: flex;
     align-items: center;
-    height: 56px;
-    padding: 0 12px;
+    height: 3.5rem; /* 56 */
+    padding: 0 0.75rem; /* 12 */
     position: relative;
     width: 100%;
 
@@ -203,12 +203,12 @@ export const ResultItem = styled.div`
   align-items: center;
   cursor: pointer;
   flex-grow: 1;
-  height: 64px; // 42px;
-  font-size: 0.875rem; // 14px;
+  height: 4rem; /* 64 */
+  font-size: 0.875rem; /* 14 */
   font-weight: 500;
-  padding: 2px 16px;
-  border-radius: 12px;
-  margin-bottom: 0.5rem;
+  padding: 0.125rem 1rem; /* 2 16 */
+  border-radius: 0.75rem; /* 12 */
+  margin-bottom: 0.5rem; /* 8 */
   box-sizing: border-box;
 
   & > span {
@@ -219,7 +219,7 @@ export const ResultItem = styled.div`
   }
 
   @media (prefers-color-scheme: light) {
-    border: 1px solid #e8eaee80;
+    border:  0.0625rem solid #e8eaee80; /* 1 */
     background-color: #f6f7f866;
 
     &:hover {
@@ -228,7 +228,7 @@ export const ResultItem = styled.div`
     }
   }
   @media (prefers-color-scheme: dark) {
-    border: 1px solid #1d2126cc;
+    border:  0.0625rem solid #1d2126cc; /* 1 */
     background-color: #14171a80;
 
     &:hover {

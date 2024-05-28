@@ -1,10 +1,10 @@
 import { createPortal } from 'react-dom'
 import styled from 'styled-components'
 
-import { ModalProps, px, THEME, useModal } from './preamble'
+import { ModalProps, cx, THEME, useModal } from './preamble'
 
 const ModalBackdrop = styled.div.attrs({
-  className: px('Backdrop'),
+  className: cx('Backdrop'),
 })`
   position: fixed;
   top: 0;
@@ -22,32 +22,6 @@ const ModalBackdrop = styled.div.attrs({
 ModalBackdrop.defaultProps = {
   theme: THEME,
 }
-
-// const ModalRoot = styled.div.attrs({
-//   className: px('Root'),
-// })`
-//   display: flex;
-//   flex-flow: column nowrap;
-//   align-items: center;
-//   min-width: 0;
-//   width: 100%;
-//   //max-width: 60rem;
-//   //max-height: calc(100vh - 8rem);
-//   overflow-y: auto;
-//
-//   ///* @device: Laptop */
-//   //@media (max-width: 768px) {
-//   //  width: 100%;
-//   //}
-//
-//   // background-color: ${({ theme }) => theme.surface};
-//   // border-radius: 0.5rem; // 8px
-//   // box-shadow: 0 0.25rem 1rem 0 ${({ theme }) =>
-//     theme.shadow}; // 0 4px 16px 0
-// `
-// ModalRoot.defaultProps = {
-//   theme: THEME,
-// }
 
 function ModalComponent({ open, onClickAway, children, theme }: ModalProps) {
   const { backdropRef, onClickAway: hooksOnClickAway } = useModal({
@@ -72,9 +46,7 @@ function ModalComponent({ open, onClickAway, children, theme }: ModalProps) {
 
 const Modal = Object.assign(ModalComponent, {
   Backdrop: ModalBackdrop,
-  // Root: ModalRoot,
   hook: useModal,
-  // scrollBlock: useScrollBlock,
 })
 
 export default Modal

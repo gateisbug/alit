@@ -43,7 +43,7 @@ export interface TextareaProps {
   theme?: TextareaTheme
 }
 
-export const px = prefix('textarea')
+export const cx = prefix('textarea')
 
 export const DEFAULT_PROPS = {
   rows: 1,

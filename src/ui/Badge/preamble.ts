@@ -28,7 +28,7 @@ export interface BadgeProps {
   children?: NodeType
 }
 
-export const px = prefix('badge')
+export const cx = prefix('badge')
 
 export const DEFAULT_PROPS = {
   show: true,
@@ -47,12 +47,6 @@ export const useBadge = (props: BadgeProps) => {
     }
 
     return props.content ?? ''
-
-    // props.variant === 'standard'
-    //   ? typeof props.content === 'number' && props.content > props.max!
-    //     ? `${props.max}+`
-    //     : props.content ?? ''
-    //   : null;
   })()
 
   return { contents }

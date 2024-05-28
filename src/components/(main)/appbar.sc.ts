@@ -10,7 +10,7 @@ const AppBar = styled.header`
   left: 0;
   right: 0;
   padding: 0.5rem 1rem;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(0.25rem);
   border-style: solid;
   border-color: var(--border-weak);
   border-width: 0 0 thin;

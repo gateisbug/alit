@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import {
-  px,
+  cx,
   THEME,
   ChipRootTransientProps,
   DEFAULT_PROPS,
@@ -9,7 +9,7 @@ import {
 } from './preamble'
 
 const ChipRoot = styled.span.attrs({
-  className: px('root'),
+  className: cx('root'),
 })<ChipRootTransientProps>`
   display: inline-flex;
   flex-flow: row nowrap;
@@ -17,14 +17,14 @@ const ChipRoot = styled.span.attrs({
   justify-content: center;
   align-content: center;
   width: fit-content;
-  border: 0.0625rem solid transparent; // 1px
+  border: 0.0625rem solid transparent; /* 1 */
   transition:
     color 150ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  padding: 0.5rem 1rem; // 8px 16px
-  border-radius: 3rem; // 48px
+  padding: 0.5rem 1rem; /* 8 16 */
+  border-radius: 3rem; /* 48 */
 
   ${({ $variant }) => {
     switch ($variant) {
