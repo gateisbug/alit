@@ -1,3 +1,4 @@
+import Portrait from '@app/item/common/portrait'
 import { CategoryTitle, ResultItem, SearchResult } from '@components/(main)'
 import fetchItemJson from '@util/item/fetchItemJson'
 import { selectItemStore } from '@util/item/itemStore'
@@ -21,7 +22,6 @@ interface Props {
   onClickClose: () => void
 }
 
-// TODO: Recoil에서 데이터를 포함하기 시작하면 이곳에서 탐색할 수 있도록 변경할 것
 export default function SearchRes(props: Props) {
   const { value, onClickClose } = props
 
@@ -89,19 +89,20 @@ export default function SearchRes(props: Props) {
               resultClickHandler(v)
             }}
           >
-            {/* <Portrait */}
-            {/*  item={v} */}
-            {/*  size={36} */}
-            {/*  style={{ width: '3rem', height: '3rem', borderWidth: '3px' }} */}
-            {/*  placeholder={false} */}
-            {/* /> */}
+            <Portrait
+              item={v}
+              size={36}
+              style={{ width: '3rem', height: '3rem', borderWidth: '3px' }}
+            />
             <span>{v.name}</span>
           </ResultItem>
         ))}
-        <div className='nodata'>
-          <p>\(o_o)/</p>
-          <p>No Search Data</p>
-        </div>
+        {defferedResult.length === 0 && (
+          <div className='nodata'>
+            <p>\(o_o)/</p>
+            <p>No Search Data</p>
+          </div>
+        )}
       </div>
     </SearchResult>
   )
