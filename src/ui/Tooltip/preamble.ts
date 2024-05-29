@@ -12,13 +12,12 @@ export const THEME: TooltipTheme = {
 }
 
 export interface TooltipProps {
-  // show?: boolean
   children?: NodeType
   title?: NodeType
   theme?: TooltipTheme
 }
 
-export const px = prefix('tooltip')
+export const cx = prefix('tooltip')
 
 export const useTooltip = () => {
   const containerRef = useRef<HTMLSpanElement>(null)

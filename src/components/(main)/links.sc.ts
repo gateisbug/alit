@@ -5,16 +5,16 @@ export const LinkShortcut = styled.div.attrs({
 })`
   display: block;
   align-self: center;
-  margin-left: 4px;
-  padding: 0 4px;
-  border-radius: 6px;
-  line-height: 20px;
-  font-size: 0.75rem;
+  margin-left: 0.25rem; /* 4 */
+  padding: 0 0.25rem; /* 0 4 */
+  border-radius: 0.375rem; /* 6 */
+  line-height: 1.25rem; /* 20 */
+  font-size: 0.75rem; /* 12 */
   font-weight: 700;
-  width: 36px;
+  width: 2.25rem; /* 36 */
 
   background-color: var(--shortcut-surface);
-  border: 1px solid var(--shortcut-line);
+  border: 0.0625rem solid var(--shortcut-line); /* 1 */
   color: var(--shortcut-color);
 `
 
@@ -40,9 +40,9 @@ export const LinkBox = styled.div`
     transition:
       background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       border-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    padding: 0.375rem;
-    border: 1px solid var(--border-weak);
-    border-radius: 0.75rem;
+    padding: 0.375rem; /* 6 */
+    border: 0.0625rem solid var(--border-weak); /* 1 */
+    border-radius: 0.75rem; /* 12 */
     color: var(--primary);
     font-family: inherit;
 
@@ -52,16 +52,16 @@ export const LinkBox = styled.div`
     }
 
     & > .search-text {
-      margin-left: 8px;
-      margin-right: 4px;
+      margin-left: 0.5rem; /* 8 */
+      margin-right: 0.25rem; /* 4 */
     }
   }
 
   & > button {
-    padding: 0.3125rem 0.375rem;
+    padding: 0.3125rem 0.375rem; /* 5 6 */
 
     & .search-text {
-      width: 48px;
+      width: 3rem; /* 48 */
     }
 
     /* @device: Tablet */

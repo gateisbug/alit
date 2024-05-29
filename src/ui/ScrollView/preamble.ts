@@ -4,4 +4,4 @@ export interface ScrollviewProps {
   children?: NodeType
 }
 
-export const px = prefix('scrollview')
+export const cx = prefix('scrollview')

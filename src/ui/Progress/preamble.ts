@@ -8,7 +8,7 @@ export const THEME: ProgressTheme = {
   primary: 'var(--primary, #ffb74d)',
 }
 
-export const px = prefix('progress')
+export const cx = prefix('progress')
 
 export interface CircularProgressProps {
   width?: number | string

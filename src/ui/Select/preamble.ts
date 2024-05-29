@@ -33,7 +33,6 @@ export const THEME: SelectTheme = {
 }
 
 export interface SelectProps {
-  // open?: boolean;
   items?: SelectItemType[]
   multiple?: boolean
   top?: string
@@ -54,7 +53,7 @@ export type SelectItemType = {
   value: string | number | boolean | null
 }
 
-export const px = prefix('select')
+export const cx = prefix('select')
 
 export const useClickAway = (
   setOpen: Dispatch<SetStateAction<boolean>>,

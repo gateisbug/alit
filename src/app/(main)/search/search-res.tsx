@@ -6,8 +6,6 @@ import debounce from 'lodash-es/debounce'
 import { useDeferredValue, useEffect, useMemo, useState } from 'react'
 import { useSetRecoilState } from 'recoil'
 
-// import Portrait from '@app/item/common/portrait'
-
 const keys: ItemURL[] = [
   'gun',
   'torpedo',
@@ -102,7 +100,7 @@ export default function SearchRes(props: Props) {
             <Portrait
               item={v}
               size={36}
-              style={{ width: '3rem', height: '3rem', borderWidth: '3px' }}
+              style={{ width: '3rem', height: '3rem', borderWidth: '0.1875rem' }}
             />
             <span>{v.name}</span>
           </ResultItem>

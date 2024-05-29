@@ -22,4 +22,4 @@ export interface SkeletonProps {
   theme?: SkeletonTheme
 }
 
-export const px = prefix('skeleton')
+export const cx = prefix('skeleton')

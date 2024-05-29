@@ -8,7 +8,6 @@ import {
   Route,
 } from 'react-router-dom'
 
-// const MainPage = lazy(async () => import('../pages/Main'));
 const ItemLayout = lazy(async () => import('../app/item/layout'))
 const ItemPage = lazy(async () => import('../app/item/page'))
 

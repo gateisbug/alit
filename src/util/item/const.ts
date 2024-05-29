@@ -7,26 +7,6 @@ type ItemIndexType =
   | 'ACCESSORY'
   | 'SPECIAL'
 
-// export const INDEX: ItemIndexType[] = [
-//   'ALL',
-//   'GUN',
-//   'TORPEDO',
-//   'ANTIAIR',
-//   'AIRCRAFT',
-//   'ACCESSORY',
-//   'SPECIAL',
-// ]
-
-// export const PATH: Record<ItemIndexType, string> = {
-//   ALL: '/item',
-//   GUN: '/item/gun',
-//   TORPEDO: '/item/torpedo',
-//   ANTIAIR: '/item/antiair',
-//   AIRCRAFT: '/item/aircraft',
-//   ACCESSORY: '/item/accessory',
-//   SPECIAL: '/item/special',
-// }
-
 export const VALUE: Record<ItemIndexType, ItemURL> = {
   ALL: 'all',
   GUN: 'gun',
@@ -83,31 +63,6 @@ export const CONSTANCE: Record<ItemIndexType, Record<string, ItemType>> = {
 }
 
 type ItemType = OptionType<string, string>
-
-// export const CLASSES: Record<ItemIndexType, ItemType[]> = {
-//   ALL: [],
-//   GUN: [
-//     CONSTANCE.GUN.DD,
-//     CONSTANCE.GUN.CL,
-//     CONSTANCE.GUN.CA,
-//     CONSTANCE.GUN.BB,
-//     CONSTANCE.GUN.CB,
-//   ],
-//   TORPEDO: [CONSTANCE.TORPEDO.SR, CONSTANCE.TORPEDO.SB, CONSTANCE.TORPEDO.MS],
-//   ANTIAIR: [CONSTANCE.ANTIAIR.NOR, CONSTANCE.ANTIAIR.FUS],
-//   AIRCRAFT: [
-//     CONSTANCE.AIRCRAFT.FA,
-//     CONSTANCE.AIRCRAFT.BA,
-//     CONSTANCE.AIRCRAFT.SA,
-//     CONSTANCE.AIRCRAFT.TA,
-//   ],
-//   ACCESSORY: [
-//     CONSTANCE.ACCESSORY.BL,
-//     CONSTANCE.ACCESSORY.FL,
-//     CONSTANCE.ACCESSORY.SIG,
-//   ],
-//   SPECIAL: [CONSTANCE.SPECIAL.NOR, CONSTANCE.SPECIAL.SIG],
-// }
 
 export function eventDelimiter(events: string) {
   switch (events.split(':')[1]) {
@@ -178,14 +133,12 @@ export function classSorter(value?: ItemInterface) {
       switch (value?.class) {
         case CONSTANCE.GUN.DD.value:
           return CONSTANCE.GUN.DD.label
-        // return value.nation !== 'MOT' ? '구축포' : '범선소형포';
         case CONSTANCE.GUN.CL.value:
           return CONSTANCE.GUN.CL.label
         case CONSTANCE.GUN.CA.value:
           return CONSTANCE.GUN.CA.label
         case CONSTANCE.GUN.BB.value:
           return CONSTANCE.GUN.BB.label
-        // return value.nation !== 'MOT' ? '전함포' : '범선대형포';
         case CONSTANCE.GUN.CB.value:
           return CONSTANCE.GUN.CB.label
         default:
@@ -236,22 +189,6 @@ export function classSorter(value?: ItemInterface) {
           return ''
       }
     } else if (value?.domain === VALUE.SPECIAL) {
-      // switch (value?.class) {
-      //   case 'dd':
-      //     return '구축';
-      //   case 'cl':
-      //     return '경순';
-      //   case 'ca&cb':
-      //     return '중순&대순';
-      //   case 'bb':
-      //     return '전함';
-      //   case 'ac':
-      //     return '항모';
-      //   case 'ss':
-      //     return '잠수';
-      //   case 'signiture':
-      //     return '전용';
-      // }
       switch (value?.class) {
         case CONSTANCE.SPECIAL.NOR.value:
           return CONSTANCE.SPECIAL.NOR.label
@@ -289,20 +226,10 @@ export function typeSorter(value?: ItemInterface) {
           return '수동'
         case 'active':
           return '유도'
-        // case 'missile':
-        //   return '미사일';
         default:
           return ''
       }
     }
-    // else if (value?.domain === 'antiair') {
-    //   switch (value.type) {
-    //     case 'normal':
-    //       return '일반';
-    //     case 'fuse':
-    //       return '시한신관';
-    //   }
-    // }
     else if (value?.domain === 'aircraft') {
       switch (value.type) {
         case 'old':
@@ -444,8 +371,6 @@ export function obtainSplit(value?: ItemInterface) {
 
   const spliter = (v: string[]) => {
     switch (v[0]) {
-      // case '메인':
-      //   return v[0];
       case '군부연구실':
         return `${v[0]}: ${v[1] ?? '?'}`
       case '상자깡':

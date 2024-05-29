@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import {
   type BadgeRootTransientProps,
-  px,
+  cx,
   THEME,
   DEFAULT_PROPS,
   type BadgeProps,
@@ -11,7 +11,7 @@ import {
 
 // noinspection JSUnresolvedReference
 const BadgeBox = styled.span.attrs({
-  className: px('box'),
+  className: cx('box'),
 })`
   position: relative;
   display: inline-block;
@@ -21,7 +21,7 @@ const BadgeBox = styled.span.attrs({
 
 // noinspection JSUnresolvedReference
 const BadgeRoot = styled.span.attrs({
-  className: px('root'),
+  className: cx('root'),
 })<BadgeRootTransientProps>`
   position: absolute;
   flex-flow: row nowrap;
@@ -40,25 +40,22 @@ const BadgeRoot = styled.span.attrs({
   background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.onPrimary};
 
-  // show
   display: ${({ $show }) => ($show ? 'flex' : 'none')};
 
-  // variant
   ${(props) => {
     if (props.$variant === 'standard')
       return css`
-        font-size: 0.75rem; // 12px
-        padding: 0.25rem 0.5rem; // 4px 8px
-        border-radius: 0.75rem; // 12px
+        font-size: 0.75rem; /* 12 */
+        padding: 0.25rem 0.5rem; /* 4 8 */
+        border-radius: 0.75rem; /* 12 */
       `
     return css`
-      width: 0.5rem; // 8px
-      height: 0.5rem; // 8px
-      border-radius: 0.25rem; // 4px
+      width: 0.5rem; /* 8 */
+      height: 0.5rem; /* 8 */
+      border-radius: 0.25rem; /* 4 */
     `
   }}
 
-  // vertical | horizontal
   transform: ${({ $vertical, $horizontal }) => {
     if ($vertical === 'top')
       return $horizontal === 'right'

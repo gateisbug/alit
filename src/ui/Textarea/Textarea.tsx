@@ -2,27 +2,27 @@ import styled from 'styled-components'
 
 import {
   TextareaProps,
-  px,
+  cx,
   THEME,
   DEFAULT_PROPS,
   useTextarea,
 } from './preamble'
 
 export const TextareaBox = styled.label.attrs({
-  className: px('box'),
+  className: cx('box'),
 })`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 0.5rem; // 8px
+  gap: 0.5rem; /* 8 */
   background-color: transparent;
   box-sizing: border-box;
   transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: text;
 
-  border: 0.0625rem solid transparent; // 1px
-  border-radius: 0.25rem; // 4px
-  padding: 0.75rem 1rem; // 12px 16px
+  border: 0.0625rem solid transparent; /* 1 */
+  border-radius: 0.25rem; /* 4 */
+  padding: 0.75rem 1rem; /* 12 16 */
 
   &:has(:focus) {
     border-color: ${({ theme }) => theme.primary};
@@ -51,14 +51,14 @@ TextareaBox.defaultProps = {
 }
 
 export const TextareaRoot = styled.textarea.attrs({
-  className: px('root'),
+  className: cx('root'),
 })`
   display: inline-block;
   box-sizing: border-box;
   background-color: transparent;
   color: inherit;
   font-family: inherit;
-  font-size: 1rem; // 16px
+  font-size: 1rem; /* 16 */
   width: 100%;
   border: none;
   padding: 0;

@@ -20,13 +20,6 @@ const Box = styled.div.attrs({
   border-radius: 0.25rem;
 `
 
-// const IconBox = styled.div.attrs({
-//   className: 'keyvalue-iconbox',
-// })`
-//   width: 1.5rem;
-//   height: 1.5rem;
-// `
-
 const Span = styled.div.attrs({
   className: 'keyvalue-span',
 })`

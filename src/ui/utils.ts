@@ -8,26 +8,26 @@ export function prefix(name: string) {
 //   | boolean
 //   | Record<string, boolean | undefined>
 //   | undefined
-//   | null;
-//
+//   | null
+
 // export function combineClass(...args: PossibleClassNameType[]): string {
-//   const output: string[] = [];
+//   const output: string[] = []
 //
-//   for (let i = 0; i < args.length; i++) {
-//     if (args[i] === null || args[i] === undefined) continue;
-//
-//     if (typeof args[i] === 'string') {
-//       output.push(args[i] as string);
-//     } else if (typeof args[i] === 'object') {
-//       const o = args[i] as Record<string, boolean | undefined>;
-//       const key = Object.keys(o)[0];
-//       if (o[key]) {
-//         output.push(key);
+//   for (let i = 0; i < args.length; i += 1) {
+//     if (args[i] !== null && args[i] !== undefined) {
+//       if (typeof args[i] === 'string') {
+//         output.push(args[i] as string)
+//       } else if (typeof args[i] === 'object') {
+//         const o = args[i] as Record<string, boolean | undefined>
+//         const key = Object.keys(o)[0]
+//         if (o[key]) {
+//           output.push(key)
+//         }
+//       } else if (typeof args[i] === 'number' || typeof args[i] === 'boolean') {
+//         output.push(String(args[i]))
 //       }
-//     } else if (typeof args[i] === 'number' || typeof args[i] === 'boolean') {
-//       output.push(String(args[i]));
 //     }
 //   }
 //
-//   return output.join(' ');
+//   return output.join(' ')
 // }

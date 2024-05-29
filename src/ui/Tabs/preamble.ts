@@ -16,4 +16,4 @@ export interface TabsProps {
   defaultValue?: string
 }
 
-export const px = prefix('tabs')
+export const cx = prefix('tabs')

@@ -40,7 +40,7 @@ export interface ButtonProps {
 
 export type VariantType = 'fill' | 'line' | 'text'
 
-export const px = prefix('button')
+export const cx = prefix('button')
 
 export const DEFAULT_PROPS = {
   variant: 'fill' as VariantType,

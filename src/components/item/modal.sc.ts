@@ -15,30 +15,12 @@ export const ItemModalBody = styled(ModalBody)`
   }
 
   & .modal-container {
-    //& > div {
-    //  margin-bottom: 3rem;
-    //}
-    //& > div:last-child {
-    //  margin-bottom: 0;
-    //}
-
     display: flex;
     flex-flow: column nowrap;
     gap: 3rem;
     padding: 1.5rem;
     height: fit-content;
   }
-
-  ///* @device: Laptop */
-  //@media (max-width: 1024px) {
-  //  min-width: 0;
-  //  max-width: calc(100vw - 4rem);
-  //}
-  ///* @device: MobileL */
-  //@media (max-width: 425px) {
-  //  min-width: 0;
-  //  max-width: calc(100vw - 2rem);
-  //}
 `
 export const CloseButton = styled(Button.Root)`
   width: fit-content;

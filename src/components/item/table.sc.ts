@@ -44,8 +44,7 @@ export const Row = styled.div`
     min-width: fit-content;
     width: 100%;
     box-sizing: border-box;
-    //min-height: 73px;
-    height: 89px;
+    height: 5.5625rem; /* 89 */
 
     @media (prefers-color-scheme: light) {
       border-color: rgba(0, 0, 0, 0.08);
@@ -95,30 +94,30 @@ export const Cell = styled.div`
   }
 
   &[data-key='link'] {
-    flex-basis: 90px;
-    min-width: 64px;
+    flex-basis: 90px; /* fix */
+    min-width: 64px; /* fix */
   }
   &[data-key='name'] {
-    flex-basis: 240px;
-    min-width: 180px;
+    flex-basis: 240px; /* fix */
+    min-width: 180px; /* fix */
   }
   &[data-key='nickname'] {
-    flex-basis: 150px;
-    min-width: 100px;
+    flex-basis: 150px; /* fix */
+    min-width: 100px; /* fix */
   }
   &[data-key='obtain'] {
-    flex-basis: 240px;
-    min-width: 168px;
+    flex-basis: 240px; /* fix */
+    min-width: 168px; /* fix */
   }
   &[data-key='nation'],
   &[data-key='type'],
   &[data-key='class'] {
-    flex-basis: 100px;
-    min-width: 60px;
+    flex-basis: 100px; /* fix */
+    min-width: 60px; /* fix */
   }
   &[data-key='explain'] {
-    flex-basis: 468px;
-    min-width: 200px;
+    flex-basis: 468px; /* fix */
+    min-width: 200px; /* fix */
   }
 
   @media (max-width: 1080px) {
@@ -145,7 +144,7 @@ export const Cell = styled.div`
   }
   @media (max-width: 340px) {
     &[data-key='name'] {
-      min-width: 100px;
+      min-width: 100px; /* fix */
     }
   }
 `

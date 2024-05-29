@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import { px, ScrollviewProps } from './preamble'
+import { cx, ScrollviewProps } from './preamble'
 
 const ScrollviewRoot = styled.div.attrs({
-  className: px('root'),
+  className: cx('root'),
 })`
   width: 100%;
   height: 100%;

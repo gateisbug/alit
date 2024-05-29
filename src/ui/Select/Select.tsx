@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import {
-  px,
+  cx,
   THEME,
   SelectProps,
   SelectBoxTransientProps,
@@ -11,7 +11,7 @@ import {
 } from './preamble'
 
 const SelectForm = styled.div.attrs({
-  className: px('form'),
+  className: cx('form'),
 })`
   display: flex;
   flex-flow: column nowrap;
@@ -19,11 +19,11 @@ const SelectForm = styled.div.attrs({
 `
 
 const SelectField = styled.div.attrs({
-  className: px('field'),
+  className: cx('field'),
 })<SelectFieldTransientProps>`
-  padding: 0.75rem 1rem; // 12px 16px
-  border-radius: 0.25rem; // 4px
-  border: 0.0625rem solid transparent; // 1px
+  padding: 0.75rem 1rem; /* 12 16 */
+  border-radius: 0.25rem; /* 4 */
+  border: 0.0625rem solid transparent; /* 1 */
 
   ${({ $minWidth }) => {
     if (typeof $minWidth === 'number') {
@@ -56,7 +56,7 @@ SelectField.defaultProps = {
 }
 
 const SelectPlaceholder = styled.span.attrs({
-  className: px('placeholder'),
+  className: cx('placeholder'),
 })`
   color: ${({ theme }) => theme.placeholder};
 `
@@ -69,17 +69,17 @@ const SelectContoller = styled.input`
 `
 
 const SelectBox = styled.ul.attrs({
-  className: px('Box'),
+  className: cx('Box'),
 })<SelectBoxTransientProps>`
   position: absolute;
-  top: ${({ $top }) => $top ?? 'calc(100% + 0.5rem)'}; // 8px
+  top: ${({ $top }) => $top ?? 'calc(100% + 0.5rem)'}; /* 8 */
   left: 0;
   right: 0;
   z-index: 1;
   display: ${({ $open }) => (!$open ? 'none' : 'flex')};
   flex-flow: column nowrap;
-  border-radius: 0.25rem; // 4px
-  border: 0.0625rem solid transparent; // 1px
+  border-radius: 0.25rem; /* 4 */
+  border: 0.0625rem solid transparent; /* 1 */
   padding: 0;
   margin: 0;
 
@@ -99,13 +99,12 @@ SelectBox.defaultProps = {
 }
 
 const SelectItem = styled.li.attrs({
-  className: px('Item'),
+  className: cx('Item'),
 })`
   list-style: none;
 `
 
 function SelectComponent({
-  // open,
   items,
   multiple,
   placeholder,
@@ -117,7 +116,6 @@ function SelectComponent({
   minWidth,
 }: SelectProps) {
   const { formRef, open, inputValue, onClickItem, onFieldClick } = useSelect({
-    // open,
     items,
     multiple,
     placeholder,

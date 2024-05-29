@@ -16,15 +16,9 @@ export default async function fetchItemData(request: Request) {
 
   const { pathname, searchParams } = new URL(request.url)
 
-  // const headersList = headers()
-  // const headerPathname = headersList.get('x-pathname') || ''
-  // const headerParams = new URLSearchParams(headersList.get('x-params') || '')
-
   const category: keyof ItemJson | '' =
     (pathname.split('/').at(2) as keyof ItemJson) ?? ''
   const filter = searchParams.get('filter')
-  // const search = new URLSearchParams(headerParams).get('search')
-  // const select = new URLSearchParams(headerParams).get('select')
 
   return (() => {
     let result: ItemInterface[] = []

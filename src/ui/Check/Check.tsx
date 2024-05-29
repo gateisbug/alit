@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
-import { CheckProps, DEFAULT_PROPS, px, THEME } from './preamble'
+import { CheckProps, DEFAULT_PROPS, cx, THEME } from './preamble'
 
 // noinspection JSUnresolvedReference
 const CheckBox = styled.label.attrs({
-  className: px('box'),
+  className: cx('box'),
 })`
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 0.25rem; // 4px
+  gap: 0.25rem; /* 4 */
   cursor: pointer;
 
   &:has(input:disabled) {
@@ -19,7 +19,7 @@ const CheckBox = styled.label.attrs({
 
 // noinspection JSUnresolvedReference
 const CheckRoot = styled.input.attrs({
-  className: px('root'),
+  className: cx('root'),
 })`
   display: none;
 `
@@ -29,11 +29,11 @@ CheckRoot.defaultProps = {
 
 // noinspection JSUnresolvedReference,CssUnknownProperty
 const CheckMark = styled.div.attrs({
-  className: px('mark'),
+  className: cx('mark'),
 })`
   display: inline-block;
-  width: 1.5rem; // 24px
-  height: 1.5rem; // 24px
+  width: 1.5rem; /* 24 */
+  height: 1.5rem; /* 24 */
   user-select: none;
   transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -80,15 +80,6 @@ CheckMark.defaultProps = {
 
 function CheckComponent({
   children,
-  // checked,
-  // defaultChecked,
-  // disabled,
-  // multiple,
-  // name,
-  // readOnly,
-  // required,
-  // value,
-  // onChange,
   theme,
   ...rootProps
 }: CheckProps) {

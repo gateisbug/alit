@@ -22,7 +22,7 @@ export interface ChipProps {
 
 export type VariantType = 'fill' | 'line' | 'text'
 
-export const px = prefix('chip')
+export const cx = prefix('chip')
 
 export const DEFAULT_PROPS = {
   variant: 'fill' as VariantType,
