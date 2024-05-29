@@ -5,30 +5,31 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const SearchModalBody = styled(ModalBody)`
-  min-width: 40rem;
-  max-width: 40rem;
+  min-width: 40rem; /* 640 */
+  max-width: 40rem; /* 640 */
 
-  min-height: 40rem;
+  min-height: 40rem; /* 640 */
 
   @media (max-width: 658px) {
     min-width: unset;
     max-width: unset;
     width: 100%;
+    min-height: 30rem; /* 480 */
   }
 
   & .kit-scrollview-root {
-    padding: 1rem;
+    padding: 1rem; /* 16 */
   }
 `
 
 export const CategoryTitle = styled.div`
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem 0.75rem 1rem;
-  font-size: 0.75rem;
+  padding: 1rem 1.5rem 0.75rem 1rem; /* 16 24 12 16 */
+  font-size: 0.75rem; /* 12 */
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem; /* 1.6 */
   color: var(--font-tip);
   box-sizing: border-box;
 `
@@ -48,8 +49,9 @@ export const SearchItem = styled(Link)`
   border-radius: 0.75rem; /* 12 */
   margin-bottom: 0.5rem; /* 8 */
   box-sizing: border-box;
-  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    border 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (prefers-color-scheme: light) {
     border: 0.0625rem solid #e8eaee80; /* 1 */
@@ -99,9 +101,9 @@ export const ClickableKeybutton = styled.button.attrs({
 
 export const SearchScreen = styled.div`
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1rem; /* 16 */
   width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 1rem; /* 16 */
   box-sizing: border-box;
 
   div[data-search='true'] > & {
@@ -126,10 +128,10 @@ export const SearchBar = styled.header`
   padding: 0.25rem 0.5rem; /* 4 8 */
 
   @media (prefers-color-scheme: light) {
-    border-bottom:  0.0625rem solid #dfe2e7; /* 1 */
+    border-bottom: 0.0625rem solid #dfe2e7; /* 1 */
   }
   @media (prefers-color-scheme: dark) {
-    border-bottom:  0.0625rem solid #1d2126; /* 1 */
+    border-bottom: 0.0625rem solid #1d2126; /* 1 */
   }
 
   & .search-form {
@@ -147,8 +149,8 @@ export const SearchBar = styled.header`
     }
 
     & > input {
-      padding-left: 1rem;
-      font-size: 1rem;
+      padding-left: 1rem; /* 16 */
+      font-size: 1rem; /* 16 */
       font-weight: 500;
 
       appearance: none;
@@ -182,23 +184,23 @@ export const SearchResult = styled.div`
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 3rem 0;
+    gap: 1.5rem; /* 24 */
+    padding: 3rem 0; /* 48 */
     color: var(--font-strong);
 
     p:first-child {
-      font-size: 4rem;
-      line-height: 1.25em;
+      font-size: 4rem; /* 64 */
+      line-height: 1.25em; /* 20 */
     }
     p:last-child {
-      font-size: 1.25rem;
+      font-size: 1.25rem; /* 20 */
     }
   }
 `
 export const ResultItem = styled.div`
   color: var(--link);
   display: flex;
-  gap: 1rem;
+  gap: 1rem; /* 16 */
   align-items: center;
   cursor: pointer;
   flex-grow: 1;

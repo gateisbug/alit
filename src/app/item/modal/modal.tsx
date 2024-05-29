@@ -53,7 +53,7 @@ export default function ItemModal(props: {
               <Portrait
                 item={item}
                 size={72}
-                style={{ width: '6rem', height: '6rem' }}
+                style={{ width: '6rem', height: '6rem' }} /* 96 96 */
               />
 
               <div className='section'>
@@ -70,7 +70,10 @@ export default function ItemModal(props: {
                     key={`${item?.index}_${v.obtain}_${v.label}`}
                     src={v.img}
                     alt={v.img}
-                    style={{ minWidth: '15rem', minHeight: '8.75rem' }}
+                    style={{
+                      minWidth: '15rem',
+                      minHeight: '8.75rem',
+                    }} /* 240 140 */
                   >
                     <div className='fzs fwb'>{v.obtain}</div>
                     <div className='fzs fws'>{v.label}</div>
@@ -82,7 +85,10 @@ export default function ItemModal(props: {
                 <ImageCard
                   src={`images/nation/${item?.nation?.toLowerCase()}.webp`}
                   alt={item?.nation ?? 'unknown nation'}
-                  style={{ minWidth: '10rem', minHeight: '10rem' }}
+                  style={{
+                    minWidth: '10rem',
+                    minHeight: '10rem',
+                  }} /* 160 160 */
                 >
                   <span className='nation-value fzs fwb'>
                     {nationSplit(item?.nation, 'nation')}

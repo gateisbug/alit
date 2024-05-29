@@ -12,7 +12,11 @@ export const COLUMNS: ColumnType[] = [
     value: 'link',
     label: '아이콘',
     render: (v) => (
-      <Portrait item={v} size={48} style={{ width: '4rem', height: '4rem' }} />
+      <Portrait
+        item={v}
+        size={48}
+        style={{ width: '4rem', height: '4rem' }}
+      /> /* 64 64 */
     ),
   },
   {

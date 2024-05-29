@@ -35,7 +35,7 @@ export const LinkBox = styled.div`
     text-decoration: none;
     text-align: center;
     flex: 0 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* 24 */
     overflow: visible;
     transition:
       background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,

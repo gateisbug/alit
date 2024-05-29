@@ -10,39 +10,39 @@
 
 .fzm {
   /* font-size: megazine */
-  font-size: 2rem;
+  font-size: 2rem; /* 32 */
 }
 .fzn {
   /* font-size: news */
-  font-size: 1.75rem;
+  font-size: 1.75rem; /* 28 */
 }
 .fzh {
   /* font-size: headline */
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* 24 */
 }
 .fzl {
   /* font-size: header */
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* 20 */
 }
 .fzs {
   /* font-size: subtitle */
-  font-size: 1.125rem;
+  font-size: 1.125rem; /* 18 */
 }
 .fzp {
   /* font-size: paragraph */
-  font-size: 1rem;
+  font-size: 1rem; /* 16 */
 }
 .fzb {
   /* font-size: body */
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* 14 */
 }
 .fza {
   /* font-size: annotation */
-  font-size: 0.75rem;
+  font-size: 0.75rem; /* 12 */
 }
 .fzc {
   /* font-size: caption */
-  font-size: 0.625rem;
+  font-size: 0.625rem; /* 10 */
 }
 
 .fwb {

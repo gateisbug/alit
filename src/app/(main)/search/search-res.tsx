@@ -72,14 +72,17 @@ export default function SearchRes(props: Props) {
   }, [items, debouncedSearch, value])
 
   useEffect(() => {
-    if(value.length === 0 ) {
-      setResults([]);
+    if (value.length === 0) {
+      setResults([])
     }
   }, [value])
-  
-  useEffect(() => () => {
-      setResults([]);
-    }, [])
+
+  useEffect(
+    () => () => {
+      setResults([])
+    },
+    [],
+  )
 
   const resultClickHandler = (item: ItemInterface) => {
     setSelectItem(item)
@@ -100,7 +103,11 @@ export default function SearchRes(props: Props) {
             <Portrait
               item={v}
               size={36}
-              style={{ width: '3rem', height: '3rem', borderWidth: '0.1875rem' }}
+              style={{
+                width: '3rem' /* 48 */,
+                height: '3rem' /* 48 */,
+                borderWidth: '0.1875rem' /* 3 */,
+              }}
             />
             <span>{v.name}</span>
           </ResultItem>

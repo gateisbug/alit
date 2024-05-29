@@ -7,10 +7,7 @@ export const Container = styled.section`
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  gap: 0.5rem;
-
-  //margin-top: 2rem;
-  //overflow-x: auto;
+  gap: 0.5rem; /* 0 48 */
 `
 
 export const Box = styled.div`
@@ -19,7 +16,7 @@ export const Box = styled.div`
   width: 100%;
 
   &.table-body {
-    border-bottom: 0.125rem solid transparent;
+    border-bottom: 0.125rem solid transparent; /* 2 */
 
     @media (prefers-color-scheme: light) {
       border-color: rgba(0, 0, 0, 0.16);
@@ -33,13 +30,13 @@ export const Box = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  gap: 1rem;
+  gap: 1rem; /* 16 */
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   ${Box} > &[data-type='row'] {
-    padding: 0.75rem 0;
-    border-bottom: 0.0625rem solid transparent;
+    padding: 0.75rem 0; /* 12 0 */
+    border-bottom: 0.0625rem solid transparent; /* 1 */
     cursor: pointer;
     min-width: fit-content;
     width: 100%;

@@ -16,7 +16,7 @@ const TabBar = styled.div.attrs({
 })`
   position: absolute;
   width: 0;
-  height: 0.125rem;
+  height: 0.125rem; /* 2 */
   bottom: 0;
   left: 0;
   background-color: ${({ theme }) => theme.primary};
@@ -34,17 +34,16 @@ const TabBox = styled.div.attrs({
   display: flex;
   flex-flow: row nowrap;
   overflow-x: auto;
-  gap: 0.75rem;
-  padding: 0.125rem;
+  gap: 0.75rem; /* 12 */
+  padding: 0.125rem; /* 2 */
 `
 
 const Tab = styled.div.attrs({
   className: cx('tab'),
 })`
   display: inline-block;
-  //padding: 0.5rem 0.75rem;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: 1rem; /* 16 */
   transition:
     color 150ms ease-in-out,
     outline-color 150ms ease-in-out;

@@ -26,18 +26,18 @@ body {
 }
 
 .page {
-  padding: 2rem;
+  padding: 2rem; /* 32 */
 }
 
 .header-adder {
-  padding-top: 3.1875rem /* 51ox; */
+  padding-top: 3.1875rem; /* 51 */
 }
 
 .loader {
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  height: 4.5rem; /* 72ox; */
+  padding: 1rem; /* 16 */
+  height: 4.5rem; /* 72 */
   box-sizing: border-box;
 }
 
