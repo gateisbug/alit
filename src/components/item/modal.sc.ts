@@ -42,7 +42,6 @@ export const ModalHeader = styled.div`
   display: grid;
   grid-template-columns: 6rem auto; /* 96 auto */
   grid-template-rows: auto;
-  //justify-content: center;
   gap: 0 3rem; /* 0 48 */
   align-items: center;
 

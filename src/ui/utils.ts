@@ -9,7 +9,7 @@ export function prefix(name: string) {
 //   | Record<string, boolean | undefined>
 //   | undefined
 //   | null
-
+//
 // export function combineClass(...args: PossibleClassNameType[]): string {
 //   const output: string[] = []
 //

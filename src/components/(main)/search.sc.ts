@@ -39,7 +39,6 @@ export const SearchItem = styled(Link)`
   display: flex;
   align-items: center;
   cursor: pointer;
-  //width: 100%;
   flex-grow: 1;
   height: 2.625rem; /* 42 */
   max-height: 2.625rem; /* 42 */
