@@ -8,12 +8,10 @@ const PortraitFrame = styled.div`
   justify-content: center;
   align-items: center;
 
-  //width: 4rem;
-  //height: 4rem;
-  border-radius: 0.25rem;
+  border-radius: 0.25rem; /* 4 */
   box-sizing: border-box;
-  padding: 0.375rem;
-  border: 0.1875rem solid #7e5475;
+  padding: 0.375rem; /* 6 */
+  border: 0.1875rem solid #7e5475; /* 3 */
 
   &[data-stroke='default'] {
     border-color: #7e5475;

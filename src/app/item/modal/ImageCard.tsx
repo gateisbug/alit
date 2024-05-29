@@ -18,7 +18,7 @@ const TextBox = styled.div.attrs({
 
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
+  gap: 0.5rem; /* 8 */
   align-items: center;
   justify-content: center;
   cursor: default;
@@ -35,10 +35,7 @@ const Container = styled.div.attrs({
   width: 100%;
   height: 100%;
 
-  //min-width: 15rem; /* 240 */
-  //min-height: 8.75rem; /* 140 */
-
-  border-radius: 0.25rem;
+  border-radius: 0.25rem; /* 4 */
   overflow: hidden;
   box-sizing: border-box;
 
@@ -64,7 +61,6 @@ export default function ImageCard(props: {
 
   return (
     <Container style={style}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={src} alt={alt} />
       <TextBox>{children}</TextBox>
     </Container>

@@ -78,11 +78,7 @@ CheckMark.defaultProps = {
   theme: THEME,
 }
 
-function CheckComponent({
-  children,
-  theme,
-  ...rootProps
-}: CheckProps) {
+function CheckComponent({ children, theme, ...rootProps }: CheckProps) {
   return (
     <CheckBox>
       <CheckRoot

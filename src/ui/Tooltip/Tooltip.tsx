@@ -26,15 +26,15 @@ export const TooltipText = styled.div.attrs({
   position: relative;
 
   background-color: ${({ theme }) => theme.surface};
-  border-radius: 0.25rem;
+  border-radius: 0.25rem; /* 4 */
   color: #fff;
-  font-size: 0.875rem;
-  max-width: 18.75rem;
-  margin: 0.125rem;
+  font-size: 0.875rem; /* 14 */
+  max-width: 18.75rem; /* 300 */
+  margin: 0.125rem; /* 2 */
   overflow-wrap: break-word;
 
   &[data-placement='bottom'] {
-    margin-top: 0.75rem;
+    margin-top: 0.75rem; /* 12 */
     transform-origin: center top;
   }
 
@@ -48,8 +48,8 @@ export const TooltipText = styled.div.attrs({
     rotate: 45deg;
     width: fit-content;
     height: fit-content;
-    font-size: 0.875rem;
-    border-radius: 0.125rem;
+    font-size: 0.875rem; /* 14 */
+    border-radius: 0.125rem; /* 2 */
     translate: -50% -50%;
     overflow: hidden;
   }

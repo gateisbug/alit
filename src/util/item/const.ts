@@ -229,8 +229,7 @@ export function typeSorter(value?: ItemInterface) {
         default:
           return ''
       }
-    }
-    else if (value?.domain === 'aircraft') {
+    } else if (value?.domain === 'aircraft') {
       switch (value.type) {
         case 'old':
           return '구3대장'

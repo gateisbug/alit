@@ -31,8 +31,8 @@ const RadioMark = styled.div.attrs({
   position: relative;
   display: inline-flex;
   user-select: none;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5rem; /* 24 */
+  height: 1.5rem; /* 24 */
   transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   input:not(:disabled):checked + & {
@@ -60,7 +60,7 @@ const RadioMark = styled.div.attrs({
     height: 1em;
     display: inline-block;
     flex-shrink: 0;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* 24 */
   }
   & > svg:first-of-type {
     transform: scale(1);

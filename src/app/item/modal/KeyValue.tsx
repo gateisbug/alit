@@ -6,7 +6,7 @@ const Container = styled.div.attrs({
 })`
   display: flex;
   flex-flow: row nowrap;
-  gap: 1rem;
+  gap: 1rem; /* 16 */
 `
 
 const Box = styled.div.attrs({
@@ -14,10 +14,10 @@ const Box = styled.div.attrs({
 })`
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  border: 0.0625rem solid var(--border);
-  border-radius: 0.25rem;
+  gap: 0.5rem; /* 8 */
+  padding: 0.5rem 0.75rem; /* 8 12 */
+  border: 0.0625rem solid var(--border); /* 1 */
+  border-radius: 0.25rem; /* 4 */
 `
 
 const Span = styled.div.attrs({
@@ -25,11 +25,11 @@ const Span = styled.div.attrs({
 })`
   &[data-type='key'] {
     color: var(--font-weak);
-    font-size: 1rem;
+    font-size: 1rem; /* 16 */
   }
   &[data-type='value'] {
     color: var(--font-strong);
-    font-size: 1.125rem;
+    font-size: 1.125rem; /* 18 */
     text-align: center;
     display: inline-flex;
     align-items: center;

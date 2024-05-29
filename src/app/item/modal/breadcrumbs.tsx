@@ -7,7 +7,7 @@ const BreadcrumbsContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.75rem; /* 12 */
 `
 
 export default function Breadcrumbs({ item }: { item?: ItemInterface }) {

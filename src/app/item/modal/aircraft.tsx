@@ -8,10 +8,10 @@ const State = styled.div`
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  gap: 0.5rem; /* 8 */
+  padding: 0.5rem; /* 8 */
   background-color: rgba(97, 97, 97, 0.92);
-  border-radius: 0.25rem;
+  border-radius: 0.25rem; /* 4 */
   z-index: 1;
 `
 
