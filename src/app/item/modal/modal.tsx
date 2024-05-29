@@ -70,6 +70,7 @@ export default function ItemModal(props: {
                     key={`${item?.index}_${v.obtain}_${v.label}`}
                     src={v.img}
                     alt={v.img}
+                    style={{ minWidth: '15rem', minHeight: '8.75rem' }}
                   >
                     <div className='fzs fwb'>{v.obtain}</div>
                     <div className='fzs fws'>{v.label}</div>
@@ -81,6 +82,7 @@ export default function ItemModal(props: {
                 <ImageCard
                   src={`images/nation/${item?.nation?.toLowerCase()}.webp`}
                   alt={item?.nation ?? 'unknown nation'}
+                  style={{ minWidth: '10rem', minHeight: '10rem' }}
                 >
                   <span className='nation-value fzs fwb'>
                     {nationSplit(item?.nation, 'nation')}

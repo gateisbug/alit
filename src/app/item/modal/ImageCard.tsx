@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 import styled from 'styled-components'
 
 const TextBox = styled.div.attrs({
@@ -35,6 +35,9 @@ const Container = styled.div.attrs({
   width: 100%;
   height: 100%;
 
+  //min-width: 15rem; /* 240 */
+  //min-height: 8.75rem; /* 140 */
+
   border-radius: 0.25rem;
   overflow: hidden;
   box-sizing: border-box;
@@ -51,17 +54,16 @@ const Container = styled.div.attrs({
   }
 `
 
-export default function ImageCard({
-  src,
-  children,
-  alt,
-}: {
+export default function ImageCard(props: {
   src: string
   alt: string
   children?: ReactNode
+  style?: CSSProperties
 }) {
+  const { src, children, alt, style } = props
+
   return (
-    <Container>
+    <Container style={style}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={src} alt={alt} />
       <TextBox>{children}</TextBox>
