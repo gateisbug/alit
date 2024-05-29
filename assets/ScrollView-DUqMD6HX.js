@@ -1,4 +1,4 @@
-import{p as r,j as s}from"./index-ey0nagZQ.js";import{p as e}from"./utils-Bsz_bQWJ.js";const i=e("scrollview"),o=r.div.attrs({className:i("root")})`
+import{p as r,j as s}from"./index-CoVQ2Whf.js";import{p as e}from"./utils-Bsz_bQWJ.js";const i=e("scrollview"),o=r.div.attrs({className:i("root")})`
   width: 100%;
   height: 100%;
   overflow-x: auto;

@@ -1,4 +1,4 @@
-import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-ey0nagZQ.js";import{p as m}from"./utils-Bsz_bQWJ.js";const Z={primary:"var(--primary, #ffb74d)",onPrimary:"var(--on-primary, #1c2025)"},G=m("badge"),g={show:!0,variant:"standard",vertical:"top",horizontal:"right",max:99},J=e=>({contents:e.variant!=="standard"?null:typeof e.content=="number"&&e.content>e.max?`${e.max}+`:e.content??""}),K=i.span.attrs({className:G("box")})`
+import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-CoVQ2Whf.js";import{p as m}from"./utils-Bsz_bQWJ.js";const Z={primary:"var(--primary, #ffb74d)",onPrimary:"var(--on-primary, #1c2025)"},G=m("badge"),g={show:!0,variant:"standard",vertical:"top",horizontal:"right",max:99},J=e=>({contents:e.variant!=="standard"?null:typeof e.content=="number"&&e.content>e.max?`${e.max}+`:e.content??""}),K=i.span.attrs({className:G("box")})`
   position: relative;
   display: inline-block;
   width: fit-content;
@@ -332,8 +332,8 @@ import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-ey0nagZQ.js";imp
   position: relative;
   display: inline-flex;
   user-select: none;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5rem; /* 24 */
+  height: 1.5rem; /* 24 */
   transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   input:not(:disabled):checked + & {
@@ -361,7 +361,7 @@ import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-ey0nagZQ.js";imp
     height: 1em;
     display: inline-block;
     flex-shrink: 0;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* 24 */
   }
   & > svg:first-of-type {
     transform: scale(1);
@@ -479,7 +479,7 @@ import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-ey0nagZQ.js";imp
 `,U=i.div.attrs({className:w("bar")})`
   position: absolute;
   width: 0;
-  height: 0.125rem;
+  height: 0.125rem; /* 2 */
   bottom: 0;
   left: 0;
   background-color: ${({theme:e})=>e.primary};
@@ -490,13 +490,12 @@ import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-ey0nagZQ.js";imp
   display: flex;
   flex-flow: row nowrap;
   overflow-x: auto;
-  gap: 0.75rem;
-  padding: 0.125rem;
+  gap: 0.75rem; /* 12 */
+  padding: 0.125rem; /* 2 */
 `,be=i.div.attrs({className:w("tab")})`
   display: inline-block;
-  //padding: 0.5rem 0.75rem;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: 1rem; /* 16 */
   transition:
     color 150ms ease-in-out,
     outline-color 150ms ease-in-out;
@@ -586,15 +585,15 @@ import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-ey0nagZQ.js";imp
   position: relative;
 
   background-color: ${({theme:e})=>e.surface};
-  border-radius: 0.25rem;
+  border-radius: 0.25rem; /* 4 */
   color: #fff;
-  font-size: 0.875rem;
-  max-width: 18.75rem;
-  margin: 0.125rem;
+  font-size: 0.875rem; /* 14 */
+  max-width: 18.75rem; /* 300 */
+  margin: 0.125rem; /* 2 */
   overflow-wrap: break-word;
 
   &[data-placement='bottom'] {
-    margin-top: 0.75rem;
+    margin-top: 0.75rem; /* 12 */
     transform-origin: center top;
   }
 
@@ -608,8 +607,8 @@ import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-ey0nagZQ.js";imp
     rotate: 45deg;
     width: fit-content;
     height: fit-content;
-    font-size: 0.875rem;
-    border-radius: 0.125rem;
+    font-size: 0.875rem; /* 14 */
+    border-radius: 0.125rem; /* 2 */
     translate: -50% -50%;
     overflow: hidden;
   }
