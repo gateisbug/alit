@@ -1,4 +1,4 @@
-import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-CoVQ2Whf.js";import{p as m}from"./utils-Bsz_bQWJ.js";const Z={primary:"var(--primary, #ffb74d)",onPrimary:"var(--on-primary, #1c2025)"},G=m("badge"),g={show:!0,variant:"standard",vertical:"top",horizontal:"right",max:99},J=e=>({contents:e.variant!=="standard"?null:typeof e.content=="number"&&e.content>e.max?`${e.max}+`:e.content??""}),K=i.span.attrs({className:G("box")})`
+import{p as i,c as f,j as n,r as o,d as we,b as Ce}from"./index-CsIJDYsb.js";import{p as m}from"./utils-Bsz_bQWJ.js";const Z={primary:"var(--primary, #ffb74d)",onPrimary:"var(--on-primary, #1c2025)"},G=m("badge"),g={show:!0,variant:"standard",vertical:"top",horizontal:"right",max:99},J=e=>({contents:e.variant!=="standard"?null:typeof e.content=="number"&&e.content>e.max?`${e.max}+`:e.content??""}),K=i.span.attrs({className:G("box")})`
   position: relative;
   display: inline-block;
   width: fit-content;
