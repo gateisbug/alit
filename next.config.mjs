@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   images: {
-    formats: ['image/avif', 'image/webp', 'image/jpg'],
+    formats: ['image/avif', 'image/webp'],
   },
   compiler: {
     styledComponents: {

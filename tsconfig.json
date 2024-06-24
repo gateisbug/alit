@@ -21,7 +21,8 @@
       "@/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
       "@components/*": ["./src/components/*"],
-      "@assets/*": ["./src/assets/*"],
+      "@styles/*": ["./src/assets/styles/*"],
+      "@icons/*": ["./src/assets/icons/*"],
       "@ui/*": ["./src/ui/*"],
       "@util/*": ["./src/util/*"]
     }
