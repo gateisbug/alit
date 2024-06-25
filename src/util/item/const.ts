@@ -122,6 +122,8 @@ export function eventDelimiter(events: string) {
       return 'Operation_Convergence'
     case '만월이 밝아오기 전에':
       return 'Effulgence_Before_Eclipse'
+    case '휘광의 성에서 피어나라':
+      return 'Light_of_the_Martyrium_Event_Banner'
     default:
       return ''
   }
