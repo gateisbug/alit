@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b8eae25-1ab7-4932-befa-929f458a9973" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/appbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/links/arcalive.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/links/github.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/links/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/links/searchButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/logo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search/category.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search/search-input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search/search-links.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/search/search-res.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/common/portrait.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/controller.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/modal/ImageCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/modal/KeyValue.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/modal/aircraft.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/modal/breadcrumbs.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/modal/modal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/table/columns.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/table/table.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/typography.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(main)/appbar.sc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(main)/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(main)/links.sc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(main)/logo.sc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(main)/search.sc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Image.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Loader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/modal.sc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/modal.sc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/table.sc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Button/Button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Button/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Button/preamble.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Modal/Modal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Modal/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Modal/preamble.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Progress/Progress.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Progress/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Progress/preamble.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ScrollView/ScrollView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ScrollView/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ScrollView/preamble.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Tooltip/Tooltip.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Tooltip/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Tooltip/preamble.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/common.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/item/all.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/item/const.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/item/fetchItemData.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/item/fetchItemJson.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/item/itemStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/item/useInfiniteScroll.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/routes.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2j7sCRcbZoxLjbGwqbJBLNXsxhO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev-next",
+    "last_opened_file_path": "C:/peter/alit",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\peter\\alit\\node_modules\\typescript\\lib"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\peter\alit" />
+      <recent name="C:\peter\alit\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\peter\alit\src\assets\styles" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b8eae25-1ab7-4932-befa-929f458a9973" name="Changes" comment="" />
+      <created>1720749321612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720749321612</updated>
+      <workItem from="1720749322899" duration="680000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
