@@ -1,4 +1,4 @@
-import{r as c,p as d,b as p,j as i}from"./index-CUNW1xAd.js";import{p as f}from"./utils-Bsz_bQWJ.js";const k={backdrop:"var(--backdrop, #0000007F)"},u=f("Modal"),s=({onClickAway:o})=>{const t=c.useRef(null),r=c.useCallback(a=>{a.target===t.current&&o!==void 0&&o()},[o]);return{backdropRef:t,onClickAway:r}},e=d.div.attrs({className:u("Backdrop")})`
+import{r as c,p as d,b as p,j as i}from"./index-rZVYAdaY.js";import{p as f}from"./utils-Bsz_bQWJ.js";const k={backdrop:"var(--backdrop, #0000007F)"},u=f("Modal"),s=({onClickAway:o})=>{const t=c.useRef(null),r=c.useCallback(a=>{a.target===t.current&&o!==void 0&&o()},[o]);return{backdropRef:t,onClickAway:r}},e=d.div.attrs({className:u("Backdrop")})`
   position: fixed;
   top: 0;
   left: 0;
