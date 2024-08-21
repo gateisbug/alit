@@ -1,5 +1,3 @@
-import RootLayout from '@app/layout'
-import fetchItemData from '@util/item/fetchItemData'
 import { lazy } from 'react'
 import {
   createHashRouter,
@@ -8,8 +6,11 @@ import {
   Route,
 } from 'react-router-dom'
 
-const ItemLayout = lazy(async () => import('../app/item/layout'))
-const ItemPage = lazy(async () => import('../app/item/page'))
+import ItemLayout from '@app/item/layout.tsx'
+import RootLayout from '@app/layout.tsx'
+import fetchItemData from '@util/item/fetchItemData'
+
+const ItemPage = lazy(async () => import('../app/item/page.tsx'))
 
 const router = createHashRouter(
   createRoutesFromElements(

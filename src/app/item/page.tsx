@@ -1,9 +1,3 @@
-import { useLoaderData } from 'react-router-dom'
-
-import ItemTable from './controller'
-
 export default function ItemPage() {
-  const data = useLoaderData() as ItemInterface[]
-
-  return <ItemTable data={data} />
+  return <div><h1>hello world</h1></div>
 }

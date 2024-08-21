@@ -7,6 +7,14 @@ type ItemIndexType =
   | 'ACCESSORY'
   | 'SPECIAL'
 
+type ItemType = OptionType<string, string>
+
+type ObtainType = {
+  img: string
+  obtain: string
+  label: string
+}
+
 export const VALUE: Record<ItemIndexType, ItemURL> = {
   ALL: 'all',
   GUN: 'gun',
@@ -61,8 +69,6 @@ export const CONSTANCE: Record<ItemIndexType, Record<string, ItemType>> = {
     SIG: { value: 'signiture', label: '전용' },
   },
 }
-
-type ItemType = OptionType<string, string>
 
 export function eventDelimiter(events: string) {
   switch (events.split(':')[1]) {
@@ -407,11 +413,6 @@ export function domainSorter(domain?: string) {
   }
 }
 
-type ObtainType = {
-  img: string
-  obtain: string
-  label: string
-}
 export function obtainDelimiter(value?: ItemInterface): ObtainType[] {
   const obtain = value?.obtain
   if (!obtain) return []

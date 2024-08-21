@@ -1,11 +1,11 @@
 {
-  "extends": [
-    "airbnb",
-    "airbnb-typescript",
-    "prettier"
-  ],
+  "extends": ["airbnb", "airbnb-typescript", "prettier"],
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": [
+      "./tsconfig.json",
+      "./tsconfig.app.json",
+      "./tsconfig.node.json"
+    ]
   },
   "rules": {
     "sort-imports": "off",
@@ -13,11 +13,9 @@
       "error",
       {
         "groups": [
-          "builtin",
-          "external",
+          ["builtin", "external"],
           "internal",
-          "parent",
-          "sibling",
+          ["parent", "sibling"],
           "index",
           "object",
           "type"
@@ -26,19 +24,57 @@
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
-        }
+        },
+        "pathGroups": [
+          {
+            "pattern": "@app/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@components/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@assets/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@views/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@ui/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@util/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@api/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react",
+          "react-dom",
+          "styled-components"
+        ]
       }
     ],
     "react/react-in-jsx-scope": 0,
     "react/require-default-props": 0,
     "react/no-array-index-key": 1,
     "react/jsx-no-useless-fragment": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/button-has-type": 1,
     "@typescript-eslint/no-unused-vars": 1,
     "@typescript-eslint/no-floating-promises": 1,
     "@typescript-eslint/class-literal-property-style": 1,
     "@typescript-eslint/no-unused-expressions": 1,
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
+    "import/extensions": 0,
     "no-nested-ternary": 1
   }
 }

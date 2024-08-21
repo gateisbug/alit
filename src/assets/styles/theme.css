@@ -4,41 +4,56 @@
   --primary-hover: #b28035;
 
   --main: #0f1924;
+
+  --surface: #101418;
+  --font-strong: #f3f6f9;
+  --font: #b0b8c4;
+  --font-weak: #777777;
+  --font-tip: #98a4b3;
+
+  --border-weak: #ffffff14;
+  --border: #ffffff3a;
+  --hover-back: #ffffff7a;
+  --link: #66b3ff;
+
+  --shortcut-surface: #14171a;
+  --shortcut-line: #303840;
+  --shortcut-color: #b6bec9;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --surface: #fafafa;
-    --font-strong: #101418;
-    --font: #1c2025;
-    --font-weak: #999999;
-    --font-tip: #576375;
+/*@media (prefers-color-scheme: light) {*/
+/*  :root {*/
+/*    --surface: #fafafa;*/
+/*    --font-strong: #101418;*/
+/*    --font: #1c2025;*/
+/*    --font-weak: #999999;*/
+/*    --font-tip: #576375;*/
 
-    --border-weak: #00000014;
-    --border: #0000003a;
-    --hover-back: #0000007a;
-    --link: #006bd6;
+/*    --border-weak: #00000014;*/
+/*    --border: #0000003a;*/
+/*    --hover-back: #0000007a;*/
+/*    --link: #006bd6;*/
 
-    --shortcut-surface: #f6f7f8;
-    --shortcut-line: #dfe2e7;
-    --shortcut-color: #303741;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --surface: #101418;
-    --font-strong: #f3f6f9;
-    --font: #b0b8c4;
-    --font-weak: #777777;
-    --font-tip: #98a4b3;
+/*    --shortcut-surface: #f6f7f8;*/
+/*    --shortcut-line: #dfe2e7;*/
+/*    --shortcut-color: #303741;*/
+/*  }*/
+/*}*/
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --surface: #101418;*/
+/*    --font-strong: #f3f6f9;*/
+/*    --font: #b0b8c4;*/
+/*    --font-weak: #777777;*/
+/*    --font-tip: #98a4b3;*/
 
-    --border-weak: #ffffff14;
-    --border: #ffffff3a;
-    --hover-back: #ffffff7a;
-    --link: #66b3ff;
+/*    --border-weak: #ffffff14;*/
+/*    --border: #ffffff3a;*/
+/*    --hover-back: #ffffff7a;*/
+/*    --link: #66b3ff;*/
 
-    --shortcut-surface: #14171a;
-    --shortcut-line: #303840;
-    --shortcut-color: #b6bec9;
-  }
-}
+/*    --shortcut-surface: #14171a;*/
+/*    --shortcut-line: #303840;*/
+/*    --shortcut-color: #b6bec9;*/
+/*  }*/
+/*}*/

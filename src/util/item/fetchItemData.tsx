@@ -1,5 +1,3 @@
-import fetchItemJson from './fetchItemJson'
-
 const keys: ItemURL[] = [
   'gun',
   'torpedo',
@@ -9,6 +7,16 @@ const keys: ItemURL[] = [
   'special',
 ]
 
+async function fetchItemJson() {
+  try {
+    const JSON: ItemJson =
+      (import('@util/item/all.json') as unknown as ItemJson) ?? []
+    return JSON
+  } catch (error) {
+    throw new Error('Failed to fetch item')
+  }
+}
+
 export default async function fetchItemData(request: Request) {
   window.scrollTo(0, 0)
 
@@ -17,7 +25,7 @@ export default async function fetchItemData(request: Request) {
   const { pathname, searchParams } = new URL(request.url)
 
   const category: keyof ItemJson | '' =
-    (pathname.split('/').at(2) as keyof ItemJson) ?? ''
+    (pathname.split('/')[3] as keyof ItemJson) ?? ''
   const filter = searchParams.get('filter')
 
   return (() => {

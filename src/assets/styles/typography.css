@@ -8,65 +8,114 @@
   color: var(--font-strong);
 }
 
-.fzm {
-  /* font-size: megazine */
-  font-size: 2rem; /* 32 */
+.e1,
+.e2,
+.e3,
+.e4,
+.t1,
+.t2,
+.t3,
+.t4,
+.s1,
+.s2,
+.s3,
+.b1,
+.b2,
+.caption,
+.overline {
+  letter-spacing: -0.02em;
 }
-.fzn {
-  /* font-size: news */
-  font-size: 1.75rem; /* 28 */
+
+.e1 {
+  font-size: 96px;
+  line-height: 120px;
 }
-.fzh {
-  /* font-size: headline */
-  font-size: 1.5rem; /* 24 */
+.e2 {
+  font-size: 60px;
+  line-height: 80px;
 }
-.fzl {
-  /* font-size: header */
-  font-size: 1.25rem; /* 20 */
+.e3 {
+  font-size: 48px;
+  line-height: 64px;
 }
-.fzs {
-  /* font-size: subtitle */
-  font-size: 1.125rem; /* 18 */
+.e4 {
+  font-size: 34px;
+  line-height: 48px;
 }
-.fzp {
-  /* font-size: paragraph */
-  font-size: 1rem; /* 16 */
+
+.t1 {
+  font-size: 32px;
+  line-height: 44px;
 }
-.fzb {
-  /* font-size: body */
-  font-size: 0.875rem; /* 14 */
+.t2 {
+  font-size: 28px;
+  line-height: 40px;
 }
-.fza {
-  /* font-size: annotation */
-  font-size: 0.75rem; /* 12 */
+.t3 {
+  font-size: 26px;
+  line-height: 38px;
 }
-.fzc {
-  /* font-size: caption */
-  font-size: 0.625rem; /* 10 */
+.t4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.s1 {
+  font-size: 20px;
+  line-height: 28px;
+}
+.s2,
+.s3 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.b1 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.b2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.caption {
+  font-size: 12px;
+  line-height: 18px;
+}
+.overline {
+  font-size: 10px;
+  line-height: 16px;
 }
 
 .fwb {
-  font-family: 'Noto Sans KR', Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: normal;
+}
+.fws {
+  font-weight: 600;
 }
 .fwm {
-  font-family: 'Noto Sans KR', Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
 }
 .fwr {
-  font-family: 'Noto Sans KR', Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
 }
 
 .lh {
   line-height: 1em;
+}
+
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.el-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
