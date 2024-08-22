@@ -1,12 +1,9 @@
-import { Fragment, useCallback, useState } from 'react'
+import { Fragment, ReactNode, useCallback, useState } from 'react'
 
-import {
-  GridCell,
-  GridContainer,
-  GridRow,
-} from '@components/item/(data-grid).ts'
+import { GridCell, GridContainer, GridRow } from '@components/item'
 
 import { headers } from './(const).ts'
+import Portrait from './(portrait).tsx'
 
 interface Props {
   data: ItemInterface[]
@@ -18,12 +15,13 @@ export default function DataGrid({ data }: Props) {
 
   const renderText = useCallback((d: ItemInterface, h: keyof ItemInterface) => {
     let classname: string = ''
-    let value: any
+    let value: ReactNode
 
     switch (h) {
       case 'image':
         classname = 'jc-c'
-        value = d[h]
+        // value = d[h]
+        value = <Portrait item={d} />
         break
       case 'name':
         classname = 'jc-c ta-c word-break'
