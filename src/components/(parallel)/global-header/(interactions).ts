@@ -1,13 +1,21 @@
 import styled from 'styled-components'
 
-import { LineButton } from '@components/(common)'
+import { LineButton, Shortcut as UIShortcut } from '@components/(common)'
 
+// noinspection CssUnusedSymbol
 export const SearchButton = styled(LineButton).attrs({
   className: 'lh',
   type: 'button',
 })`
-  padding: 6px 8px;
+  padding: 6px;
   height: 36px;
+  gap: 6px;
+
+  @media (max-width: 768px) {
+    .desktop {
+      display: none;
+    }
+  }
 `
 
 export const LinkButton = styled(LineButton).attrs({
@@ -25,4 +33,11 @@ export const BadgeButton = styled(LineButton).attrs({
 })`
   height: 36px;
   padding: 6px;
+`
+
+export const Shortcut = styled(UIShortcut).attrs({
+  as: 'span'
+})`
+  border-radius: 6px;
+  padding: 0 4px;
 `

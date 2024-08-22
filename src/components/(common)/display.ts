@@ -2,7 +2,7 @@ import { UIBadge } from '@ui'
 import styled from 'styled-components'
 
 export const Badge = styled(UIBadge)`
-  --badge-bc: #FD5361;
+  --badge-bc: #fd5361;
 
   width: 8px;
   height: 8px;
@@ -11,4 +11,12 @@ export const Badge = styled(UIBadge)`
   top: 0;
   right: 0;
   //transform: translate(50%, -50%);
+
+  transition: transform 150ms ease-in-out;
+  &[data-show='true'] {
+    transform: scale(1);
+  }
+  &[data-show='false'] {
+    transform: scale(0);
+  }
 `

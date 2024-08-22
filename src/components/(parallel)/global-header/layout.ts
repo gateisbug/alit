@@ -4,7 +4,7 @@ export const Header = styled.header`
   background-color: var(--surface-main);
   border-bottom: 1px solid var(--lc-w);
   height: 52px;
-  padding: 0 16px;
+  padding: 0 24px;
 `
 
 // noinspection CssUnusedSymbol
