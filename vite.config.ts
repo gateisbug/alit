@@ -7,7 +7,9 @@ const p = (src: string) => resolve(__dirname, src);
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/alit/',
-  plugins: [react()],
+  plugins: [react({
+    devTarget: 'es2015',
+  })],
   resolve: {
     alias: [
       { find: '@src', replacement: p('./src') },
@@ -22,7 +24,9 @@ export default defineConfig({
   cacheDir: '/.vite/',
   build: {
     outDir: 'build',
+    target: 'es2015',
+    cssTarget: 'chrome58',
     minify: true,
-    cssMinify: true,
+    cssMinify: true
   },
 })

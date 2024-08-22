@@ -1,3 +1,5 @@
+type ItemJson = Record<ItemURL, ItemInterface[]>
+
 const keys: ItemURL[] = [
   'gun',
   'torpedo',

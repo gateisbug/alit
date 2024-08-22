@@ -2,7 +2,9 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1rem;
-  color-scheme: light;
+
+  color-scheme: light dark;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,37 +19,3 @@ body {
   color: var(--fc);
   background-color: var(--surface);
 }
-
-/*.wrap {*/
-/*  max-width: 1856px;*/
-/*  margin: 0 auto;*/
-/*}*/
-
-/*.page {*/
-/*  padding: 2rem; !* 32 *!*/
-/*}*/
-
-/*.header-adder {*/
-/*  padding-top: 3.1875rem; !* 51 *!*/
-/*}*/
-
-/*.loader {*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  padding: 1rem; !* 16 *!*/
-/*  height: 4.5rem; !* 72 *!*/
-/*  box-sizing: border-box;*/
-/*}*/
-
-/*.global-loader {*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*  position: fixed;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  right: 0;*/
-/*  bottom: 0;*/
-/*  z-index: 9999;*/
-/*  background-color: #0000007f;*/
-/*}*/

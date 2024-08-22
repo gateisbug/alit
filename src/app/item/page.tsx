@@ -1,3 +1,18 @@
+import { lazy, Suspense } from 'react'
+import { useLoaderData } from 'react-router-dom'
+
+import { Loader, Page } from '@components/(common)'
+
+const DataGrid = lazy(() => import('./(data-grid).tsx'))
+
 export default function ItemPage() {
-  return <div><h1>hello world</h1></div>
+  const data = useLoaderData() as ItemInterface[]
+
+  return (
+    <Page>
+      <Suspense fallback={<Loader />}>
+        <DataGrid data={data} />
+      </Suspense>
+    </Page>
+  )
 }

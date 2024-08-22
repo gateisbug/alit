@@ -1,11 +1,11 @@
 .fcw {
-  color: var(--font-weak);
+  color: var(--fc-w);
 }
 .fc {
-  color: var(--font);
+  color: var(--fc);
 }
 .fcs {
-  color: var(--font-strong);
+  color: var(--fc-s);
 }
 
 .e1,
@@ -104,6 +104,11 @@
 .lh {
   line-height: 1em;
 }
+.word-break {
+  word-break: keep-all;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
 
 .ellipsis {
   display: block;
@@ -116,6 +121,13 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.el-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
 }

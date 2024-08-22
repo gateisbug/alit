@@ -1,19 +1,3 @@
-type TierType = 'N' | 'R' | 'SR' | 'SSR' | 'UR'
-
-type ItemInterfaceIndex =
-  | 'index'
-  | 'name'
-  | 'tier'
-  | 'nickname'
-  | 'link'
-  | 'nation'
-  | 'explain'
-  | 'obtain'
-  | 'domain'
-  | 'class'
-  | 'type'
-  | 'status'
-
 type ItemURL =
   | 'all'
   | 'gun'
@@ -37,11 +21,4 @@ interface ItemInterface {
   class?: string
   type?: string
   status?: string[]
-}
-
-type ItemJson = Record<ItemURL, ItemInterface[]>
-
-type OptionType<V = string | undefined, L = string | undefined> = {
-  value: V
-  label: L
 }

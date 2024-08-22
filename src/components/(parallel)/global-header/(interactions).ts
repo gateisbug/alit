@@ -36,7 +36,7 @@ export const BadgeButton = styled(LineButton).attrs({
 `
 
 export const Shortcut = styled(UIShortcut).attrs({
-  as: 'span'
+  as: 'span',
 })`
   border-radius: 6px;
   padding: 0 4px;

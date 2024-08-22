@@ -13,6 +13,10 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignote-path .gitignore ."
   },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "partially supports css-grid"
+  ],
   "dependencies": {
     "lodash-es": "^4.17.21",
     "react": "^18.3.1",

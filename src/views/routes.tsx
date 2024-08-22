@@ -6,7 +6,6 @@ import {
   Route,
 } from 'react-router-dom'
 
-import ItemLayout from '@app/item/layout.tsx'
 import RootLayout from '@app/layout.tsx'
 import fetchItemData from '@util/item/fetchItemData'
 
@@ -16,14 +15,9 @@ const router = createHashRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Navigate to='item' replace />} />
-      <Route path='item' element={<ItemLayout />}>
+      <Route path='item'>
         <Route
           index
-          loader={async ({ request }) => fetchItemData(request)}
-          element={<ItemPage />}
-        />
-        <Route
-          path=':category'
           loader={async ({ request }) => fetchItemData(request)}
           element={<ItemPage />}
         />

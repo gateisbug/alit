@@ -4,7 +4,7 @@ import GlobalHeader from '@app/(parallel)/global-header/page.tsx'
 
 export default function RootLayout() {
   return (
-    <div>
+    <div id='wrap'>
       <GlobalHeader />
       <Outlet />
     </div>
