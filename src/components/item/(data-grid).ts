@@ -55,6 +55,6 @@ export const GridRow = styled(UIRow)`
     flex-basis: 160px;
   }
   ${GridCell}:nth-of-type(8) {
-    flex-basis: 760px;
+    flex-basis: 743px;
   }
 `
