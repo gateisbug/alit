@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const CircularProgressBox = styled.div`
+const LoaderBox = styled.div`
   display: flex;
   width: 40px;
   height: 40px;
@@ -19,7 +19,7 @@ const CircularProgressBox = styled.div`
   }
 `
 
-const CircularProgressRoot = styled.svg.attrs({
+const LoaderRoot = styled.svg.attrs({
   children: <circle cx='44' cy='44' r='20.2' fill='none' strokeWidth='3.6' />,
 })`
   display: block;
@@ -49,10 +49,10 @@ const CircularProgressRoot = styled.svg.attrs({
 
 export default function Loader() {
   return (
-    <CircularProgressBox>
-      <CircularProgressRoot viewBox='22 22 44 44'>
+    <LoaderBox>
+      <LoaderRoot viewBox='22 22 44 44'>
         <circle cx='44' cy='44' r='20.2' fill='none' strokeWidth='3.6' />
-      </CircularProgressRoot>
-    </CircularProgressBox>
+      </LoaderRoot>
+    </LoaderBox>
   )
 }

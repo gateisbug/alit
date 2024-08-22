@@ -26,7 +26,7 @@ export const GridRow = styled(UIRow)`
 
   &[data-type='head'] {
     cursor: default;
-    border-bottom: 2px solid var(--lc);
+    border-bottom: 1px solid var(--lc);
     background-color: transparent !important;
 
     ${GridCell} {
@@ -36,7 +36,8 @@ export const GridRow = styled(UIRow)`
     }
   }
   &[data-type='body'] {
-    padding: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--lc-w);
   }
 
   //grid-template-columns: 1:120 2:240 3:160 4:240 5:120 6:120 7:120 8:640;

@@ -10,7 +10,13 @@ export default function ItemPage() {
 
   return (
     <Page>
-      <Suspense fallback={<Loader />}>
+      <Suspense
+        fallback={
+          <div className='flex jc-c'>
+            <Loader />
+          </div>
+        }
+      >
         <DataGrid data={data} />
       </Suspense>
     </Page>

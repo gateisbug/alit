@@ -68,10 +68,11 @@ export default function DataGrid({ data }: Props) {
       </GridRow>
 
       {current.map((v, i) => (
-        <GridRow key={`row_${v.index}_${v.tier}_${v.name}`} data-type='body'>
+        // eslint-disable-next-line react/no-array-index-key
+        <GridRow key={`row_${v.index}_${i}`} data-type='body'>
           {headers.map((w) => (
             // eslint-disable-next-line react/no-array-index-key
-            <Fragment key={`cell_${v[w.value]}_${i}`}>
+            <Fragment key={`cell_${v.index}_${w.value}_${i}`}>
               {renderText(v, w.value)}
             </Fragment>
           ))}
