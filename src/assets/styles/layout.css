@@ -34,3 +34,23 @@
 .grid {
   display: grid;
 }
+.block {
+  display: block;
+}
+
+.bb {
+  box-sizing: border-box;
+}
+.ov-h {
+  overflow: hidden;
+}
+
+.pos-r {
+  position: relative;
+}
+.pos-a {
+  position: absolute;
+}
+.pos-s {
+  position: sticky;
+}
