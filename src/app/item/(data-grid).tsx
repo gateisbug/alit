@@ -3,7 +3,7 @@ import { Fragment, ReactNode, useCallback, useState } from 'react'
 import { GridCell, GridContainer, GridRow } from '@components/item'
 
 import { headers } from './(const).ts'
-import Portrait from './(portrait).tsx'
+import render from './(grid-render).tsx'
 
 interface Props {
   data: ItemInterface[]
@@ -20,34 +20,30 @@ export default function DataGrid({ data }: Props) {
     switch (h) {
       case 'image':
         classname = 'jc-c'
-        // value = d[h]
-        value = <Portrait item={d} />
-        break
-      case 'name':
-        classname = 'jc-c ta-c word-break'
-        value = d[h]
+        value = render.img(d)
         break
       case 'nickname':
         classname = 'jc-c ta-c word-break'
-        value = (d[h]?.length ?? 0) > 0 ? d[h] : '-'
+        value = render.nickname(d)
         break
       case 'obtain':
         classname = 'column al-s jc-c'
-        value = d[h]?.map((v) => <span key={v}>{v}</span>)
+        value = render.obtain(d)
         break
       case 'class':
         classname = 'jc-c'
-        value = d[h]
+        value = render.class(d)
         break
       case 'type':
         classname = 'jc-c'
-        value = d[h]
+        value = render.type(d)
         break
       case 'explain':
-        value = <div className='el-2'>{d[h]?.join('.\n')}</div>
+        value = render.explain(d)
         break
       default:
-        classname = 'jc-c'
+        // classname = 'jc-c'
+        classname = 'jc-c ta-c word-break'
         value = d[h]
         break
     }

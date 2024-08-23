@@ -1,6 +1,6 @@
-type ItemJson = Record<ItemURL, ItemInterface[]>
+type ItemJson = Record<ItemDomain, ItemInterface[]>
 
-const keys: ItemURL[] = [
+const keys: ItemDomain[] = [
   'gun',
   'torpedo',
   'antiair',
