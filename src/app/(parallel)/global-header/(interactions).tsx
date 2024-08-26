@@ -1,3 +1,5 @@
+import {useEffect, useState} from 'react';
+
 import { IconArcaLive, IconBell, IconGithub, IconSearch } from '@assets/icons'
 import { Badge } from '@components/(common)'
 import {
@@ -39,10 +41,29 @@ export function Search() {
 }
 
 export function Notification() {
+  // @ts-ignore
+  const currentVersion = __APP_VERSION__;
+  const [versionChange, setVersionChange] = useState(false)
+
+  const [_, setOpen] = useState(false)
+  const onClickNoti = () => {
+    setOpen(true)
+    localStorage.setItem('version', currentVersion)
+    setVersionChange(false)
+  }
+
+  useEffect(() => {
+    const version = localStorage.getItem('version') ?? ''
+
+    if(version !== currentVersion) {
+      setVersionChange(true)
+    }
+  }, [])
+
   return (
-    <BadgeButton>
+    <BadgeButton onClick={onClickNoti}>
       <IconBell />
-      <Badge data-show={false} />
+      <Badge data-show={versionChange} />
       {/* @TODO: 나중에 localStorage에서 버전 확인 후 신규 버전이면 표시되도록 변경 */}
     </BadgeButton>
   )

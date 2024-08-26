@@ -46,7 +46,6 @@ export const GridRow = styled(UIRow)`
   ${GridCell}:nth-of-type(6),
   ${GridCell}:nth-of-type(7) {
     flex-basis: 90px;
-    min-width: 90px;
   }
   ${GridCell}:nth-of-type(2),
   ${GridCell}:nth-of-type(4) {
@@ -57,5 +56,27 @@ export const GridRow = styled(UIRow)`
   }
   ${GridCell}:nth-of-type(8) {
     flex-basis: 743px;
+  }
+
+  ${GridCell}:nth-of-type(1) {
+    min-width: 90px;
+  }
+  ${GridCell}:nth-of-type(2) {
+    min-width: 178px;
+  }
+  ${GridCell}:nth-of-type(3) {
+    min-width: 98px;
+  }
+  ${GridCell}:nth-of-type(4) {
+    min-width: 162px;
+  }
+  ${GridCell}:nth-of-type(5) {
+    min-width: 32px;
+  }
+  ${GridCell}:nth-of-type(6) {
+    min-width: 68px;
+  }
+  ${GridCell}:nth-of-type(7) {
+    min-width: 72px;
   }
 `

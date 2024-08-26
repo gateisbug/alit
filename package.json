@@ -5,7 +5,7 @@
   "version": "2.4.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 9988",
     "build": "rm -rf ./build && tsc && vite build",
     "preview": "vite preview",
     "predeploy": "yarn build",

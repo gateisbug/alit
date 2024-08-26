@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'path';
+import { version } from './package.json';
 
 const p = (src: string) => resolve(__dirname, src);
 
@@ -10,6 +11,9 @@ export default defineConfig({
   plugins: [react({
     devTarget: 'es2015',
   })],
+  define: {
+    __APP_VERSION__: JSON.stringify(version)
+  },
   resolve: {
     alias: [
       { find: '@src', replacement: p('./src') },
