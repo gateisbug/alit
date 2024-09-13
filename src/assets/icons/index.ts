@@ -1,7 +1,0 @@
-export { default as IconArcaLive } from './icon-arcalive.tsx'
-export { default as IconArrow } from './icon-arrow.tsx'
-export { default as IconBell } from './icon-bell.tsx'
-export { default as IconClose } from './icon-close.tsx'
-export { default as IconError } from './icon-error.tsx'
-export { default as IconGithub } from './icon-github.tsx'
-export { default as IconSearch } from './icon-search.tsx'
