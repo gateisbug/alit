@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-import { LineButton, Shortcut as UIShortcut } from '@components/(common)'
+import {
+  LineButton,
+  Shortcut as UIShortcut,
+} from '@components/(common)/buttons.ts'
 
 // noinspection CssUnusedSymbol
 export const SearchButton = styled(LineButton).attrs({

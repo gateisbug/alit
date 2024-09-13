@@ -4,7 +4,7 @@ import {
   IModalUIProps,
   UIBackdrop,
   useModal,
-} from '@xui'
+} from '@xui/modal.ts'
 import { createPortal } from 'react-dom'
 import styled from 'styled-components'
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Header = styled.header.attrs({
   className: 'flex jc-sb ai-c bb',

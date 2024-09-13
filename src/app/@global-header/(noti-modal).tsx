@@ -1,4 +1,8 @@
-import { Modal, ModalContainer, ModalClose } from '@components/(common)'
+import {
+  default as Modal,
+  ModalContainer,
+  ModalClose,
+} from '@components/(common)/modal.tsx'
 
 interface Props {
   open?: boolean

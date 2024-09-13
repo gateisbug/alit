@@ -1,4 +1,4 @@
-import { UIBadge } from '@xui'
+import { UIBadge } from '@xui/badge.ts'
 import styled from 'styled-components'
 
 export const Badge = styled(UIBadge)`

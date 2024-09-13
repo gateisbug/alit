@@ -1,13 +1,13 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 
 import { IconArcaLive, IconBell, IconGithub, IconSearch } from '@assets/icons'
-import { Badge } from '@components/(common)'
+import { Badge } from '@components/(common)/data-display.ts'
 import {
   BadgeButton,
   LinkButton,
   SearchButton,
   Shortcut,
-} from '@components/@global-header'
+} from '@components/@global-header/(buttons).ts'
 
 export function ArcaLiveLink() {
   return (
@@ -43,7 +43,7 @@ export function Search() {
       </SearchButton>
 
       <Suspense>
-        <SearchModal open={open} onClose={() => setOpen(false)} />
+        {open && <SearchModal open={open} onClose={() => setOpen(false)} />}
       </Suspense>
     </>
   )
@@ -79,12 +79,14 @@ export function Notification() {
       </BadgeButton>
 
       <Suspense>
-        <NotiModal
-          open={open}
-          onClose={() => {
-            setOpen(false)
-          }}
-        />
+        {open && (
+          <NotiModal
+            open={open}
+            onClose={() => {
+              setOpen(false)
+            }}
+          />
+        )}
       </Suspense>
     </>
   )

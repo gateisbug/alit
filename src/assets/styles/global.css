@@ -2,7 +2,8 @@
 @import './theme.css';
 
 :root {
-  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 

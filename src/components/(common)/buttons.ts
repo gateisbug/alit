@@ -1,4 +1,4 @@
-import { UIButton } from '@xui'
+import { UIButton } from '@xui/button.ts'
 import styled from 'styled-components'
 
 export const LineButton = styled(UIButton)`

@@ -1,4 +1,4 @@
-import { Header, Links, Logo } from '@components/@global-header'
+import { Header, Links, Logo } from '@components/@global-header/styled.ts'
 
 import { Search, ArcaLiveLink, GithubLink, Notification } from './(buttons).tsx'
 
