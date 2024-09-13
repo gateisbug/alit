@@ -1,0 +1,33 @@
+:root {
+  --primary: #ffb74d; /* primary color */
+  --on-primary: #1c2025; /* font color : on primary colored background */
+  --primary-hover: #b28035; /* primary color : if hovered */
+
+  --surface: #0f1214;
+  --scroll: #424242;
+
+  --fc-s: #f6f7f8;
+  --fc: #b6bec9;
+  --fc-w: #5a5a5a;
+
+  --lc-w: #42a5f5; /* border color weak */
+  --lc: #90caf9; /* border color normal */
+  --lc-s: #1e88e5; /* border color strong */
+
+  /*--lc-h: #1e88e5;*/
+
+  --fc-err: #f44336;
+  --fc-warn: #ffa726;
+  --fc-info: #29b6f6;
+  --fc-safe: #66bb6a;
+
+  --lc-err: #e57373;
+  --lc-warn: #ffb74d;
+  --lc-info: #4fc3f7;
+  --lc-safe: #66bb6a;
+
+  --bc-err: #d32f2f;
+  --bc-warn: #f57c00;
+  --bc-info: #0288d1;
+  --bc-safe: #388e3c;
+}

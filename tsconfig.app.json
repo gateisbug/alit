@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
+
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@util/*": [
+        "src/util/*"
+      ],
+      "@util": [
+        "src/util/index.ts"
+      ],
+      "@views": [
+        "src/views/*"
+      ],
+      "@xui/*": [
+        "x-ui/*"
+      ],
+      "@xui": [
+        "x-ui/index.ts"
+      ],
+      "@xutil/*": [
+        "x-util/*"
+      ],
+      "@xutil": [
+        "x-util/index.ts"
+      ]
+    }
+  },
+  "include": ["src", "x-ui", "x-util"]
+}

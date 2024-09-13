@@ -1,0 +1,100 @@
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.al-c {
+  align-items: center;
+}
+
+.al-s {
+  align-items: flex-start;
+}
+
+.al-e {
+  align-items: flex-end;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-b {
+  justify-content: space-between;
+}
+
+.jc-s {
+  justify-content: flex-start;
+}
+
+.jc-e {
+  justify-content: flex-end;
+}
+
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.bb {
+  box-sizing: border-box;
+}
+
+.ov-h {
+  overflow: hidden;
+}
+.ov-a {
+  overflow: auto;
+}
+.ov-a::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.ov-a::-webkit-scrollbar-thumb {
+  background-color: var(--scroll);
+  border-radius: 4px;
+}
+.ov-a::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-s {
+  position: sticky;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.fg1 {
+  flex-grow: 1;
+}
+
+.cur-d {
+  cursor: default;
+}
+.cur-p {
+  cursor: pointer;
+}

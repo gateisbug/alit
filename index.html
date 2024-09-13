@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <meta name="description" content="장비설명회 웹버전. 마지막 업뎃:24-08-05. 0727까지 변경사항 반영" />
+    <meta property="og:site_name" content="장비설명회 웹버전" />
+    <meta property="og:title" content="장비설명회 웹버전" />
+    <meta
+            property="og:description"
+            content="마지막 업뎃:24-08-05. 0727까지 변경사항 반영"
+    />
+    <meta
+            property="og:image"
+            content="https://raw.githubusercontent.com/gateisbug/alit/master/view/public/assets/og-image.png"
+    />
+
+    <link rel="preload" href="/assets/logo.png" as="image" />
+
+    <title>(24-08-05) 장비 설명회.Web</title>
+
+    <style>
+      @font-face {
+        font-family: Pretendard;
+        font-weight: 700;
+        font-display: swap;
+        /*noinspection CssUnknownTarget*/
+        src:
+                local('Pretendard Bold'),
+                url('/fonts/Pretendard-Bold.woff2') format('woff2'),
+                url('/fonts/Pretendard-Bold.woff') format('woff'),
+                url('/fonts/Pretendard-Bold.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: Pretendard;
+        font-weight: 600;
+        font-display: swap;
+        /*noinspection CssUnknownTarget*/
+        src:
+                local('Pretendard SemiBold'),
+                url('/fonts/Pretendard-SemiBold.woff2') format('woff2'),
+                url('/fonts/Pretendard-SemiBold.woff') format('woff'),
+                url('/fonts/Pretendard-SemiBold.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: Pretendard;
+        font-weight: 500;
+        font-display: swap;
+        /*noinspection CssUnknownTarget*/
+        src:
+                local('Pretendard Medium'),
+                url('/fonts/Pretendard-Medium.woff2') format('woff2'),
+                url('/fonts/Pretendard-Medium.woff') format('woff'),
+                url('/fonts/Pretendard-Medium.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: Pretendard;
+        font-weight: 400;
+        font-display: swap;
+        /*noinspection CssUnknownTarget*/
+        src:
+                local('Pretendard Regular'),
+                url('/fonts/Pretendard-Regular.woff2') format('woff2'),
+                url('/fonts/Pretendard-Regular.woff') format('woff'),
+                url('/fonts/Pretendard-Regular.ttf') format('truetype');
+      }
+    </style>
+  </head>
+  <body class="fc b1">
+    <div id="root"></div>
+    <script type="module" src="/src/views/main.tsx"></script>
+  </body>
+</html>
