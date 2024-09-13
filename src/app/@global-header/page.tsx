@@ -1,5 +1,7 @@
 import { Header, Links, Logo } from '@components/@global-header'
 
+import { Search, ArcaLiveLink, GithubLink, Notification } from './(buttons).tsx'
+
 export default function GlobalHeader() {
   // noinspection HtmlUnknownTarget
   return (
@@ -9,7 +11,10 @@ export default function GlobalHeader() {
       </Logo>
 
       <Links>
-        <a href='/'>move</a>
+        <Search />
+        <ArcaLiveLink />
+        <GithubLink />
+        <Notification />
       </Links>
     </Header>
   )

@@ -45,7 +45,7 @@ export function Notification() {
   const currentVersion = __APP_VERSION__
   const [versionChange, setVersionChange] = useState(false)
 
-  const [_, setOpen] = useState(false)
+  const [, setOpen] = useState(false)
   const onClickNoti = () => {
     setOpen(true)
     localStorage.setItem('version', currentVersion)
