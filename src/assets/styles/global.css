@@ -2,6 +2,10 @@
 @import './theme.css';
 
 :root {
+  font-family: Pretendard, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 1rem;
