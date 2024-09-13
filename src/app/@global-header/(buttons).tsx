@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 
 import { IconArcaLive, IconBell, IconGithub, IconSearch } from '@assets/icons'
 import { Badge } from '@components/(common)'
@@ -25,27 +25,38 @@ export function GithubLink() {
   )
 }
 
+const SearchModal = lazy(() => import('./(search-modal).tsx'))
+
 export function Search() {
+  const [open, setOpen] = useState(false)
+
   return (
-    // @TODO: onClick 이벤트 추가해야됨
-    <SearchButton
-      onClick={() => {
-        console.log('search modal')
-      }}
-    >
-      <IconSearch />
-      <span className='caption desktop'>Search...</span>
-      <Shortcut className='desktop'>Ctrl+K</Shortcut>
-    </SearchButton>
+    <>
+      <SearchButton
+        onClick={() => {
+          setOpen(true)
+        }}
+      >
+        <IconSearch />
+        <span className='caption desktop span'>Search...</span>
+        <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>
+      </SearchButton>
+
+      <Suspense>
+        <SearchModal open={open} onClose={() => setOpen(false)} />
+      </Suspense>
+    </>
   )
 }
+
+const NotiModal = lazy(() => import('./(noti-modal).tsx'))
 
 export function Notification() {
   // @ts-ignore
   const currentVersion = __APP_VERSION__
   const [versionChange, setVersionChange] = useState(false)
 
-  const [, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
   const onClickNoti = () => {
     setOpen(true)
     localStorage.setItem('version', currentVersion)
@@ -61,10 +72,20 @@ export function Notification() {
   }, [])
 
   return (
-    <BadgeButton onClick={onClickNoti}>
-      <IconBell />
-      <Badge data-show={versionChange} />
-      {/* @TODO: 나중에 localStorage에서 버전 확인 후 신규 버전이면 표시되도록 변경 */}
-    </BadgeButton>
+    <>
+      <BadgeButton onClick={onClickNoti}>
+        <IconBell />
+        <Badge data-show={versionChange} />
+      </BadgeButton>
+
+      <Suspense>
+        <NotiModal
+          open={open}
+          onClose={() => {
+            setOpen(false)
+          }}
+        />
+      </Suspense>
+    </>
   )
 }

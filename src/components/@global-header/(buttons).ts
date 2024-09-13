@@ -16,6 +16,13 @@ export const SearchButton = styled(LineButton).attrs({
       display: none;
     }
   }
+
+  .span {
+    min-width: 45px;
+  }
+  .shortcut {
+    min-width: 46px;
+  }
 `
 
 export const LinkButton = styled(LineButton).attrs({
