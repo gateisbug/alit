@@ -5,7 +5,7 @@ import GlobalHeader from './@global-header/page.tsx'
 
 export default function RootLayout() {
   return (
-    <div>
+    <div className='flex column h100'>
       <GlobalHeader />
       <Suspense>
         <Outlet />

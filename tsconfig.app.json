@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "typeRoots": ["src/util/types"],
+
+    "composite": true,
     "target": "ES2015",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
