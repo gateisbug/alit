@@ -1,3 +1,4 @@
+import { lazy } from 'react'
 import {
   createHashRouter,
   createRoutesFromElements,
@@ -6,7 +7,6 @@ import {
 } from 'react-router-dom'
 
 import RootLayout from '@app/layout.tsx'
-import { lazy } from 'react'
 
 const ItemPage = lazy(async () => import('../app/item/page.tsx'))
 
