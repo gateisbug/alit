@@ -38,23 +38,14 @@
       "@util/*": [
         "src/util/*"
       ],
-      "@util": [
-        "src/util/index.ts"
-      ],
       "@views": [
         "src/views/*"
       ],
       "@xui/*": [
         "x-ui/*"
       ],
-      "@xui": [
-        "x-ui/index.ts"
-      ],
       "@xutil/*": [
         "x-util/*"
-      ],
-      "@xutil": [
-        "x-util/index.ts"
       ]
     }
   },
