@@ -5,7 +5,7 @@ interface Props {
   onClose?: () => void
 }
 
-export default function NotiModal({ open, onClose }: Props) {
+export default function ItemModal({ open, onClose }: Props) {
   // @TODO: Modal 구체화 해야함
   return (
     <Modal open={open} onClickAway={onClose}>
