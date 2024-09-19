@@ -18,7 +18,7 @@ import {
 
 import { headers, render } from './(grid-render).tsx'
 
-const ItemModal = lazy(() => import('./(item-modal).tsx'))
+const ItemModal = lazy(() => import('./@item-modal/page.tsx'))
 
 const LOADER = 10
 

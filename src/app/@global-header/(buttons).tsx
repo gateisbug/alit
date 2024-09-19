@@ -31,7 +31,7 @@ export function GithubLink() {
   )
 }
 
-const SearchModal = lazy(() => import('./(search-modal).tsx'))
+const SearchModal = lazy(() => import('../@search-modal/page.tsx'))
 
 export function Search() {
   const [open, setOpen] = useState(false)
@@ -55,7 +55,7 @@ export function Search() {
   )
 }
 
-const NotiModal = lazy(() => import('./(noti-modal).tsx'))
+const NotiModal = lazy(() => import('../@noti-modal/page.tsx'))
 
 export function Notification() {
   // @ts-ignore
