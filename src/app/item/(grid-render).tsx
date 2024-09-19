@@ -1,5 +1,6 @@
-import NATIONS from '@util/divider/nations.ts'
+import Portrait from '@components/item/portrait.tsx'
 import ITEMS from '@util/divider/items.ts'
+import NATIONS from '@util/divider/nations.ts'
 
 const headerOptions: OptionType<keyof ItemInterface>[] = [
   {
@@ -34,41 +35,12 @@ const headerOptions: OptionType<keyof ItemInterface>[] = [
     label: '설명',
     value: 'explain',
   },
-  // {
-  //   label: '',
-  //   value: 'status',
-  // },
-  // {
-  //   label: '',
-  //   value: 'tier',
-  // },
-  // {
-  //   label: '',
-  //   value: 'index',
-  // },
-  // {
-  //   label: '',
-  //   value: 'domain',
-  // },
-  // {
-  //   label: '',
-  //   value: 'link',
-  // },
 ]
 
 export const headers = Object.freeze(headerOptions)
 
 function img(item: ItemInterface) {
-  return (
-    <div>
-      <img
-        src={`images/items/${item?.image}.webp`}
-        alt={`${item?.image}_icon_image`}
-        width={48}
-        height={48}
-      />
-    </div>
-  )
+  return <Portrait item={item} />
 }
 
 function nickname(item: ItemInterface) {
