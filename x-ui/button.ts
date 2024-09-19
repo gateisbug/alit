@@ -24,4 +24,8 @@ export const UIButton = styled.button`
   &:disabled {
     cursor: default;
   }
+
+  //&:focus {
+  //  outline: none;
+  //}
 `

@@ -38,7 +38,6 @@ export const LinkButton = styled(LineButton).attrs({
 `
 
 export const BadgeButton = styled(LineButton).attrs({
-  as: 'div',
   className: 'pos-r',
 })`
   height: 36px;
