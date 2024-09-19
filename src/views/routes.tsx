@@ -17,7 +17,8 @@ const routes = createRoutesFromElements(
     <Route path='item'>
       <Route
         index
-        loader={async ({ request }) => fetchItemData(request)}
+        // loader={async ({ request }) => fetchItemData(request)}
+        loader={async () => fetchItemData()}
         element={<ItemPage />}
       />
     </Route>

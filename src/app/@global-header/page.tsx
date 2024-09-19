@@ -8,7 +8,13 @@ export default function GlobalHeader() {
     <Header>
       <div className='wrap flex jc-sb ai-c bb'>
         <Logo>
-          <img src='assets/logo.png' alt='logo' className='b2' />
+          <img
+            src='assets/logo.png'
+            width={36}
+            height={36}
+            alt='logo'
+            className='b2'
+          />
         </Logo>
 
         <Links>

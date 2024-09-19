@@ -2,6 +2,7 @@ import { resolve } from 'path'
 
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
+// import { compression } from 'vite-plugin-compression2'
 
 import { version } from './package.json'
 
@@ -14,6 +15,10 @@ export default defineConfig({
     react({
       devTarget: 'es2015',
     }),
+    // compression({
+    //   algorithm: 'gzip',
+    //   threshold: 10240,
+    // }),
   ],
   define: {
     __APP_VERSION__: JSON.stringify(version),
@@ -36,5 +41,15 @@ export default defineConfig({
     cssTarget: 'chrome58',
     minify: true,
     cssMinify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.indexOf('node_modules') !== -1) {
+            const module = id.split('node_modules/').pop()?.split('/')[0]
+            return `vendor-${module}`
+          }
+        },
+      },
+    },
   },
 })

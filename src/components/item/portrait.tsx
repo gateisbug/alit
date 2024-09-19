@@ -52,10 +52,12 @@ export const PortraitFrame = styled.div`
 `
 
 interface Props {
+  path: string
   item?: ItemInterface
+  size?: number
 }
 
-export default function Portrait({ item }: Props) {
+export default function Portrait({ path, item, size = 48 }: Props) {
   const strokeSorter = (types?: string, domain?: string) => {
     if (domain !== 'gun') return 'default'
     switch (types) {
@@ -79,10 +81,10 @@ export default function Portrait({ item }: Props) {
       data-stroke={strokeSorter(item?.type, item?.domain)}
     >
       <Image
-        src={`images/items/${item?.image}.webp`}
+        src={path ?? `images/items/${item?.image}.webp`}
         alt='images'
-        width={48}
-        height={48}
+        width={size}
+        height={size}
         placeholder={`images/items/${item?.image}_lqip.webp`}
       />
     </PortraitFrame>

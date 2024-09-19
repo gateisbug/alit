@@ -11,7 +11,10 @@ import {
 
 export function ArcaLiveLink() {
   return (
-    <LinkButton href='https://arca.live/b/azurlane/45593816'>
+    <LinkButton
+      href='https://arca.live/b/azurlane/45593816'
+      aria-label='아카라이브 장비 설명회 페이지로 이동'
+    >
       <IconArcaLive />
     </LinkButton>
   )
@@ -19,7 +22,10 @@ export function ArcaLiveLink() {
 
 export function GithubLink() {
   return (
-    <LinkButton href='https://github.com/gateisbug/alit'>
+    <LinkButton
+      href='https://github.com/gateisbug/alit'
+      aria-label='깃허브 리드미 페이지로 이동'
+    >
       <IconGithub />
     </LinkButton>
   )

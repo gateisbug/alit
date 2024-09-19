@@ -40,7 +40,7 @@ const headerOptions: OptionType<keyof ItemInterface>[] = [
 export const headers = Object.freeze(headerOptions)
 
 function img(item: ItemInterface) {
-  return <Portrait item={item} />
+  return <Portrait path={`images/items/${item?.image}_x48.webp`} item={item} />
 }
 
 function nickname(item: ItemInterface) {
