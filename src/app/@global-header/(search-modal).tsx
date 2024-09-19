@@ -1,8 +1,4 @@
-import {
-  default as Modal,
-  ModalContainer,
-  ModalClose,
-} from '@components/(common)/modal.tsx'
+import Modal from '@components/(common)/modal.tsx'
 
 interface Props {
   open?: boolean
@@ -13,13 +9,13 @@ export default function SearchModal({ open, onClose }: Props) {
   // @TODO: Modal 구체화 해야함
   return (
     <Modal open={open} onClickAway={onClose}>
-      <ModalContainer>
+      <Modal.Container>
         <header className='flex jc-fe'>
-          <ModalClose onClick={onClose} />
+          <Modal.Close onClick={onClose} />
         </header>
 
         <div>Search Modal</div>
-      </ModalContainer>
+      </Modal.Container>
     </Modal>
   )
 }

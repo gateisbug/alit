@@ -10,15 +10,15 @@ import styled from 'styled-components'
 
 import { IconClose } from '@assets/icons'
 
-export const ModalClose = styled(UIModalClose).attrs({
+const ModalClose = styled(UIModalClose).attrs({
   children: <IconClose />,
 })``
 
-export const ModalContainer = styled(UIModalContainer)`
+const ModalContainer = styled(UIModalContainer)`
   --modal-surface: var(--surface-main);
 `
 
-export default function Modal({ open, onClickAway, children }: IModalUIProps) {
+function ModalMain({ open, onClickAway, children }: IModalUIProps) {
   const { backdropRef, modelOnClickAway } = useModal({ open, onClickAway })
 
   return open
@@ -30,3 +30,10 @@ export default function Modal({ open, onClickAway, children }: IModalUIProps) {
       )
     : null
 }
+
+const Modal = Object.assign(ModalMain, {
+  Container: ModalContainer,
+  Close: ModalClose,
+})
+
+export default Modal

@@ -19,7 +19,7 @@ export const Logo = styled.h1.attrs({
 `
 
 export const Links = styled.nav.attrs({
-  className: 'flex al-c b2',
+  className: 'flex ai-c b2',
 })`
   gap: 8px;
 `
