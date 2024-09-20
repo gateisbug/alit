@@ -8,6 +8,9 @@ const ModalContainer = styled(Modal.Container).attrs({
   width: 100%;
   max-width: 640px;
   padding: 0;
+  border-radius: 8px;
+  min-height: 640px;
+  max-height: calc(100vh - 128px);
   //gap: 16px;
 `
 

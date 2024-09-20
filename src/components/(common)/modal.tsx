@@ -15,7 +15,7 @@ const ModalClose = styled(UIModalClose).attrs({
 })``
 
 const ModalContainer = styled(UIModalContainer)`
-  --modal-surface: var(--surface-main);
+  --modal-surface: var(--surface);
 `
 
 function ModalMain({ open, onClickAway, children }: IModalUIProps) {

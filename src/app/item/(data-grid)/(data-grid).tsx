@@ -1,13 +1,4 @@
-import useInfiniteScroll from '@xutil/useInfiniteScroll.ts'
-import {
-  Fragment,
-  lazy,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { Fragment, lazy, ReactNode, useCallback, useState } from 'react'
 
 import Loader from '@components/(common)/loader.tsx'
 import {
@@ -16,33 +7,19 @@ import {
   GridCell,
 } from '@components/item/(data-grid).ts'
 
-import { headers, render } from './(grid-render).tsx'
+import { headers, render } from '../(grid-render).tsx'
+import useInfiniteGrid from '@app/item/(data-grid)/useInfiniteGrid.ts'
+import useGridData from '@app/item/(data-grid)/useGridData.ts'
 
-const ItemModal = lazy(() => import('./@item-modal/page.tsx'))
+const ItemModal = lazy(() => import('../@item-modal/page.tsx'))
 
 const LOADER = 10
 
 export default function ItemDataGrid() {
   const [open] = useState(false)
 
-  const data = useLoaderData() as ItemInterface[]
-  const [current, setCurrent] = useState<ItemInterface[]>([])
-  const [visibleCount, setVisibleCount] = useState(LOADER)
-  const loader = useInfiniteScroll(() => {
-    setVisibleCount((prev) => prev + LOADER)
-  })
-
-  useEffect(() => {
-    setCurrent(data.slice(0, visibleCount))
-  }, [visibleCount, data])
-
-  useEffect(
-    () => () => {
-      setCurrent([])
-      setVisibleCount(LOADER)
-    },
-    [data],
-  )
+  const data = useGridData()
+  const { current, visibleCount, loaderRef } = useInfiniteGrid(data)
 
   const renderText = useCallback((d: ItemInterface, h: keyof ItemInterface) => {
     let classname: string = ''
@@ -109,7 +86,7 @@ export default function ItemDataGrid() {
       {data.length >= visibleCount && (
         <div
           className='flex h100 ai-c jc-c'
-          ref={current.length >= LOADER ? loader : undefined}
+          ref={current.length >= LOADER ? loaderRef : undefined}
         >
           <Loader />
         </div>

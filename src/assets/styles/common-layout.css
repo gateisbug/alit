@@ -57,7 +57,7 @@
   height: 4px;
 }
 .ov-a::-webkit-scrollbar-thumb {
-  /*background-color: var(--scroll);*/
+  background-color: var(--scroll);
   border-radius: 4px;
 }
 .ov-a::-webkit-scrollbar-track {
@@ -73,6 +73,9 @@
 }
 .pos-s {
   position: sticky;
+}
+.pos-f {
+  position: fixed;
 }
 
 .ta-c {

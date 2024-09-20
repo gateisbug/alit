@@ -3,6 +3,7 @@
   --on-primary: #1c2025; /* font color : on primary colored background */
   --primary-hover: #b28035; /* primary color : if hovered */
   --link: #66b3ff; /* link color */
+  --scroll: #686868;
 
   --surface: #101418; /* background default */
   --surface-main: #0f1924; /* background accent */
