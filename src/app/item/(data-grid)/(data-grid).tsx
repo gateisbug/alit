@@ -13,13 +13,11 @@ import useGridData from '@app/item/(data-grid)/useGridData.ts'
 
 const ItemModal = lazy(() => import('../@item-modal/page.tsx'))
 
-const LOADER = 10
-
 export default function ItemDataGrid() {
   const [open] = useState(false)
 
   const data = useGridData()
-  const { current, visibleCount, loaderRef } = useInfiniteGrid(data)
+  const { current, visibleCount, loaderRef, LOADER } = useInfiniteGrid(data)
 
   const renderText = useCallback((d: ItemInterface, h: keyof ItemInterface) => {
     let classname: string = ''
@@ -86,6 +84,7 @@ export default function ItemDataGrid() {
       {data.length >= visibleCount && (
         <div
           className='flex h100 ai-c jc-c'
+          style={{ padding: '16px' }}
           ref={current.length >= LOADER ? loaderRef : undefined}
         >
           <Loader />

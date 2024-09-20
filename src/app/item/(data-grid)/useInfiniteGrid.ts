@@ -26,5 +26,6 @@ export default function useInfiniteGrid(data: ItemInterface[]) {
     current,
     visibleCount,
     loaderRef,
+    LOADER,
   }
 }
