@@ -36,6 +36,21 @@ export const ModalSearchForm = styled.div.attrs({
     padding-left: 16px;
 
     &::placeholder {
+      font-family:
+        Pretendard,
+        Inter,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Ubuntu,
+        Cantarell,
+        Noto Sans,
+        sans-serif,
+        Avenir,
+        Helvetica,
+        Arial,
+        sans-serif;
       color: var(--fc-w);
     }
 
@@ -62,7 +77,7 @@ export const ModalBody = styled.div`
 `
 
 export const SearchScreen = styled.div.attrs({
-  className: 'grid ai-fs',
+  className: 'ai-fs',
 })`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
@@ -94,13 +109,42 @@ export const CatrgoryItem = styled(Link).attrs({
   padding: 2px 0 2px 16px;
   border-radius: 12px;
   margin-bottom: 8px;
+
   transition:
     border 150ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
-
   border: 1px solid rgba(29, 33, 38, 0.8);
   background-color: rgba(20, 23, 26, 0.5);
+  &:hover {
+    border-color: rgba(0, 97, 194, 0.6);
+    background-color: rgba(0, 59, 117, 0.4);
+  }
+`
 
+export const SearchResult = styled.div.attrs({
+  className: 'column',
+})``
+
+export const ResultItem = styled.button.attrs({
+  className: 'flex ai-c cur-p b2 fwm bb',
+})`
+  color: var(--link);
+  gap: 16px;
+  flex-grow: 1;
+  height: 64px;
+  padding: 2px 16px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+
+  & > span {
+    overflow-x: hidden;
+  }
+
+  transition:
+    border 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(29, 33, 38, 0.8);
+  background-color: rgba(20, 23, 26, 0.5);
   &:hover {
     border-color: rgba(0, 97, 194, 0.6);
     background-color: rgba(0, 59, 117, 0.4);

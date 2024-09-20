@@ -1,4 +1,4 @@
-import { useEffect, useId } from 'react'
+import { useEffect, useId, useState } from 'react'
 
 import { IconSearch } from '@assets/icons'
 import Modal from '@components/@search-modal/modal.ts'
@@ -8,6 +8,8 @@ import {
   ModalBody,
   ModalHeader,
   ModalSearchForm,
+  ResultItem,
+  SearchResult,
   SearchScreen,
   Shortcut,
 } from '@components/@search-modal/styled.ts'
@@ -20,6 +22,7 @@ interface Props {
 
 export default function SearchModal({ open, onClose }: Props) {
   const id = useId()
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -56,7 +59,7 @@ export default function SearchModal({ open, onClose }: Props) {
               type='search'
               maxLength={64}
               onChange={(e) => {
-                console.log(e.target.value)
+                setSearch(e.target.value)
               }}
               className='b1 fwm fcs'
               tabIndex={0}
@@ -67,7 +70,11 @@ export default function SearchModal({ open, onClose }: Props) {
         </ModalHeader>
 
         <ModalBody className='ov-a bb'>
-          <SearchScreen>
+          <SearchResult className={search.length > 0 ? 'flex' : 'none'}>
+            <ResultItem>hello</ResultItem>
+          </SearchResult>
+
+          <SearchScreen className={search.length > 0 ? 'none' : 'grid'}>
             {CATEGORY.map((v) => (
               <CategoryBox key={v.label}>
                 <h3 className='b2 fwm bb'>{v.label}</h3>
