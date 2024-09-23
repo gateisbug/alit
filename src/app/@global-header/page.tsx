@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom'
+
 import { Header, Links, Logo } from '@components/@global-header/styled.ts'
 
 import { Search, ArcaLiveLink, GithubLink, Notification } from './(buttons).tsx'
-import { Link } from 'react-router-dom'
 
 export default function GlobalHeader() {
   // noinspection HtmlUnknownTarget

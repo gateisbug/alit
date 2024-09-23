@@ -93,7 +93,7 @@ export function Notification() {
 
   return (
     <>
-      <BadgeButton onClick={onClickNoti}>
+      <BadgeButton onClick={onClickNoti} aria-label='변경사항 보기'>
         <IconBell />
         <Badge data-show={versionChange} />
       </BadgeButton>

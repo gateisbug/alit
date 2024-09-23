@@ -1,5 +1,7 @@
 import { Fragment, lazy, ReactNode, useCallback, useState } from 'react'
 
+import useGridData from '@app/item/(data-grid)/useGridData.ts'
+import useInfiniteGrid from '@app/item/(data-grid)/useInfiniteGrid.ts'
 import Loader from '@components/(common)/loader.tsx'
 import {
   GridRow,
@@ -8,8 +10,6 @@ import {
 } from '@components/item/(data-grid).ts'
 
 import { headers, render } from '../(grid-render).tsx'
-import useInfiniteGrid from '@app/item/(data-grid)/useInfiniteGrid.ts'
-import useGridData from '@app/item/(data-grid)/useGridData.ts'
 
 const ItemModal = lazy(() => import('../@item-modal/page.tsx'))
 
@@ -67,6 +67,12 @@ export default function ItemDataGrid() {
             </GridCell>
           ))}
         </GridRow>
+
+        {data.length === 0 && (
+          <div className='flex h100 ai-c jc-c' style={{ padding: '16px' }}>
+            <Loader />
+          </div>
+        )}
 
         {current.map((v, i) => (
           // eslint-disable-next-line react/no-array-index-key

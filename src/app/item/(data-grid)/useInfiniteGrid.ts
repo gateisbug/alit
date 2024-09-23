@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
 import useInfiniteScroll from '@xutil/useInfiniteScroll.ts'
+import { useEffect, useState } from 'react'
 
 const LOADER = 10
 

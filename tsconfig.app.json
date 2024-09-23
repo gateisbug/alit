@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "typeRoots": ["src/util/types"],
 
     "composite": true,

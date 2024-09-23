@@ -1,5 +1,6 @@
 import { useEffect, useId, useState } from 'react'
 
+import CATEGORY from '@app/@search-modal/(const).ts'
 import { IconSearch } from '@assets/icons'
 import Modal from '@components/@search-modal/modal.ts'
 import {
@@ -8,12 +9,10 @@ import {
   ModalBody,
   ModalHeader,
   ModalSearchForm,
-  ResultItem,
   SearchResult,
   SearchScreen,
   Shortcut,
 } from '@components/@search-modal/styled.ts'
-import CATEGORY from '@app/@search-modal/(const).ts'
 
 interface Props {
   open?: boolean
@@ -38,12 +37,41 @@ export default function SearchModal({ open, onClose }: Props) {
     }
   }, [onClose])
 
+  useEffect(() => {
+    if (open) {
+      const input = document.getElementById(id)
+      if (input) input.focus()
+    }
+  }, [id, open])
+
+  // const renderResult = useCallback(() => {
+  //   const finder = data?.filter(
+  //     (v) =>
+  //       v.nickname?.includes(search) ||
+  //       v.explain?.includes(search) ||
+  //       v.name?.includes(search),
+  //   )
+  //
+  //   return <div>hello</div>
+  //   // return search.length > 0 ? (
+  //   //   finder.map((item) => (
+  //   //     <ResultItem key={item?.index}>
+  //   //       <Portrait path={`images/items/${item?.image}_x48.webp`} size={36} />
+  //   //       Hello
+  //   //     </ResultItem>
+  //   //   ))
+  //   // ) : (
+  //   //   <div>nil</div>
+  //   // )
+  // }, [data, search])
+
   // @TODO: Modal 구체화 해야함
   return (
     <Modal open={open} onClickAway={onClose}>
       <Modal.Container className='flex column'>
         <ModalHeader>
           <ModalSearchForm>
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor={id} className='flex ai-c jc-c'>
               <IconSearch />
             </label>
@@ -52,7 +80,6 @@ export default function SearchModal({ open, onClose }: Props) {
               autoComplete='off'
               autoCorrect='off'
               autoCapitalize='off'
-              autoFocus
               enterKeyHint='search'
               spellCheck='false'
               placeholder='검색: 장비명, 별명, 설명'
@@ -65,13 +92,12 @@ export default function SearchModal({ open, onClose }: Props) {
               tabIndex={0}
             />
           </ModalSearchForm>
-
           <Shortcut onClick={onClose}>esc</Shortcut>
         </ModalHeader>
 
         <ModalBody className='ov-a bb'>
           <SearchResult className={search.length > 0 ? 'flex' : 'none'}>
-            <ResultItem>hello</ResultItem>
+            {/* {renderResult()} */}
           </SearchResult>
 
           <SearchScreen className={search.length > 0 ? 'none' : 'grid'}>

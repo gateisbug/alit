@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Shortcut as UIShortcut } from '@components/(common)/buttons.ts'
-import { Link } from 'react-router-dom'
 
 export const ModalHeader = styled.header.attrs({
   className: 'flex ai-c',
