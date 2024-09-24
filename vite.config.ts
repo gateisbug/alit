@@ -18,6 +18,8 @@ export default defineConfig({
   ],
   define: {
     __APP_VERSION__: JSON.stringify(version),
+    'process.env.NODE_ENV': '"production"',
+    'process.env.REACT_APP_PROFILING': 'true',
   },
   resolve: {
     alias: [
@@ -35,8 +37,8 @@ export default defineConfig({
     outDir: 'build',
     target: 'es2015',
     cssTarget: 'chrome58',
-    minify: true,
-    cssMinify: true,
+    // minify: true,
+    // cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
