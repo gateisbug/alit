@@ -16,7 +16,7 @@ export default function useGridData() {
     } else {
       const d = raw.filter((v) => {
         if (!division) return v.domain === category
-        return v.domain === category && v.class == division
+        return v.domain === category && v.class === division
       })
       setData(d)
     }

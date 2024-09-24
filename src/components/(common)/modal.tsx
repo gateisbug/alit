@@ -8,7 +8,7 @@ import {
 import { createPortal } from 'react-dom'
 import styled from 'styled-components'
 
-import { IconClose } from '@assets/icons'
+import IconClose from '@assets/icons/icon-close.tsx'
 
 const ModalClose = styled(UIModalClose).attrs({
   children: <IconClose />,

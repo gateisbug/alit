@@ -1,6 +1,9 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 
-import { IconArcaLive, IconBell, IconGithub, IconSearch } from '@assets/icons'
+import IconArcaLive from '@assets/icons/icon-arcalive.tsx'
+import IconBell from '@assets/icons/icon-bell.tsx'
+import IconGithub from '@assets/icons/icon-github.tsx'
+import IconSearch from '@assets/icons/icon-search.tsx'
 import { Badge } from '@components/(common)/badge.ts'
 import {
   BadgeButton,
