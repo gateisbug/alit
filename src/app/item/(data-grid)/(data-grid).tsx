@@ -68,12 +68,6 @@ export default function ItemDataGrid() {
           ))}
         </GridRow>
 
-        {data.length === 0 && (
-          <div className='flex h100 ai-c jc-c' style={{ padding: '16px' }}>
-            <Loader />
-          </div>
-        )}
-
         {current.map((v, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <GridRow key={`row_${v.index}_${i}`} data-type='body'>

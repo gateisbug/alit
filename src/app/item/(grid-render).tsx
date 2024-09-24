@@ -1,4 +1,4 @@
-import Portrait from '@components/item/portrait.tsx'
+import Portrait from '@components/(common)/portrait.tsx'
 import ITEMS from '@util/divider/items.ts'
 import NATIONS from '@util/divider/nations.ts'
 

@@ -15,10 +15,6 @@ export default defineConfig({
     react({
       devTarget: 'es2015',
     }),
-    // compression({
-    //   algorithm: 'gzip',
-    //   threshold: 10240,
-    // }),
   ],
   define: {
     __APP_VERSION__: JSON.stringify(version),

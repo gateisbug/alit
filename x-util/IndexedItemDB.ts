@@ -8,7 +8,7 @@
 //
 // const DATABASE = 'alit-database'
 // const ITEMTABLE = 'item-list'
-// const VERSION = 2
+// const VERSION = 1
 //
 // export default class IndexedItemDB {
 //   private static instance: IndexedItemDB | null = null

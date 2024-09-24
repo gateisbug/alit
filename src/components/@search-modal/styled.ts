@@ -36,21 +36,10 @@ export const ModalSearchForm = styled.div.attrs({
     padding-left: 16px;
 
     &::placeholder {
-      font-family:
-        Pretendard,
-        Inter,
-        system-ui,
-        -apple-system,
-        Segoe UI,
-        Roboto,
-        Ubuntu,
-        Cantarell,
-        Noto Sans,
-        sans-serif,
-        Avenir,
-        Helvetica,
-        Arial,
-        sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+        'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
+        'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', sans-serif;
       color: var(--fc-w);
     }
 
