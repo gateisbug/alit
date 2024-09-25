@@ -110,9 +110,15 @@ export const CatrgoryItem = styled(Link).attrs({
   }
 `
 
+// noinspection CssUnusedSymbol
 export const SearchResult = styled.div.attrs({
   className: 'column',
-})``
+})`
+  .nodata {
+    gap: 24px; /* 24 */
+    padding: 48px 0; /* 48 */
+  }
+`
 
 export const ResultItem = styled.button.attrs({
   className: 'flex ai-c cur-p b2 fwm bb',
