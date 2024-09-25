@@ -7,10 +7,10 @@ import {
   useState,
 } from 'react'
 
+import Loader from '@components/(common)/loader.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
 import { ResultItem } from '@components/@search-modal/styled.ts'
 import fetchItemData from '@util/fetchJson.ts'
-import Loader from '@components/(common)/loader.tsx'
 
 export default function useSearchModal(onClose: () => void, open?: boolean) {
   const id = useId()

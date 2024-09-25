@@ -37,8 +37,8 @@ export default defineConfig({
     outDir: 'build',
     target: 'es2015',
     cssTarget: 'chrome58',
-    // minify: true,
-    // cssMinify: true,
+    minify: true,
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
