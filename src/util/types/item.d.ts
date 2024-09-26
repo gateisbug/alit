@@ -46,6 +46,7 @@ type NationType =
   | string
 
 interface ItemInterface {
+  id?: number
   index?: number
   name?: string
   tier?: TierType

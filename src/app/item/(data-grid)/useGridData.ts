@@ -1,14 +1,24 @@
 import { useEffect, useState } from 'react'
-import { useLoaderData, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
+
+import IndexedItemDB from '@util/IndexedItemDB.ts'
 
 export default function useGridData() {
   const [searchParams] = useSearchParams()
   const category = searchParams.get('category')
   const division = searchParams.get('division')
 
-  const raw = useLoaderData() as ItemInterface[]
-
+  const [raw, setRaw] = useState<ItemInterface[]>([])
   const [data, setData] = useState(raw)
+
+  useEffect(() => {
+    const getData = async () => {
+      const value = await (await IndexedItemDB.getInstance()).getAllData()
+      setRaw(value)
+    }
+    // eslint-disable-next-line no-console
+    getData().catch((rej) => console.error(rej))
+  }, [])
 
   useEffect(() => {
     if (!category && !division) {
@@ -20,7 +30,7 @@ export default function useGridData() {
       })
       setData(d)
     }
-  }, [category, division])
+  }, [raw, category, division])
 
   return data
 }

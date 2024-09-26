@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import RootLayout from '@app/layout.tsx'
-import fetchItemData from '@util/fetchJson.ts'
+// import fetchItemData from '@util/fetchJson.ts'
 
 const ItemPage = lazy(async () => import('../app/item/page.tsx'))
 
@@ -18,7 +18,7 @@ const routes = createRoutesFromElements(
       <Route
         index
         // loader={async ({ request }) => fetchItemData(request)}
-        loader={async () => fetchItemData()}
+        // loader={async () => fetchItemData()}
         element={<ItemPage />}
       />
     </Route>

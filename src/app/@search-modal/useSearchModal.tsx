@@ -10,12 +10,11 @@ import {
 import Loader from '@components/(common)/loader.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
 import { ResultItem } from '@components/@search-modal/styled.ts'
-import fetchItemData from '@util/fetchJson.ts'
+import IndexedItemDB from '@util/IndexedItemDB.ts'
 
 export default function useSearchModal(onClose: () => void, open?: boolean) {
   const id = useId()
   const [search, setSearch] = useState('')
-  const [data, setData] = useState<ItemInterface[]>([])
   const deferredSearch = useDeferredValue(search)
 
   const [result, setResult] = useState<ItemInterface[] | undefined>(undefined)
@@ -35,14 +34,21 @@ export default function useSearchModal(onClose: () => void, open?: boolean) {
       return
     }
 
-    const finder = data?.filter(
-      (v) =>
-        v.name?.includes(deferredSearch) ||
-        v.nickname?.includes(deferredSearch) ||
-        v.explain?.join('. ').includes(deferredSearch),
-    )
+    const getData = async () => {
+      const data = await (await IndexedItemDB.getInstance()).getAllData()
 
-    setResult([...finder])
+      const finder = data?.filter(
+        (v) =>
+          v.name?.includes(deferredSearch) ||
+          v.nickname?.includes(deferredSearch) ||
+          v.explain?.join('. ').includes(deferredSearch),
+      )
+
+      setResult([...finder])
+    }
+
+    // eslint-disable-next-line no-console
+    getData().catch((rej) => console.error(rej))
   }, [deferredSearch])
 
   /** 검색 결과를 렌더링 */
@@ -76,18 +82,6 @@ export default function useSearchModal(onClose: () => void, open?: boolean) {
       </ResultItem>
     ))
   }, [deferredSearch, deferredResult])
-
-  /** 검색에 사용할 데이터를 페치 */
-  useEffect(() => {
-    fetchItemData()
-      .then((res: ItemInterface[]) => {
-        setData(res)
-      })
-      .catch((rej) => {
-        // eslint-disable-next-line no-console
-        console.error(rej)
-      })
-  }, [])
 
   /** 키 입력 이벤트를 할당 */
   useEffect(() => {

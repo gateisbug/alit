@@ -32,7 +32,8 @@ export default function NotiModal({ open, onClose }: Props) {
 
   const fetchLog = useCallback(async () => {
     try {
-      const response = await fetch('json/change.json')
+      const response =
+        await fetch('json/change.json') /* @TODO: 버전업 시 json 수정 */
       const json =
         ((await response.json()) as unknown as IChangeLog) ?? DEFAULT_CHANGE
       setChange(json)
