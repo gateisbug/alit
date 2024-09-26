@@ -1,20 +1,24 @@
-import { Fragment, lazy, ReactNode, useCallback, useState } from 'react'
+import { Fragment, lazy, ReactNode, useCallback } from 'react'
 
 import useGridData from '@app/item/(data-grid)/useGridData.ts'
 import useInfiniteGrid from '@app/item/(data-grid)/useInfiniteGrid.ts'
 import Loader from '@components/(common)/loader.tsx'
+import { modalStore } from '@components/(common)/modal.tsx'
 import {
   GridRow,
   GridContainer,
   GridCell,
 } from '@components/item/(data-grid).ts'
+import { useItemModalStore } from '@util/store/item.ts'
 
 import { headers, render } from '../(grid-render).tsx'
 
 const ItemModal = lazy(() => import('../@item-modal/page.tsx'))
 
 export default function ItemDataGrid() {
-  const [open] = useState(false)
+  const MODALKEY = '@item-modal-key'
+  const { modalOpen, modalClose } = modalStore()
+  const { select, onOpen, onClose } = useItemModalStore()
 
   const data = useGridData()
   const { current, visibleCount, loaderRef, LOADER } = useInfiniteGrid(data)
@@ -54,7 +58,17 @@ export default function ItemDataGrid() {
         break
     }
 
-    return <GridCell className={classname}>{value}</GridCell>
+    return (
+      <GridCell
+        className={classname}
+        onClick={() => {
+          onOpen(d)
+          modalOpen(MODALKEY)
+        }}
+      >
+        {value}
+      </GridCell>
+    )
   }, [])
 
   return (
@@ -91,7 +105,14 @@ export default function ItemDataGrid() {
         </div>
       )}
 
-      {open && <ItemModal />}
+      {select !== undefined && (
+        <ItemModal
+          onClose={() => {
+            modalClose(MODALKEY)
+            onClose()
+          }}
+        />
+      )}
     </>
   )
 }

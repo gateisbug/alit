@@ -1,7 +1,4 @@
-import { useCallback, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-
-import type { MouseEvent, ReactNode } from 'react'
 
 export const UIModalClose = styled.button`
   display: flex;
@@ -40,42 +37,42 @@ export const UIBackdrop = styled.div`
   justify-content: center;
 `
 
-export interface IModalUIProps {
-  open?: boolean
-  onClickAway?: () => void
-  children?: ReactNode
-}
-
-export function useModal({ open, onClickAway }: IModalUIProps) {
-  const backdropRef = useRef<HTMLDivElement>(null)
-
-  const modelOnClickAway = useCallback(
-    (e: MouseEvent<HTMLDivElement>) => {
-      if (e.target === backdropRef.current && onClickAway !== undefined) {
-        onClickAway()
-      }
-    },
-    [onClickAway],
-  )
-
-  useEffect(() => {
-    if (open) {
-      document.body.setAttribute('style', 'overflow:hidden;')
-    } else {
-      document.body.removeAttribute('style')
-    }
-
-    return () => {
-      document.body.removeAttribute('style')
-    }
-  }, [open])
-
-  return {
-    backdropRef,
-    modelOnClickAway,
-  }
-}
-
+// export interface IModalUIProps {
+//   open?: boolean
+//   onClickAway?: () => void
+//   children?: ReactNode
+// }
+//
+// export function useModal({ open, onClickAway }: IModalUIProps) {
+//   const backdropRef = useRef<HTMLDivElement>(null)
+//
+//   const modelOnClickAway = useCallback(
+//     (e: MouseEvent<HTMLDivElement>) => {
+//       if (e.target === backdropRef.current && onClickAway !== undefined) {
+//         onClickAway()
+//       }
+//     },
+//     [onClickAway],
+//   )
+//
+//   useEffect(() => {
+//     if (open) {
+//       document.body.setAttribute('style', 'overflow:hidden;')
+//     } else {
+//       document.body.removeAttribute('style')
+//     }
+//
+//     return () => {
+//       document.body.removeAttribute('style')
+//     }
+//   }, [open])
+//
+//   return {
+//     backdropRef,
+//     modelOnClickAway,
+//   }
+// }
+//
 // export default function Modal({ open, onClickAway, children }: ModalUIProps) {
 //   const { backdropRef, modelOnClickAway } = useModal({ open, onClickAway })
 //

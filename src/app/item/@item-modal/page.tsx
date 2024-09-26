@@ -1,21 +1,23 @@
 import { Modal, ModalClose } from '@components/(common)/modal.tsx'
 import { ModalContainer } from '@components/item/@item-modal.ts'
+import { useItemModalStore } from '@util/store/item.ts'
 
 interface Props {
-  open?: boolean
-  onClose?: () => void
+  onClose: () => void
 }
 
-export default function ItemModal({ open, onClose }: Props) {
+export default function ItemModal({ onClose }: Props) {
+  const { select } = useItemModalStore()
+
   // @TODO: Modal 구체화 해야함
   return (
-    <Modal open={open} onClickAway={onClose}>
+    <Modal open={select !== undefined} onClickAway={onClose}>
       <ModalContainer>
         <header className='flex jc-fe'>
           <ModalClose onClick={onClose} />
         </header>
 
-        <div>Noti Modal</div>
+        <div>{select?.name ?? '-'}</div>
       </ModalContainer>
     </Modal>
   )

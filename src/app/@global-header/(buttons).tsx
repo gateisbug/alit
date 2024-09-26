@@ -5,6 +5,7 @@ import IconBell from '@assets/icons/icon-bell.tsx'
 import IconGithub from '@assets/icons/icon-github.tsx'
 import IconSearch from '@assets/icons/icon-search.tsx'
 import { Badge } from '@components/(common)/badge.ts'
+import { modalStore } from '@components/(common)/modal.tsx'
 import {
   BadgeButton,
   LinkButton,
@@ -37,12 +38,15 @@ export function GithubLink() {
 const SearchModal = lazy(() => import('../@search-modal/page.tsx'))
 
 export function Search() {
+  const MODALKEY = '@search-modal-key'
+  const { modalOpen, modalClose } = modalStore()
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.key === 'k') {
         e.preventDefault()
+        modalOpen(MODALKEY)
         setOpen(true)
       }
     }
@@ -57,6 +61,7 @@ export function Search() {
     <>
       <SearchButton
         onClick={() => {
+          modalOpen(MODALKEY)
           setOpen(true)
         }}
       >
@@ -66,7 +71,15 @@ export function Search() {
       </SearchButton>
 
       <Suspense>
-        {open && <SearchModal open={open} onClose={() => setOpen(false)} />}
+        {open && (
+          <SearchModal
+            open={open}
+            onClose={() => {
+              setOpen(false)
+              modalClose(MODALKEY)
+            }}
+          />
+        )}
       </Suspense>
     </>
   )
@@ -75,12 +88,15 @@ export function Search() {
 const NotiModal = lazy(() => import('../@noti-modal/page.tsx'))
 
 export function Notification() {
+  const MODALKEY = '@notification-modal-key'
   // @ts-ignore
   const currentVersion = __APP_VERSION__
   const [versionChange, setVersionChange] = useState(false)
 
+  const { modalOpen, modalClose } = modalStore()
   const [open, setOpen] = useState(false)
   const onClickNoti = () => {
+    modalOpen(MODALKEY)
     setOpen(true)
     localStorage.setItem('version', currentVersion)
     setVersionChange(false)
@@ -88,10 +104,7 @@ export function Notification() {
 
   useEffect(() => {
     const version = localStorage.getItem('version') ?? ''
-
-    if (version !== currentVersion) {
-      setVersionChange(true)
-    }
+    if (version !== currentVersion) setVersionChange(true)
   }, [])
 
   return (
@@ -107,6 +120,7 @@ export function Notification() {
             open={open}
             onClose={() => {
               setOpen(false)
+              modalClose(MODALKEY)
             }}
           />
         )}
