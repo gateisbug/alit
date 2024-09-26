@@ -1,5 +1,20 @@
+import { UIModalContainer } from '@xui/modal.ts'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+
+export const ModalContainer = styled(UIModalContainer).attrs({
+  className: 'pos-r',
+})`
+  --modal-surface: var(--surface);
+
+  width: 100%;
+  height: fit-content;
+  max-width: 640px;
+  max-height: 640px;
+  padding: 0;
+  border-radius: 8px;
+  //gap: 16px;
+`
 
 export const ModalHeader = styled.header.attrs({
   className: 'pos-a',

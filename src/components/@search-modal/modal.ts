@@ -1,10 +1,7 @@
+import { UIModalContainer } from '@xui/modal.ts'
 import styled from 'styled-components'
 
-import Modal from '@components/(common)/modal.tsx'
-
-const ModalContainer = styled(Modal.Container).attrs({
-  className: '',
-})`
+export const ModalContainer = styled(UIModalContainer)`
   width: 100%;
   max-width: 640px;
   padding: 0;
@@ -13,7 +10,3 @@ const ModalContainer = styled(Modal.Container).attrs({
   max-height: calc(100vh - 128px);
   //gap: 16px;
 `
-
-export default Object.assign(Modal, {
-  Container: ModalContainer,
-})

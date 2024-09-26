@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useState } from 'react'
 
-import Modal from '@components/@noti-modal/modal.ts'
+import Modal from '@components/(common)/modal.tsx'
 import {
   ChangeLog,
   ModalBody,
   ModalHeader,
   ReleaseLink,
+  ModalContainer,
 } from '@components/@noti-modal/styled.ts'
 
 interface IChangeLog {
@@ -47,10 +48,9 @@ export default function NotiModal({ open, onClose }: Props) {
     fetchLog().catch((e) => console.error(e))
   }, [])
 
-  // @TODO: Modal 구체화 해야함
   return (
     <Modal open={open} onClickAway={onClose}>
-      <Modal.Container>
+      <ModalContainer>
         <ModalHeader>
           <Modal.Close onClick={onClose} />
         </ModalHeader>
@@ -65,7 +65,7 @@ export default function NotiModal({ open, onClose }: Props) {
             ))}
           </ChangeLog>
         </ModalBody>
-      </Modal.Container>
+      </ModalContainer>
     </Modal>
   )
 }

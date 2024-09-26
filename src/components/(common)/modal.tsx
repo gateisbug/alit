@@ -1,6 +1,6 @@
 import {
   UIModalClose,
-  UIModalContainer,
+  // UIModalContainer,
   IModalUIProps,
   UIBackdrop,
   useModal,
@@ -14,9 +14,9 @@ const ModalClose = styled(UIModalClose).attrs({
   children: <IconClose />,
 })``
 
-const ModalContainer = styled(UIModalContainer)`
-  --modal-surface: var(--surface);
-`
+// const ModalContainer = styled(UIModalContainer)`
+//   --modal-surface: var(--surface);
+// `
 
 function ModalMain({ open, onClickAway, children }: IModalUIProps) {
   const { backdropRef, modelOnClickAway } = useModal({ open, onClickAway })
@@ -32,7 +32,7 @@ function ModalMain({ open, onClickAway, children }: IModalUIProps) {
 }
 
 const Modal = Object.assign(ModalMain, {
-  Container: ModalContainer,
+  // Container: ModalContainer,
   Close: ModalClose,
 })
 

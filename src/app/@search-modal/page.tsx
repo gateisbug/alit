@@ -1,7 +1,7 @@
 import CATEGORY from '@app/@search-modal/(const).ts'
 import useSearchModal from '@app/@search-modal/useSearchModal.tsx'
 import IconSearch from '@assets/icons/icon-search.tsx'
-import Modal from '@components/@search-modal/modal.ts'
+import Modal from '@components/(common)/modal.tsx'
 import {
   CategoryBox,
   CatrgoryItem,
@@ -11,6 +11,7 @@ import {
   SearchResult,
   SearchScreen,
   Shortcut,
+  ModalContainer,
 } from '@components/@search-modal/styled.ts'
 
 interface Props {
@@ -26,7 +27,7 @@ export default function SearchModal({ open, onClose }: Props) {
 
   return (
     <Modal open={open} onClickAway={onClose}>
-      <Modal.Container className='flex column'>
+      <ModalContainer>
         <ModalHeader>
           <ModalSearchForm>
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
@@ -71,7 +72,7 @@ export default function SearchModal({ open, onClose }: Props) {
             ))}
           </SearchScreen>
         </ModalBody>
-      </Modal.Container>
+      </ModalContainer>
     </Modal>
   )
 }
