@@ -10,7 +10,7 @@ import styled from 'styled-components'
 
 import IconClose from '@assets/icons/icon-close.tsx'
 
-const ModalClose = styled(UIModalClose).attrs({
+export const ModalClose = styled(UIModalClose).attrs({
   children: <IconClose />,
 })``
 
@@ -18,7 +18,7 @@ const ModalClose = styled(UIModalClose).attrs({
 //   --modal-surface: var(--surface);
 // `
 
-function ModalMain({ open, onClickAway, children }: IModalUIProps) {
+export function Modal({ open, onClickAway, children }: IModalUIProps) {
   const { backdropRef, modelOnClickAway } = useModal({ open, onClickAway })
 
   return open
@@ -30,10 +30,3 @@ function ModalMain({ open, onClickAway, children }: IModalUIProps) {
       )
     : null
 }
-
-const Modal = Object.assign(ModalMain, {
-  // Container: ModalContainer,
-  Close: ModalClose,
-})
-
-export default Modal

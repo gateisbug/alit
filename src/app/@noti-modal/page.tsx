@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-import Modal from '@components/(common)/modal.tsx'
+import { Modal, ModalClose } from '@components/(common)/modal.tsx'
 import {
   ChangeLog,
   ModalBody,
@@ -52,7 +52,7 @@ export default function NotiModal({ open, onClose }: Props) {
     <Modal open={open} onClickAway={onClose}>
       <ModalContainer>
         <ModalHeader>
-          <Modal.Close onClick={onClose} />
+          <ModalClose onClick={onClose} />
         </ModalHeader>
 
         <ModalBody>
