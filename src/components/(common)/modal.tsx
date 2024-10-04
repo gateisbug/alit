@@ -12,7 +12,6 @@ interface IModalStore {
   modalClose: (modalKey: string) => void
 }
 
-/* @TODO: 모달 추가와 삭제 */
 export const modalStore = create<IModalStore>((set) => ({
   lists: [],
   modalOpen: (modalKey: string) =>
@@ -21,7 +20,10 @@ export const modalStore = create<IModalStore>((set) => ({
 
       const overflow = document.body.getAttribute('style')
       if (!overflow) {
-        document.body.setAttribute('style', 'overflow:hidden;')
+        document.body.setAttribute(
+          'style',
+          'overflow:hidden;padding-right:17px;',
+        )
       }
 
       const fIdx = current.findIndex((v) => v === modalKey)
