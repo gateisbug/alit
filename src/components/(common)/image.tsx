@@ -37,15 +37,11 @@ function Image(props: ImageProps) {
       { threshold: 0.25 },
     )
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current)
-    }
+    if (imgRef.current) observer.observe(imgRef.current)
 
     // eslint-disable-next-line consistent-return
     return () => {
-      if (imgRef.current) {
-        observer.unobserve(imgRef.current)
-      }
+      if (imgRef.current) observer.unobserve(imgRef.current)
     }
   }, [placeholder, src])
 

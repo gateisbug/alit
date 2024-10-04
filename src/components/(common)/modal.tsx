@@ -16,8 +16,6 @@ export const modalStore = create<IModalStore>((set) => ({
   lists: [],
   modalOpen: (modalKey: string) =>
     set(({ lists }) => {
-      const current = lists
-
       const overflow = document.body.getAttribute('style')
       if (!overflow) {
         document.body.setAttribute(
@@ -26,23 +24,21 @@ export const modalStore = create<IModalStore>((set) => ({
         )
       }
 
-      const fIdx = current.findIndex((v) => v === modalKey)
-      if (fIdx >= 0) {
-        return { lists }
-      }
+      const fIdx = lists.findIndex((v) => v === modalKey)
+      if (fIdx >= 0) return { lists }
+
+      const current = lists
       current.push(modalKey)
       return { lists: [...current] }
     }),
   modalClose: (modalKey: string) =>
     set(({ lists }) => {
-      const current = lists
-      const fIdx = current.findIndex((v) => v === modalKey)
+      const fIdx = lists.findIndex((v) => v === modalKey)
       if (fIdx >= 0) {
+        const current = lists
         current.splice(fIdx, 1)
 
-        if (current.length === 0) {
-          document.body.removeAttribute('style')
-        }
+        if (current.length === 0) document.body.removeAttribute('style')
 
         return { lists: [...current] }
       }
@@ -65,9 +61,8 @@ export function Modal({ open, onClickAway, children }: ModalProps) {
 
   const modelOnClickAway = useCallback(
     (e: MouseEvent<HTMLDivElement>) => {
-      if (e.target === backdropRef.current && onClickAway !== undefined) {
+      if (e.target === backdropRef.current && onClickAway !== undefined)
         onClickAway()
-      }
     },
     [onClickAway],
   )
