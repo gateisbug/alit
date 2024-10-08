@@ -1,6 +1,11 @@
 import { useCallback, useEffect, useState } from 'react'
 
-import { Modal, ModalClose } from '@components/(common)/modal/index.ts'
+import { NOTIMODALKEY } from '@app/(modals)/(modal-keys).ts'
+import {
+  Modal,
+  ModalClose,
+  useModalStore,
+} from '@components/(common)/modal/index.ts'
 import {
   ChangeLog,
   ModalBody,
@@ -23,12 +28,8 @@ const DEFAULT_CHANGE: IChangeLog = {
   patch: [],
 }
 
-interface Props {
-  open?: boolean
-  onClose?: () => void
-}
-
-export default function NotiModal({ open, onClose }: Props) {
+export default function NotiModal() {
+  const { drop } = useModalStore()
   const [change, setChange] = useState<IChangeLog>(DEFAULT_CHANGE)
 
   const fetchLog = useCallback(async () => {
@@ -43,13 +44,17 @@ export default function NotiModal({ open, onClose }: Props) {
     }
   }, [])
 
+  const onClose = () => {
+    drop(NOTIMODALKEY)
+  }
+
   useEffect(() => {
     // eslint-disable-next-line no-console
     fetchLog().catch((e) => console.error(e))
   }, [])
 
   return (
-    <Modal open={open} onClickAway={onClose}>
+    <Modal id={NOTIMODALKEY}>
       <ModalContainer>
         <ModalHeader>
           <ModalClose onClick={onClose} />

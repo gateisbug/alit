@@ -8,43 +8,39 @@ import { BadgeButton } from '@components/@global-header/(buttons).ts'
 
 const NotiModal = lazy(() => import('@app/(modals)/@noti-modal/page.tsx'))
 
-export default function Notification() {
+function useNotification() {
   // @ts-ignore
   const currentVersion = __APP_VERSION__
   const [versionChange, setVersionChange] = useState(false)
-
-  const { modalOpen, modalClose } = useModalStore()
-  const [open, setOpen] = useState(false)
-  const onClickNoti = () => {
-    modalOpen(NOTIMODALKEY)
-    setOpen(true)
-    localStorage.setItem('version', currentVersion)
-    setVersionChange(false)
-  }
+  const { lists, add } = useModalStore()
 
   useEffect(() => {
     const version = localStorage.getItem('version') ?? ''
     if (version !== currentVersion) setVersionChange(true)
   }, [])
 
+  return {
+    versionChange,
+    open: lists.includes(NOTIMODALKEY),
+    handlerNotiButton: () => {
+      localStorage.setItem('version', currentVersion)
+      setVersionChange(false)
+      add(NOTIMODALKEY)
+    },
+  }
+}
+
+export default function Notification() {
+  const { versionChange, handlerNotiButton, open } = useNotification()
+
   return (
     <>
-      <BadgeButton onClick={onClickNoti} aria-label='변경사항 보기'>
+      <BadgeButton onClick={handlerNotiButton} aria-label='변경사항 보기'>
         <IconBell />
         <Badge data-show={versionChange} />
       </BadgeButton>
 
-      <Suspense>
-        {open && (
-          <NotiModal
-            open={open}
-            onClose={() => {
-              setOpen(false)
-              modalClose(NOTIMODALKEY)
-            }}
-          />
-        )}
-      </Suspense>
+      <Suspense>{open && <NotiModal />}</Suspense>
     </>
   )
 }

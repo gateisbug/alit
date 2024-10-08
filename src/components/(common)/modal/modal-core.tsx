@@ -36,7 +36,7 @@ export function Modal({ id, children }: ModalProps) {
     if (lists.length === 0 || !lists.includes(id)) return
 
     const handlerPopState = () => {
-      drop(id)
+      drop(id, true)
     }
 
     window.addEventListener('popstate', handlerPopState)
