@@ -1,4 +1,4 @@
-import { Modal, ModalClose } from '@components/(common)/modal.tsx'
+import { Modal, ModalClose } from '@components/(common)/modal/index.ts'
 import { ModalContainer } from '@components/item/@item-modal.ts'
 import { useItemModalStore } from '@util/store/item.ts'
 

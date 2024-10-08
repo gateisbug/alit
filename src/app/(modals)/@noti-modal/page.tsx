@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-import { Modal, ModalClose } from '@components/(common)/modal.tsx'
+import { Modal, ModalClose } from '@components/(common)/modal/index.ts'
 import {
   ChangeLog,
   ModalBody,

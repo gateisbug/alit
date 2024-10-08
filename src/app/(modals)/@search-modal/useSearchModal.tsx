@@ -7,12 +7,16 @@ import {
   useState,
 } from 'react'
 
+import { SEARCHMODALKEY } from '@app/(modals)/(modal-keys).ts'
 import Loader from '@components/(common)/loader.tsx'
+import { useModalStore } from '@components/(common)/modal'
 import Portrait from '@components/(common)/portrait.tsx'
 import { ResultItem } from '@components/@search-modal/styled.ts'
 import IndexedItemDB from '@util/IndexedItemDB.ts'
 
-export default function useSearchModal(onClose: () => void, open?: boolean) {
+export default function useSearchModal() {
+  const { lists, drop } = useModalStore()
+
   const id = useId()
   const [search, setSearch] = useState('')
   const deferredSearch = useDeferredValue(search)
@@ -88,7 +92,7 @@ export default function useSearchModal(onClose: () => void, open?: boolean) {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.preventDefault()
-        onClose()
+        drop(SEARCHMODALKEY)
       }
     }
 
@@ -96,15 +100,15 @@ export default function useSearchModal(onClose: () => void, open?: boolean) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [onClose])
+  }, [])
 
   /** 모달이 켜지면 input에 자동 포커싱 */
   useEffect(() => {
-    if (open) {
+    if (lists.includes(SEARCHMODALKEY)) {
       const input = document.getElementById(id)
       if (input) input.focus()
     }
-  }, [id, open])
+  }, [id, lists])
 
   return {
     id,

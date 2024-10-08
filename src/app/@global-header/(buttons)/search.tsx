@@ -1,22 +1,20 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 
 import { SEARCHMODALKEY } from '@app/(modals)/(modal-keys).ts'
 import IconSearch from '@assets/icons/icon-search.tsx'
-import { modalStore } from '@components/(common)/modal.tsx'
+import { useModalStore } from '@components/(common)/modal/index.ts'
 import { SearchButton, Shortcut } from '@components/@global-header/(buttons).ts'
 
 const SearchModal = lazy(() => import('@app/(modals)/@search-modal/page.tsx'))
 
-export default function Search() {
-  const { modalOpen, modalClose } = modalStore()
-  const [open, setOpen] = useState(false)
+function useSearch() {
+  const { lists, add } = useModalStore()
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.key === 'k') {
         e.preventDefault()
-        modalOpen(SEARCHMODALKEY)
-        setOpen(true)
+        add(SEARCHMODALKEY)
       }
     }
 
@@ -26,30 +24,26 @@ export default function Search() {
     }
   }, [])
 
+  return {
+    open: lists.includes(SEARCHMODALKEY),
+    handlerSearchButton: () => {
+      add(SEARCHMODALKEY)
+    },
+  }
+}
+
+export default function Search() {
+  const { open, handlerSearchButton } = useSearch()
+
   return (
     <>
-      <SearchButton
-        onClick={() => {
-          modalOpen(SEARCHMODALKEY)
-          setOpen(true)
-        }}
-      >
+      <SearchButton onClick={handlerSearchButton}>
         <IconSearch />
         <span className='caption desktop span'>Search...</span>
         <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>
       </SearchButton>
 
-      <Suspense>
-        {open && (
-          <SearchModal
-            open={open}
-            onClose={() => {
-              setOpen(false)
-              modalClose(SEARCHMODALKEY)
-            }}
-          />
-        )}
-      </Suspense>
+      <Suspense>{open && <SearchModal />}</Suspense>
     </>
   )
 }

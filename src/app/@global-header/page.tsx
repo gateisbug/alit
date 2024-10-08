@@ -6,7 +6,7 @@ import {
   Search,
   ArcaLiveLink,
   GithubLink,
-  Notification,
+  // Notification,
 } from './(buttons)/index.ts'
 
 export default function GlobalHeader() {
@@ -30,7 +30,7 @@ export default function GlobalHeader() {
           <Search />
           <ArcaLiveLink />
           <GithubLink />
-          <Notification />
+          {/* <Notification /> */}
         </Links>
       </div>
     </Header>
