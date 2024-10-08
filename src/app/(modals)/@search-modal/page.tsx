@@ -1,5 +1,5 @@
-import CATEGORY from '@app/@search-modal/(const).ts'
-import useSearchModal from '@app/@search-modal/useSearchModal.tsx'
+import CATEGORY from '@app/(modals)/@search-modal/(const).ts'
+import useSearchModal from '@app/(modals)/@search-modal/useSearchModal.tsx'
 import IconSearch from '@assets/icons/icon-search.tsx'
 import { Modal } from '@components/(common)/modal.tsx'
 import {

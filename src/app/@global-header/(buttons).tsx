@@ -35,7 +35,7 @@ export function GithubLink() {
   )
 }
 
-const SearchModal = lazy(() => import('../@search-modal/page.tsx'))
+const SearchModal = lazy(() => import('@app/(modals)/@search-modal/page.tsx'))
 
 export function Search() {
   const MODALKEY = '@search-modal-key'
@@ -85,7 +85,7 @@ export function Search() {
   )
 }
 
-const NotiModal = lazy(() => import('../@noti-modal/page.tsx'))
+const NotiModal = lazy(() => import('@app/(modals)/@noti-modal/page.tsx'))
 
 export function Notification() {
   const MODALKEY = '@notification-modal-key'
