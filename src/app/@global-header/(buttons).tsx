@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 
+import { NOTIMODALKEY, SEARCHMODALKEY } from '@app/(modals)/(modal-keys).ts'
 import IconArcaLive from '@assets/icons/icon-arcalive.tsx'
 import IconBell from '@assets/icons/icon-bell.tsx'
 import IconGithub from '@assets/icons/icon-github.tsx'
@@ -38,7 +39,6 @@ export function GithubLink() {
 const SearchModal = lazy(() => import('@app/(modals)/@search-modal/page.tsx'))
 
 export function Search() {
-  const MODALKEY = '@search-modal-key'
   const { modalOpen, modalClose } = modalStore()
   const [open, setOpen] = useState(false)
 
@@ -46,7 +46,7 @@ export function Search() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.key === 'k') {
         e.preventDefault()
-        modalOpen(MODALKEY)
+        modalOpen(SEARCHMODALKEY)
         setOpen(true)
       }
     }
@@ -61,7 +61,7 @@ export function Search() {
     <>
       <SearchButton
         onClick={() => {
-          modalOpen(MODALKEY)
+          modalOpen(SEARCHMODALKEY)
           setOpen(true)
         }}
       >
@@ -76,7 +76,7 @@ export function Search() {
             open={open}
             onClose={() => {
               setOpen(false)
-              modalClose(MODALKEY)
+              modalClose(SEARCHMODALKEY)
             }}
           />
         )}
@@ -88,7 +88,6 @@ export function Search() {
 const NotiModal = lazy(() => import('@app/(modals)/@noti-modal/page.tsx'))
 
 export function Notification() {
-  const MODALKEY = '@notification-modal-key'
   // @ts-ignore
   const currentVersion = __APP_VERSION__
   const [versionChange, setVersionChange] = useState(false)
@@ -96,7 +95,7 @@ export function Notification() {
   const { modalOpen, modalClose } = modalStore()
   const [open, setOpen] = useState(false)
   const onClickNoti = () => {
-    modalOpen(MODALKEY)
+    modalOpen(NOTIMODALKEY)
     setOpen(true)
     localStorage.setItem('version', currentVersion)
     setVersionChange(false)
@@ -120,7 +119,7 @@ export function Notification() {
             open={open}
             onClose={() => {
               setOpen(false)
-              modalClose(MODALKEY)
+              modalClose(NOTIMODALKEY)
             }}
           />
         )}
