@@ -13,7 +13,7 @@ import { useItemModalStore } from '@util/store/item.ts'
 
 import { headers, render } from '../(grid-render).tsx'
 
-const ItemModal = lazy(() => import('../@item-modal/page.tsx'))
+const ItemModal = lazy(() => import('@app/(modals)/@item-modal/page.tsx'))
 
 export default function ItemDataGrid() {
   const MODALKEY = '@item-modal-key'
