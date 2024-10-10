@@ -1,50 +1,16 @@
-# React + TypeScript + Vite
+# AzurLane Item List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+벽람항로 갈아야할 아이템 아닌 아이템 구분해놓은 곳
 
-Currently, two official plugins are available:
+- git-pages : [깃페이지](https://gateisbug.github.io/alit/)
+- 정보 리소스 : [아카라이브](https://arca.live/b/azurlane/45593816)
+- 정보 리소스(구글 시트) : [구글 스프레드시트](https://docs.google.com/spreadsheets/d/1ILevJQ08yszIX2bgh-II0A_EzfhAIufeuqxCKdQ7-UQ/edit#gid=0)
+- 이미지 리소스 : [벽람위키](https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki)
+- 아카라이브 게시글 : [아카라이브](https://arca.live/b/azurlane/67964503)
+- 개발자용 리소스 : [개발자용 구글시트](https://docs.google.com/spreadsheets/d/1TdoZXjpm8QYNmvKM73QSFn9lAPDnWC-AtPzSR07KkGk/edit?usp=sharing)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## License
+이 프로젝트에서 사용하는 모든 내용과 이미지(이하 리소스)는 별도의 저작권자가 있으며, 각각 저작권자가 명시한 라이센스를 적용받습니다. 리소스를 제외한 모든 소스코드는 MIT License에 따라 이용하실 수 있습니다.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Release Note
+[RELEASE.md](./RELEASE.md)
