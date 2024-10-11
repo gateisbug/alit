@@ -12,7 +12,7 @@ import {
   ModalHeader,
   ReleaseLink,
   ModalContainer,
-} from '@components/@noti-modal/styled.ts'
+} from '@components/(modals)/noti/styled.ts'
 
 interface IChangeLog {
   version: string

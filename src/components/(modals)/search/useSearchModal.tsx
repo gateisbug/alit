@@ -1,4 +1,4 @@
-import { debounce } from 'lodash-es'
+import debounce from 'lodash-es/debounce'
 import {
   useCallback,
   useDeferredValue,
@@ -7,15 +7,15 @@ import {
   useState,
 } from 'react'
 
-import { SEARCHMODALKEY } from '@app/(modals)/(modal-keys).ts'
 import Loader from '@components/(common)/loader.tsx'
-import { useModalStore } from '@components/(common)/modal'
 import Portrait from '@components/(common)/portrait.tsx'
-import { ResultItem } from '@components/@search-modal/styled.ts'
+import { SEARCHMODALKEY } from '@components/(modals)/(modal-keys).ts'
+import { ResultItem } from '@components/(modals)/search/styled.ts'
+import { useModalStore } from '@components/(modals)/useModalStore.tsx'
 import IndexedItemDB from '@util/IndexedItemDB.ts'
 
 export default function useSearchModal() {
-  const { lists, drop } = useModalStore()
+  const { lists, modalClose, modalOpen } = useModalStore()
 
   const id = useId()
   const [search, setSearch] = useState('')
@@ -55,6 +55,15 @@ export default function useSearchModal() {
     getData().catch((rej) => console.error(rej))
   }, [deferredSearch])
 
+  // const { setSelect } = useItemModalStore()
+  const clickResultHandler = useCallback(
+    (d: ItemInterface) => {
+      // setSelect(d)
+      // add(ITEMMODALKEY)
+    },
+    [lists],
+  )
+
   /** 검색 결과를 렌더링 */
   const renderResult = useCallback(() => {
     if (deferredSearch.length === 0) return null
@@ -76,7 +85,12 @@ export default function useSearchModal() {
     }
 
     return deferredResult.map((item) => (
-      <ResultItem key={item?.index}>
+      <ResultItem
+        key={item?.index}
+        onClick={() => {
+          clickResultHandler(item)
+        }}
+      >
         <Portrait
           item={item}
           path={`images/items/${item?.image}_x48.webp`}
@@ -92,7 +106,7 @@ export default function useSearchModal() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.preventDefault()
-        drop(SEARCHMODALKEY)
+        modalClose(SEARCHMODALKEY)
       }
     }
 
@@ -100,11 +114,11 @@ export default function useSearchModal() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [])
+  }, [lists])
 
   /** 모달이 켜지면 input에 자동 포커싱 */
   useEffect(() => {
-    if (lists.includes(SEARCHMODALKEY)) {
+    if (lists.findIndex((v) => v.id === SEARCHMODALKEY)) {
       const input = document.getElementById(id)
       if (input) input.focus()
     }

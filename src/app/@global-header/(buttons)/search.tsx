@@ -1,20 +1,26 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 
-import { SEARCHMODALKEY } from '@app/(modals)/(modal-keys).ts'
 import IconSearch from '@assets/icons/icon-search.tsx'
-import { useModalStore } from '@components/(common)/modal/index.ts'
+import { SEARCHMODALKEY } from '@components/(modals)/(modal-keys).ts'
+import SearchModal from '@components/(modals)/search/page.tsx'
+import { useModalStore } from '@components/(modals)/useModalStore.tsx'
 import { SearchButton, Shortcut } from '@components/@global-header/(buttons).ts'
 
-const SearchModal = lazy(() => import('@app/(modals)/@search-modal/page.tsx'))
-
 function useSearch() {
-  const { lists, add } = useModalStore()
+  const { lists, modalOpen } = useModalStore()
+
+  const clickHandler = useCallback(() => {
+    modalOpen({
+      id: SEARCHMODALKEY,
+      children: <SearchModal />,
+    })
+  }, [lists])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.key === 'k') {
         e.preventDefault()
-        add(SEARCHMODALKEY)
+        clickHandler()
       }
     }
 
@@ -22,28 +28,21 @@ function useSearch() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [])
+  }, [lists])
 
   return {
-    open: lists.includes(SEARCHMODALKEY),
-    handlerSearchButton: () => {
-      add(SEARCHMODALKEY)
-    },
+    clickHandler,
   }
 }
 
 export default function Search() {
-  const { open, handlerSearchButton } = useSearch()
+  const { clickHandler } = useSearch()
 
   return (
-    <>
-      <SearchButton onClick={handlerSearchButton}>
-        <IconSearch />
-        <span className='caption desktop span'>Search...</span>
-        <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>
-      </SearchButton>
-
-      <Suspense>{open && <SearchModal />}</Suspense>
-    </>
+    <SearchButton onClick={clickHandler}>
+      <IconSearch />
+      <span className='caption desktop span'>Search...</span>
+      <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>
+    </SearchButton>
   )
 }
