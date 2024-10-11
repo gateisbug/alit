@@ -1,11 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
-import { NOTIMODALKEY } from '@app/(modals)/(modal-keys).ts'
-import {
-  Modal,
-  ModalClose,
-  useModalStore,
-} from '@components/(common)/modal/index.ts'
+import { ModalClose } from '@components/(common)/modal.styled.tsx'
+import { NOTIMODALKEY } from '@components/(modals)/(modal-keys).ts'
 import {
   ChangeLog,
   ModalBody,
@@ -13,6 +9,7 @@ import {
   ReleaseLink,
   ModalContainer,
 } from '@components/(modals)/noti/styled.ts'
+import { useModalStore } from '@components/(modals)/useModalStore.tsx'
 
 interface IChangeLog {
   version: string
@@ -29,7 +26,7 @@ const DEFAULT_CHANGE: IChangeLog = {
 }
 
 export default function NotiModal() {
-  const { drop } = useModalStore()
+  const { modalClose } = useModalStore()
   const [change, setChange] = useState<IChangeLog>(DEFAULT_CHANGE)
 
   const fetchLog = useCallback(async () => {
@@ -44,33 +41,31 @@ export default function NotiModal() {
     }
   }, [])
 
-  const onClose = () => {
-    drop(NOTIMODALKEY)
-  }
-
   useEffect(() => {
     // eslint-disable-next-line no-console
     fetchLog().catch((e) => console.error(e))
   }, [])
 
   return (
-    <Modal id={NOTIMODALKEY}>
-      <ModalContainer>
-        <ModalHeader>
-          <ModalClose onClick={onClose} />
-        </ModalHeader>
+    <ModalContainer>
+      <ModalHeader>
+        <ModalClose
+          onClick={() => {
+            modalClose(NOTIMODALKEY)
+          }}
+        />
+      </ModalHeader>
 
-        <ModalBody>
-          <h2 className='t3 fwb fcs'>v{change.version} 변경사항</h2>
-          <ReleaseLink to={change.release} />
-          <address>{change.date} 배포</address>
-          <ChangeLog>
-            {change.patch.map((v) => (
-              <li key={v}>{v}</li>
-            ))}
-          </ChangeLog>
-        </ModalBody>
-      </ModalContainer>
-    </Modal>
+      <ModalBody>
+        <h2 className='t3 fwb fcs'>v{change.version} 변경사항</h2>
+        <ReleaseLink to={change.release} />
+        <address>{change.date} 배포</address>
+        <ChangeLog>
+          {change.patch.map((v) => (
+            <li key={v}>{v}</li>
+          ))}
+        </ChangeLog>
+      </ModalBody>
+    </ModalContainer>
   )
 }

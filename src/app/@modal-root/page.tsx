@@ -1,11 +1,18 @@
 import { UIBackdrop } from '@xui/modal.ts'
-import { type MouseEvent, useCallback, useEffect, useRef } from 'react'
+import {
+  type MouseEvent,
+  useCallback,
+  useDeferredValue,
+  useEffect,
+  useRef,
+} from 'react'
 import { createPortal } from 'react-dom'
 
 import { useModalStore } from '@components/(modals)/useModalStore.tsx'
 
 export default function ModalRoot() {
   const { lists, modalClose, modalPop } = useModalStore()
+  const deferredLists = useDeferredValue(lists)
 
   const backdropRef = useRef<HTMLDivElement>(null)
 
@@ -21,22 +28,39 @@ export default function ModalRoot() {
   useEffect(() => {
     if (lists.length === 0) return
 
+    // 뒤로가기 대응
     window.history.pushState(null, '')
 
     const handlerPopState = () => {
       modalPop()
     }
-
     window.addEventListener('popstate', handlerPopState)
+
     // eslint-disable-next-line consistent-return
     return () => {
       window.removeEventListener('popstate', handlerPopState)
     }
   }, [lists])
 
-  return lists.length > 0
+  useEffect(() => {
+    if (lists.length > 0) {
+      // 만약 모달이 처음 열린다면 스크롤 방지 스타일 추가
+      const overflow = document.body.getAttribute('style')
+
+      if (!overflow) {
+        document.body.setAttribute(
+          'style',
+          'overflow:hidden;padding-right:17px;',
+        )
+      }
+    } else {
+      document.body.removeAttribute('style')
+    }
+  }, [lists])
+
+  return deferredLists.length > 0
     ? createPortal(
-        lists.map((v) => (
+        deferredLists.map((v) => (
           <UIBackdrop
             ref={backdropRef}
             onClick={(e) => {
