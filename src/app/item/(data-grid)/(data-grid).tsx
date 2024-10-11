@@ -49,7 +49,6 @@ function useDataGrid() {
         value = render.explain(d)
         break
       default:
-        // classname = 'jc-c'
         classname = 'jc-c ta-c word-break'
         value = d[h]
         break

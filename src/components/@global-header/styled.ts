@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Header = styled.header.attrs({
-  // className: 'flex jc-sb ai-c bb pos-f',
   className: 'flex jc-sb ai-c bb pos-s',
 })`
   background-color: var(--surface-main);

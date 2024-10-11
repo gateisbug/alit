@@ -15,8 +15,6 @@ export default function ModalRoot() {
   const deferredLists = useDeferredValue(lists)
   const historyLength = useRef(0)
 
-  // const backdropRef = useRef<HTMLDivElement>(null)
-
   const modelOnClickAway = useCallback(
     (e: MouseEvent<HTMLDivElement>, id: string) => {
       const backdropRef = document.getElementById(id)

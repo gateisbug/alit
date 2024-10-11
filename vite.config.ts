@@ -2,7 +2,6 @@ import { resolve } from 'path'
 
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
-// import { compression } from 'vite-plugin-compression2'
 
 import { version } from './package.json'
 

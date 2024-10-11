@@ -61,7 +61,6 @@ export default function useSearchModal() {
     getData().catch((rej) => console.error(rej))
   }, [deferredSearch])
 
-  // const { setSelect } = useItemModalStore()
   const clickResultHandler = useCallback(
     (d: ItemInterface) => {
       modalOpen({
