@@ -9,7 +9,7 @@ import {
   ReleaseLink,
   ModalContainer,
 } from '@components/(modals)/noti/styled.ts'
-import { useModalStore } from '@components/(modals)/useModalStore.tsx'
+import useModalStore from '@util/store/modal.ts'
 
 interface IChangeLog {
   version: string
@@ -25,7 +25,7 @@ const DEFAULT_CHANGE: IChangeLog = {
   patch: [],
 }
 
-export default function NotiModal() {
+function useNotiModal() {
   const { modalClose } = useModalStore()
   const [change, setChange] = useState<IChangeLog>(DEFAULT_CHANGE)
 
@@ -41,19 +41,28 @@ export default function NotiModal() {
     }
   }, [])
 
+  const onClose = () => {
+    modalClose(NOTIMODALKEY)
+  }
+
   useEffect(() => {
     // eslint-disable-next-line no-console
     fetchLog().catch((e) => console.error(e))
   }, [])
 
+  return {
+    change,
+    onClose,
+  }
+}
+
+export default function NotiModal() {
+  const { change, onClose } = useNotiModal()
+
   return (
     <ModalContainer>
       <ModalHeader>
-        <ModalClose
-          onClick={() => {
-            modalClose(NOTIMODALKEY)
-          }}
-        />
+        <ModalClose onClick={onClose} />
       </ModalHeader>
 
       <ModalBody>

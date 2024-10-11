@@ -17,7 +17,7 @@ type ModalAction = {
   modalPop: () => void
 }
 
-export const useModalStore = create<ModalState & ModalAction>((set) => ({
+const useModalStore = create<ModalState & ModalAction>((set) => ({
   lists: [],
   modalOpen: (modal) =>
     set(({ lists }) => {
@@ -34,7 +34,8 @@ export const useModalStore = create<ModalState & ModalAction>((set) => ({
       const fidx = current.findIndex((v) => v.id === modalKey)
 
       if (fidx >= 0) {
-        window.history.back()
+        if (fidx === 0) window.history.back()
+
         current.splice(fidx, 1)
         return { lists: current }
       }
@@ -52,3 +53,5 @@ export const useModalStore = create<ModalState & ModalAction>((set) => ({
       return { lists }
     }),
 }))
+
+export default useModalStore

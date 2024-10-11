@@ -1,5 +1,6 @@
 import debounce from 'lodash-es/debounce'
 import {
+  lazy,
   useCallback,
   useDeferredValue,
   useEffect,
@@ -9,10 +10,15 @@ import {
 
 import Loader from '@components/(common)/loader.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
-import { SEARCHMODALKEY } from '@components/(modals)/(modal-keys).ts'
+import {
+  ITEMMODALKEY,
+  SEARCHMODALKEY,
+} from '@components/(modals)/(modal-keys).ts'
 import { ResultItem } from '@components/(modals)/search/styled.ts'
-import { useModalStore } from '@components/(modals)/useModalStore.tsx'
 import IndexedItemDB from '@util/IndexedItemDB.ts'
+import useModalStore from '@util/store/modal.ts'
+
+const ItemModal = lazy(() => import('@components/(modals)/item/page.tsx'))
 
 export default function useSearchModal() {
   const { lists, modalClose, modalOpen } = useModalStore()
@@ -58,8 +64,10 @@ export default function useSearchModal() {
   // const { setSelect } = useItemModalStore()
   const clickResultHandler = useCallback(
     (d: ItemInterface) => {
-      // setSelect(d)
-      // add(ITEMMODALKEY)
+      modalOpen({
+        id: ITEMMODALKEY,
+        children: <ItemModal item={d} />,
+      })
     },
     [lists],
   )
@@ -118,7 +126,9 @@ export default function useSearchModal() {
 
   /** 모달이 켜지면 input에 자동 포커싱 */
   useEffect(() => {
-    if (lists.findIndex((v) => v.id === SEARCHMODALKEY)) {
+    const flag = lists.findIndex((v) => v.id === SEARCHMODALKEY) >= 0
+
+    if (flag) {
       const input = document.getElementById(id)
       if (input) input.focus()
     }
@@ -129,5 +139,8 @@ export default function useSearchModal() {
     search,
     onChangeInput,
     renderResult,
+    closeHandler: () => {
+      modalClose(SEARCHMODALKEY)
+    },
   }
 }

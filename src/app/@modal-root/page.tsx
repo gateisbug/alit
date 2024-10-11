@@ -8,7 +8,7 @@ import {
 } from 'react'
 import { createPortal } from 'react-dom'
 
-import { useModalStore } from '@components/(modals)/useModalStore.tsx'
+import useModalStore from '@util/store/modal.ts'
 
 export default function ModalRoot() {
   const { lists, modalClose, modalPop } = useModalStore()
@@ -29,7 +29,7 @@ export default function ModalRoot() {
     if (lists.length === 0) return
 
     // 뒤로가기 대응
-    window.history.pushState(null, '')
+    if (lists.length === 1) window.history.pushState(null, '')
 
     const handlerPopState = () => {
       modalPop()

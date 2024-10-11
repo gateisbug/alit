@@ -1,5 +1,4 @@
 import IconSearch from '@assets/icons/icon-search.tsx'
-// import { Modal } from '@components/(common)/modal/index.ts'
 import {
   CategoryBox,
   CatrgoryItem,
@@ -11,19 +10,13 @@ import {
   Shortcut,
   ModalContainer,
 } from '@components/(modals)/search/styled.ts'
-import { useModalStore } from '@components/(modals)/useModalStore.tsx'
 
-import useSearchModal from './useSearchModal.tsx'
-import { SEARCHMODALKEY } from '../(modal-keys).ts'
 import CATEGORY from './(const).ts'
+import useSearchModal from './useSearchModal.tsx'
 
 export default function SearchModal() {
-  const { modalClose } = useModalStore()
-  const { id, onChangeInput, search, renderResult } = useSearchModal()
-
-  const closeHandler = () => {
-    modalClose(SEARCHMODALKEY)
-  }
+  const { id, onChangeInput, search, renderResult, closeHandler } =
+    useSearchModal()
 
   return (
     <ModalContainer>

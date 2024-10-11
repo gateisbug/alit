@@ -2,8 +2,8 @@ import { lazy, useCallback, useEffect } from 'react'
 
 import IconSearch from '@assets/icons/icon-search.tsx'
 import { SEARCHMODALKEY } from '@components/(modals)/(modal-keys).ts'
-import { useModalStore } from '@components/(modals)/useModalStore.tsx'
 import { SearchButton, Shortcut } from '@components/@global-header/(buttons).ts'
+import useModalStore from '@util/store/modal.ts'
 
 const SearchModal = lazy(() => import('@components/(modals)/search/page.tsx'))
 

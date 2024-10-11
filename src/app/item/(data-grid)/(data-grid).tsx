@@ -1,19 +1,24 @@
-import { Fragment, type ReactNode, useCallback } from 'react'
+import { Fragment, lazy, type ReactNode, useCallback } from 'react'
 
 import useGridData from '@app/item/(data-grid)/useGridData.ts'
 import useInfiniteGrid from '@app/item/(data-grid)/useInfiniteGrid.ts'
 import Loader from '@components/(common)/loader.tsx'
+import { ITEMMODALKEY } from '@components/(modals)/(modal-keys).ts'
 import {
   GridRow,
   GridContainer,
   GridCell,
 } from '@components/item/(data-grid).ts'
+import useModalStore from '@util/store/modal.ts'
 
 import { headers, render } from './(grid-render).tsx'
+
+const ItemModal = lazy(() => import('@components/(modals)/item/page.tsx'))
 
 function useDataGrid() {
   const data = useGridData()
   const { current, visibleCount, loaderRef, LOADER } = useInfiniteGrid(data)
+  const { modalOpen } = useModalStore()
 
   const renderText = useCallback((d: ItemInterface, h: keyof ItemInterface) => {
     let classname: string = ''
@@ -54,7 +59,10 @@ function useDataGrid() {
       <GridCell
         className={classname}
         onClick={() => {
-          console.log(d)
+          modalOpen({
+            id: ITEMMODALKEY,
+            children: <ItemModal item={d} />,
+          })
         }}
       >
         {value}

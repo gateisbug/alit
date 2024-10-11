@@ -3,8 +3,8 @@ import { lazy, useCallback, useEffect, useState } from 'react'
 import IconBell from '@assets/icons/icon-bell.tsx'
 import { Badge } from '@components/(common)/badge.ts'
 import { NOTIMODALKEY } from '@components/(modals)/(modal-keys).ts'
-import { useModalStore } from '@components/(modals)/useModalStore.tsx'
 import { BadgeButton } from '@components/@global-header/(buttons).ts'
+import useModalStore from '@util/store/modal.ts'
 
 const NotiModal = lazy(() => import('@components/(modals)/noti/page.tsx'))
 
