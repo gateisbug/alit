@@ -34,24 +34,23 @@ const useModalStore = create<ModalState & ModalAction>((set) => ({
       const fidx = current.findIndex((v) => v.id === modalKey)
 
       if (fidx >= 0) {
-        if (fidx === 0) window.history.back()
-
         current.splice(fidx, 1)
         return { lists: current }
       }
 
       return { lists }
     }),
-  modalPop: () =>
-    set(({ lists }) => {
-      if (lists.length > 0) {
-        const current = cloneDeep(lists)
-        current.pop()
-        return { lists: current }
-      }
-
-      return { lists }
-    }),
+  // modalPop: () =>
+  //   set(({ lists }) => {
+  //     if (lists.length > 0) {
+  //       const current = cloneDeep(lists)
+  //       current.pop()
+  //       return { lists: current }
+  //     }
+  //
+  //     return { lists }
+  //   }),
+  modalPop: () => set(() => ({ lists: [] })),
 }))
 
 export default useModalStore

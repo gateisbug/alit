@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 import GlobalHeader from './@global-header/page.tsx'
 
-const ModalRoot = lazy(() => import('./@modal-root/page.tsx'))
+const ModalRoot = lazy(() => import('./@modal-root/layout.tsx'))
 
 export default function RootLayout() {
   return (

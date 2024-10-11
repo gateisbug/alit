@@ -13,12 +13,15 @@ import useModalStore from '@util/store/modal.ts'
 export default function ModalRoot() {
   const { lists, modalClose, modalPop } = useModalStore()
   const deferredLists = useDeferredValue(lists)
+  const historyLength = useRef(0)
 
-  const backdropRef = useRef<HTMLDivElement>(null)
+  // const backdropRef = useRef<HTMLDivElement>(null)
 
   const modelOnClickAway = useCallback(
     (e: MouseEvent<HTMLDivElement>, id: string) => {
-      if (e.target === backdropRef.current) {
+      const backdropRef = document.getElementById(id)
+
+      if (e.target === backdropRef) {
         modalClose(id)
       }
     },
@@ -26,13 +29,24 @@ export default function ModalRoot() {
   )
 
   useEffect(() => {
-    if (lists.length === 0) return
+    if (lists.length === 0) {
+      if (historyLength.current > 0) {
+        window.history.back()
+        historyLength.current = 0
+      }
+      return
+    }
 
-    // 뒤로가기 대응
-    if (lists.length === 1) window.history.pushState(null, '')
+    if (historyLength.current === 0) {
+      window.history.pushState(null, '')
+      historyLength.current = 1
+    }
 
     const handlerPopState = () => {
-      modalPop()
+      if (historyLength.current > 0) {
+        modalPop()
+        historyLength.current = 0
+      }
     }
     window.addEventListener('popstate', handlerPopState)
 
@@ -62,11 +76,11 @@ export default function ModalRoot() {
     ? createPortal(
         deferredLists.map((v) => (
           <UIBackdrop
-            ref={backdropRef}
             onClick={(e) => {
               modelOnClickAway(e, v.id)
             }}
             key={v.id}
+            id={v.id}
           >
             {v.children}
           </UIBackdrop>
