@@ -17,6 +17,8 @@ function useSearch() {
   }, [lists])
 
   useEffect(() => {
+    if (lists.length > 0) return
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.key === 'k') {
         e.preventDefault()
@@ -25,6 +27,7 @@ function useSearch() {
     }
 
     window.addEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line consistent-return
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
