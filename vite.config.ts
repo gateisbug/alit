@@ -45,6 +45,7 @@ export default defineConfig({
             const module = id.split('node_modules/').pop()?.split('/')[0]
             return `vendor-${module}`
           }
+          return id
         },
       },
     },

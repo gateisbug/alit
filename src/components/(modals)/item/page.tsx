@@ -1,7 +1,25 @@
-import { ModalClose } from '@components/(common)/modal.styled.tsx'
-import { ModalContainer } from '@components/(modals)/item/styled.ts'
+import { useCallback } from 'react'
+
+import { ModalClose } from '@components/(common)/modal.tsx'
+import Portrait from '@components/(common)/portrait.tsx'
+// import ImageCard from '@components/(modals)/item/image-card.tsx'
+import ITEMS from '@util/divider/items.ts'
+import NATIONS from '@util/divider/nations.ts'
+import OBTAINS from '@util/divider/obtains.ts'
 import useModalStore from '@util/store/modal.ts'
 
+import { KeyValue, Breadcrumbs, ImageCard } from './components.tsx'
+import {
+  Header,
+  ItemModalBody,
+  ItemModalHeader,
+  ModalContainer,
+  Nation,
+  Obtain,
+  ObtainSection,
+  StatSection,
+  TitleSection,
+} from './styled.tsx'
 import { ITEMMODALKEY } from '../(modal-keys).ts'
 
 interface Props {
@@ -15,14 +33,143 @@ export default function ItemModal({ item }: Props) {
     modalClose(ITEMMODALKEY)
   }
 
+  const obtainRender = useCallback(
+    () =>
+      item.obtain?.map((v) => {
+        const src =
+          OBTAINS.find((o) => v.includes(o.index) && v.includes(o.value))
+            ?.label ?? ''
+        const split = v.split(':')
+        let obtain = split[0]
+        let label = split[1]
+
+        switch (obtain) {
+          case '상자깡':
+            obtain += `(${
+              NATIONS.find((n) => n.index === item.nation && n.value === 'box')
+                ?.label
+            })`
+            break
+          case '장비개발':
+            label = `${
+              NATIONS.find(
+                (n) => n.index === item.nation && n.value === 'nation',
+              )?.label
+            }`
+            break
+          default:
+            break
+        }
+
+        return (
+          <ImageCard
+            key={`${item.index}_${v}`}
+            $src={src}
+            $alt={v}
+            $body={
+              <>
+                <p className='s2 fwb'>{obtain}</p>
+                <p className='s2 fwm'>{label}</p>
+              </>
+            }
+          />
+        )
+      }),
+    [],
+  )
+
+  const nationRender = useCallback(
+    () => (
+      <ImageCard
+        $src={`images/nation/${item.nation?.toLowerCase()}.webp`}
+        $alt={item.nation ?? 'Nation'}
+        $body={
+          <p className='s2 fwb'>
+            {NATIONS.find((v) => v.index === item.nation)?.label}
+          </p>
+        }
+      />
+    ),
+    [],
+  )
+
+  const statRender = useCallback(
+    () =>
+      item?.status?.map((v) => {
+        const stat = v.split(':')
+        const value = (() => {
+          switch (stat[0]) {
+            case '스탯':
+            case '스킬':
+              return stat[1].replace(/,/g, ', ')
+            case '대미지':
+            case '발사패턴':
+              return stat[1].replace(/\*/g, ' × ')
+            case '기총':
+            case '폭장':
+            case '어뢰':
+            case '로켓':
+              // return <Aircraft value={stat[1]} />
+              return stat[1]
+            case '사속':
+            case '발사간격':
+              return stat[1].replace(/초/g, ' 초')
+            case '대갑비례':
+              return stat[1].replace(/\//g, ' / ')
+            default:
+              return stat[1]
+          }
+        })()
+
+        return (
+          <KeyValue
+            key={`stat_${item?.index}_${stat[0]}_${stat[1]}`}
+            $key={stat[0]}
+            $value={value}
+          />
+        )
+      }),
+    [],
+  )
+
   // @TODO: Modal 구체화 해야함
   return (
     <ModalContainer>
-      <header className='flex jc-fe'>
+      <ItemModalHeader className='flex jc-fe'>
         <ModalClose onClick={onClose} />
-      </header>
+      </ItemModalHeader>
 
-      <div>{item?.name ?? '-'}</div>
+      <ItemModalBody>
+        <Header>
+          <Portrait
+            path={`images/items/${item?.image}.webp`}
+            size={72}
+            item={item}
+          />
+
+          <TitleSection>
+            <h2 className='s1 fcs'>{item?.name ?? '-'}</h2>
+            <h3 className='b1 fcw'>{item?.nickname ?? '-'}</h3>
+            <Breadcrumbs
+              $items={[
+                ITEMS.find(
+                  (v) => v.index === item?.domain && v.value === item?.class,
+                )?.label,
+                ITEMS.find(
+                  (v) => v.index === item?.domain && v.value === item?.type,
+                )?.label,
+              ]}
+            />
+          </TitleSection>
+        </Header>
+
+        <ObtainSection>
+          <Obtain>{obtainRender()}</Obtain>
+          <Nation>{nationRender()}</Nation>
+        </ObtainSection>
+
+        <StatSection>{statRender()}</StatSection>
+      </ItemModalBody>
     </ModalContainer>
   )
 }

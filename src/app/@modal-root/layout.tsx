@@ -1,18 +1,12 @@
 import { UIBackdrop } from '@xui/modal.ts'
-import {
-  type MouseEvent,
-  useCallback,
-  useDeferredValue,
-  useEffect,
-  useRef,
-} from 'react'
+import { type MouseEvent, useCallback, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 
 import useModalStore from '@util/store/modal.ts'
 
 export default function ModalRoot() {
   const { lists, modalClose, modalPop } = useModalStore()
-  const deferredLists = useDeferredValue(lists)
+  // const deferredLists = useDeferredValue(lists)
   const historyLength = useRef(0)
 
   const modelOnClickAway = useCallback(
@@ -76,9 +70,9 @@ export default function ModalRoot() {
     }
   }, [lists])
 
-  return deferredLists.length > 0
+  return lists.length > 0
     ? createPortal(
-        deferredLists.map((v) => (
+        lists.map((v) => (
           <UIBackdrop
             onClick={(e) => {
               modelOnClickAway(e, v.id)

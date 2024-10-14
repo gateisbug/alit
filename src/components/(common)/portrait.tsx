@@ -79,6 +79,7 @@ export default function Portrait({ path, item, size = 48 }: Props) {
     <PortraitFrame
       data-tier={item?.tier}
       data-stroke={strokeSorter(item?.type, item?.domain)}
+      className='portrait'
     >
       <Image
         src={path ?? `images/items/${item?.image}.webp`}

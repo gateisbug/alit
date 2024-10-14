@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-import { ModalClose } from '@components/(common)/modal.styled.tsx'
+import { ModalClose } from '@components/(common)/modal.tsx'
 import { NOTIMODALKEY } from '@components/(modals)/(modal-keys).ts'
 import {
   ChangeLog,

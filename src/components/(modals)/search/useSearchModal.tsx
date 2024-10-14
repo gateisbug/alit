@@ -111,7 +111,8 @@ export default function useSearchModal() {
   /** 키 입력 이벤트를 할당 */
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      const flag = lists[lists.length - 1]?.id === SEARCHMODALKEY
+      if (flag && e.key === 'Escape') {
         e.preventDefault()
         modalClose(SEARCHMODALKEY)
       }
@@ -125,7 +126,7 @@ export default function useSearchModal() {
 
   /** 모달이 켜지면 input에 자동 포커싱 */
   useEffect(() => {
-    const flag = lists.findIndex((v) => v.id === SEARCHMODALKEY) >= 0
+    const flag = lists[lists.length - 1]?.id === SEARCHMODALKEY
 
     if (flag) {
       const input = document.getElementById(id)
