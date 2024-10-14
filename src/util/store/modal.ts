@@ -17,6 +17,8 @@ type ModalAction = {
   modalPop: () => void
 }
 
+// @TODO: 이거 모달 종료하면서 page 이동하면 뒤로가기 되는 문제가 있음 수정해야됨.
+
 const useModalStore = create<ModalState & ModalAction>((set) => ({
   lists: [],
   modalOpen: (modal) =>
