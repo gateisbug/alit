@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import { ModalClose } from '@components/(common)/modal.tsx'
-import { NOTIMODALKEY } from '@components/(modals)/(modal-keys).ts'
 import {
   ChangeLog,
   ModalBody,
@@ -9,7 +9,6 @@ import {
   ReleaseLink,
   ModalContainer,
 } from '@components/(modals)/noti/styled.ts'
-import useModalStore from '@util/store/modal.ts'
 
 interface IChangeLog {
   version: string
@@ -26,8 +25,8 @@ const DEFAULT_CHANGE: IChangeLog = {
 }
 
 function useNotiModal() {
-  const { modalRemove } = useModalStore()
   const [change, setChange] = useState<IChangeLog>(DEFAULT_CHANGE)
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const fetchLog = useCallback(async () => {
     try {
@@ -42,7 +41,8 @@ function useNotiModal() {
   }, [])
 
   const onClose = () => {
-    modalRemove(NOTIMODALKEY)
+    searchParams.delete('modal')
+    setSearchParams(searchParams)
   }
 
   useEffect(() => {

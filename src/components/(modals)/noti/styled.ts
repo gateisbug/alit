@@ -32,6 +32,7 @@ export const ModalBody = styled.div.attrs({
   min-height: 120px;
   padding: 32px;
   gap: 12px;
+  justify-content: flex-start;
 `
 
 export const ReleaseLink = styled(Link).attrs({

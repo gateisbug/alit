@@ -1,3 +1,6 @@
+import { createPortal } from 'react-dom'
+import { ScrollRestoration } from 'react-router-dom'
+
 import IconSearch from '@assets/icons/icon-search.tsx'
 import {
   CategoryBox,
@@ -56,7 +59,14 @@ export default function SearchModal() {
             <CategoryBox key={v.label}>
               <h3 className='b2 fwm bb'>{v.label}</h3>
               {v.items.map((u) => (
-                <CatrgoryItem key={u.label} to={u.link} onClick={closeHandler}>
+                <CatrgoryItem
+                  key={u.label}
+                  to={u.link}
+                  onClick={() => {
+                    createPortal(<ScrollRestoration />, document.body)
+                    closeHandler()
+                  }}
+                >
                   {u.label}
                 </CatrgoryItem>
               ))}

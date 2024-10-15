@@ -90,14 +90,28 @@ export const Nation = styled.div.attrs({
 `
 
 export const StatSection = styled.div.attrs({
-  className: 'grid jc-c',
+  className: 'grid',
 })`
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-flow: row;
-  align-items: center;
   gap: 16px;
 
   .keyvalue > div {
     line-height: 1em !important;
   }
 `
+// export const StatSection = styled.div.attrs({
+//   className: 'flex jc-c',
+// })`
+//   flex-flow: row wrap;
+//   gap: 16px;
+//
+//   & > div {
+//     flex-basis: 216px;
+//     box-sizing: border-box;
+//   }
+//
+//   .keyvalue > div {
+//     line-height: 1em !important;
+//   }
+// `

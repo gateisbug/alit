@@ -4,6 +4,7 @@ import { Fragment, ReactNode } from 'react'
 import styled from 'styled-components'
 
 import IconArrow from '@assets/icons/icon-arrow.tsx'
+import Tooltip from '@components/(common)/tooltip.tsx'
 
 interface BreadcrumbsProps {
   $items: Array<string | undefined | null>
@@ -65,7 +66,7 @@ export const ImageCard = styled.div.attrs<ImageCardProps>((props) => ({
 
 interface KeyValueProps {
   $key: string
-  $value: string
+  $value: ReactNode
 }
 export const KeyValue = styled.div.attrs<KeyValueProps>((props) => ({
   className: 'keyvalue flex column ai-c',
@@ -86,3 +87,32 @@ export const KeyValue = styled.div.attrs<KeyValueProps>((props) => ({
     height: 100%;
   }
 `
+
+interface AircraftProps {
+  $value: string
+}
+
+export const Aircraft = styled.div.attrs<AircraftProps>((props) => ({
+  children: (() => {
+    const [string, damage, ap] = props.$value.split('\\t')
+    const [weapon, count] = string.split('*')
+
+    const title = ap ? (
+      <span>
+        <div>대미지: {damage}</div>
+        <div>관통: {ap.replace(/\//g, ' / ')}</div>
+      </span>
+    ) : (
+      <span>대미지: {damage}</span>
+    )
+
+    return (
+      <>
+        <Tooltip title={title}>
+          <span>{weapon}</span>
+        </Tooltip>
+        <>&nbsp;× {count}</>
+      </>
+    )
+  })(),
+}))``

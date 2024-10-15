@@ -5,7 +5,7 @@ import { ModalClose } from '@components/(common)/modal.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
 import { ITEMS, NATIONS, OBTAINS } from '@util/divider'
 
-import { KeyValue, Breadcrumbs, ImageCard } from './components.tsx'
+import { KeyValue, Breadcrumbs, ImageCard, Aircraft } from './components.tsx'
 import {
   Header,
   ItemModalBody,
@@ -17,7 +17,6 @@ import {
   StatSection,
   TitleSection,
 } from './styled.ts'
-import { ITEMMODALKEY } from '../(modal-keys).ts'
 
 interface Props {
   item: ItemInterface
@@ -27,7 +26,7 @@ export default function ItemModal({ item }: Props) {
   const [searchParams, setSearchParams] = useSearchParams()
 
   const onClose = () => {
-    searchParams.delete(ITEMMODALKEY)
+    searchParams.delete('modal')
     setSearchParams(searchParams)
   }
 
@@ -107,8 +106,8 @@ export default function ItemModal({ item }: Props) {
             case '폭장':
             case '어뢰':
             case '로켓':
-              // return <Aircraft value={stat[1]} />
-              return stat[1]
+              return <Aircraft $value={stat[1]} />
+            // return stat[1]
             case '사속':
             case '발사간격':
               return stat[1].replace(/초/g, ' 초')
