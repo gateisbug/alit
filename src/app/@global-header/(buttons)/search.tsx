@@ -1,4 +1,4 @@
-import { lazy, useCallback, useEffect } from 'react'
+import { lazy, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 import IconSearch from '@assets/icons/icon-search.tsx'
@@ -9,13 +9,13 @@ import useModalStore from '@util/store/modal.ts'
 const SearchModal = lazy(() => import('@components/(modals)/search/page.tsx'))
 
 function useSearch() {
-  const { lists, modalAdd } = useModalStore()
+  const { modalAdd } = useModalStore()
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const clickHandler = useCallback(() => {
+  const clickHandler = () => {
     searchParams.set('modal', SEARCHMODALKEY)
     setSearchParams(searchParams)
-  }, [lists])
+  }
 
   useEffect(() => {
     modalAdd({

@@ -23,7 +23,7 @@ export default function ModalRoot() {
         setSearchParams(searchParams)
       }
     },
-    [lists],
+    [searchParams],
   )
 
   useEffect(() => {

@@ -3,10 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 
 import { ModalClose } from '@components/(common)/modal.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
-// import ImageCard from '@components/(modals)/item/image-card.tsx'
-import ITEMS from '@util/divider/items.ts'
-import NATIONS from '@util/divider/nations.ts'
-import OBTAINS from '@util/divider/obtains.ts'
+import { ITEMS, NATIONS, OBTAINS } from '@util/divider'
 
 import { KeyValue, Breadcrumbs, ImageCard } from './components.tsx'
 import {
@@ -19,7 +16,7 @@ import {
   ObtainSection,
   StatSection,
   TitleSection,
-} from './styled.tsx'
+} from './styled.ts'
 import { ITEMMODALKEY } from '../(modal-keys).ts'
 
 interface Props {

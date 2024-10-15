@@ -63,7 +63,7 @@ export default function useSearchModal() {
     getData().catch((rej) => console.error(rej))
   }, [deferredSearch])
 
-  const clickResultHandler = useCallback((d: ItemInterface) => {
+  const clickResultHandler = (d: ItemInterface) => {
     modalAdd({
       id: ITEMMODALKEY,
       children: <ItemModal item={d} />,
@@ -71,7 +71,7 @@ export default function useSearchModal() {
 
     searchParams.set('modal', ITEMMODALKEY)
     setSearchParams(searchParams)
-  }, [])
+  }
 
   /** 검색 결과를 렌더링 */
   const renderResult = useCallback(() => {

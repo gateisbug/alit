@@ -1,3 +1,5 @@
+// noinspection CssUnusedSymbol
+
 import { UIModalContainer } from '@xui/modal.ts'
 import styled from 'styled-components'
 
@@ -60,14 +62,17 @@ export const ObtainSection = styled.div.attrs({
   className: 'grid',
 })`
   min-height: 128px;
-  grid-template-columns: 1fr 160px;
+  grid-template-columns: auto 160px;
   gap: 16px;
 `
 
 export const Obtain = styled.div.attrs({
-  className: 'flex jc-c',
+  className: 'grid jc-c obtain',
 })`
   gap: 16px;
+
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(200px, 440px);
 
   img {
     min-height: 160px;
@@ -85,29 +90,14 @@ export const Nation = styled.div.attrs({
 `
 
 export const StatSection = styled.div.attrs({
-  className: 'flex jc-c',
+  className: 'grid jc-c',
 })`
-  flex-flow: row wrap;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-flow: row;
+  align-items: center;
   gap: 16px;
 
-  .keyvalue-container {
-    flex: 1 1 20%;
-    max-width: 224px; /* 224 */
-  }
-  .keyvalue-box {
-    width: 100%;
-    align-items: center;
-  }
-  &[data-domain='antiair'] .keyvalue-container {
-    flex: 1 1 16%;
-  }
-  &[data-domain='aircraft'],
-  &[data-domain='accessory'] {
-    .keyvalue-container {
-      flex: 1 1 30%;
-    }
-  }
-  &[data-domain='accessory'] .keyvalue-container {
-    max-width: 320px; /* 320 */
+  .keyvalue > div {
+    line-height: 1em !important;
   }
 `

@@ -1,4 +1,4 @@
-import { lazy, useCallback, useEffect, useState } from 'react'
+import { lazy, useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 import IconBell from '@assets/icons/icon-bell.tsx'
@@ -13,15 +13,15 @@ function useNotification() {
   // @ts-ignore
   const currentVersion = __APP_VERSION__
   const [versionChange, setVersionChange] = useState(false)
-  const { lists, modalAdd } = useModalStore()
+  const { modalAdd } = useModalStore()
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const handlerNotiButton = useCallback(() => {
+  const handlerNotiButton = () => {
     localStorage.setItem('version', currentVersion)
     setVersionChange(false)
     searchParams.set('modal', NOTIMODALKEY)
     setSearchParams(searchParams)
-  }, [lists])
+  }
 
   useEffect(() => {
     const version = localStorage.getItem('version') ?? ''
