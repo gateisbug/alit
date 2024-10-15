@@ -1,4 +1,5 @@
 import { lazy, useCallback, useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import IconBell from '@assets/icons/icon-bell.tsx'
 import { Badge } from '@components/(common)/badge.ts'
@@ -12,20 +13,26 @@ function useNotification() {
   // @ts-ignore
   const currentVersion = __APP_VERSION__
   const [versionChange, setVersionChange] = useState(false)
-  const { lists, modalOpen } = useModalStore()
+  const { lists, modalAdd } = useModalStore()
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const handlerNotiButton = useCallback(() => {
     localStorage.setItem('version', currentVersion)
     setVersionChange(false)
-    modalOpen({
-      id: NOTIMODALKEY,
-      children: <NotiModal />,
-    })
+    searchParams.set('modal', NOTIMODALKEY)
+    setSearchParams(searchParams)
   }, [lists])
 
   useEffect(() => {
     const version = localStorage.getItem('version') ?? ''
     if (version !== currentVersion) setVersionChange(true)
+  }, [])
+
+  useEffect(() => {
+    modalAdd({
+      id: NOTIMODALKEY,
+      children: <NotiModal />,
+    })
   }, [])
 
   return {

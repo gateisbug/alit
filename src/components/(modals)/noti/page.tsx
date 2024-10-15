@@ -26,7 +26,7 @@ const DEFAULT_CHANGE: IChangeLog = {
 }
 
 function useNotiModal() {
-  const { modalClose } = useModalStore()
+  const { modalRemove } = useModalStore()
   const [change, setChange] = useState<IChangeLog>(DEFAULT_CHANGE)
 
   const fetchLog = useCallback(async () => {
@@ -42,7 +42,7 @@ function useNotiModal() {
   }, [])
 
   const onClose = () => {
-    modalClose(NOTIMODALKEY)
+    modalRemove(NOTIMODALKEY)
   }
 
   useEffect(() => {

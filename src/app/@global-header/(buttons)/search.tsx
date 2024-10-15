@@ -1,4 +1,5 @@
 import { lazy, useCallback, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import IconSearch from '@assets/icons/icon-search.tsx'
 import { SEARCHMODALKEY } from '@components/(modals)/(modal-keys).ts'
@@ -8,17 +9,24 @@ import useModalStore from '@util/store/modal.ts'
 const SearchModal = lazy(() => import('@components/(modals)/search/page.tsx'))
 
 function useSearch() {
-  const { lists, modalOpen } = useModalStore()
+  const { lists, modalAdd } = useModalStore()
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const clickHandler = useCallback(() => {
-    modalOpen({
-      id: SEARCHMODALKEY,
-      children: <SearchModal />,
-    })
+    searchParams.set('modal', SEARCHMODALKEY)
+    setSearchParams(searchParams)
   }, [lists])
 
   useEffect(() => {
-    if (lists.length > 0) return
+    modalAdd({
+      id: SEARCHMODALKEY,
+      children: <SearchModal />,
+    })
+  }, [])
+
+  useEffect(() => {
+    const modal = searchParams.get('modal')
+    if (modal !== null) return
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.key === 'k') {
@@ -32,7 +40,7 @@ function useSearch() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [lists])
+  }, [searchParams])
 
   return {
     clickHandler,

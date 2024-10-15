@@ -6,22 +6,18 @@ type ModalType = {
   id: string
   children: ReactNode
 }
-
 type ModalState = {
   lists: ModalType[]
 }
 
 type ModalAction = {
-  modalOpen: (modal: ModalType) => void
-  modalClose: (modalKey: string) => void
-  modalPop: () => void
+  modalAdd: (modal: ModalType) => void
+  modalRemove: (modalKey: string) => void
 }
-
-// @TODO: 이거 모달 종료하면서 page 이동하면 뒤로가기 되는 문제가 있음 수정해야됨.
 
 const useModalStore = create<ModalState & ModalAction>((set) => ({
   lists: [],
-  modalOpen: (modal) =>
+  modalAdd: (modal) =>
     set(({ lists }) => {
       const current = cloneDeep(lists)
       const fidx = current.findIndex((v) => v.id === modal.id)
@@ -30,7 +26,7 @@ const useModalStore = create<ModalState & ModalAction>((set) => ({
       current.push(modal)
       return { lists: current }
     }),
-  modalClose: (modalKey) =>
+  modalRemove: (modalKey) =>
     set(({ lists }) => {
       const current = cloneDeep(lists)
       const fidx = current.findIndex((v) => v.id === modalKey)
@@ -42,17 +38,6 @@ const useModalStore = create<ModalState & ModalAction>((set) => ({
 
       return { lists }
     }),
-  // modalPop: () =>
-  //   set(({ lists }) => {
-  //     if (lists.length > 0) {
-  //       const current = cloneDeep(lists)
-  //       current.pop()
-  //       return { lists: current }
-  //     }
-  //
-  //     return { lists }
-  //   }),
-  modalPop: () => set(() => ({ lists: [] })),
 }))
 
 export default useModalStore

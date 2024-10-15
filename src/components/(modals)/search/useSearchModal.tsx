@@ -7,6 +7,7 @@ import {
   useId,
   useState,
 } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import Loader from '@components/(common)/loader.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
@@ -21,7 +22,8 @@ import useModalStore from '@util/store/modal.ts'
 const ItemModal = lazy(() => import('@components/(modals)/item/page.tsx'))
 
 export default function useSearchModal() {
-  const { lists, modalClose, modalOpen } = useModalStore()
+  const { modalAdd } = useModalStore()
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const id = useId()
   const [search, setSearch] = useState('')
@@ -61,15 +63,15 @@ export default function useSearchModal() {
     getData().catch((rej) => console.error(rej))
   }, [deferredSearch])
 
-  const clickResultHandler = useCallback(
-    (d: ItemInterface) => {
-      modalOpen({
-        id: ITEMMODALKEY,
-        children: <ItemModal item={d} />,
-      })
-    },
-    [lists],
-  )
+  const clickResultHandler = useCallback((d: ItemInterface) => {
+    modalAdd({
+      id: ITEMMODALKEY,
+      children: <ItemModal item={d} />,
+    })
+
+    searchParams.set('modal', ITEMMODALKEY)
+    setSearchParams(searchParams)
+  }, [])
 
   /** 검색 결과를 렌더링 */
   const renderResult = useCallback(() => {
@@ -111,10 +113,11 @@ export default function useSearchModal() {
   /** 키 입력 이벤트를 할당 */
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      const flag = lists[lists.length - 1]?.id === SEARCHMODALKEY
+      const flag = searchParams.get('modal') === SEARCHMODALKEY
       if (flag && e.key === 'Escape') {
         e.preventDefault()
-        modalClose(SEARCHMODALKEY)
+        searchParams.delete('modal')
+        setSearchParams(searchParams)
       }
     }
 
@@ -122,17 +125,17 @@ export default function useSearchModal() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [lists])
+  }, [searchParams])
 
   /** 모달이 켜지면 input에 자동 포커싱 */
   useEffect(() => {
-    const flag = lists[lists.length - 1]?.id === SEARCHMODALKEY
+    const flag = searchParams.get('modal') === SEARCHMODALKEY
 
     if (flag) {
       const input = document.getElementById(id)
       if (input) input.focus()
     }
-  }, [id, lists])
+  }, [id, searchParams])
 
   return {
     id,
@@ -140,7 +143,8 @@ export default function useSearchModal() {
     onChangeInput,
     renderResult,
     closeHandler: () => {
-      modalClose(SEARCHMODALKEY)
+      searchParams.delete('modal')
+      setSearchParams(searchParams)
     },
   }
 }

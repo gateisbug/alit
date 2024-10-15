@@ -1,4 +1,5 @@
 import { useCallback } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import { ModalClose } from '@components/(common)/modal.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
@@ -6,7 +7,6 @@ import Portrait from '@components/(common)/portrait.tsx'
 import ITEMS from '@util/divider/items.ts'
 import NATIONS from '@util/divider/nations.ts'
 import OBTAINS from '@util/divider/obtains.ts'
-import useModalStore from '@util/store/modal.ts'
 
 import { KeyValue, Breadcrumbs, ImageCard } from './components.tsx'
 import {
@@ -27,10 +27,11 @@ interface Props {
 }
 
 export default function ItemModal({ item }: Props) {
-  const { modalClose } = useModalStore()
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const onClose = () => {
-    modalClose(ITEMMODALKEY)
+    searchParams.delete(ITEMMODALKEY)
+    setSearchParams(searchParams)
   }
 
   const obtainRender = useCallback(

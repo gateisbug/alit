@@ -1,4 +1,5 @@
 import { Fragment, lazy, type ReactNode, useCallback } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import useGridData from '@app/item/(data-grid)/useGridData.ts'
 import useInfiniteGrid from '@app/item/(data-grid)/useInfiniteGrid.ts'
@@ -18,7 +19,8 @@ const ItemModal = lazy(() => import('@components/(modals)/item/page.tsx'))
 function useDataGrid() {
   const data = useGridData()
   const { current, visibleCount, loaderRef, LOADER } = useInfiniteGrid(data)
-  const { modalOpen } = useModalStore()
+  const { modalAdd } = useModalStore()
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const renderText = useCallback((d: ItemInterface, h: keyof ItemInterface) => {
     let classname: string = ''
@@ -54,20 +56,18 @@ function useDataGrid() {
         break
     }
 
-    return (
-      <GridCell
-        className={classname}
-        onClick={() => {
-          modalOpen({
-            id: ITEMMODALKEY,
-            children: <ItemModal item={d} />,
-          })
-        }}
-      >
-        {value}
-      </GridCell>
-    )
+    return <GridCell className={classname}>{value}</GridCell>
   }, [])
+
+  const gridRowClickHandler = (item: ItemInterface) => {
+    modalAdd({
+      id: ITEMMODALKEY,
+      children: <ItemModal item={item} />,
+    })
+
+    searchParams.set('modal', ITEMMODALKEY)
+    setSearchParams(searchParams)
+  }
 
   return {
     current,
@@ -76,12 +76,20 @@ function useDataGrid() {
     visibleCount,
     LOADER,
     loaderRef,
+    gridRowClickHandler,
   }
 }
 
 export default function ItemDataGrid() {
-  const { current, renderText, data, visibleCount, LOADER, loaderRef } =
-    useDataGrid()
+  const {
+    current,
+    renderText,
+    data,
+    visibleCount,
+    LOADER,
+    loaderRef,
+    gridRowClickHandler,
+  } = useDataGrid()
 
   return (
     <>
@@ -96,7 +104,13 @@ export default function ItemDataGrid() {
 
         {current.map((v, i) => (
           // eslint-disable-next-line react/no-array-index-key
-          <GridRow key={`row_${v.index}_${i}`} data-type='body'>
+          <GridRow
+            key={`row_${v.index}_${v.name}`}
+            data-type='body'
+            onClick={() => {
+              gridRowClickHandler(v)
+            }}
+          >
             {headers.map((w) => (
               // eslint-disable-next-line react/no-array-index-key
               <Fragment key={`cell_${v.index}_${w.value}_${i}`}>
