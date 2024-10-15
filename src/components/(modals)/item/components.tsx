@@ -98,21 +98,36 @@ export const Aircraft = styled.div.attrs<AircraftProps>((props) => ({
     const [weapon, count] = string.split('*')
 
     const title = ap ? (
-      <span>
+      <span className='aircraft-stat'>
         <div>대미지: {damage}</div>
         <div>관통: {ap.replace(/\//g, ' / ')}</div>
       </span>
     ) : (
-      <span>대미지: {damage}</span>
+      <span className='aircraft-stat'>대미지: {damage}</span>
     )
 
     return (
       <>
         <Tooltip title={title}>
-          <span>{weapon}</span>
+          <span className='aircraft-target'>{weapon}</span>
         </Tooltip>
         <>&nbsp;× {count}</>
       </>
     )
   })(),
-}))``
+}))`
+  .aircraft-stat {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem; /* 8 */
+    padding: 0.5rem; /* 8 */
+    background-color: rgba(97, 97, 97, 0.92);
+    border-radius: 0.25rem; /* 4 */
+    z-index: 1;
+  }
+
+  .aircraft-target {
+    text-decoration: underline;
+  }
+`

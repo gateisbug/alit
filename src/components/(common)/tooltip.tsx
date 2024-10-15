@@ -13,46 +13,86 @@ export const TooltipContainer = styled.span.attrs({
   display: inline-block;
 `
 
-export const TooltipBox = styled.div.attrs({
+interface TooltipBoxProps {
+  $title: ReactNode
+}
+export const TooltipBox = styled.div.attrs<TooltipBoxProps>((props) => ({
+  children: (
+    <div className='tooltop-text' data-placement='bottom'>
+      {props.$title}
+    </div>
+  ),
   className: 'pos-a',
-})`
+}))`
   z-index: 1500;
   pointer-events: auto;
   inset: 0 auto auto 0;
   margin: 0;
+
+  .tooltop-text {
+    position: relative;
+    background-color: rgba(97, 97, 97, 92);
+    border-radius: 4px;
+    color: #fff;
+    max-width: 300px;
+    margin: 2px;
+    overflow-wrap: break-word;
+
+    &[data-placement='bottom'] {
+      margin-top: 12px;
+      transform-origin: center top;
+    }
+
+    &::before {
+      content: '■';
+      color: rgba(97, 97, 97, 92);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      rotate: 45deg;
+      width: fit-content;
+      height: fit-content;
+      font-size: 14px;
+      border-radius: 2px;
+      translate: -50% -50%;
+      overflow: hidden;
+      z-index: -1;
+    }
+  }
 `
 
-export const TooltipText = styled.div.attrs({
-  className: 'pos-r b2',
-})`
-  background-color: rgba(97, 97, 97, 92);
-  border-radius: 4px;
-  color: #fff;
-  max-width: 300px;
-  margin: 2px;
-  overflow-wrap: break-word;
-
-  &[data-placement='bottom'] {
-    margin-top: 12px;
-    transform-origin: center top;
-  }
-
-  &::before {
-    content: '■';
-    color: ${({ theme }) => theme.surface};
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    rotate: 45deg;
-    width: fit-content;
-    height: fit-content;
-    font-size: 0.875rem; /* 14 */
-    border-radius: 0.125rem; /* 2 */
-    translate: -50% -50%;
-    overflow: hidden;
-  }
-`
+// export const TooltipText = styled.div.attrs({
+//   className: 'pos-r b2',
+// })`
+//   background-color: rgba(97, 97, 97, 92);
+//   border-radius: 4px;
+//   color: #fff;
+//   max-width: 300px;
+//   margin: 2px;
+//   overflow-wrap: break-word;
+//
+//   &[data-placement='bottom'] {
+//     margin-top: 12px;
+//     transform-origin: center top;
+//   }
+//
+//   &::before {
+//     content: '■';
+//     color: ${({ theme }) => theme.surface};
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     rotate: 45deg;
+//     width: fit-content;
+//     height: fit-content;
+//     font-size: 0.875rem; /* 14 */
+//     border-radius: 0.125rem; /* 2 */
+//     translate: -50% -50%;
+//     overflow: hidden;
+//   }
+// `
 
 export function useTooltip() {
   const containerRef = useRef<HTMLSpanElement>(null)
@@ -105,8 +145,8 @@ export default function Tooltip({ children, title }: TooltipProps) {
       {children}
       {show
         ? createPortal(
-            <TooltipBox ref={boxRef}>
-              <TooltipText data-placement='bottom'>{title}</TooltipText>
+            <TooltipBox ref={boxRef} $title={title}>
+              {/* <TooltipText data-placement='bottom'>{title}</TooltipText> */}
             </TooltipBox>,
             document.body,
           )
