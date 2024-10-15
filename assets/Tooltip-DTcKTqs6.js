@@ -1,4 +1,4 @@
-import{p as a,c as d,j as t,r as u,b as R}from"./index-rZVYAdaY.js";import{p}from"./utils-Bsz_bQWJ.js";const x={primary:"var(--primary, #ffb74d)",onPrimary:"var(--on-primary, #1c2025)",primaryHover:"var(--primary-hover, #b28035)",disabled:{light:"var(--disabled, #0000001E)",dark:"var(--disabled, #FFFFFF1E)"},onDisabled:{light:"var(--on-disabled, #00000042)",dark:"var(--on-disabled, #FFFFFF4C)"}},H=p("button"),i={variant:"fill",fullWidth:!1,disabled:!1},b=a.button.attrs({className:H("root")})`
+import{p as a,c as d,j as t,r as u,b as R}from"./index-87Ubv_ld.js";import{p}from"./utils-Bsz_bQWJ.js";const x={primary:"var(--primary, #ffb74d)",onPrimary:"var(--on-primary, #1c2025)",primaryHover:"var(--primary-hover, #b28035)",disabled:{light:"var(--disabled, #0000001E)",dark:"var(--disabled, #FFFFFF1E)"},onDisabled:{light:"var(--on-disabled, #00000042)",dark:"var(--on-disabled, #FFFFFF4C)"}},H=p("button"),i={variant:"fill",fullWidth:!1,disabled:!1},b=a.button.attrs({className:H("root")})`
   display: inline-flex;
   flex-flow: row nowrap;
   box-sizing: border-box;
