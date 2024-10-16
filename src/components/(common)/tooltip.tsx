@@ -11,6 +11,7 @@ export const TooltipContainer = styled.span.attrs({
   className: 'pos-r',
 })`
   display: inline-block;
+  cursor: default;
 `
 
 interface TooltipBoxProps {
