@@ -92,18 +92,26 @@ interface AircraftProps {
   $value: string
 }
 
+const AircraftStat = styled.span.attrs({
+  className: 'pos-r flex column',
+})`
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 1;
+`
+
 export const Aircraft = styled.div.attrs<AircraftProps>((props) => ({
   children: (() => {
     const [string, damage, ap] = props.$value.split('\\t')
     const [weapon, count] = string.split('*')
 
     const title = ap ? (
-      <span className='aircraft-stat'>
+      <AircraftStat>
         <div>대미지: {damage}</div>
         <div>관통: {ap.replace(/\//g, ' / ')}</div>
-      </span>
+      </AircraftStat>
     ) : (
-      <span className='aircraft-stat'>대미지: {damage}</span>
+      <AircraftStat>대미지: {damage}</AircraftStat>
     )
 
     return (
@@ -116,17 +124,6 @@ export const Aircraft = styled.div.attrs<AircraftProps>((props) => ({
     )
   })(),
 }))`
-  .aircraft-stat {
-    position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 0.5rem; /* 8 */
-    padding: 0.5rem; /* 8 */
-    background-color: rgba(97, 97, 97, 0.92);
-    border-radius: 0.25rem; /* 4 */
-    z-index: 1;
-  }
-
   .aircraft-target {
     text-decoration: underline;
   }

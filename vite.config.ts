@@ -1,6 +1,11 @@
+/* eslint-disable consistent-return */
+// noinspection JSUnusedGlobalSymbols
+
 import { resolve } from 'path'
 
 import react from '@vitejs/plugin-react-swc'
+import autoprefixer from 'autoprefixer'
+import postcssPresetEnv from 'postcss-preset-env'
 import { defineConfig } from 'vite'
 
 import { version } from './package.json'
@@ -10,6 +15,17 @@ const p = (src: string) => resolve(__dirname, src)
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/alit/',
+  css: {
+    postcss: {
+      plugins: [
+        autoprefixer,
+        postcssPresetEnv({
+          stage: 1, // stage: 0 은 모든 CSS 특징을 활성화합니다.
+          minimumVendorImplementations: 2,
+        }),
+      ],
+    },
+  },
   plugins: [
     react({
       devTarget: 'es2015',

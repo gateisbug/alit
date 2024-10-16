@@ -14,8 +14,7 @@
     "format:fix": "prettier --write --ignote-path .gitignore ."
   },
   "browserslist": [
-    "defaults and fully supports es6-module",
-    "partially supports css-grid"
+    "cover 99.5%"
   ],
   "dependencies": {
     "idb": "^8.0.0",
