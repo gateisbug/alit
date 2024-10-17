@@ -1,6 +1,14 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.4.0
+[releases](https://github.com/gateisbug/alit/releases/tag/2.4.0)
+### 2024-10-17, 2.4.0 패치내역
+- 패치내역을 표시하는 뱃지가 추가되었습니다.
+- 번들링을 최적화했습니다.
+- JSON 불러오기 방식을 최적화했습니다.
+- 뒤로가기 버튼으로 모달을 끌 수 있습니다.
+
 ## 2.3.4
 [releases](https://github.com/gateisbug/alit/releases/tag/2.3.4)
 ### 2024-10-15, 2.3.4 패치내역

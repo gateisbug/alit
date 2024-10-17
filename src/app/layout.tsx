@@ -1,13 +1,20 @@
-import AppBar from '@app/(main)/appbar'
+import { lazy, Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
+
+import GlobalHeader from './@global-header/page.tsx'
+
+const ModalRoot = lazy(() => import('./@modal-root/layout.tsx'))
 
 export default function RootLayout() {
   return (
-    <>
-      <AppBar />
-      <div className='header-adder'>
+    <div className='flex column h100'>
+      <GlobalHeader />
+      <Suspense>
         <Outlet />
-      </div>
-    </>
+      </Suspense>
+      <Suspense>
+        <ModalRoot />
+      </Suspense>
+    </div>
   )
 }
