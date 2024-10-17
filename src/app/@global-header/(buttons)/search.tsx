@@ -51,7 +51,7 @@ export default function Search() {
   const { clickHandler } = useSearch()
 
   return (
-    <SearchButton onClick={clickHandler}>
+    <SearchButton onClick={clickHandler} aria-label='검색 버튼'>
       <IconSearch />
       <span className='caption desktop span'>Search...</span>
       <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>

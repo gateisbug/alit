@@ -1,3 +1,5 @@
+import { isMobile } from 'react-device-detect'
+
 import Portrait from '@components/(common)/portrait.tsx'
 import { ITEMS, NATIONS } from '@util/divider'
 
@@ -39,7 +41,16 @@ const headerOptions: OptionType<keyof ItemInterface>[] = [
 export const headers = Object.freeze(headerOptions)
 
 function img(item: ItemInterface) {
-  return <Portrait path={`images/items/${item?.image}_x48.webp`} item={item} />
+  return (
+    <Portrait
+      path={
+        !isMobile
+          ? `images/items/${item?.image}_x48.webp`
+          : `images/items/${item?.image}.webp`
+      }
+      item={item}
+    />
+  )
 }
 
 function nickname(item: ItemInterface) {
