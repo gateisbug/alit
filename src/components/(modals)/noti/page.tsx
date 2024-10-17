@@ -66,18 +66,18 @@ function useNotiModal(log?: IChangeLog) {
 export default function NotiModal({ log }: Props) {
   const { change, onClose } = useNotiModal(log)
 
-  return (
+  return change ? (
     <ModalContainer>
       <ModalHeader>
         <ModalClose onClick={onClose} />
       </ModalHeader>
 
       <ModalBody>
-        <h2 className='t3 fwb fcs'>v{change?.version} 변경사항</h2>
-        <ReleaseLink to={change?.release ?? ''} />
-        <address>{change?.date} 배포</address>
-        <ChangeLog>{change?.patch?.map((v) => <li key={v}>{v}</li>)}</ChangeLog>
+        <h2 className='t3 fwb fcs'>v{change.version} 변경사항</h2>
+        <ReleaseLink to={change.release ?? ''} />
+        <address>{change.date} 배포</address>
+        <ChangeLog>{change.patch?.map((v) => <li key={v}>{v}</li>)}</ChangeLog>
       </ModalBody>
     </ModalContainer>
-  )
+  ) : null
 }
