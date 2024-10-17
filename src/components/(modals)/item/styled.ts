@@ -92,9 +92,19 @@ export const Nation = styled.div.attrs({
 export const StatSection = styled.div.attrs({
   className: 'grid',
 })`
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-flow: row;
   gap: 16px;
+
+  &[data-length='1'],
+  &[data-length='3'],
+  &[data-length='5'] {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  &[data-length='2'],
+  &[data-length='4'],
+  &[data-length='6'] {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 
   .keyvalue > div {
     line-height: 1em !important;

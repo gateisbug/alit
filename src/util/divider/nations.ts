@@ -2,27 +2,27 @@ const NATIONS = [
   {
     index: 'USS',
     value: 'nation',
-    label: '이글 유니온',
+    label: '이글',
   },
   {
     index: 'HMS',
     value: 'nation',
-    label: '로열 네이비',
+    label: '로열',
   },
   {
     index: 'IJN',
     value: 'nation',
-    label: '사쿠라 엠파이어',
+    label: '중앵',
   },
   {
     index: 'KMS',
     value: 'nation',
-    label: '메탈 블러드',
+    label: '철혈',
   },
   {
     index: 'SMS',
     value: 'nation',
-    label: '메탈 블러드',
+    label: '철혈',
   },
   {
     index: 'ROC',
@@ -32,27 +32,27 @@ const NATIONS = [
   {
     index: 'PRAN',
     value: 'nation',
-    label: '이스트 글림',
+    label: '이스트',
   },
   {
     index: 'SN',
     value: 'nation',
-    label: '노스 유니온',
+    label: '북련',
   },
   {
     index: 'FFNF',
     value: 'nation',
-    label: '아이리스 리브레',
+    label: '아이리스',
   },
   {
     index: 'MNF',
     value: 'nation',
-    label: '비시아 성좌',
+    label: '비시아',
   },
   {
     index: 'RN',
     value: 'nation',
-    label: '사르데냐 엠파이어',
+    label: '사르데냐',
   },
   {
     index: 'MOT',
@@ -119,6 +119,11 @@ const NATIONS = [
     index: 'MOT',
     value: 'box',
     label: '템페스타',
+  },
+  {
+    index: 'UNIV',
+    value: 'box',
+    label: '전체',
   },
 ]
 

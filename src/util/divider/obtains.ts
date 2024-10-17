@@ -144,6 +144,11 @@ const OBTAINS = [
     value: '휘광의 성에서 피어나라',
     label: 'images/event/Light_of_the_Martyrium_Event_Banner.png',
   },
+  {
+    index: '이벤트',
+    value: '리틀 학원에 어서오세요',
+    label: 'images/event/Welcome_to_Little_Academy.png',
+  },
 
   {
     index: '메인',
