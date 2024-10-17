@@ -34,7 +34,8 @@ function useNotification() {
 
   useLayoutEffect(() => {
     const item = localStorage.getItem('version')
-    const log = item ? (JSON.parse(item) as unknown as IChangeLog) : undefined
+    const log =
+      item !== null ? (JSON.parse(item) as unknown as IChangeLog) : undefined
 
     modalAdd({
       id: NOTIMODALKEY,
