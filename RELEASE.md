@@ -9,6 +9,11 @@
 - JSON 불러오기 방식을 최적화했습니다.
 - 뒤로가기 버튼으로 모달을 끌 수 있습니다.
 
+## 2.3.4
+[releases](https://github.com/gateisbug/alit/releases/tag/2.3.4)
+### 2024-10-15, 2.3.4 패치내역
+- 원본 리소스 24.10.14 반영
+
 ## 2.3.3
 [releases](https://github.com/gateisbug/alit/releases/tag/2.3.3)
 ### 2024-08-05, 2.3.3 패치내역
