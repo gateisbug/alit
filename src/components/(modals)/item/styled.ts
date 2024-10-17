@@ -12,8 +12,8 @@ export const ModalContainer = styled(UIModalContainer).attrs({
 
   width: 100%;
   max-width: 960px;
-  max-height: 960px;
-  height: calc(100vh - 128px);
+  //max-height: 960px;
+  max-height: calc(100vh - 128px);
   padding: 0;
   border-radius: 8px;
   //gap: 16px;
@@ -109,6 +109,15 @@ export const StatSection = styled.div.attrs({
   .keyvalue > div {
     line-height: 1em !important;
   }
+`
+
+export const ExplainSection = styled.div.attrs({
+  className: 'flex column b1',
+})`
+  //gap: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--lc);
+  padding: 12px;
 `
 // export const StatSection = styled.div.attrs({
 //   className: 'flex jc-c',

@@ -7,6 +7,7 @@ import { ITEMS, NATIONS, OBTAINS } from '@util/divider'
 
 import { KeyValue, Breadcrumbs, ImageCard, Aircraft } from './components.tsx'
 import {
+  ExplainSection,
   Header,
   ItemModalBody,
   ItemModalHeader,
@@ -168,6 +169,12 @@ export default function ItemModal({ item }: Props) {
         <StatSection data-length={Math.round((item?.status?.length ?? 8) / 2)}>
           {statRender()}
         </StatSection>
+
+        {item?.explain?.length ? (
+          <ExplainSection>
+            {item?.explain?.map((v) => <p key={v}>{v}</p>)}
+          </ExplainSection>
+        ) : null}
       </ItemModalBody>
     </ModalContainer>
   )
