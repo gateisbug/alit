@@ -10,9 +10,8 @@ export const Badge = styled(UIBadge)`
 
   top: 0;
   right: 0;
-  //transform: translate(50%, -50%);
 
-  transition: transform 150ms ease-in-out;
+  //transition: transform 150ms ease-in-out;
   &[data-show='true'] {
     transform: scale(1);
   }

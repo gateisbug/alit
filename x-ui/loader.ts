@@ -7,7 +7,7 @@ export const UILoaderBox = styled.div`
   height: 40px;
 
   color: var(--loader-color, gold);
-  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  //transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
   animation: 1.4s linear 0s infinite normal none running rotate;
 
   @keyframes rotate {
