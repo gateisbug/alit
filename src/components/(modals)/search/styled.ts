@@ -141,7 +141,7 @@ export const ResultItem = styled.button.attrs({
   color: var(--link);
   gap: 16px;
   flex-grow: 1;
-  height: 64px;
+  min-height: 64px;
   padding: 2px 16px;
   border-radius: 12px;
   margin-bottom: 8px;

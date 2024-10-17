@@ -10,11 +10,8 @@ import {
   ModalContainer,
 } from '@components/(modals)/noti/styled.ts'
 
-interface IChangeLog {
-  version: string
-  release: string
-  date: string
-  patch: string[]
+interface Props {
+  log?: IChangeLog
 }
 
 const DEFAULT_CHANGE: IChangeLog = {
@@ -24,17 +21,18 @@ const DEFAULT_CHANGE: IChangeLog = {
   patch: [],
 }
 
-function useNotiModal() {
-  const [change, setChange] = useState<IChangeLog>(DEFAULT_CHANGE)
+function useNotiModal(log?: IChangeLog) {
+  const [change, setChange] = useState<IChangeLog | undefined>(undefined)
   const [searchParams, setSearchParams] = useSearchParams()
 
   const fetchLog = useCallback(async () => {
     try {
       const response =
         await fetch('json/change.json') /* @TODO: 버전업 시 json 수정 */
+      // noinspection UnnecessaryLocalVariableJS
       const json =
         ((await response.json()) as unknown as IChangeLog) ?? DEFAULT_CHANGE
-      setChange(json)
+      return json
     } catch (e) {
       throw new Error('Failed to fetch item')
     }
@@ -46,8 +44,17 @@ function useNotiModal() {
   }
 
   useEffect(() => {
-    // eslint-disable-next-line no-console
-    fetchLog().catch((e) => console.error(e))
+    if (!log) {
+      fetchLog()
+        .then((res) => {
+          setChange(res)
+          localStorage.setItem('version', JSON.stringify(res))
+        })
+        // eslint-disable-next-line no-console
+        .catch((e) => console.error(e))
+    } else {
+      setChange(log)
+    }
   }, [])
 
   return {
@@ -56,8 +63,8 @@ function useNotiModal() {
   }
 }
 
-export default function NotiModal() {
-  const { change, onClose } = useNotiModal()
+export default function NotiModal({ log }: Props) {
+  const { change, onClose } = useNotiModal(log)
 
   return (
     <ModalContainer>
@@ -66,14 +73,10 @@ export default function NotiModal() {
       </ModalHeader>
 
       <ModalBody>
-        <h2 className='t3 fwb fcs'>v{change.version} 변경사항</h2>
-        <ReleaseLink to={change.release} />
-        <address>{change.date} 배포</address>
-        <ChangeLog>
-          {change.patch.map((v) => (
-            <li key={v}>{v}</li>
-          ))}
-        </ChangeLog>
+        <h2 className='t3 fwb fcs'>v{change?.version} 변경사항</h2>
+        <ReleaseLink to={change?.release ?? ''} />
+        <address>{change?.date} 배포</address>
+        <ChangeLog>{change?.patch?.map((v) => <li key={v}>{v}</li>)}</ChangeLog>
       </ModalBody>
     </ModalContainer>
   )
