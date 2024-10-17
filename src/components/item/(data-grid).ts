@@ -11,7 +11,7 @@ export const GridContainer = styled(UIContainer)``
 export const GridCell = styled(UICell).attrs({
   className: 'flex ai-c',
 })`
-  height: 64px;
+  min-height: 64px;
 `
 
 export const GridRow = styled(UIRow)`
@@ -40,7 +40,7 @@ export const GridRow = styled(UIRow)`
     border-bottom: 1px solid var(--lc-w);
   }
 
-  //grid-template-columns: 1:120 2:240 3:160 4:240 5:120 6:120 7:120 8:640;
+  //grid-template-columns: 1:90 2:240 3:160 4:240 5:90 6:90 7:90 8:743;
   ${GridCell}:nth-of-type(1),
   ${GridCell}:nth-of-type(5),
   ${GridCell}:nth-of-type(6),
@@ -78,5 +78,41 @@ export const GridRow = styled(UIRow)`
   }
   ${GridCell}:nth-of-type(7) {
     min-width: 72px;
+  }
+
+  @media (max-width: 1200px) {
+    ${GridCell}:nth-of-type(5),
+    ${GridCell}:nth-of-type(6),
+    ${GridCell}:nth-of-type(7) {
+      display: none;
+    }
+  }
+  // (1)icon, (2)name, (3)nickname, (4)obtain, (5)nation, (6)category, (7)type, (8)explain
+  @media (max-width: 900px) {
+    ${GridCell}:nth-of-type(5),
+    ${GridCell}:nth-of-type(6),
+    ${GridCell}:nth-of-type(7) {
+      display: none;
+    }
+  }
+  @media (max-width: 900px) {
+    ${GridCell}:nth-of-type(4) {
+      display: none;
+    }
+  }
+  @media (max-width: 700px) {
+    ${GridCell}:nth-of-type(3) {
+      display: none;
+    }
+  }
+  @media (max-width: 550px) {
+    ${GridCell}:nth-of-type(8) {
+      display: none;
+    }
+  }
+  @media (max-width: 440px) {
+    ${GridCell}:nth-of-type(2) {
+      min-width: 120px;
+    }
   }
 `
