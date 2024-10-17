@@ -63,38 +63,6 @@ export const TooltipBox = styled.div.attrs<TooltipBoxProps>((props) => ({
   }
 `
 
-// export const TooltipText = styled.div.attrs({
-//   className: 'pos-r b2',
-// })`
-//   background-color: rgba(97, 97, 97, 92);
-//   border-radius: 4px;
-//   color: #fff;
-//   max-width: 300px;
-//   margin: 2px;
-//   overflow-wrap: break-word;
-//
-//   &[data-placement='bottom'] {
-//     margin-top: 12px;
-//     transform-origin: center top;
-//   }
-//
-//   &::before {
-//     content: '■';
-//     color: ${({ theme }) => theme.surface};
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     rotate: 45deg;
-//     width: fit-content;
-//     height: fit-content;
-//     font-size: 0.875rem; /* 14 */
-//     border-radius: 0.125rem; /* 2 */
-//     translate: -50% -50%;
-//     overflow: hidden;
-//   }
-// `
-
 export function useTooltip() {
   const containerRef = useRef<HTMLSpanElement>(null)
   const boxRef = useRef<HTMLDivElement>(null)

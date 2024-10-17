@@ -12,7 +12,6 @@ import { version } from './package.json'
 
 const p = (src: string) => resolve(__dirname, src)
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: '/alit/',
   css: {
@@ -20,7 +19,7 @@ export default defineConfig({
       plugins: [
         autoprefixer,
         postcssPresetEnv({
-          stage: 1, // stage: 0 은 모든 CSS 특징을 활성화합니다.
+          stage: 1, //@COMMENT: stage: 0 은 모든 CSS 특징을 활성화합니다.
           minimumVendorImplementations: 2,
         }),
       ],

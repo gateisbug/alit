@@ -29,7 +29,7 @@ export default function ModalRoot() {
   useEffect(() => {
     const modal = searchParams.get('modal')
     if (typeof modal === 'string') {
-      // 만약 모달이 처음 열린다면 스크롤 방지 스타일 추가
+      //@COMMENT: 만약 모달이 처음 열린다면 스크롤 방지 스타일 추가
       const overflow = document.body.getAttribute('style')
 
       if (!overflow) {

@@ -114,23 +114,7 @@ export const StatSection = styled.div.attrs({
 export const ExplainSection = styled.div.attrs({
   className: 'flex column b1',
 })`
-  //gap: 8px;
   border-radius: 4px;
   border: 1px solid var(--lc);
   padding: 12px;
 `
-// export const StatSection = styled.div.attrs({
-//   className: 'flex jc-c',
-// })`
-//   flex-flow: row wrap;
-//   gap: 16px;
-//
-//   & > div {
-//     flex-basis: 216px;
-//     box-sizing: border-box;
-//   }
-//
-//   .keyvalue > div {
-//     line-height: 1em !important;
-//   }
-// `

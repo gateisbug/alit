@@ -87,7 +87,7 @@ export const GridRow = styled(UIRow)`
       display: none;
     }
   }
-  // (1)icon, (2)name, (3)nickname, (4)obtain, (5)nation, (6)category, (7)type, (8)explain
+  //@COMMENT: (1)icon, (2)name, (3)nickname, (4)obtain, (5)nation, (6)category, (7)type, (8)explain
   @media (max-width: 900px) {
     ${GridCell}:nth-of-type(5),
     ${GridCell}:nth-of-type(6),

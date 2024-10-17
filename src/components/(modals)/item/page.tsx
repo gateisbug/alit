@@ -108,7 +108,6 @@ export default function ItemModal({ item }: Props) {
             case '어뢰':
             case '로켓':
               return <Aircraft $value={stat[1]} />
-            // return stat[1]
             case '사속':
             case '발사간격':
               return stat[1].replace(/초/g, ' 초')
@@ -130,7 +129,6 @@ export default function ItemModal({ item }: Props) {
     [],
   )
 
-  // @TODO: Modal 구체화 해야함
   return (
     <ModalContainer>
       <ItemModalHeader className='flex jc-fe'>

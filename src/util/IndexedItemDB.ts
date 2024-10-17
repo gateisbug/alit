@@ -45,9 +45,7 @@ export default class IndexedItemDB {
       async upgrade(database) {
         if (!database.objectStoreNames.contains(ITEMTABLE)) {
           database.createObjectStore(ITEMTABLE, {
-            // keyPath: 'index',
             keyPath: 'no',
-            // autoIncrement: true,
           })
         }
 

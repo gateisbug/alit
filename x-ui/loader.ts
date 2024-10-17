@@ -46,12 +46,14 @@ export const UILoaderRoot = styled.svg`
   }
 `
 
-// export default function Loader() {
-//   return (
-//     <LoaderBox>
-//       <LoaderRoot viewBox='22 22 44 44'>
-//         <circle cx='44' cy='44' r='20.2' fill='none' strokeWidth='3.6' />
-//       </LoaderRoot>
-//     </LoaderBox>
-//   )
-// }
+/*
+export default function Loader() {
+  return (
+    <LoaderBox>
+      <LoaderRoot viewBox='22 22 44 44'>
+        <circle cx='44' cy='44' r='20.2' fill='none' strokeWidth='3.6' />
+      </LoaderRoot>
+    </LoaderBox>
+  )
+}
+*/
