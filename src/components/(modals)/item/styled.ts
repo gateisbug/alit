@@ -12,11 +12,9 @@ export const ModalContainer = styled(UIModalContainer).attrs({
 
   width: 100%;
   max-width: 960px;
-  //max-height: 960px;
   max-height: calc(100vh - 128px);
   padding: 0;
   border-radius: 8px;
-  //gap: 16px;
 `
 
 export const ItemModalHeader = styled.div.attrs({
@@ -38,6 +36,22 @@ export const ItemModalBody = styled.div.attrs({
   padding: 0 24px 24px;
   gap: 48px;
   overflow-y: auto;
+
+  @media (max-width: 768px) {
+    gap: 32px;
+  }
+  @media (max-width: 480px) {
+    gap: 24px;
+  }
+  @media (max-width: 480px) {
+    gap: 24px;
+  }
+`
+
+export const TitleSection = styled.div.attrs({
+  className: 'flex column jc-c',
+})`
+  gap: 10px;
 `
 
 export const Header = styled.header.attrs({
@@ -48,22 +62,19 @@ export const Header = styled.header.attrs({
   gap: 0 32px;
 
   ${PortraitFrame} {
+    width: 96px;
     height: 96px;
   }
-`
 
-export const TitleSection = styled.div.attrs({
-  className: 'flex column jc-c',
-})`
-  gap: 10px;
-`
+  @media (max-width: 768px) {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
 
-export const ObtainSection = styled.div.attrs({
-  className: 'grid',
-})`
-  min-height: 128px;
-  grid-template-columns: auto 160px;
-  gap: 16px;
+    ${TitleSection} {
+      align-items: center;
+    }
+  }
 `
 
 export const Obtain = styled.div.attrs({
@@ -78,6 +89,15 @@ export const Obtain = styled.div.attrs({
     min-height: 160px;
     max-height: 160px;
   }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 440px));
+    grid-auto-flow: unset;
+    grid-auto-columns: unset;
+  }
+  @media (max-width: 480px) {
+    gap: 12px;
+  }
 `
 
 export const Nation = styled.div.attrs({
@@ -89,11 +109,28 @@ export const Nation = styled.div.attrs({
   }
 `
 
+export const ObtainSection = styled.div.attrs({
+  className: 'grid',
+})`
+  //min-height: 128px;
+  grid-template-columns: auto 160px;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  @media (max-width: 480px) {
+    gap: 12px;
+  }
+`
+
 export const StatSection = styled.div.attrs({
   className: 'grid',
 })`
   grid-auto-flow: row;
-  gap: 16px;
+  gap: 12px;
 
   &[data-length='1'],
   &[data-length='3'],
@@ -108,6 +145,10 @@ export const StatSection = styled.div.attrs({
 
   .keyvalue > div {
     line-height: 1em !important;
+  }
+
+  @media (max-width: 480px) {
+    gap: 8px;
   }
 `
 

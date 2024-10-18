@@ -7,7 +7,7 @@ const OBTAINS = [
   {
     index: '이벤트',
     value: '템페스타의 비밀 조선소',
-    label: "/images/event/Tempesta's_Secret_Shipyard.png",
+    label: "images/event/Tempesta's_Secret_Shipyard.png",
   },
   {
     index: '이벤트',
@@ -32,7 +32,7 @@ const OBTAINS = [
   {
     index: '이벤트',
     value: '어리석은 자의 천칭',
-    label: "/images/event/The_Fool's_Scales.png",
+    label: "images/event/The_Fool's_Scales.png",
   },
   {
     index: '이벤트',

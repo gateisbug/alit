@@ -2,6 +2,7 @@ import { UIBackdrop } from '@xui/modal.ts'
 import { type MouseEvent, useCallback, useEffect, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 import { useSearchParams } from 'react-router-dom'
+import { isMobile } from 'react-device-detect'
 
 import useModalStore from '@util/store/modal.ts'
 
@@ -35,13 +36,15 @@ export default function ModalRoot() {
       if (!overflow) {
         document.body.setAttribute(
           'style',
-          'overflow:hidden;padding-right:17px;',
+          !isMobile
+            ? 'overflow:hidden;padding-right:17px;'
+            : 'overflow:hidden;',
         )
       }
     } else {
       document.body.removeAttribute('style')
     }
-  }, [searchParams])
+  }, [searchParams, isMobile])
 
   return find
     ? createPortal(

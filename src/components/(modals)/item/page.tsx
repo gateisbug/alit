@@ -159,6 +159,12 @@ export default function ItemModal({ item }: Props) {
           </TitleSection>
         </Header>
 
+        {item?.explain?.length ? (
+          <ExplainSection>
+            {item?.explain?.map((v) => <p key={v}>{v}</p>)}
+          </ExplainSection>
+        ) : null}
+
         <ObtainSection>
           <Obtain>{obtainRender()}</Obtain>
           <Nation>{nationRender()}</Nation>
@@ -167,12 +173,6 @@ export default function ItemModal({ item }: Props) {
         <StatSection data-length={Math.round((item?.status?.length ?? 8) / 2)}>
           {statRender()}
         </StatSection>
-
-        {item?.explain?.length ? (
-          <ExplainSection>
-            {item?.explain?.map((v) => <p key={v}>{v}</p>)}
-          </ExplainSection>
-        ) : null}
       </ItemModalBody>
     </ModalContainer>
   )
