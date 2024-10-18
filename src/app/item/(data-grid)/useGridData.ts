@@ -16,8 +16,9 @@ export default function useGridData() {
       const value = await (await IndexedItemDB.getInstance()).getAllData()
       setRaw(value)
     }
-    // eslint-disable-next-line no-console
-    getData().catch((rej) => console.error(rej))
+    getData().catch((rej) => {
+      throw new Error(rej)
+    })
   }, [])
 
   useEffect(() => {

@@ -145,7 +145,7 @@ export default function ItemModal({ item }: Props) {
 
           <TitleSection>
             <h2 className='s1 fcs'>{item?.name ?? '-'}</h2>
-            <h3 className='b1 fcw'>{item?.nickname ?? '-'}</h3>
+            <h3 className='b1 fwm fcw'>{item?.nickname ?? '-'}</h3>
             <Breadcrumbs
               $items={[
                 ITEMS.find(

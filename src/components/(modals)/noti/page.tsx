@@ -51,7 +51,9 @@ function useNotiModal(log?: IChangeLog) {
           localStorage.setItem('version', JSON.stringify(res))
         })
         // eslint-disable-next-line no-console
-        .catch((e) => console.error(e))
+        .catch((e) => {
+          throw new Error(e)
+        })
     } else {
       setChange(log)
     }

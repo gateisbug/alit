@@ -17,6 +17,8 @@ export const TooltipContainer = styled.span.attrs({
 interface TooltipBoxProps {
   $title: ReactNode
 }
+
+// noinspection CssUnresolvedCustomProperty
 export const TooltipBox = styled.div.attrs<TooltipBoxProps>((props) => ({
   children: (
     <div className='tooltop-text' data-placement='bottom'>
@@ -30,11 +32,20 @@ export const TooltipBox = styled.div.attrs<TooltipBoxProps>((props) => ({
   inset: 0 auto auto 0;
   margin: 0;
 
+  @media (prefers-color-scheme: dark) {
+    --tooltip-bc: rgba(97, 97, 97, 92);
+    --tooltop-fc: #fff;
+  }
+  @media (prefers-color-scheme: light) {
+    --tooltip-bc: rgba(97, 97, 97, 92);
+    --tooltop-fc: #fff;
+  }
+
   .tooltop-text {
     position: relative;
-    background-color: rgba(97, 97, 97, 92);
+    background-color: var(--tooltip-bc);
     border-radius: 4px;
-    color: #fff;
+    color: var(--tooltop-fc);
     max-width: 300px;
     margin: 2px;
     overflow-wrap: break-word;
@@ -46,7 +57,7 @@ export const TooltipBox = styled.div.attrs<TooltipBoxProps>((props) => ({
 
     &::before {
       content: '■';
-      color: rgba(97, 97, 97, 92);
+      color: var(--tooltip-bc);
       display: block;
       position: absolute;
       top: 0;

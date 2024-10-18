@@ -56,8 +56,7 @@ export default class IndexedItemDB {
 
         data.forEach((item) => {
           store.put({ ...item }).catch((rej) => {
-            // eslint-disable-next-line no-console
-            console.error(rej)
+            throw new Error(rej)
           })
         })
 

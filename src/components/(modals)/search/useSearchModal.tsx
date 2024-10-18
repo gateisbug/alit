@@ -59,8 +59,9 @@ export default function useSearchModal() {
       setResult([...finder])
     }
 
-    // eslint-disable-next-line no-console
-    getData().catch((rej) => console.error(rej))
+    getData().catch((rej) => {
+      throw new Error(rej)
+    })
   }, [deferredSearch])
 
   const clickResultHandler = (d: ItemInterface) => {

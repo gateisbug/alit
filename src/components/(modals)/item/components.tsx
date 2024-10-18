@@ -58,7 +58,7 @@ export const ImageCard = styled.div.attrs<ImageCardProps>((props) => ({
     height: 100%;
     transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #ffffffb2;
     color: #1c2025;
     cursor: default;
   }

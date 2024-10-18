@@ -15,13 +15,11 @@ export const ModalContainer = styled(UIModalContainer).attrs({
   border-radius: 8px;
   min-height: 640px;
   max-height: calc(100vh - 128px);
-  //gap: 16px;
 `
 
 export const ModalHeader = styled.header.attrs({
   className: 'flex ai-c',
 })`
-  //gap: 16px;
   padding: 4px 8px;
   border-bottom: 1px solid var(--lc);
 `
@@ -78,6 +76,19 @@ export const ModalBody = styled.div`
   width: 100%;
   max-width: 640px;
   padding: 16px;
+
+  @media (prefers-color-scheme: light) {
+    --border: rgba(232, 234, 238, 0.5);
+    --background: rgba(246, 247, 248, 0.4);
+    --border-hover: rgba(235, 245, 255, 0.6);
+    --background-hover: rgba(102, 179, 255, 0.4);
+  }
+  @media (prefers-color-scheme: dark) {
+    --border: rgba(29, 33, 38, 0.8);
+    --background: rgba(20, 23, 26, 0.5);
+    --border-hover: rgba(0, 97, 194, 0.6);
+    --background-hover: rgba(0, 59, 117, 0.4);
+  }
 `
 
 export const SearchScreen = styled.div.attrs({
@@ -103,6 +114,7 @@ export const CategoryBox = styled.div.attrs({
     color: #98a4b3;
   }
 `
+// noinspection CssUnresolvedCustomProperty
 export const CatrgoryItem = styled(Link).attrs({
   className: 'flex ai-c cur-p bb b2 fwm',
 })`
@@ -113,28 +125,28 @@ export const CatrgoryItem = styled(Link).attrs({
   padding: 2px 0 2px 16px;
   border-radius: 12px;
   margin-bottom: 8px;
-
   transition:
     border 150ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(29, 33, 38, 0.8);
-  background-color: rgba(20, 23, 26, 0.5);
+
+  border: 1px solid var(--border);
+  background-color: var(--background);
   &:hover {
-    border-color: rgba(0, 97, 194, 0.6);
-    background-color: rgba(0, 59, 117, 0.4);
+    border-color: var(--border-hover);
+    background-color: var(--background-hover);
   }
 `
 
-// noinspection CssUnusedSymbol
 export const SearchResult = styled.div.attrs({
   className: 'column',
 })`
   .nodata {
-    gap: 24px; /* 24 */
-    padding: 48px 0; /* 48 */
+    gap: 24px;
+    padding: 48px 0;
   }
 `
 
+// noinspection CssUnresolvedCustomProperty
 export const ResultItem = styled.button.attrs({
   className: 'flex ai-c cur-p b2 fwm bb',
 })`
@@ -146,17 +158,18 @@ export const ResultItem = styled.button.attrs({
   border-radius: 12px;
   margin-bottom: 8px;
 
-  & > span {
-    overflow-x: hidden;
-  }
-
   transition:
     border 150ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(29, 33, 38, 0.8);
-  background-color: rgba(20, 23, 26, 0.5);
+
+  border: 1px solid var(--border);
+  background-color: var(--background);
   &:hover {
-    border-color: rgba(0, 97, 194, 0.6);
-    background-color: rgba(0, 59, 117, 0.4);
+    border-color: var(--border-hover);
+    background-color: var(--background-hover);
+  }
+
+  & > span {
+    overflow-x: hidden;
   }
 `
