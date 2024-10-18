@@ -37,6 +37,19 @@ export const ItemModalBody = styled.div.attrs({
   gap: 48px;
   overflow-y: auto;
 
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
   @media (max-width: 768px) {
     gap: 32px;
   }
