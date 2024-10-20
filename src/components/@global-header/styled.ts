@@ -19,6 +19,8 @@ export const Logo = styled.h1.attrs({
   className: 'flex jc-c ai-c',
 })`
   width: fit-content;
+  user-select: none;
+
   & img {
     height: 36px;
   }

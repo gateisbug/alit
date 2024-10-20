@@ -17,6 +17,8 @@ export const PortraitFrame = styled.div`
   border-color: var(--portrait-lc);
   background-color: var(--portrait-bc);
 
+  user-select: none;
+
   &[data-stroke='default'] {
     --portrait-lc: #7e5475;
   }
