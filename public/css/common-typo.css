@@ -1,0 +1,149 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: cover 99.5%
+*/
+
+.fcw {
+  color: var(--fc-w);
+}
+.fc {
+  color: var(--fc);
+}
+.fcs {
+  color: var(--fc-s);
+}
+
+.e1,
+.e2,
+.e3,
+.e4,
+.t1,
+.t2,
+.t3,
+.t4,
+.s1,
+.s2,
+.s3,
+.b1,
+.b2,
+.caption,
+.overline {
+  /*letter-spacing: -0.02em;*/
+}
+
+.e1 {
+  font-size: 96px;
+  line-height: 120px;
+}
+
+.e2 {
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.e3 {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.e4 {
+  font-size: 34px;
+  line-height: 48px;
+}
+
+.t1 {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.t2 {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.t3 {
+  font-size: 26px;
+  line-height: 38px;
+}
+
+.t4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.s1 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.s2,
+.s3 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.b1 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.b2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.caption {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.overline {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.fwb {
+  font-weight: 700;
+}
+
+.fws {
+  font-weight: 600;
+}
+
+.fwm {
+  font-weight: 500;
+}
+
+.fwr {
+  font-weight: 400;
+}
+
+.lh {
+  line-height: 1em;
+}
+
+.word-break {
+  word-break: keep-all;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.el-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}

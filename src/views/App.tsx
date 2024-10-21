@@ -1,14 +1,9 @@
 import { RouterProvider } from 'react-router-dom'
-import { RecoilRoot } from 'recoil'
 
-import router from './routes'
+import router from './routes.tsx'
 
 function App() {
-  return (
-    <RecoilRoot>
-      <RouterProvider router={router} />
-    </RecoilRoot>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
