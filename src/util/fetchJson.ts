@@ -1,8 +1,7 @@
 export default async function fetchItemData() {
-  try {
-    const response = await fetch('json/all.json')
-    return ((await response.json()) as unknown as ItemInterface[]) ?? []
-  } catch (e) {
-    throw new Error('Failed to fetch item')
-  }
+  const response = await fetch('json/all.json')
+  return ((await response.json()) as unknown as ItemInterface[]) ?? []
+  // const data = await import('../assets/json/all.json')
+  // console.log(data)
+  // return (data as unknown as ItemInterface[]) ?? []
 }

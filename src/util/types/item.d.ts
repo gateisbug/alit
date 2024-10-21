@@ -46,18 +46,19 @@ type NationType =
   | string
 
 interface ItemInterface {
+  class?: ItemClass
+  domain?: ItemDomain
+  explain?: string[]
   id?: number
+  image?: string
   index?: number
   name?: string
-  tier?: TierType
-  nickname?: string
-  image?: string
-  link?: string
   nation?: NationType
-  explain?: string[]
+  nickname?: string
+  no?: number
+  tier?: TierType
+  link?: string
   obtain?: string[]
-  domain?: ItemDomain
-  class?: ItemClass
   type?: string
   status?: string[]
 }

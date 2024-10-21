@@ -1,6 +1,12 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.4.1
+[releases](https://github.com/gateisbug/alit/releases/tag/2.4.1)
+### 2024-10-21, 2.4.1 패치내역
+- 원본 리소스 24.10.20 반영
+- 용도를 해시태그로 표시
+
 ## 2.4.0
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.0)
 ### 2024-10-18, 2.4.0 패치내역
