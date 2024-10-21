@@ -5,9 +5,17 @@ import { ModalClose } from '@components/(common)/modal.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
 import { ITEMS, NATIONS, OBTAINS } from '@util/divider'
 
-import { KeyValue, Breadcrumbs, ImageCard, Aircraft } from './components.tsx'
+import {
+  KeyValue,
+  Breadcrumbs,
+  ImageCard,
+  Aircraft,
+  Hashtag,
+} from './components.tsx'
 import {
   ExplainSection,
+  ExplainTagContainer,
+  HashtagSection,
   Header,
   ItemModalBody,
   ItemModalHeader,
@@ -161,11 +169,23 @@ export default function ItemModal({ item }: Props) {
           </TitleSection>
         </Header>
 
-        {item?.explain?.length ? (
-          <ExplainSection>
-            {item?.explain?.map((v) => <p key={v}>{v}</p>)}
-          </ExplainSection>
-        ) : null}
+        {((item?.tag?.length ?? 0) > 0 || (item?.explain?.length ?? 0) > 0) && (
+          <ExplainTagContainer>
+            {item?.tag?.length ? (
+              <HashtagSection>
+                {item.tag.map((v) => (
+                  <Hashtag key={v}>{v}</Hashtag>
+                ))}
+              </HashtagSection>
+            ) : null}
+
+            {item?.explain?.length ? (
+              <ExplainSection>
+                {item?.explain?.map((v) => <p key={v}>{v}</p>)}
+              </ExplainSection>
+            ) : null}
+          </ExplainTagContainer>
+        )}
 
         <ObtainSection>
           <Obtain>{obtainRender()}</Obtain>

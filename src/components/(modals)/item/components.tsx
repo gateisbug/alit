@@ -128,3 +128,18 @@ export const Aircraft = styled.div.attrs<AircraftProps>((props) => ({
     text-decoration: underline;
   }
 `
+
+interface HashtagProps {
+  children?: ReactNode
+}
+
+export const Hashtag = styled.span.attrs<HashtagProps>({
+  className: 'b1 lh',
+})`
+  display: inline-flex;
+  color: var(--link);
+  background-color: var(--link-bc);
+  border: 1px solid var(--link-lc);
+  padding: 8px 16px;
+  border-radius: 32px;
+`

@@ -49,16 +49,17 @@ interface ItemInterface {
   class?: ItemClass
   domain?: ItemDomain
   explain?: string[]
-  id?: number
   image?: string
   index?: number
   name?: string
   nation?: NationType
   nickname?: string
   no?: number
-  tier?: TierType
-  link?: string
   obtain?: string[]
-  type?: string
   status?: string[]
+  tag?: string[]
+  tier?: TierType
+  type?: string
+  // id?: number
+  // link?: string
 }

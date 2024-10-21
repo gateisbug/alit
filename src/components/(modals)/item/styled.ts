@@ -163,6 +163,27 @@ export const StatSection = styled.div.attrs({
   @media (max-width: 480px) {
     gap: 8px;
   }
+
+  @media (max-width: 480px) {
+    &[data-length='1'],
+    &[data-length='2'],
+    &[data-length='3'],
+    &[data-length='4'],
+    &[data-length='5'],
+    &[data-length='6'] {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+`
+
+export const ExplainTagContainer = styled.div.attrs({
+  className: 'flex column',
+})`
+  gap: 16px;
+
+  @media (max-width: 480px) {
+    gap: 12px;
+  }
 `
 
 export const ExplainSection = styled.div.attrs({
@@ -171,4 +192,16 @@ export const ExplainSection = styled.div.attrs({
   border-radius: 4px;
   border: 1px solid var(--lc);
   padding: 12px;
+`
+
+export const HashtagSection = styled.div.attrs({
+  className: 'flex jc-fs ai-c',
+})`
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+
+  @media (max-width: 480px) {
+    gap: 6px;
+  }
 `
