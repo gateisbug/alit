@@ -15,36 +15,40 @@ function useNotification() {
 
   // @ts-ignore
   const currentVersion = __APP_VERSION__ as string
-  const [version, setVersion] = useState<IChangeLog | undefined>(undefined)
-  // const [versionChange, setVersionChange] = useState(false)
+  const [versionChange, setVersionChange] = useState(false)
 
   const handlerNotiButton = async () => {
-    // setVersionChange(false)
+    setVersionChange(false)
     searchParams.set('modal', NOTIMODALKEY)
     setSearchParams(searchParams)
   }
 
-  useEffect(() => {
-    const local = localStorage.getItem('version') ?? '{"version":"2.3.1"}'
-    let log = JSON.parse(local)
+  const getItem = () => {
+    const local = localStorage.getItem('version') ?? ''
 
-    if (typeof log === 'string') {
-      log = { version: '2.3.1' }
+    try {
+      return JSON.parse(local)
+    } catch {
+      return undefined
     }
+  }
 
-    setVersion(log)
-    localStorage.setItem('version', JSON.stringify(log))
+  useEffect(() => {
+    const log = getItem()
+    setVersionChange(log?.version !== currentVersion)
   }, [])
 
   useEffect(() => {
+    const version = getItem()
+
     modalAdd({
       id: NOTIMODALKEY,
-      children: <NotiModal log={version} />,
+      children: <NotiModal log={versionChange ? undefined : version} />,
     })
-  }, [version])
+  }, [versionChange])
 
   return {
-    versionChange: version?.version === currentVersion,
+    versionChange,
     handlerNotiButton,
   }
 }
