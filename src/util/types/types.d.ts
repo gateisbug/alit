@@ -8,4 +8,5 @@ interface IChangeLog {
   release?: string
   date?: string
   patch?: string[]
+  isOpen?: boolean
 }

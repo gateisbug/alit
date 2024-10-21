@@ -80,14 +80,10 @@ export const ModalBody = styled.div`
   @media (prefers-color-scheme: light) {
     --border: rgba(232, 234, 238, 0.5);
     --background: rgba(246, 247, 248, 0.4);
-    --border-hover: rgba(235, 245, 255, 0.6);
-    --background-hover: rgba(102, 179, 255, 0.4);
   }
   @media (prefers-color-scheme: dark) {
     --border: rgba(29, 33, 38, 0.8);
     --background: rgba(20, 23, 26, 0.5);
-    --border-hover: rgba(0, 97, 194, 0.6);
-    --background-hover: rgba(0, 59, 117, 0.4);
   }
 `
 
@@ -132,8 +128,8 @@ export const CatrgoryItem = styled(Link).attrs({
   border: 1px solid var(--border);
   background-color: var(--background);
   &:hover {
-    border-color: var(--border-hover);
-    background-color: var(--background-hover);
+    border-color: var(--link-lc);
+    background-color: var(--link-bc);
   }
 `
 
@@ -165,8 +161,8 @@ export const ResultItem = styled.button.attrs({
   border: 1px solid var(--border);
   background-color: var(--background);
   &:hover {
-    border-color: var(--border-hover);
-    background-color: var(--background-hover);
+    border-color: var(--link-lc);
+    background-color: var(--link-bc);
   }
 
   & > span {

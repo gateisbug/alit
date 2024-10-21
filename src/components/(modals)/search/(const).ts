@@ -125,8 +125,16 @@ const CATEGORY = Object.freeze([
     label: '특수',
     items: [
       {
-        label: '공용',
+        label: '전체',
         link: '/item?category=special',
+      },
+      {
+        label: '공용',
+        link: '/item?category=special&division=normal',
+      },
+      {
+        label: '전용',
+        link: '/item?category=special&division=signiture',
       },
     ],
   },

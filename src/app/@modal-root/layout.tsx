@@ -1,10 +1,12 @@
 import { UIBackdrop } from '@xui/modal.ts'
 import { type MouseEvent, useCallback, useEffect, useMemo } from 'react'
+import { isMobile } from 'react-device-detect'
 import { createPortal } from 'react-dom'
 import { useSearchParams } from 'react-router-dom'
-import { isMobile } from 'react-device-detect'
 
 import useModalStore from '@util/store/modal.ts'
+
+const MODALID = 'item-modal'
 
 export default function ModalRoot() {
   const { lists } = useModalStore()
@@ -28,8 +30,18 @@ export default function ModalRoot() {
   )
 
   useEffect(() => {
+    // 모달이 있는 상태로 새로고침 시 스크롤이 사라지는 문제 해결
+    const isModal = document.getElementById(MODALID)
+    if (isModal === null) {
+      searchParams.delete('modal')
+      setSearchParams(searchParams)
+    }
+  }, [])
+
+  useEffect(() => {
+    // const isModal = document.getElementById(MODALID)
     const modal = searchParams.get('modal')
-    if (typeof modal === 'string') {
+    if (modal !== null) {
       // @COMMENT: 만약 모달이 처음 열린다면 스크롤 방지 스타일 추가
       const overflow = document.body.getAttribute('style')
 

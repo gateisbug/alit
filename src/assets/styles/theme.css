@@ -8,6 +8,8 @@
 @media (prefers-color-scheme: light) {
   :root {
     --link: #006bd6; /* link color */
+    --link-lc: #66b3ff;
+    --link-bc: #ebf5ff;
 
     --scroll: #686868;
     --surface: #fafafa; /* background default */
@@ -23,6 +25,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --link: #66b3ff; /* link color */
+    --link-lc: rgba(0, 97, 194, 0.6);
+    --link-bc: rgba(0, 59, 117, 0.4);
 
     --scroll: #686868;
     --surface: #101418; /* background default */
