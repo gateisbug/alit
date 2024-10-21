@@ -53,6 +53,7 @@ export default function useSearchModal() {
         (v) =>
           v.name?.includes(deferredSearch) ||
           v.nickname?.includes(deferredSearch) ||
+          v.type?.includes(deferredSearch) ||
           v.explain?.join('. ').includes(deferredSearch),
       )
 
