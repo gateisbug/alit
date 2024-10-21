@@ -100,7 +100,7 @@ function classes(item: ItemInterface) {
 
 function types(item: ItemInterface) {
   const { domain: d, type: t } = item
-  return ITEMS.find((v) => v.index === d && v.value === t)?.label ?? '-'
+  return ITEMS.find((v) => v.index === d && v.value === t)?.label ?? t
 }
 
 function explain(item: ItemInterface) {

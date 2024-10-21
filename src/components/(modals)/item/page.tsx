@@ -153,7 +153,9 @@ export default function ItemModal({ item }: Props) {
                 )?.label,
                 ITEMS.find(
                   (v) => v.index === item?.domain && v.value === item?.type,
-                )?.label,
+                )?.label ??
+                  item?.type ??
+                  null,
               ]}
             />
           </TitleSection>

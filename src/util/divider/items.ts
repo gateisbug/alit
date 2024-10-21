@@ -264,6 +264,11 @@ const ITEMS = [
     value: 'ac',
     label: '항모',
   },
+  {
+    index: 'special',
+    value: 'ss',
+    label: '잠수함',
+  },
 ]
 
 Object.freeze(ITEMS)
