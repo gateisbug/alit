@@ -1,4 +1,4 @@
-import { lazy, useEffect, useLayoutEffect, useState } from 'react'
+import { lazy, useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 import IconBell from '@assets/icons/icon-bell.tsx'
@@ -14,37 +14,37 @@ function useNotification() {
   const [searchParams, setSearchParams] = useSearchParams()
 
   // @ts-ignore
-  const currentVersion = __APP_VERSION__
-  const [versionChange, setVersionChange] = useState(false)
+  const currentVersion = __APP_VERSION__ as string
+  const [version, setVersion] = useState<IChangeLog | undefined>(undefined)
+  // const [versionChange, setVersionChange] = useState(false)
 
   const handlerNotiButton = async () => {
-    setVersionChange(false)
+    // setVersionChange(false)
     searchParams.set('modal', NOTIMODALKEY)
     setSearchParams(searchParams)
   }
 
   useEffect(() => {
-    const log = JSON.parse(
-      localStorage.getItem('version') ?? '{"version":"2.3.1"}',
-    ) as unknown as IChangeLog
-    if (log.version !== currentVersion) {
-      setVersionChange(true)
+    const local = localStorage.getItem('version') ?? '{"version":"2.3.1"}'
+    let log = JSON.parse(local)
+
+    if (typeof log === 'string') {
+      log = { version: '2.3.1' }
     }
+
+    setVersion(log)
+    localStorage.setItem('version', JSON.stringify(log))
   }, [])
 
-  useLayoutEffect(() => {
-    const item = localStorage.getItem('version')
-    const log =
-      item !== null ? (JSON.parse(item) as unknown as IChangeLog) : undefined
-
+  useEffect(() => {
     modalAdd({
       id: NOTIMODALKEY,
-      children: <NotiModal log={log} />,
+      children: <NotiModal log={version} />,
     })
-  }, [versionChange])
+  }, [version])
 
   return {
-    versionChange,
+    versionChange: version?.version === currentVersion,
     handlerNotiButton,
   }
 }
