@@ -12,7 +12,7 @@ interface BreadcrumbsProps {
 export const Breadcrumbs = styled.div.attrs<BreadcrumbsProps>((props) => ({
   className: 'breadcrumbs flex row ai-c',
   children: props.$items
-    .filter((v) => typeof v === 'string')
+    .filter((v) => typeof v === 'string' && v.length > 0)
     .map((v, i, a) => (
       <Fragment key={v}>
         <span>{v}</span>

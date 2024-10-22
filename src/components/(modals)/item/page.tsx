@@ -157,6 +157,9 @@ export default function ItemModal({ item }: Props) {
             <Breadcrumbs
               $items={[
                 ITEMS.find(
+                  (v) => v.index === item?.domain && v.value === item?.domain,
+                )?.label,
+                ITEMS.find(
                   (v) => v.index === item?.domain && v.value === item?.class,
                 )?.label,
                 ITEMS.find(

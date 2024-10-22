@@ -1,6 +1,11 @@
 const ITEMS = [
   {
     index: 'gun',
+    value: 'gun',
+    label: '함포',
+  },
+  {
+    index: 'gun',
     value: 'dd',
     label: '구축포',
   },
@@ -26,6 +31,11 @@ const ITEMS = [
   },
   {
     index: 'torpedo',
+    value: 'torpedo',
+    label: '어뢰',
+  },
+  {
+    index: 'torpedo',
     value: 'surface',
     label: '수면어뢰',
   },
@@ -41,6 +51,11 @@ const ITEMS = [
   },
   {
     index: 'antiair',
+    value: 'antiair',
+    label: '대공포',
+  },
+  {
+    index: 'antiair',
     value: 'normal',
     label: '일반',
   },
@@ -48,6 +63,11 @@ const ITEMS = [
     index: 'antiair',
     value: 'fuse',
     label: '시한신관',
+  },
+  {
+    index: 'aircraft',
+    value: 'aircraft',
+    label: '항공기',
   },
   {
     index: 'aircraft',
@@ -71,6 +91,11 @@ const ITEMS = [
   },
   {
     index: 'accessory',
+    value: '설비',
+    label: '주력(후열)',
+  },
+  {
+    index: 'accessory',
     value: 'backline',
     label: '주력(후열)',
   },
@@ -83,6 +108,11 @@ const ITEMS = [
     index: 'accessory',
     value: 'signiture',
     label: '특수',
+  },
+  {
+    index: 'special',
+    value: 'special',
+    label: '특수장비',
   },
   {
     index: 'special',
@@ -140,7 +170,7 @@ const ITEMS = [
   {
     index: 'aircraft',
     value: 'old low',
-    label: '구3대장↓',
+    label: '구3대장=',
   },
   {
     index: 'aircraft',
