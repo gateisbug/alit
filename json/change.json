@@ -1,8 +1,8 @@
 {
-  "version": "2.4.2",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.4.2",
-  "date": "2024-10-21",
+  "version": "2.4.3",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.4.3",
+  "date": "2024-10-22",
   "patch": [
-    "원본 리소스 24.10.21 반영"
+    "일부 항목이 원본 리소스와 일치하지 않는 문제 수정"
   ]
 }
