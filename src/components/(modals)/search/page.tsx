@@ -18,8 +18,14 @@ import CATEGORY from './(const).ts'
 import useSearchModal from './useSearchModal.tsx'
 
 export default function SearchModal() {
-  const { id, onChangeInput, search, renderResult, closeHandler } =
-    useSearchModal()
+  const {
+    id,
+    onChangeInput,
+    onInputEnter,
+    search,
+    renderResult,
+    closeHandler,
+  } = useSearchModal()
 
   return (
     <ModalContainer>
@@ -41,6 +47,11 @@ export default function SearchModal() {
             maxLength={64}
             onChange={(e) => {
               onChangeInput(e.target.value)
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                onInputEnter((e.target as HTMLInputElement).value)
+              }
             }}
             className='b1 fwm fcs'
             tabIndex={0}

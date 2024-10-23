@@ -22,11 +22,12 @@ export default function ModalRoot() {
       const backdropRef = document.getElementById(id)
 
       if (e.target === backdropRef) {
+        searchParams.delete('keyword')
         searchParams.delete('modal')
         setSearchParams(searchParams)
       }
     },
-    [searchParams],
+    [searchParams, lists],
   )
 
   useEffect(() => {

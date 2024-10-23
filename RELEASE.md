@@ -1,6 +1,14 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.4.4
+[releases](https://github.com/gateisbug/alit/releases/tag/2.4.4)
+### 2024-10-23, 2.4.4 패치내역
+- 검색 결과에서 닉네임이 추가로 표시되도록 수정
+- 검색 결과 순서가 이름, 닉네임, 설명 순서로 표시되도록 수정
+- 검색 결과 아이템에 검색어가 mark 되도록 수정
+- 검색 모달 -> 아이템 모달 이동 시 뒤로가기로 검색 모달로 돌아갈 수 있도록 변경
+
 ## 2.4.3
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.3)
 ### 2024-10-22, 2.4.3 패치내역

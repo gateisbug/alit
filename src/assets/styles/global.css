@@ -40,3 +40,8 @@ body {
   max-width: 2048px;
   margin: 0 auto;
 }
+
+mark {
+  color: #1F3143;
+  background-color: #fd9532;
+}
