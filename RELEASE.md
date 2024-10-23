@@ -8,6 +8,7 @@
 - 검색 결과 순서가 이름, 닉네임, 설명 순서로 표시되도록 수정
 - 검색 결과 아이템에 검색어가 mark 되도록 수정
 - 검색 모달 -> 아이템 모달 이동 시 뒤로가기로 검색 모달로 돌아갈 수 있도록 변경
+- 이미지 확장자 png -> webp로 변경
 
 ## 2.4.3
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.3)
