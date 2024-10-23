@@ -1,7 +1,7 @@
 {
   "version": "2.4.4",
   "release": "https://github.com/gateisbug/alit/releases/tag/2.4.3",
-  "date": "2024-10-23",
+  "date": "2024-10-24",
   "patch": [
     "검색 결과에서 닉네임이 추가로 표시되도록 수정",
     "검색 결과 순서가 이름, 닉네임, 설명 순서로 표시되도록 수정",
