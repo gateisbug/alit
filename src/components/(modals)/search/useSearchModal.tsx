@@ -36,9 +36,17 @@ export default function useSearchModal() {
   const onChangeInput = useCallback(
     debounce((value: string) => {
       setSearch(value)
-    }, 250),
+      searchParams.set('keyword', value)
+      setSearchParams(searchParams)
+    }, 300),
     [],
   )
+
+  const onInputEnter = (value: string) => {
+    setSearch(value)
+    searchParams.set('keyword', value)
+    setSearchParams(searchParams)
+  }
 
   useEffect(() => {
     if (search.length === 0) {
@@ -49,15 +57,13 @@ export default function useSearchModal() {
     const getData = async () => {
       const data = await (await IndexedItemDB.getInstance()).getAllData()
 
-      const finder = data?.filter(
-        (v) =>
-          v.name?.includes(deferredSearch) ||
-          v.nickname?.includes(deferredSearch) ||
-          v.type?.includes(deferredSearch) ||
-          v.explain?.join('. ').includes(deferredSearch),
+      const name = data?.filter((v) => v.name?.includes(deferredSearch))
+      const nickname = data?.filter((v) => v.nickname?.includes(deferredSearch))
+      const explain = data?.filter((v) =>
+        v.explain?.join('. ').includes(deferredSearch),
       )
 
-      setResult([...finder])
+      setResult(Array.from(new Set(name.concat(nickname, explain))))
     }
 
     getData().catch((rej) => {
@@ -95,6 +101,19 @@ export default function useSearchModal() {
       )
     }
 
+    const highlightText = (text?: string) => {
+      if (!text) return text
+
+      const parts = text.split(new RegExp(`(${deferredSearch})`, 'gi'))
+      return parts.map((part, index) =>
+        part.includes(search) ? (
+          <mark key={`${part}_${index}`}>{part}</mark>
+        ) : (
+          part
+        ),
+      )
+    }
+
     return deferredResult.map((item) => (
       <ResultItem
         key={item?.index}
@@ -107,7 +126,10 @@ export default function useSearchModal() {
           path={`images/items/${item?.image}_x48.webp`}
           size={36}
         />
-        <span>{item.name}</span>
+        <div className='flex column jc-c ai-fs info'>
+          <div>{highlightText(item.name)}</div>
+          <div className='fcw'>{highlightText(item.nickname)}</div>
+        </div>
       </ResultItem>
     ))
   }, [deferredSearch, deferredResult])
@@ -119,6 +141,7 @@ export default function useSearchModal() {
       if (flag && e.key === 'Escape') {
         e.preventDefault()
         searchParams.delete('modal')
+        searchParams.delete('keyword')
         setSearchParams(searchParams)
       }
     }
@@ -139,13 +162,33 @@ export default function useSearchModal() {
     }
   }, [id, searchParams])
 
+  useEffect(() => {
+    const keyword = searchParams.get('keyword')
+    if (keyword === null) {
+      setSearch('')
+      const input = document.getElementById(id)
+      if (input) (input as HTMLInputElement).value = ''
+    }
+  }, [searchParams])
+
+  useEffect(() => {
+    const keyword = searchParams.get('keyword')
+    if (search.length === 0 && keyword !== null && (keyword.length ?? 0) > 0) {
+      setSearch(keyword)
+      const input = document.getElementById(id)
+      if (input) (input as HTMLInputElement).value = keyword
+    }
+  }, [id, search, searchParams])
+
   return {
     id,
     search,
     onChangeInput,
+    onInputEnter,
     renderResult,
     closeHandler: () => {
       searchParams.delete('modal')
+      searchParams.delete('keyword')
       setSearchParams(searchParams)
     },
   }

@@ -165,7 +165,8 @@ export const ResultItem = styled.button.attrs({
     background-color: var(--link-bc);
   }
 
-  & > span {
+  & > .info {
     overflow-x: hidden;
+    flex-grow: 1;
   }
 `

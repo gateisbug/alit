@@ -8,7 +8,8 @@ interface IDBItem extends IDBPDatabase {
 
 const DATABASE = 'alit-database'
 const ITEMTABLE = 'item-list'
-const VERSION = 4 /* @TODO: 버전업 시 수정 */ // PREV_VERSION = 3
+const VERSION = 4 /* @TODO: 버전업 시 수정 */
+// const PREV_VERSION = 3
 
 export default class IndexedItemDB {
   private static instance: IndexedItemDB | null = null
@@ -24,7 +25,14 @@ export default class IndexedItemDB {
   }
 
   public async getAllData() {
-    if (!this.db) return []
+    const getFromJSON = async () => {
+      // noinspection UnnecessaryLocalVariableJS
+      const data = await fetchItemData()
+      return data
+    }
+
+    if (!this.db) return getFromJSON()
+
     const tx = this.db.transaction(ITEMTABLE, 'readonly')
     const store = tx.objectStore(ITEMTABLE)
 
@@ -32,9 +40,7 @@ export default class IndexedItemDB {
     await tx.done
 
     if (allItems.length === 0) {
-      // noinspection UnnecessaryLocalVariableJS
-      const data = await fetchItemData()
-      return data
+      return getFromJSON()
     }
 
     return allItems
