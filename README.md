@@ -17,3 +17,7 @@
 
 ## Release Note
 [RELEASE.md](./RELEASE.md)
+
+## Contact
+- [버그 또는 기능 요청](https://github.com/gateisbug/alit/issues)
+- [개발 예정 항목](https://github.com/gateisbug/alit/milestones)
