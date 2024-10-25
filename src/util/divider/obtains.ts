@@ -204,6 +204,16 @@ const OBTAINS = [
     value: '저편에 핀 꽃의 향기',
     label: "images/event/Spider_Lily's_Redolence.webp",
   },
+  {
+    index: '이벤트',
+    value: '저편에 핀 꽃의 향기',
+    label: "images/event/Spider_Lily's_Redolence.webp",
+  },
+  {
+    index: '이벤트',
+    value: '정보 대항 모의 테스트',
+    label: 'images/event/Charge!_My_Trusty_Steeds!.webp',
+  },
 
   {
     index: '메인',
