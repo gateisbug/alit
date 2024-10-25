@@ -235,39 +235,60 @@ const ITEMS = [
 
   {
     index: 'accessory',
-    value: 'bb',
-    label: '전함',
+    value: 'back',
+    label: '주력(후열)',
   },
   {
     index: 'accessory',
-    value: 'ac',
-    label: '항모',
+    value: 'front',
+    label: '선봉(전열)',
   },
   {
     index: 'accessory',
-    value: 'normal',
-    label: '범용',
+    value: 'common',
+    label: '공용',
   },
   {
     index: 'accessory',
-    value: 'asw',
-    label: '대잠',
+    value: 'signiture',
+    label: '특수',
   },
-  {
-    index: 'accessory',
-    value: 'ss',
-    label: '잠수함',
-  },
-  {
-    index: 'accessory',
-    value: 'maritime',
-    label: '운송',
-  },
-  {
-    index: 'accessory',
-    value: 'repair',
-    label: '공작',
-  },
+
+  // {
+  //   index: 'accessory',
+  //   value: 'bb',
+  //   label: '전함',
+  // },
+  // {
+  //   index: 'accessory',
+  //   value: 'ac',
+  //   label: '항모',
+  // },
+  // {
+  //   index: 'accessory',
+  //   value: 'normal',
+  //   label: '범용',
+  // },
+  // {
+  //   index: 'accessory',
+  //   value: 'asw',
+  //   label: '대잠',
+  // },
+  // {
+  //   index: 'accessory',
+  //   value: 'ss',
+  //   label: '잠수함',
+  // },
+  // {
+  //   index: 'accessory',
+  //   value: 'maritime',
+  //   label: '운송',
+  // },
+  // {
+  //   index: 'accessory',
+  //   value: 'repair',
+  //   label: '공작',
+  // },
 
   {
     index: 'special',

@@ -149,6 +149,71 @@ const OBTAINS = [
     value: '리틀 학원에 어서오세요',
     label: 'images/event/Welcome_to_Little_Academy.webp',
   },
+  {
+    index: '이벤트',
+    value: '격창의 유니버스',
+    label: 'images/event/Universe_in_Unison.webp',
+  },
+  {
+    index: '이벤트',
+    value: '격주의 폴라리스',
+    label: 'images/event/Crescendo_of_Polaris.webp',
+  },
+  {
+    index: '이벤트',
+    value: '공명의 패션',
+    label: 'images/event/Heart-Linking_Harmony.webp',
+  },
+  {
+    index: '이벤트',
+    value: '철익 경풍',
+    label: 'images/event/Windborne_Steel_Wings.webp',
+  },
+  {
+    index: '이벤트',
+    value: '싸워라 로열 메이드 3rd',
+    label: 'images/event/Fight_On,_Royal_Maids!_(Part 3).webp',
+  },
+  {
+    index: '이벤트',
+    value: '제로부터 시작하는 마왕 토벌',
+    label: 'images/event/Rising_of_the_Ship_Heroes!.webp',
+  },
+  {
+    index: '이벤트',
+    value: '독수리의 서사곡',
+    label: "images/event/Aquilifer's_Ballade.webp",
+  },
+  {
+    index: '이벤트',
+    value: '오엽각 교차점',
+    label: 'images/event/Confluence of Nothingness.webp',
+  },
+  {
+    index: '이벤트',
+    value: '오아시스 옛담',
+    label: 'images/event/Reflections_of_the_Oasis.webp',
+  },
+  {
+    index: '이벤트',
+    value: '몽환의 간주곡',
+    label: 'images/event/Interlude_of_Illusions.webp',
+  },
+  {
+    index: '이벤트',
+    value: '저편에 핀 꽃의 향기',
+    label: "images/event/Spider_Lily's_Redolence.webp",
+  },
+  {
+    index: '이벤트',
+    value: '저편에 핀 꽃의 향기',
+    label: "images/event/Spider_Lily's_Redolence.webp",
+  },
+  {
+    index: '이벤트',
+    value: '정보 대항 모의 테스트',
+    label: 'images/event/Charge!_My_Trusty_Steeds!.webp',
+  },
 
   {
     index: '메인',

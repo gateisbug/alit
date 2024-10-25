@@ -10,7 +10,10 @@
 - 개발자용 리소스 : [개발자용 구글시트](https://docs.google.com/spreadsheets/d/1TdoZXjpm8QYNmvKM73QSFn9lAPDnWC-AtPzSR07KkGk/edit?usp=sharing)
 
 ## License
-이 프로젝트에서 사용하는 모든 내용과 이미지(이하 리소스)는 별도의 저작권자가 있으며, 각각 저작권자가 명시한 라이센스를 적용받습니다. 리소스를 제외한 모든 소스코드는 MIT License에 따라 이용하실 수 있습니다.
+이 프로젝트에서 사용하는 모든 내용과 이미지(이하 리소스)는 별도의 저작권자가 있으며, 각 리소스는 각 저작권자가 명시한 라이센스를 적용받습니다. 리소스를 제외한 모든 소스코드는 MIT License에 따라 이용하실 수 있습니다.
+- 장비설명회 JSON 데이터: [별도의 라이선스](./public/json/LICENSE)
+- image: [CC BY-NC-SA](./public/images/LICENSE)
+- 소스코드: [MIT LICENSE](./LICENSE)
 
 ## Release Note
 [RELEASE.md](./RELEASE.md)

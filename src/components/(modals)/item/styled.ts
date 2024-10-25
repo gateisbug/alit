@@ -146,13 +146,15 @@ export const StatSection = styled.div.attrs({
   gap: 12px;
 
   &[data-length='1'],
-  &[data-length='3'],
-  &[data-length='5'] {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
   &[data-length='2'],
+  &[data-length='3'] {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
   &[data-length='4'],
-  &[data-length='6'] {
+  &[data-length='5'],
+  &[data-length='6'],
+  &[data-length='7'],
+  &[data-length='8'] {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
@@ -160,19 +162,21 @@ export const StatSection = styled.div.attrs({
     line-height: 1em !important;
   }
 
-  @media (max-width: 480px) {
-    gap: 8px;
-  }
-
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     &[data-length='1'],
     &[data-length='2'],
     &[data-length='3'],
     &[data-length='4'],
     &[data-length='5'],
-    &[data-length='6'] {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    &[data-length='6'],
+    &[data-length='7'],
+    &[data-length='8'] {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
+  }
+
+  @media (max-width: 480px) {
+    gap: 8px;
   }
 `
 

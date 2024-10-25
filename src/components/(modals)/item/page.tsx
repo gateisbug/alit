@@ -195,7 +195,7 @@ export default function ItemModal({ item }: Props) {
           <Nation>{nationRender()}</Nation>
         </ObtainSection>
 
-        <StatSection data-length={Math.round((item?.status?.length ?? 8) / 2)}>
+        <StatSection data-length={Math.round(item?.status?.length ?? 8)}>
           {statRender()}
         </StatSection>
       </ItemModalBody>
