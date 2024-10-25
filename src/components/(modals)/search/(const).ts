@@ -109,11 +109,15 @@ const CATEGORY = Object.freeze([
       },
       {
         label: '전열',
-        link: '/item?category=accessory&division=frontline',
+        link: '/item?category=accessory&division=front',
       },
       {
         label: '후열',
-        link: '/item?category=accessory&division=backline',
+        link: '/item?category=accessory&division=back',
+      },
+      {
+        label: '공용',
+        link: '/item?category=accessory&division=common',
       },
       {
         label: '특수',
