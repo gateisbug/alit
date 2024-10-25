@@ -8,7 +8,6 @@ const ItemDataGrid = lazy(() => import('./(data-grid)/(data-grid).tsx'))
 export default function ItemPage() {
   return (
     <div className='wrap h100'>
-      {/* <div style={{ height: 52, width: '100%' }} /> */}
       <Page>
         <Suspense
           fallback={

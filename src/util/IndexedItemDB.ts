@@ -8,8 +8,8 @@ interface IDBItem extends IDBPDatabase {
 
 const DATABASE = 'alit-database'
 const ITEMTABLE = 'item-list'
-const VERSION = 4 /* @TODO: 버전업 시 수정 */
-// const PREV_VERSION = 3
+const VERSION = 5 /* @TODO: 버전업 시 수정 */
+// const PREV_VERSION = 4
 
 export default class IndexedItemDB {
   private static instance: IndexedItemDB | null = null
