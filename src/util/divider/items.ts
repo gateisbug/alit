@@ -91,17 +91,17 @@ const ITEMS = [
   },
   {
     index: 'accessory',
-    value: '설비',
+    value: 'accessory',
+    label: '설비',
+  },
+  {
+    index: 'accessory',
+    value: 'back',
     label: '주력(후열)',
   },
   {
     index: 'accessory',
-    value: 'backline',
-    label: '주력(후열)',
-  },
-  {
-    index: 'accessory',
-    value: 'frontline',
+    value: 'front',
     label: '선봉(전열)',
   },
   {
