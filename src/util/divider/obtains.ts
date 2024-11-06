@@ -41,7 +41,7 @@ const OBTAINS = [
   },
   {
     index: '이벤트',
-    value: '결상점 작전',
+    value: '결상점작전',
     label: 'images/event/Operation_Convergence',
   },
   {
@@ -106,11 +106,6 @@ const OBTAINS = [
   },
   {
     index: '이벤트',
-    value: '새벽의 어둠',
-    label: 'images/event/Darkness_Within_Dawn',
-  },
-  {
-    index: '이벤트',
     value: '영원한 밤의 환광',
     label: 'images/event/Aurora_Noctis',
   },
@@ -131,7 +126,7 @@ const OBTAINS = [
   },
   {
     index: '이벤트',
-    value: '결상점작전',
+    value: '결상점 작전',
     label: 'images/event/Operation_Convergence',
   },
   {
