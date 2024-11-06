@@ -214,6 +214,11 @@ const OBTAINS = [
     value: '정보 대항 모의 테스트',
     label: 'images/event/Charge!_My_Trusty_Steeds!',
   },
+  {
+    index: '이벤트',
+    value: '템페스타와 잠자는 바다',
+    label: 'images/event/Tempesta_and_the_Sleeping_Sea',
+  },
 
   {
     index: '메인',
