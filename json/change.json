@@ -1,8 +1,9 @@
 {
-  "version": "2.4.7",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.4.7",
+  "version": "2.4.8",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.4.8",
   "date": "2024-11-08",
   "patch": [
-    "템페스타와 잠든 바다 추가"
+    "템페스타와 잠든 바다 추가",
+    "귀중품 상자가 누락된 문제 수정"
   ]
 }
