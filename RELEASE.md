@@ -4,7 +4,7 @@
 ## 2.4.8
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.8)
 ### 2024-11-08, 2.4.8 패치내역
-- 최적화: 정적인 에셋 제공
+- 귀중품 상자가 누락된 문제 수정
 
 ## 2.4.7
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.7)
