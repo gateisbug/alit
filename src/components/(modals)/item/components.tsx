@@ -4,6 +4,7 @@ import { Fragment, ReactNode } from 'react'
 import styled from 'styled-components'
 
 import IconArrow from '@assets/icons/icon-arrow.tsx'
+import Image from '@components/(common)/image.tsx'
 import Tooltip from '@components/(common)/tooltip.tsx'
 
 interface BreadcrumbsProps {
@@ -37,7 +38,12 @@ export const ImageCard = styled.div.attrs<ImageCardProps>((props) => ({
   className: 'image-card pos-r flex row ai-c jc-c ov-h bb',
   children: (
     <>
-      <img src={props.$src} alt={props.$alt} />
+      <Image
+        src={`${props.$src}.webp`}
+        alt={props.$alt}
+        placeholder={`${props.$src}_lqip.webp`}
+        height={160}
+      />
       <span className='flex column ai-c jc-c pos-a bb'>{props.$body}</span>
     </>
   ),

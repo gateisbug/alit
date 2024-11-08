@@ -253,42 +253,11 @@ const ITEMS = [
     value: 'signiture',
     label: '특수',
   },
-
-  // {
-  //   index: 'accessory',
-  //   value: 'bb',
-  //   label: '전함',
-  // },
-  // {
-  //   index: 'accessory',
-  //   value: 'ac',
-  //   label: '항모',
-  // },
-  // {
-  //   index: 'accessory',
-  //   value: 'normal',
-  //   label: '범용',
-  // },
-  // {
-  //   index: 'accessory',
-  //   value: 'asw',
-  //   label: '대잠',
-  // },
-  // {
-  //   index: 'accessory',
-  //   value: 'ss',
-  //   label: '잠수함',
-  // },
-  // {
-  //   index: 'accessory',
-  //   value: 'maritime',
-  //   label: '운송',
-  // },
-  // {
-  //   index: 'accessory',
-  //   value: 'repair',
-  //   label: '공작',
-  // },
+  {
+    index: 'accessory',
+    value: 'sailing',
+    label: '범선',
+  },
 
   {
     index: 'special',

@@ -87,7 +87,7 @@ export default function ItemModal({ item }: Props) {
   const nationRender = useCallback(
     () => (
       <ImageCard
-        $src={`images/nation/${item.nation?.toLowerCase()}.webp`}
+        $src={`images/nation/${item.nation?.toLowerCase()}`}
         $alt={item.nation ?? 'Nation'}
         $body={
           <p className='s2 fwb'>

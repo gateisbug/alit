@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 interface ImageProps {
   src: string
   alt: string
-  width: number
-  height: number
+  width?: number
+  height?: number
   placeholder?: string
   priority?: boolean
   defaultImage?: string
@@ -30,7 +30,13 @@ function Image(props: ImageProps) {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setLink(src)
+          const img = new window.Image()
+          img.src = src
+
+          img.onload = () => {
+            setLink(src)
+          }
+          // setLink(src)
           observer.disconnect()
         }
       },
