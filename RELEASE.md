@@ -1,6 +1,11 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.4.7
+[releases](https://github.com/gateisbug/alit/releases/tag/2.4.7)
+### 2024-11-08, 2.4.7 패치내역
+- 템페스타와 잠든 바다 추가
+
 ## 2.4.6
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.6)
 ### 2024-10-26, 2.4.6 패치내역

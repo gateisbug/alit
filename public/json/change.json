@@ -1,8 +1,8 @@
 {
   "version": "2.4.7",
   "release": "https://github.com/gateisbug/alit/releases/tag/2.4.7",
-  "date": "2024-11-06",
+  "date": "2024-11-08",
   "patch": [
-    "템페스타 이벤트 선반영"
+    "템페스타와 잠든 바다 추가"
   ]
 }
