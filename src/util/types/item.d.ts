@@ -26,6 +26,7 @@ type ItemClass =
   | 'backline'
   | 'frontline'
   | 'signiture'
+  | 'sailing'
   | string
 
 type TierType = 'N' | 'R' | 'SR' | 'SSR' | 'UR' | string

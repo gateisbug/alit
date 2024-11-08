@@ -116,6 +116,10 @@ const CATEGORY = Object.freeze([
         link: '/item?category=accessory&division=back',
       },
       {
+        label: '범선',
+        link: '/item?category=accessory&division=sailing',
+      },
+      {
         label: '공용',
         link: '/item?category=accessory&division=common',
       },

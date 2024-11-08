@@ -211,7 +211,7 @@ const OBTAINS = [
   },
   {
     index: '이벤트',
-    value: '템페스타와 잠자는 바다',
+    value: '템페스타와 잠든 바다',
     label: 'images/event/Tempesta_and_the_Sleeping_Sea',
   },
 
@@ -264,6 +264,11 @@ const OBTAINS = [
     index: '설계도',
     value: '',
     label: 'images/obtain/augmentation',
+  },
+  {
+    index: '몰?루',
+    value: '',
+    label: 'images/obtain/unknown',
   },
 ]
 
