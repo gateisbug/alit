@@ -2,7 +2,7 @@
   "homepage": "https://gateisbug.github.io/alit/",
   "name": "alit",
   "private": true,
-  "version": "2.4.7",
+  "version": "2.4.8",
   "type": "module",
   "scripts": {
     "dev": "vite --port 9988",

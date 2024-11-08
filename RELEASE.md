@@ -1,6 +1,11 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.4.8
+[releases](https://github.com/gateisbug/alit/releases/tag/2.4.8)
+### 2024-11-08, 2.4.8 패치내역
+- 귀중품 상자가 누락된 문제 수정
+
 ## 2.4.7
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.7)
 ### 2024-11-08, 2.4.7 패치내역
