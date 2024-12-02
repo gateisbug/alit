@@ -1,9 +1,9 @@
 {
-  "version": "2.4.8",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.4.8",
-  "date": "2024-11-08",
+  "version": "2.4.9",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.4.9",
+  "date": "2024-12-02",
   "patch": [
-    "템페스타와 잠든 바다 추가",
-    "귀중품 상자가 누락된 문제 수정"
+    "원본 리소스 반영: 24.11.23",
+    "범선 특수장비 추가"
   ]
 }
