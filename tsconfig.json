@@ -1,7 +1,29 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+//  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./imager",
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    //    "declaration": true,
+    "declaration": false,
+    //    "declarationDir": "./dist/types",
+    "sourceMap": false,
+    "inlineSources": false,
+    "outDir": "./dist",
+    "types": ["node"],
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path */
+    "paths": {
+      "@src/*": ["./src/*"],
+    }
+  }
 }
