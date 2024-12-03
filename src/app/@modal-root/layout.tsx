@@ -47,9 +47,13 @@ export default function ModalRoot() {
       const overflow = document.body.getAttribute('style')
 
       if (!overflow) {
+        const hasScroll =
+          document.documentElement.scrollHeight >
+          document.documentElement.clientHeight
+
         document.body.setAttribute(
           'style',
-          !isMobile
+          !isMobile && hasScroll
             ? 'overflow:hidden;padding-right:17px;'
             : 'overflow:hidden;',
         )
