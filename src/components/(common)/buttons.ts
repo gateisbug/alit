@@ -1,7 +1,9 @@
-import { UIButton } from '@xui/button.ts'
+import ButtonStyle from '@parakeet/ui/button.style.ts'
 import styled from 'styled-components'
 
-export const LineButton = styled(UIButton)`
+export const LineButton = styled.button`
+  ${ButtonStyle};
+
   --button-bc: transparent;
   --button-fc: var(--primary);
   --button-lc: var(--lc-w);
@@ -23,9 +25,11 @@ export const LineButton = styled(UIButton)`
   padding: 8px;
 `
 
-export const Shortcut = styled(UIButton).attrs({
+export const Shortcut = styled.button.attrs({
   className: 'caption fwb',
 })`
+  ${ButtonStyle};
+
   --button-bc: #14171a;
   --button-fc: #b6bec9;
   --button-lc: #303840;

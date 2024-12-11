@@ -45,6 +45,7 @@ export default defineConfig({
       { find: '@views', replacement: p('./src/views') },
       { find: '@xui', replacement: p('./x-ui') },
       { find: '@xutil', replacement: p('./x-util') },
+      { find: '@parakeet', replacement: p('./xlib/parakeet') },
     ],
   },
   build: {

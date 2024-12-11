@@ -1,14 +1,16 @@
 // noinspection CssUnusedSymbol
 
-import { UIModalContainer } from '@xui/modal.ts'
+import { modalContainer } from '@parakeet/ui/modal.style.ts'
 import styled from 'styled-components'
 
 import { PortraitFrame } from '@components/(common)/portrait.tsx'
 
-export const ModalContainer = styled(UIModalContainer).attrs({
+export const ModalContainer = styled.section.attrs({
   className: 'flex column',
 })`
-  --modal-surface: var(--surface);
+  ${modalContainer};
+  --modal-bc: var(--surface);
+  --modal-shadow: 8px 12px 32px 0 rgba(0, 0, 51, 0.16);
 
   width: 100%;
   max-width: 960px;

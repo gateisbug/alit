@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d6f10c82-b9b7-48b9-9e01-64afb2f46ecc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/font/PretendardVariable.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RELEASE.md" beforeDir="false" afterPath="$PROJECT_DIR$/RELEASE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/combine.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/common-layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/common-typo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/typo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/json/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/json/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/json/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/json/item.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/json/change.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/json/change.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@modal-root/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@modal-root/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/item/(data-grid)/useInfiniteGrid.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/item/(data-grid)/useInfiniteGrid.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(common)/badge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(common)/badge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(common)/buttons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(common)/buttons.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(common)/loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(common)/loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(common)/modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(common)/modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(modals)/item/styled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(modals)/item/styled.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(modals)/noti/styled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(modals)/noti/styled.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(modals)/search/styled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(modals)/search/styled.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/fetchJson.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/fetchJson.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-ui/(legacy)/@modal-root/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-ui/(legacy)/@modal-root/modal-store.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-ui/badge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-ui/button.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-ui/loader.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-ui/modal.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-util/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/font/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x-util/useInfiniteScroll.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xlib/parakeet/ui/modal.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/xlib/parakeet/ui/modal.style.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2q0GhHab1FQgxH2KXohZAfDj6hd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/peter/alit/src/assets/font",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "C:\\peter\\alit\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\peter\\alit\\node_modules\\typescript\\lib"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\peter\alit\src\assets\font" />
+      <recent name="C:\peter\alit\src\assets\styles" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6f10c82-b9b7-48b9-9e01-64afb2f46ecc" name="Changes" comment="" />
+      <created>1733792197292</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733792197292</updated>
+      <workItem from="1733792198400" duration="5025000" />
+      <workItem from="1733802913759" duration="7432000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+  </component>
+</project>

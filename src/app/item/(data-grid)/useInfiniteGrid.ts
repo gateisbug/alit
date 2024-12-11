@@ -1,4 +1,4 @@
-import useInfiniteScroll from '@xutil/useInfiniteScroll.ts'
+import useInfiniteScroll from '@parakeet/util/useInfiniteScroll.ts'
 import { useEffect, useState } from 'react'
 
 const LOADER = 10

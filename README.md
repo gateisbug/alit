@@ -18,6 +18,13 @@
 ## Release Note
 [RELEASE.md](./RELEASE.md)
 
+## Installation
+```shell
+git clone --recurse-submodules https://github.com/gateisbug/alit.git # 서브모듈과 함께 clone
+git pull --recurse-submodules # 풀 받을때 서브모듈 업데이트
+git submodule update --remote # 클론한 리포지토리에서 서브모듈 업데이트
+```
+
 ## Contact
 - [버그 또는 기능 요청](https://github.com/gateisbug/alit/issues)
 - [개발 예정 항목](https://github.com/gateisbug/alit/milestones)
