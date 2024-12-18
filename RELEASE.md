@@ -5,6 +5,7 @@
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.10)
 ### 2024-12-11, 2.4.10 패치내역
 - 모듈 최적화
+- CSS 오류 수정
 
 ## 2.4.9
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.9)
