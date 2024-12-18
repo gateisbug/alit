@@ -1,7 +1,7 @@
 {
   "version": "2.4.10",
   "release": "https://github.com/gateisbug/alit/releases/tag/2.4.10",
-  "date": "2024-12-11",
+  "date": "2024-12-18",
   "patch": [
     "모듈 최적화",
     "CSS 오류 수정"
