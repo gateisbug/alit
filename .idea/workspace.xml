@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6f10c82-b9b7-48b9-9e01-64afb2f46ecc" name="Changes" comment="[2.4.10] CI/CD 수정&#10;- github actions가 submodule을 추적하도록 수정">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/(modals)/item/styled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/(modals)/item/styled.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +41,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/peter/alit/src/assets/font",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "C:\\peter\\alit\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\peter\\alit\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/peter/alit/src/assets/font&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\peter\\alit\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\peter\\alit\\node_modules\\typescript\\lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\peter\alit\src\assets\font" />
@@ -78,7 +79,11 @@
       <option name="presentableId" value="Default" />
       <updated>1733792197292</updated>
       <workItem from="1733792198400" duration="5025000" />
-      <workItem from="1733802913759" duration="8438000" />
+      <workItem from="1733802913759" duration="13526000" />
+      <workItem from="1733897153838" duration="7000" />
+      <workItem from="1733897166447" duration="598000" />
+      <workItem from="1734304637886" duration="13098000" />
+      <workItem from="1734390616208" duration="20440000" />
     </task>
     <task id="LOCAL-00001" summary="[2.4.10] 모듈 최적화&#10;- submodule 추가&#10;- json 이름 변경&#10;- css 분할&#10;- font 수정">
       <option name="closed" value="true" />
@@ -96,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733879056537</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[2.4.10] CI/CD 수정&#10;- github actions가 submodule을 추적하도록 수정">
+      <option name="closed" value="true" />
+      <created>1733879542154</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733879542154</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

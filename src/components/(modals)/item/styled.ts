@@ -179,6 +179,17 @@ export const StatSection = styled.div.attrs({
 
   @media (max-width: 480px) {
     gap: 8px;
+
+    &[data-length='1'],
+    &[data-length='2'],
+    &[data-length='3'],
+    &[data-length='4'],
+    &[data-length='5'],
+    &[data-length='6'],
+    &[data-length='7'],
+    &[data-length='8'] {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
   }
 `
 
