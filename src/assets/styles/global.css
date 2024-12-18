@@ -5,13 +5,16 @@
 * Browsers: cover 99.5%
 */
 
+@import './reset.css';
+@import './layout.css';
+@import './typo.css';
 @import './theme.css';
+/*@import '../font/fonts.css';*/
 
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
-    'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
-    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Roboto,
+    'Noto Sans KR', 'Segoe UI', 'Pretendard Variable', Pretendard,
+    'Malgun Gothic', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 
@@ -42,6 +45,6 @@ body {
 }
 
 mark {
-  color: #1F3143;
+  color: #1f3143;
   background-color: #fd9532;
 }

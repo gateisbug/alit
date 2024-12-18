@@ -16,7 +16,6 @@ build
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea/workspace.xml
 .DS_Store
 *.suo
 *.ntvs*

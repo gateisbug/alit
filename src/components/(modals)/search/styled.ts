@@ -1,13 +1,15 @@
-import { UIModalContainer } from '@xui/modal.ts'
+import { modalContainer } from '@parakeet/ui/modal.style.ts'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Shortcut as UIShortcut } from '@components/(common)/buttons.ts'
 
-export const ModalContainer = styled(UIModalContainer).attrs({
+export const ModalContainer = styled.section.attrs({
   className: 'flex column',
 })`
-  --modal-surface: var(--surface);
+  ${modalContainer};
+  --modal-bc: var(--surface);
+  --modal-shadow: 8px 12px 32px 0 rgba(0, 0, 51, 0.16);
 
   width: 100%;
   max-width: 640px;

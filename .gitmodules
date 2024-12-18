@@ -1,0 +1,3 @@
+[submodule "xlib/parakeet"]
+	path = xlib/parakeet
+	url = https://github.com/gateisbug/parakeet.git

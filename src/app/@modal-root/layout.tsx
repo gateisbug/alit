@@ -1,12 +1,20 @@
-import { UIBackdrop } from '@xui/modal.ts'
+import backdrop from '@parakeet/ui/backdrop.style.ts'
 import { type MouseEvent, useCallback, useEffect, useMemo } from 'react'
 import { isMobile } from 'react-device-detect'
 import { createPortal } from 'react-dom'
 import { useSearchParams } from 'react-router-dom'
+import styled from 'styled-components'
 
 import useModalStore from '@util/store/modal.ts'
 
 const MODALID = 'item-modal'
+
+const Backdrop = styled.div`
+  ${backdrop};
+
+  --backdrop-bc: rgba(0, 0, 0, 0.5);
+  --backdrop-z: 1100;
+`
 
 export default function ModalRoot() {
   const { lists } = useModalStore()
@@ -43,10 +51,14 @@ export default function ModalRoot() {
     // const isModal = document.getElementById(MODALID)
     const modal = searchParams.get('modal')
     if (modal !== null) {
+      // @COMMENT: 스크롤바 유무를 확인하고 flag에 결과를 담기
+      const hasScrollbar =
+        window.innerWidth > document.documentElement.clientWidth
+
       // @COMMENT: 만약 모달이 처음 열린다면 스크롤 방지 스타일 추가
       const overflow = document.body.getAttribute('style')
 
-      if (!overflow) {
+      if (hasScrollbar && !overflow) {
         document.body.setAttribute(
           'style',
           !isMobile
@@ -61,7 +73,7 @@ export default function ModalRoot() {
 
   return find
     ? createPortal(
-        <UIBackdrop
+        <Backdrop
           onClick={(e) => {
             modelOnClickAway(e, find?.id)
           }}
@@ -69,7 +81,7 @@ export default function ModalRoot() {
           id={find?.id}
         >
           {find?.children}
-        </UIBackdrop>,
+        </Backdrop>,
         document.body,
       )
     : null

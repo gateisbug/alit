@@ -50,8 +50,11 @@
       ],
       "@xutil/*": [
         "x-util/*"
+      ],
+      "@parakeet/*": [
+        "xlib/parakeet/*"
       ]
     }
   },
-  "include": ["src", "x-ui", "x-util"]
+  "include": ["src", "x-ui", "x-util", "xlib"]
 }

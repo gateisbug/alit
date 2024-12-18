@@ -1,7 +1,8 @@
-import { UIBadge } from '@xui/badge.ts'
+import badgeStyle from '@parakeet/ui/badge.style.ts'
 import styled from 'styled-components'
 
-export const Badge = styled(UIBadge)`
+export const Badge = styled.span`
+  ${badgeStyle};
   --badge-bc: #fd5361;
 
   width: 8px;
