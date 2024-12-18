@@ -12,9 +12,10 @@
 /*@import '../font/fonts.css';*/
 
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Roboto,
-    'Noto Sans KR', 'Segoe UI', 'Pretendard Variable', Pretendard,
-    'Malgun Gothic', sans-serif;
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Roboto,*/
+  /*  'Noto Sans KR', 'Segoe UI', 'Pretendard Variable', Pretendard,*/
+  /*  'Malgun Gothic', sans-serif;*/
+  font-family: 'Pretendard Variable', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 

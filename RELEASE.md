@@ -1,6 +1,14 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.5.0
+[releases](https://github.com/gateisbug/alit/releases/tag/2.5.0)
+### 2024-12-31, 2.5.0 패치내역
+- 페이지 스타일 수정
+- 검색창 사이즈 확장
+- 필터 모달 추가
+- 타블렛, 모바일에서 접근 가능한 스피드 다이얼 추가
+
 ## 2.4.10
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.10)
 ### 2024-12-11, 2.4.10 패치내역
