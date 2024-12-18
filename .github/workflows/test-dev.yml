@@ -15,7 +15,7 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
 
       - name: Install dependencies
         run: yarn install
