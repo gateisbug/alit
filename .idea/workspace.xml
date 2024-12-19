@@ -4,174 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6f10c82-b9b7-48b9-9e01-64afb2f46ecc" name="Changes" comment="[2.4.10] 토큰 롤백&#10;- 토큰 롤백">
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13440.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13440_lqip.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13440_x48.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13460.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13460_lqip.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13460_x48.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13480.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13480_lqip.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13480_x48.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13500.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13500_lqip.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13500_x48.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13520.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13520_lqip.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/items/Augment_13520_x48.webp" afterDir="false" />
-    <list default="true" id="d6f10c82-b9b7-48b9-9e01-64afb2f46ecc" name="Changes" comment="[2.4.10] 버전 수정&#10;- 버전 수정">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RELEASE.md" beforeDir="false" afterPath="$PROJECT_DIR$/RELEASE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RELEASE.md" beforeDir="false" afterPath="$PROJECT_DIR$/RELEASE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/json/change.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/json/change.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/json/item.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/json/item.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@global-header/(buttons)/noti.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@global-header/(buttons)/noti.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/IndexedItemDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/IndexedItemDB.ts" afterDir="false" />
+    <list default="true" id="77a331e5-321d-464d-a11b-97833d7e817a" name="Changes" comment="[2.4.11] JSON 추가&#10;- 유바리, 론, 생루이, 보그, 호쇼 전무 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="SET_USER_NAME_GLOBALLY" value="false" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="657ed694-1876-4cd5-a734-b4f9478172b1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2q0GhHab1FQgxH2KXohZAfDj6hd" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/peter/alit/src/assets/font&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\peter\\alit\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\peter\\alit\\node_modules\\typescript\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "dev",
+    "prettierjs.PrettierConfiguration.Package": "C:\\peter\\alit\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\peter\\alit\\node_modules\\typescript\\lib"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\peter\alit\src\assets\font" />
-      <recent name="C:\peter\alit\src\assets\styles" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+}]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="d6f10c82-b9b7-48b9-9e01-64afb2f46ecc" name="Changes" comment="" />
-      <created>1733792197292</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1733792197292</updated>
-      <workItem from="1733792198400" duration="5025000" />
-      <workItem from="1733802913759" duration="13526000" />
-      <workItem from="1733897153838" duration="7000" />
-      <workItem from="1733897166447" duration="598000" />
-      <workItem from="1734304637886" duration="13098000" />
-      <workItem from="1734390616208" duration="21510000" />
-    </task>
-    <task id="LOCAL-00001" summary="[2.4.10] 모듈 최적화&#10;- submodule 추가&#10;- json 이름 변경&#10;- css 분할&#10;- font 수정">
-      <option name="closed" value="true" />
-      <created>1733878714620</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1733878714620</updated>
-    </task>
-    <task id="LOCAL-00002" summary="[2.4.10] CI/CD 수정&#10;- github actions가 submodule을 추적하도록 수정">
-      <option name="closed" value="true" />
-      <created>1733879056537</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1733879056537</updated>
-    </task>
-    <task id="LOCAL-00003" summary="[2.4.10] CI/CD 수정&#10;- github actions가 submodule을 추적하도록 수정">
-      <option name="closed" value="true" />
-      <created>1733879542154</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1733879542154</updated>
-    </task>
-    <task id="LOCAL-00004" summary="[2.4.10] CSS 오류 수정&#10;- 320px 화면에서 item-modal에 가로스크롤이 발생하는 문제 수정">
-      <option name="closed" value="true" />
-      <created>1734501080236</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1734501080236</updated>
-    </task>
-    <task id="LOCAL-00005" summary="[2.4.10] Docs 수정 및 토큰 단일화&#10;- Release에 커밋 내용 추가&#10;- secrets 토큰 단일화">
-      <option name="closed" value="true" />
-      <created>1734501207761</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1734501207761</updated>
-    </task>
-    <task id="LOCAL-00006" summary="[2.4.10] 토큰 롤백&#10;- 토큰 롤백">
-      <option name="closed" value="true" />
-      <created>1734501257050</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1734501257050</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="[2.4.10] 모듈 최적화&#10;- submodule 추가&#10;- json 이름 변경&#10;- css 분할&#10;- font 수정" />
-    <MESSAGE value="[2.4.10] CI/CD 수정&#10;- github actions가 submodule을 추적하도록 수정" />
-    <MESSAGE value="[2.4.10] CSS 오류 수정&#10;- 320px 화면에서 item-modal에 가로스크롤이 발생하는 문제 수정" />
-    <MESSAGE value="[2.4.10] Docs 수정 및 토큰 단일화&#10;- Release에 커밋 내용 추가&#10;- secrets 토큰 단일화" />
-    <MESSAGE value="[2.4.10] 토큰 롤백&#10;- 토큰 롤백" />
-    <option name="LAST_COMMIT_MESSAGE" value="[2.4.10] 토큰 롤백&#10;- 토큰 롤백" />
+    <MESSAGE value="[2.4.11] JSON 추가&#10;- 유바리, 론, 생루이, 보그, 호쇼 전무 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[2.4.11] JSON 추가&#10;- 유바리, 론, 생루이, 보그, 호쇼 전무 추가" />
   </component>
 </project>
