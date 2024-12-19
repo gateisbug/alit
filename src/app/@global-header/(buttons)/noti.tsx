@@ -50,7 +50,7 @@ function useNotification() {
       const response =
         await fetch(
           'json/change.json',
-        ) /* @TODO: [2.4.10] 버전업 시 json 수정 */
+        ) /* @TODO: [2.4.11] 버전업 시 json 수정 */
       // noinspection UnnecessaryLocalVariableJS
       const json =
         ((await response.json()) as unknown as IChangeLog) ?? DEFAULT_CHANGE

@@ -1,9 +1,14 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.4.11
+[releases](https://github.com/gateisbug/alit/releases/tag/2.4.11)
+### 2024-12-20, 2.4.11 패치내역
+- 유바리, 론, 생루이, 보그, 호쇼 전무 추가
+
 ## 2.4.10
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.10)
-### 2024-12-11, 2.4.10 패치내역
+### 2024-12-18, 2.4.10 패치내역
 - 모듈 최적화
 - CSS 오류 수정
 
