@@ -1,60 +1,68 @@
-import { lazy, useEffect } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import debounce from 'lodash-es/debounce'
+import {
+  ChangeEvent,
+  KeyboardEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react'
 
 import IconSearch from '@assets/icons/icon-search.tsx'
-import { SEARCHMODALKEY } from '@components/(modals)/(modal-keys).ts'
-import { SearchButton, Shortcut } from '@components/@global-header/(buttons).ts'
-import useModalStore from '@util/store/modal.ts'
+import {
+  Icon,
+  InputBox,
+  InputRoot,
+  Shortcut,
+} from '@components/@global-header/search.ts'
 
-const SearchModal = lazy(() => import('@components/(modals)/search/page.tsx'))
+export default function Search() {
+  const [searchKeyword, setSearchKeyword] = useState('')
 
-function useSearch() {
-  const { modalAdd } = useModalStore()
-  const [searchParams, setSearchParams] = useSearchParams()
+  const onChangeInput = useCallback(
+    debounce((e: ChangeEvent<HTMLInputElement>) => {
+      setSearchKeyword(e.target.value)
+    }, 1000),
+    [],
+  )
 
-  const clickHandler = () => {
-    searchParams.set('modal', SEARCHMODALKEY)
-    setSearchParams(searchParams)
-  }
-
-  useEffect(() => {
-    modalAdd({
-      id: SEARCHMODALKEY,
-      children: <SearchModal />,
-    })
+  const onEnter = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      setSearchKeyword((e.target as HTMLInputElement)?.value ?? '')
+    }
   }, [])
 
   useEffect(() => {
-    const modal = searchParams.get('modal')
-    if (modal !== null) return
+    // TODO: searchKeyword 변경 시 검색됨
+    console.log(searchKeyword)
+  }, [searchKeyword])
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+  useEffect(() => {
+    const keypressHandler = (e: any) => {
       if (e.ctrlKey && e.key === 'k') {
         e.preventDefault()
-        clickHandler()
+        const search = document.getElementById('search-input')
+        if (search) search.focus()
       }
     }
 
-    window.addEventListener('keydown', handleKeyDown)
-    // eslint-disable-next-line consistent-return
+    window.addEventListener('keydown', keypressHandler)
     return () => {
-      window.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('keydown', keypressHandler)
     }
-  }, [searchParams])
-
-  return {
-    clickHandler,
-  }
-}
-
-export default function Search() {
-  const { clickHandler } = useSearch()
+  }, [])
 
   return (
-    <SearchButton onClick={clickHandler} aria-label='검색 버튼'>
-      <IconSearch />
-      <span className='caption desktop span'>Search...</span>
+    <InputBox title='검색' aria-label='검색'>
+      <Icon>
+        <IconSearch />
+      </Icon>
+      <InputRoot
+        id='search-input'
+        onChange={onChangeInput}
+        onKeyDown={onEnter}
+        placeholder='Search...'
+      />
       <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>
-    </SearchButton>
+    </InputBox>
   )
 }

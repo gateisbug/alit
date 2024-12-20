@@ -1,37 +1,36 @@
-import { Link } from 'react-router-dom'
+import { useMediaQuery } from 'react-responsive'
 
-import { Header, Links, Logo } from '@components/@global-header/styled.ts'
+import { Header, Links, SearchArea } from '@components/@global-header/styled.ts'
 
 import {
   Search,
   ArcaLiveLink,
   GithubLink,
   Notification,
+  Logo,
+  Filter,
 } from './(buttons)/index.ts'
 
 export default function GlobalHeader() {
-  // noinspection HtmlUnknownTarget
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
+
   return (
     <Header>
       <div className='wrap flex jc-sb ai-c bb'>
-        <Logo>
-          <Link to='/item' className='flex'>
-            <img
-              src='assets/logo.png'
-              width={36}
-              height={36}
-              alt='logo'
-              className='b2'
-            />
-          </Link>
-        </Logo>
+        <Logo />
 
-        <Links>
+        <SearchArea>
           <Search />
-          <ArcaLiveLink />
-          <GithubLink />
-          <Notification />
-        </Links>
+        </SearchArea>
+
+        {!isTabletOrMobile && (
+          <Links>
+            <Filter />
+            <Notification />
+            <ArcaLiveLink />
+            <GithubLink />
+          </Links>
+        )}
       </div>
     </Header>
   )

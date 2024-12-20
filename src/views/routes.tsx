@@ -8,14 +8,16 @@ import {
 
 import RootLayout from '@app/layout.tsx'
 
+const ItemLayout = lazy(async () => import('../app/item/layout.tsx'))
 const ItemPage = lazy(async () => import('../app/item/page.tsx'))
 
 const routes = createRoutesFromElements(
   <Route path='/' element={<RootLayout />}>
     <Route index element={<Navigate to='item' replace />} />
-    <Route path='item'>
+    <Route path='item' element={<ItemLayout />}>
       <Route index element={<ItemPage />} />
     </Route>
+    <Route path='*' element={<Navigate to='item' replace />} />
   </Route>,
 )
 

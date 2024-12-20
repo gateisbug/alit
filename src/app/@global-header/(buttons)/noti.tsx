@@ -94,7 +94,11 @@ export default function Notification() {
   const { notOpen, handlerNotiButton } = useNotification()
 
   return (
-    <BadgeButton onClick={handlerNotiButton} aria-label='변경사항 보기'>
+    <BadgeButton
+      onClick={handlerNotiButton}
+      title='변경사항 보기'
+      aria-label='변경사항 보기'
+    >
       <IconBell />
       <Badge data-show={notOpen} />
     </BadgeButton>

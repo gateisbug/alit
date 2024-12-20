@@ -1,4 +1,6 @@
+export { default as Logo } from './logo.tsx'
 export { default as ArcaLiveLink } from './link-arcalive.tsx'
 export { default as GithubLink } from './link-github.tsx'
 export { default as Search } from './search.tsx'
 export { default as Notification } from './noti.tsx'
+export { default as Filter } from './filter.tsx'

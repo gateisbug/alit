@@ -6,6 +6,7 @@ export default function GithubLink() {
     <LinkButton
       href='https://github.com/gateisbug/alit'
       aria-label='깃허브 리드미 페이지로 이동'
+      title='깃허브 리드미 페이지로 이동'
     >
       <IconGithub />
     </LinkButton>

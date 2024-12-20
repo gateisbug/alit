@@ -5,7 +5,7 @@ export const Page = styled.main.attrs({
 })`
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  padding: 0 24px 24px;
 
   margin: 0 auto;
 `
