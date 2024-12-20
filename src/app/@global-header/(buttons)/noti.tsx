@@ -48,9 +48,7 @@ function useNotification() {
   const fetchLog = useCallback(async () => {
     try {
       const response =
-        await fetch(
-          'json/change.json',
-        ) /* @TODO: [2.4.11] 버전업 시 json 수정 */
+        await fetch('json/change.json') /* @TODO: [2.5.0] 버전업 시 json 수정 */
       // noinspection UnnecessaryLocalVariableJS
       const json =
         ((await response.json()) as unknown as IChangeLog) ?? DEFAULT_CHANGE
