@@ -1,8 +1,11 @@
 {
-  "version": "2.4.11",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.4.11",
-  "date": "2024-12-20",
+  "version": "2.5.0",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.5.0",
+  "date": "2024-12-31",
   "patch": [
-    "유바리, 론, 생루이, 보그, 호쇼 전무 추가"
+    "페이지 스타일 수정",
+    "검색창 사이즈 확장",
+    "필터 모달 추가",
+    "타블렛, 모바일에서 접근 가능한 스피드 다이얼 추가"
   ]
 }
