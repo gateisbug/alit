@@ -135,6 +135,7 @@
   position: absolute;
 }
 .pos-s {
+  /*noinspection CssInvalidPropertyValue*/
   position: -webkit-sticky;
   position: sticky;
 }
