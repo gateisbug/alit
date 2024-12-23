@@ -39,6 +39,8 @@ export const ModalBody = styled.div.attrs({
 
 export const ReleaseLink = styled(Link).attrs({
   children: 'Release',
+  rel: 'noopener noreferrer',
+  target: '_blank',
 })`
   display: block;
   width: fit-content;

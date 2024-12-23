@@ -17,3 +17,10 @@ export const BadgeButton = styled(LineButton).attrs({
   height: 36px;
   padding: 5px;
 `
+
+export const ActionButton = styled(LineButton).attrs({
+  className: 'pos-r',
+})`
+  height: 36px;
+  padding: 5px;
+`
