@@ -11,13 +11,12 @@ import { useSearchParams } from 'react-router-dom'
 
 import Loader from '@components/(common)/loader.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
-import {
-  ITEMMODALKEY,
-  SEARCHMODALKEY,
-} from '@components/(modals)/(modal-keys).ts'
+import { ITEMMODALKEY } from '@components/(modals)/(modal-keys).ts'
 import { ResultItem } from '@components/(modals)/search/styled.ts'
 import IndexedItemDB from '@util/IndexedItemDB.ts'
 import useModalStore from '@util/store/modal.ts'
+
+const SEARCHMODALKEY = 'search-modal'
 
 const ItemModal = lazy(() => import('@components/(modals)/item/page.tsx'))
 

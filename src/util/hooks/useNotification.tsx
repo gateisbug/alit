@@ -1,7 +1,6 @@
 import { lazy, useCallback, useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-import { NOTIMODALKEY } from '@components/(modals)/(modal-keys).ts'
 import useModalStore from '@util/store/modal.ts'
 
 const DEFAULT_CHANGE: IChangeLog = {
@@ -11,6 +10,7 @@ const DEFAULT_CHANGE: IChangeLog = {
   patch: [],
   isOpen: true,
 }
+const NOTIMODALKEY = 'notification-modal'
 
 const NotiModal = lazy(() => import('@components/(modals)/noti/page.tsx'))
 

@@ -27,8 +27,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --link: #66b3ff; /* link color */
-    --link-lc: rgba(0, 97, 194, 0.6);
-    --link-bc: rgba(0, 59, 117, 0.4);
+    --link-lc: #0061C2;
+    --link-bc: #003B75;
 
     --scroll: #686868;
     --surface: #101418; /* background default */
