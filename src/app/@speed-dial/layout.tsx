@@ -26,6 +26,7 @@ export default function Layout() {
       }}
     >
       <SpeedDialButton
+        aria-label='접근 가능한 메뉴 보기'
         data-active={state}
         onClick={() => {
           setState(!state)
