@@ -9,7 +9,7 @@ import {
   Notification,
   Logo,
   Filter,
-} from './(buttons)/index.ts'
+} from '@app/@global-header/(interaction)/index.ts'
 
 export default function GlobalHeader() {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
