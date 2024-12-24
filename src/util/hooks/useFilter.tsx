@@ -3,9 +3,11 @@ import { useSearchParams } from 'react-router-dom'
 
 import useModalStore from '@util/store/modal.ts'
 
-const FILTERMODALKEY = 'filter-modal'
+const FILTERMODALKEY = 'item-filter-modal'
 
-const FilterModal = lazy(() => import('@components/(modals)/filter/page.tsx'))
+const ItemFilterModal = lazy(
+  () => import('@components/(modals)/filter-item/page.tsx'),
+)
 
 export default function useFilter() {
   const { modalAdd } = useModalStore()
@@ -19,7 +21,7 @@ export default function useFilter() {
   useEffect(() => {
     modalAdd({
       id: FILTERMODALKEY,
-      children: <FilterModal />,
+      children: <ItemFilterModal />,
     })
   }, [])
 

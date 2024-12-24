@@ -6,7 +6,7 @@ import {
   MINOR,
   NATION,
   RARITY,
-} from '@components/(modals)/filter/(const).ts'
+} from '@components/(modals)/filter-item/(const).ts'
 import {
   FilterItem,
   FilterList,
@@ -15,7 +15,7 @@ import {
   ModalContainer,
   ModalSection,
   SectionHeader,
-} from '@components/(modals)/filter/styled.tsx'
+} from '@components/(modals)/filter-item/styled.tsx'
 
 interface Props<T> {
   header: string
@@ -55,7 +55,7 @@ function Section<T extends string | string[]>({
   )
 }
 
-export default function FilterModal() {
+export default function ItemFilterModal() {
   const [searchParams, setSearchParams] = useSearchParams()
 
   const [major, setMajor] = useState(searchParams.get('major') ?? '')
@@ -70,34 +70,45 @@ export default function FilterModal() {
   )
 
   useEffect(() => {
-    setMinor([])
-  }, [major])
-
-  useEffect(() => {
-    if (major.length) searchParams.set('major', major)
-    else searchParams.delete('major')
+    if (major.length) {
+      const get = searchParams.get('major') ?? ''
+      if (get !== major) searchParams.set('major', major)
+      else return
+    } else searchParams.delete('major')
 
     searchParams.delete('minor')
     setSearchParams(searchParams)
   }, [major])
 
   useEffect(() => {
-    if (minor.length) searchParams.set('minor', minor.join('_'))
-    else searchParams.delete('minor')
+    if (minor.length) {
+      const get = searchParams.get('minor') ?? ''
+      const join = minor.join('_')
+      if (get !== join) searchParams.set('minor', join)
+      else return
+    } else searchParams.delete('minor')
 
     setSearchParams(searchParams)
   }, [minor])
 
   useEffect(() => {
-    if (rarity.length) searchParams.set('rarity', rarity.join('_'))
-    else searchParams.delete('rarity')
+    if (rarity.length) {
+      const get = searchParams.get('rarity') ?? ''
+      const join = rarity.join('_')
+      if (get !== join) searchParams.set('rarity', join)
+      else return
+    } else searchParams.delete('rarity')
 
     setSearchParams(searchParams)
   }, [rarity])
 
   useEffect(() => {
-    if (nation.length) searchParams.set('nation', nation.join('_'))
-    else searchParams.delete('nation')
+    if (nation.length) {
+      const get = searchParams.get('nation') ?? ''
+      const join = nation.join('_')
+      if (get !== join) searchParams.set('nation', join)
+      else return
+    } else searchParams.delete('nation')
 
     setSearchParams(searchParams)
   }, [nation])
@@ -120,9 +131,13 @@ export default function FilterModal() {
           header='대분류'
           items={MAJOR}
           state={major}
-          onClickAll={() => setMajor('')}
+          onClickAll={() => {
+            setMajor('')
+            setMinor([])
+          }}
           onClickItem={(v) => {
             setMajor(v)
+            setMinor([])
           }}
         />
 
