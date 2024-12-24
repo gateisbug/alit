@@ -19,7 +19,7 @@ export default defineConfig({
       plugins: [
         autoprefixer,
         postcssPresetEnv({
-          stage: 1, //@COMMENT: stage: 0 은 모든 CSS 특징을 활성화합니다.
+          stage: 1, // COMMENT: stage: 0 은 모든 CSS 특징을 활성화합니다.
           minimumVendorImplementations: 2,
         }),
       ],

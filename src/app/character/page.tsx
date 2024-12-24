@@ -1,13 +1,11 @@
-import { lazy, Suspense } from 'react'
+import { Suspense } from 'react'
 
 import Loader from '@components/(common)/loader.tsx'
 import { Page } from '@components/(common)/styled.ts'
 
-const ItemDataGrid = lazy(() => import('./(data-grid)/(data-grid).tsx'))
-
-export default function ItemPage() {
+export default function CharacterPage() {
   return (
-    <div className='wrap h100'>
+    <div>
       <Page>
         <Suspense
           fallback={
@@ -16,7 +14,7 @@ export default function ItemPage() {
             </div>
           }
         >
-          <ItemDataGrid />
+          함순이 리스트
         </Suspense>
       </Page>
     </div>
