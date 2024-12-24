@@ -26,6 +26,7 @@ import {
   StatSection,
   TitleSection,
 } from './styled.ts'
+import highlightText from '@util/highlightText.tsx'
 
 interface Props {
   item: ItemInterface
@@ -33,6 +34,7 @@ interface Props {
 
 export default function ItemModal({ item }: Props) {
   const [searchParams, setSearchParams] = useSearchParams()
+  const keyword = searchParams.get('keyword')
 
   const onClose = () => {
     searchParams.delete('modal')
@@ -152,8 +154,12 @@ export default function ItemModal({ item }: Props) {
           />
 
           <TitleSection>
-            <h2 className='s1 fcs'>{item?.name ?? '-'}</h2>
-            <h3 className='b1 fwm fcw'>{item?.nickname ?? '-'}</h3>
+            <h2 className='s1 fcs'>
+              {highlightText(item?.name ?? '-', keyword)}
+            </h2>
+            <h3 className='b1 fwm fcw'>
+              {highlightText(item?.nickname ?? '-', keyword)}
+            </h3>
             <Breadcrumbs
               $items={[
                 ITEMS.find(
@@ -184,7 +190,9 @@ export default function ItemModal({ item }: Props) {
 
             {item?.explain?.length ? (
               <ExplainSection>
-                {item?.explain?.map((v) => <p key={v}>{v}</p>)}
+                {item?.explain?.map((v) => (
+                  <p key={v}>{highlightText(v, keyword)}</p>
+                ))}
               </ExplainSection>
             ) : null}
           </ExplainTagContainer>

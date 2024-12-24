@@ -9,6 +9,7 @@ export default function useItemData() {
   const minorCategory = searchParams.get('minor')
   const rarity = searchParams.get('rarity')
   const nation = searchParams.get('nation')
+  const keyword = searchParams.get('keyword')
 
   const [raw, setRaw] = useState<ItemInterface[]>([])
   const [data, setData] = useState(raw)
@@ -24,14 +25,16 @@ export default function useItemData() {
   }, [])
 
   useEffect(() => {
+    let rawData: ItemInterface[]
+
     if (!majorCategory && !minorCategory && !rarity && !nation) {
-      setData(raw)
+      rawData = raw
     } else {
       const minor = minorCategory?.split('_') ?? []
       const rare = rarity?.split('_') ?? []
       const nat = nation?.split('_') ?? []
 
-      const d = raw.filter((v) => {
+      rawData = raw.filter((v) => {
         const domain =
           majorCategory !== null ? v.domain === majorCategory : true
         const classes = minor.length > 0 ? minor.includes(v.class ?? '') : true
@@ -42,9 +45,19 @@ export default function useItemData() {
         // return flag && minorCategory.includes(v.class ?? '')
         return domain && classes && tier && ticker
       })
-      setData(d)
     }
-  }, [raw, majorCategory, minorCategory, rarity, nation])
+
+    if (keyword) {
+      const name = rawData?.filter((v) => v.name?.includes(keyword))
+      const nickname = rawData?.filter((v) => v.nickname?.includes(keyword))
+      const explain = rawData?.filter((v) =>
+        v.explain?.join('. ').includes(keyword),
+      )
+      setData(Array.from(new Set(name.concat(nickname, explain))))
+    } else {
+      setData(rawData)
+    }
+  }, [raw, keyword, majorCategory, minorCategory, rarity, nation])
 
   return data
 }

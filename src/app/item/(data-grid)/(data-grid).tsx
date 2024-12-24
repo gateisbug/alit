@@ -21,43 +21,51 @@ function useDataGrid() {
   const { current, visibleCount, loaderRef, LOADER } = useInfiniteGrid(data)
   const { modalAdd } = useModalStore()
   const [searchParams, setSearchParams] = useSearchParams()
+  const keyword = searchParams.get('keyword') ?? undefined
 
-  const renderText = useCallback((d: ItemInterface, h: keyof ItemInterface) => {
-    let classname: string = ''
-    let value: ReactNode
+  const renderText = useCallback(
+    (d: ItemInterface, h: keyof ItemInterface) => {
+      let classname: string = ''
+      let value: ReactNode
 
-    switch (h) {
-      case 'image':
-        classname = 'jc-c'
-        value = render.img(d)
-        break
-      case 'nickname':
-        classname = 'jc-c ta-c word-break'
-        value = render.nickname(d)
-        break
-      case 'obtain':
-        classname = 'column ai-fs jc-c'
-        value = render.obtain(d)
-        break
-      case 'class':
-        classname = 'jc-c'
-        value = render.class(d)
-        break
-      case 'type':
-        classname = 'jc-c'
-        value = render.type(d)
-        break
-      case 'explain':
-        value = render.explain(d)
-        break
-      default:
-        classname = 'jc-c ta-c word-break'
-        value = d[h]
-        break
-    }
+      switch (h) {
+        case 'image':
+          classname = 'jc-c'
+          value = render.img(d)
+          break
+        case 'name':
+          classname = 'jc-c ta-c word-break'
+          value = render.name(d, keyword)
+          break
+        case 'nickname':
+          classname = 'jc-c ta-c word-break'
+          value = render.nickname(d, keyword)
+          break
+        case 'obtain':
+          classname = 'column ai-fs jc-c'
+          value = render.obtain(d)
+          break
+        case 'class':
+          classname = 'jc-c'
+          value = render.class(d)
+          break
+        case 'type':
+          classname = 'jc-c'
+          value = render.type(d)
+          break
+        case 'explain':
+          value = render.explain(d, keyword)
+          break
+        default:
+          classname = 'jc-c ta-c word-break'
+          value = d[h]
+          break
+      }
 
-    return <GridCell className={classname}>{value}</GridCell>
-  }, [])
+      return <GridCell className={classname}>{value}</GridCell>
+    },
+    [keyword],
+  )
 
   const gridRowClickHandler = (item: ItemInterface) => {
     modalAdd({

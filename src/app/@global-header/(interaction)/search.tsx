@@ -6,6 +6,7 @@ import {
   useEffect,
   useState,
 } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import IconSearch from '@assets/icons/icon-search.tsx'
 import {
@@ -16,6 +17,7 @@ import {
 } from '@components/@global-header/search.ts'
 
 export default function Search() {
+  const [searchParams, setSearchParams] = useSearchParams()
   const [searchKeyword, setSearchKeyword] = useState('')
 
   const onChangeInput = useCallback(
@@ -32,8 +34,15 @@ export default function Search() {
   }, [])
 
   useEffect(() => {
-    // TODO: searchKeyword 변경 시 검색됨
-    console.log(searchKeyword)
+    if (searchKeyword.length) {
+      const get = searchParams.get('keyword') ?? ''
+
+      if (get !== searchKeyword) searchParams.set('keyword', searchKeyword)
+      else return
+    } else {
+      searchParams.delete('keyword')
+    }
+    setSearchParams(searchParams)
   }, [searchKeyword])
 
   useEffect(() => {
@@ -62,7 +71,15 @@ export default function Search() {
         onKeyDown={onEnter}
         placeholder='Search...'
       />
-      <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>
+      <Shortcut
+        className='desktop shortcut'
+        onClick={() => {
+          const search = document.getElementById('search-input')
+          if (search) search.focus()
+        }}
+      >
+        Ctrl+K
+      </Shortcut>
     </InputBox>
   )
 }

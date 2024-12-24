@@ -2,6 +2,7 @@ import { isMobile } from 'react-device-detect'
 
 import Portrait from '@components/(common)/portrait.tsx'
 import { ITEMS, NATIONS } from '@util/divider'
+import highlightText from '@util/highlightText.tsx'
 
 const headerOptions: OptionType<keyof ItemInterface>[] = [
   {
@@ -53,9 +54,20 @@ function img(item: ItemInterface) {
   )
 }
 
-function nickname(item: ItemInterface) {
-  const { nickname: n } = item
-  return (n?.length ?? 0) > 0 ? n?.replace(/,/g, ', ') : '-'
+function name(item: ItemInterface, keyword?: string) {
+  const { name: n = '' } = item
+
+  if (keyword) return highlightText(n, keyword)
+  return n
+}
+
+function nickname(item: ItemInterface, keyword?: string) {
+  const { nickname: n = '' } = item
+  const returnValue =
+    ((n?.length ?? 0) > 0 ? n?.replace(/,/g, ', ') : '-') ?? '-'
+
+  if (keyword) return highlightText(returnValue, keyword)
+  return returnValue
 }
 
 function nation(item: ItemInterface, target?: 'prefix' | 'nation' | 'box') {
@@ -103,13 +115,18 @@ function types(item: ItemInterface) {
   return ITEMS.find((v) => v.index === d && v.value === t)?.label ?? t
 }
 
-function explain(item: ItemInterface) {
+function explain(item: ItemInterface, keyword?: string) {
   const { explain: e } = item
+  const returnValue = e?.join('. ') ?? '-'
+
+  if (keyword)
+    return <div className='el-2'>{highlightText(returnValue, keyword)}</div>
   return <div className='el-2'>{e?.join('. ')}</div>
 }
 
 export const render = Object.freeze({
   img,
+  name,
   nickname,
   obtain,
   nation,
