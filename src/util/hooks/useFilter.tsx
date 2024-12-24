@@ -1,6 +1,7 @@
 import { lazy, useEffect } from 'react'
-import useModalStore from '@util/store/modal.ts'
 import { useSearchParams } from 'react-router-dom'
+
+import useModalStore from '@util/store/modal.ts'
 
 const FILTERMODALKEY = 'filter-modal'
 

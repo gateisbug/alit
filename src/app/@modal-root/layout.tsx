@@ -14,6 +14,8 @@ const Backdrop = styled.div`
 
   --backdrop-bc: rgba(0, 0, 0, 0.5);
   --backdrop-z: 1100;
+
+  padding: 24px;
 `
 
 export default function ModalRoot() {

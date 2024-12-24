@@ -1,7 +1,7 @@
 import { Fragment, lazy, type ReactNode, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-import useGridData from '@app/item/(data-grid)/useGridData.ts'
+import useItemData from '@app/item/(data-grid)/useItemData.ts'
 import useInfiniteGrid from '@app/item/(data-grid)/useInfiniteGrid.ts'
 import Loader from '@components/(common)/loader.tsx'
 import { ITEMMODALKEY } from '@components/(modals)/(modal-keys).ts'
@@ -17,7 +17,7 @@ import { headers, render } from './(grid-render).tsx'
 const ItemModal = lazy(() => import('@components/(modals)/item/page.tsx'))
 
 function useDataGrid() {
-  const data = useGridData()
+  const data = useItemData()
   const { current, visibleCount, loaderRef, LOADER } = useInfiniteGrid(data)
   const { modalAdd } = useModalStore()
   const [searchParams, setSearchParams] = useSearchParams()

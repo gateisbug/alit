@@ -1,5 +1,5 @@
 export const MAJOR = Object.freeze([
-  { label: '전체', value: 'all' },
+  // { label: '전체', value: 'all' },
   { label: '함포', value: 'gun' },
   { label: '항공기', value: 'aircraft' },
   { label: '어뢰', value: 'torpedo' },
@@ -97,19 +97,19 @@ export const MINOR = Object.freeze([
 export const RARITY = Object.freeze([
   {
     label: 'R',
-    value: 'r',
+    value: 'R',
   },
   {
     label: 'SR',
-    value: 'sr',
+    value: 'SR',
   },
   {
     label: 'SSR',
-    value: 'ssr',
+    value: 'SSR',
   },
   {
     label: 'UR',
-    value: 'ur',
+    value: 'UR',
   },
   // {
   //   label: 'N',
@@ -121,46 +121,46 @@ export const RARITY = Object.freeze([
 export const NATION = Object.freeze([
   {
     label: '이글',
-    value: 'uss',
+    value: 'USS',
   },
   {
     label: '로열',
-    value: 'hms',
+    value: 'HMS',
   },
   {
     label: '중앵',
-    value: 'ijn',
+    value: 'IJN',
   },
   {
     label: '철혈',
-    value: 'kms',
+    value: 'KMS',
   },
   {
     label: '이스트',
-    value: 'roc',
+    value: 'ROC',
   },
   {
     label: '사르데냐',
-    value: 'rn',
+    value: 'RN',
   },
   {
     label: '북련',
-    value: 'sn',
+    value: 'SN',
   },
   {
     label: '아이리스',
-    value: 'ffnf',
+    value: 'FFNF',
   },
   {
     label: '비시아',
-    value: 'mnf',
+    value: 'MNF',
   },
   {
     label: '템페스타',
-    value: 'mot',
+    value: 'MOT',
   },
   {
     label: '공용',
-    value: 'univ',
+    value: 'UNIV',
   },
 ])
