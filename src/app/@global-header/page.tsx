@@ -1,7 +1,5 @@
 import { useMediaQuery } from 'react-responsive'
 
-import { Header, Links, SearchArea } from '@components/@global-header/styled.ts'
-
 import {
   Search,
   ArcaLiveLink,
@@ -10,6 +8,7 @@ import {
   Logo,
   Filter,
 } from '@app/@global-header/(interaction)/index.ts'
+import { Header, Links, SearchArea } from '@components/@global-header/styled.ts'
 
 export default function GlobalHeader() {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })

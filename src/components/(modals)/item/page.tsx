@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom'
 import { ModalClose } from '@components/(common)/modal.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
 import { ITEMS, NATIONS, OBTAINS } from '@util/divider'
+import highlightText from '@util/highlightText.tsx'
 
 import {
   KeyValue,
@@ -26,7 +27,6 @@ import {
   StatSection,
   TitleSection,
 } from './styled.ts'
-import highlightText from '@util/highlightText.tsx'
 
 interface Props {
   item: ItemInterface
