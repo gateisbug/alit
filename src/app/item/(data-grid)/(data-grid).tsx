@@ -1,8 +1,8 @@
 import { Fragment, lazy, type ReactNode, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-import useItemData from '@app/item/(data-grid)/useItemData.ts'
 import useInfiniteGrid from '@app/item/(data-grid)/useInfiniteGrid.ts'
+import useItemData from '@app/item/(data-grid)/useItemData.ts'
 import Loader from '@components/(common)/loader.tsx'
 import { ITEMMODALKEY } from '@components/(modals)/(modal-keys).ts'
 import {

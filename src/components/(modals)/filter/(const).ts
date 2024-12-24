@@ -1,4 +1,4 @@
-export const MAJOR = Object.freeze([
+export const ITEM_MAJORCATEGORY = Object.freeze([
   // { label: '전체', value: 'all' },
   { label: '함포', value: 'gun' },
   { label: '항공기', value: 'aircraft' },
@@ -8,7 +8,7 @@ export const MAJOR = Object.freeze([
   { label: '특수', value: 'special' },
 ])
 
-export const MINOR = Object.freeze([
+export const ITEM_MINORCATEGORY = Object.freeze([
   {
     value: 'gun',
     items: [
@@ -96,6 +96,10 @@ export const MINOR = Object.freeze([
 
 export const RARITY = Object.freeze([
   {
+    label: 'N',
+    value: 'n',
+  },
+  {
     label: 'R',
     value: 'R',
   },
@@ -111,11 +115,6 @@ export const RARITY = Object.freeze([
     label: 'UR',
     value: 'UR',
   },
-  // {
-  //   label: 'N',
-  //   value: 'n',
-  //
-  // },
 ])
 
 export const NATION = Object.freeze([

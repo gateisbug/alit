@@ -1,6 +1,7 @@
-import { modalContainer } from '@parakeet/ui/modal.style.ts'
 import buttonStyle from '@parakeet/ui/button.style.ts'
+import { modalContainer } from '@parakeet/ui/modal.style.ts'
 import styled from 'styled-components'
+
 import IconClose from '@assets/icons/icon-close.tsx'
 
 export const ModalContainer = styled.section`
