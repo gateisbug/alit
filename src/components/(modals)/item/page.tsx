@@ -149,8 +149,25 @@ export default function ItemModal({ item }: Props) {
         <Header>
           <Portrait
             path={`images/items/${item?.image}.webp`}
+            lqip={`images/items/${item?.image}_lqip.webp`}
             size={72}
-            item={item}
+            tier={item.tier}
+            stroke={(() => {
+              if (item.domain !== 'gun') return 'default'
+              switch (item.type) {
+                case 'ap':
+                  return 'blue'
+                case 'he':
+                  return 'red'
+                case 'normal':
+                case 'type3':
+                  return 'yellow'
+                case 'sap':
+                  return 'violet'
+                default:
+                  return 'default'
+              }
+            })()}
           />
 
           <TitleSection>

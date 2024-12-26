@@ -3,6 +3,8 @@ import { Suspense } from 'react'
 import Loader from '@components/(common)/loader.tsx'
 import { Page } from '@components/(common)/styled.ts'
 
+import DataGrid from './(data-grid)/data-grid.tsx'
+
 export default function CharacterPage() {
   return (
     <div>
@@ -14,7 +16,7 @@ export default function CharacterPage() {
             </div>
           }
         >
-          함순이 리스트
+          <DataGrid />
         </Suspense>
       </Page>
     </div>

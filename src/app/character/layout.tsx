@@ -23,6 +23,7 @@ export default function CharacterLayout() {
 
         <title>(24-12-31) 함순이 리스트.Web</title>
       </Helmet>
+
       <Outlet />
     </>
   )

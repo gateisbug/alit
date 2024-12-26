@@ -1,7 +1,6 @@
+import { useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-
-import IndexedItemDB from '@util/IndexedItemDB.ts'
 
 export default function useItemData() {
   const [searchParams] = useSearchParams()
@@ -11,30 +10,28 @@ export default function useItemData() {
   const nation = searchParams.get('nation')
   const keyword = searchParams.get('keyword')
 
-  const [raw, setRaw] = useState<ItemInterface[]>([])
-  const [data, setData] = useState(raw)
+  const query = useQuery({
+    queryKey: ['alit-item-list'],
+    queryFn: async () => {
+      const response = await fetch('json/item.json')
+      return ((await response.json()) as unknown as ItemInterface[]) ?? []
+    },
+  })
 
-  useEffect(() => {
-    const getData = async () => {
-      const value = await (await IndexedItemDB.getInstance()).getAllData()
-      setRaw(value)
-    }
-    getData().catch((rej) => {
-      throw new Error(rej)
-    })
-  }, [])
+  // const [raw, setRaw] = useState<ItemInterface[]>([])
+  const [data, setData] = useState<ItemInterface[]>([])
 
   useEffect(() => {
     let rawData: ItemInterface[]
 
     if (!majorCategory && !minorCategory && !rarity && !nation) {
-      rawData = raw
+      rawData = query.data ?? []
     } else {
       const minor = minorCategory?.split('_') ?? []
       const rare = rarity?.split('_') ?? []
       const nat = nation?.split('_') ?? []
 
-      rawData = raw.filter((v) => {
+      rawData = (query.data ?? []).filter((v) => {
         const domain =
           majorCategory !== null ? v.domain === majorCategory : true
         const classes = minor.length > 0 ? minor.includes(v.class ?? '') : true
@@ -57,7 +54,7 @@ export default function useItemData() {
     } else {
       setData(rawData)
     }
-  }, [raw, keyword, majorCategory, minorCategory, rarity, nation])
+  }, [query.data, keyword, majorCategory, minorCategory, rarity, nation])
 
   return data
 }

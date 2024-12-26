@@ -55,40 +55,33 @@ export const PortraitFrame = styled.div`
 
 interface Props {
   path: string
-  item?: ItemInterface
+  lqip: string
+  // item?: ItemInterface
   size?: number
+  width?: number
+  height?: number
+  tier?: string
+  stroke?: string
 }
 
-export default function Portrait({ path, item, size = 48 }: Props) {
-  const strokeSorter = (types?: string, domain?: string) => {
-    if (domain !== 'gun') return 'default'
-    switch (types) {
-      case 'ap':
-        return 'blue'
-      case 'he':
-        return 'red'
-      case 'normal':
-      case 'type3':
-        return 'yellow'
-      case 'sap':
-        return 'violet'
-      default:
-        return 'default'
-    }
-  }
-
+export default function Portrait({
+  path,
+  lqip,
+  tier = 'SSR',
+  stroke = 'default',
+  // item,
+  size = 48,
+  width,
+  height,
+}: Props) {
   return (
-    <PortraitFrame
-      data-tier={item?.tier}
-      data-stroke={strokeSorter(item?.type, item?.domain)}
-      className='portrait'
-    >
+    <PortraitFrame data-tier={tier} data-stroke={stroke} className='portrait'>
       <Image
-        src={path ?? `images/items/${item?.image}.webp`}
+        src={path}
         alt='images'
-        width={size}
-        height={size}
-        placeholder={`images/items/${item?.image}_lqip.webp`}
+        width={width ?? size}
+        height={height ?? size}
+        placeholder={lqip}
       />
     </PortraitFrame>
   )

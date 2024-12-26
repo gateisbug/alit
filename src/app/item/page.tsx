@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react'
 import Loader from '@components/(common)/loader.tsx'
 import { Page } from '@components/(common)/styled.ts'
 
-const ItemDataGrid = lazy(() => import('./(data-grid)/(data-grid).tsx'))
+const ItemDataGrid = lazy(() => import('./(data-grid)/data-grid.tsx'))
 
 export default function ItemPage() {
   return (
