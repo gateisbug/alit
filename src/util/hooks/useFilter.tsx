@@ -4,10 +4,13 @@ import { useLocation, useSearchParams } from 'react-router-dom'
 import useModalStore from '@util/store/modal.ts'
 
 const ITEMFILTERMODALKEY = 'item-filter-modal'
-// const CHARFILTERMODALKEY = 'char-filter-modal' // @TODO: 함순이 리스트 추가 시 반영
+const CHARFILTERMODALKEY = 'char-filter-modal'
 
 const ItemFilterModal = lazy(
   () => import('@components/(modals)/filter/page-item.tsx'),
+)
+const CharaFilterModal = lazy(
+  () => import('@components/(modals)/filter/page-chara.tsx'),
 )
 
 export default function useFilter() {
@@ -16,8 +19,11 @@ export default function useFilter() {
   const { pathname } = useLocation()
 
   const handlerFilterButton = () => {
-    if (pathname) {
+    if (pathname.includes('item')) {
       searchParams.set('modal', ITEMFILTERMODALKEY)
+      setSearchParams(searchParams)
+    } else {
+      searchParams.set('modal', CHARFILTERMODALKEY)
       setSearchParams(searchParams)
     }
   }
@@ -27,14 +33,26 @@ export default function useFilter() {
       id: ITEMFILTERMODALKEY,
       children: <ItemFilterModal />,
     })
+    modalAdd({
+      id: CHARFILTERMODALKEY,
+      children: <CharaFilterModal />,
+    })
   }, [])
 
   useEffect(() => {
-    searchParams.delete('modal')
-    searchParams.delete('major')
-    searchParams.delete('minor')
-    searchParams.delete('rarity')
-    searchParams.delete('nation')
+    // searchParams.delete('modal')
+    // searchParams.delete('major')
+    // searchParams.delete('minor')
+    // searchParams.delete('rarity')
+    // searchParams.delete('nation')
+
+    return () => {
+      searchParams.delete('modal')
+      searchParams.delete('major')
+      searchParams.delete('minor')
+      searchParams.delete('rarity')
+      searchParams.delete('nation')
+    }
   }, [pathname])
 
   return {

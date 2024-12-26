@@ -1,14 +1,14 @@
 import {
-  ITEM_MAJORCATEGORY,
-  ITEM_MINORCATEGORY,
+  CHAR_MAJORCATEGORY,
+  CHAR_MINORCATEGORY,
   NATION,
   RARITY,
-} from './(const-item).ts'
+} from './(const-chara).ts'
 import Section from './section.tsx'
 import { ModalBody, ModalClose, ModalContainer } from './styled.tsx'
 import useFilterModal from './useFilterModal.ts'
 
-export default function ItemFilterModal() {
+export default function CharaFilterModal() {
   const {
     major,
     setMajor,
@@ -25,8 +25,8 @@ export default function ItemFilterModal() {
     <ModalContainer>
       <ModalBody>
         <Section
-          header='대분류'
-          items={ITEM_MAJORCATEGORY}
+          header='함종'
+          items={CHAR_MAJORCATEGORY}
           state={major}
           onClickAll={() => {
             setMajor('')
@@ -39,8 +39,8 @@ export default function ItemFilterModal() {
         />
 
         <Section
-          header='소분류'
-          items={ITEM_MINORCATEGORY.find((v) => v.value === major)?.items ?? []}
+          header='스탯'
+          items={CHAR_MINORCATEGORY}
           state={minor}
           onClickAll={() => setMinor([])}
           onClickItem={(v) => {
