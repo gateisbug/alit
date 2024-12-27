@@ -106,7 +106,7 @@ function category(chara: CharacterInterface) {
   return chara.category?.join('→')
 }
 function tag(/* chara: CharacterInterface */) {
-  return <p className='fcw'>준비 중</p>
+  return <p className='fc'>준비 중</p>
 }
 
 export const render = Object.freeze({
