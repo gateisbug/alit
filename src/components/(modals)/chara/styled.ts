@@ -20,13 +20,6 @@ export const ModalContainer = styled.section`
   border-radius: 8px;
 `
 
-export const CharaModalContents = styled.div`
-  display: flex;
-  gap: 24px;
-  width: 100%;
-  height: fit-content;
-`
-
 export const CharaPortrait = styled.div`
   display: flex;
   align-items: center;
@@ -66,6 +59,31 @@ export const BorderBox = styled.div`
     display: flex;
     justify-content: center;
     width: 48px;
+    min-width: 48px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 440px;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
+`
+
+export const CharaModalContents = styled.div`
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  height: fit-content;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    & ${CharaDataSection} {
+      align-items: center;
+    }
   }
 `
 

@@ -92,6 +92,11 @@ export default function CharaFilterModal() {
     return curr
   }
 
+  const onClose = () => {
+    searchParams.delete('modal')
+    setSearchParams(searchParams)
+  }
+
   return (
     <ModalContainer>
       <ModalBody>
@@ -138,7 +143,7 @@ export default function CharaFilterModal() {
         />
       </ModalBody>
 
-      <ModalClose />
+      <ModalClose onClick={onClose} />
     </ModalContainer>
   )
 }

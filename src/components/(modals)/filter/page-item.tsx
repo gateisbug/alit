@@ -93,6 +93,11 @@ export default function ItemFilterModal() {
     return curr
   }
 
+  const onClose = () => {
+    searchParams.delete('modal')
+    setSearchParams(searchParams)
+  }
+
   return (
     <ModalContainer>
       <ModalBody>
@@ -141,7 +146,7 @@ export default function ItemFilterModal() {
         />
       </ModalBody>
 
-      <ModalClose />
+      <ModalClose onClick={onClose} />
     </ModalContainer>
   )
 }
