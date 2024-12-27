@@ -2,11 +2,12 @@ import inputStyle from '@parakeet/ui/input.style.ts'
 import styled from 'styled-components'
 
 import { Shortcut as UIShortcut } from '@components/(common)/buttons.ts'
+import buttonStyle from '@parakeet/ui/button.style.ts'
 
 export const InputBox = styled.div.attrs({
   className: 'flex ai-c bb',
 })`
-  gap: 12px;
+  gap: 4px;
   width: 100%;
   height: 40px;
   padding: 6px 16px 6px 12px;
@@ -25,11 +26,19 @@ export const Icon = styled.div.attrs({
   color: var(--primary);
 `
 
+export const IconButton = styled.button`
+  ${buttonStyle};
+  width: 22px;
+  height: 22px;
+  //color: var(--primary);
+`
+
 export const InputRoot = styled.input.attrs({
   className: 'b1',
 })`
   ${inputStyle};
   width: 100%;
+  padding: 0 8px;
 
   --input-bc: transparent;
   --input-fc: var(--fc);

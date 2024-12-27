@@ -5,7 +5,7 @@ export default function highlightText(text: string, search?: string | null) {
 
   const parts = text.split(new RegExp(`(${search})`, 'gi'))
   return (
-    <>
+    <span>
       {parts.map((part, index) =>
         part.includes(search) ? (
           // eslint-disable-next-line react/no-array-index-key
@@ -14,6 +14,6 @@ export default function highlightText(text: string, search?: string | null) {
           part
         ),
       )}
-    </>
+    </span>
   )
 }

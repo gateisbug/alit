@@ -7,14 +7,17 @@ import {
   useState,
 } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { isDesktop } from 'react-device-detect'
 
 import IconSearch from '@assets/icons/icon-search.tsx'
 import {
   Icon,
+  IconButton,
   InputBox,
   InputRoot,
   Shortcut,
 } from '@components/@global-header/search.ts'
+import IconClose from '@assets/icons/icon-close.tsx'
 
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -26,6 +29,14 @@ export default function Search() {
     }, 1000),
     [],
   )
+
+  const onClickClear = useCallback(() => {
+    const input = document.getElementById('search-input')
+    if (input) {
+      ;(input as HTMLInputElement).value = ''
+      setSearchKeyword('')
+    }
+  }, [])
 
   const onEnter = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
@@ -71,15 +82,11 @@ export default function Search() {
         onKeyDown={onEnter}
         placeholder='Search...'
       />
-      <Shortcut
-        className='desktop shortcut'
-        onClick={() => {
-          const search = document.getElementById('search-input')
-          if (search) search.focus()
-        }}
-      >
-        Ctrl+K
-      </Shortcut>
+
+      <IconButton onClick={onClickClear}>
+        <IconClose />
+      </IconButton>
+      {isDesktop && <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>}
     </InputBox>
   )
 }
