@@ -95,10 +95,10 @@ export const ITEM_MINORCATEGORY = Object.freeze([
 // ])
 
 export const RARITY = Object.freeze([
-  {
-    label: 'N',
-    value: 'N',
-  },
+  // {
+  //   label: 'N',
+  //   value: 'N',
+  // },
   {
     label: 'R',
     value: 'R',
