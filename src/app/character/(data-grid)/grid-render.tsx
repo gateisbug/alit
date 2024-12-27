@@ -103,7 +103,7 @@ function nation(chara: CharacterInterface) {
   return chara.nation
 }
 function category(chara: CharacterInterface) {
-  return chara.category
+  return chara.category?.join('→')
 }
 function tag(/* chara: CharacterInterface */) {
   return <p className='fcw'>준비 중</p>

@@ -71,7 +71,7 @@ export const GridRow = styled.div`
   }
   ${GridCell}:nth-of-type(5), 
   ${GridCell}:nth-of-type(6) {
-    min-width: 68px;
+    min-width: 72px;
   }
   ${GridCell}:nth-of-type(7) {
     min-width: 240px;

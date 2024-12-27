@@ -41,7 +41,8 @@ export const PortraitFrame = styled.div`
   &[data-tier='R'] {
     --portrait-bc: #9fe8ff;
   }
-  &[data-tier='SR'] {
+  &[data-tier='SR'],
+  &[data-tier='E'] {
     --portrait-bc: #c4adff;
   }
   &[data-tier='SSR'] {

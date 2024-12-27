@@ -1,5 +1,4 @@
 type CharacterCate =
-  | 'all'
   | '구축'
   | '경순'
   | '중순'
@@ -14,6 +13,7 @@ type CharacterCate =
   | '잠항'
   | '공작'
   | '미구'
+  | string
 
 interface CharacterInterface {
   category?: CharacterCate[]

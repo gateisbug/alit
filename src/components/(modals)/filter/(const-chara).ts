@@ -76,7 +76,7 @@ export const NATION = Object.freeze([
   },
   {
     label: 'FFNF/MNF',
-    value: 'FFNF',
+    value: 'FFNF-MNF',
   },
   {
     label: '템페스타',

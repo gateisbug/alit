@@ -14,7 +14,7 @@ import useInfiniteGrid from '@util/useInfiniteGrid.ts'
 import useCharData from './useCharData.ts'
 
 // TODO: 모달 추가
-// TODO: 키워드 연동
+const CHARAMODALKEY = 'character-modal'
 
 function useDataGrid() {
   const { modalAdd } = useModalStore()
@@ -36,7 +36,7 @@ function useDataGrid() {
           value = render.img(d)
           break
         case 'name':
-          value = d.name
+          value = render.name(d, keyword)
           break
         case 'stat':
           classname = 'column jc-c'
@@ -45,6 +45,9 @@ function useDataGrid() {
         case 'fleet':
           classname = 'column jc-c'
           value = render.fleet(d)
+          break
+        case 'category':
+          value = render.category(d)
           break
         case 'tag':
           value = render.tag()
@@ -57,23 +60,19 @@ function useDataGrid() {
 
       return <GridCell className={classname}>{value}</GridCell>
     },
-    [],
+    [keyword],
   )
 
   // TODO: 모달 연동
-  const gridRowClickHandler = (item: ItemInterface) => {
-    // modalAdd({
-    //   id: ITEMMODALKEY,
-    //   children: <ItemModal item={item} />,
-    // })
-    //
-    // searchParams.set('modal', ITEMMODALKEY)
-    // setSearchParams(searchParams)
-  }
+  const gridRowClickHandler = (chara: CharacterInterface) => {
+    modalAdd({
+      id: CHARAMODALKEY,
+      children: <div>{chara.name}</div>,
+    })
 
-  useEffect(() => {
-    console.log(data)
-  }, [data])
+    searchParams.set('modal', CHARAMODALKEY)
+    setSearchParams(searchParams)
+  }
 
   return {
     current,

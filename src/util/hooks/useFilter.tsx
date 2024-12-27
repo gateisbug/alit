@@ -39,21 +39,16 @@ export default function useFilter() {
     })
   }, [])
 
-  useEffect(() => {
-    // searchParams.delete('modal')
-    // searchParams.delete('major')
-    // searchParams.delete('minor')
-    // searchParams.delete('rarity')
-    // searchParams.delete('nation')
-
-    return () => {
+  useEffect(
+    () => () => {
       searchParams.delete('modal')
       searchParams.delete('major')
       searchParams.delete('minor')
       searchParams.delete('rarity')
       searchParams.delete('nation')
-    }
-  }, [pathname])
+    },
+    [pathname],
+  )
 
   return {
     handlerFilterButton,
