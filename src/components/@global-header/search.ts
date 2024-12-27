@@ -1,8 +1,8 @@
+import buttonStyle from '@parakeet/ui/button.style.ts'
 import inputStyle from '@parakeet/ui/input.style.ts'
 import styled from 'styled-components'
 
 import { Shortcut as UIShortcut } from '@components/(common)/buttons.ts'
-import buttonStyle from '@parakeet/ui/button.style.ts'
 
 export const InputBox = styled.div.attrs({
   className: 'flex ai-c bb',

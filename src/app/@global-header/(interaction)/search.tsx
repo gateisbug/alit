@@ -6,9 +6,10 @@ import {
   useEffect,
   useState,
 } from 'react'
-import { useSearchParams } from 'react-router-dom'
 import { isDesktop } from 'react-device-detect'
+import { useSearchParams } from 'react-router-dom'
 
+import IconClose from '@assets/icons/icon-close.tsx'
 import IconSearch from '@assets/icons/icon-search.tsx'
 import {
   Icon,
@@ -17,7 +18,6 @@ import {
   InputRoot,
   Shortcut,
 } from '@components/@global-header/search.ts'
-import IconClose from '@assets/icons/icon-close.tsx'
 
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams()
