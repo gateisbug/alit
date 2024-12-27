@@ -61,7 +61,7 @@ export function CharaStat({ chara }: Props) {
         {['획득 시', 'Lv 120'].map((v, i) => (
           <div key={`stat-${v}`} className='data-row'>
             <span className='data-head'>{v}</span>
-            <span className='fcs fwm'>{get(i)}</span>
+            <span className='fcs fws'>{get(i)}</span>
           </div>
         ))}
       </div>
@@ -82,7 +82,7 @@ export function CharaFleet({ chara }: Props) {
         {['획득 시', '★3', 'Lv 120'].map((v, i) => (
           <div key={`fleet-${v}`} className='data-row'>
             <span className='data-head'>{v}</span>
-            <span className='fcs fwm'>+{get(i)}</span>
+            <span className='fcs fws'>+{get(i)}</span>
           </div>
         ))}
       </div>
