@@ -1,3 +1,5 @@
+// noinspection CssUnusedSymbol
+
 import { modalContainer } from '@parakeet/ui/modal.style.ts'
 import styled from 'styled-components'
 
