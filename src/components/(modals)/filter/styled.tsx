@@ -19,7 +19,7 @@ export const ModalContainer = styled.section`
   padding: 0;
   border-radius: 8px;
   height: fit-content;
-  max-height: calc(100vh - 128px);
+  max-height: calc(100vh - 160px);
 
   //@media (max-width: 480px) {
   //  padding: 16px;

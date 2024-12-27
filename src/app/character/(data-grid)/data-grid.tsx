@@ -1,8 +1,9 @@
-import { Fragment, ReactNode, useCallback, useEffect } from 'react'
+import { Fragment, ReactNode, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 import { headers, render } from '@app/character/(data-grid)/grid-render.tsx'
 import Loader from '@components/(common)/loader.tsx'
+import CharaModal from '@components/(modals)/chara/page.tsx'
 import {
   GridCell,
   GridContainer,
@@ -67,7 +68,7 @@ function useDataGrid() {
   const gridRowClickHandler = (chara: CharacterInterface) => {
     modalAdd({
       id: CHARAMODALKEY,
-      children: <div>{chara.name}</div>,
+      children: <CharaModal chara={chara} />,
     })
 
     searchParams.set('modal', CHARAMODALKEY)

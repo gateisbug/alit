@@ -48,8 +48,6 @@ export default function useCharData() {
         const tier = rare.length > 0 ? int(rare, v.rarity) : true
         const ticker = nat.length > 0 ? nat.includes(v.nation ?? '') : true
 
-        // if (!minorCategory) return flag
-        // return flag && minorCategory.includes(v.class ?? '')
         return domain && stats && tier && ticker
       })
     }
