@@ -8,6 +8,7 @@
 - 검색창 사이즈 확장
 - 필터 모달 추가
 - 타블렛, 모바일에서 접근 가능한 스피드 다이얼 추가
+- 함순이 리스트 추가
 
 ## 2.4.11
 [releases](https://github.com/gateisbug/alit/releases/tag/2.4.11)
