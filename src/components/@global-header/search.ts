@@ -12,6 +12,9 @@ export const InputBox = styled.div.attrs({
   padding: 6px 16px 6px 12px;
   background-color: var(--bc);
   border-radius: 20px;
+
+  box-shadow: 0 1px 8px 0 rgba(32, 33, 36, 0.16);
+  //box-shadow: 8px 12px 32px 0 rgba(0, 0, 51, 0.16);
 `
 
 export const Icon = styled.div.attrs({
