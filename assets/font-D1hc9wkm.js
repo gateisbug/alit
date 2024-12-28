@@ -1,1 +1,0 @@
-import{j as e,H as s}from"./index-COo1f1DW.js";function t(){return e.jsx(e.Fragment,{children:e.jsx(s,{children:e.jsx("link",{rel:"stylesheet",as:"style",crossOrigin:"anonymous",href:"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"})})})}export{t as default};
