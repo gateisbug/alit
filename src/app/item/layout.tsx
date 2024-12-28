@@ -12,7 +12,7 @@ export default function ItemLayout() {
         {/* <meta property='og:image' content='https://raw.githubusercontent.com/gateisbug/alit/refs/heads/master/public/assets/og-image.png' /> */}
 
         {/* @TODO: [2.5.0] 버전업 시 수정 */}
-        <title>(24-12-31) 장비 설명회.Web</title>
+        <title>(24-12-28) 장비 설명회.Web</title>
       </Helmet>
 
       <Outlet />
