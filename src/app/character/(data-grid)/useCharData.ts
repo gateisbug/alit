@@ -10,9 +10,6 @@ function is(a: string[], b?: string[]) {
   return a.filter((m) => (b ?? []).join('_').includes(m)).length > 0
 }
 
-// TODO: 필터 연동
-// TODO: 키워드 연동
-
 export default function useCharData() {
   const [searchParams] = useSearchParams()
   const majorCategory = searchParams.get('major')

@@ -14,7 +14,6 @@ import useInfiniteGrid from '@util/useInfiniteGrid.ts'
 
 import useCharData from './useCharData.ts'
 
-// TODO: 모달 추가
 const CHARAMODALKEY = 'character-modal'
 
 function useDataGrid() {
@@ -64,7 +63,6 @@ function useDataGrid() {
     [keyword],
   )
 
-  // TODO: 모달 연동
   const gridRowClickHandler = (chara: CharacterInterface) => {
     modalAdd({
       id: CHARAMODALKEY,

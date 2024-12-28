@@ -83,7 +83,7 @@ export default function Search() {
         placeholder='Search...'
       />
 
-      <IconButton onClick={onClickClear}>
+      <IconButton onClick={onClickClear} aria-label='검색'>
         <IconClose />
       </IconButton>
       {isDesktop && <Shortcut className='desktop shortcut'>Ctrl+K</Shortcut>}
