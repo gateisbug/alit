@@ -14,7 +14,7 @@ export const ModalContainer = styled.section.attrs({
 
   width: 100%;
   max-width: 960px;
-  max-height: calc(100vh - 128px);
+  max-height: calc(100vh - 160px);
   padding: 0;
   border-radius: 8px;
 `

@@ -12,7 +12,7 @@
     --link-bc: #ebf5ff;
 
     --scroll: #686868;
-    --surface: #fafafa; /* background default */
+    --surface: #f7f7f7; /* background default */
 
     --fc-s: #101418; /* font color strong */
     --fc: #1c2025; /* font color normal */
@@ -20,13 +20,15 @@
 
     --lc-w: #00000014; /* border color weak */
     --lc: #0000003a; /* border color normal */
+
+    --bc: #f4f5f7; /*  */
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --link: #66b3ff; /* link color */
-    --link-lc: rgba(0, 97, 194, 0.6);
-    --link-bc: rgba(0, 59, 117, 0.4);
+    --link-lc: #0061c2;
+    --link-bc: #003b75;
 
     --scroll: #686868;
     --surface: #101418; /* background default */
@@ -37,5 +39,7 @@
 
     --lc-w: #ffffff14; /* border color weak */
     --lc: #ffffff3a; /* border color normal */
+
+    --bc: #262a32; /*  */
   }
 }

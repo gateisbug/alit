@@ -30,6 +30,8 @@
   -ms-flex-direction: column;
   flex-direction: column;
 }
+
+/*noinspection CssUnknownProperty*/
 .fg1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -102,6 +104,7 @@
   display: none;
 }
 
+/*noinspection CssUnknownProperty*/
 .bb {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -134,6 +137,8 @@
 .pos-a {
   position: absolute;
 }
+
+/*noinspection CssInvalidPropertyValue*/
 .pos-s {
   position: -webkit-sticky;
   position: sticky;

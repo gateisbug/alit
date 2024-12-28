@@ -1,6 +1,7 @@
 # AzurLane Item List
 
-벽람항로 갈아야할 아이템 아닌 아이템 구분해놓은 곳
+벽람항로 갈아야할 아이템 아닌 아이템 구분해놓은 곳  
+함순이들 스탯작과 기술점수 정리한 곳
 
 - git-pages : [깃페이지](https://gateisbug.github.io/alit/)
 - 정보 리소스 : [아카라이브](https://arca.live/b/azurlane/45593816)
@@ -13,8 +14,9 @@
 
 이 프로젝트에서 사용하는 모든 내용과 이미지(이하 리소스)는 별도의 저작권자가 있으며, 각 리소스는 각 저작권자가 명시한 라이센스를 적용받습니다. 리소스를 제외한 모든 소스코드는 MIT License에 따라 이용하실 수 있습니다.
 
-- 장비설명회 JSON 데이터: [별도의 라이선스](./public/json/LICENSE)
+- 장비설명회 JSON 데이터: [별도의 라이선스](./public/json/LICENSE-item)
 - image: [CC BY-NC-SA](./public/images/LICENSE)
+- 함순이 리스트 JSON 데이터: [CC BY-NC-SA](./public/json/LICENSE-character)
 - 소스코드: [MIT LICENSE](./LICENSE)
 
 ## Release Note

@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom'
 import { ModalClose } from '@components/(common)/modal.tsx'
 import Portrait from '@components/(common)/portrait.tsx'
 import { ITEMS, NATIONS, OBTAINS } from '@util/divider'
+import highlightText from '@util/highlightText.tsx'
 
 import {
   KeyValue,
@@ -33,6 +34,7 @@ interface Props {
 
 export default function ItemModal({ item }: Props) {
   const [searchParams, setSearchParams] = useSearchParams()
+  const keyword = searchParams.get('keyword')
 
   const onClose = () => {
     searchParams.delete('modal')
@@ -147,13 +149,34 @@ export default function ItemModal({ item }: Props) {
         <Header>
           <Portrait
             path={`images/items/${item?.image}.webp`}
+            lqip={`images/items/${item?.image}_lqip.webp`}
             size={72}
-            item={item}
+            tier={item.tier}
+            stroke={(() => {
+              if (item.domain !== 'gun') return 'default'
+              switch (item.type) {
+                case 'ap':
+                  return 'blue'
+                case 'he':
+                  return 'red'
+                case 'normal':
+                case 'type3':
+                  return 'yellow'
+                case 'sap':
+                  return 'violet'
+                default:
+                  return 'default'
+              }
+            })()}
           />
 
           <TitleSection>
-            <h2 className='s1 fcs'>{item?.name ?? '-'}</h2>
-            <h3 className='b1 fwm fcw'>{item?.nickname ?? '-'}</h3>
+            <h2 className='s1 fcs'>
+              {highlightText(item?.name ?? '-', keyword)}
+            </h2>
+            <h3 className='b1 fwm fcw'>
+              {highlightText(item?.nickname ?? '-', keyword)}
+            </h3>
             <Breadcrumbs
               $items={[
                 ITEMS.find(
@@ -184,7 +207,9 @@ export default function ItemModal({ item }: Props) {
 
             {item?.explain?.length ? (
               <ExplainSection>
-                {item?.explain?.map((v) => <p key={v}>{v}</p>)}
+                {item?.explain?.map((v) => (
+                  <p key={v}>{highlightText(v, keyword)}</p>
+                ))}
               </ExplainSection>
             ) : null}
           </ExplainTagContainer>

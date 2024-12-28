@@ -12,6 +12,7 @@ dist
 dist-ssr
 build
 *.local
+.idea/workspace.xml
 
 # Editor directories and files
 .vscode/*

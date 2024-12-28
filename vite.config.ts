@@ -19,7 +19,7 @@ export default defineConfig({
       plugins: [
         autoprefixer,
         postcssPresetEnv({
-          stage: 1, //@COMMENT: stage: 0 은 모든 CSS 특징을 활성화합니다.
+          stage: 1, // COMMENT: stage: 0 은 모든 CSS 특징을 활성화합니다.
           minimumVendorImplementations: 2,
         }),
       ],
@@ -54,15 +54,15 @@ export default defineConfig({
     cssTarget: 'chrome58',
     minify: true,
     cssMinify: true,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.indexOf('node_modules') !== -1) {
-            const module = id.split('node_modules/').pop()?.split('/')[0]
-            return `vendor-${module}`
-          }
-        },
-      },
-    },
+    // rollupOptions: {
+    //   output: {
+    //     manualChunks: (id) => {
+    //       if (id.indexOf('node_modules') !== -1) {
+    //         const module = id.split('node_modules/').pop()?.split('/')[0]
+    //         return `vendor-${module}`
+    //       }
+    //     },
+    //   },
+    // },
   },
 })

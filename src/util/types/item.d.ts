@@ -29,23 +29,6 @@ type ItemClass =
   | 'sailing'
   | string
 
-type TierType = 'N' | 'R' | 'SR' | 'SSR' | 'UR' | string
-
-type NationType =
-  | 'USS'
-  | 'HMS'
-  | 'IJN'
-  | 'KMS'
-  | 'SMS'
-  | 'ROC'
-  | 'PRAN'
-  | 'SN'
-  | 'FFNF'
-  | 'MNF'
-  | 'RN'
-  | 'MOT'
-  | string
-
 interface ItemInterface {
   class?: ItemClass
   domain?: ItemDomain
@@ -55,7 +38,7 @@ interface ItemInterface {
   name?: string
   nation?: NationType
   nickname?: string
-  no?: number
+  // no?: number
   obtain?: string[]
   status?: string[]
   tag?: string[]
