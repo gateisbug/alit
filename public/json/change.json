@@ -1,7 +1,7 @@
 {
   "version": "2.5.0",
   "release": "https://github.com/gateisbug/alit/releases/tag/2.5.0",
-  "date": "2024-12-31",
+  "date": "2024-12-28",
   "patch": [
     "페이지 스타일 수정",
     "검색창 사이즈 확장",
