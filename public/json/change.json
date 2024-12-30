@@ -1,12 +1,10 @@
 {
-  "version": "2.5.0",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.5.0",
-  "date": "2024-12-28",
+  "version": "2.5.1",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.5.1",
+  "date": "2024-12-31",
   "patch": [
-    "페이지 스타일 수정",
-    "검색창 사이즈 확장",
-    "필터 모달 추가",
-    "타블렛, 모바일에서 접근 가능한 스피드 다이얼 추가",
-    "함순이 리스트 추가"
+    "ESC 누르면 모달창 닫기",
+    "모달이 켜졌을 때 ctrl+k 누르면 입력이 가능한 버그 수정",
+    "장비설명회와 함순이 리스트 전환 버튼 따로 추가"
   ]
 }
