@@ -1,4 +1,5 @@
 import buttonStyle from '@parakeet/ui/button.style.ts'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const SpeedDialButton = styled.button`
@@ -87,8 +88,12 @@ export const ActionButton = styled.button`
   }
 `
 
-export const ActionLink = styled(ActionButton).attrs({
+export const ActionExternLink = styled(ActionButton).attrs({
   as: 'a',
   rel: 'noopener noreferrer',
   target: '_blank',
+})``
+
+export const ActionLink = styled(ActionButton).attrs({
+  as: Link,
 })``

@@ -22,11 +22,16 @@ export default function ModalRoot() {
   const { lists } = useModalStore()
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const find = useMemo(
-    () => lists.find((v) => v.id === searchParams.get('modal')),
-    [lists, searchParams],
-  )
+  const modal = searchParams.get('modal')
 
+  /**
+   * 현재 활성화된 모달
+   */
+  const find = useMemo(() => lists.find((v) => v.id === modal), [lists, modal])
+
+  /**
+   * 모달의 외부를 클릭시 모달이 종료되도록하는 핸들러
+   */
   const modelOnClickAway = useCallback(
     (e: MouseEvent<HTMLDivElement>, id: string) => {
       const backdropRef = document.getElementById(id)
@@ -39,6 +44,9 @@ export default function ModalRoot() {
     [searchParams, lists],
   )
 
+  /**
+   * 모달이 있는 상태로 새로고침 시 스크롤이 사라지는 문제 해결을 위한 사이드 이펙트
+   */
   useEffect(() => {
     // 모달이 있는 상태로 새로고침 시 스크롤이 사라지는 문제 해결
     const isModal = document.getElementById(MODALID)
@@ -48,9 +56,10 @@ export default function ModalRoot() {
     }
   }, [])
 
+  /**
+   * 모달이 열리면 스크롤이 안되도록 수정하는 사이드 이펙트
+   */
   useEffect(() => {
-    // const isModal = document.getElementById(MODALID)
-    const modal = searchParams.get('modal')
     if (modal !== null) {
       // @COMMENT: 스크롤바 유무를 확인하고 flag에 결과를 담기
       const hasScrollbar =
@@ -62,15 +71,35 @@ export default function ModalRoot() {
       if (hasScrollbar && !overflow) {
         document.body.setAttribute(
           'style',
-          !isMobile
-            ? 'overflow:hidden;padding-right:17px;'
-            : 'overflow:hidden;',
+          'overflow:hidden;padding-right:17px;',
         )
+      } else if (isMobile && !overflow) {
+        document.body.setAttribute('style', 'overflow:hidden;')
       }
     } else {
       document.body.removeAttribute('style')
     }
-  }, [searchParams, isMobile])
+  }, [modal, isMobile])
+
+  /**
+   * 모달이 켜져있을 때 esc를 입력하면 꺼짐
+   */
+  useEffect(() => {
+    const keypressHandler = (e: any) => {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        if ((modal?.length ?? 0) > 0) {
+          searchParams.delete('modal')
+          setSearchParams(searchParams)
+        }
+      }
+    }
+
+    window.addEventListener('keydown', keypressHandler)
+    return () => {
+      window.removeEventListener('keydown', keypressHandler)
+    }
+  }, [searchParams])
 
   return find
     ? createPortal(
