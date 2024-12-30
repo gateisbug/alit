@@ -6,7 +6,7 @@ import GlobalHeader from '@app/@global-header/page.tsx'
 import IndexedItemDB from '@util/IndexedItemDB.ts'
 
 const ModalRoot = lazy(() => import('./@modal-root/layout.tsx'))
-const SpeedDial = lazy(() => import('./@speed-dial/layout.tsx'))
+const SpeedDial = lazy(() => import('./@speed-dial/page.tsx'))
 const Fonts = lazy(() => import('./font.tsx'))
 
 export default function RootLayout() {

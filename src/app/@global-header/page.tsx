@@ -7,6 +7,7 @@ import {
   Notification,
   Logo,
   Filter,
+  Conversion,
 } from '@app/@global-header/(interaction)/index.ts'
 import { Header, Links, SearchArea } from '@components/@global-header/styled.ts'
 
@@ -26,6 +27,7 @@ export default function GlobalHeader() {
           <Links>
             <Filter />
             <Notification />
+            <Conversion />
             <ArcaLiveLink />
             <GithubLink />
           </Links>
