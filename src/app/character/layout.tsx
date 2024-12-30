@@ -12,7 +12,7 @@ export default function CharacterLayout() {
         {/* <meta property='og:image' content='https://raw.githubusercontent.com/gateisbug/alit/refs/heads/master/public/assets/og-image.png' /> */}
 
         {/* @TODO: [2.5.1] 버전업 시 수정 */}
-        <title>(24-12-31) 함순이 리스트.Web</title>
+        <title>(24-12-30) 함순이 리스트.Web</title>
       </Helmet>
 
       <Outlet />

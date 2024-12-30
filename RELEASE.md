@@ -3,10 +3,11 @@
 
 ## 2.5.1
 [releases](https://github.com/gateisbug/alit/releases/tag/2.5.1)
-### 2024-12-31, 2.5.1 패치내역
+### 2024-12-30, 2.5.1 패치내역
 - ESC 누르면 모달창 닫기
 - 모달이 켜졌을 때 ctrl+k 누르면 입력이 가능한 버그 수정
 - 장비설명회와 함순이 리스트 전환 버튼 따로 추가
+- 함순이 리스트 이름 오류 수정
 
 ## 2.5.0
 [releases](https://github.com/gateisbug/alit/releases/tag/2.5.0)
