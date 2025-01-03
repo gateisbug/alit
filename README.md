@@ -8,7 +8,7 @@
 - 정보 리소스(구글 시트) : [구글 스프레드시트](https://docs.google.com/spreadsheets/d/1ILevJQ08yszIX2bgh-II0A_EzfhAIufeuqxCKdQ7-UQ/edit#gid=0)
 - 이미지 리소스 : [벽람위키](https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki)
 - 아카라이브 게시글 : [아카라이브](https://arca.live/b/azurlane/124916211)
-- 개발자용 리소스 : [개발자용 구글시트](https://docs.google.com/spreadsheets/d/1TdoZXjpm8QYNmvKM73QSFn9lAPDnWC-AtPzSR07KkGk/edit?usp=sharing)
+- 개발자용 리소스 : [개발자용 아이템](https://docs.google.com/spreadsheets/d/1TdoZXjpm8QYNmvKM73QSFn9lAPDnWC-AtPzSR07KkGk/edit?usp=sharing) | [개발자용 캐릭터](https://docs.google.com/spreadsheets/d/1t8803cyruRcJ9Q8suuPiFOOA8IEip5lJvFAJ6y0GC0Y/edit?usp=sharing)
 
 ## License
 
