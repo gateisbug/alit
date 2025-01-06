@@ -10,6 +10,17 @@ function is(a: string[], b?: string[]) {
   return a.filter((m) => (b ?? []).join('_').includes(m)).length > 0
 }
 
+function sanitize(a?: string) {
+  return (
+    a
+      ?.toLowerCase()
+      .replace(/ /g, '')
+      .replace(/-/g, '')
+      .replace(/\(/g, '')
+      .replace(/\)/g, '') ?? ''
+  )
+}
+
 export default function useCharData() {
   const [searchParams] = useSearchParams()
   const majorCategory = searchParams.get('major')
@@ -50,7 +61,9 @@ export default function useCharData() {
     }
 
     if (keyword) {
-      const name = rawData?.filter((v) => v.name?.includes(keyword))
+      const name = rawData?.filter((v) =>
+        sanitize(v.name)?.includes(sanitize(keyword)),
+      )
       // const nickname = rawData?.filter((v) => v.nickname?.includes(keyword))
       // const explain = rawData?.filter((v) =>
       //   v.explain?.join('. ').includes(keyword),

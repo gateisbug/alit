@@ -2,6 +2,10 @@ import { useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
+function sanitize(a?: string) {
+  return a?.toLowerCase().replace(/ /g, '') ?? ''
+}
+
 export default function useItemData() {
   const [searchParams] = useSearchParams()
   const majorCategory = searchParams.get('major')
@@ -45,7 +49,9 @@ export default function useItemData() {
     }
 
     if (keyword) {
-      const name = rawData?.filter((v) => v.name?.includes(keyword))
+      const name = rawData?.filter((v) =>
+        sanitize(v.name)?.includes(sanitize(keyword)),
+      )
       const nickname = rawData?.filter((v) => v.nickname?.includes(keyword))
       const explain = rawData?.filter((v) =>
         v.explain?.join('. ').includes(keyword),
