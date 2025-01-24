@@ -81,21 +81,13 @@ function stat(chara: CharacterInterface) {
 }
 
 function fleet(chara: CharacterInterface) {
-  const get = (chara.fleet ?? [''])[0]
-  const star3 = (chara.fleet ?? [''])[0]
-  const lv120 = (chara.fleet ?? [''])[0]
-
   return (
     <>
-      <p className='fc'>
-        획득: <span className='fws fcs'>+{get}</span>
-      </p>
-      <p className='fc'>
-        ★3: <span className='fws fcs'>+{star3}</span>
-      </p>
-      <p className='fc'>
-        lv120: <span className='fws fcs'>+{lv120}</span>
-      </p>
+      {['획득', '★3', 'lv120'].map((v, i) => (
+        <p className='fc' key={v}>
+          {v}: <span className='fws fcs'>+{chara?.fleet?.[i] ?? ''}</span>
+        </p>
+      ))}
     </>
   )
 }
