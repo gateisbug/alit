@@ -1,6 +1,11 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.5.3
+[releases](https://github.com/gateisbug/alit/releases/tag/2.5.3)
+### 2025-01-24, 2.5.3 패치내역
+- 함순이 리스트에 치엔우, 하이융, 창펑, 푸보 추가
+
 ## 2.5.2
 [releases](https://github.com/gateisbug/alit/releases/tag/2.5.2)
 ### 2025-01-06, 2.5.2 패치내역
