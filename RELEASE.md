@@ -1,6 +1,13 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.5.4
+[releases](https://github.com/gateisbug/alit/releases/tag/2.5.4)
+### 2025-02-26, 2.5.4 패치내역
+- 함순이 리스트에 볼차노 META 추가
+- 함순이 리스트에 MNF, FFNF 분리 및 META 추가
+- 장비 설명회에 전용장비 4종 추가
+
 ## 2.5.3
 [releases](https://github.com/gateisbug/alit/releases/tag/2.5.3)
 ### 2025-01-24, 2.5.3 패치내역
