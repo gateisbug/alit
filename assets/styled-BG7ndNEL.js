@@ -1,4 +1,4 @@
-import{d as o,j as a}from"./index-cThg7JWm.js";const s=o.div.attrs({children:a.jsx("svg",{viewBox:"22 22 44 44",children:a.jsx("circle",{cx:"44",cy:"44",r:"20.2",fill:"none",strokeWidth:"3.6"})})})`
+import{d as o,j as a}from"./index-hp0bncMg.js";const s=o.div.attrs({children:a.jsx("svg",{viewBox:"22 22 44 44",children:a.jsx("circle",{cx:"44",cy:"44",r:"20.2",fill:"none",strokeWidth:"3.6"})})})`
   display: flex;
   width: ${({$size:r})=>r!=null?r:40}px;
   height: ${({$size:r})=>r!=null?r:40}px;
