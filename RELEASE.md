@@ -1,6 +1,11 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.5.5
+[releases](https://github.com/gateisbug/alit/releases/tag/2.5.5)
+### 2025-03-04, 2.5.5 패치내역
+- 함선 및 장비 추가
+
 ## 2.5.4
 [releases](https://github.com/gateisbug/alit/releases/tag/2.5.4)
 ### 2025-02-26, 2.5.4 패치내역

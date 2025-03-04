@@ -1,10 +1,8 @@
 {
-  "version": "2.5.4",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.5.4",
-  "date": "2025-02-26",
+  "version": "2.5.5",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.5.5",
+  "date": "2025-03-04",
   "patch": [
-    "함순이 리스트에 볼차노 META 추가",
-    "함순이 리스트에 MNF, FFNF 분리 및 META 추가",
-    "장비 설명회에 전용장비 4종 추가"
+    "함선 및 장비 추가"
   ]
 }
