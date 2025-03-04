@@ -214,6 +214,11 @@ const OBTAINS = [
     value: '템페스타와 잠든 바다',
     label: 'images/event/Tempesta_and_the_Sleeping_Sea',
   },
+  {
+    index: '이벤트',
+    value: '농함에 갇힌 신광',
+    label: 'images/event/Paradiso_of_Shackled_Light',
+  },
 
   {
     index: '메인',
