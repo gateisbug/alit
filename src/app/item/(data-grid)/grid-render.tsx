@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import Portrait from '@components/(common)/portrait.tsx'
 import { ITEMS, NATIONS } from '@util/divider'
 import highlightText from '@util/highlightText.tsx'
@@ -125,7 +127,17 @@ function classes(item: ItemInterface) {
 
 function types(item: ItemInterface) {
   const { domain: d, type: t } = item
-  return ITEMS.find((v) => v.index === d && v.value === t)?.label ?? t
+  const find = ITEMS.find((v) => v.index === d && v.value === t)?.label ?? t
+  return (
+    <Link
+      to={`?major=${d}&category=${t}`}
+      onClick={(e) => {
+        e.stopPropagation()
+      }}
+    >
+      {find}
+    </Link>
+  )
 }
 
 function explain(item: ItemInterface, keyword?: string) {

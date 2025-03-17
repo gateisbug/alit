@@ -216,7 +216,7 @@ const OBTAINS = [
   },
   {
     index: '이벤트',
-    value: '농함에 갇힌 신광',
+    value: '새장에 갇힌 신의 빛',
     label: 'images/event/Paradiso_of_Shackled_Light',
   },
 

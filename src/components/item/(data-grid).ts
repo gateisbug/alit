@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import {
@@ -114,5 +115,12 @@ export const GridRow = styled(UIRow)`
     ${GridCell}:nth-of-type(2) {
       min-width: 120px;
     }
+  }
+`
+
+export const GridLink = styled(Link)`
+  color: var(--primary);
+  &:hover {
+    text-decoration: underline;
   }
 `
