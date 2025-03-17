@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom'
-
 import Portrait from '@components/(common)/portrait.tsx'
+import { GridLink } from '@components/item/(data-grid).ts'
 import { ITEMS, NATIONS } from '@util/divider'
 import highlightText from '@util/highlightText.tsx'
 
@@ -129,14 +128,14 @@ function types(item: ItemInterface) {
   const { domain: d, type: t } = item
   const find = ITEMS.find((v) => v.index === d && v.value === t)?.label ?? t
   return (
-    <Link
-      to={`?major=${d}&category=${t}`}
+    <GridLink
+      to={`?major=${d}&type=${t}`}
       onClick={(e) => {
         e.stopPropagation()
       }}
     >
       {find}
-    </Link>
+    </GridLink>
   )
 }
 

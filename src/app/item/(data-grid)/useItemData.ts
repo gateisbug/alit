@@ -10,6 +10,7 @@ export default function useItemData() {
   const [searchParams] = useSearchParams()
   const majorCategory = searchParams.get('major')
   const minorCategory = searchParams.get('minor')
+  const typeCategory = searchParams.get('type')
   const rarity = searchParams.get('rarity')
   const nation = searchParams.get('nation')
   const keyword = searchParams.get('keyword')
@@ -28,12 +29,19 @@ export default function useItemData() {
   useEffect(() => {
     let rawData: ItemInterface[]
 
-    if (!majorCategory && !minorCategory && !rarity && !nation) {
+    if (
+      !majorCategory &&
+      !minorCategory &&
+      !rarity &&
+      !nation &&
+      !typeCategory
+    ) {
       rawData = query.data ?? []
     } else {
       const minor = minorCategory?.split('_') ?? []
       const rare = rarity?.split('_') ?? []
       const nat = nation?.split('_') ?? []
+      const typ = typeCategory
 
       rawData = (query.data ?? []).filter((v) => {
         const domain =
@@ -41,10 +49,12 @@ export default function useItemData() {
         const classes = minor.length > 0 ? minor.includes(v.class ?? '') : true
         const tier = rare.length > 0 ? rare.includes(v.tier ?? '') : true
         const ticker = nat.length > 0 ? nat.includes(v.nation ?? '') : true
+        const types =
+          (typ?.length ?? 0) > 0 ? typ?.includes(v.type ?? '') : true
 
         // if (!minorCategory) return flag
         // return flag && minorCategory.includes(v.class ?? '')
-        return domain && classes && tier && ticker
+        return domain && classes && tier && ticker && types
       })
     }
 
@@ -60,7 +70,15 @@ export default function useItemData() {
     } else {
       setData(rawData)
     }
-  }, [query.data, keyword, majorCategory, minorCategory, rarity, nation])
+  }, [
+    query.data,
+    keyword,
+    majorCategory,
+    minorCategory,
+    rarity,
+    nation,
+    typeCategory,
+  ])
 
   return data
 }
