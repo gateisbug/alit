@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom'
 import {
   ITEM_MAJORCATEGORY,
   ITEM_MINORCATEGORY,
+  ITEM_TYPECATEGORY,
   NATION,
   RARITY,
 } from './(const-item).ts'
@@ -17,6 +18,7 @@ export default function ItemFilterModal() {
   const [minor, setMinor] = useState<string[]>(
     searchParams.get('minor')?.split('_') ?? [],
   )
+  const [types, setTypes] = useState<string>(searchParams.get('type') ?? '')
   const [rarity, setRarity] = useState<string[]>(
     searchParams.get('rarity')?.split('_') ?? [],
   )
@@ -35,8 +37,18 @@ export default function ItemFilterModal() {
     }
 
     searchParams.delete('minor')
+    searchParams.delete('type')
     setSearchParams(searchParams)
   }, [major])
+
+  useEffect(() => {
+    if (types.length) {
+      searchParams.set('type', types)
+    } else {
+      searchParams.delete('type')
+    }
+    setSearchParams(searchParams)
+  }, [types])
 
   useEffect(() => {
     if (minor.length) {
@@ -108,10 +120,12 @@ export default function ItemFilterModal() {
           onClickAll={() => {
             setMajor('')
             setMinor([])
+            setTypes('')
           }}
           onClickItem={(v) => {
             setMajor(v)
             setMinor([])
+            setTypes('')
           }}
         />
 
@@ -122,6 +136,16 @@ export default function ItemFilterModal() {
           onClickAll={() => setMinor([])}
           onClickItem={(v) => {
             setMinor((prev) => arrayHandler(prev, v))
+          }}
+        />
+
+        <Section
+          header='종류'
+          items={ITEM_TYPECATEGORY.find((v) => v.value === major)?.items ?? []}
+          state={types}
+          onClickAll={() => setTypes('')}
+          onClickItem={(v) => {
+            setTypes(v)
           }}
         />
 

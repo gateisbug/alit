@@ -11,6 +11,7 @@ export default function useItemData() {
   const majorCategory = searchParams.get('major')
   const minorCategory = searchParams.get('minor')
   const typeCategory = searchParams.get('type')
+
   const rarity = searchParams.get('rarity')
   const nation = searchParams.get('nation')
   const keyword = searchParams.get('keyword')
@@ -49,8 +50,7 @@ export default function useItemData() {
         const classes = minor.length > 0 ? minor.includes(v.class ?? '') : true
         const tier = rare.length > 0 ? rare.includes(v.tier ?? '') : true
         const ticker = nat.length > 0 ? nat.includes(v.nation ?? '') : true
-        const types =
-          (typ?.length ?? 0) > 0 ? typ?.includes(v.type ?? '') : true
+        const types = (typ?.length ?? 0) > 0 ? typ === v.type : true
 
         // if (!minorCategory) return flag
         // return flag && minorCategory.includes(v.class ?? '')

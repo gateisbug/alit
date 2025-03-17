@@ -30,7 +30,11 @@ export default function Section<T extends string | string[]>({
         {items?.map((v) => (
           <FilterItem
             key={`${v.label}+${v.value}`}
-            data-active={state.includes(v.value)}
+            data-active={
+              typeof state === 'string'
+                ? state === v.value
+                : state.includes(v.value)
+            }
             onClick={() => {
               onClickItem(v.value)
             }}
