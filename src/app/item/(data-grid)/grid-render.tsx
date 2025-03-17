@@ -121,7 +121,18 @@ function obtain(item: ItemInterface) {
 
 function classes(item: ItemInterface) {
   const { domain: d, class: c } = item
-  return ITEMS.find((v) => v.index === d && v.value === c)?.label ?? '-'
+  const find = ITEMS.find((v) => v.index === d && v.value === c)?.label ?? '-'
+  // return ITEMS.find((v) => v.index === d && v.value === c)?.label ?? '-'
+  return (
+    <GridLink
+      to={`?major=${d}&minor=${c}`}
+      onClick={(e) => {
+        e.stopPropagation()
+      }}
+    >
+      {find}
+    </GridLink>
+  )
 }
 
 function types(item: ItemInterface) {
