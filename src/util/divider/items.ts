@@ -170,7 +170,7 @@ const ITEMS = [
   {
     index: 'aircraft',
     value: 'old low',
-    label: '구3대장=',
+    label: '구3대장급',
   },
   {
     index: 'aircraft',
@@ -189,7 +189,7 @@ const ITEMS = [
   },
   {
     index: 'aircraft',
-    value: 'hornet material',
+    value: 'hornet+material',
     label: '시호넷 재료',
   },
   {
@@ -271,7 +271,7 @@ const ITEMS = [
   },
   {
     index: 'special',
-    value: 'ca&cb',
+    value: 'ca+cb',
     label: '중·대순',
   },
   {

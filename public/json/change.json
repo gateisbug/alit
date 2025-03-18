@@ -1,8 +1,9 @@
 {
-  "version": "2.5.5",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.5.5",
-  "date": "2025-03-04",
+  "version": "2.6.0",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.6.0",
+  "date": "2025-03-18",
   "patch": [
-    "함선 및 장비 추가"
+    "원본 리소스 반영: 25-03-10",
+    "표에서 클릭시 해당되는 필터를 적용할 수 있는 기능 추가"
   ]
 }

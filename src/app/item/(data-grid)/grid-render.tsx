@@ -1,4 +1,5 @@
 import Portrait from '@components/(common)/portrait.tsx'
+import { GridLink } from '@components/item/(data-grid).ts'
 import { ITEMS, NATIONS } from '@util/divider'
 import highlightText from '@util/highlightText.tsx'
 
@@ -120,12 +121,33 @@ function obtain(item: ItemInterface) {
 
 function classes(item: ItemInterface) {
   const { domain: d, class: c } = item
-  return ITEMS.find((v) => v.index === d && v.value === c)?.label ?? '-'
+  const find = ITEMS.find((v) => v.index === d && v.value === c)?.label ?? '-'
+  // return ITEMS.find((v) => v.index === d && v.value === c)?.label ?? '-'
+  return (
+    <GridLink
+      to={`?major=${d}&minor=${c}`}
+      onClick={(e) => {
+        e.stopPropagation()
+      }}
+    >
+      {find}
+    </GridLink>
+  )
 }
 
 function types(item: ItemInterface) {
   const { domain: d, type: t } = item
-  return ITEMS.find((v) => v.index === d && v.value === t)?.label ?? t
+  const find = ITEMS.find((v) => v.index === d && v.value === t)?.label ?? t
+  return (
+    <GridLink
+      to={`?major=${d}&type=${t}`}
+      onClick={(e) => {
+        e.stopPropagation()
+      }}
+    >
+      {find}
+    </GridLink>
+  )
 }
 
 function explain(item: ItemInterface, keyword?: string) {

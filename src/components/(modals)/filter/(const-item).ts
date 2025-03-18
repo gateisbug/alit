@@ -62,37 +62,73 @@ export const ITEM_MINORCATEGORY = Object.freeze([
   },
 ])
 
-// export const INDEX = Object.freeze([
-//   {
-//     value: 'gun',
-//     items: [
-//       { label: '전체', value: 'all',  },
-//       { label: '통상탄', value: 'normal',  },
-//       { label: '고폭탄', value: 'he',  },
-//       { label: '철갑탄', value: 'ap',  },
-//       { label: 'SAP탄', value: 'sap',  },
-//     ],
-//   },
-//   // {
-//   //   value: 'aircraft',
-//   //   items: [
-//   //     { label: '전체', value: 'all',  },
-//   //     { label: '', value: 'old',  },
-//   //     { label: '3대장', value: 'new',  },
-//   //     { label: '로켓장착', value: 'new',  },
-//   //     { label: '도그파이트', value: 'new',  },
-//   //     { label: '신', value: 'new',  },
-//   //   ],
-//   // },
-//   {
-//     value: 'torpedo',
-//     items: [
-//       { label: '전체', value: 'all',  },
-//       { label: '수동', value: 'normal',  },
-//       { label: '유도', value: 'active',  },
-//     ],
-//   },
-// ])
+export const ITEM_TYPECATEGORY = Object.freeze([
+  {
+    value: 'gun',
+    items: [
+      { label: '통상탄', value: 'normal' },
+      { label: '고폭탄', value: 'he' },
+      { label: '철갑탄', value: 'ap' },
+      { label: 'SAP탄', value: 'sap' },
+    ],
+  },
+  {
+    value: 'aircraft',
+    items: [
+      { label: '구3대장', value: 'old' },
+      { label: '구3대장급', value: 'old low' },
+      { label: '구3대장↑', value: 'old over' },
+      { label: '3대장', value: 'new' },
+      { label: '로켓장착', value: 'rocket' },
+      { label: '시호넷 재료', value: 'hornet+material' },
+      { label: '도그파이트', value: 'dogfight' },
+      { label: '안씀', value: 'deprecated' },
+      { label: '신', value: 'god' },
+      { label: '일반', value: 'normal' },
+      { label: '사속조절', value: 'cooldown' },
+      { label: '쓰레기', value: 'shit' },
+      { label: '핀포인트', value: 'focus' },
+      { label: '직선', value: 'straight' },
+    ],
+  },
+  {
+    value: 'aircraft',
+    items: [
+      { label: '유도', value: 'active' },
+      { label: '수동', value: 'passive' },
+    ],
+  },
+  {
+    value: 'special',
+    items: [
+      { label: '구축', value: 'dd' },
+      { label: '경순', value: 'cl' },
+      { label: '중·대순', value: 'ca+cb' },
+      { label: '전함', value: 'bb' },
+      { label: '항모', value: 'ac' },
+      { label: '잠수', value: 'ss' },
+    ],
+  },
+  // {
+  //   value: 'aircraft',
+  //   items: [
+  //     { label: '전체', value: 'all',  },
+  //     { label: '', value: 'old',  },
+  //     { label: '3대장', value: 'new',  },
+  //     { label: '로켓장착', value: 'new',  },
+  //     { label: '도그파이트', value: 'new',  },
+  //     { label: '신', value: 'new',  },
+  //   ],
+  // },
+  // {
+  //   value: 'torpedo',
+  //   items: [
+  //     { label: '전체', value: 'all' },
+  //     { label: '수동', value: 'normal' },
+  //     { label: '유도', value: 'active' },
+  //   ],
+  // },
+])
 
 export const RARITY = Object.freeze([
   // {

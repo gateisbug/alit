@@ -1,6 +1,12 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.6.0
+[releases](https://github.com/gateisbug/alit/releases/tag/2.6.0)
+### 2025-03-18, 2.6.0 패치내역
+- 원본 리소스 반영: 25-03-10
+- 표에서 클릭시 해당되는 필터를 적용할 수 있는 기능 추가
+
 ## 2.5.5
 [releases](https://github.com/gateisbug/alit/releases/tag/2.5.5)
 ### 2025-03-04, 2.5.5 패치내역
