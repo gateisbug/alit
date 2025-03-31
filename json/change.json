@@ -1,9 +1,9 @@
 {
-  "version": "2.6.0",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.6.0",
-  "date": "2025-03-18",
+  "version": "2.6.1",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.6.1",
+  "date": "2025-03-31",
   "patch": [
-    "원본 리소스 반영: 25-03-10",
-    "표에서 클릭시 해당되는 필터를 적용할 수 있는 기능 추가"
+    "신규 캐릭터 추가",
+    "신규 전용장비 추가"
   ]
 }
