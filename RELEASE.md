@@ -1,6 +1,12 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.6.1
+[releases](https://github.com/gateisbug/alit/releases/tag/2.6.1)
+### 2025-03-31, 2.6.1 패치내역
+- 신규 캐릭터 추가
+- 신규 전용장비 추가
+
 ## 2.6.0
 [releases](https://github.com/gateisbug/alit/releases/tag/2.6.0)
 ### 2025-03-18, 2.6.0 패치내역
