@@ -219,6 +219,11 @@ const OBTAINS = [
     value: '새장에 갇힌 신의 빛',
     label: 'images/event/Paradiso_of_Shackled_Light',
   },
+  {
+    index: '이벤트',
+    value: '높은 탑의 장미',
+    label: 'images/event/A_Rose_on_the_High_Tower',
+  },
 
   {
     index: '메인',
