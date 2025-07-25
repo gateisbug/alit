@@ -12,6 +12,7 @@ type NationType =
   | 'FFNF'
   | 'MNF'
   | 'RN'
+  | 'HNLMS'
   | 'MOT'
   | string
 

@@ -187,6 +187,10 @@ export const NATION = Object.freeze([
     value: 'FFNF',
   },
   {
+    label: '튤리파',
+    value: 'HNLMS',
+  },
+  {
     label: '비시아',
     value: 'MNF',
   },
