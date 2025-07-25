@@ -55,6 +55,11 @@ const NATIONS = [
     label: '사르데냐',
   },
   {
+    index: 'HNLMS',
+    value: 'nation',
+    label: '튤리파',
+  },
+  {
     index: 'MOT',
     value: 'nation',
     label: '템페스타',
