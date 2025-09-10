@@ -11,8 +11,8 @@ export default function CharacterLayout() {
         {/* <meta property='og:description' content='마지막 업뎃:24-12-31. 함순이 리스트 추가' /> */}
         {/* <meta property='og:image' content='https://raw.githubusercontent.com/gateisbug/alit/refs/heads/master/public/assets/og-image.png' /> */}
 
-        {/* @TODO: [2.6.3] 버전업 시 수정 */}
-        <title>(25-07-25) 함순이 리스트.Web</title>
+        {/* @TODO: [2.6.4] 버전업 시 수정 */}
+        <title>(25-09-10) 함순이 리스트.Web</title>
       </Helmet>
 
       <Outlet />

@@ -1,6 +1,11 @@
 # Change Logs
 변경된 내역을 정리한 문서입니다.
 
+## 2.6.4
+[releases](https://github.com/gateisbug/alit/releases/tag/2.6.4)
+### 2025-09-10, 2.6.4 패치내역
+- 신규 캐릭터 추가
+
 ## 2.6.3
 [releases](https://github.com/gateisbug/alit/releases/tag/2.6.3)
 ### 2025-07-25, 2.6.3 패치내역
