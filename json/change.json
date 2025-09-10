@@ -1,9 +1,8 @@
 {
-  "version": "2.6.3",
-  "release": "https://github.com/gateisbug/alit/releases/tag/2.6.3",
-  "date": "2025-07-25",
+  "version": "2.6.4",
+  "release": "https://github.com/gateisbug/alit/releases/tag/2.6.4",
+  "date": "2025-09-10",
   "patch": [
-    "신규 캐릭터 추가",
-    "신규 장비 추가"
+    "신규 캐릭터 추가"
   ]
 }
